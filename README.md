@@ -161,3 +161,13 @@ See nitrogen/NOTES.md.
   - Giant viruses track their algal hosts; the control-pool virophage tracks Phaeocystis.
   - Site page `#euks`.
 - Site nav is now grouped into dropdowns (NAV in site/app.js).
+
+## Physiological states (2026-11-07)
+`states/` holds per-MAG PCA of within-genome expression for 85 MAGs. Site page `#states`, under the Diesel response menu.
+- Ice vs water is the dominant state axis.
+- In 2025-26, 17 of 20 comparable MAGs differ between pools.
+- Cycloclasticus lorbin_184 winds down as its bloom ages; 50-400-T64 keeps growing.
+- Background Sulfitobacter and UBA9145 slow down in the diesel pool only.
+- The Sulfurimonas pool difference is strain, not diesel.
+
+See states/NOTES.md.
