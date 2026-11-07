@@ -69,8 +69,11 @@ function stExplorer(sec, J) {
   sel.value = (det.find(m => m.bin === 'lorbin_184') || det[0]).bin; draw();
 }
 
+const ST_LAYER = { TOP: 'top section', BOT: 'bottom section', HIGH: 'upper section (labelled “High”)', LOW: 'lower section (labelled “Low”)', MID: 'middle section', PANCAKE: 'pancake ice' };
+const stLayer = l => ST_LAYER[l] || (l ? l.toLowerCase() : 'whole core (no layer recorded)');
+
 function stScatter(v, J, m, d, season, traj) {
-  const box = fig(v, `${m.bin}: PCA of the genome’s own transcriptome`, 'Grey = before dosing (either pool); blue = control pool after dosing; orange = diesel pool after dosing. Circles are seawater, triangles sea ice; open symbols are 2024-25, filled 2025-26. Lines join per-day means within one pool, season and medium, in time order (they start at the open end and finish at the arrow). Hover a point for the library.');
+  const box = fig(v, `${m.bin}: PCA of the genome’s own transcriptome`, 'Grey = before dosing (either pool); blue = control pool after dosing; orange = diesel pool after dosing. Circles are seawater, triangles sea ice; open symbols are 2024-25, filled 2025-26. Small faded symbols are shallow libraries (under 10,000 reads on this genome): they are projected onto axes fitted on the deeper libraries, so their sampling noise cannot shape the axes. Lines join per-day means within one pool, season and medium, in time order (they start at the open end and finish at the arrow). Hover a point for the library.');
   const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--other)"></i>before dosing</span><span><i style="background:var(--ctl)"></i>control pool</span><span><i style="background:var(--exp)"></i>diesel pool</span><span style="color:var(--ink-2)">● seawater</span><span style="color:var(--ink-2)">▲ sea ice</span><span style="color:var(--ink-2)">○ open = 2024-25</span><span style="color:var(--ink-2)">● filled = 2025-26</span>`);
   box.parentNode.insertBefore(lg, box);
   const pts = d.idx.map((si, k) => ({ s: J.samples[si], x: d.pc[k][0], y: d.pc[k][1], depth: d.depth[k], cl: d.cl[k] })).filter(p => season === 'both' || p.s.season === season);
@@ -101,10 +104,11 @@ function stScatter(v, J, m, d, season, traj) {
   }
   pts.sort((a, b) => (a.s.phase === 'pre') - (b.s.phase === 'pre')).reverse();
   svg.append('g').selectAll('path').data(pts).join('path')
-    .attr('d', p => d3.symbol(p.s.medium === 'SI' ? d3.symbolTriangle : d3.symbolCircle, 70)())
+    .attr('d', p => d3.symbol(p.s.medium === 'SI' ? d3.symbolTriangle : d3.symbolCircle, p.depth < (J.fit_reads || 0) ? 36 : 70)())
+    .attr('opacity', p => p.depth < (J.fit_reads || 0) ? 0.45 : 1)
     .attr('transform', p => `translate(${x(p.x)},${y(p.y)})`).attr('fill', p => p.s.season === '2024-25' ? css('--panel') : stPhaseCol(p.s)).attr('stroke', p => p.s.season === '2024-25' ? stPhaseCol(p.s) : css('--panel'))
     .attr('stroke-width', p => p.s.season === '2024-25' ? 1.8 : 1.5)
-    .on('mousemove', (ev, p) => showTip(ev, `<b>${p.s.name}</b><br>${p.s.season}, day ${p.s.day}, ${p.s.pool === 'EXP' ? 'diesel' : 'control'} pool, ${p.s.medium === 'SI' ? 'sea ice' + (p.s.layer ? ' (' + p.s.layer.toLowerCase() + ')' : '') : 'seawater'}<br>${fmt(p.depth)} reads on this genome · state ${p.cl + 1}`))
+    .on('mousemove', (ev, p) => showTip(ev, `<b>${p.s.name}</b><br>${p.s.season}, day ${p.s.day}, ${p.s.pool === 'EXP' ? 'diesel' : 'control'} pool, ${p.s.medium === 'SI' ? 'sea ice, ' + stLayer(p.s.layer) : 'seawater'}<br>${fmt(p.depth)} reads on this genome${p.depth < (J.fit_reads || 0) ? ' · shallow: projected onto the axes, not used to fit them' : ''}`))
     .on('mouseleave', hideTip);
   if (empty) {
     svg.selectAll('g:last-of-type path').each(function (p) { const open = p.s.season === '2024-25';

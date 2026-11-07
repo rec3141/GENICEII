@@ -60,3 +60,15 @@ Site section `#states` (site/states.js, site/states.json), in the "Diesel respon
 - 2024-25 pools were filled two weeks apart.
 - Different strains in different pools or winters look like different states.
 - The growth index (ribosomal-protein share) is a rough proxy.
+
+## Depth-aware refit (2026-11-07)
+- **Problem:** large PCA outliers were mostly shallow libraries. 62 of 74 outliers (robust z > 6) had fewer than 10k reads on the genome; for comebin_2576, all three were its shallowest libraries (~3.6–4.2k reads vs a median of 69k).
+- **Fix:** PCA axes are now fitted only on samples with ≥ 10,000 reads on the genome (FIT_READS; all samples if fewer than 15 qualify). Samples with 3,000–10,000 reads are projected onto those axes. The site draws them small and faded.
+- **Effect:**
+  - Outliers 74 → 35 (shallow 62 → 23); comebin_2576 has none.
+  - Ice vs water is now the main axis for 65 of 85 MAGs (was 58).
+  - 2025-26 pool differences: 19 of 20 (was 17).
+  - metabat_8566: ice R² 0.59 → 0.65, depth r 0.52 → 0.38.
+  - lorbin_184: no steady PC1 trend with day (r −0.08), so the text now rests on the growth index.
+- **Remaining deep outliers are coherent groups:** late-season 2025-26 diesel ice (metabat_8566, vamb_856_sub) and 2024-25 day-55 diesel samples (Colwellia lorbin_095, vamb_500_sub).
+- **Tooltip:** now spells out the ice layer (top/bottom section, etc.).
