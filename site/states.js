@@ -49,8 +49,9 @@ function stExplorer(sec, J) {
   const c = el('div', { class: 'controls' }); sec.append(c);
   const sel = el('select', { id: 'stsel', 'aria-label': 'Genome' });
   const det = J.mags.filter(m => m.detail);
-  const og1 = document.createElement('optgroup'); og1.label = 'Key genomes'; det.filter(m => m.key).forEach(m => og1.append(new Option(`${m.taxon} (${m.bin})`, m.bin)));
-  const og2 = document.createElement('optgroup'); og2.label = 'Strongest diesel shifts'; det.filter(m => !m.key).forEach(m => og2.append(new Option(`${m.taxon} (${m.bin})`, m.bin)));
+  const only = m => { const w = [...new Set(J.detail[m.bin].idx.map(si => J.samples[si].season))]; return w.length === 1 ? `, ${w[0]} only` : ''; };
+  const og1 = document.createElement('optgroup'); og1.label = 'Key genomes'; det.filter(m => m.key).forEach(m => og1.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
+  const og2 = document.createElement('optgroup'); og2.label = 'Strongest diesel shifts'; det.filter(m => !m.key).forEach(m => og2.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
   sel.append(og1, og2);
   const ss = el('select', { id: 'stsea', 'aria-label': 'Winter' }); [['both', 'Both winters'], ['2025-26', '2025-26'], ['2024-25', '2024-25']].forEach(([v, l]) => ss.append(new Option(l, v)));
   const tr = el('input', { type: 'checkbox', id: 'sttraj' }); tr.checked = true;
@@ -69,10 +70,14 @@ function stExplorer(sec, J) {
 }
 
 function stScatter(v, J, m, d, season, traj) {
-  const box = fig(v, `${m.bin}: PCA of the genome’s own transcriptome`, 'Grey = before dosing (either pool); blue = control pool after dosing; orange = diesel pool after dosing. Circles are seawater, triangles sea ice. Lines join per-day means within one pool, season and medium, in time order (they start at the open end and finish at the arrow). Hover a point for the library.');
-  const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--other)"></i>before dosing</span><span><i style="background:var(--ctl)"></i>control pool</span><span><i style="background:var(--exp)"></i>diesel pool</span><span style="color:var(--ink-2)">● seawater</span><span style="color:var(--ink-2)">▲ sea ice</span>`);
+  const box = fig(v, `${m.bin}: PCA of the genome’s own transcriptome`, 'Grey = before dosing (either pool); blue = control pool after dosing; orange = diesel pool after dosing. Circles are seawater, triangles sea ice; open symbols are 2024-25, filled 2025-26. Lines join per-day means within one pool, season and medium, in time order (they start at the open end and finish at the arrow). Hover a point for the library.');
+  const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--other)"></i>before dosing</span><span><i style="background:var(--ctl)"></i>control pool</span><span><i style="background:var(--exp)"></i>diesel pool</span><span style="color:var(--ink-2)">● seawater</span><span style="color:var(--ink-2)">▲ sea ice</span><span style="color:var(--ink-2)">○ open = 2024-25</span><span style="color:var(--ink-2)">● filled = 2025-26</span>`);
   box.parentNode.insertBefore(lg, box);
   const pts = d.idx.map((si, k) => ({ s: J.samples[si], x: d.pc[k][0], y: d.pc[k][1], depth: d.depth[k], cl: d.cl[k] })).filter(p => season === 'both' || p.s.season === season);
+  // no profile in the chosen winter: draw every sample greyed out, with a note, instead of an empty plot
+  const empty = !pts.length;
+  const have = [...new Set(d.idx.map(si => J.samples[si].season))].sort().join(' and ');
+  if (empty) { pts.push(...d.idx.map((si, k) => ({ s: J.samples[si], x: d.pc[k][0], y: d.pc[k][1], depth: d.depth[k], cl: d.cl[k] }))); traj = false; }
   const W = width(box), H = Math.min(460, Math.max(300, W * 0.6)), mg = { l: 46, r: 14, t: 10, b: 38 };
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', 'PCA scatter');
   const ext = (a) => { const [lo, hi] = d3.extent(a); const p = (hi - lo) * 0.06 || 1; return [lo - p, hi + p]; };
@@ -97,9 +102,16 @@ function stScatter(v, J, m, d, season, traj) {
   pts.sort((a, b) => (a.s.phase === 'pre') - (b.s.phase === 'pre')).reverse();
   svg.append('g').selectAll('path').data(pts).join('path')
     .attr('d', p => d3.symbol(p.s.medium === 'SI' ? d3.symbolTriangle : d3.symbolCircle, 70)())
-    .attr('transform', p => `translate(${x(p.x)},${y(p.y)})`).attr('fill', p => stPhaseCol(p.s)).attr('stroke', css('--panel')).attr('stroke-width', 1.5)
+    .attr('transform', p => `translate(${x(p.x)},${y(p.y)})`).attr('fill', p => p.s.season === '2024-25' ? css('--panel') : stPhaseCol(p.s)).attr('stroke', p => p.s.season === '2024-25' ? stPhaseCol(p.s) : css('--panel'))
+    .attr('stroke-width', p => p.s.season === '2024-25' ? 1.8 : 1.5)
     .on('mousemove', (ev, p) => showTip(ev, `<b>${p.s.name}</b><br>${p.s.season}, day ${p.s.day}, ${p.s.pool === 'EXP' ? 'diesel' : 'control'} pool, ${p.s.medium === 'SI' ? 'sea ice' + (p.s.layer ? ' (' + p.s.layer.toLowerCase() + ')' : '') : 'seawater'}<br>${fmt(p.depth)} reads on this genome · state ${p.cl + 1}`))
     .on('mouseleave', hideTip);
+  if (empty) {
+    svg.selectAll('g:last-of-type path').each(function (p) { const open = p.s.season === '2024-25';
+      d3.select(this).attr('fill', open ? css('--panel') : css('--ink-3')).attr('stroke', open ? css('--ink-3') : css('--panel')).attr('opacity', 0.35); });
+    svg.append('text').attr('x', (mg.l + W - mg.r) / 2).attr('y', (mg.t + H - mg.b) / 2).attr('text-anchor', 'middle').style('font', '600 14px var(--f-display)').attr('fill', css('--ink-2'))
+      .text(`No ${season} profile for ${m.bin} (too few reads). Shown greyed: ${have}.`);
+  }
 }
 
 function stTime(v, J, m, d) {

@@ -653,8 +653,8 @@ RENDER.hgt = hgt;
 
 async function boot() {
   tip = $('#tip');
-  D = await (await fetch('data.json')).json();
-  for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'porticocc', 'oxygen', 'euks', 'states', 'viruses']) { try { const r = await fetch(f + '.json'); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
+  D = await (await fetch('data.json', { cache: 'no-cache' })).json();
+  for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'porticocc', 'oxygen', 'euks', 'states', 'viruses']) { try { const r = await fetch(f + '.json', { cache: 'no-cache' }); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
   const nav = $('#nav'), main = $('#main'); main.innerHTML = '';
   const label = id => SECTIONS.find(s => s[0] === id)[1];
   NAV.forEach(([a, ids]) => {
