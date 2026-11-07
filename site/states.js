@@ -55,7 +55,7 @@ function stExplorer(sec, J) {
   sel.append(og1, og2);
   const ss = el('select', { id: 'stsea', 'aria-label': 'Winter' }); [['both', 'Both winters'], ['2025-26', '2025-26'], ['2024-25', '2024-25']].forEach(([v, l]) => ss.append(new Option(l, v)));
   const tr = el('input', { type: 'checkbox', id: 'sttraj' }); tr.checked = true;
-  c.append(el('label', { for: 'stsel' }, 'Genome'), sel, el('label', { for: 'stsea' }, 'Show'), ss, tr, el('label', { for: 'sttraj' }, 'join days within a pool'));
+  c.append(el('label', { for: 'stsel' }, 'Genome'), sel, el('label', { for: 'stsea' }, 'Show'), ss, tr, el('label', { for: 'sttraj' }, 'show trajectory'));
   const v = el('div'); sec.append(v);
   function draw() {
     v.innerHTML = '';

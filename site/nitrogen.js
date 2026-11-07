@@ -108,7 +108,7 @@ function nGenomes(sec, J) {
   const sel = el('select', { id: 'ngen', 'aria-label': 'Genome' }); J.genomes.forEach(g => sel.append(new Option(`${g.label} (${g.bin})`, g.bin))); c.append(el('label', { for: 'ngen' }, 'Genome'), sel);
   const v = el('div'); sec.append(v);
   function draw() { v.innerHTML = ''; const g = J.genomes.find(x => x.bin === sel.value);
-    const b = fig(v, `${g.label}: transcripts per million`, 'MAG share of the community transcriptome (TPM).');
+    const b = fig(v, `${g.label} ${g.bin}: transcripts per million`, 'MAG share of the community transcriptome (TPM).');
     legendPools(b.parentNode.insertBefore(el('div'), b)); timecourse(b, nSeries(J, g.tpm), { ylab: 'TPM', unit: 'TPM', h: 190, floor: 0.5 }); }
   sel.onchange = draw; draw();
 }

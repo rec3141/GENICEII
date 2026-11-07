@@ -18,7 +18,15 @@ function showTip(ev, html) { tip.innerHTML = html; tip.style.opacity = 1; const 
   tip.style.left = x + 'px'; tip.style.top = y + 'px'; }
 function hideTip() { tip.style.opacity = 0; }
 function el(tag, attrs = {}, html = '') { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (html) e.innerHTML = html; return e; }
-function fig(parent, title, cap) { const f = el('div', { class: 'fig' }); if (title) f.append(el('div', { class: 'title' }, title)); const box = el('div', { class: 'chartbox' }); f.append(box);
+// a chart title naming exactly one MAG gets that MAG's full lineage (site/lineage.json, scripts/lineage.py) as a subtitle
+const MAG_RX = /\b((?:dastool-)?(?:comebin|metabat|lorbin|semibin|vamb|maxbin|concoct|binette)_\d+(?:_sub)?)\b/g;
+function magLineage(title) {
+  if (!title || !D.lineage) return '';
+  const ids = [...new Set([...String(title).replace(/<[^>]*>/g, '').matchAll(MAG_RX)].map(m => m[1].replace('dastool-', '')))];
+  return ids.length === 1 && D.lineage[ids[0]] ? D.lineage[ids[0]] : '';
+}
+function fig(parent, title, cap) { const f = el('div', { class: 'fig' }); if (title) f.append(el('div', { class: 'title' }, title));
+  const lin = magLineage(title); if (lin) f.append(el('div', { class: 'lineage' }, lin)); const box = el('div', { class: 'chartbox' }); f.append(box);
   if (cap) f.append(el('p', { class: 'cap' }, cap)); parent.append(f); return box; }
 function legendPools(parent, withMedium = true) {
   const l = el('div', { class: 'legend' });
@@ -654,6 +662,7 @@ RENDER.hgt = hgt;
 async function boot() {
   tip = $('#tip');
   D = await (await fetch('data.json', { cache: 'no-cache' })).json();
+  try { const r = await fetch('lineage.json', { cache: 'no-cache' }); if (r.ok) D.lineage = await r.json(); } catch (e) { /* optional */ }
   for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'light', 'porticocc', 'oxygen', 'euks', 'states', 'viruses']) { try { const r = await fetch(f + '.json', { cache: 'no-cache' }); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
   const nav = $('#nav'), main = $('#main'); main.innerHTML = '';
   const label = id => SECTIONS.find(s => s[0] === id)[1];
