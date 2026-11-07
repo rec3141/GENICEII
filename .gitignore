@@ -1,0 +1,12 @@
+# Code, notes and the static site are tracked; data and outputs are ignored by default.
+# Small result tables are added explicitly (git add -f).
+*
+!*/
+!.gitignore
+!*.py
+!*.sh
+!*.R
+!*.md
+!/site/**
+/data/
+__pycache__/

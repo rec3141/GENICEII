@@ -1,0 +1,1506 @@
+cluster	n	n_contigs	n_families	n_phyla	category	families
+JPFHOD_002997094	11	11	7	3	alkB	D2472;Endozoicomonadaceae;Erythrobacteraceae;Flammeovirgaceae;Hyphomonadaceae;Microbulbiferaceae;Pseudobdellovibrionaceae
+JPFHOD_003755935	16	16	6	3	RHO dioxygenase alpha/beta	AG-422-B15;Candidatus Pelagibacteraceae;Dongiaceae;Nitrobacteraceae;Rhizobiaceae;Spirosomataceae
+JPFHOD_012328511	10	10	5	2	paa phenylacetate	Flavobacteriaceae;Hymenobacteraceae;Lewinellaceae;Micromonosporaceae;Nocardioidaceae
+JPFHOD_002690183	8	8	5	1	RHO dioxygenase alpha/beta	Balneatricaceae;Ectothiorhodospiraceae;Eutrophovitaceae;Porticoccaceae;Saccharospirillaceae
+JPFHOD_008336110	8	8	5	3	paa phenylacetate	Flavobacteriaceae;Hymenobacteraceae;Micromonosporaceae;Nocardioidaceae;Paracoccaceae
+JPFHOD_006136828	13	13	4	2	paa phenylacetate	Flavobacteriaceae;Lewinellaceae;Micromonosporaceae;Saprospiraceae
+JPFHOD_003315439	11	11	4	1	paa phenylacetate	Flavobacteriaceae;Parvicellaceae;Roseivirgaceae;Weeksellaceae
+JPFHOD_012428942	9	9	4	2	paa phenylacetate	Flavobacteriaceae;Lewinellaceae;Micromonosporaceae;Saprospiraceae
+JPFHOD_009437029	8	8	4	2	paa phenylacetate	Flavobacteriaceae;Lewinellaceae;Micromonosporaceae;Parvicellaceae
+JPFHOD_001629726	6	6	4	1	CYP153	Caulobacteraceae;Maricaulaceae;Paracoccaceae;Rhodoligotrophaceae
+JPFHOD_002475453	6	6	4	1	alkG/alkT (rubredoxin system)	Alteromonadaceae;Colwelliaceae;D2472;Halomonadaceae
+JPFHOD_005066449	6	6	4	1	meta lower (xyl/dmp)	Burkholderiaceae;Comamonadaceae;Neisseriaceae;Sphaerotilaceae
+JPFHOD_007037862	6	6	4	2	RHO dioxygenase alpha/beta	Desulfomicrobiaceae;Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_007319020	6	6	4	2	paa phenylacetate	Crocinitomicaceae;Flavobacteriaceae;Micromonosporaceae;Saprospiraceae
+JPFHOD_005184474	4	4	4	1	salicylate hydroxylase	Alteromonadaceae;D2472;Devosiaceae;Oceanospirillaceae
+JPFHOD_006265800	4	4	4	2	RHO dioxygenase alpha/beta	Hahellaceae;Moraxellaceae;Porticoccaceae;Syntrophotaleaceae
+JPFHOD_012622929	4	4	4	3	paa phenylacetate	Hymenobacteraceae;Micromonosporaceae;Nocardioidaceae;Paracoccaceae
+JPFHOD_012739680	4	4	4	1	meta lower (xyl/dmp)	Burkholderiaceae;Hyphomonadaceae;Oxalobacteraceae;Sphingomonadaceae
+JPFHOD_012926204	4	4	4	1	paa phenylacetate	Crocinitomicaceae;Lewinellaceae;Persicobacteraceae;Sanyastnellaceae
+JPFHOD_001496860	26	26	3	2	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae;Flavobacteriaceae;Pelagibacteraceae
+JPFHOD_002537326	11	11	3	1	extradiol dioxygenase	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_012602346	9	9	3	2	meta lower (xyl/dmp)	Flavobacteriaceae;Fulvivirgaceae;Kangiellaceae
+JPFHOD_003671503	7	7	3	1	RHO dioxygenase alpha/beta	Aeromonadaceae;Porticoccaceae;Saccharospirillaceae
+JPFHOD_004138929	7	7	3	1	meta lower (xyl/dmp)	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_009567757	7	7	3	1	extradiol dioxygenase	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003961979	6	6	3	1	RHO dioxygenase alpha/beta	Cellvibrionaceae;Porticoccaceae;Sphingomonadaceae
+JPFHOD_006590840	6	6	3	1	RHO dioxygenase alpha/beta	Cellvibrionaceae;Porticoccaceae;Pseudomonadaceae
+JPFHOD_009363858	6	6	3	1	meta lower (xyl/dmp)	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_009934729	6	6	3	1	paa phenylacetate	Flavobacteriaceae;Owenweeksiaceae;Roseivirgaceae
+JPFHOD_012728260	6	6	3	1	RHO dioxygenase alpha/beta	Cellvibrionaceae;Porticoccaceae;Sphingomonadaceae
+JPFHOD_003955264	5	5	3	1	ortho lower (cat/pca)	Alteromonadaceae;Colwelliaceae;Gallaecimonadaceae
+JPFHOD_005369999	5	5	3	1	alkB	Maricaulaceae;Paracoccaceae;Parvularculaceae
+JPFHOD_006449914	5	5	3	1	alkB	Hyphomonadaceae;Nitrobacteraceae;Xanthobacteraceae
+JPFHOD_009124019	5	5	3	2	paa phenylacetate	Flavobacteriaceae;Micromonosporaceae;Saprospiraceae
+JPFHOD_011468630	5	5	3	1	paa phenylacetate	Crocinitomicaceae;Flavobacteriaceae;Roseivirgaceae
+JPFHOD_011523942	5	5	3	2	paa phenylacetate	Flavobacteriaceae;Micromonosporaceae;Nocardioidaceae
+JPFHOD_011809891	5	5	3	1	paa phenylacetate	Parvicellaceae;Roseivirgaceae;Sanyastnellaceae
+JPFHOD_000506610	4	4	3	1	RHO ferredoxin/reductase	Paracoccaceae;Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_002743453	4	4	3	1	ortho lower (cat/pca)	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003626208	4	4	3	1	intradiol dioxygenase	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005630520	4	4	3	1	RHO dioxygenase alpha/beta	Porticoccaceae;Pseudomonadaceae;Spongiibacteraceae
+JPFHOD_006364007	4	4	3	1	ortho lower (cat/pca)	Gemmataceae;Pirellulaceae;Planctomycetaceae
+JPFHOD_007209872	4	4	3	1	alkB	Acidiferrobacteraceae;Cellvibrionaceae;Piscirickettsiaceae
+JPFHOD_009387441	4	4	3	1	paa phenylacetate	Flavobacteriaceae;Marinifilaceae;Parvicellaceae
+JPFHOD_011174656	4	4	3	1	ortho lower (cat/pca)	Alteromonadaceae;Colwelliaceae;Gallaecimonadaceae
+JPFHOD_011232509	4	4	3	3	paa phenylacetate	Azospirillaceae;Nocardioidaceae;Sanyastnellaceae
+JPFHOD_011779175	4	4	3	3	intradiol dioxygenase	Gemmataceae;Nocardioidaceae;Saprospiraceae
+JPFHOD_011944812	4	4	3	3	paa phenylacetate	Azospirillaceae;Nocardioidaceae;Sanyastnellaceae
+JPFHOD_013071525	4	4	3	1	RHO dioxygenase alpha/beta	Halieaceae;Methylophilaceae;Parvularculaceae
+JPFHOD_013183342	4	4	3	1	paa phenylacetate	Flavobacteriaceae;Fulvivirgaceae;UBA9320
+JPFHOD_000704422	3	3	3	1	ortho lower (cat/pca)	Hyphomonadaceae;Parvularculaceae;Roseobacteraceae
+JPFHOD_001958788	3	3	3	1	CYP153	Oceanospirillaceae;Shewanellaceae;Spongiibacteraceae
+JPFHOD_002186987	3	3	3	1	ortho lower (cat/pca)	Haliscomenobacteraceae;Hymenobacteraceae;Saprospiraceae
+JPFHOD_002279038	3	3	3	1	alkB	Cellvibrionaceae;Porticoccaceae;Sphingomonadaceae
+JPFHOD_002430431	3	3	3	1	RHO dioxygenase alpha/beta	Cyclobacteriaceae;Flavobacteriaceae;Roseivirgaceae
+JPFHOD_002491524	3	3	3	1	ortho lower (cat/pca)	Paracoccaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002854104	3	3	3	1	meta lower (xyl/dmp)	Burkholderiaceae;D2472;Hyphomonadaceae
+JPFHOD_003069886	3	3	3	2	meta lower (xyl/dmp)	Desulfovibrionaceae;Marinobacteraceae;Piscirickettsiaceae
+JPFHOD_003180164	3	3	3	1	ortho lower (cat/pca)	Candidatus Nanopelagicaceae;Intrasporangiaceae;S36-B12
+JPFHOD_004560477	3	3	3	1	paa phenylacetate	Pleomorphomonadaceae;Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004660472	3	3	3	1	RHO dioxygenase alpha/beta	Alteromonadaceae;Halomonadaceae;Microbulbiferaceae
+JPFHOD_004830287	3	3	3	2	ortho lower (cat/pca)	Methylococcaceae;Oceanospirillaceae;Pirellulaceae
+JPFHOD_005150051	3	3	3	2	alkG/alkT (rubredoxin system)	Moraxellaceae;Mycobacteriaceae;Sphingomonadaceae
+JPFHOD_005410398	3	3	3	2	alkG/alkT (rubredoxin system)	Burkholderiaceae;Moraxellaceae;Nitrospiraceae
+JPFHOD_005949198	3	3	3	1	RHO dioxygenase alpha/beta	Porticoccaceae;Pseudomonadaceae;Sphingomonadaceae
+JPFHOD_006815357	3	3	3	1	RHO dioxygenase alpha/beta	Erythrobacteraceae;Porticoccaceae;Sphingomonadaceae
+JPFHOD_007280418	3	3	3	1	paa phenylacetate	Ahrensiaceae;Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_007813403	3	3	3	1	ortho lower (cat/pca)	Hymenobacteraceae;Lewinellaceae;Saprospiraceae
+JPFHOD_007979272	3	3	3	2	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Mycobacteriaceae;Paracoccaceae
+JPFHOD_008009465	3	3	3	2	ortho lower (cat/pca)	Hyphomonadaceae;Mycobacteriaceae;SHLQ01
+JPFHOD_009624126	3	3	3	1	meta lower (xyl/dmp)	Cycloclasticaceae;Marinobacteraceae;Piscirickettsiaceae
+JPFHOD_009858669	3	3	3	2	meta lower (xyl/dmp)	Alcaligenaceae;Calotrichaceae;Rhizobiaceae
+JPFHOD_010035738	3	3	3	1	ortho lower (cat/pca)	Burkholderiaceae;Comamonadaceae;Oxalobacteraceae
+JPFHOD_010134090	3	3	3	1	meta lower (xyl/dmp)	Azonexaceae;Microbulbiferaceae;Rhodanobacteraceae
+JPFHOD_010482506	3	3	3	2	meta lower (xyl/dmp)	Flavobacteriaceae;Pseudomonadaceae;Saprospiraceae
+JPFHOD_010674098	3	3	3	1	ortho lower (cat/pca)	Phyllobacteriaceae;Rhizobiaceae;Roseobacteraceae
+JPFHOD_011968663	3	3	3	2	meta lower (xyl/dmp)	Colwelliaceae;Fulvivirgaceae;Marivirgaceae
+JPFHOD_012518071	3	3	3	1	paa phenylacetate	Lewinellaceae;Roseivirgaceae;Sanyastnellaceae
+JPFHOD_012765581	3	3	3	2	paa phenylacetate	Cellvibrionaceae;Flavobacteriaceae;Vicingaceae
+JPFHOD_007965884	69	69	2	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_001977239	61	61	2	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_008875230	28	28	2	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_005291368	10	10	2	1	paa phenylacetate	Fulvivirgaceae;Hymenobacteraceae
+JPFHOD_001495828	9	9	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005446517	9	9	2	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_009032306	8	8	2	1	ortho lower (cat/pca)	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_013119329	8	8	2	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_001940045	7	7	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002025313	7	7	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_004520563	7	7	2	1	ortho lower (cat/pca)	Flavobacteriaceae;Marinifilaceae
+JPFHOD_006312756	7	7	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_000758786	6	6	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004113014	6	6	2	1	meta lower (xyl/dmp)	Burkholderiaceae;Comamonadaceae
+JPFHOD_005977939	6	6	2	1	alkG/alkT (rubredoxin system)	DSM-6294;Oceanospirillaceae
+JPFHOD_009956642	6	6	2	1	RHO dioxygenase alpha/beta	Maricaulaceae;Parvularculaceae
+JPFHOD_009975426	6	6	2	1	ortho lower (cat/pca)	Flavobacteriaceae;Marinifilaceae
+JPFHOD_010197022	6	6	2	2	meta lower (xyl/dmp)	Colwelliaceae;Flavobacteriaceae
+JPFHOD_001212545	5	5	2	1	alkB	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003264229	5	5	2	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_003466299	5	5	2	1	ortho lower (cat/pca)	Hyphomonadaceae;Maricaulaceae
+JPFHOD_003820000	5	5	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005427648	5	5	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_009646195	5	5	2	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_010885892	5	5	2	2	paa phenylacetate	Micromonosporaceae;Parvicellaceae
+JPFHOD_010919394	5	5	2	2	BMM toluene/phenol monooxygenase	Immundisolibacteraceae;Phycisphaeraceae
+JPFHOD_012703337	5	5	2	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_013108831	5	5	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Pseudoalteromonadaceae
+JPFHOD_000935469	4	4	2	1	ortho lower (cat/pca)	Alteromonadaceae;Colwelliaceae
+JPFHOD_001442098	4	4	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002322740	4	4	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002322741	4	4	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002630343	4	4	2	1	intradiol dioxygenase	Paracoccaceae;Rhodobacteraceae
+JPFHOD_002651338	4	4	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002687498	4	4	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002721783	4	4	2	1	paa phenylacetate	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002721787	4	4	2	1	paa phenylacetate	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002727045	4	4	2	1	paa phenylacetate	Paracoccaceae;Rhodobacteraceae
+JPFHOD_003404709	4	4	2	1	paa phenylacetate	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003404710	4	4	2	1	paa phenylacetate	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003530164	4	4	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003634787	4	4	2	1	RHO dioxygenase alpha/beta	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003853090	4	4	2	1	RHO ferredoxin/reductase	Cyclobacteriaceae;Sphingobacteriaceae
+JPFHOD_004911915	4	4	2	1	alkG/alkT (rubredoxin system)	D2472;Piscirickettsiaceae
+JPFHOD_005494179	4	4	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_006746355	4	4	2	1	RHO dioxygenase alpha/beta	Paracoccaceae;Roseobacteraceae
+JPFHOD_008693547	4	4	2	2	BMM toluene/phenol monooxygenase	Geobacteraceae;Nitrospinaceae
+JPFHOD_009357561	4	4	2	1	intradiol dioxygenase	Devosiaceae;Rhizobiaceae
+JPFHOD_009357564	4	4	2	1	ortho lower (cat/pca)	Devosiaceae;Rhizobiaceae
+JPFHOD_010294334	4	4	2	2	paa phenylacetate	Crocinitomicaceae;Spongiibacteraceae
+JPFHOD_010857463	4	4	2	1	intradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_011064344	4	4	2	1	ortho lower (cat/pca)	Hymenobacteraceae;Parvicellaceae
+JPFHOD_011508361	4	4	2	1	ortho lower (cat/pca)	Hymenobacteraceae;Saprospiraceae
+JPFHOD_012661832	4	4	2	2	meta lower (xyl/dmp)	Fulvivirgaceae;Kangiellaceae
+JPFHOD_013118434	4	4	2	1	ortho lower (cat/pca)	Azotimanducaceae;Nitrobacteraceae
+JPFHOD_001151824	3	3	2	1	extradiol dioxygenase	Paracoccaceae;Rhizobiaceae
+JPFHOD_001165157	3	3	2	1	gentisate 1,2-dioxygenase	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_001165210	3	3	2	1	meta lower (xyl/dmp)	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_001165223	3	3	2	1	RHO dioxygenase alpha/beta	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_001442096	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001442100	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001497816	3	3	2	1	paa phenylacetate	Flavobacteriaceae;Parvicellaceae
+JPFHOD_001497817	3	3	2	1	paa phenylacetate	Flavobacteriaceae;Parvicellaceae
+JPFHOD_001598560	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001598561	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001598562	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001598564	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001657781	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001657782	3	3	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001802395	3	3	2	1	paa phenylacetate	Paracoccaceae;Rhodobacteraceae
+JPFHOD_002025316	3	3	2	1	meta lower (xyl/dmp)	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002039662	3	3	2	1	RHO dioxygenase alpha/beta	Porticoccaceae;Saccharospirillaceae
+JPFHOD_002119089	3	3	2	1	RHO dioxygenase alpha/beta	Burkholderiaceae;Comamonadaceae
+JPFHOD_002152409	3	3	2	1	CYP153	Hyphomonadaceae;Pseudohongiellaceae
+JPFHOD_002187447	3	3	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002331667	3	3	2	1	extradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002344901	3	3	2	1	paa phenylacetate	Alteromonadaceae;Balneatricaceae
+JPFHOD_002372422	3	3	2	1	extradiol dioxygenase	Rhizobiaceae;Thalassospiraceae
+JPFHOD_002448519	3	3	2	1	RHO dioxygenase alpha/beta	Caulobacteraceae;Halomonadaceae
+JPFHOD_002495152	3	3	2	1	C1-C4 alkane MO	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002501800	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517810	3	3	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002591595	3	3	2	1	intradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002598920	3	3	2	1	paa phenylacetate	Flavobacteriaceae;UBA9320
+JPFHOD_003016212	3	3	2	1	RHO ferredoxin/reductase	Cellvibrionaceae;Pseudomonadaceae
+JPFHOD_003167248	3	3	2	1	paa phenylacetate	Burkholderiaceae;Sphaerotilaceae
+JPFHOD_003201830	3	3	2	1	extradiol dioxygenase	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_003201831	3	3	2	1	meta lower (xyl/dmp)	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_003236431	3	3	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_003236432	3	3	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_003339441	3	3	2	1	alkB	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_003404706	3	3	2	1	paa phenylacetate	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003420731	3	3	2	1	ortho lower (cat/pca)	Burkholderiaceae;Comamonadaceae
+JPFHOD_003420732	3	3	2	1	ortho lower (cat/pca)	Burkholderiaceae;Comamonadaceae
+JPFHOD_003599953	3	3	2	1	RHO ferredoxin/reductase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003599954	3	3	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003647011	3	3	2	1	RHO dioxygenase alpha/beta	Halieaceae;Spongiibacteraceae
+JPFHOD_003731194	3	3	2	1	RHO ferredoxin/reductase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003731197	3	3	2	1	RHO ferredoxin/reductase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003952138	3	3	2	1	RHO dioxygenase alpha/beta	Pleomorphomonadaceae;Roseobacteraceae
+JPFHOD_004043526	3	3	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_004063783	3	3	2	1	ortho lower (cat/pca)	Marinobacteraceae;Pseudomonadaceae
+JPFHOD_004140661	3	3	2	1	ortho lower (cat/pca)	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_004195472	3	3	2	1	paa phenylacetate	Crocinitomicaceae;Flavobacteriaceae
+JPFHOD_004324818	3	3	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_004324820	3	3	2	1	meta lower (xyl/dmp)	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_004524472	3	3	2	2	meta lower (xyl/dmp)	Saprospiraceae;Sphingomonadaceae
+JPFHOD_004595753	3	3	2	1	paa phenylacetate	Cyclobacteriaceae;Fulvivirgaceae
+JPFHOD_004739994	3	3	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004741610	3	3	2	2	RHO dioxygenase alpha/beta	Balneatricaceae;Desulfovibrionaceae
+JPFHOD_005269875	3	3	2	2	ortho lower (cat/pca)	Comamonadaceae;SHLQ01
+JPFHOD_005299590	3	3	2	1	ortho lower (cat/pca)	Acetobacteraceae;Marisalimonadaceae
+JPFHOD_005316996	3	3	2	1	intradiol dioxygenase	Cyclobacteriaceae;Flavobacteriaceae
+JPFHOD_005459852	3	3	2	1	ortho lower (cat/pca)	Cyclobacteriaceae;Roseivirgaceae
+JPFHOD_005476090	3	3	2	1	RHO ferredoxin/reductase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005510938	3	3	2	1	RHO dioxygenase alpha/beta	Flavobacteriaceae;Marivirgaceae
+JPFHOD_005747576	3	3	2	1	paa phenylacetate	Pseudohongiellaceae;Sphingosinicellaceae
+JPFHOD_005772358	3	3	2	1	ortho lower (cat/pca)	Halieaceae;Marinobacteraceae
+JPFHOD_006138897	3	3	2	1	ortho lower (cat/pca)	Oceanospirillaceae;Vibrionaceae
+JPFHOD_006236654	3	3	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_006258197	3	3	2	1	paa phenylacetate	Flavobacteriaceae;UBA10329
+JPFHOD_006374853	3	3	2	1	RHO dioxygenase alpha/beta	Comamonadaceae;Halieaceae
+JPFHOD_006422446	3	3	2	1	ortho lower (cat/pca)	Ketobacteraceae;UBA7434
+JPFHOD_006470990	3	3	2	1	meta lower (xyl/dmp)	Hyphomonadaceae;Sphingomonadaceae
+JPFHOD_006470991	3	3	2	1	extradiol dioxygenase	Hyphomonadaceae;Sphingomonadaceae
+JPFHOD_006504305	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_006809515	3	3	2	1	ortho lower (cat/pca)	Pseudonocardiaceae;S36-B12
+JPFHOD_006885309	3	3	2	1	ortho lower (cat/pca)	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_006931932	3	3	2	1	RHO dioxygenase alpha/beta	Paracoccaceae;Rhodobacteraceae
+JPFHOD_006997620	3	3	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_007061354	3	3	2	1	BMM toluene/phenol monooxygenase	Comamonadaceae;Hyphomicrobiaceae
+JPFHOD_007472218	3	3	2	1	alkG/alkT (rubredoxin system)	Azotimanducaceae;Halomonadaceae
+JPFHOD_007515862	3	3	2	1	RHO dioxygenase alpha/beta	Hyphomonadaceae;Sneathiellaceae
+JPFHOD_007556108	3	3	2	1	intradiol dioxygenase	Gemmataceae;Pirellulaceae
+JPFHOD_007663453	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_007663454	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_007686735	3	3	2	1	intradiol dioxygenase	Paracoccaceae;Roseobacteraceae
+JPFHOD_007828935	3	3	2	1	ortho lower (cat/pca)	Alcaligenaceae;Burkholderiaceae
+JPFHOD_008115189	3	3	2	1	ortho lower (cat/pca)	Ahrensiaceae;Rhizobiaceae
+JPFHOD_008170576	3	3	2	1	meta lower (xyl/dmp)	Crocinitomicaceae;Flavobacteriaceae
+JPFHOD_008247506	3	3	2	1	BMM toluene/phenol monooxygenase	Comamonadaceae;Hyphomicrobiaceae
+JPFHOD_008247508	3	3	2	1	BMM toluene/phenol monooxygenase	Comamonadaceae;Hyphomicrobiaceae
+JPFHOD_008247509	3	3	2	1	BMM toluene/phenol monooxygenase	Comamonadaceae;Hyphomicrobiaceae
+JPFHOD_008508856	3	3	2	1	paa phenylacetate	Halieaceae;Spongiibacteraceae
+JPFHOD_008572254	3	3	2	1	paa phenylacetate	Pseudomonadaceae;SZUA-36
+JPFHOD_009199631	3	3	2	1	paa phenylacetate	Halieaceae;Sedimenticolaceae
+JPFHOD_009235683	3	3	2	1	intradiol dioxygenase	Candidatus Nanopelagicaceae;Microbacteriaceae
+JPFHOD_009245077	3	3	2	1	intradiol dioxygenase	Flavobacteriaceae;Weeksellaceae
+JPFHOD_009292723	3	3	2	1	paa phenylacetate	Paracoccaceae;Roseobacteraceae
+JPFHOD_009351773	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_009384206	3	3	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Colwelliaceae
+JPFHOD_010158834	3	3	2	1	alkG/alkT (rubredoxin system)	Pseudomonadaceae;Zooshikellaceae
+JPFHOD_010291277	3	3	2	1	ortho lower (cat/pca)	Roseobacteraceae;Stappiaceae
+JPFHOD_010451147	3	3	2	1	intradiol dioxygenase	Granulosicoccaceae;Roseobacteraceae
+JPFHOD_010481534	3	3	2	1	RHO dioxygenase alpha/beta	Ilumatobacteraceae;Micrococcaceae
+JPFHOD_010494220	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_010494221	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_010502338	3	3	2	1	extradiol dioxygenase	Paracoccaceae;Rhizobiaceae
+JPFHOD_010560698	3	3	2	1	ortho lower (cat/pca)	Balneatricaceae;Spongiibacteraceae
+JPFHOD_010764374	3	3	2	1	ortho lower (cat/pca)	Paracoccaceae;Roseobacteraceae
+JPFHOD_010927134	3	3	2	1	ortho lower (cat/pca)	Crocinitomicaceae;Sphingobacteriaceae
+JPFHOD_010966206	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_011059101	3	3	2	1	RHO dioxygenase alpha/beta	Flavobacteriaceae;Sanyastnellaceae
+JPFHOD_011072706	3	3	2	1	meta lower (xyl/dmp)	Hymenobacteraceae;UBA9320
+JPFHOD_011675844	3	3	2	1	extradiol dioxygenase	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_012369843	3	3	2	1	BMM toluene/phenol monooxygenase	Roseobacteraceae;Zoogloeaceae
+JPFHOD_012507057	3	3	2	1	alkG/alkT (rubredoxin system)	Halieaceae;JAHEGP01
+JPFHOD_012561124	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_012811040	3	3	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_012879998	3	3	2	2	meta lower (xyl/dmp)	Acanthopleuribacteraceae;UBA1135
+JPFHOD_012960207	3	3	2	1	intradiol dioxygenase	Fulvivirgaceae;Saprospiraceae
+JPFHOD_013064443	3	3	2	2	paa phenylacetate	Fimbriimonadaceae;Oxalobacteraceae
+JPFHOD_013094232	3	3	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Psychromonadaceae
+JPFHOD_000198458	2	2	2	1	C1-C4 alkane MO	Alteromonadaceae;Colwelliaceae
+JPFHOD_000198462	2	2	2	1	BMM toluene/phenol monooxygenase	Alteromonadaceae;Colwelliaceae
+JPFHOD_000198464	2	2	2	1	extradiol dioxygenase	Alteromonadaceae;Colwelliaceae
+JPFHOD_000198466	2	2	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Colwelliaceae
+JPFHOD_000198468	2	2	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Colwelliaceae
+JPFHOD_000198469	2	2	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Colwelliaceae
+JPFHOD_000474052	2	2	2	1	alkG/alkT (rubredoxin system)	Halieaceae;UBA7434
+JPFHOD_000686977	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_000701431	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_000804496	2	2	2	1	paa phenylacetate	Aestuariivirgaceae;Parvibaculaceae
+JPFHOD_000804497	2	2	2	1	paa phenylacetate	Aestuariivirgaceae;Parvibaculaceae
+JPFHOD_000853748	2	2	2	1	meta lower (xyl/dmp)	Sedimenticolaceae;UBA7434
+JPFHOD_000853749	2	2	2	1	meta lower (xyl/dmp)	Sedimenticolaceae;UBA7434
+JPFHOD_000972500	2	2	2	1	RHO dioxygenase alpha/beta	Erythrobacteraceae;Sphingomonadaceae
+JPFHOD_001108366	2	2	2	1	paa phenylacetate	Erythrobacteraceae;Sphingomonadaceae
+JPFHOD_001123120	2	2	2	1	extradiol dioxygenase	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_001123121	2	2	2	1	extradiol dioxygenase	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_001203768	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001275703	2	2	2	1	paa phenylacetate	Paracoccaceae;Roseobacteraceae
+JPFHOD_001366747	2	2	2	1	alkB	Crocinitomicaceae;Flavobacteriaceae
+JPFHOD_001370031	2	2	2	1	meta lower (xyl/dmp)	Flavobacteriaceae;Parvicellaceae
+JPFHOD_001380970	2	2	2	1	PAH lower (nahB/D/E/F)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_001380973	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_001411162	2	2	2	1	CYP153	Oceanospirillaceae;Spongiibacteraceae
+JPFHOD_001526646	2	2	2	1	ladA/almA	Oceanospirillaceae;UBA4575
+JPFHOD_001538579	2	2	2	1	alkB	UBA4575;Zoogloeaceae
+JPFHOD_001538610	2	2	2	1	alkB	UBA4575;Zoogloeaceae
+JPFHOD_001559247	2	2	2	1	alkB	Thiohalobacteraceae;UBA4575
+JPFHOD_001560918	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001582396	2	2	2	1	alkG/alkT (rubredoxin system)	Sedimenticolaceae;Spongiibacteraceae
+JPFHOD_001598563	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001638516	2	2	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001638517	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001656644	2	2	2	1	alkB	Stappiaceae;UBA4575
+JPFHOD_001677389	2	2	2	1	meta lower (xyl/dmp)	Roseobacteraceae;Woeseiaceae
+JPFHOD_001698312	2	2	2	1	ortho lower (cat/pca)	Halieaceae;UBA7434
+JPFHOD_001784725	2	2	2	1	RHO dioxygenase alpha/beta	Paracoccaceae;Roseobacteraceae
+JPFHOD_001877493	2	2	2	1	paa phenylacetate	Thiohalobacteraceae;Woeseiaceae
+JPFHOD_001910146	2	2	2	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_001913855	2	2	2	1	alkB	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_001916498	2	2	2	1	ortho lower (cat/pca)	DSM-21967;Microbulbiferaceae
+JPFHOD_001964901	2	2	2	1	BMM toluene/phenol monooxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_001965063	2	2	2	1	paa phenylacetate	Iamiaceae;Ilumatobacteraceae
+JPFHOD_002053157	2	2	2	1	gentisate 1,2-dioxygenase	Paracoccaceae;Pleomorphomonadaceae
+JPFHOD_002083281	2	2	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002098228	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Rhodobacteraceae
+JPFHOD_002149127	2	2	2	1	paa phenylacetate	SAR86;Stellaceae
+JPFHOD_002157361	2	2	2	1	ortho lower (cat/pca)	Marisalimonadaceae;Pseudomonadaceae
+JPFHOD_002244927	2	2	2	1	CYP153	Alcaligenaceae;Pseudomonadaceae
+JPFHOD_002262593	2	2	2	1	extradiol dioxygenase	Aurantimonadaceae;Rhizobiaceae
+JPFHOD_002278161	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002282789	2	2	2	1	paa phenylacetate	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002314977	2	2	2	1	alkB	Paracoccaceae;Rhodobacteraceae
+JPFHOD_002361084	2	2	2	1	paa phenylacetate	Chitinophagaceae;Flavobacteriaceae
+JPFHOD_002423309	2	2	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002423316	2	2	2	1	meta lower (xyl/dmp)	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_002438712	2	2	2	1	RHO dioxygenase alpha/beta	Porticoccaceae;Spongiibacteraceae
+JPFHOD_002454661	2	2	2	1	extradiol dioxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002465877	2	2	2	1	intradiol dioxygenase	Caulobacteraceae;Sneathiellaceae
+JPFHOD_002517779	2	2	2	1	ladA/almA	Hyphomonadaceae;Maricaulaceae
+JPFHOD_002517803	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517804	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517806	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517807	2	2	2	1	extradiol dioxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517809	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517824	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517825	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517826	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002517828	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002583007	2	2	2	1	intradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002588935	2	2	2	1	paa phenylacetate	Flavobacteriaceae;UBA9320
+JPFHOD_002589791	2	2	2	1	extradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002589792	2	2	2	1	meta lower (xyl/dmp)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_002607117	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002607118	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002607126	2	2	2	1	alkB	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002615925	2	2	2	1	paa phenylacetate	Rhizobiaceae;Salaquimonadaceae
+JPFHOD_002616600	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002620262	2	2	2	1	RHO dioxygenase alpha/beta	Halieaceae;Halomonadaceae
+JPFHOD_002659283	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Roseobacteraceae
+JPFHOD_002684175	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_002804800	2	2	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Pseudoalteromonadaceae
+JPFHOD_002835681	2	2	2	1	CYP153	Alteromonadaceae;Colwelliaceae
+JPFHOD_002878552	2	2	2	1	alkB	Alteromonadaceae;Porticoccaceae
+JPFHOD_002897547	2	2	2	1	meta lower (xyl/dmp)	Crocinitomicaceae;Schleiferiaceae
+JPFHOD_002903569	2	2	2	1	alkB	UBA7434;Zooshikellaceae
+JPFHOD_002949519	2	2	2	1	ortho lower (cat/pca)	Rhizobiaceae;Roseobacteraceae
+JPFHOD_002955634	2	2	2	1	paa phenylacetate	Hymenobacteraceae;Sanyastnellaceae
+JPFHOD_002969645	2	2	2	2	alkG/alkT (rubredoxin system)	Acanthopleuribacteraceae;UBA10329
+JPFHOD_002990098	2	2	2	2	paa phenylacetate	Marinifilaceae;Spongiibacteraceae
+JPFHOD_003012796	2	2	2	1	ortho lower (cat/pca)	Porticoccaceae;Sphingosinicellaceae
+JPFHOD_003021625	2	2	2	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Erythrobacteraceae
+JPFHOD_003121731	2	2	2	1	ortho lower (cat/pca)	Gemmataceae;Pirellulaceae
+JPFHOD_003137807	2	2	2	2	alkG/alkT (rubredoxin system)	Erwiniaceae;Flavobacteriaceae
+JPFHOD_003179847	2	2	2	1	meta lower (xyl/dmp)	Persicobacteraceae;Saprospiraceae
+JPFHOD_003183904	2	2	2	1	ortho lower (cat/pca)	Micavibrionaceae;Roseobacteraceae
+JPFHOD_003188645	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Parvicellaceae
+JPFHOD_003207399	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Saprospiraceae
+JPFHOD_003207404	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Saprospiraceae
+JPFHOD_003207405	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Saprospiraceae
+JPFHOD_003230518	2	2	2	1	meta lower (xyl/dmp)	Hymenobacteraceae;UBA10329
+JPFHOD_003235013	2	2	2	1	salicylate hydroxylase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003288660	2	2	2	1	BMM toluene/phenol monooxygenase	Pleomorphomonadaceae;Rhodobacteraceae
+JPFHOD_003288665	2	2	2	1	RHO dioxygenase alpha/beta	Pleomorphomonadaceae;Rhodobacteraceae
+JPFHOD_003307810	2	2	2	1	meta lower (xyl/dmp)	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_003311746	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Rhodobacteraceae
+JPFHOD_003336716	2	2	2	1	intradiol dioxygenase	Flavobacteriaceae;UBA9320
+JPFHOD_003341284	2	2	2	2	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Christensenellaceae
+JPFHOD_003380623	2	2	2	1	paa phenylacetate	Burkholderiaceae;Sphaerotilaceae
+JPFHOD_003380624	2	2	2	1	paa phenylacetate	Burkholderiaceae;Sphaerotilaceae
+JPFHOD_003380625	2	2	2	1	paa phenylacetate	Burkholderiaceae;Sphaerotilaceae
+JPFHOD_003395975	2	2	2	1	CYP153	Oceanospirillaceae;Parvibaculaceae
+JPFHOD_003406205	2	2	2	1	RHO dioxygenase alpha/beta	Azotimanducaceae;Hyphomonadaceae
+JPFHOD_003423371	2	2	2	2	paa phenylacetate	Candidatus Pelagibacteraceae;Flavobacteriaceae
+JPFHOD_003423372	2	2	2	2	paa phenylacetate	Candidatus Pelagibacteraceae;Flavobacteriaceae
+JPFHOD_003423373	2	2	2	2	paa phenylacetate	Candidatus Pelagibacteraceae;Flavobacteriaceae
+JPFHOD_003429753	2	2	2	2	alkG/alkT (rubredoxin system)	Acidiferrobacteraceae;Nitrospiraceae
+JPFHOD_003494186	2	2	2	1	paa phenylacetate	Hyphomicrobiaceae;Microbulbiferaceae
+JPFHOD_003652320	2	2	2	1	ortho lower (cat/pca)	Phyllobacteriaceae;Stappiaceae
+JPFHOD_003737576	2	2	2	1	intradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003753216	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003805126	2	2	2	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae;Rhodocyclaceae
+JPFHOD_003805128	2	2	2	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae;Rhodocyclaceae
+JPFHOD_003810301	2	2	2	1	RHO dioxygenase alpha/beta	Paracoccaceae;Rhodobacteraceae
+JPFHOD_003828323	2	2	2	1	meta lower (xyl/dmp)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_003873644	2	2	2	1	C1-C4 alkane MO	Burkholderiaceae;Maricaulaceae
+JPFHOD_003892083	2	2	2	1	RHO dioxygenase alpha/beta	Halieaceae;Pseudohongiellaceae
+JPFHOD_003970932	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004079622	2	2	2	1	maleylacetate reductase	Erythrobacteraceae;Porticoccaceae
+JPFHOD_004086883	2	2	2	1	CYP153	Microbulbiferaceae;Spongiibacteraceae
+JPFHOD_004089218	2	2	2	1	salicylate hydroxylase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004112102	2	2	2	1	extradiol dioxygenase	Paracoccaceae;Rhizobiaceae
+JPFHOD_004120057	2	2	2	1	intradiol dioxygenase	Comamonadaceae;Roseobacteraceae
+JPFHOD_004191297	2	2	2	2	paa phenylacetate	Bartonellaceae;Flavobacteriaceae
+JPFHOD_004283452	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Roseobacteraceae
+JPFHOD_004339191	2	2	2	1	ortho lower (cat/pca)	Burkholderiaceae;Rhizobiaceae
+JPFHOD_004348538	2	2	2	2	meta lower (xyl/dmp)	Iamiaceae;Lysobacteraceae
+JPFHOD_004423271	2	2	2	2	RHO dioxygenase alpha/beta	Roseobacteraceae;Streptomycetaceae
+JPFHOD_004429398	2	2	2	1	alkB	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004467238	2	2	2	2	ortho lower (cat/pca)	Comamonadaceae;SHLQ01
+JPFHOD_004505290	2	2	2	1	paa phenylacetate	Paracoccaceae;Rhodobacteraceae
+JPFHOD_004505294	2	2	2	1	paa phenylacetate	Paracoccaceae;Rhodobacteraceae
+JPFHOD_004513493	2	2	2	1	RHO dioxygenase alpha/beta	Balneatricaceae;Enterobacteriaceae
+JPFHOD_004518091	2	2	2	1	paa phenylacetate	Marinifilaceae;Parvicellaceae
+JPFHOD_004524474	2	2	2	2	meta lower (xyl/dmp)	Saprospiraceae;Sphingomonadaceae
+JPFHOD_004524476	2	2	2	2	meta lower (xyl/dmp)	Saprospiraceae;Sphingomonadaceae
+JPFHOD_004548021	2	2	2	1	meta lower (xyl/dmp)	Hyphomonadaceae;Oxalobacteraceae
+JPFHOD_004552679	2	2	2	1	BMM toluene/phenol monooxygenase	GCA-001735895;Nitrobacteraceae
+JPFHOD_004566095	2	2	2	1	ortho lower (cat/pca)	Aestuariivirgaceae;Parvibaculaceae
+JPFHOD_004569109	2	2	2	1	ortho lower (cat/pca)	Colwelliaceae;Hahellaceae
+JPFHOD_004595750	2	2	2	1	paa phenylacetate	Cyclobacteriaceae;Fulvivirgaceae
+JPFHOD_004598540	2	2	2	1	meta lower (xyl/dmp)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_004601656	2	2	2	1	CYP153	DSM-21967;Spongiibacteraceae
+JPFHOD_004616699	2	2	2	1	RHO dioxygenase alpha/beta	Hyphomonadaceae;Sphingomonadaceae
+JPFHOD_004644395	2	2	2	1	meta lower (xyl/dmp)	Pirellulaceae;Tepidisphaeraceae
+JPFHOD_004655441	2	2	2	1	paa phenylacetate	Alteromonadaceae;Vibrionaceae
+JPFHOD_004655442	2	2	2	1	paa phenylacetate	Alteromonadaceae;Vibrionaceae
+JPFHOD_004655443	2	2	2	1	paa phenylacetate	Alteromonadaceae;Vibrionaceae
+JPFHOD_004655444	2	2	2	1	paa phenylacetate	Alteromonadaceae;Vibrionaceae
+JPFHOD_004655446	2	2	2	1	paa phenylacetate	Alteromonadaceae;Vibrionaceae
+JPFHOD_004683178	2	2	2	1	alkB	Haliscomenobacteraceae;Saprospiraceae
+JPFHOD_004690089	2	2	2	1	RHO dioxygenase alpha/beta	Rhizobiaceae;Sphingomonadaceae
+JPFHOD_004738904	2	2	2	1	ortho lower (cat/pca)	Halieaceae;Woeseiaceae
+JPFHOD_004741994	2	2	2	1	ortho lower (cat/pca)	Rhizobiaceae;Roseobacteraceae
+JPFHOD_004793785	2	2	2	1	RHO dioxygenase alpha/beta	Paracoccaceae;Rhodobacteraceae
+JPFHOD_004797753	2	2	2	1	paa phenylacetate	Ahrensiaceae;Salaquimonadaceae
+JPFHOD_004815370	2	2	2	1	ortho lower (cat/pca)	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_004846523	2	2	2	1	paa phenylacetate	Hymenobacteraceae;UBA9320
+JPFHOD_004872011	2	2	2	1	RHO ferredoxin/reductase	Flavobacteriaceae;Leadbetterellaceae
+JPFHOD_004886621	2	2	2	1	RHO dioxygenase alpha/beta	Azotimanducaceae;Sphingomonadaceae
+JPFHOD_005008115	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Rhodobacteraceae
+JPFHOD_005030346	2	2	2	1	RHO dioxygenase alpha/beta	Hyphomicrobiaceae;Sneathiellaceae
+JPFHOD_005053171	2	2	2	1	intradiol dioxygenase	Paracoccaceae;Rhodobacteraceae
+JPFHOD_005055976	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005055977	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005055978	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005093966	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005104988	2	2	2	1	extradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005122418	2	2	2	1	RHO dioxygenase alpha/beta	Comamonadaceae;Oxalobacteraceae
+JPFHOD_005159558	2	2	2	1	alkB	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005168115	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Lewinellaceae
+JPFHOD_005189957	2	2	2	1	ortho lower (cat/pca)	Legionellaceae;Pseudomonadaceae
+JPFHOD_005191088	2	2	2	1	intradiol dioxygenase	Paracoccaceae;Rhodobacteraceae
+JPFHOD_005192949	2	2	2	2	meta lower (xyl/dmp)	Sphaerotilaceae;UBA9320
+JPFHOD_005242310	2	2	2	1	alkG/alkT (rubredoxin system)	Methylophilaceae;Psychromonadaceae
+JPFHOD_005287824	2	2	2	1	ortho lower (cat/pca)	Micromonosporaceae;SHLQ01
+JPFHOD_005309279	2	2	2	1	extradiol dioxygenase	Marinomonadaceae;Oceanospirillaceae
+JPFHOD_005366509	2	2	2	2	intradiol dioxygenase	Bacillaceae;Sphingomonadaceae
+JPFHOD_005392781	2	2	2	2	meta lower (xyl/dmp)	Rhodanobacteraceae;Sanyastnellaceae
+JPFHOD_005393205	2	2	2	1	salicylate hydroxylase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005417322	2	2	2	1	extradiol dioxygenase	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_005423633	2	2	2	1	RHO dioxygenase alpha/beta	Comamonadaceae;Granulosicoccaceae
+JPFHOD_005494088	2	2	2	1	CYP153	Emcibacteraceae;Halieaceae
+JPFHOD_005530129	2	2	2	1	RHO dioxygenase alpha/beta	Sedimenticolaceae;Wenzhouxiangellaceae
+JPFHOD_005534118	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005534120	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005534122	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005534123	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005534126	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_005589670	2	2	2	2	CYP153	Azotimanducaceae;Paraconexibacteraceae
+JPFHOD_005692083	2	2	2	1	alkB	Flavobacteriaceae;Sanyastnellaceae
+JPFHOD_005700619	2	2	2	1	ortho lower (cat/pca)	Mycobacteriaceae;SHLQ01
+JPFHOD_005706966	2	2	2	2	meta lower (xyl/dmp)	Emcibacteraceae;SHLQ01
+JPFHOD_005710651	2	2	2	2	RHO ferredoxin/reductase	Enterococcaceae;Porticoccaceae
+JPFHOD_005710652	2	2	2	2	RHO dioxygenase alpha/beta	Enterococcaceae;Porticoccaceae
+JPFHOD_005728956	2	2	2	1	RHO dioxygenase alpha/beta	Oceanospirillaceae;Pseudomonadaceae
+JPFHOD_005773792	2	2	2	1	ortho lower (cat/pca)	Minwuiaceae;Oceanospirillaceae
+JPFHOD_005779475	2	2	2	2	CYP153	Microbulbiferaceae;Planctomycetaceae
+JPFHOD_005780897	2	2	2	1	RHO dioxygenase alpha/beta	Rhizobiaceae;Roseobacteraceae
+JPFHOD_005792526	2	2	2	2	salicylate hydroxylase	Flavobacteriaceae;Piscirickettsiaceae
+JPFHOD_005809293	2	2	2	1	meta lower (xyl/dmp)	Alteromonadaceae;Sphingomonadaceae
+JPFHOD_005809737	2	2	2	1	meta lower (xyl/dmp)	Microbacteriaceae;Micrococcaceae
+JPFHOD_005809738	2	2	2	1	extradiol dioxygenase	Microbacteriaceae;Micrococcaceae
+JPFHOD_005809739	2	2	2	1	extradiol dioxygenase	Microbacteriaceae;Micrococcaceae
+JPFHOD_005858108	2	2	2	1	paa phenylacetate	Lewinellaceae;Schleiferiaceae
+JPFHOD_005858109	2	2	2	1	paa phenylacetate	Lewinellaceae;Schleiferiaceae
+JPFHOD_005858110	2	2	2	1	paa phenylacetate	Lewinellaceae;Schleiferiaceae
+JPFHOD_005858111	2	2	2	1	paa phenylacetate	Lewinellaceae;Schleiferiaceae
+JPFHOD_005877840	2	2	2	1	ortho lower (cat/pca)	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_005883671	2	2	2	1	CYP153	Pseudohongiellaceae;Sedimenticolaceae
+JPFHOD_005918953	2	2	2	2	meta lower (xyl/dmp)	Acidiferrobacteraceae;Cyclobacteriaceae
+JPFHOD_005935565	2	2	2	1	intradiol dioxygenase	Erythrobacteraceae;Sphingomonadaceae
+JPFHOD_005957900	2	2	2	1	paa phenylacetate	Granulosicoccaceae;Minwuiaceae
+JPFHOD_005957901	2	2	2	1	paa phenylacetate	Granulosicoccaceae;Minwuiaceae
+JPFHOD_005988314	2	2	2	1	gentisate 1,2-dioxygenase	Paracoccaceae;Roseobacteraceae
+JPFHOD_005995126	2	2	2	1	RHO dioxygenase alpha/beta	Alteromonadaceae;Saccharospirillaceae
+JPFHOD_006023719	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_006093529	2	2	2	1	extradiol dioxygenase	Paracoccaceae;Rhodobacteraceae
+JPFHOD_006094139	2	2	2	1	alkB	Alcanivoracaceae;Porticoccaceae
+JPFHOD_006120192	2	2	2	1	RHO dioxygenase alpha/beta	Azotimanducaceae;Spongiibacteraceae
+JPFHOD_006174619	2	2	2	1	paa phenylacetate	Moritellaceae;Psychromonadaceae
+JPFHOD_006205063	2	2	2	2	RHO dioxygenase alpha/beta	AG-422-B15;Thermaceae
+JPFHOD_006205070	2	2	2	2	RHO dioxygenase alpha/beta	AG-422-B15;Thermaceae
+JPFHOD_006216468	2	2	2	1	meta lower (xyl/dmp)	Psychromonadaceae;Vibrionaceae
+JPFHOD_006260274	2	2	2	1	meta lower (xyl/dmp)	Erythrobacteraceae;Hyphomicrobiaceae
+JPFHOD_006288873	2	2	2	1	paa phenylacetate	Azonexaceae;Devosiaceae
+JPFHOD_006297746	2	2	2	1	paa phenylacetate	Acetobacteraceae;Rhodobacteraceae
+JPFHOD_006298241	2	2	2	1	alkG/alkT (rubredoxin system)	Moraxellaceae;Sphingomonadaceae
+JPFHOD_006312755	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_006339645	2	2	2	1	extradiol dioxygenase	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_006363019	2	2	2	1	meta lower (xyl/dmp)	Balneatricaceae;Marinobacteraceae
+JPFHOD_006363024	2	2	2	1	extradiol dioxygenase	Balneatricaceae;Marinobacteraceae
+JPFHOD_006369712	2	2	2	2	ortho lower (cat/pca)	Desulfobacteraceae;Roseobacteraceae
+JPFHOD_006388089	2	2	2	1	alkG/alkT (rubredoxin system)	DSM-6294;Oceanospirillaceae
+JPFHOD_006467390	2	2	2	2	extradiol dioxygenase	Poriferisodalaceae;Sneathiellaceae
+JPFHOD_006504308	2	2	2	1	alkB	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_006504309	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_006530305	2	2	2	1	extradiol dioxygenase	Paracoccaceae;Roseobacteraceae
+JPFHOD_006564370	2	2	2	1	RHO dioxygenase alpha/beta	Azotimanducaceae;Caulobacteraceae
+JPFHOD_006571855	2	2	2	1	meta lower (xyl/dmp)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_006593469	2	2	2	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae;Piscirickettsiaceae
+JPFHOD_006616906	2	2	2	2	paa phenylacetate	Candidatus Pelagibacteraceae;Flavobacteriaceae
+JPFHOD_006633879	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Roseobacteraceae
+JPFHOD_006635847	2	2	2	1	RHO dioxygenase alpha/beta	Ectothiorhodospiraceae;Porticoccaceae
+JPFHOD_006661002	2	2	2	1	paa phenylacetate	Flavobacteriaceae;UBA7430
+JPFHOD_006693050	2	2	2	1	meta lower (xyl/dmp)	Oceanospirillaceae;Vibrionaceae
+JPFHOD_006715343	2	2	2	1	ortho lower (cat/pca)	Nitrobacteraceae;Roseobacteraceae
+JPFHOD_006745102	2	2	2	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_006770342	2	2	2	1	salicylate hydroxylase	Methylocystaceae;Sphingomonadaceae
+JPFHOD_006834730	2	2	2	1	paa phenylacetate	Micromonosporaceae;Nocardioidaceae
+JPFHOD_006837134	2	2	2	1	meta lower (xyl/dmp)	Alcaligenaceae;Comamonadaceae
+JPFHOD_006922207	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_006929725	2	2	2	1	meta lower (xyl/dmp)	Pirellulaceae;Planctomycetaceae
+JPFHOD_006934655	2	2	2	1	RHO dioxygenase alpha/beta	GCA-001735895;Stappiaceae
+JPFHOD_007023081	2	2	2	1	CYP153	Azotimanducaceae;Sedimenticolaceae
+JPFHOD_007023083	2	2	2	1	alkG/alkT (rubredoxin system)	Pseudomonadaceae;Sedimenticolaceae
+JPFHOD_007083459	2	2	2	2	paa phenylacetate	Bartonellaceae;Marinifilaceae
+JPFHOD_007086073	2	2	2	1	CYP153	Erythrobacteraceae;Sphingomonadaceae
+JPFHOD_007125895	2	2	2	2	ortho lower (cat/pca)	Phyllobacteriaceae;S36-B12
+JPFHOD_007174603	2	2	2	1	meta lower (xyl/dmp)	Flammeovirgaceae;Schleiferiaceae
+JPFHOD_007174604	2	2	2	1	meta lower (xyl/dmp)	Flammeovirgaceae;Schleiferiaceae
+JPFHOD_007206054	2	2	2	1	ortho lower (cat/pca)	Flavobacteriaceae;Schleiferiaceae
+JPFHOD_007232551	2	2	2	2	meta lower (xyl/dmp)	Archangiaceae;UBA1096
+JPFHOD_007271753	2	2	2	1	ortho lower (cat/pca)	Psychromonadaceae;Vibrionaceae
+JPFHOD_007272391	2	2	2	1	ortho lower (cat/pca)	Pirellulaceae;Planctomycetaceae
+JPFHOD_007280414	2	2	2	1	paa phenylacetate	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_007280415	2	2	2	1	paa phenylacetate	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_007280417	2	2	2	1	paa phenylacetate	Phyllobacteriaceae;Rhizobiaceae
+JPFHOD_007324000	2	2	2	1	RHO dioxygenase alpha/beta	Aestuariivirgaceae;Rhizobiaceae
+JPFHOD_007352297	2	2	2	2	alkB	Bacillaceae;Iamiaceae
+JPFHOD_007370524	2	2	2	1	paa phenylacetate	Ectothiorhodospiraceae;Halieaceae
+JPFHOD_007393059	2	2	2	1	RHO dioxygenase alpha/beta	Cellvibrionaceae;Halieaceae
+JPFHOD_007491343	2	2	2	2	alkB	Alteromonadaceae;Geminocystaceae
+JPFHOD_007554534	2	2	2	2	ortho lower (cat/pca)	Flavobacteriaceae;Sphingomonadaceae
+JPFHOD_007573298	2	2	2	2	alkB	Sandaracinaceae;UBA10329
+JPFHOD_007578176	2	2	2	1	alkB	Immundisolibacteraceae;Shewanellaceae
+JPFHOD_007619592	2	2	2	1	paa phenylacetate	Lewinellaceae;Roseivirgaceae
+JPFHOD_007732951	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_007732952	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_007752446	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_007757385	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_007780486	2	2	2	1	alkB	Sphingosinicellaceae;Wenzhouxiangellaceae
+JPFHOD_007788657	2	2	2	2	BMM toluene/phenol monooxygenase	Balneatricaceae;Desulfovibrionaceae
+JPFHOD_007788658	2	2	2	2	BMM toluene/phenol monooxygenase	Balneatricaceae;Desulfovibrionaceae
+JPFHOD_007806864	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Sphingobacteriaceae
+JPFHOD_007820044	2	2	2	1	alkB	Cyclobacteriaceae;Sanyastnellaceae
+JPFHOD_007838557	2	2	2	1	ortho lower (cat/pca)	Flavobacteriaceae;Sanyastnellaceae
+JPFHOD_007940675	2	2	2	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_007955884	2	2	2	1	CYP153	Colwelliaceae;Nitrobacteraceae
+JPFHOD_007958676	2	2	2	2	meta lower (xyl/dmp)	Gemmataceae;Sanyastnellaceae
+JPFHOD_007994907	2	2	2	1	CYP153	Hyphomonadaceae;Rhizobiaceae
+JPFHOD_008011479	2	2	2	1	meta lower (xyl/dmp)	Alcanivoracaceae;Halomonadaceae
+JPFHOD_008035097	2	2	2	2	paa phenylacetate	Comamonadaceae;Parvicellaceae
+JPFHOD_008148781	2	2	2	1	ortho lower (cat/pca)	Comamonadaceae;Pseudohongiellaceae
+JPFHOD_008166746	2	2	2	2	paa phenylacetate	Crocinitomicaceae;Pseudomonadaceae
+JPFHOD_008216684	2	2	2	1	ortho lower (cat/pca)	Puniceispirillaceae;Roseobacteraceae
+JPFHOD_008225601	2	2	2	1	RHO dioxygenase alpha/beta	Paracoccaceae;Roseobacteraceae
+JPFHOD_008233284	2	2	2	1	ortho lower (cat/pca)	Aestuariivirgaceae;Parvibaculaceae
+JPFHOD_008247505	2	2	2	1	BMM toluene/phenol monooxygenase	Comamonadaceae;Hyphomicrobiaceae
+JPFHOD_008249906	2	2	2	2	CYP153	Cellvibrionaceae;Haloarculaceae
+JPFHOD_008256888	2	2	2	1	meta lower (xyl/dmp)	Marinobacteraceae;Pseudohongiellaceae
+JPFHOD_008268062	2	2	2	2	ortho lower (cat/pca)	Acetobacteraceae;Acidobacteriaceae
+JPFHOD_008306929	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Roseobacteraceae
+JPFHOD_008321560	2	2	2	1	meta lower (xyl/dmp)	Aeromonadaceae;Pseudoalteromonadaceae
+JPFHOD_008343474	2	2	2	1	alkB	Azotimanducaceae;Hyphomonadaceae
+JPFHOD_008358002	2	2	2	1	ortho lower (cat/pca)	Cyclobacteriaceae;Roseivirgaceae
+JPFHOD_008362687	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_008362991	2	2	2	1	salicylate hydroxylase	Alteromonadaceae;Yersiniaceae
+JPFHOD_008441773	2	2	2	2	ortho lower (cat/pca)	Paenibacillaceae;Porticoccaceae
+JPFHOD_008459122	2	2	2	2	paa phenylacetate	Candidatus Uabimicrobiaceae;NAC60-12
+JPFHOD_008502500	2	2	2	1	extradiol dioxygenase	Marisalimonadaceae;Paracoccaceae
+JPFHOD_008502857	2	2	2	1	extradiol dioxygenase	Marisalimonadaceae;Nitrobacteraceae
+JPFHOD_008563410	2	2	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_008666110	2	2	2	1	CYP153	Chromatiaceae;Nitrobacteraceae
+JPFHOD_008668470	2	2	2	1	BMM toluene/phenol monooxygenase	Roseobacteraceae;Zoogloeaceae
+JPFHOD_008668474	2	2	2	1	BMM toluene/phenol monooxygenase	Roseobacteraceae;Zoogloeaceae
+JPFHOD_008731571	2	2	2	2	meta lower (xyl/dmp)	Enterobacteriaceae;Saprospiraceae
+JPFHOD_008779551	2	2	2	1	ortho lower (cat/pca)	Boseaceae;Ga0077536
+JPFHOD_008794267	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_008826739	2	2	2	1	ortho lower (cat/pca)	Oleiphilaceae;Pseudomonadaceae
+JPFHOD_008906757	2	2	2	1	gentisate 1,2-dioxygenase	Hyphomicrobiaceae;Rhizobiaceae
+JPFHOD_008930743	2	2	2	1	CYP153	Cellvibrionaceae;Sphingomonadaceae
+JPFHOD_009038591	2	2	2	2	meta lower (xyl/dmp)	Emcibacteraceae;Gordoniaceae
+JPFHOD_009063751	2	2	2	1	paa phenylacetate	Halieaceae;Spongiibacteraceae
+JPFHOD_009087406	2	2	2	2	RHO dioxygenase alpha/beta	Azotimanducaceae;Candidatus Lucifugimonadaceae
+JPFHOD_009118197	2	2	2	1	paa phenylacetate	Owenweeksiaceae;Schleiferiaceae
+JPFHOD_009118198	2	2	2	1	paa phenylacetate	Owenweeksiaceae;Schleiferiaceae
+JPFHOD_009126807	2	2	2	1	paa phenylacetate	Ilumatobacteraceae;Nocardiaceae
+JPFHOD_009206130	2	2	2	1	ortho lower (cat/pca)	Sneathiellaceae;Stappiaceae
+JPFHOD_009344018	2	2	2	1	meta lower (xyl/dmp)	Acidiferrobacteraceae;Candidatus Pelagibacteraceae
+JPFHOD_009355446	2	2	2	1	meta lower (xyl/dmp)	Pseudonocardiaceae;Streptosporangiaceae
+JPFHOD_009404625	2	2	2	1	ortho lower (cat/pca)	Casp-alpha2;Thalassobaculaceae
+JPFHOD_009417331	2	2	2	1	ortho lower (cat/pca)	Iamiaceae;Streptosporangiaceae
+JPFHOD_009461658	2	2	2	1	paa phenylacetate	Crocinitomicaceae;Marinifilaceae
+JPFHOD_009618827	2	2	2	1	CYP153	Caulobacteraceae;Halieaceae
+JPFHOD_009629576	2	2	2	1	paa phenylacetate	Flavobacteriaceae;UBA10329
+JPFHOD_009656980	2	2	2	1	ortho lower (cat/pca)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_009656982	2	2	2	1	ortho lower (cat/pca)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_009660505	2	2	2	2	meta lower (xyl/dmp)	Burkholderiaceae;Streptomycetaceae
+JPFHOD_009685272	2	2	2	1	ortho lower (cat/pca)	Parvibaculaceae;Rhizobiaceae
+JPFHOD_009698808	2	2	2	1	ortho lower (cat/pca)	Methylococcaceae;Phyllobacteriaceae
+JPFHOD_009759639	2	2	2	2	RHO dioxygenase alpha/beta	Candidatus Nanopelagicaceae;Sphingomonadaceae
+JPFHOD_009770292	2	2	2	1	ortho lower (cat/pca)	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_009774859	2	2	2	1	meta lower (xyl/dmp)	Marinobacteraceae;Oxalobacteraceae
+JPFHOD_009869984	2	2	2	1	intradiol dioxygenase	Marisalimonadaceae;Paracoccaceae
+JPFHOD_009886384	2	2	2	1	meta lower (xyl/dmp)	Bernardetiaceae;Hymenobacteraceae
+JPFHOD_009891983	2	2	2	1	paa phenylacetate	Flavobacteriaceae;UBA9320
+JPFHOD_009894727	2	2	2	1	ortho lower (cat/pca)	Erythrobacteraceae;Sphingomonadaceae
+JPFHOD_009925511	2	2	2	1	meta lower (xyl/dmp)	Flavobacteriaceae;Sanyastnellaceae
+JPFHOD_010127861	2	2	2	1	extradiol dioxygenase	Chromatiaceae;Halieaceae
+JPFHOD_010218981	2	2	2	1	RHO dioxygenase alpha/beta	Casp-alpha2;Roseobacteraceae
+JPFHOD_010236841	2	2	2	1	ortho lower (cat/pca)	Rhizobiaceae;Rhodobacteraceae
+JPFHOD_010246988	2	2	2	2	paa phenylacetate	Desulfatibacillaceae;Leptospiraceae
+JPFHOD_010267960	2	2	2	2	intradiol dioxygenase	Baekduiaceae;Saprospiraceae
+JPFHOD_010267961	2	2	2	2	intradiol dioxygenase	Baekduiaceae;Saprospiraceae
+JPFHOD_010289702	2	2	2	2	ortho lower (cat/pca)	Bryobacteraceae;SM1A02
+JPFHOD_010307083	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Parvicellaceae
+JPFHOD_010323030	2	2	2	1	RHO dioxygenase alpha/beta	Comamonadaceae;Cycloclasticaceae
+JPFHOD_010323031	2	2	2	1	RHO dioxygenase alpha/beta	Comamonadaceae;Cycloclasticaceae
+JPFHOD_010342716	2	2	2	1	paa phenylacetate	Paracoccaceae;Roseobacteraceae
+JPFHOD_010342717	2	2	2	1	paa phenylacetate	Paracoccaceae;Roseobacteraceae
+JPFHOD_010342719	2	2	2	1	paa phenylacetate	Paracoccaceae;Roseobacteraceae
+JPFHOD_010366269	2	2	2	1	ortho lower (cat/pca)	Alteromonadaceae;Colwelliaceae
+JPFHOD_010404809	2	2	2	1	CYP153	Caulobacteraceae;MED-G09
+JPFHOD_010427241	2	2	2	1	extradiol dioxygenase	Burkholderiaceae;Emcibacteraceae
+JPFHOD_010427243	2	2	2	1	ortho lower (cat/pca)	Burkholderiaceae;Emcibacteraceae
+JPFHOD_010451148	2	2	2	1	intradiol dioxygenase	Granulosicoccaceae;Roseobacteraceae
+JPFHOD_010451149	2	2	2	1	ortho lower (cat/pca)	Granulosicoccaceae;Roseobacteraceae
+JPFHOD_010466015	2	2	2	1	RHO dioxygenase alpha/beta	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_010526597	2	2	2	2	paa phenylacetate	Enterobacteriaceae;Hymenobacteraceae
+JPFHOD_010533544	2	2	2	1	ortho lower (cat/pca)	Hymenobacteraceae;Parvicellaceae
+JPFHOD_010566427	2	2	2	1	meta lower (xyl/dmp)	Methylococcaceae;Sedimenticolaceae
+JPFHOD_010578791	2	2	2	2	meta lower (xyl/dmp)	Leptospiraceae;Mycobacteriaceae
+JPFHOD_010601498	2	2	2	1	PAH lower (nahB/D/E/F)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_010639915	2	2	2	2	intradiol dioxygenase	Pirellulaceae;Verrucomicrobiaceae
+JPFHOD_010641126	2	2	2	1	RHO dioxygenase alpha/beta	Methylococcaceae;Pseudomonadaceae
+JPFHOD_010727618	2	2	2	1	paa phenylacetate	Paracoccaceae;Rhodobacteraceae
+JPFHOD_010794669	2	2	2	1	BMM toluene/phenol monooxygenase	Desulfobulbaceae;Desulfocapsaceae
+JPFHOD_010894869	2	2	2	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_010904725	2	2	2	2	ortho lower (cat/pca)	Lactobacillaceae;Vibrionaceae
+JPFHOD_011037043	2	2	2	2	RHO dioxygenase alpha/beta	Gemmataceae;Shewanellaceae
+JPFHOD_011054754	2	2	2	1	paa phenylacetate	Roseivirgaceae;Weeksellaceae
+JPFHOD_011071900	2	2	2	1	ortho lower (cat/pca)	Rhizobiaceae;Rhodobacteraceae
+JPFHOD_011141748	2	2	2	1	paa phenylacetate	Rhodobacteraceae;Roseobacteraceae
+JPFHOD_011169624	2	2	2	1	ortho lower (cat/pca)	Lewinellaceae;Saprospiraceae
+JPFHOD_011232511	2	2	2	2	paa phenylacetate	Azospirillaceae;Sanyastnellaceae
+JPFHOD_011253419	2	2	2	1	paa phenylacetate	Crocinitomicaceae;Flavobacteriaceae
+JPFHOD_011529340	2	2	2	1	intradiol dioxygenase	BACL11;Hymenobacteraceae
+JPFHOD_011536754	2	2	2	2	ortho lower (cat/pca)	Lysobacteraceae;Saprospiraceae
+JPFHOD_011597856	2	2	2	1	ortho lower (cat/pca)	Parvibaculaceae;Salaquimonadaceae
+JPFHOD_011608882	2	2	2	1	RHO dioxygenase alpha/beta	Erythrobacteraceae;Sphingomonadaceae
+JPFHOD_011680662	2	2	2	2	ortho lower (cat/pca)	Ilumatobacteraceae;Roseobacteraceae
+JPFHOD_011787512	2	2	2	1	BMM toluene/phenol monooxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_011822884	2	2	2	1	CYP153	Azotimanducaceae;Caulobacteraceae
+JPFHOD_011842908	2	2	2	1	meta lower (xyl/dmp)	JAHEGP01;Oceanospirillaceae
+JPFHOD_011906867	2	2	2	1	BMM toluene/phenol monooxygenase	Candidatus Puniceispirillaceae;Comamonadaceae
+JPFHOD_011971223	2	2	2	1	ortho lower (cat/pca)	Granulosicoccaceae;Hyphomicrobiaceae
+JPFHOD_011985517	2	2	2	1	meta lower (xyl/dmp)	Halieaceae;Pseudohongiellaceae
+JPFHOD_011985519	2	2	2	1	meta lower (xyl/dmp)	Halieaceae;Pseudohongiellaceae
+JPFHOD_012000404	2	2	2	1	meta lower (xyl/dmp)	Emcibacteraceae;Roseobacteraceae
+JPFHOD_012000556	2	2	2	1	RHO dioxygenase alpha/beta	Microbulbiferaceae;UBA11654
+JPFHOD_012031586	2	2	2	1	paa phenylacetate	Micromonosporaceae;Nocardioidaceae
+JPFHOD_012032691	2	2	2	2	RHO dioxygenase alpha/beta	Endozoicomonadaceae;NAC60-12
+JPFHOD_012073470	2	2	2	1	RHO dioxygenase alpha/beta	AG-422-B15;Candidatus Pelagibacteraceae
+JPFHOD_012090512	2	2	2	1	ortho lower (cat/pca)	Flavobacteriaceae;Hymenobacteraceae
+JPFHOD_012115094	2	2	2	1	extradiol dioxygenase	Alcaligenaceae;Nitrobacteraceae
+JPFHOD_012121837	2	2	2	1	RHO dioxygenase alpha/beta	Hyphomicrobiaceae;Sphingomonadaceae
+JPFHOD_012121838	2	2	2	1	RHO dioxygenase alpha/beta	Hyphomicrobiaceae;Sphingomonadaceae
+JPFHOD_012196926	2	2	2	1	extradiol dioxygenase	Devosiaceae;Roseobacteraceae
+JPFHOD_012198226	2	2	2	1	extradiol dioxygenase	Cyclobacteriaceae;Leadbetterellaceae
+JPFHOD_012217339	2	2	2	1	ortho lower (cat/pca)	Marisalimonadaceae;Phyllobacteriaceae
+JPFHOD_012238209	2	2	2	2	paa phenylacetate	Pseudomonadaceae;Sanyastnellaceae
+JPFHOD_012253169	2	2	2	2	paa phenylacetate	Saprospiraceae;Sphaerotilaceae
+JPFHOD_012309795	2	2	2	2	paa phenylacetate	Pseudomonadaceae;Sanyastnellaceae
+JPFHOD_012313891	2	2	2	1	RHO dioxygenase alpha/beta	Emcibacteraceae;Oceanospirillaceae
+JPFHOD_012328087	2	2	2	1	RHO dioxygenase alpha/beta	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_012336420	2	2	2	1	paa phenylacetate	Crocinitomicaceae;Reichenbachiellaceae
+JPFHOD_012353774	2	2	2	1	alkG/alkT (rubredoxin system)	Alteromonadaceae;Colwelliaceae
+JPFHOD_012402421	2	2	2	1	meta lower (xyl/dmp)	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_012482744	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Roseivirgaceae
+JPFHOD_012531087	2	2	2	1	ortho lower (cat/pca)	Iamiaceae;Nocardioidaceae
+JPFHOD_012557068	2	2	2	1	meta lower (xyl/dmp)	Flavobacteriaceae;Fulvivirgaceae
+JPFHOD_012599231	2	2	2	1	paa phenylacetate	Crocinitomicaceae;Roseivirgaceae
+JPFHOD_012599233	2	2	2	1	paa phenylacetate	Crocinitomicaceae;Roseivirgaceae
+JPFHOD_012636285	2	2	2	1	alkG/alkT (rubredoxin system)	Acidiferrobacteraceae;Lysobacteraceae
+JPFHOD_012664014	2	2	2	1	paa phenylacetate	Sanyastnellaceae;UBA9320
+JPFHOD_012670562	2	2	2	1	paa phenylacetate	Roseivirgaceae;Saprospiraceae
+JPFHOD_012680939	2	2	2	2	paa phenylacetate	Cellvibrionaceae;Flavobacteriaceae
+JPFHOD_012715823	2	2	2	1	paa phenylacetate	Sanyastnellaceae;Saprospiraceae
+JPFHOD_012731292	2	2	2	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_012758888	2	2	2	2	intradiol dioxygenase	Lacipirellulaceae;UBA1096
+JPFHOD_012765580	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Vicingaceae
+JPFHOD_012929858	2	2	2	1	alkG/alkT (rubredoxin system)	Sphaerotilaceae;UBA4575
+JPFHOD_012948234	2	2	2	1	paa phenylacetate	Flavobacteriaceae;Roseivirgaceae
+JPFHOD_012951166	2	2	2	2	paa phenylacetate	Paracoccaceae;Sanyastnellaceae
+JPFHOD_012951167	2	2	2	2	paa phenylacetate	Paracoccaceae;Sanyastnellaceae
+JPFHOD_012977070	2	2	2	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae;Pelagibacteraceae
+JPFHOD_012977189	2	2	2	1	alkG/alkT (rubredoxin system)	Caulobacteraceae;Parvibaculaceae
+JPFHOD_012993060	2	2	2	2	meta lower (xyl/dmp)	Fulvivirgaceae;Lysobacteraceae
+JPFHOD_013027538	2	2	2	1	meta lower (xyl/dmp)	Cellvibrionaceae;Oxalobacteraceae
+JPFHOD_013045799	2	2	2	1	alkG/alkT (rubredoxin system)	GCA-2400775;Methylococcaceae
+JPFHOD_013087007	2	2	2	1	ortho lower (cat/pca)	Hymenobacteraceae;Parvicellaceae
+JPFHOD_013106666	2	2	2	1	extradiol dioxygenase	Cycloclasticaceae;Piscirickettsiaceae
+JPFHOD_013111369	2	2	2	1	ortho lower (cat/pca)	Paracoccaceae;Rhodobacteraceae
+JPFHOD_013119693	2	2	2	1	ortho lower (cat/pca)	Cohaesibacteraceae;Rhizobiaceae
+JPFHOD_013133316	2	2	2	1	meta lower (xyl/dmp)	Halieaceae;Lysobacteraceae
+JPFHOD_013135162	2	2	2	1	paa phenylacetate	Brevibacteriaceae;MedAcidi-G1
+JPFHOD_013145527	2	2	2	1	RHO ferredoxin/reductase	Phyllobacteriaceae;Roseobacteraceae
+JPFHOD_013244343	2	2	2	1	ortho lower (cat/pca)	Hymenobacteraceae;Parvicellaceae
+JPFHOD_013269705	2	2	2	1	meta lower (xyl/dmp)	Nevskiaceae;Sphingomonadaceae
+JPFHOD_013275970	2	2	2	2	intradiol dioxygenase	Flavobacteriaceae;Pseudomonadaceae
+JPFHOD_013299036	2	2	2	1	paa phenylacetate	Crocinitomicaceae;Reichenbachiellaceae
+JPFHOD_013320822	2	2	2	1	meta lower (xyl/dmp)	Flavobacteriaceae;UBA9320
+JPFHOD_007465406	58	58	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006553127	56	56	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_006140037	24	24	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_007885714	24	24	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011770055	16	16	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_012748041	15	15	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_008890496	11	11	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_000333059	10	10	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_006820810	10	10	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_010279161	10	10	1	1	alkG/alkT (rubredoxin system)	Burkholderiaceae
+JPFHOD_004834649	9	9	1	1	meta lower (xyl/dmp)	Microbacteriaceae
+JPFHOD_008279834	9	9	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_009210107	9	9	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_007477101	8	8	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_008066304	7	7	1	1	alkG/alkT (rubredoxin system)	Burkholderiaceae
+JPFHOD_011164159	7	7	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_002036732	6	6	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_002260622	6	6	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_002446573	6	6	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_002910723	6	6	1	1	ortho lower (cat/pca)	Pseudothioglobaceae
+JPFHOD_003782027	6	6	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_010160503	6	6	1	1	CYP153	Sphingomonadaceae
+JPFHOD_013276736	6	6	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_001896879	5	5	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_002399920	5	5	1	1	CYP153	Hyphomonadaceae
+JPFHOD_004157890	5	5	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_005393245	5	5	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_005482107	5	5	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_005763774	5	5	1	1	ortho lower (cat/pca)	Cyclobacteriaceae
+JPFHOD_006284833	5	5	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_006922700	5	5	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_007523397	5	5	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_008309028	5	5	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_008351778	5	5	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_008609144	5	5	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_008896081	5	5	1	1	extradiol dioxygenase	Oceanospirillaceae
+JPFHOD_009975086	5	5	1	1	C1-C4 alkane MO	Nitrosopumilaceae
+JPFHOD_011132869	5	5	1	1	salicylate hydroxylase	Pelagibacteraceae
+JPFHOD_011726379	5	5	1	1	RHO ferredoxin/reductase	Flavobacteriaceae
+JPFHOD_012604975	5	5	1	1	alkB	Flavobacteriaceae
+JPFHOD_013082160	5	5	1	1	meta lower (xyl/dmp)	Piscirickettsiaceae
+JPFHOD_013194626	5	5	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_013268215	5	5	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_001030338	4	4	1	1	intradiol dioxygenase	Rhizobiaceae
+JPFHOD_001239708	4	4	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_002189930	4	4	1	1	paa phenylacetate	Halieaceae
+JPFHOD_002235018	4	3	1	1	ortho lower (cat/pca)	Vibrionaceae
+JPFHOD_002474801	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_002484011	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_002659485	4	4	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004161639	4	4	1	1	maleylacetate reductase	Sphingomonadaceae
+JPFHOD_004890734	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_006003253	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_006311877	4	4	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006334567	4	4	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_006334568	4	4	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_006848300	4	4	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_007056748	4	4	1	1	RHO dioxygenase alpha/beta	Roseobacteraceae
+JPFHOD_007672791	4	4	1	1	ortho lower (cat/pca)	Cellvibrionaceae
+JPFHOD_007772925	4	4	1	1	meta lower (xyl/dmp)	Sphingomonadaceae
+JPFHOD_007879486	4	4	1	1	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_007979609	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_008124102	4	4	1	1	RHO dioxygenase alpha/beta	Rhizobiaceae
+JPFHOD_008869948	4	4	1	1	meta lower (xyl/dmp)	Burkholderiaceae
+JPFHOD_009026156	4	4	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_009026157	4	4	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_009523049	4	4	1	1	meta lower (xyl/dmp)	Hyphomonadaceae
+JPFHOD_009531183	4	4	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_009918565	4	4	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_009999916	4	4	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010392594	4	4	1	1	meta lower (xyl/dmp)	Planctomycetaceae
+JPFHOD_010578490	4	4	1	1	alkB	Candidatus Pelagibacteraceae
+JPFHOD_010691382	4	4	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010989310	4	4	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_011196669	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_011258053	4	4	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_011874998	4	4	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_012915047	4	4	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_000567188	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_000789970	3	3	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_000891340	3	3	1	1	CYP153	Hyphomonadaceae
+JPFHOD_000921963	3	3	1	1	intradiol dioxygenase	Rhizobiaceae
+JPFHOD_000938568	3	3	1	1	extradiol dioxygenase	Maricaulaceae
+JPFHOD_000958763	3	3	1	1	salicylate hydroxylase	Hyphomonadaceae
+JPFHOD_001028920	3	3	1	1	extradiol dioxygenase	Alteromonadaceae
+JPFHOD_001100856	3	3	1	1	CYP153	Ilumatobacteraceae
+JPFHOD_001173279	3	3	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_001193954	3	3	1	1	paa phenylacetate	Pseudohongiellaceae
+JPFHOD_001538398	3	3	1	1	ortho lower (cat/pca)	Vibrionaceae
+JPFHOD_001638641	3	3	1	1	alkG/alkT (rubredoxin system)	Pseudohongiellaceae
+JPFHOD_001689812	3	3	1	1	meta lower (xyl/dmp)	Ilumatobacteraceae
+JPFHOD_001693931	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_001750529	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_001750559	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_001817310	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_001938919	3	3	1	1	alkB	Flavobacteriaceae
+JPFHOD_001983226	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_002142469	3	3	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_002189929	3	3	1	1	paa phenylacetate	Halieaceae
+JPFHOD_002441667	3	3	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_002541112	3	3	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_002602071	3	3	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_002699359	3	3	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_002930236	3	3	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_003026246	3	3	1	1	paa phenylacetate	Parvicellaceae
+JPFHOD_003033422	3	3	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_003117876	3	3	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_003129247	3	3	1	1	CYP153	Azotimanducaceae
+JPFHOD_003191450	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003196345	3	3	1	1	meta lower (xyl/dmp)	Alteromonadaceae
+JPFHOD_003240698	3	3	1	1	RHO dioxygenase alpha/beta	Pseudomonadaceae
+JPFHOD_003251439	3	3	1	1	meta lower (xyl/dmp)	Phycodnaviridae
+JPFHOD_003255056	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003263280	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003354085	3	3	1	1	alkB	Oceanospirillaceae
+JPFHOD_003358697	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003450860	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003503040	3	3	1	1	alkG/alkT (rubredoxin system)	Methylophilaceae
+JPFHOD_003505686	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_003726067	3	3	1	1	RHO ferredoxin/reductase	Flavobacteriaceae
+JPFHOD_003837593	3	3	1	1	PAH lower (nahB/D/E/F)	Oceanospirillaceae
+JPFHOD_004239440	3	3	1	1	RHO ferredoxin/reductase	Ilumatobacteraceae
+JPFHOD_004362337	3	3	1	1	paa phenylacetate	Halieaceae
+JPFHOD_004362339	3	3	1	1	paa phenylacetate	Halieaceae
+JPFHOD_004363251	3	3	1	1	RHO ferredoxin/reductase	Oceanospirillaceae
+JPFHOD_004411993	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004421373	3	3	1	1	meta lower (xyl/dmp)	Halieaceae
+JPFHOD_004562438	3	3	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_004795313	3	3	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_004814873	3	3	1	1	paa phenylacetate	Cyclobacteriaceae
+JPFHOD_004899132	3	3	1	1	ortho lower (cat/pca)	Spirosomataceae
+JPFHOD_005086792	3	3	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_005248432	3	3	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_005566847	3	3	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_005568091	3	3	1	1	meta lower (xyl/dmp)	Rhodobacteraceae
+JPFHOD_005988054	3	3	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_005988055	3	3	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_006015542	3	3	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_006038686	3	3	1	1	RHO dioxygenase alpha/beta	Saccharospirillaceae
+JPFHOD_006082178	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006161276	3	3	1	1	meta lower (xyl/dmp)	Burkholderiaceae
+JPFHOD_006201678	3	3	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_006239838	3	3	1	1	ortho lower (cat/pca)	Casp-alpha2
+JPFHOD_006278628	3	3	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_006304265	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006520447	3	3	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_006748017	3	3	1	1	paa phenylacetate	Saprospiraceae
+JPFHOD_007048182	3	3	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_007055801	3	3	1	1	paa phenylacetate	Pseudomonadaceae
+JPFHOD_007153074	3	3	1	1	meta lower (xyl/dmp)	Burkholderiaceae
+JPFHOD_007254401	3	3	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_007338228	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_007448194	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_007706316	3	3	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_007732948	3	3	1	1	meta lower (xyl/dmp)	Piscirickettsiaceae
+JPFHOD_007965885	3	3	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_007989450	3	3	1	1	extradiol dioxygenase	Vibrionaceae
+JPFHOD_008114689	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_008140260	3	3	1	1	CYP153	Alteromonadaceae
+JPFHOD_008244706	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_008802009	3	3	1	1	paa phenylacetate	Hymenobacteraceae
+JPFHOD_008870836	3	3	1	1	alkB	Alteromonadaceae
+JPFHOD_008904419	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_009026155	3	3	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_009046754	3	3	1	1	RHO dioxygenase alpha/beta	Roseobacteraceae
+JPFHOD_009233013	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009270320	3	3	1	1	ortho lower (cat/pca)	Mycobacteriaceae
+JPFHOD_010236026	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010268934	3	3	1	1	meta lower (xyl/dmp)	Planctomycetaceae
+JPFHOD_010316630	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_010769817	3	3	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_010875925	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_010989309	3	3	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_011425379	3	3	1	1	meta lower (xyl/dmp)	Mycobacteriaceae
+JPFHOD_011530612	3	3	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_011737529	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011744160	3	3	1	1	alkB	Flavobacteriaceae
+JPFHOD_012182388	3	3	1	1	intradiol dioxygenase	Chitinibacteraceae
+JPFHOD_012257165	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_012315221	3	3	1	1	alkB	Alcanivoracaceae
+JPFHOD_012533945	3	3	1	1	CYP153	Pseudohongiellaceae
+JPFHOD_012875470	3	3	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_012971337	3	3	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_013074298	3	3	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_000031200	2	2	1	1	ortho lower (cat/pca)	Pseudomonadaceae
+JPFHOD_000055046	2	2	1	1	ortho lower (cat/pca)	Pseudomonadaceae
+JPFHOD_000055539	2	2	1	1	ortho lower (cat/pca)	Pseudomonadaceae
+JPFHOD_000106699	2	2	1	1	paa phenylacetate	Rhodobacteraceae
+JPFHOD_000127752	2	2	1	1	RHO dioxygenase alpha/beta	Azotimanducaceae
+JPFHOD_000127972	2	2	1	1	RHO dioxygenase alpha/beta	Azotimanducaceae
+JPFHOD_000187045	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_000256940	2	2	1	1	extradiol dioxygenase	Rhodobacteraceae
+JPFHOD_000335289	2	2	1	1	RHO dioxygenase alpha/beta	Rhizobiaceae
+JPFHOD_000335301	2	2	1	1	RHO dioxygenase alpha/beta	Rhizobiaceae
+JPFHOD_000353209	2	2	1	1	paa phenylacetate	Crocinitomicaceae
+JPFHOD_000362009	2	2	1	1	extradiol dioxygenase	Rhizobiaceae
+JPFHOD_000545300	2	2	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_000567182	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_000571960	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_000627216	2	2	1	1	RHO dioxygenase alpha/beta	Azotimanducaceae
+JPFHOD_000656210	2	2	1	1	paa phenylacetate	Salibacteraceae
+JPFHOD_000658652	2	2	1	1	paa phenylacetate	Crocinitomicaceae
+JPFHOD_000737690	2	2	1	1	RHO dioxygenase alpha/beta	Azotimanducaceae
+JPFHOD_000739499	2	2	1	1	paa phenylacetate	Alteromonadaceae
+JPFHOD_000744621	2	2	1	1	paa phenylacetate	Salibacteraceae
+JPFHOD_000754336	2	2	1	1	meta lower (xyl/dmp)	Salibacteraceae
+JPFHOD_000775706	2	2	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_000783441	2	2	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_000859509	2	2	1	1	alkB	Schleiferiaceae
+JPFHOD_000910015	2	2	1	1	RHO dioxygenase alpha/beta	Azotimanducaceae
+JPFHOD_000941774	2	2	1	1	RHO dioxygenase alpha/beta	Sneathiellaceae
+JPFHOD_000941791	2	2	1	1	RHO dioxygenase alpha/beta	Sneathiellaceae
+JPFHOD_000988656	2	2	1	1	RHO dioxygenase alpha/beta	Azotimanducaceae
+JPFHOD_001030162	2	2	1	1	alkB	Porticoccaceae
+JPFHOD_001082095	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_001101205	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_001102446	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_001106908	2	2	1	1	paa phenylacetate	Parvicellaceae
+JPFHOD_001119530	2	2	1	1	extradiol dioxygenase	Ilumatobacteraceae
+JPFHOD_001119531	2	2	1	1	extradiol dioxygenase	Ilumatobacteraceae
+JPFHOD_001155315	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_001171712	2	2	1	1	ortho lower (cat/pca)	Paracoccaceae
+JPFHOD_001219382	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_001220202	2	2	1	1	alkG/alkT (rubredoxin system)	Hyphomonadaceae
+JPFHOD_001291690	2	2	1	1	ortho lower (cat/pca)	UBA10347
+JPFHOD_001300019	2	2	1	1	ortho lower (cat/pca)	Hyphomonadaceae
+JPFHOD_001305147	2	2	1	1	ortho lower (cat/pca)	Vicingaceae
+JPFHOD_001332482	2	2	1	1	extradiol dioxygenase	Sphingomonadaceae
+JPFHOD_001348883	2	2	1	1	alkB	Roseobacteraceae
+JPFHOD_001350251	2	2	1	1	ortho lower (cat/pca)	Vibrionaceae
+JPFHOD_001368062	2	2	1	1	extradiol dioxygenase	Colwelliaceae
+JPFHOD_001387205	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_001411920	2	2	1	1	extradiol dioxygenase	Colwelliaceae
+JPFHOD_001413772	2	2	1	1	RHO dioxygenase alpha/beta	Rhizobiaceae
+JPFHOD_001425714	2	2	1	1	paa phenylacetate	Rhizobiaceae
+JPFHOD_001425717	2	2	1	1	paa phenylacetate	Rhizobiaceae
+JPFHOD_001425718	2	2	1	1	paa phenylacetate	Rhizobiaceae
+JPFHOD_001468581	2	2	1	1	salicylate hydroxylase	Ilumatobacteraceae
+JPFHOD_001472239	2	2	1	1	ortho lower (cat/pca)	Oxalobacteraceae
+JPFHOD_001476341	2	2	1	1	extradiol dioxygenase	Rhizobiaceae
+JPFHOD_001500475	2	2	1	1	ortho lower (cat/pca)	Salibacteraceae
+JPFHOD_001526575	2	2	1	1	alkG/alkT (rubredoxin system)	Spongiibacteraceae
+JPFHOD_001576609	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_001577714	2	2	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_001590470	2	2	1	1	gentisate 1,2-dioxygenase	Verrucomicrobiaceae
+JPFHOD_001618867	2	2	1	1	meta lower (xyl/dmp)	Paracoccaceae
+JPFHOD_001618868	2	2	1	1	extradiol dioxygenase	Paracoccaceae
+JPFHOD_001633309	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_001633310	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_001642237	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_001680298	2	2	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_001745473	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_001757045	2	2	1	1	paa phenylacetate	MedAcidi-G1
+JPFHOD_001779776	2	2	1	1	meta lower (xyl/dmp)	Pirellulaceae
+JPFHOD_001780980	2	2	1	1	CYP153	Microbulbiferaceae
+JPFHOD_001818403	2	2	1	1	maleylacetate reductase	Rhizobiaceae
+JPFHOD_001818410	2	2	1	1	BMM toluene/phenol monooxygenase	Rhizobiaceae
+JPFHOD_001856020	2	2	1	1	ortho lower (cat/pca)	Azotimanducaceae
+JPFHOD_001871173	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_001882692	2	2	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_001890417	2	2	1	1	alkG/alkT (rubredoxin system)	Pseudohongiellaceae
+JPFHOD_001904835	2	2	1	1	gentisate 1,2-dioxygenase	Roseobacteraceae
+JPFHOD_001965189	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_001992251	2	2	1	1	paa phenylacetate	Colwelliaceae
+JPFHOD_002012786	2	2	1	1	CYP153	Parvibaculaceae
+JPFHOD_002022182	2	2	1	1	ortho lower (cat/pca)	Planctomycetaceae
+JPFHOD_002040516	2	2	1	1	RHO dioxygenase alpha/beta	Vibrionaceae
+JPFHOD_002088666	2	2	1	1	RHO ferredoxin/reductase	Flavobacteriaceae
+JPFHOD_002100460	2	2	1	1	extradiol dioxygenase	Rhizobiaceae
+JPFHOD_002125798	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_002142468	2	2	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_002170510	2	2	1	1	RHO dioxygenase alpha/beta	Paracoccaceae
+JPFHOD_002185260	2	2	1	1	paa phenylacetate	Saprospiraceae
+JPFHOD_002212465	2	2	1	1	paa phenylacetate	Psychromonadaceae
+JPFHOD_002249020	2	2	1	1	RHO dioxygenase alpha/beta	Paracoccaceae
+JPFHOD_002258748	2	2	1	1	meta lower (xyl/dmp)	Spongiibacteraceae
+JPFHOD_002372419	2	2	1	1	ortho lower (cat/pca)	Thalassospiraceae
+JPFHOD_002375887	2	2	1	1	extradiol dioxygenase	Ilumatobacteraceae
+JPFHOD_002376932	2	2	1	1	RHO dioxygenase alpha/beta	Sphingomonadaceae
+JPFHOD_002409978	2	2	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_002417831	2	2	1	1	ortho lower (cat/pca)	JAHEGP01
+JPFHOD_002443910	2	2	1	1	ladA/almA	Hyphomonadaceae
+JPFHOD_002444120	2	2	1	1	meta lower (xyl/dmp)	Piscirickettsiaceae
+JPFHOD_002474063	2	2	1	1	paa phenylacetate	Aestuariivirgaceae
+JPFHOD_002474724	2	2	1	1	meta lower (xyl/dmp)	Sphingomonadaceae
+JPFHOD_002480221	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_002494956	2	2	1	1	paa phenylacetate	Saprospiraceae
+JPFHOD_002500929	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_002508485	2	2	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_002512170	2	2	1	1	paa phenylacetate	Crocinitomicaceae
+JPFHOD_002527347	2	2	1	1	CYP153	Sphaerotilaceae
+JPFHOD_002633218	2	2	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_002642953	2	2	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_002674034	2	2	1	1	ortho lower (cat/pca)	Shewanellaceae
+JPFHOD_002706303	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_002741008	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_002743074	2	2	1	1	paa phenylacetate	Rhodobacteraceae
+JPFHOD_002748369	2	2	1	1	salicylate hydroxylase	Oceanospirillaceae
+JPFHOD_002787123	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_002798058	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_002851110	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_002856987	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_002866912	2	2	1	1	ortho lower (cat/pca)	Rhodobacteraceae
+JPFHOD_002904005	2	2	1	1	meta lower (xyl/dmp)	Pseudohongiellaceae
+JPFHOD_002920527	2	2	1	1	ortho lower (cat/pca)	Thalassospiraceae
+JPFHOD_002943613	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_002946409	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_002978016	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003018004	2	2	1	1	paa phenylacetate	Paracoccaceae
+JPFHOD_003018006	2	2	1	1	paa phenylacetate	Paracoccaceae
+JPFHOD_003018007	2	2	1	1	paa phenylacetate	Paracoccaceae
+JPFHOD_003018008	2	2	1	1	paa phenylacetate	Paracoccaceae
+JPFHOD_003018010	2	2	1	1	paa phenylacetate	Paracoccaceae
+JPFHOD_003023795	2	2	1	1	paa phenylacetate	Balneatricaceae
+JPFHOD_003064100	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003064101	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003076582	2	2	1	1	meta lower (xyl/dmp)	Rhodobacteraceae
+JPFHOD_003085043	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003118162	2	2	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_003144874	2	2	1	1	meta lower (xyl/dmp)	Sulfurimonadaceae
+JPFHOD_003149878	2	2	1	1	alkB	Porticoccaceae
+JPFHOD_003167246	2	2	1	1	paa phenylacetate	Sphaerotilaceae
+JPFHOD_003189529	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_003229356	2	2	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_003284225	2	2	1	1	salicylate hydroxylase	Flavobacteriaceae
+JPFHOD_003320085	2	2	1	1	extradiol dioxygenase	Arenicellaceae
+JPFHOD_003327707	2	2	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_003332545	2	2	1	1	paa phenylacetate	Alteromonadaceae
+JPFHOD_003356712	2	2	1	1	ortho lower (cat/pca)	Marisalimonadaceae
+JPFHOD_003358707	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003481359	2	2	1	1	RHO ferredoxin/reductase	Pleomorphomonadaceae
+JPFHOD_003499005	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003500253	2	2	1	1	intradiol dioxygenase	Roseobacteraceae
+JPFHOD_003546596	2	2	1	1	RHO ferredoxin/reductase	Flavobacteriaceae
+JPFHOD_003576498	2	2	1	1	RHO dioxygenase alpha/beta	Roseobacteraceae
+JPFHOD_003634111	2	2	1	1	ortho lower (cat/pca)	GCA-001735895
+JPFHOD_003634781	2	2	1	1	gentisate 1,2-dioxygenase	Oceanospirillaceae
+JPFHOD_003642511	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_003642607	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_003645265	2	2	1	1	RHO dioxygenase alpha/beta	Ilumatobacteraceae
+JPFHOD_003652925	2	2	1	1	intradiol dioxygenase	Flavobacteriaceae
+JPFHOD_003658584	2	2	1	1	maleylacetate reductase	Hyphomicrobiaceae
+JPFHOD_003715266	2	2	1	1	extradiol dioxygenase	Oceanospirillaceae
+JPFHOD_003751554	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_003777832	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_003777833	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_003839727	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003887218	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_003891685	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003891699	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_003940142	2	2	1	1	alkG/alkT (rubredoxin system)	Halieaceae
+JPFHOD_003944869	2	2	1	1	gentisate 1,2-dioxygenase	Comamonadaceae
+JPFHOD_003958225	2	2	1	1	meta lower (xyl/dmp)	Pseudoalteromonadaceae
+JPFHOD_003960834	2	2	1	1	intradiol dioxygenase	Alteromonadaceae
+JPFHOD_003976554	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_004005291	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004017332	2	2	1	1	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_004017333	2	2	1	1	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_004017334	2	2	1	1	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_004020459	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_004043198	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_004052185	2	2	1	1	meta lower (xyl/dmp)	Pseudoalteromonadaceae
+JPFHOD_004082019	2	2	1	1	ortho lower (cat/pca)	Rhodobacteraceae
+JPFHOD_004115312	2	2	1	1	CYP153	Nitrobacteraceae
+JPFHOD_004153764	2	2	1	1	RHO dioxygenase alpha/beta	Sedimenticolaceae
+JPFHOD_004153767	2	2	1	1	RHO dioxygenase alpha/beta	Sedimenticolaceae
+JPFHOD_004160918	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004232669	2	2	1	1	intradiol dioxygenase	Roseobacteraceae
+JPFHOD_004232670	2	2	1	1	intradiol dioxygenase	Roseobacteraceae
+JPFHOD_004232672	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_004255398	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_004268357	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004268361	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004288899	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_004303615	2	2	1	1	ortho lower (cat/pca)	Cyclobacteriaceae
+JPFHOD_004325963	2	2	1	1	paa phenylacetate	GCA-001735895
+JPFHOD_004337393	2	2	1	2	RHO ferredoxin/reductase	Flavobacteriaceae
+JPFHOD_004355679	2	2	1	1	meta lower (xyl/dmp)	Vibrionaceae
+JPFHOD_004362331	2	2	1	1	paa phenylacetate	Halieaceae
+JPFHOD_004362338	2	2	1	1	paa phenylacetate	Halieaceae
+JPFHOD_004391297	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004391659	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_004394056	2	2	1	1	PAH lower (nahB/D/E/F)	Oceanospirillaceae
+JPFHOD_004422322	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_004428864	2	2	1	1	ortho lower (cat/pca)	Pseudomonadaceae
+JPFHOD_004437565	2	2	1	1	gentisate 1,2-dioxygenase	Comamonadaceae
+JPFHOD_004511252	2	2	1	1	ortho lower (cat/pca)	Paracoccaceae
+JPFHOD_004559542	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_004571742	2	2	1	1	ortho lower (cat/pca)	Pseudohongiellaceae
+JPFHOD_004586101	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_004595752	2	2	1	1	paa phenylacetate	Fulvivirgaceae
+JPFHOD_004606022	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_004632344	2	2	1	1	meta lower (xyl/dmp)	UBA9320
+JPFHOD_004644283	2	2	1	1	ortho lower (cat/pca)	Sphingomonadaceae
+JPFHOD_004653751	2	2	1	1	ortho lower (cat/pca)	Nitrobacteraceae
+JPFHOD_004743866	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_004789128	2	2	1	1	paa phenylacetate	Paracoccaceae
+JPFHOD_004797759	2	2	1	1	paa phenylacetate	Salaquimonadaceae
+JPFHOD_004797765	2	2	1	1	RHO dioxygenase alpha/beta	Salaquimonadaceae
+JPFHOD_004802469	2	2	1	1	meta lower (xyl/dmp)	Microbacteriaceae
+JPFHOD_004855646	2	2	1	1	CYP153	Halieaceae
+JPFHOD_004873140	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_004885472	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_004885596	2	2	1	1	ortho lower (cat/pca)	Geobacteraceae
+JPFHOD_004896001	2	2	1	1	RHO dioxygenase alpha/beta	Saprospiraceae
+JPFHOD_004960874	2	2	1	1	meta lower (xyl/dmp)	Saprospiraceae
+JPFHOD_004960875	2	2	1	1	meta lower (xyl/dmp)	Saprospiraceae
+JPFHOD_005025053	2	2	1	1	RHO dioxygenase alpha/beta	Ilumatobacteraceae
+JPFHOD_005025059	2	2	1	1	extradiol dioxygenase	Ilumatobacteraceae
+JPFHOD_005061903	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_005066935	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_005079725	2	2	1	1	intradiol dioxygenase	Paracoccaceae
+JPFHOD_005098406	2	2	1	1	RHO dioxygenase alpha/beta	Burkholderiaceae
+JPFHOD_005113770	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_005201984	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_005201985	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_005201986	2	2	1	1	extradiol dioxygenase	Immundisolibacteraceae
+JPFHOD_005201987	2	2	1	1	extradiol dioxygenase	Immundisolibacteraceae
+JPFHOD_005201988	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_005201989	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_005201990	2	2	1	1	extradiol dioxygenase	Immundisolibacteraceae
+JPFHOD_005202272	2	2	1	1	alkG/alkT (rubredoxin system)	Halieaceae
+JPFHOD_005206916	2	2	1	1	extradiol dioxygenase	Roseobacteraceae
+JPFHOD_005219000	2	2	1	1	meta lower (xyl/dmp)	Colwelliaceae
+JPFHOD_005220987	2	2	1	1	ortho lower (cat/pca)	Colwelliaceae
+JPFHOD_005226506	2	2	1	1	RHO dioxygenase alpha/beta	Halieaceae
+JPFHOD_005253509	2	2	1	1	BMM toluene/phenol monooxygenase	Ilumatobacteraceae
+JPFHOD_005302312	2	2	1	1	alkB	Alteromonadaceae
+JPFHOD_005307990	2	2	1	1	ortho lower (cat/pca)	SHLQ01
+JPFHOD_005307991	2	2	1	1	ortho lower (cat/pca)	SHLQ01
+JPFHOD_005311721	2	2	1	1	paa phenylacetate	Poriferisodalaceae
+JPFHOD_005321412	2	2	1	2	ortho lower (cat/pca)	Halieaceae
+JPFHOD_005335965	2	2	1	1	CYP153	Caulobacteraceae
+JPFHOD_005360213	2	2	1	2	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_005368042	2	2	1	1	paa phenylacetate	Desulfocapsaceae
+JPFHOD_005392690	2	2	1	1	CYP153	Halieaceae
+JPFHOD_005418316	2	2	1	1	ortho lower (cat/pca)	Shewanellaceae
+JPFHOD_005447035	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_005491016	2	2	1	2	meta lower (xyl/dmp)	UBA9320
+JPFHOD_005537907	2	2	1	1	alkG/alkT (rubredoxin system)	Oleiphilaceae
+JPFHOD_005586039	2	2	1	1	paa phenylacetate	Geobacteraceae
+JPFHOD_005589502	2	2	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_005589503	2	2	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_005589504	2	2	1	1	intradiol dioxygenase	Alteromonadaceae
+JPFHOD_005589505	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_005589506	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_005589507	2	2	1	1	RHO ferredoxin/reductase	Alteromonadaceae
+JPFHOD_005611603	2	2	1	1	ortho lower (cat/pca)	Spirosomataceae
+JPFHOD_005616084	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_005632849	2	2	1	1	alkG/alkT (rubredoxin system)	Halieaceae
+JPFHOD_005646390	2	2	1	1	ortho lower (cat/pca)	UBA9320
+JPFHOD_005704753	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_005712936	2	2	1	1	alkG/alkT (rubredoxin system)	Burkholderiaceae
+JPFHOD_005727117	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_005728276	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_005750068	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_005775187	2	2	1	1	paa phenylacetate	SHLQ01
+JPFHOD_005775188	2	2	1	1	paa phenylacetate	SHLQ01
+JPFHOD_005777325	2	2	1	1	meta lower (xyl/dmp)	Sanyastnellaceae
+JPFHOD_005837236	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_005863498	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_005899852	2	2	1	1	meta lower (xyl/dmp)	Prochlorococcaceae
+JPFHOD_005924036	2	2	1	2	alkG/alkT (rubredoxin system)	Burkholderiaceae
+JPFHOD_005959227	2	2	1	1	ortho lower (cat/pca)	Sterolibacteriaceae
+JPFHOD_005966016	2	2	1	1	meta lower (xyl/dmp)	Cellvibrionaceae
+JPFHOD_006033598	2	2	1	1	extradiol dioxygenase	Roseobacteraceae
+JPFHOD_006118454	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_006118459	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_006119304	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_006129332	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006162974	2	2	1	1	intradiol dioxygenase	Paracoccaceae
+JPFHOD_006184130	2	2	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_006218162	2	2	1	1	alkG/alkT (rubredoxin system)	Zobellviridae
+JPFHOD_006236655	2	2	1	1	extradiol dioxygenase	Oceanospirillaceae
+JPFHOD_006268948	2	2	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_006278602	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_006289288	2	2	1	1	extradiol dioxygenase	Piscirickettsiaceae
+JPFHOD_006370602	2	2	1	1	ortho lower (cat/pca)	Moraxellaceae
+JPFHOD_006370603	2	2	1	1	ortho lower (cat/pca)	Moraxellaceae
+JPFHOD_006396083	2	2	1	1	ortho lower (cat/pca)	Alteromonadaceae
+JPFHOD_006411295	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006422445	2	2	1	1	ortho lower (cat/pca)	Ketobacteraceae
+JPFHOD_006433817	2	2	1	1	meta lower (xyl/dmp)	Pseudoalteromonadaceae
+JPFHOD_006444776	2	2	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_006444779	2	2	1	1	RHO dioxygenase alpha/beta	Rhizobiaceae
+JPFHOD_006503502	2	2	1	1	ortho lower (cat/pca)	Emcibacteraceae
+JPFHOD_006543567	2	2	1	1	RHO ferredoxin/reductase	Oceanospirillaceae
+JPFHOD_006588479	2	2	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_006591354	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_006621866	2	2	1	1	intradiol dioxygenase	Microbacteriaceae
+JPFHOD_006628203	2	2	1	1	CYP153	Psychromonadaceae
+JPFHOD_006628540	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_006677649	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_006708709	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_006720960	2	2	1	1	salicylate hydroxylase	Emcibacteraceae
+JPFHOD_006720961	2	2	1	1	salicylate hydroxylase	Emcibacteraceae
+JPFHOD_006743985	2	2	1	1	salicylate hydroxylase	Comamonadaceae
+JPFHOD_006755115	2	2	1	1	meta lower (xyl/dmp)	Mycobacteriaceae
+JPFHOD_006768293	2	2	1	1	meta lower (xyl/dmp)	Marisalimonadaceae
+JPFHOD_006775316	2	2	1	1	BMM toluene/phenol monooxygenase	Aurantimonadaceae
+JPFHOD_006781674	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_006852276	2	2	1	1	extradiol dioxygenase	Oceanospirillaceae
+JPFHOD_006923272	2	2	1	1	intradiol dioxygenase	Paracoccaceae
+JPFHOD_006945200	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_007079227	2	2	1	1	ortho lower (cat/pca)	Rhizobiaceae
+JPFHOD_007099861	2	2	1	1	ortho lower (cat/pca)	Casp-alpha2
+JPFHOD_007151566	2	2	1	1	intradiol dioxygenase	Alteromonadaceae
+JPFHOD_007172044	2	2	1	1	ortho lower (cat/pca)	Burkholderiaceae
+JPFHOD_007178563	2	2	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_007189804	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_007237629	2	2	1	1	ortho lower (cat/pca)	GCA-001735895
+JPFHOD_007254807	2	2	1	1	paa phenylacetate	Crocinitomicaceae
+JPFHOD_007302086	2	2	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_007328029	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_007328030	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_007340328	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_007345394	2	2	1	1	paa phenylacetate	Pseudoalteromonadaceae
+JPFHOD_007348103	2	2	1	1	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_007378892	2	2	1	1	alkG/alkT (rubredoxin system)	Halieaceae
+JPFHOD_007387424	2	2	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_007433299	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_007453080	2	2	1	1	ortho lower (cat/pca)	Nitrobacteraceae
+JPFHOD_007453081	2	2	1	1	intradiol dioxygenase	Nitrobacteraceae
+JPFHOD_007453082	2	2	1	1	intradiol dioxygenase	Nitrobacteraceae
+JPFHOD_007495968	2	2	1	1	meta lower (xyl/dmp)	Sphaerotilaceae
+JPFHOD_007512165	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_007534233	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_007563347	2	2	1	1	extradiol dioxygenase	Oceanospirillaceae
+JPFHOD_007610593	2	2	1	1	meta lower (xyl/dmp)	Vibrionaceae
+JPFHOD_007613012	2	2	1	1	RHO ferredoxin/reductase	Flavobacteriaceae
+JPFHOD_007624648	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_007651179	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_007674046	2	2	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_007706317	2	2	1	1	paa phenylacetate	Ilumatobacteraceae
+JPFHOD_007708516	2	2	1	1	ortho lower (cat/pca)	Haladaptataceae
+JPFHOD_007790675	2	2	1	1	RHO dioxygenase alpha/beta	GM7GCV1
+JPFHOD_007848564	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_007900303	2	2	1	2	alkB	Kyanoviridae
+JPFHOD_007908718	2	2	1	1	meta lower (xyl/dmp)	Paracoccaceae
+JPFHOD_007909158	2	2	1	1	alkG/alkT (rubredoxin system)	Colwelliaceae
+JPFHOD_007910906	2	2	1	1	salicylate hydroxylase	Oceanospirillaceae
+JPFHOD_007936218	2	2	1	1	RHO dioxygenase alpha/beta	Oceanospirillaceae
+JPFHOD_008096715	2	2	1	1	RHO dioxygenase alpha/beta	Halomonadaceae
+JPFHOD_008096716	2	2	1	1	RHO dioxygenase alpha/beta	Halomonadaceae
+JPFHOD_008105992	2	2	1	1	extradiol dioxygenase	Roseobacteraceae
+JPFHOD_008130400	2	2	1	1	meta lower (xyl/dmp)	Alteromonadaceae
+JPFHOD_008131946	2	2	1	1	ortho lower (cat/pca)	Vibrionaceae
+JPFHOD_008189585	2	2	1	1	ortho lower (cat/pca)	Saprospiraceae
+JPFHOD_008231522	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_008367308	2	2	1	2	meta lower (xyl/dmp)	Fulvivirgaceae
+JPFHOD_008371183	2	2	1	1	intradiol dioxygenase	GCA-001735895
+JPFHOD_008402204	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_008404680	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_008425745	2	2	1	1	intradiol dioxygenase	Flavobacteriaceae
+JPFHOD_008438714	2	2	1	1	ortho lower (cat/pca)	Pseudomonadaceae
+JPFHOD_008508599	2	2	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_008533704	2	2	1	1	meta lower (xyl/dmp)	Nitrospinaceae
+JPFHOD_008560409	2	2	1	1	intradiol dioxygenase	Burkholderiaceae
+JPFHOD_008597963	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_008612062	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_008642529	2	2	1	1	paa phenylacetate	Autographiviridae
+JPFHOD_008680756	2	2	1	1	ladA/almA	Pseudomonadaceae
+JPFHOD_008732311	2	2	1	1	ortho lower (cat/pca)	Crocinitomicaceae
+JPFHOD_008755809	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_008762839	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_008768866	2	2	1	1	BMM toluene/phenol monooxygenase	Stappiaceae
+JPFHOD_008782930	2	2	1	1	alkG/alkT (rubredoxin system)	Pseudomonadaceae
+JPFHOD_008785700	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_008785702	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_008785704	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_008793471	2	2	1	1	ortho lower (cat/pca)	Minwuiaceae
+JPFHOD_008802005	2	2	1	1	paa phenylacetate	Hymenobacteraceae
+JPFHOD_008808459	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_008867596	2	2	1	1	meta lower (xyl/dmp)	Poriferisodalaceae
+JPFHOD_008892278	2	2	1	1	meta lower (xyl/dmp)	Rhizobiaceae
+JPFHOD_008895924	2	2	1	1	RHO ferredoxin/reductase	Paracoccaceae
+JPFHOD_008919854	2	2	1	1	anaerobic (bss/bcr/bam)	Flavobacteriaceae
+JPFHOD_008926723	2	2	1	1	salicylate hydroxylase	Flavobacteriaceae
+JPFHOD_008929326	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_008933234	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_009010976	2	2	1	1	alkG/alkT (rubredoxin system)	Zobellviridae
+JPFHOD_009044056	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009047759	2	2	1	1	intradiol dioxygenase	Flavobacteriaceae
+JPFHOD_009110449	2	2	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_009138250	2	2	1	1	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_009171788	2	2	1	1	ortho lower (cat/pca)	Oceanospirillaceae
+JPFHOD_009198012	2	2	1	1	paa phenylacetate	Planctomycetaceae
+JPFHOD_009210109	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009271945	2	2	1	1	paa phenylacetate	Sanyastnellaceae
+JPFHOD_009273619	2	2	1	1	ortho lower (cat/pca)	Psychromonadaceae
+JPFHOD_009275283	2	2	1	1	paa phenylacetate	Sanyastnellaceae
+JPFHOD_009324964	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_009324965	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_009325677	2	2	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_009334468	2	2	1	1	BMM toluene/phenol monooxygenase	Oceanospirillaceae
+JPFHOD_009334469	2	2	1	1	BMM toluene/phenol monooxygenase	Oceanospirillaceae
+JPFHOD_009334470	2	2	1	1	BMM toluene/phenol monooxygenase	Oceanospirillaceae
+JPFHOD_009349725	2	2	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_009351772	2	2	1	1	RHO dioxygenase alpha/beta	Piscirickettsiaceae
+JPFHOD_009351774	2	2	1	1	extradiol dioxygenase	Piscirickettsiaceae
+JPFHOD_009389880	2	2	1	1	meta lower (xyl/dmp)	Halieaceae
+JPFHOD_009412842	2	2	1	1	intradiol dioxygenase	Flavobacteriaceae
+JPFHOD_009422944	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_009433943	2	2	1	1	BMM toluene/phenol monooxygenase	Nitrospinaceae
+JPFHOD_009437533	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_009486794	2	2	1	1	ortho lower (cat/pca)	Marinifilaceae
+JPFHOD_009509510	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009516478	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_009516479	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_009526077	2	2	1	1	meta lower (xyl/dmp)	Hyphomonadaceae
+JPFHOD_009526973	2	2	1	2	ortho lower (cat/pca)	Streptomycetaceae
+JPFHOD_009535575	2	2	1	1	ortho lower (cat/pca)	JAHEGP01
+JPFHOD_009551272	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009561658	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_009585546	2	2	1	1	ortho lower (cat/pca)	Halieaceae
+JPFHOD_009606189	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009606190	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009606855	2	2	1	2	alkG/alkT (rubredoxin system)	UBA6164
+JPFHOD_009654755	2	2	1	1	intradiol dioxygenase	Rhizobiaceae
+JPFHOD_009759754	2	2	1	1	CYP153	Enterobacteriaceae
+JPFHOD_009759755	2	2	1	1	RHO dioxygenase alpha/beta	Enterobacteriaceae
+JPFHOD_009812803	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009833658	2	2	1	1	gentisate 1,2-dioxygenase	Parvibaculaceae
+JPFHOD_009855070	2	2	1	1	ortho lower (cat/pca)	Paracoccaceae
+JPFHOD_009959859	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_009999917	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010018886	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_010033335	2	2	1	1	meta lower (xyl/dmp)	Shewanellaceae
+JPFHOD_010081915	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_010098845	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_010136119	2	2	1	1	ortho lower (cat/pca)	Xanthobacteraceae
+JPFHOD_010161821	2	2	1	1	meta lower (xyl/dmp)	Pirellulaceae
+JPFHOD_010197025	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_010211641	2	2	1	1	RHO dioxygenase alpha/beta	Ilumatobacteraceae
+JPFHOD_010218202	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_010220826	2	2	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_010285194	2	2	1	1	paa phenylacetate	Saprospiraceae
+JPFHOD_010287708	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_010387550	2	2	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_010397256	2	2	1	1	paa phenylacetate	Parvibaculaceae
+JPFHOD_010476146	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_010485152	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_010487861	2	2	1	1	ortho lower (cat/pca)	Comamonadaceae
+JPFHOD_010487862	2	2	1	1	ortho lower (cat/pca)	Comamonadaceae
+JPFHOD_010487863	2	2	1	1	ortho lower (cat/pca)	Comamonadaceae
+JPFHOD_010494911	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_010499202	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010539941	2	2	1	1	ortho lower (cat/pca)	Planctomycetaceae
+JPFHOD_010565068	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_010566663	2	2	1	1	alkG/alkT (rubredoxin system)	Halieaceae
+JPFHOD_010570661	2	2	1	1	meta lower (xyl/dmp)	Crocinitomicaceae
+JPFHOD_010582855	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010598419	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_010598893	2	2	1	1	meta lower (xyl/dmp)	Colwelliaceae
+JPFHOD_010627485	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_010628276	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_010668530	2	2	1	1	paa phenylacetate	Saprospiraceae
+JPFHOD_010703092	2	2	1	1	CYP153	Planctomycetaceae
+JPFHOD_010769814	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_010775758	2	2	1	1	meta lower (xyl/dmp)	Oxalobacteraceae
+JPFHOD_010825627	2	2	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_010845694	2	2	1	1	RHO dioxygenase alpha/beta	Erythrobacteraceae
+JPFHOD_010848623	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_010899801	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_010939725	2	2	1	1	intradiol dioxygenase	Chlorobiaceae
+JPFHOD_010955992	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_010966207	2	2	1	1	RHO dioxygenase alpha/beta	Piscirickettsiaceae
+JPFHOD_011004708	2	2	1	1	RHO dioxygenase alpha/beta	Immundisolibacteraceae
+JPFHOD_011045753	2	2	1	1	paa phenylacetate	Chitinophagaceae
+JPFHOD_011048027	2	2	1	1	ortho lower (cat/pca)	Ilumatobacteraceae
+JPFHOD_011054770	2	2	1	1	salicylate hydroxylase	Comamonadaceae
+JPFHOD_011075098	2	2	1	1	ortho lower (cat/pca)	Haloarculaceae
+JPFHOD_011094194	2	2	1	1	ortho lower (cat/pca)	Colwelliaceae
+JPFHOD_011121175	2	2	1	1	RHO dioxygenase alpha/beta	Piscirickettsiaceae
+JPFHOD_011122231	2	2	1	1	RHO dioxygenase alpha/beta	Roseobacteraceae
+JPFHOD_011128934	2	2	1	1	intradiol dioxygenase	Flavobacteriaceae
+JPFHOD_011149724	2	2	1	1	meta lower (xyl/dmp)	Alteromonadaceae
+JPFHOD_011168020	2	2	1	1	RHO dioxygenase alpha/beta	Streptomycetaceae
+JPFHOD_011177351	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_011194435	2	2	1	1	paa phenylacetate	Lewinellaceae
+JPFHOD_011194438	2	2	1	1	paa phenylacetate	Lewinellaceae
+JPFHOD_011256465	2	2	1	1	ortho lower (cat/pca)	Caulobacteraceae
+JPFHOD_011296245	2	2	1	1	RHO ferredoxin/reductase	Burkholderiaceae
+JPFHOD_011314040	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011314144	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_011350340	2	2	1	1	ortho lower (cat/pca)	Parvicellaceae
+JPFHOD_011440992	2	2	1	1	paa phenylacetate	Marinobacteraceae
+JPFHOD_011451198	2	2	1	1	RHO dioxygenase alpha/beta	Comamonadaceae
+JPFHOD_011472649	2	2	1	1	ortho lower (cat/pca)	Tepidiformaceae
+JPFHOD_011502203	2	2	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_011553008	2	2	1	1	RHO dioxygenase alpha/beta	Piscirickettsiaceae
+JPFHOD_011566022	2	2	1	1	meta lower (xyl/dmp)	Casp-alpha2
+JPFHOD_011566057	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_011601641	2	2	1	1	extradiol dioxygenase	Comamonadaceae
+JPFHOD_011601642	2	2	1	1	meta lower (xyl/dmp)	Comamonadaceae
+JPFHOD_011604569	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_011627932	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011637089	2	2	1	1	RHO dioxygenase alpha/beta	Flavobacteriaceae
+JPFHOD_011637301	2	2	1	1	RHO dioxygenase alpha/beta	Burkholderiaceae
+JPFHOD_011701658	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_011701694	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011760012	2	2	1	1	RHO dioxygenase alpha/beta	Comamonadaceae
+JPFHOD_011764484	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_011784031	2	2	1	1	ortho lower (cat/pca)	Hymenobacteraceae
+JPFHOD_011795462	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_011806893	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_011862007	2	2	1	1	alkB	Flavobacteriaceae
+JPFHOD_011881032	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011918097	2	2	1	1	ortho lower (cat/pca)	Flavobacteriaceae
+JPFHOD_011921528	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_011928968	2	2	1	1	anaerobic (bss/bcr/bam)	Geopsychrobacteraceae
+JPFHOD_011929160	2	2	1	1	alkB	Halieaceae
+JPFHOD_011931700	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_011950234	2	2	1	1	paa phenylacetate	Comamonadaceae
+JPFHOD_012092068	2	2	1	2	meta lower (xyl/dmp)	Roseobacteraceae
+JPFHOD_012095711	2	2	1	1	ortho lower (cat/pca)	Clostridiaceae
+JPFHOD_012097315	2	2	1	1	CYP153	Nevskiaceae
+JPFHOD_012128096	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_012144559	2	2	1	1	alkB	Shewanellaceae
+JPFHOD_012158520	2	2	1	1	ortho lower (cat/pca)	Sphingomonadaceae
+JPFHOD_012215610	2	2	1	1	ortho lower (cat/pca)	Kribbellaceae
+JPFHOD_012256029	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_012273582	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_012359921	2	2	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_012385774	2	2	1	1	RHO dioxygenase alpha/beta	Roseobacteraceae
+JPFHOD_012388478	2	2	1	1	paa phenylacetate	Roseobacteraceae
+JPFHOD_012425846	2	2	1	1	ortho lower (cat/pca)	Rhodobacteraceae
+JPFHOD_012454563	2	2	1	1	salicylate hydroxylase	Hyphomonadaceae
+JPFHOD_012482742	2	2	1	1	paa phenylacetate	Roseivirgaceae
+JPFHOD_012487951	2	2	1	1	meta lower (xyl/dmp)	Vibrionaceae
+JPFHOD_012538888	2	2	1	1	meta lower (xyl/dmp)	Hyphomonadaceae
+JPFHOD_012549899	2	2	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_012590731	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_012621027	2	2	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_012703338	2	2	1	1	ortho lower (cat/pca)	Candidatus Pelagibacteraceae
+JPFHOD_012759794	2	2	1	2	ortho lower (cat/pca)	Sphingomonadaceae
+JPFHOD_012785784	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_012796301	2	2	1	1	meta lower (xyl/dmp)	Fulvivirgaceae
+JPFHOD_012802461	2	2	1	1	RHO dioxygenase alpha/beta	Ilumatobacteraceae
+JPFHOD_012814304	2	2	1	1	paa phenylacetate	Sanyastnellaceae
+JPFHOD_012828399	2	2	1	1	ortho lower (cat/pca)	Thalassospiraceae
+JPFHOD_012894280	2	2	1	1	intradiol dioxygenase	Roseobacteraceae
+JPFHOD_012923531	2	2	1	1	salicylate hydroxylase	Streptomycetaceae
+JPFHOD_012945147	2	2	1	1	alkG/alkT (rubredoxin system)	Desulfuromonadaceae
+JPFHOD_012953416	2	2	1	1	extradiol dioxygenase	Roseobacteraceae
+JPFHOD_012964893	2	2	1	1	extradiol dioxygenase	Desulfobulbaceae
+JPFHOD_013002762	2	2	1	1	RHO dioxygenase alpha/beta	Alteromonadaceae
+JPFHOD_013006267	2	2	1	1	paa phenylacetate	Sanyastnellaceae
+JPFHOD_013022454	2	2	1	1	paa phenylacetate	Sanyastnellaceae
+JPFHOD_013024710	2	2	1	1	paa phenylacetate	Lewinellaceae
+JPFHOD_013024712	2	2	1	1	paa phenylacetate	Lewinellaceae
+JPFHOD_013079195	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_013101155	2	2	1	1	meta lower (xyl/dmp)	Flavobacteriaceae
+JPFHOD_013112931	2	2	1	1	extradiol dioxygenase	Chitinophagaceae
+JPFHOD_013136575	2	2	1	1	extradiol dioxygenase	Roseobacteraceae
+JPFHOD_013142504	2	2	1	1	intradiol dioxygenase	Roseobacteraceae
+JPFHOD_013150053	2	2	1	1	extradiol dioxygenase	Piscirickettsiaceae
+JPFHOD_013150969	2	2	1	1	paa phenylacetate	Flavobacteriaceae
+JPFHOD_013154188	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_013154730	2	2	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_013171127	2	2	1	1	ortho lower (cat/pca)	Alcaligenaceae
+JPFHOD_013174752	2	2	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_013178151	2	2	1	1	salicylate hydroxylase	Candidatus Pelagibacteraceae
+JPFHOD_013184955	2	2	1	1	paa phenylacetate	Brevibacteriaceae
+JPFHOD_013233509	2	2	1	1	extradiol dioxygenase	Paracoccaceae
+JPFHOD_013239902	2	2	1	1	meta lower (xyl/dmp)	Oceanospirillaceae
+JPFHOD_013251982	2	2	1	1	RHO dioxygenase alpha/beta	Candidatus Pelagibacteraceae
+JPFHOD_013268094	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_013272558	2	2	1	1	meta lower (xyl/dmp)	Pelagibacteraceae
+JPFHOD_013281537	2	2	1	1	ortho lower (cat/pca)	Roseobacteraceae
+JPFHOD_013283273	2	2	1	1	ortho lower (cat/pca)	Saprospiraceae
+JPFHOD_013292581	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_013303199	2	2	1	1	ortho lower (cat/pca)	Pseudoalteromonadaceae
+JPFHOD_013305571	2	2	1	1	meta lower (xyl/dmp)	Candidatus Pelagibacteraceae
+JPFHOD_010314519	5	5	0	1	paa phenylacetate	
+JPFHOD_013170997	4	4	0	1	RHO dioxygenase alpha/beta	
+JPFHOD_008288749	3	3	0	1	alkB	
+JPFHOD_008517719	3	3	0	1	alkG/alkT (rubredoxin system)	
+JPFHOD_002339478	2	2	0	1	RHO dioxygenase alpha/beta	
+JPFHOD_005656128	2	2	0	1	RHO dioxygenase alpha/beta	
+JPFHOD_005656129	2	2	0	1	RHO dioxygenase alpha/beta	
+JPFHOD_006277267	2	2	0	1	paa phenylacetate	
+JPFHOD_007881896	2	2	0	0	RHO dioxygenase alpha/beta	
+JPFHOD_009077200	2	2	0	0	ortho lower (cat/pca)	
+JPFHOD_009341099	2	2	0	0	salicylate hydroxylase	
+JPFHOD_010244171	2	2	0	1	RHO ferredoxin/reductase	
+JPFHOD_010918895	2	2	0	1	RHO dioxygenase alpha/beta	
+JPFHOD_010942147	2	2	0	0	salicylate hydroxylase	
+JPFHOD_012094287	2	2	0	1	maleylacetate reductase	
+JPFHOD_012765373	2	2	0	1	salicylate hydroxylase	

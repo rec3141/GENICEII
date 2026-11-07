@@ -1,0 +1,781 @@
+category	where	bin	taxon	phylum	share
+sqr (sulfide:quinone oxidoreductase)	all		unbinned		0.2561737757241266
+sqr (sulfide:quinone oxidoreductase)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.10098242619377665
+sqr (sulfide:quinone oxidoreductase)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.09301352751383105
+sqr (sulfide:quinone oxidoreductase)	all	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.06633444684854639
+sqr (sulfide:quinone oxidoreductase)	all	dastool-lorbin_066	Yoonia sp963976475	Pseudomonadota	0.055701766767564435
+sqr (sulfide:quinone oxidoreductase)	all	dastool-lorbin_059	Perlucidibaca sp018066805	Pseudomonadota	0.05105424917279207
+sqr (sulfide:quinone oxidoreductase)	diesel		unbinned		0.23720979351991556
+sqr (sulfide:quinone oxidoreductase)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.16419314243625147
+sqr (sulfide:quinone oxidoreductase)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.1007434146824758
+sqr (sulfide:quinone oxidoreductase)	diesel	dastool-lorbin_059	Perlucidibaca sp018066805	Pseudomonadota	0.09219919582494418
+sqr (sulfide:quinone oxidoreductase)	diesel	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.06312047272594119
+sqr (sulfide:quinone oxidoreductase)	diesel	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.06306790998022649
+sqr (sulfide:quinone oxidoreductase)	control		unbinned		0.2762484949922911
+sqr (sulfide:quinone oxidoreductase)	control	dastool-lorbin_066	Yoonia sp963976475	Pseudomonadota	0.12691785910041334
+sqr (sulfide:quinone oxidoreductase)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.10391736364322145
+sqr (sulfide:quinone oxidoreductase)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.06939609415241349
+sqr (sulfide:quinone oxidoreductase)	control	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.06816378592234258
+sqr (sulfide:quinone oxidoreductase)	control	dastool-lorbin_317	MAG-120531	Bacteroidota	0.061868675745499084
+fccAB (flavocytochrome c sulfide dehydrogenase)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.37935660708309277
+fccAB (flavocytochrome c sulfide dehydrogenase)	all		unbinned		0.21004318361215607
+fccAB (flavocytochrome c sulfide dehydrogenase)	all	dastool-semibin_042	Colwellia	Pseudomonadota	0.09410358105128334
+fccAB (flavocytochrome c sulfide dehydrogenase)	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.08076869573040789
+fccAB (flavocytochrome c sulfide dehydrogenase)	all	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.06402351431866896
+fccAB (flavocytochrome c sulfide dehydrogenase)	all	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.03470956647993857
+fccAB (flavocytochrome c sulfide dehydrogenase)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.582517361994436
+fccAB (flavocytochrome c sulfide dehydrogenase)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.14604909265106736
+fccAB (flavocytochrome c sulfide dehydrogenase)	diesel		unbinned		0.07940501398298601
+fccAB (flavocytochrome c sulfide dehydrogenase)	diesel	dastool-semibin_042	Colwellia	Pseudomonadota	0.05006791639354326
+fccAB (flavocytochrome c sulfide dehydrogenase)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.025655946040836868
+fccAB (flavocytochrome c sulfide dehydrogenase)	diesel	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.018133472866255416
+fccAB (flavocytochrome c sulfide dehydrogenase)	control		unbinned		0.5403626836461447
+fccAB (flavocytochrome c sulfide dehydrogenase)	control	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.08404639327137957
+fccAB (flavocytochrome c sulfide dehydrogenase)	control	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.06790888493765714
+fccAB (flavocytochrome c sulfide dehydrogenase)	control	dastool-semibin_042	Colwellia	Pseudomonadota	0.06694117894798932
+fccAB (flavocytochrome c sulfide dehydrogenase)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.05812140547138507
+fccAB (flavocytochrome c sulfide dehydrogenase)	control	dastool-semibin_072	UBA5078	Pseudomonadota	0.04521645824920533
+soxAX	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.20729578533678783
+soxAX	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.18587542919878533
+soxAX	all		unbinned		0.1520120270134321
+soxAX	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.05717075952382389
+soxAX	all	dastool-lorbin_118	Planktomarina forsetii	Pseudomonadota	0.044407809163528204
+soxAX	all	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.037905735173857986
+soxAX	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.24673222347926244
+soxAX	diesel		unbinned		0.17309149456115883
+soxAX	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.11243889774158049
+soxAX	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.0954675358629872
+soxAX	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.07167028791650122
+soxAX	diesel	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.037173197890777304
+soxAX	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.3566012650624604
+soxAX	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.195580096526904
+soxAX	control		unbinned		0.10038785753607216
+soxAX	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.0926175491477093
+soxAX	control	dastool-vamb_2202_sub	vamb_2202_sub		0.03108708497012624
+soxAX	control	dastool-metabat_1024_sub	metabat_1024_sub		0.024288791974489226
+soxYZ	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.2023181076091309
+soxYZ	all		unbinned		0.1652127324800557
+soxYZ	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.13681860078223063
+soxYZ	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.10984796188450933
+soxYZ	all	dastool-lorbin_118	Planktomarina forsetii	Pseudomonadota	0.04156837161059721
+soxYZ	all	dastool-lorbin_042	Yoonia	Pseudomonadota	0.028803586854160054
+soxYZ	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.2304322836880936
+soxYZ	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.19630224509088562
+soxYZ	diesel		unbinned		0.17578269171002664
+soxYZ	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.060078473239386934
+soxYZ	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.04472300879010624
+soxYZ	diesel	dastool-lorbin_118	Planktomarina forsetii	Pseudomonadota	0.02760808053230157
+soxYZ	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.3176149538800894
+soxYZ	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.208699336989782
+soxYZ	control		unbinned		0.11532974192451063
+soxYZ	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.08963290222864399
+soxYZ	control	dastool-metabat_1024_sub	metabat_1024_sub		0.0238059352773159
+soxYZ	control	dastool-lorbin_118	Planktomarina forsetii	Pseudomonadota	0.022721257804624372
+soxB	all	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.18285258952207742
+soxB	all		unbinned		0.15245227930331065
+soxB	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.10719360905981985
+soxB	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.10644345616912523
+soxB	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.08895699434706249
+soxB	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.04560866782453331
+soxB	diesel		unbinned		0.16880161905491886
+soxB	diesel	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.1685998368899537
+soxB	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.15178300556791538
+soxB	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.09703319060537403
+soxB	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.07593956844393641
+soxB	diesel	dastool-comebin_2576	50-400-T64	Pseudomonadota	0.06410682052916633
+soxB	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.29353471477655413
+soxB	control	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.15950495198008824
+soxB	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.13975235419911272
+soxB	control		unbinned		0.09722619257650009
+soxB	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.0686406549070038
+soxB	control	dastool-metabat_1024_sub	metabat_1024_sub		0.025111234566849754
+soxCD (sulfane dehydrogenase)	all	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.18119342091477778
+soxCD (sulfane dehydrogenase)	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.17871390626006392
+soxCD (sulfane dehydrogenase)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.11441505951316541
+soxCD (sulfane dehydrogenase)	all		unbinned		0.11234731771473132
+soxCD (sulfane dehydrogenase)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.07727139233536026
+soxCD (sulfane dehydrogenase)	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.05184427273592626
+soxCD (sulfane dehydrogenase)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.3017497114599224
+soxCD (sulfane dehydrogenase)	diesel	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.12550436378646432
+soxCD (sulfane dehydrogenase)	diesel		unbinned		0.11015793470090993
+soxCD (sulfane dehydrogenase)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.09998405140762469
+soxCD (sulfane dehydrogenase)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.08136037405143788
+soxCD (sulfane dehydrogenase)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.05622406825490455
+soxCD (sulfane dehydrogenase)	control	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.26445314080869586
+soxCD (sulfane dehydrogenase)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.17515790793893915
+soxCD (sulfane dehydrogenase)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.15703019343410485
+soxCD (sulfane dehydrogenase)	control		unbinned		0.08299561505806385
+soxCD (sulfane dehydrogenase)	control	dastool-semibin_072	UBA5078	Pseudomonadota	0.05248843227369208
+soxCD (sulfane dehydrogenase)	control	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.03524155445843002
+soeABC (cytoplasmic sulfite oxidation)	all		unbinned		0.19029616626798213
+soeABC (cytoplasmic sulfite oxidation)	all	dastool-lorbin_200	UBA9926 sp003451575	Pseudomonadota	0.15841570128432497
+soeABC (cytoplasmic sulfite oxidation)	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.08174720800090758
+soeABC (cytoplasmic sulfite oxidation)	all	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.062499383101732274
+soeABC (cytoplasmic sulfite oxidation)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.052857070174107665
+soeABC (cytoplasmic sulfite oxidation)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.045045754481184586
+soeABC (cytoplasmic sulfite oxidation)	diesel		unbinned		0.17362064440100952
+soeABC (cytoplasmic sulfite oxidation)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.17036789328023366
+soeABC (cytoplasmic sulfite oxidation)	diesel	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.1222779750169858
+soeABC (cytoplasmic sulfite oxidation)	diesel	dastool-lorbin_200	UBA9926 sp003451575	Pseudomonadota	0.08738115133063729
+soeABC (cytoplasmic sulfite oxidation)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.041986030711064784
+soeABC (cytoplasmic sulfite oxidation)	diesel	dastool-comebin_663_sub	Hoeflea (Kaiju)		0.03768264122585391
+soeABC (cytoplasmic sulfite oxidation)	control	dastool-lorbin_200	UBA9926 sp003451575	Pseudomonadota	0.2147247617126409
+soeABC (cytoplasmic sulfite oxidation)	control		unbinned		0.2046051972947384
+soeABC (cytoplasmic sulfite oxidation)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.10825091854862905
+soeABC (cytoplasmic sulfite oxidation)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.09240521104366305
+soeABC (cytoplasmic sulfite oxidation)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.051128885261081516
+soeABC (cytoplasmic sulfite oxidation)	control	dastool-lorbin_066	Yoonia sp963976475	Pseudomonadota	0.04877078218236393
+sorA (periplasmic sulfite dehydrogenase)	all		unbinned		0.6255034318704679
+sorA (periplasmic sulfite dehydrogenase)	all	dastool-lorbin_331_sub	Limnohabitans (Kaiju)		0.10138588184373229
+sorA (periplasmic sulfite dehydrogenase)	all	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.08945192718590823
+sorA (periplasmic sulfite dehydrogenase)	all	dastool-lorbin_273	IMCC9063 sp000195085	Pseudomonadota	0.07165076776371325
+sorA (periplasmic sulfite dehydrogenase)	all	dastool-lorbin_714	Shewanella	Pseudomonadota	0.03862241208553578
+sorA (periplasmic sulfite dehydrogenase)	all	dastool-lorbin_416_sub	Candidatus Pelagibacter (Kaiju)		0.028142483994010595
+sorA (periplasmic sulfite dehydrogenase)	diesel		unbinned		0.6232313496761909
+sorA (periplasmic sulfite dehydrogenase)	diesel	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.10055820940962185
+sorA (periplasmic sulfite dehydrogenase)	diesel	dastool-comebin_2715	UBA1479	Pseudomonadota	0.09475770303148204
+sorA (periplasmic sulfite dehydrogenase)	diesel	dastool-lorbin_273	IMCC9063 sp000195085	Pseudomonadota	0.08891089639444577
+sorA (periplasmic sulfite dehydrogenase)	diesel	dastool-lorbin_416_sub	Candidatus Pelagibacter (Kaiju)		0.043665510002275996
+sorA (periplasmic sulfite dehydrogenase)	diesel	dastool-comebin_3590_sub	comebin_3590_sub		0.01741078628017515
+sorA (periplasmic sulfite dehydrogenase)	control		unbinned		0.6244145786971994
+sorA (periplasmic sulfite dehydrogenase)	control	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.1969257417108428
+sorA (periplasmic sulfite dehydrogenase)	control	dastool-lorbin_416_sub	Candidatus Pelagibacter (Kaiju)		0.06393356341210998
+sorA (periplasmic sulfite dehydrogenase)	control	dastool-lorbin_331_sub	Limnohabitans (Kaiju)		0.037626456748356796
+sorA (periplasmic sulfite dehydrogenase)	control	dastool-lorbin_273	IMCC9063 sp000195085	Pseudomonadota	0.03705752981809239
+sorA (periplasmic sulfite dehydrogenase)	control	dastool-comebin_1034	CALINF01	Pseudomonadota	0.029014130093017267
+tsdA (thiosulfate dehydrogenase)	all	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.5875110473465166
+tsdA (thiosulfate dehydrogenase)	all		unbinned		0.1903401086894952
+tsdA (thiosulfate dehydrogenase)	all	dastool-semibin_072	UBA5078	Pseudomonadota	0.09977127746835049
+tsdA (thiosulfate dehydrogenase)	all	dastool-semibin_084	CAJWHX01	Myxococcota	0.024992078284300598
+tsdA (thiosulfate dehydrogenase)	all	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.01975913282168893
+tsdA (thiosulfate dehydrogenase)	all	dastool-lorbin_317	MAG-120531	Bacteroidota	0.012594075850798657
+tsdA (thiosulfate dehydrogenase)	diesel	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.6217278198892313
+tsdA (thiosulfate dehydrogenase)	diesel		unbinned		0.2079882012992103
+tsdA (thiosulfate dehydrogenase)	diesel	dastool-semibin_084	CAJWHX01	Myxococcota	0.05653020323001301
+tsdA (thiosulfate dehydrogenase)	diesel	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.04493146079826505
+tsdA (thiosulfate dehydrogenase)	diesel	dastool-metabat_10934	UBA9145	Pseudomonadota	0.027555295868393604
+tsdA (thiosulfate dehydrogenase)	diesel	dastool-metabat_10621	UBA9145	Pseudomonadota	0.01510658709838006
+tsdA (thiosulfate dehydrogenase)	control	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.537661355010668
+tsdA (thiosulfate dehydrogenase)	control	dastool-semibin_072	UBA5078	Pseudomonadota	0.21371909145391899
+tsdA (thiosulfate dehydrogenase)	control		unbinned		0.16476567008101123
+tsdA (thiosulfate dehydrogenase)	control	dastool-lorbin_317	MAG-120531	Bacteroidota	0.023009255947064947
+tsdA (thiosulfate dehydrogenase)	control	dastool-metabat_6737	Maribacter arcticus	Bacteroidota	0.01615587652586947
+tsdA (thiosulfate dehydrogenase)	control	dastool-comebin_1103_sub	comebin_1103_sub		0.013783212264120928
+sdo/ETHE1 (persulfide dioxygenase)	all		unbinned		0.2921941338989012
+sdo/ETHE1 (persulfide dioxygenase)	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.17515937232001286
+sdo/ETHE1 (persulfide dioxygenase)	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.1413512479424538
+sdo/ETHE1 (persulfide dioxygenase)	all	dastool-comebin_3787_sub	Cycloclasticus (Kaiju)		0.10035788536235694
+sdo/ETHE1 (persulfide dioxygenase)	all	dastool-lorbin_188	RS62 sp000496475	Pseudomonadota	0.074231610200382
+sdo/ETHE1 (persulfide dioxygenase)	all	dastool-metabat_1104	RS62 sp002340675	Pseudomonadota	0.03318635868775001
+sdo/ETHE1 (persulfide dioxygenase)	diesel		unbinned		0.23205097897403884
+sdo/ETHE1 (persulfide dioxygenase)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.22470537214437133
+sdo/ETHE1 (persulfide dioxygenase)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.18581141754212505
+sdo/ETHE1 (persulfide dioxygenase)	diesel	dastool-comebin_3787_sub	Cycloclasticus (Kaiju)		0.11729881207899628
+sdo/ETHE1 (persulfide dioxygenase)	diesel	dastool-lorbin_188	RS62 sp000496475	Pseudomonadota	0.09493032553270668
+sdo/ETHE1 (persulfide dioxygenase)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.030242151825552514
+sdo/ETHE1 (persulfide dioxygenase)	control		unbinned		0.5442116867200166
+sdo/ETHE1 (persulfide dioxygenase)	control	dastool-comebin_4099_sub	comebin_4099_sub		0.09475378446455278
+sdo/ETHE1 (persulfide dioxygenase)	control	dastool-comebin_1103_sub	comebin_1103_sub		0.05651331789118927
+sdo/ETHE1 (persulfide dioxygenase)	control	dastool-lorbin_136	HTCC2207	Pseudomonadota	0.03526548495167673
+sdo/ETHE1 (persulfide dioxygenase)	control	dastool-comebin_3787_sub	Cycloclasticus (Kaiju)		0.03076191501507239
+sdo/ETHE1 (persulfide dioxygenase)	control	dastool-metabat_1104	RS62 sp002340675	Pseudomonadota	0.025674260976098016
+dsrAB (dissimilatory sulfite reductase)	all		unbinned		0.5708554902048744
+dsrAB (dissimilatory sulfite reductase)	all	dastool-lorbin_055	Thioglobus_A sp028352435	Pseudomonadota	0.1295860881424953
+dsrAB (dissimilatory sulfite reductase)	all	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.08613600911179695
+dsrAB (dissimilatory sulfite reductase)	all	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.07513511303390731
+dsrAB (dissimilatory sulfite reductase)	all	dastool-comebin_2956	BMS3Bbin11 sp033791885	Pseudomonadota	0.06107563012926793
+dsrAB (dissimilatory sulfite reductase)	all	dastool-semibin_075	GCA-2705445	Pseudomonadota	0.053443070453562766
+dsrAB (dissimilatory sulfite reductase)	diesel		unbinned		0.5807161527605001
+dsrAB (dissimilatory sulfite reductase)	diesel	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.14897977888160693
+dsrAB (dissimilatory sulfite reductase)	diesel	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.0819812603761477
+dsrAB (dissimilatory sulfite reductase)	diesel	dastool-lorbin_055	Thioglobus_A sp028352435	Pseudomonadota	0.0635121540342271
+dsrAB (dissimilatory sulfite reductase)	diesel	dastool-comebin_2956	BMS3Bbin11 sp033791885	Pseudomonadota	0.058992784631804907
+dsrAB (dissimilatory sulfite reductase)	diesel	dastool-metabat_6839	UBA1858	Pseudomonadota	0.04236189618933723
+dsrAB (dissimilatory sulfite reductase)	control		unbinned		0.6585474883000065
+dsrAB (dissimilatory sulfite reductase)	control	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.09872340570501473
+dsrAB (dissimilatory sulfite reductase)	control	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.06675123732963013
+dsrAB (dissimilatory sulfite reductase)	control	dastool-comebin_2956	BMS3Bbin11 sp033791885	Pseudomonadota	0.06126022936299373
+dsrAB (dissimilatory sulfite reductase)	control	dastool-semibin_075	GCA-2705445	Pseudomonadota	0.05165974406834408
+dsrAB (dissimilatory sulfite reductase)	control	dastool-lorbin_055	Thioglobus_A sp028352435	Pseudomonadota	0.04435979073780843
+aprAB (APS reductase)	all		unbinned		0.7436163776479352
+aprAB (APS reductase)	all	dastool-vamb_2437_sub	Candidatus Pelagibacter (Kaiju)		0.06986447588500855
+aprAB (APS reductase)	all	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.05184555967715879
+aprAB (APS reductase)	all	dastool-lorbin_073	CAJQQK01	Pseudomonadota	0.024785170797220576
+aprAB (APS reductase)	all	dastool-lorbin_347_sub	Candidatus Pelagibacter (Kaiju)		0.01115486248941288
+aprAB (APS reductase)	all	dastool-lorbin_150	ASP10-02a sp028825405	Pseudomonadota	0.010747788568649346
+aprAB (APS reductase)	diesel		unbinned		0.7144883983350103
+aprAB (APS reductase)	diesel	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.08173439180409484
+aprAB (APS reductase)	diesel	dastool-vamb_2437_sub	Candidatus Pelagibacter (Kaiju)		0.06552032237246397
+aprAB (APS reductase)	diesel	dastool-lorbin_073	CAJQQK01	Pseudomonadota	0.033571365345551996
+aprAB (APS reductase)	diesel	dastool-vamb_471_sub	Candidatus Thioglobus (Kaiju)		0.012215497487212615
+aprAB (APS reductase)	diesel	dastool-comebin_4318_sub	comebin_4318_sub		0.00946931230073514
+aprAB (APS reductase)	control		unbinned		0.7308456340387249
+aprAB (APS reductase)	control	dastool-vamb_2437_sub	Candidatus Pelagibacter (Kaiju)		0.0649978654556129
+aprAB (APS reductase)	control	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.06441531882684402
+aprAB (APS reductase)	control	dastool-lorbin_073	CAJQQK01	Pseudomonadota	0.024544198396495756
+aprAB (APS reductase)	control	dastool-lorbin_1029_sub	lorbin_1029_sub		0.023583517656446742
+aprAB (APS reductase)	control	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.015610345774998764
+qmoABC (reductive-pathway electron transfer)	all		unbinned		0.649571699865417
+qmoABC (reductive-pathway electron transfer)	all	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.3102475231671262
+qmoABC (reductive-pathway electron transfer)	all	dastool-comebin_3581_sub	comebin_3581_sub		0.02733709440399621
+qmoABC (reductive-pathway electron transfer)	all	dastool-maxbin_568	LS-NOB	Nitrospinota	0.01284368256346087
+qmoABC (reductive-pathway electron transfer)	diesel		unbinned		0.4858972851777154
+qmoABC (reductive-pathway electron transfer)	diesel	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.47614217998526226
+qmoABC (reductive-pathway electron transfer)	diesel	dastool-comebin_3581_sub	comebin_3581_sub		0.03796053483702233
+qmoABC (reductive-pathway electron transfer)	diesel	dastool-maxbin_568	LS-NOB	Nitrospinota	0.0
+qmoABC (reductive-pathway electron transfer)	control		unbinned		0.7306814776843309
+qmoABC (reductive-pathway electron transfer)	control	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.21646314112720536
+qmoABC (reductive-pathway electron transfer)	control	dastool-comebin_3581_sub	comebin_3581_sub		0.028124662689198148
+qmoABC (reductive-pathway electron transfer)	control	dastool-maxbin_568	LS-NOB	Nitrospinota	0.02473071849926567
+dsrEFH (marker of oxidative rDsr)	all		unbinned		0.3728232565402575
+dsrEFH (marker of oxidative rDsr)	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.20990511617374408
+dsrEFH (marker of oxidative rDsr)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.07339915925572883
+dsrEFH (marker of oxidative rDsr)	all	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.055274207274371635
+dsrEFH (marker of oxidative rDsr)	all	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.025617520662791375
+dsrEFH (marker of oxidative rDsr)	all	dastool-metabat_1104	RS62 sp002340675	Pseudomonadota	0.02042111555795679
+dsrEFH (marker of oxidative rDsr)	diesel		unbinned		0.39049111725857805
+dsrEFH (marker of oxidative rDsr)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.29122456433254623
+dsrEFH (marker of oxidative rDsr)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.05967397113483746
+dsrEFH (marker of oxidative rDsr)	diesel	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.058585172780915004
+dsrEFH (marker of oxidative rDsr)	diesel	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.022407963556611725
+dsrEFH (marker of oxidative rDsr)	diesel	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.02187249847569369
+dsrEFH (marker of oxidative rDsr)	control		unbinned		0.3124439796934445
+dsrEFH (marker of oxidative rDsr)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.13043978768521006
+dsrEFH (marker of oxidative rDsr)	control	dastool-lorbin_048	Glaciecola	Pseudomonadota	0.06154771354998363
+dsrEFH (marker of oxidative rDsr)	control	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.05944672116629759
+dsrEFH (marker of oxidative rDsr)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.04834371747597899
+dsrEFH (marker of oxidative rDsr)	control	dastool-lorbin_317	MAG-120531	Bacteroidota	0.046526257457529134
+ttrABC (tetrathionate reductase)	all		unbinned		0.3556177406635311
+ttrABC (tetrathionate reductase)	all	dastool-comebin_1850_sub	comebin_1850_sub		0.2319980107938203
+ttrABC (tetrathionate reductase)	all	dastool-metabat_7327	JABMPE01	Planctomycetota	0.13433326945263985
+ttrABC (tetrathionate reductase)	all	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.059170313693989736
+ttrABC (tetrathionate reductase)	all	dastool-comebin_3979	UBA10348	Bacteroidota_A	0.05886484777288732
+ttrABC (tetrathionate reductase)	all	dastool-lorbin_113	CAJQQY01	Bacteroidota	0.03718819563923996
+ttrABC (tetrathionate reductase)	diesel	dastool-comebin_1850_sub	comebin_1850_sub		0.3047362059609404
+ttrABC (tetrathionate reductase)	diesel		unbinned		0.22852571871710553
+ttrABC (tetrathionate reductase)	diesel	dastool-metabat_7327	JABMPE01	Planctomycetota	0.14526838327286898
+ttrABC (tetrathionate reductase)	diesel	dastool-comebin_3979	UBA10348	Bacteroidota_A	0.08515740331542654
+ttrABC (tetrathionate reductase)	diesel	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.07317194928495302
+ttrABC (tetrathionate reductase)	diesel	dastool-comebin_1384	Sanyastnellaceae	Bacteroidota	0.04285259010593486
+ttrABC (tetrathionate reductase)	control		unbinned		0.5712440187202944
+ttrABC (tetrathionate reductase)	control	dastool-metabat_7327	JABMPE01	Planctomycetota	0.20329371225330284
+ttrABC (tetrathionate reductase)	control	dastool-lorbin_113	CAJQQY01	Bacteroidota	0.09979260998961956
+ttrABC (tetrathionate reductase)	control	dastool-comebin_1775_sub	comebin_1775_sub		0.0316589673976161
+ttrABC (tetrathionate reductase)	control	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.03162532245571791
+ttrABC (tetrathionate reductase)	control	dastool-comebin_219_sub	comebin_219_sub		0.022595487095467364
+phsA/psrA (thiosulfate/polysulfide reductase)	all		unbinned		0.5696823413828473
+phsA/psrA (thiosulfate/polysulfide reductase)	all	dastool-metabat_7327	JABMPE01	Planctomycetota	0.0589524052935909
+phsA/psrA (thiosulfate/polysulfide reductase)	all	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.046861208972707284
+phsA/psrA (thiosulfate/polysulfide reductase)	all	dastool-lorbin_111	SHLQ01	Actinomycetota	0.04108340247684556
+phsA/psrA (thiosulfate/polysulfide reductase)	all	dastool-metabat_7665	JAJDEX01	Planctomycetota	0.027559699042621028
+phsA/psrA (thiosulfate/polysulfide reductase)	all	dastool-comebin_011_sub	comebin_011_sub		0.024574776977158472
+phsA/psrA (thiosulfate/polysulfide reductase)	diesel		unbinned		0.5307962544082824
+phsA/psrA (thiosulfate/polysulfide reductase)	diesel	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.06432790139739665
+phsA/psrA (thiosulfate/polysulfide reductase)	diesel	dastool-metabat_7327	JABMPE01	Planctomycetota	0.06370734051109934
+phsA/psrA (thiosulfate/polysulfide reductase)	diesel	dastool-lorbin_111	SHLQ01	Actinomycetota	0.06314263387961959
+phsA/psrA (thiosulfate/polysulfide reductase)	diesel	dastool-comebin_1384	Sanyastnellaceae	Bacteroidota	0.039112446007613474
+phsA/psrA (thiosulfate/polysulfide reductase)	diesel	dastool-metabat_5257	Marimicrobium sp913061115	Pseudomonadota	0.03045946723595407
+phsA/psrA (thiosulfate/polysulfide reductase)	control		unbinned		0.6738922695520101
+phsA/psrA (thiosulfate/polysulfide reductase)	control	dastool-metabat_7327	JABMPE01	Planctomycetota	0.059944557091988135
+phsA/psrA (thiosulfate/polysulfide reductase)	control	dastool-metabat_7665	JAJDEX01	Planctomycetota	0.029791715788051017
+phsA/psrA (thiosulfate/polysulfide reductase)	control	dastool-comebin_011_sub	comebin_011_sub		0.02728706791958815
+phsA/psrA (thiosulfate/polysulfide reductase)	control	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.020472370872910282
+phsA/psrA (thiosulfate/polysulfide reductase)	control	dastool-metabat_5257	Marimicrobium sp913061115	Pseudomonadota	0.019707814830645765
+dmdA (DMSP demethylase)	all		unbinned		0.3368842771938276
+dmdA (DMSP demethylase)	all	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.07143420200485955
+dmdA (DMSP demethylase)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.06614861442384341
+dmdA (DMSP demethylase)	all	dastool-lorbin_451	Pelagibacter	Pseudomonadota	0.06324828336234548
+dmdA (DMSP demethylase)	all	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.04882992252743827
+dmdA (DMSP demethylase)	all	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.045551811639204506
+dmdA (DMSP demethylase)	diesel		unbinned		0.32094974547760935
+dmdA (DMSP demethylase)	diesel	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.1411099796038235
+dmdA (DMSP demethylase)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.09115665179196407
+dmdA (DMSP demethylase)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.07689452659780417
+dmdA (DMSP demethylase)	diesel	dastool-comebin_213	GCA-001735895 sp963976575	Pseudomonadota	0.07487379245288367
+dmdA (DMSP demethylase)	diesel	dastool-lorbin_451	Pelagibacter	Pseudomonadota	0.035074192931253204
+dmdA (DMSP demethylase)	control		unbinned		0.30553374470406075
+dmdA (DMSP demethylase)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.10633695037635235
+dmdA (DMSP demethylase)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.09821338464278434
+dmdA (DMSP demethylase)	control	dastool-lorbin_066	Yoonia sp963976475	Pseudomonadota	0.07752947658430889
+dmdA (DMSP demethylase)	control	dastool-metabat_8061	Pseudorhodobacter	Pseudomonadota	0.059284991237468665
+dmdA (DMSP demethylase)	control	dastool-lorbin_451	Pelagibacter	Pseudomonadota	0.05555158185864402
+dmdBCD (MMPA-CoA pathway)	all		unbinned		0.2057128351189024
+dmdBCD (MMPA-CoA pathway)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.17409113780922914
+dmdBCD (MMPA-CoA pathway)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.11493896656432764
+dmdBCD (MMPA-CoA pathway)	all	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.028523147193318006
+dmdBCD (MMPA-CoA pathway)	all	dastool-semibin_042	Colwellia	Pseudomonadota	0.027841627616378675
+dmdBCD (MMPA-CoA pathway)	all	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.027431353774326882
+dmdBCD (MMPA-CoA pathway)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.21151838825786148
+dmdBCD (MMPA-CoA pathway)	diesel		unbinned		0.17801338348898804
+dmdBCD (MMPA-CoA pathway)	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.06430814282612599
+dmdBCD (MMPA-CoA pathway)	diesel	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.05352658966441313
+dmdBCD (MMPA-CoA pathway)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.047315955202827054
+dmdBCD (MMPA-CoA pathway)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.04560191283992982
+dmdBCD (MMPA-CoA pathway)	control		unbinned		0.24472706728959048
+dmdBCD (MMPA-CoA pathway)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.18086271036727045
+dmdBCD (MMPA-CoA pathway)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.1455204247424339
+dmdBCD (MMPA-CoA pathway)	control	dastool-lorbin_095	Colwellia	Pseudomonadota	0.035871837554965265
+dmdBCD (MMPA-CoA pathway)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.035620559764151474
+dmdBCD (MMPA-CoA pathway)	control	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.03325931236559584
+DMSP lyases (dddL/P/W/Y/X/D)	all		unbinned		0.22665460139940685
+DMSP lyases (dddL/P/W/Y/X/D)	all	dastool-lorbin_136	HTCC2207	Pseudomonadota	0.11719121659830417
+DMSP lyases (dddL/P/W/Y/X/D)	all	dastool-metabat_8061	Pseudorhodobacter	Pseudomonadota	0.07959076299731195
+DMSP lyases (dddL/P/W/Y/X/D)	all	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.07432692683990498
+DMSP lyases (dddL/P/W/Y/X/D)	all	dastool-metabat_10662	HTCC2207 sp905182265	Pseudomonadota	0.06998979294703316
+DMSP lyases (dddL/P/W/Y/X/D)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.06833538994954774
+DMSP lyases (dddL/P/W/Y/X/D)	diesel		unbinned		0.2979521493131802
+DMSP lyases (dddL/P/W/Y/X/D)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.14099299950720867
+DMSP lyases (dddL/P/W/Y/X/D)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.10894415434732992
+DMSP lyases (dddL/P/W/Y/X/D)	diesel	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.10120246447999305
+DMSP lyases (dddL/P/W/Y/X/D)	diesel	dastool-metabat_10662	HTCC2207 sp905182265	Pseudomonadota	0.08683063121167976
+DMSP lyases (dddL/P/W/Y/X/D)	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.040429848444210686
+DMSP lyases (dddL/P/W/Y/X/D)	control	dastool-lorbin_136	HTCC2207	Pseudomonadota	0.2764334602702577
+DMSP lyases (dddL/P/W/Y/X/D)	control	dastool-metabat_8061	Pseudorhodobacter	Pseudomonadota	0.19062050169567993
+DMSP lyases (dddL/P/W/Y/X/D)	control		unbinned		0.11809680915412885
+DMSP lyases (dddL/P/W/Y/X/D)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.11411695025743991
+DMSP lyases (dddL/P/W/Y/X/D)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.06895070112986681
+DMSP lyases (dddL/P/W/Y/X/D)	control	dastool-lorbin_061	HTCC2207 sp905182855	Pseudomonadota	0.06295948191190498
+mddA (methanethiol S-methyltransferase)	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.4067346737927119
+mddA (methanethiol S-methyltransferase)	all		unbinned		0.2077742128161898
+mddA (methanethiol S-methyltransferase)	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.1638224683581611
+mddA (methanethiol S-methyltransferase)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.04732119513030771
+mddA (methanethiol S-methyltransferase)	all	dastool-lorbin_053	NORP324	Myxococcota	0.018670925701287214
+mddA (methanethiol S-methyltransferase)	all	dastool-comebin_1103_sub	comebin_1103_sub		0.01866656872592314
+mddA (methanethiol S-methyltransferase)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.4560468042840665
+mddA (methanethiol S-methyltransferase)	diesel		unbinned		0.1944745111037106
+mddA (methanethiol S-methyltransferase)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.16869875926722822
+mddA (methanethiol S-methyltransferase)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.04792264152376324
+mddA (methanethiol S-methyltransferase)	diesel	dastool-lorbin_053	NORP324	Myxococcota	0.02028773133862748
+mddA (methanethiol S-methyltransferase)	diesel	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.011864092926166492
+mddA (methanethiol S-methyltransferase)	control		unbinned		0.3209435894950414
+mddA (methanethiol S-methyltransferase)	control	dastool-comebin_1103_sub	comebin_1103_sub		0.15462204536277024
+mddA (methanethiol S-methyltransferase)	control	dastool-lorbin_319_sub	lorbin_319_sub		0.059267613959169935
+mddA (methanethiol S-methyltransferase)	control	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.056634015568210155
+mddA (methanethiol S-methyltransferase)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.05194459911067456
+mddA (methanethiol S-methyltransferase)	control	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.03725886698996617
+cysDN + cysH + cysIJ	all		unbinned		0.20027626039501895
+cysDN + cysH + cysIJ	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.07834229975011169
+cysDN + cysH + cysIJ	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.0737242622633433
+cysDN + cysH + cysIJ	all	dastool-semibin_042	Colwellia	Pseudomonadota	0.07339684701347594
+cysDN + cysH + cysIJ	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.05372550275635534
+cysDN + cysH + cysIJ	all	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.045762841135434544
+cysDN + cysH + cysIJ	diesel		unbinned		0.1675264014163491
+cysDN + cysH + cysIJ	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.12322994044972668
+cysDN + cysH + cysIJ	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.08223379643252085
+cysDN + cysH + cysIJ	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.08174864915858858
+cysDN + cysH + cysIJ	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.06264370555500999
+cysDN + cysH + cysIJ	diesel	dastool-lorbin_722_sub	Cycloclasticus (Kaiju)		0.04370073089233285
+cysDN + cysH + cysIJ	control		unbinned		0.23423719875936702
+cysDN + cysH + cysIJ	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.10334068329683058
+cysDN + cysH + cysIJ	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.09189545403874402
+cysDN + cysH + cysIJ	control	dastool-lorbin_095	Colwellia	Pseudomonadota	0.05655826802744495
+cysDN + cysH + cysIJ	control	dastool-semibin_042	Colwellia	Pseudomonadota	0.05304879456237065
+cysDN + cysH + cysIJ	control	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.04316697604210098
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	all		unbinned		0.4302070612380494
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.41093797887514
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	all	dastool-comebin_4672	Thiomicrorhabdus arctica	Pseudomonadota	0.06175166089881301
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	all	dastool-semibin_042	Colwellia	Pseudomonadota	0.019728344505423843
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	all	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.01782516919248003
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.01485859761285763
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	diesel		unbinned		0.4292160722174155
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.41944925512201925
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	diesel	dastool-comebin_4672	Thiomicrorhabdus arctica	Pseudomonadota	0.07666609606169547
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.01877226793396052
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	diesel	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.015214688978090276
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.010607918524062262
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	control		unbinned		0.3769144733935099
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.13111813176497422
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	control	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.1101232105313905
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	control	dastool-lorbin_095	Colwellia	Pseudomonadota	0.059966252671176085
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	control	dastool-semibin_042	Colwellia	Pseudomonadota	0.045621344661816915
+NiFe group 1 respiratory uptake (hyaAB/hybOC/hupSL)	control	dastool-semibin_072	UBA5078	Pseudomonadota	0.04074437265118088
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	all		unbinned		0.510925633070469
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.4766571075904263
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	all	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.007540768782920431
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	all	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.004556351349117084
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	all	dastool-comebin_1103_sub	comebin_1103_sub		0.00016201456027522762
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	all	dastool-lorbin_167	Sulfurimonas	Campylobacterota	8.955138211170797e-05
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	diesel		unbinned		0.5125380816600151
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.4758467044321623
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	diesel	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.007169988099708331
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	diesel	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.004270407158712564
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	diesel	dastool-lorbin_167	Sulfurimonas	Campylobacterota	0.00010509160013403706
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	diesel	dastool-comebin_3924	UBA2589	Gemmatimonadota	2.611555221507687e-05
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	control		unbinned		0.4808471665214992
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.47906909614356474
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	control	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.021106338532041104
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	control	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.010966553339988845
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	control	dastool-comebin_1103_sub	comebin_1103_sub		0.007484593848142191
+NiFe group 1b quinone-reactive (hydAB, Campylobacterota)	control	dastool-comebin_3582	UBA9214 sp905480305	Pseudomonadota	0.00018278512185138053
+NiFe group 2b sensory (hupUV)	all		unbinned		0.9088007925621404
+NiFe group 2b sensory (hupUV)	all	dastool-maxbin_003	Patiriisocius	Bacteroidota	0.052061683871525655
+NiFe group 2b sensory (hupUV)	all	dastool-lorbin_516_sub	lorbin_516_sub		0.015314704244602139
+NiFe group 2b sensory (hupUV)	all	dastool-vamb_2764_sub	vamb_2764_sub		0.010359275891018866
+NiFe group 2b sensory (hupUV)	all	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.009726683183523375
+NiFe group 2b sensory (hupUV)	all	dastool-comebin_3576	Oceaniglobus	Pseudomonadota	0.002063274760355869
+NiFe group 2b sensory (hupUV)	diesel		unbinned		0.9443420379752909
+NiFe group 2b sensory (hupUV)	diesel	dastool-maxbin_003	Patiriisocius	Bacteroidota	0.01649693894825847
+NiFe group 2b sensory (hupUV)	diesel	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.01286065078848831
+NiFe group 2b sensory (hupUV)	diesel	dastool-lorbin_516_sub	lorbin_516_sub		0.012112298859631594
+NiFe group 2b sensory (hupUV)	diesel	dastool-vamb_2764_sub	vamb_2764_sub		0.008293825171828684
+NiFe group 2b sensory (hupUV)	diesel	dastool-comebin_3576	Oceaniglobus	Pseudomonadota	0.0035726435006037185
+NiFe group 2b sensory (hupUV)	control		unbinned		0.868896394779255
+NiFe group 2b sensory (hupUV)	control	dastool-maxbin_003	Patiriisocius	Bacteroidota	0.09095034750512927
+NiFe group 2b sensory (hupUV)	control	dastool-lorbin_516_sub	lorbin_516_sub		0.018988786696730316
+NiFe group 2b sensory (hupUV)	control	dastool-vamb_2764_sub	vamb_2764_sub		0.01264091538648447
+NiFe group 2b sensory (hupUV)	control	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.00674551147189929
+NiFe group 2b sensory (hupUV)	control	dastool-metabat_8644	Croceibacter	Bacteroidota	0.0006463571456553377
+NiFe group 3 bidirectional (hoxFUYH)	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.8696762672767551
+NiFe group 3 bidirectional (hoxFUYH)	all		unbinned		0.08627903308696626
+NiFe group 3 bidirectional (hoxFUYH)	all	dastool-comebin_663_sub	Hoeflea (Kaiju)		0.016580305494040493
+NiFe group 3 bidirectional (hoxFUYH)	all	dastool-comebin_3609_sub	Synechococcus (Kaiju)		0.007701892288725151
+NiFe group 3 bidirectional (hoxFUYH)	all	dastool-comebin_4403_sub	Maricaulis (Kaiju)		0.004077083668870978
+NiFe group 3 bidirectional (hoxFUYH)	all	dastool-lorbin_194	Boseongicola sp905479635	Pseudomonadota	0.00198084418324889
+NiFe group 3 bidirectional (hoxFUYH)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.9302755477494913
+NiFe group 3 bidirectional (hoxFUYH)	diesel		unbinned		0.03858473964659361
+NiFe group 3 bidirectional (hoxFUYH)	diesel	dastool-comebin_663_sub	Hoeflea (Kaiju)		0.015200514091968263
+NiFe group 3 bidirectional (hoxFUYH)	diesel	dastool-comebin_3609_sub	Synechococcus (Kaiju)		0.0033807974800286744
+NiFe group 3 bidirectional (hoxFUYH)	diesel	dastool-comebin_4403_sub	Maricaulis (Kaiju)		0.002291825949978165
+NiFe group 3 bidirectional (hoxFUYH)	diesel	dastool-lorbin_194	Boseongicola sp905479635	Pseudomonadota	0.0014547298238255062
+NiFe group 3 bidirectional (hoxFUYH)	control		unbinned		0.6287126634457656
+NiFe group 3 bidirectional (hoxFUYH)	control	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.12512828199316145
+NiFe group 3 bidirectional (hoxFUYH)	control	dastool-comebin_663_sub	Hoeflea (Kaiju)		0.057277748940372325
+NiFe group 3 bidirectional (hoxFUYH)	control	dastool-comebin_4403_sub	Maricaulis (Kaiju)		0.03358006708798097
+NiFe group 3 bidirectional (hoxFUYH)	control	dastool-comebin_3609_sub	Synechococcus (Kaiju)		0.031411851020011865
+NiFe group 3 bidirectional (hoxFUYH)	control	dastool-comebin_4243_sub	Yoonia (Kaiju)		0.02900330297869059
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	all	dastool-comebin_2375	UBA10347 sp003485885	Actinomycetota	0.28267241667439413
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	all		unbinned		0.2573756998062005
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.092508360668109
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	all	dastool-comebin_4188_sub	comebin_4188_sub		0.08046536164623454
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	all	dastool-lorbin_183	Ilumatobacter_A sp905182555	Actinomycetota	0.07787816793700678
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	all	dastool-lorbin_111	SHLQ01	Actinomycetota	0.048273907667930105
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	diesel		unbinned		0.2466941414422258
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	diesel	dastool-comebin_2375	UBA10347 sp003485885	Actinomycetota	0.20906968226769426
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.16926770835624488
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	diesel	dastool-lorbin_183	Ilumatobacter_A sp905182555	Actinomycetota	0.08370277395479683
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	diesel	dastool-lorbin_111	SHLQ01	Actinomycetota	0.08336946874715574
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	diesel	dastool-comebin_4188_sub	comebin_4188_sub		0.05545468745529663
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control		unbinned		0.35260644094859395
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_2375	UBA10347 sp003485885	Actinomycetota	0.24748408681876805
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_4188_sub	comebin_4188_sub		0.1002899933941849
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-lorbin_183	Ilumatobacter_A sp905182555	Actinomycetota	0.05945234346429365
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-vamb_488_sub	vamb_488_sub		0.05798033047528058
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_4568	Ilumatobacter	Actinomycetota	0.026249880531249676
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all		unbinned		0.27525505491810215
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-vamb_2202_sub	vamb_2202_sub		0.1214647590385743
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.10137316541462531
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.09973780151797114
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-metabat_1104	RS62 sp002340675	Pseudomonadota	0.08207921378393837
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-semibin_029	Arenicella	Pseudomonadota	0.06218078897215037
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	diesel		unbinned		0.2992827611941647
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.19991807596644784
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	diesel	dastool-semibin_029	Arenicella	Pseudomonadota	0.10940559875562998
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	diesel	dastool-metabat_1104	RS62 sp002340675	Pseudomonadota	0.0708459598848806
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	diesel	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.0551226279101294
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	diesel	dastool-lorbin_111	SHLQ01	Actinomycetota	0.04570124363878609
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	control	dastool-vamb_2202_sub	vamb_2202_sub		0.34426382101039904
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	control		unbinned		0.22206992490388872
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	control	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.12485284385688471
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	control	dastool-lorbin_323	UBA4582 sp013204195	Pseudomonadota	0.11951138841634934
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	control	dastool-metabat_1104	RS62 sp002340675	Pseudomonadota	0.04534188915713733
+NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	control	dastool-comebin_896	Colwellia_A sp001767295	Pseudomonadota	0.028364466065164733
+[FeFe] hydrogenases (hydA, hnd)	all		unbinned		0.7940468105279265
+[FeFe] hydrogenases (hydA, hnd)	all	dastool-comebin_3931	Polaribacter_A	Bacteroidota	0.04298211313402501
+[FeFe] hydrogenases (hydA, hnd)	all	dastool-comebin_3714	Gilvibacter	Bacteroidota	0.027894351047350278
+[FeFe] hydrogenases (hydA, hnd)	all	dastool-comebin_1940	CAJXUU01	Bacteroidota	0.023571187529643205
+[FeFe] hydrogenases (hydA, hnd)	all	dastool-lorbin_671_sub	lorbin_671_sub		0.021216377677010016
+[FeFe] hydrogenases (hydA, hnd)	all	dastool-lorbin_053	NORP324	Myxococcota	0.019912409027976762
+[FeFe] hydrogenases (hydA, hnd)	diesel		unbinned		0.762088096972317
+[FeFe] hydrogenases (hydA, hnd)	diesel	dastool-comebin_3714	Gilvibacter	Bacteroidota	0.0538090057197509
+[FeFe] hydrogenases (hydA, hnd)	diesel	dastool-comebin_1940	CAJXUU01	Bacteroidota	0.048323447379621916
+[FeFe] hydrogenases (hydA, hnd)	diesel	dastool-lorbin_053	NORP324	Myxococcota	0.036146785794906856
+[FeFe] hydrogenases (hydA, hnd)	diesel	dastool-comebin_3931	Polaribacter_A	Bacteroidota	0.029659706963602685
+[FeFe] hydrogenases (hydA, hnd)	diesel	dastool-comebin_1040	Aureisphaera	Bacteroidota	0.02884257635263403
+[FeFe] hydrogenases (hydA, hnd)	control		unbinned		0.7353947924866625
+[FeFe] hydrogenases (hydA, hnd)	control	dastool-comebin_3931	Polaribacter_A	Bacteroidota	0.1236108464589739
+[FeFe] hydrogenases (hydA, hnd)	control	dastool-lorbin_671_sub	lorbin_671_sub		0.03220967742097224
+[FeFe] hydrogenases (hydA, hnd)	control	dastool-comebin_3763_sub	comebin_3763_sub		0.016275039640187745
+[FeFe] hydrogenases (hydA, hnd)	control	dastool-comebin_1040	Aureisphaera	Bacteroidota	0.014427502482999793
+[FeFe] hydrogenases (hydA, hnd)	control	dastool-lorbin_053	NORP324	Myxococcota	0.014267506823748643
+NiFe maturation (hypA–F)	all		unbinned		0.466918650527103
+NiFe maturation (hypA–F)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.41343843276133585
+NiFe maturation (hypA–F)	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.06692528980712575
+NiFe maturation (hypA–F)	all	dastool-maxbin_003	Patiriisocius	Bacteroidota	0.010368362560361211
+NiFe maturation (hypA–F)	all	dastool-comebin_4672	Thiomicrorhabdus arctica	Pseudomonadota	0.0068074426194055775
+NiFe maturation (hypA–F)	all	dastool-lorbin_516_sub	lorbin_516_sub		0.005383117323535955
+NiFe maturation (hypA–F)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.5459785871141511
+NiFe maturation (hypA–F)	diesel		unbinned		0.30848150086255777
+NiFe maturation (hypA–F)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.10088749621166292
+NiFe maturation (hypA–F)	diesel	dastool-comebin_4672	Thiomicrorhabdus arctica	Pseudomonadota	0.009917488757890704
+NiFe maturation (hypA–F)	diesel	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.004646940459767685
+NiFe maturation (hypA–F)	diesel	dastool-lorbin_111	SHLQ01	Actinomycetota	0.004260212287094966
+NiFe maturation (hypA–F)	control		unbinned		0.8868381613944945
+NiFe maturation (hypA–F)	control	dastool-maxbin_003	Patiriisocius	Bacteroidota	0.03247497705631666
+NiFe maturation (hypA–F)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.030884104743484277
+NiFe maturation (hypA–F)	control	dastool-lorbin_516_sub	lorbin_516_sub		0.012527409536477668
+NiFe maturation (hypA–F)	control	dastool-comebin_1913	GCA-2400775	Pseudomonadota	0.007412552939322718
+NiFe maturation (hypA–F)	control	dastool-comebin_1103_sub	comebin_1103_sub		0.006479797672250275
+nitrogenase (nifHDK, H2 by-product)	all		unbinned		0.7573347706270038
+nitrogenase (nifHDK, H2 by-product)	all	dastool-semibin_084	CAJWHX01	Myxococcota	0.2054921271078234
+nitrogenase (nifHDK, H2 by-product)	all	dastool-metabat_4568	JAIOSF01	Campylobacterota	0.03717310226517278
+nitrogenase (nifHDK, H2 by-product)	all	dastool-comebin_3581_sub	comebin_3581_sub		0.0
+nitrogenase (nifHDK, H2 by-product)	diesel		unbinned		0.8671369429685349
+nitrogenase (nifHDK, H2 by-product)	diesel	dastool-semibin_084	CAJWHX01	Myxococcota	0.08081641993320388
+nitrogenase (nifHDK, H2 by-product)	diesel	dastool-metabat_4568	JAIOSF01	Campylobacterota	0.05204663709826119
+nitrogenase (nifHDK, H2 by-product)	diesel	dastool-comebin_3581_sub	comebin_3581_sub		0.0
+nitrogenase (nifHDK, H2 by-product)	control		unbinned		0.5938644658010028
+nitrogenase (nifHDK, H2 by-product)	control	dastool-semibin_084	CAJWHX01	Myxococcota	0.4061355341989972
+nitrogenase (nifHDK, H2 by-product)	control	dastool-comebin_3581_sub	comebin_3581_sub		0.0
+nitrogenase (nifHDK, H2 by-product)	control	dastool-metabat_4568	JAIOSF01	Campylobacterota	0.0
+aerobic CO dehydrogenase (coxLMS)	all		unbinned		0.2396632015485784
+aerobic CO dehydrogenase (coxLMS)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.15644504164860498
+aerobic CO dehydrogenase (coxLMS)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.07546141922736209
+aerobic CO dehydrogenase (coxLMS)	all	dastool-comebin_4318_sub	comebin_4318_sub		0.07128339862524266
+aerobic CO dehydrogenase (coxLMS)	all	dastool-comebin_4099_sub	comebin_4099_sub		0.06209236996070274
+aerobic CO dehydrogenase (coxLMS)	all	dastool-lorbin_118	Planktomarina forsetii	Pseudomonadota	0.04325496386427212
+aerobic CO dehydrogenase (coxLMS)	diesel		unbinned		0.33007579211020355
+aerobic CO dehydrogenase (coxLMS)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.08294553437606751
+aerobic CO dehydrogenase (coxLMS)	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.08261844569909742
+aerobic CO dehydrogenase (coxLMS)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.06748319194336166
+aerobic CO dehydrogenase (coxLMS)	diesel	dastool-metabat_1122	Sulfitobacter sp017854675	Pseudomonadota	0.04858389492040102
+aerobic CO dehydrogenase (coxLMS)	diesel	dastool-comebin_4318_sub	comebin_4318_sub		0.04171705560646964
+aerobic CO dehydrogenase (coxLMS)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.3124835448385659
+aerobic CO dehydrogenase (coxLMS)	control		unbinned		0.1288089025928721
+aerobic CO dehydrogenase (coxLMS)	control	dastool-comebin_4099_sub	comebin_4099_sub		0.09949415226094843
+aerobic CO dehydrogenase (coxLMS)	control	dastool-comebin_4318_sub	comebin_4318_sub		0.09251801989654912
+aerobic CO dehydrogenase (coxLMS)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.07738773926568077
+aerobic CO dehydrogenase (coxLMS)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.03705842983459426
+formate dehydrogenase (fdoGH/fdhF)	all		unbinned		0.1735677823142898
+formate dehydrogenase (fdoGH/fdhF)	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.14200402014347663
+formate dehydrogenase (fdoGH/fdhF)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.12860630218456204
+formate dehydrogenase (fdoGH/fdhF)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.10515658954823798
+formate dehydrogenase (fdoGH/fdhF)	all	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.0467657037441589
+formate dehydrogenase (fdoGH/fdhF)	all	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.04159186519631977
+formate dehydrogenase (fdoGH/fdhF)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.2561056499490411
+formate dehydrogenase (fdoGH/fdhF)	diesel		unbinned		0.12119910941320064
+formate dehydrogenase (fdoGH/fdhF)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.1012997080469881
+formate dehydrogenase (fdoGH/fdhF)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.08405948538489696
+formate dehydrogenase (fdoGH/fdhF)	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.07782743285298173
+formate dehydrogenase (fdoGH/fdhF)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.05126049307942544
+formate dehydrogenase (fdoGH/fdhF)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.260457187275424
+formate dehydrogenase (fdoGH/fdhF)	control		unbinned		0.19152904544946858
+formate dehydrogenase (fdoGH/fdhF)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.14640701215130678
+formate dehydrogenase (fdoGH/fdhF)	control	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.03605183315579708
+formate dehydrogenase (fdoGH/fdhF)	control	dastool-metabat_8061	Pseudorhodobacter	Pseudomonadota	0.029693365635232345
+formate dehydrogenase (fdoGH/fdhF)	control	dastool-vamb_2202_sub	vamb_2202_sub		0.023721647963196164
+rTCA: ATP-citrate lyase (aclAB)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.962243739925504
+rTCA: ATP-citrate lyase (aclAB)	all	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.03418048749238766
+rTCA: ATP-citrate lyase (aclAB)	all		unbinned		0.0014972873276364372
+rTCA: ATP-citrate lyase (aclAB)	all	dastool-maxbin_568	LS-NOB	Nitrospinota	0.0008040305848172686
+rTCA: ATP-citrate lyase (aclAB)	all	dastool-lorbin_167	Sulfurimonas	Campylobacterota	0.0007114914155954811
+rTCA: ATP-citrate lyase (aclAB)	all	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.00035201073724992895
+rTCA: ATP-citrate lyase (aclAB)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.9639233806264988
+rTCA: ATP-citrate lyase (aclAB)	diesel	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.03430928319332747
+rTCA: ATP-citrate lyase (aclAB)	diesel		unbinned		0.000982391676839566
+rTCA: ATP-citrate lyase (aclAB)	diesel	dastool-lorbin_167	Sulfurimonas	Campylobacterota	0.0007849445033341298
+rTCA: ATP-citrate lyase (aclAB)	diesel	dastool-comebin_4028	CAJXJP01	Patescibacteriota	0.0
+rTCA: ATP-citrate lyase (aclAB)	diesel	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.0
+rTCA: ATP-citrate lyase (aclAB)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.9258280970340702
+rTCA: ATP-citrate lyase (aclAB)	control	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.05182171604756482
+rTCA: ATP-citrate lyase (aclAB)	control	dastool-comebin_4429	Sulfurimonas	Campylobacterota	0.013311860355239818
+rTCA: ATP-citrate lyase (aclAB)	control		unbinned		0.006899367331265468
+rTCA: ATP-citrate lyase (aclAB)	control	dastool-semibin_149_sub	Sulfurovum (Kaiju)		0.0021389592318597126
+rTCA: ATP-citrate lyase (aclAB)	control	dastool-lorbin_167	Sulfurimonas	Campylobacterota	0.0
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.9917023174514261
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.006645728150609682
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all		unbinned		0.0015650794650387792
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-comebin_4140_sub	comebin_4140_sub		3.616094068808649e-05
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-metabat_7327	JABMPE01	Planctomycetota	2.0577072461528714e-05
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-metabat_4568	JAIOSF01	Campylobacterota	1.0838908694740368e-05
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.9930484587468095
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.006446205594061827
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel		unbinned		0.000420159532515056
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_4140_sub	comebin_4140_sub		4.186356404186096e-05
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-metabat_7327	JABMPE01	Planctomycetota	2.3791270422488255e-05
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_4527	Bacteria		9.866497418691362e-06
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.9737639590864191
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control		unbinned		0.017526094877333295
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.008070553891065273
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-metabat_4568	JAIOSF01	Campylobacterota	0.00040223920103446884
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-lorbin_621_sub	lorbin_621_sub		0.0001238056380204027
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-comebin_4140_sub	comebin_4140_sub		7.164359778375307e-05
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	all		unbinned		0.26207925090590867
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	all	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.17901566390653326
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	all	dastool-vamb_2202_sub	vamb_2202_sub		0.11571955009902
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	all	dastool-comebin_4099_sub	comebin_4099_sub		0.054606368469853284
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	all	dastool-comebin_2576	50-400-T64	Pseudomonadota	0.038388509105568736
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	all	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.03280836834142744
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	diesel	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.332693342430456
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	diesel		unbinned		0.2246384766042053
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	diesel	dastool-comebin_2576	50-400-T64	Pseudomonadota	0.07334561098685717
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	diesel	dastool-comebin_4099_sub	comebin_4099_sub		0.022710560146681793
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.020794848346635048
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	diesel	dastool-vamb_3279_sub	Zhongshania (Kaiju)		0.01735606900671494
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	control	dastool-vamb_2202_sub	vamb_2202_sub		0.3270589837211655
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	control		unbinned		0.24709598207499278
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	control	dastool-comebin_4099_sub	comebin_4099_sub		0.0809811282842774
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	control	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.041578362449321324
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	control	dastool-lorbin_047	Sneathiella	Pseudomonadota	0.038045965960290716
+rTCA: 2-oxoglutarate:ferredoxin oxidoreductase (korAB)	control	dastool-vamb_500_sub	Colwellia (Kaiju)		0.02765693540424366
+Calvin: RuBisCO (rbcL) + prk	all		unbinned		0.43330733935306187
+Calvin: RuBisCO (rbcL) + prk	all	dastool-metabat_8153	Plastid (unidentified alga)	Cyanobacteriota	0.10816542296394348
+Calvin: RuBisCO (rbcL) + prk	all	dastool-lorbin_567	Plastid (Attheya septentrionalis)	Cyanobacteriota	0.06639110015844177
+Calvin: RuBisCO (rbcL) + prk	all	dastool-lorbin_603	Plastid (unidentified alga)	Cyanobacteriota	0.05451882988132887
+Calvin: RuBisCO (rbcL) + prk	all	dastool-lorbin_635	Plastid (unidentified alga)	Cyanobacteriota	0.05111815773372305
+Calvin: RuBisCO (rbcL) + prk	all	dastool-metabat_1560	Plastid (unidentified alga)	Cyanobacteriota	0.03682043508287982
+Calvin: RuBisCO (rbcL) + prk	diesel		unbinned		0.29953553181511705
+Calvin: RuBisCO (rbcL) + prk	diesel	dastool-lorbin_567	Plastid (Attheya septentrionalis)	Cyanobacteriota	0.18121357054130496
+Calvin: RuBisCO (rbcL) + prk	diesel	dastool-metabat_8153	Plastid (unidentified alga)	Cyanobacteriota	0.12508273344628143
+Calvin: RuBisCO (rbcL) + prk	diesel	dastool-lorbin_632	Plastid (unidentified alga)	Cyanobacteriota	0.06488261718452945
+Calvin: RuBisCO (rbcL) + prk	diesel	dastool-lorbin_635	Plastid (unidentified alga)	Cyanobacteriota	0.05874817773505559
+Calvin: RuBisCO (rbcL) + prk	diesel	dastool-metabat_1560	Plastid (unidentified alga)	Cyanobacteriota	0.04187755061806975
+Calvin: RuBisCO (rbcL) + prk	control		unbinned		0.46111327662120816
+Calvin: RuBisCO (rbcL) + prk	control	dastool-metabat_8153	Plastid (unidentified alga)	Cyanobacteriota	0.15215790215889782
+Calvin: RuBisCO (rbcL) + prk	control	dastool-lorbin_635	Plastid (unidentified alga)	Cyanobacteriota	0.06959685355800316
+Calvin: RuBisCO (rbcL) + prk	control	dastool-metabat_1560	Plastid (unidentified alga)	Cyanobacteriota	0.04966673516205387
+Calvin: RuBisCO (rbcL) + prk	control	dastool-lorbin_603	Plastid (unidentified alga)	Cyanobacteriota	0.0393137452114675
+Calvin: RuBisCO (rbcL) + prk	control	dastool-lorbin_511	Plastid (Guillardia theta)	Cyanobacteriota	0.03921907637181778
+nitrate: periplasmic napAB	all		unbinned		0.30130138162035736
+nitrate: periplasmic napAB	all	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.12135195607816124
+nitrate: periplasmic napAB	all	dastool-metabat_1188	Cognaticolwellia sp003971255	Pseudomonadota	0.09904377327821458
+nitrate: periplasmic napAB	all	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.08204583308787289
+nitrate: periplasmic napAB	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.07049610905601814
+nitrate: periplasmic napAB	all	dastool-comebin_2375	UBA10347 sp003485885	Actinomycetota	0.057789984435263606
+nitrate: periplasmic napAB	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.2768254210258319
+nitrate: periplasmic napAB	diesel		unbinned		0.19044366972452978
+nitrate: periplasmic napAB	diesel	dastool-lorbin_167	Sulfurimonas	Campylobacterota	0.07324584936404073
+nitrate: periplasmic napAB	diesel	dastool-comebin_4318_sub	comebin_4318_sub		0.06920118217124271
+nitrate: periplasmic napAB	diesel	dastool-comebin_2576	50-400-T64	Pseudomonadota	0.06728073832581705
+nitrate: periplasmic napAB	diesel	dastool-semibin_042	Colwellia	Pseudomonadota	0.06450021461744324
+nitrate: periplasmic napAB	control		unbinned		0.29149270951541084
+nitrate: periplasmic napAB	control	dastool-comebin_1103_sub	comebin_1103_sub		0.24188783727495058
+nitrate: periplasmic napAB	control	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.1155900215872898
+nitrate: periplasmic napAB	control	dastool-lorbin_095	Colwellia	Pseudomonadota	0.08588564422034918
+nitrate: periplasmic napAB	control	dastool-comebin_2375	UBA10347 sp003485885	Actinomycetota	0.06261153129654651
+nitrate: periplasmic napAB	control	dastool-semibin_042	Colwellia	Pseudomonadota	0.04102066788264467
+nitrate: membrane narGH	all		unbinned		0.4291864031175425
+nitrate: membrane narGH	all	dastool-metabat_5432	Cycloclasticus sp019090295	Pseudomonadota	0.13492924792344618
+nitrate: membrane narGH	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.11311992168840025
+nitrate: membrane narGH	all	dastool-comebin_4334_sub	comebin_4334_sub		0.09800844616913393
+nitrate: membrane narGH	all	dastool-vamb_500_sub	Colwellia (Kaiju)		0.0514229473120745
+nitrate: membrane narGH	all	dastool-lorbin_324	Maricaulis	Pseudomonadota	0.045879503244389185
+nitrate: membrane narGH	diesel	dastool-metabat_5432	Cycloclasticus sp019090295	Pseudomonadota	0.23681317443804387
+nitrate: membrane narGH	diesel		unbinned		0.22015903864527206
+nitrate: membrane narGH	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.19687625957468474
+nitrate: membrane narGH	diesel	dastool-comebin_4334_sub	comebin_4334_sub		0.16742166670921163
+nitrate: membrane narGH	diesel	dastool-lorbin_324	Maricaulis	Pseudomonadota	0.06156205576821914
+nitrate: membrane narGH	diesel	dastool-vamb_500_sub	Colwellia (Kaiju)		0.031569999643564134
+nitrate: membrane narGH	control		unbinned		0.43847739385564055
+nitrate: membrane narGH	control	dastool-vamb_500_sub	Colwellia (Kaiju)		0.1655503383965545
+nitrate: membrane narGH	control	dastool-vamb_586_sub	Colwellia (Kaiju)		0.0872086054980501
+nitrate: membrane narGH	control	dastool-lorbin_324	Maricaulis	Pseudomonadota	0.05009986464682437
+nitrate: membrane narGH	control	dastool-metabat_5432	Cycloclasticus sp019090295	Pseudomonadota	0.02998397356628673
+nitrate: membrane narGH	control	dastool-comebin_4334_sub	comebin_4334_sub		0.025958650793392553
+nitrite to NO: nirS / nirK	all		unbinned		0.5273495635388256
+nitrite to NO: nirS / nirK	all	dastool-metabat_9833	Nitrosopumilus sp905612295	Thermoproteota	0.09543974867685898
+nitrite to NO: nirS / nirK	all	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.07689889591299968
+nitrite to NO: nirS / nirK	all	dastool-metabat_1188	Cognaticolwellia sp003971255	Pseudomonadota	0.045555699876161856
+nitrite to NO: nirS / nirK	all	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.02897356177659977
+nitrite to NO: nirS / nirK	all	dastool-metabat_1096	SHAN690 sp938091155	Bacteroidota	0.02376815279906373
+nitrite to NO: nirS / nirK	diesel		unbinned		0.46909059851312024
+nitrite to NO: nirS / nirK	diesel	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.15285968642403694
+nitrite to NO: nirS / nirK	diesel	dastool-semibin_020	GCA-002793235	Bacteroidota	0.05331203250532102
+nitrite to NO: nirS / nirK	diesel	dastool-metabat_1096	SHAN690 sp938091155	Bacteroidota	0.03524415168015371
+nitrite to NO: nirS / nirK	diesel	dastool-comebin_663_sub	Hoeflea (Kaiju)		0.028512824710759513
+nitrite to NO: nirS / nirK	diesel	dastool-vamb_4281_sub	vamb_4281_sub		0.02637627148847592
+nitrite to NO: nirS / nirK	control		unbinned		0.6796664614406689
+nitrite to NO: nirS / nirK	control	dastool-metabat_9833	Nitrosopumilus sp905612295	Thermoproteota	0.08256542145467548
+nitrite to NO: nirS / nirK	control	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.049061013490601976
+nitrite to NO: nirS / nirK	control	dastool-metabat_11810	UBA9320	Bacteroidota	0.02920924477122484
+nitrite to NO: nirS / nirK	control	dastool-metabat_7201	Sulfitobacter	Pseudomonadota	0.027645005886051004
+nitrite to NO: nirS / nirK	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.010695448875381573
+NO reductase norBC	all		unbinned		0.2515127705861809
+NO reductase norBC	all	dastool-vamb_2202_sub	vamb_2202_sub		0.16450532272491886
+NO reductase norBC	all	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.13777528550180468
+NO reductase norBC	all	dastool-metabat_1188	Cognaticolwellia sp003971255	Pseudomonadota	0.09138381154933502
+NO reductase norBC	all	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.07438879907187647
+NO reductase norBC	all	dastool-vamb_500_sub	Colwellia (Kaiju)		0.05365209494681767
+NO reductase norBC	diesel		unbinned		0.24599575955499217
+NO reductase norBC	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.19337905077938133
+NO reductase norBC	diesel	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.16859506041840425
+NO reductase norBC	diesel	dastool-vamb_500_sub	Colwellia (Kaiju)		0.07850082626785697
+NO reductase norBC	diesel	dastool-comebin_991	JAJOIW01	Verrucomicrobiota	0.0358290393922405
+NO reductase norBC	diesel	dastool-comebin_3924	UBA2589	Gemmatimonadota	0.027010110827401897
+NO reductase norBC	control	dastool-vamb_2202_sub	vamb_2202_sub		0.31356911880695604
+NO reductase norBC	control		unbinned		0.3079011024795024
+NO reductase norBC	control	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.13359388438409475
+NO reductase norBC	control	dastool-vamb_500_sub	Colwellia (Kaiju)		0.06871722685285324
+NO reductase norBC	control	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.04831826332493155
+NO reductase norBC	control	dastool-comebin_3425	Porticoccus sp963974675	Pseudomonadota	0.026601469443682482
+N2O reductase nosZ	all	dastool-metabat_1188	Cognaticolwellia sp003971255	Pseudomonadota	0.2961645677710741
+N2O reductase nosZ	all		unbinned		0.20870325540175105
+N2O reductase nosZ	all	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.1686492202373803
+N2O reductase nosZ	all	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.06510298863100078
+N2O reductase nosZ	all	dastool-vamb_586_sub	Colwellia (Kaiju)		0.04607897353049099
+N2O reductase nosZ	all	dastool-vamb_500_sub	Colwellia (Kaiju)		0.029175324234704567
+N2O reductase nosZ	diesel		unbinned		0.2872884438891696
+N2O reductase nosZ	diesel	dastool-comebin_2596	Casp-alpha2	Pseudomonadota	0.24811349129408894
+N2O reductase nosZ	diesel	dastool-comebin_2162	GCA-002733185	Bacteroidota	0.0750909178305141
+N2O reductase nosZ	diesel	dastool-comebin_663_sub	Hoeflea (Kaiju)		0.07448116117621083
+N2O reductase nosZ	diesel	dastool-semibin_042	Colwellia	Pseudomonadota	0.03190950495664147
+N2O reductase nosZ	diesel	dastool-vamb_500_sub	Colwellia (Kaiju)		0.02787109334630087
+N2O reductase nosZ	control		unbinned		0.32010262144751317
+N2O reductase nosZ	control	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.19513057620623714
+N2O reductase nosZ	control	dastool-vamb_500_sub	Colwellia (Kaiju)		0.12256102876025995
+N2O reductase nosZ	control	dastool-vamb_586_sub	Colwellia (Kaiju)		0.05443489565919983
+N2O reductase nosZ	control	dastool-semibin_042	Colwellia	Pseudomonadota	0.030455459708130544
+N2O reductase nosZ	control	dastool-maxbin_003	Patiriisocius	Bacteroidota	0.029802223123013328
+O2, high affinity: cbb3 oxidase (ccoNO)	all		unbinned		0.2767678129410283
+O2, high affinity: cbb3 oxidase (ccoNO)	all	dastool-semibin_042	Colwellia	Pseudomonadota	0.08502065919501875
+O2, high affinity: cbb3 oxidase (ccoNO)	all	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.0845120475219514
+O2, high affinity: cbb3 oxidase (ccoNO)	all	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.0743365550976795
+O2, high affinity: cbb3 oxidase (ccoNO)	all	dastool-vamb_500_sub	Colwellia (Kaiju)		0.05323054516615632
+O2, high affinity: cbb3 oxidase (ccoNO)	all	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.03910876688583691
+O2, high affinity: cbb3 oxidase (ccoNO)	diesel		unbinned		0.19974526789900773
+O2, high affinity: cbb3 oxidase (ccoNO)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.1602229952895514
+O2, high affinity: cbb3 oxidase (ccoNO)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.15158910896771757
+O2, high affinity: cbb3 oxidase (ccoNO)	diesel	dastool-semibin_042	Colwellia	Pseudomonadota	0.06611314920382451
+O2, high affinity: cbb3 oxidase (ccoNO)	diesel	dastool-vamb_500_sub	Colwellia (Kaiju)		0.053015544458894975
+O2, high affinity: cbb3 oxidase (ccoNO)	diesel	dastool-lorbin_059	Perlucidibaca sp018066805	Pseudomonadota	0.044800693810710286
+O2, high affinity: cbb3 oxidase (ccoNO)	control		unbinned		0.3247959142367104
+O2, high affinity: cbb3 oxidase (ccoNO)	control	dastool-vamb_500_sub	Colwellia (Kaiju)		0.10056552162167573
+O2, high affinity: cbb3 oxidase (ccoNO)	control	dastool-lorbin_048	Glaciecola	Pseudomonadota	0.09013916904256236
+O2, high affinity: cbb3 oxidase (ccoNO)	control	dastool-lorbin_095	Colwellia	Pseudomonadota	0.08059382711836677
+O2, high affinity: cbb3 oxidase (ccoNO)	control	dastool-metabat_8244	Cognaticolwellia sp024585285	Pseudomonadota	0.04880892096208244
+O2, high affinity: cbb3 oxidase (ccoNO)	control	dastool-semibin_042	Colwellia	Pseudomonadota	0.0463005864675779
+O2, high affinity: bd oxidase (cydAB)	all		unbinned		0.27389201518703116
+O2, high affinity: bd oxidase (cydAB)	all	dastool-lorbin_188	RS62 sp000496475	Pseudomonadota	0.15955297384888614
+O2, high affinity: bd oxidase (cydAB)	all	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.07697121825293243
+O2, high affinity: bd oxidase (cydAB)	all	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.05090827895337541
+O2, high affinity: bd oxidase (cydAB)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.04819714193264397
+O2, high affinity: bd oxidase (cydAB)	all	dastool-lorbin_135	Cognaticolwellia sp003061515	Pseudomonadota	0.035190664130421226
+O2, high affinity: bd oxidase (cydAB)	diesel	dastool-lorbin_188	RS62 sp000496475	Pseudomonadota	0.2795154582173683
+O2, high affinity: bd oxidase (cydAB)	diesel		unbinned		0.20468983190732365
+O2, high affinity: bd oxidase (cydAB)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.13553544366413853
+O2, high affinity: bd oxidase (cydAB)	diesel	dastool-lorbin_029	Parasphingorhabdus sp036964675	Pseudomonadota	0.08690824014312742
+O2, high affinity: bd oxidase (cydAB)	diesel	dastool-metabat_10802	Sulfitobacter sp011050655	Pseudomonadota	0.029147370259716004
+O2, high affinity: bd oxidase (cydAB)	diesel	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.02339657538288719
+O2, high affinity: bd oxidase (cydAB)	control		unbinned		0.23049928193743852
+O2, high affinity: bd oxidase (cydAB)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.13285543659873153
+O2, high affinity: bd oxidase (cydAB)	control	dastool-lorbin_095	Colwellia	Pseudomonadota	0.1094853951014388
+O2, high affinity: bd oxidase (cydAB)	control	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.04977502882874181
+O2, high affinity: bd oxidase (cydAB)	control	dastool-comebin_1103_sub	comebin_1103_sub		0.04221312355144382
+O2, high affinity: bd oxidase (cydAB)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.03696074549359342
+O2, low affinity: aa3 oxidase (coxA/ctaD)	all		unbinned		0.2589209048028792
+O2, low affinity: aa3 oxidase (coxA/ctaD)	all	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.10763993232421186
+O2, low affinity: aa3 oxidase (coxA/ctaD)	all	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.0883802857710623
+O2, low affinity: aa3 oxidase (coxA/ctaD)	all	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.08307017523949584
+O2, low affinity: aa3 oxidase (coxA/ctaD)	all	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.04100175728326728
+O2, low affinity: aa3 oxidase (coxA/ctaD)	all	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.03299283237629537
+O2, low affinity: aa3 oxidase (coxA/ctaD)	diesel		unbinned		0.221435684239846
+O2, low affinity: aa3 oxidase (coxA/ctaD)	diesel	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.09680438577347422
+O2, low affinity: aa3 oxidase (coxA/ctaD)	diesel	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.08556339077290698
+O2, low affinity: aa3 oxidase (coxA/ctaD)	diesel	dastool-metabat_9342	Cycloclasticus	Pseudomonadota	0.08107700638109372
+O2, low affinity: aa3 oxidase (coxA/ctaD)	diesel	dastool-lorbin_032	Sulfitobacter sp024636495	Pseudomonadota	0.06445039770720003
+O2, low affinity: aa3 oxidase (coxA/ctaD)	diesel	dastool-lorbin_184	Cycloclasticus sp001566825	Pseudomonadota	0.0505491520683423
+O2, low affinity: aa3 oxidase (coxA/ctaD)	control		unbinned		0.27259033926069703
+O2, low affinity: aa3 oxidase (coxA/ctaD)	control	dastool-metabat_5376	Sulfitobacter sp041552635	Pseudomonadota	0.15957266642026202
+O2, low affinity: aa3 oxidase (coxA/ctaD)	control	dastool-vamb_4149	UBA9145 sp001438145	Pseudomonadota	0.13903620455312754
+O2, low affinity: aa3 oxidase (coxA/ctaD)	control	dastool-vamb_549	Sulfitobacter sp013282155	Pseudomonadota	0.08446723943779641
+O2, low affinity: aa3 oxidase (coxA/ctaD)	control	dastool-lorbin_042	Yoonia	Pseudomonadota	0.03177945727366016
+O2, low affinity: aa3 oxidase (coxA/ctaD)	control	dastool-semibin_072	UBA5078	Pseudomonadota	0.031369260787341605

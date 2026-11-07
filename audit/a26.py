@@ -1,0 +1,12 @@
+import sys; sys.path.insert(0,"/data/dev/rnaseq-exploration/audit")
+from lib import *
+pd.set_option('display.width',300)
+F=pd.DataFrame(H['hgt_flanks']); print(F.columns.tolist()); print(len(F))
+print(F.level.value_counts() if 'level' in F else '')
+if 'verdict' in F: print(F.verdict.value_counts())
+print(F.head(3).T.to_string())
+E=pd.DataFrame(H['hgt_network']['edges']); print(E.columns.tolist(), len(E)); print(E.head(3).T)
+cm=H['catabolic_mge_courses']['contig_0009679']; print(cm.keys())
+for k,v in cm['rna'].items(): print(k, v)
+for k,v in cm.get('dna',{}).items(): print('DNA',k, v)
+c=[x for x in H['catabolic_mges'] if x['contig']=='contig_0009679'][0]; print({k:v for k,v in c.items() if 'cpm' in k or 'host' in k or k in('length','kind','mobility')})

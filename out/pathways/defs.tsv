@@ -1,0 +1,33 @@
+	name	definition	family
+M00174	Methane oxidation, methanotroph, methane => formaldehyde	((K10944+K10945+K10946),(K16157+K16158+K16159+K16160+K16161+K16162)) ((K14028-K14029),K23995)	C1
+M00418	Toluene degradation, anaerobic, toluene => benzoyl-CoA	(K07540+K29040+K29041) (K07543+K07544) K07545 K07546 (K07547+K07548) (K07549+K07550)	anaerobic
+M00419	Cymene degradation, p-cymene => p-cumate	K10616+K18293 K10617 K10618	upper aromatic
+M00533	Homoprotocatechuate degradation, homoprotocatechuate => 2-oxohept-3-enedioate	K00455 K00151 K01826 K05921	lower aromatic
+M00534	Naphthalene degradation, naphthalene => salicylate	K14579+K14580+K14578+K14581 K14582 K14583 K14584 K14585 K00152	upper aromatic
+M00537	Xylene degradation, xylene => methylbenzoate	K15757+K15758 K00055 K00141	upper aromatic
+M00538	Toluene degradation, toluene => benzoate	K15760+K15761-K15762+K15763+K15764-K15765 K00055 K00141	upper aromatic
+M00539	Cumate degradation, p-cumate => 2-oxopent-4-enoate + 2-methylpropanoate	K10619+K16303+K16304+K18227 K10620 K10621 K10622 K10623	upper aromatic
+M00540	Benzoate degradation, cyclohexanecarboxylic acid =>pimeloyl-CoA	K04116 K04117 K07534 K07535 K07536	anaerobic
+M00541	Benzoyl-CoA degradation, benzoyl-CoA => 3-hydroxypimeloyl-CoA	((K04112+K04113+K04114+K04115),(K19515+K19516)) K07537 K07538 K07539	anaerobic
+M00543	Biphenyl degradation, biphenyl => 2-oxopent-4-enoate + benzoate	K08689+K15750+K18087+K18088 K08690 K00462 K10222	upper aromatic
+M00544	Carbazole degradation, carbazole => 2-oxopent-4-enoate + anthranilate	(K15751-K15752-K15753) (K15754+K15755) K15756	upper aromatic
+M00547	Benzene/toluene degradation, benzene => catechol / toluene => 3-methylcatechol	K03268+K16268+K18089+K18090 K16269	upper aromatic
+M00548	Benzene degradation, benzene => catechol	K16249+K16243+K16244+K16242+K16245+K16246	upper aromatic
+M00551	Benzoate degradation, benzoate => catechol / methylbenzoate => methylcatechol	K05549+K05550+K05784 K05783	upper aromatic
+M00568	Catechol ortho-cleavage, catechol => 3-oxoadipate	K03381 K01856 K03464 (K01055,K14727)	lower aromatic
+M00569	Catechol meta-cleavage, catechol => acetyl-CoA / 4-methylcatechol => propanoyl-CoA	(K00446,K07104) ((K10217 K01821 K01617),K10216) (K18364,K02554) (K18365,K01666) (K18366,K04073)	lower aromatic
+M00623	Phthalate degradation, phthalate => protocatechuate	K18068+K18069 K18067 K04102	lower aromatic
+M00624	Terephthalate degradation, terephthalate => 3,4-dihydroxybenzoate	K18074+K18075+K18077 K18076	lower aromatic
+M00636	Phthalate degradation, phthalate => protocatechuate	K18251+K18252-K18253-K18254 K18255 K18256	lower aromatic
+M00637	Anthranilate degradation, anthranilate => catechol	((K05599+K05600+K11311),(K16319+K16320+K18248+K18249))	lower aromatic
+M00638	Salicylate degradation, salicylate => gentisate	K18242+K18243+K14578+K14581	lower aromatic
+M00878	Phenylacetate degradation, phenylaxetate => acetyl-CoA/succinyl-CoA	K01912 K02609+K02610+K02611+K02612+K02613 K15866 K02618 K02615 K01692 K00074	lower aromatic
+C_alkB	Alkane hydroxylase AlkB (+rubredoxin reductase)	K00496 -K05297	alkane
+C_pca	Protocatechuate ortho-cleavage (beta-ketoadipate)	K00448+K00449 K01857 K01607 (K01055,K14727) K01031+K01032 K07823	lower aromatic
+C_gen	Gentisate pathway	K00450 K01800 K16163	lower aromatic
+C_hmg	Homogentisate pathway	K00451 K01800 K01555	lower aromatic
+C_mar	Maleylacetate reductase (hydroxyquinol / chlorocatechol branch)	K00217	lower aromatic
+P_cyp153	Cytochrome P450 alkane hydroxylase (CYP153)	P_cyp153	alkane
+P_lada	Long-chain alkane monooxygenase LadA / AlmA	P_lada	alkane
+P_rhd	Aromatic ring-hydroxylating dioxygenase (any)	P_rhd	upper aromatic
+P_ass	Alkylsuccinate / benzylsuccinate synthase (anaerobic)	P_ass	anaerobic

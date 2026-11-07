@@ -1,0 +1,5 @@
+sample	name	season	pool	medium	day	fq	layer	r2	ok	pd
+CMO_CTL_DAY01_SW	CMO_CTL_DAY01_SW	2024-25	CTL	SW	1.0	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-A06_S41_L001_R1_001.fastq.gz	SW	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-A06_S41_L001_R2_001.fastq.gz	True	2024-25|CTL|1
+CMO_CTL_DAY06_SW	CMO_CTL_DAY06_SW	2024-25	CTL	SW	6.0	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-A09_S65_L001_R1_001.fastq.gz	SW	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-A09_S65_L001_R2_001.fastq.gz	True	2024-25|CTL|6
+CMO_EXP_DAY07_SW	CMO_EXP_DAY07_SW	2024-25	EXP	SW	7.0	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-A12_S89_L001_R1_001.fastq.gz	SW	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-A12_S89_L001_R2_001.fastq.gz	True	2024-25|EXP|7
+CMO_EXP_DAY12_SI_TOP	CMO_EXP_DAY12_SI_TOP	2024-25	EXP	SI	12.0	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-C08_S59_L001_R1_001.fastq.gz	TOP	/matika/seqs/metagenome/illumina/reads/raw/HJHC2DSXF/9385/1-C08_S59_L001_R2_001.fastq.gz	True	2024-25|EXP|12

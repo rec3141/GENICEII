@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="utf-8">
+<title>Churchill Diesel Mesocosms</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a field-notebook column (text ~68ch) with figures allowed to run wider; sticky section nav. Ice neutrals, control = blue, diesel = amber-orange. */
+:root {
+  --bg: #f5f7f8; --panel: #ffffff; --ink: #0f1a20; --ink-2: #4a5761; --ink-3: #7b8790; --rule: #dde3e7; --grid: #e8edf0;
+  --ctl: #2a78d6; --exp: #eb6834; --other: #8a8f93; --accent: #0b6e8a; --hi: #fff3d6;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6; --s8: #e34948;
+  --seq0: #eef4fb; --seq1: #c6dbf2; --seq2: #86b1e3; --seq3: #3f7fcb; --seq4: #1b4f91;
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif; --f-body: "Source Serif 4", Georgia, serif; --f-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #11171b; --panel: #172026; --ink: #eef2f4; --ink-2: #b6c1c8; --ink-3: #87939b; --rule: #2a353c; --grid: #222c32;
+  --ctl: #3987e5; --exp: #d95926; --other: #8f979c; --accent: #4fb3cf; --hi: #3a3220;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
+  --seq0: #172431; --seq1: #1d3a5c; --seq2: #2a5a92; --seq3: #4a86cf; --seq4: #9cc3f0; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #11171b; --panel: #172026; --ink: #eef2f4; --ink-2: #b6c1c8; --ink-3: #87939b; --rule: #2a353c; --grid: #222c32;
+  --ctl: #3987e5; --exp: #d95926; --other: #8f979c; --accent: #4fb3cf; --hi: #3a3220;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9; --s8: #e66767;
+  --seq0: #172431; --seq1: #1d3a5c; --seq2: #2a5a92; --seq3: #4a86cf; --seq4: #9cc3f0; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--ink); font: 16px/1.55 var(--f-body); margin: 0 }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg) }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+header.mast { padding-block: 40px 20px; border-bottom: 1px solid var(--rule) }
+.eyebrow { font: 600 12px/1 var(--f-display); letter-spacing: .12em; text-transform: uppercase; color: var(--accent) }
+h1 { font: 800 clamp(34px, 6vw, 60px)/1.02 var(--f-display); font-stretch: 78%; letter-spacing: -.01em; margin: 10px 0 12px; text-wrap: balance }
+h2 { font: 750 30px/1.1 var(--f-display); font-stretch: 85%; margin: 0 0 8px; text-wrap: balance }
+h3 { font: 700 19px/1.25 var(--f-display); margin: 26px 0 6px }
+p, li { max-width: 68ch }
+.lede { font-size: 19px; color: var(--ink-2); max-width: 62ch; margin: 0 }
+nav.sec { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule) }
+nav.sec .wrap { display: flex; gap: 4px; overflow-x: auto; padding-block: 8px }
+nav.sec a { font: 600 14px/1 var(--f-display); color: var(--ink-2); text-decoration: none; padding: 9px 12px; border-radius: 6px; white-space: nowrap }
+nav.sec a[aria-current="true"] { background: var(--ink); color: var(--bg) }
+nav.sec a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+section.view { padding-block: 34px 60px }
+.kicker { color: var(--ink-2); max-width: 70ch; margin: 0 0 18px }
+.fig { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 16px; margin: 18px 0; min-width: 0 }
+.fig .cap { font: 13.5px/1.45 var(--f-body); color: var(--ink-2); margin-top: 10px; max-width: none }
+.fig .title { font: 700 15px/1.3 var(--f-display); margin: 0 0 8px }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 18px }
+.finding { display: grid; grid-template-columns: 34px 1fr; gap: 6px 12px; padding: 14px 0; border-top: 1px solid var(--rule) }
+.finding .n { font: 800 22px/1 var(--f-display); color: var(--accent) }
+.finding b { font-family: var(--f-display); font-weight: 700 }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font: 13px/1.2 var(--f-display); color: var(--ink-2); margin: 4px 0 8px }
+.legend i { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin-right: 6px; border-radius: 2px }
+.legend i.dash { background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 8px) !important; height: 2px }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 4px 0 10px; font: 14px var(--f-display) }
+select, input[type=search] { font: 14px var(--f-display); padding: 6px 8px; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); color: var(--ink); max-width: 100% }
+button.chip { font: 600 13px/1 var(--f-display); padding: 7px 10px; border: 1px solid var(--rule); border-radius: 999px; background: var(--panel); color: var(--ink-2); cursor: pointer }
+button.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+.tablewrap { overflow-x: auto; max-height: 520px; overflow-y: auto; border: 1px solid var(--rule); border-radius: 8px }
+table { border-collapse: collapse; width: 100%; font: 13px/1.35 var(--f-display); font-variant-numeric: tabular-nums }
+th, td { padding: 6px 9px; border-bottom: 1px solid var(--rule); text-align: left; white-space: nowrap }
+th { position: sticky; top: 0; background: var(--panel); color: var(--ink-2); font-weight: 650; cursor: pointer; z-index: 1 }
+td.num, th.num { text-align: right }
+tr.sel td { background: var(--hi) }
+tbody tr { cursor: pointer }
+.mono { font-family: var(--f-data); font-size: 12.5px }
+.pill { display: inline-block; font: 600 11.5px/1 var(--f-display); padding: 3px 7px; border-radius: 999px; border: 1px solid currentColor }
+.pill.up { color: var(--exp) } .pill.down { color: var(--ctl) } .pill.na { color: var(--ink-3) }
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; color: var(--ink-2); margin: 14px 0 }
+.warn { border-left-color: var(--s4) }
+svg text { fill: var(--ink-2); font: 11px var(--f-display) }
+svg .axis path, svg .axis line { stroke: var(--rule) }
+svg .gridl line { stroke: var(--grid) }
+svg .ttl { fill: var(--ink); font-weight: 650; font-size: 12px }
+.tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--bg); font: 12.5px/1.4 var(--f-display); padding: 7px 9px; border-radius: 6px; max-width: 320px; z-index: 50; opacity: 0; transition: opacity .1s }
+.chartbox { width: 100%; overflow-x: auto }
+.stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0 }
+.stat { border-top: 2px solid var(--ink); padding-top: 8px }
+.stat .v { font: 800 30px/1 var(--f-display); font-stretch: 85%; font-variant-numeric: tabular-nums }
+.stat .l { font: 13px/1.3 var(--f-display); color: var(--ink-2); margin-top: 4px }
+footer { border-top: 1px solid var(--rule); padding-block: 24px 40px; color: var(--ink-3); font-size: 14px }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="eyebrow">GENICE · Churchill Marine Observatory · metatranscriptomes</div>
+  <h1>Who eats the diesel in the ice pools</h1>
+  <p class="lede">130 RNA libraries from two winters of paired sea-ice mesocosm pools (one dosed with diesel, one left as a control), read against an 11 Gbp long-read coassembly and its 911 metagenome-assembled genomes (MAGs).</p>
+</div></header>
+<nav class="sec" aria-label="Sections"><div class="wrap" id="nav"></div></nav>
+<main class="wrap" id="main"><p class="kicker" id="loading">Loading data…</p></main>
+<footer><div class="wrap" id="foot"></div></footer>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="app.js"></script>
+<script src="ice.js"></script>
+<script src="islands.js"></script>
+<script src="sulfur.js"></script>
+<script src="metals.js"></script>
+<script src="viruses.js"></script>
+</body>
+</html>
