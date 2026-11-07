@@ -74,10 +74,10 @@ function stScatter(v, J, m, d, season, traj) {
   const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--other)"></i>before dosing</span><span><i style="background:var(--ctl)"></i>control pool</span><span><i style="background:var(--exp)"></i>diesel pool</span><span style="color:var(--ink-2)">● seawater</span><span style="color:var(--ink-2)">▲ sea ice</span>`);
   box.parentNode.insertBefore(lg, box);
   const pts = d.idx.map((si, k) => ({ s: J.samples[si], x: d.pc[k][0], y: d.pc[k][1], depth: d.depth[k], cl: d.cl[k] })).filter(p => season === 'both' || p.s.season === season);
-  if (!pts.length) {
-    const have = [...new Set(d.idx.map(si => J.samples[si].season))].sort().join(' and ');
-    box.append(el('p', { class: 'note' }, `${m.bin} has too few reads for a profile in ${season}; it was profiled in ${have} only. Choose “Both winters” or ${have}.`)); return;
-  }
+  // no profile in the chosen winter: draw every sample greyed out, with a note, instead of an empty plot
+  const empty = !pts.length;
+  const have = [...new Set(d.idx.map(si => J.samples[si].season))].sort().join(' and ');
+  if (empty) { pts.push(...d.idx.map((si, k) => ({ s: J.samples[si], x: d.pc[k][0], y: d.pc[k][1], depth: d.depth[k], cl: d.cl[k] }))); traj = false; }
   const W = width(box), H = Math.min(460, Math.max(300, W * 0.6)), mg = { l: 46, r: 14, t: 10, b: 38 };
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', 'PCA scatter');
   const ext = (a) => { const [lo, hi] = d3.extent(a); const p = (hi - lo) * 0.06 || 1; return [lo - p, hi + p]; };
@@ -105,6 +105,11 @@ function stScatter(v, J, m, d, season, traj) {
     .attr('transform', p => `translate(${x(p.x)},${y(p.y)})`).attr('fill', p => stPhaseCol(p.s)).attr('stroke', css('--panel')).attr('stroke-width', 1.5)
     .on('mousemove', (ev, p) => showTip(ev, `<b>${p.s.name}</b><br>${p.s.season}, day ${p.s.day}, ${p.s.pool === 'EXP' ? 'diesel' : 'control'} pool, ${p.s.medium === 'SI' ? 'sea ice' + (p.s.layer ? ' (' + p.s.layer.toLowerCase() + ')' : '') : 'seawater'}<br>${fmt(p.depth)} reads on this genome · state ${p.cl + 1}`))
     .on('mouseleave', hideTip);
+  if (empty) {
+    svg.selectAll('g:last-of-type path').attr('fill', css('--ink-3')).attr('opacity', 0.25);
+    svg.append('text').attr('x', (mg.l + W - mg.r) / 2).attr('y', (mg.t + H - mg.b) / 2).attr('text-anchor', 'middle').style('font', '600 14px var(--f-display)').attr('fill', css('--ink-2'))
+      .text(`No ${season} profile for ${m.bin} (too few reads). Shown greyed: ${have}.`);
+  }
 }
 
 function stTime(v, J, m, d) {
