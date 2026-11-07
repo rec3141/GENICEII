@@ -13,6 +13,9 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 O = '/data/dev/rnaseq-exploration/states/out/'; E0 = '/data/dev/rnaseq-exploration/'
 MIN_READS, MIN_SAMPLES, NPC_TEST, NPERM = 3000, 20, 5, 999
+# PCA axes are fitted on samples with >= FIT_READS reads on the genome; shallower samples (MIN_READS..FIT_READS) are projected
+# onto those axes, so sampling noise in shallow libraries cannot create or rotate axes (they showed up as large PCA outliers).
+FIT_READS, MIN_FIT = 10000, 15
 KEY = ['lorbin_184', 'metabat_9342', 'metabat_5432', 'comebin_3787_sub', 'comebin_2576', 'semibin_088', 'vamb_549', 'metabat_5376', 'vamb_4149', 'lorbin_095', 'metabat_9833']
 rng = np.random.default_rng(1)
 
@@ -107,8 +110,12 @@ for b in sel:
     det = ((C > 0).mean(1) >= 0.9) & (C.mean(1) >= 5)          # robustly detected genes only
     if det.sum() > 3000: det[np.where(det)[0][np.argsort(-C[det].mean(1))[3000:]]] = False
     if det.sum() < 100: continue
-    Cd = C[det]; L = clr_profile(Cd); sc, U, ev = pca(L)
+    Cd = C[det]; L = clr_profile(Cd)
     dep = depth.loc[b].values[keep]
+    fit = dep >= FIT_READS
+    if fit.sum() < MIN_FIT: fit = np.ones_like(fit)           # too few deep samples: fit on all
+    mu = L[:, fit].mean(1, keepdims=True); _, U, ev = pca(L[:, fit])
+    sc = (L - mu).T @ U                                        # fitted samples: identical to PCA scores; others projected
     k = np.where(keep)[0]
     r1 = spearmanr(sc[:, 0], np.log(dep))[0]; r2 = spearmanr(sc[:, 1], np.log(dep))[0]
     # discrete states on PC1-3
@@ -120,7 +127,7 @@ for b in sel:
     kbest = int(np.argmin(bic)) + 1; nbest = max(sil, key=sil.get)
     labs = KMeans(nbest, n_init=10, random_state=0).fit_predict(Y3)
     Yt = sc[:, :NPC_TEST]
-    out = dict(bin=b, taxon=blab(b), n=int(keep.sum()), genes=int(det.sum()), pc1=ev[0], pc2=ev[1], pc3=ev[2], depth_med=float(np.median(dep)),
+    out = dict(bin=b, taxon=blab(b), n=int(keep.sum()), n_fit=int(fit.sum()), genes=int(det.sum()), pc1=ev[0], pc2=ev[1], pc3=ev[2], depth_med=float(np.median(dep)),
                r_depth_pc1=r1, r_depth_pc2=r2, gmm_k=kbest, gmm_dbic=bic[0] - min(bic), km_k=nbest, sil=sil[nbest])
     mk, sk, pk, pl, dk = med[k], ses[k], ph[k], pool[k], day[k]
     for s in ('2024-25', '2025-26'):
