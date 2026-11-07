@@ -28,6 +28,7 @@ Site section `#sulfur` (site/sulfur.js, site/sulfur.json). Code:
   - High-affinity oxidases rise in 2025-26 diesel: cbb3 +2.2 (BACI +2.0), bd +1.1.
   - Denitrification steps do not: norBC −2.8, nosZ +0.1, napAB −0.5.
   - This reads as an O2-limitation signature with Cycloclasticus nitrate respiration, not Sulfurimonas denitrification.
+  - **Revised 2026-11-07 (oxygen/):** within-genome oxidase ratios do not shift; the cbb3/bd and narGH rise is the Cycloclasticus bloom (composition), so this is not evidence of O2 limitation.
   - The logs have no usable dissolved-oxygen data: one 2024-25 pre-dosing value, 105%.
 - **Sulfurimonas genomes:**
   - semibin_088 (1.7 Mbp, 92%): sqr, fccAB, hyaAB/hydAB, aclAB, PFOR, cbb3 and aa3, but no sox and no nap/nar. It is a microaerophilic H2/sulfide oxidiser.

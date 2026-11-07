@@ -6,7 +6,10 @@ const fmt = d3.format(',.0f'), fmt1 = d3.format(',.1f'), fmt2 = d3.format('.2f')
 const tickf = v => v >= 1000 ? d3.format('~s')(v) : d3.format('~g')(v);
 const SECTIONS = [
   ['overview', 'Overview'], ['community', 'Community response'], ['pathways', 'Degradation pathways'],
-  ['cyclo', 'Cycloclasticus'], ['sulfur', 'Sulfur & hydrogen'], ['metals', 'Metals & toxicity'], ['nitrogen', 'Nitrogen'], ['viruses', 'Viruses'], ['hgt', 'Gene transfer'], ['islands', 'Genomic islands'], ['ice', 'Ice vs water'], ['qc', 'Data & caveats']];
+  ['cyclo', 'Cycloclasticus'], ['porticocc', '50-400-T64'], ['sulfur', 'Sulfur & hydrogen'], ['metals', 'Metals & toxicity'], ['nitrogen', 'Nitrogen'], ['oxygen', 'Oxygen'], ['euks', 'Eukaryotes'], ['viruses', 'Viruses'], ['hgt', 'Gene transfer'], ['islands', 'Genomic islands'], ['ice', 'Ice vs water'], ['qc', 'Data & caveats']];
+// nav: top-level links and dropdown groups (ids from SECTIONS)
+const NAV = [['overview'], ['Diesel response', ['community', 'pathways', 'cyclo', 'porticocc']], ['Biogeochemistry', ['sulfur', 'nitrogen', 'oxygen', 'metals']],
+  ['Food web', ['euks', 'viruses']], ['Genomes & ice', ['ice', 'hgt', 'islands']], ['qc']];
 const OIL = { '2024-25': 5.5, '2025-26': 1 };
 let D = {}, tip;
 
@@ -651,16 +654,23 @@ RENDER.hgt = hgt;
 async function boot() {
   tip = $('#tip');
   D = await (await fetch('data.json')).json();
-  for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'viruses']) { try { const r = await fetch(f + '.json'); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
+  for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'porticocc', 'oxygen', 'euks', 'viruses']) { try { const r = await fetch(f + '.json'); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
   const nav = $('#nav'), main = $('#main'); main.innerHTML = '';
-  SECTIONS.forEach(([id, name]) => {
-    const a = el('a', { href: '#' + id }, name); nav.append(a);
-    const s = el('section', { class: 'view', id: 'v-' + id }); s.hidden = true; main.append(s);
+  const label = id => SECTIONS.find(s => s[0] === id)[1];
+  NAV.forEach(([a, ids]) => {
+    if (!ids) { nav.append(el('a', { href: '#' + a }, label(a))); return; }
+    const d = el('details', { class: 'dd' }); d.append(el('summary', {}, a));
+    const menu = el('div', { class: 'menu' }); ids.forEach(id => menu.append(el('a', { href: '#' + id }, label(id)))); d.append(menu); nav.append(d);
+    d.addEventListener('toggle', () => { if (d.open) nav.querySelectorAll('details.dd').forEach(o => { if (o !== d) o.open = false; }); });
   });
+  document.addEventListener('click', ev => { if (!ev.target.closest('#nav')) nav.querySelectorAll('details.dd').forEach(o => o.open = false); });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape') nav.querySelectorAll('details.dd[open]').forEach(o => { o.open = false; o.querySelector('summary').focus(); }); });
+  SECTIONS.forEach(([id]) => { const s = el('section', { class: 'view', id: 'v-' + id }); s.hidden = true; main.append(s); });
   const done = {};
   function go() {
     const id = (location.hash || '#overview').slice(1); const ok = SECTIONS.some(s => s[0] === id) ? id : 'overview';
-    SECTIONS.forEach(([k]) => { $('#v-' + k).hidden = k !== ok; nav.querySelector(`a[href="#${k}"]`).setAttribute('aria-current', k === ok); });
+    SECTIONS.forEach(([k]) => { $('#v-' + k).hidden = k !== ok; const a = nav.querySelector(`a[href="#${k}"]`); if (a) a.setAttribute('aria-current', k === ok); });
+    nav.querySelectorAll('details.dd').forEach(d => { d.open = false; d.querySelector('summary').setAttribute('data-current', !!d.querySelector(`a[href="#${ok}"]`)); });
     if (!done[ok]) { done[ok] = 1; const fn = RENDER[ok]; const sec = $('#v-' + ok);
       if (fn) fn(sec); else sec.innerHTML = `<h2>${SECTIONS.find(s => s[0] === ok)[1]}</h2><p class="kicker">This section is still being assembled.</p>`; }
     try { localStorage.setItem('cmo-sec', ok); } catch (e) { /* storage blocked */ }

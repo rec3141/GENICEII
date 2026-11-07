@@ -1,0 +1,31 @@
+query	ref	organism	clade	pident	alen	qlen	slen	bits
+Cycloclasticus_metabat_9342	SJM90451.1	Crenothrix polyspora	pmoA, Crenothrix methanotroph	49.78	227	268	250	251.0
+Cycloclasticus_metabat_9342	Q607G3	Methylococcus capsulatus	pmoA, gammaproteobacterial methanotroph	48.305	236	268	247	246.0
+Cycloclasticus_metabat_9342	OUR85102.1	Cycloclasticus sp. 44_32_T64	Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)	47.917	240	268	247	241.0
+Cycloclasticus_metabat_9342	ORU93661.1	Cycloclasticus symbiont of Bathymodiolus heckerae	Cycloclasticus CuMMO (propane/ethane/butane; Rubin-Blum et al. 2017)	48.305	236	268	247	239.0
+Cycloclasticus_metabat_9342	OUR81281.1	Cycloclasticus sp. 46_120_T64	Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)	49.576	236	268	247	236.0
+Cycloclasticus_metabat_9342	Q04507	Nitrosomonas europaea	amoA, betaproteobacterial ammonia oxidiser	43.621	243	268	276	230.0
+Cycloclasticus_metabat_9342	PHS73401.1	Cycloclasticus sp. (MAG)	Cycloclasticus CuMMO	47.679	237	268	249	229.0
+Cycloclasticus_metabat_9342	AAC25091.1	Nitrosococcus oceani	amoA, gammaproteobacterial ammonia oxidiser	43.333	240	268	247	229.0
+Cycloclasticus_metabat_9342	Q50541	Methylosinus trichosporium	pmoA, alphaproteobacterial methanotroph	45.148	237	268	252	214.0
+Cycloclasticus_metabat_9342	A9QPE3	Methylacidiphilum infernorum	pmoA, verrucomicrobial methanotroph	43.182	220	268	249	213.0
+Cycloclasticus_metabat_9342	OUS17543.1	Gammaproteobacteria bacterium 50_400_T64	50-400-T64 type genome, Deepwater Horizon plume simulation (Hu et al. 2017)	39.662	237	268	264	198.0
+Cycloclasticus_metabat_9342	TAL02096.1	Porticoccaceae bacterium (MAG)	Porticoccaceae CuMMO	37.19	242	268	267	186.0
+Cycloclasticus_metabat_9342	A0A0S4KUL9	Nitrospira inopinata	amoA, comammox	41.949	236	268	281	186.0
+Cycloclasticus_metabat_9342	F6K8L1	Methylomonas sp. M5	pxmA (fragment)	47.701	174	268	179	178.0
+Cycloclasticus_metabat_9342	WP_012215883.1	Nitrosopumilus	amoA, archaeal ammonia oxidiser	24.038	208	268	216	53.1
+Porticoccaceae_50-400-T64	OUS17543.1	Gammaproteobacteria bacterium 50_400_T64	50-400-T64 type genome, Deepwater Horizon plume simulation (Hu et al. 2017)	81.439	264	264	264	464.0
+Porticoccaceae_50-400-T64	TAL02096.1	Porticoccaceae bacterium (MAG)	Porticoccaceae CuMMO	74.603	252	264	267	399.0
+Porticoccaceae_50-400-T64	OUR85102.1	Cycloclasticus sp. 44_32_T64	Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)	46.835	237	264	247	230.0
+Porticoccaceae_50-400-T64	ORU93661.1	Cycloclasticus symbiont of Bathymodiolus heckerae	Cycloclasticus CuMMO (propane/ethane/butane; Rubin-Blum et al. 2017)	45.148	237	264	247	223.0
+Porticoccaceae_50-400-T64	OUR81281.1	Cycloclasticus sp. 46_120_T64	Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)	48.43	223	264	247	218.0
+Porticoccaceae_50-400-T64	PHS73401.1	Cycloclasticus sp. (MAG)	Cycloclasticus CuMMO	46.637	223	264	249	210.0
+Porticoccaceae_50-400-T64	A9QPE3	Methylacidiphilum infernorum	pmoA, verrucomicrobial methanotroph	41.961	255	264	249	209.0
+Porticoccaceae_50-400-T64	AAC25091.1	Nitrosococcus oceani	amoA, gammaproteobacterial ammonia oxidiser	41.256	223	264	247	202.0
+Porticoccaceae_50-400-T64	Q607G3	Methylococcus capsulatus	pmoA, gammaproteobacterial methanotroph	41.518	224	264	247	193.0
+Porticoccaceae_50-400-T64	Q04507	Nitrosomonas europaea	amoA, betaproteobacterial ammonia oxidiser	38.393	224	264	276	190.0
+Porticoccaceae_50-400-T64	SJM90451.1	Crenothrix polyspora	pmoA, Crenothrix methanotroph	39.316	234	264	250	179.0
+Porticoccaceae_50-400-T64	Q50541	Methylosinus trichosporium	pmoA, alphaproteobacterial methanotroph	40.271	221	264	252	174.0
+Porticoccaceae_50-400-T64	A0A0S4KUL9	Nitrospira inopinata	amoA, comammox	36.453	203	264	281	153.0
+Porticoccaceae_50-400-T64	F6K8L1	Methylomonas sp. M5	pxmA (fragment)	38.286	175	264	179	128.0
+Porticoccaceae_50-400-T64	WP_012215883.1	Nitrosopumilus	amoA, archaeal ammonia oxidiser	24.424	217	264	216	34.7
