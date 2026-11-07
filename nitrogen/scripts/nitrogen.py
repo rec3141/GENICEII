@@ -59,7 +59,7 @@ def rank(b, r):
     return x[0] if x else ''
 def blab(b):
     if not isinstance(b, str) or not b: return 'unbinned'
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [y.split('__', 1)[1] for y in lin(b).split(';') if '__' in y and y.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b.replace('dastool-', '')
 
@@ -134,7 +134,7 @@ summ.to_csv(O + 'cat_summary.tsv', sep='\t')
 # host-normalised N-acquisition share per genome (seawater, diesel vs control after dosing, per season)
 ns_idx = np.unique(np.concatenate([members[n] for n in NSTRESS]))
 NS = M.iloc[ns_idx].groupby(sub.bin.values[ns_idx]).sum()
-NS = NS[NS.index != '']
+NS = NS[[b != '' and is_prokaryote(b) for b in NS.index]]   # prokaryote genomes only (bin_domain)
 hr = []
 for s in ('2024-25', '2025-26'):
     o = list(core.index[(core.season == s) & (core.medium == 'SW') & (core.phase == 'oiled')])

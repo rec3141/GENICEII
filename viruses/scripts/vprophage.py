@@ -24,7 +24,7 @@ oil, ctl, pre = m.phase.eq('oiled'), m.phase.eq('control'), m.phase.eq('pre')
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).set_index('user_genome')['classification']
 def lab(b):
     if not isinstance(b, str) or not b: return 'unbinned'
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [x.split('__', 1)[1] for x in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in x and x.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b
 for p in pv.itertuples():

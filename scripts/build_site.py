@@ -12,7 +12,7 @@ def tax(b):
     d = {k: v for k, v in (x.split('__', 1) for x in t.split(';') if '__' in x)}
     return d
 def label(b):
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     d = tax(b)
     for k in ('s', 'g', 'f', 'o', 'c', 'p'):
         if d.get(k) and (k in 'sg' or not kaiju_bin_label(b)): return (d[k] if k in 'sg' else f"{d[k]} ({ {'f':'family','o':'order','c':'class','p':'phylum'}[k]})")

@@ -112,7 +112,7 @@ for _, x in GS.iterrows():
 J['genomes'] = gs
 # plastid photosynthesis share of plastid transcripts (photosynthesis genes on plastid MAGs / all plastid-MAG CDS transcripts)
 BIN = pd.read_pickle(E0 + 'nitrogen/out/bin_cds_cpm.pkl')
-pl = [b for b in BIN.index if plastid_label(b)]
+pl = [b for b in BIN.index if is_plastid(b)]
 phot_cats = [c for c in summ.index if summ.loc[c, 'group'] == 'Oxygenic photosynthesis']
 pidx = np.unique(np.concatenate([mem[c] for c in phot_cats]))
 pmask = G.iloc[pidx].plastid.astype(str).eq('True').values

@@ -70,3 +70,6 @@ Site section `#oxygen` (site/oxygen.js, site/oxygen.json). There is no dissolved
 
 ## Recommendation
 Install an under-ice O2 optode logger in each pool, and measure O2 in melted core sections and oil snow.
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

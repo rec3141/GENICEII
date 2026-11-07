@@ -72,3 +72,6 @@ Site section `#euks` (site/euks.js, site/euks.json). Nav label: "Eukaryotes". Co
 - 18S share mixes cells with copy number.
 - It shows composition, not biomass.
 - Plastid mRNA % is diluted by the bacterial bloom (≤ ~2×).
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

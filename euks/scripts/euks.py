@@ -57,7 +57,7 @@ kd = k[k['rank'] == 'domain'].set_index('lineage')[S]
 kp = k[k['rank'] == 'phylum'].set_index('lineage')[S]
 ktot = kd.loc[['Bacteria', 'Archaea', 'Viruses']].sum(0)
 tpm = table('bin_tpm')
-pl = [b for b in tpm.index if plastid_label(b)]
+pl = [b for b in tpm.index if is_plastid(b)]
 vs = pd.read_csv(E0 + 'viruses/out/vrna_samples.tsv', sep='\t', index_col=0)
 vc = pd.read_pickle(E0 + 'viruses/out/votu_rna_cpm.pkl')
 VP = 'contig_0049668'

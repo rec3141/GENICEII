@@ -9,7 +9,7 @@ U = pd.read_pickle(V + 'out/votu_rna_cpm.pkl'); R = pd.read_csv(V + 'out/votu_rn
 B = table('bin_tpm')[U.columns]; B = B[B.max(1) >= 500]
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).set_index('user_genome')['classification']
 def lab(b):
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [x.split('__', 1)[1] for x in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in x and x.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b
 sel = set(R[(R['oil_2025-26'] >= 20)].sort_values('baci_2025-26', ascending=False).head(15).index) | \

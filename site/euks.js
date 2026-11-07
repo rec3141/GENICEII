@@ -28,6 +28,7 @@ function euksSec(sec) {
   euTable(sec, J);
   euExplorer(sec, J);
   euPlastids(sec, J);
+  euNuclear(sec, J);
   euBloom(sec, J);
   euViruses(sec, J);
   euIce(sec, J);
@@ -80,6 +81,22 @@ function euPlastids(sec, J) {
   const box = fig(sec, 'Plastid genomes (seawater median TPM)', 'Host = SILVA best hit of the plastid 16S where one was recovered. “Unidentified alga” plastids lack a recovered 16S.');
   box.innerHTML = `<div class="tablewrap"><table><thead><tr><th>Plastid MAG</th><th class="num">pre 25-26<br>diesel / ctl</th><th class="num">after 25-26<br>diesel / ctl</th><th class="num">after 24-25<br>diesel / ctl</th></tr></thead><tbody>${
     J.plastids.map(p => `<tr><td>${p.label} <span class="mono" style="color:var(--ink-3)">${p.bin}</span></td><td class="num">${fmt(p.pre_exp25)} / ${fmt(p.pre_ctl25)}</td><td class="num"><span style="color:${p.oil25 < p.ctl25 / 2 ? css('--ctl') : 'inherit'}">${fmt(p.oil25)}</span> / ${fmt(p.ctl25)}</td><td class="num">${fmt(p.oil24)} / ${fmt(p.ctl24)}</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function euNuclear(sec, J) {
+  const E = J.euk_bins || []; if (!E.length) return;
+  sec.append(el('h3', {}, 'Eukaryotic nuclear genomes among the MAGs'));
+  sec.append(el('p', { class: 'kicker' }, `A rule applied to every bin flags ${E.length} as eukaryotic: Tiara classifies at least half of each bin’s assembled length as eukaryotic (most of them 80–98%). GTDB-Tk, which only knows bacteria and archaea, had placed them as bacteria or Asgard archaea, so they are relabelled “Eukaryote (Tiara)” across the site and left out of the analyses that assume a bacterial genome (growth index, oxidase and nitrogen-hunger shares, AAP and rhodopsin hosts). Their taxonomy within the eukaryotes is not resolved yet.`));
+  const box = fig(sec, 'Eukaryotic bins (seawater median TPM)', 'TPM = share of community transcripts mapped to the bin. Tiara = share of the bin’s length classified as eukaryotic.');
+  box.innerHTML = `<div class="tablewrap"><table><thead><tr><th>Bin</th><th class="num">Size</th><th class="num">Tiara eukaryote</th><th class="num">pre 25-26<br>diesel / ctl</th><th class="num">after 25-26<br>diesel / ctl</th><th class="num">after 24-25<br>diesel / ctl</th></tr></thead><tbody>${
+    E.map(p => `<tr><td class="mono">${p.bin}</td><td class="num">${d3.format('.1f')(p.mbp)} Mbp, ${fmt(p.contigs)} contigs</td><td class="num">${d3.format('.0%')(p.tiara_euk)}</td><td class="num">${fmt(p.pre_exp25)} / ${fmt(p.pre_ctl25)}</td><td class="num">${fmt(p.oil25)} / ${fmt(p.ctl25)}</td><td class="num">${fmt(p.oil24)} / ${fmt(p.ctl24)}</td></tr>`).join('')}</tbody></table></div>`;
+  const c = el('div', { class: 'controls' }); sec.append(c);
+  const sel = el('select', { id: 'eunuc', 'aria-label': 'Eukaryotic bin' }); E.forEach(p => sel.append(new Option(p.bin, p.bin))); c.append(el('label', { for: 'eunuc' }, 'Bin'), sel);
+  const v = el('div'); sec.append(v);
+  function draw() { v.innerHTML = ''; const p = E.find(x => x.bin === sel.value);
+    const b = fig(v, `${p.bin}: transcripts per million`, 'Share of community transcripts; lines join per-day means of replicate libraries.');
+    legendPools(b.parentNode.insertBefore(el('div'), b)); timecourse(b, euSeries(J, p.tpm), { ylab: 'TPM', unit: 'TPM', h: 180, floor: 1 }); }
+  sel.onchange = draw; draw();
 }
 
 function euBloom(sec, J) {

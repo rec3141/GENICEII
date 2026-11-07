@@ -91,3 +91,33 @@ def nanopore_samples():
     ns['label_original'] = ns.sample_name
     ns['sample_name'] = ns.sample_name.where(fix == '', fix)
     return ns
+
+
+_BD = None
+def bin_domain(b):
+    """'eukaryote' | 'organelle' | 'prokaryote' for a bin, from data/bin_domain.tsv (scripts/bin_domains.py: Tiara length-weighted
+    fractions; eukarya >= 0.5 -> eukaryote, organelle >= 0.5 -> organelle). Unknown bins and '' count as prokaryote."""
+    global _BD
+    if _BD is None:
+        _BD = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0)['call']
+    if not isinstance(b, str) or not b: return 'prokaryote'
+    return _BD.get(b if b.startswith('dastool-') else 'dastool-' + b, 'prokaryote')
+
+
+def is_prokaryote(b):
+    return bin_domain(b) == 'prokaryote'
+
+
+def special_label(b):
+    """Label that overrides GTDB/Kaiju for non-prokaryote bins: the plastid label (plastid_label) if there is one, else
+    'Plastid/organelle (Tiara)' for organelle bins, 'Eukaryote (Tiara)' for eukaryotic nuclear bins; '' for prokaryotes."""
+    if not isinstance(b, str) or not b: return ''
+    p = plastid_label(b)
+    if p: return p
+    d = bin_domain(b)
+    return 'Plastid/organelle (Tiara)' if d == 'organelle' else 'Eukaryote (Tiara)' if d == 'eukaryote' else ''
+
+
+def is_plastid(b):
+    """Plastid/organelle genome: plastid_label rule (plastid_bins.tsv) or Tiara organelle call (bin_domain)."""
+    return isinstance(b, str) and bool(b) and (bool(plastid_label(b)) or bin_domain(b) == 'organelle')
