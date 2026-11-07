@@ -76,3 +76,21 @@ Site section `#light`, first item under the Biogeochemistry menu (site/light.js,
 - roof_open (54 libraries logged) is a pool-specific light modifier that the model does not include.
 - Kaiju labels unbinned plastid genes as cyanobacteria.
 - The `blh` and `phr` KOs are broad.
+
+## Under-ice light model (2026-11-07)
+- **Script:** `scripts/underice.py`. Per pool, clear-sky surface PAR is multiplied by a transmitted fraction: (1 − albedo) × exp(−15 m⁻¹ × snow − 1.5 m⁻¹ × ice).
+  - Albedo: 0.85 with snow, 0.50 bare ice (> 2 cm), 0.07 open water.
+  - No roof (as instructed), cloud or oil.
+- **Inputs:** snow and ice from `ice/phys/cores.tsv` (CMO "Ice physical" sheets), linearly interpolated between core days and held flat outside them.
+- **Outputs:** `underice_daily.tsv`, `underice_samples.tsv` and `underice_corr.tsv`.
+- **Transmission:**
+
+| Season | Pool | Transmitted |
+|---|---|---|
+| 2024-25 | both | 2–8% |
+| 2025-26 | diesel | 90% → 0.6% |
+| 2025-26 | control | 43% → 0.6% |
+
+- **Correlations:** within-genome light-gene shares vs under-ice PAR have median r near 0.
+- **metabat_1122 AAP share:** r −0.64 with under-ice PAR in the diesel pool (2025-26 water), −0.36 in the control; r with day +0.69. This reverses the "+0.46 with surface PAR" reading: AAP rises as the water darkens, which fits light repression of bacteriochlorophyll synthesis. It is still confounded with season and nitrogen hunger.
+- **Roof state:** logged only on 2025-26 sampling days; drawn as pool-coloured vertical lines (solid = open, dotted = closed).
