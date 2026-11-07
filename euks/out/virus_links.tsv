@@ -1,0 +1,340 @@
+season	virus	taxon	level	rho	p	n	q
+2024-25	giant_virus_cpm	Arcellinida;Vermamoeba [Other and unclassified eukaryotes]	genus	-0.2526127664385607	0.060335471194275195	56	0.10996626201537255
+2024-25	giant_virus_cpm	Cercozoa [Cercozoa]	genus	-0.24572795625427207	0.0679276824173625	56	0.11748716499737696
+2024-25	giant_virus_cpm	Cercozoa;Glissomonadida [Cercozoa]	genus	0.3933697881066302	0.0027064593207361573	56	0.007909394049392737
+2024-25	giant_virus_cpm	Cercozoa;Imbricatea [Cercozoa]	genus	0.43280929596719075	0.0008635626932685209	56	0.002814882240557967
+2024-25	giant_virus_cpm	Cercozoa;Thecofilosea [Cercozoa]	genus	0.062337662337662345	0.6480914046177056	56	0.7319224711611707
+2024-25	giant_virus_cpm	Chlorophyceae;Chlamydomonas [Green algae (prasinophytes etc.)]	genus	-0.23978127136021876	0.07508333457277208	56	0.12726625210084866
+2024-25	giant_virus_cpm	Chlorophyta;Trebouxiophyceae [Green algae (prasinophytes etc.)]	genus	0.11394395078605606	0.40305646277800444	56	0.49685869411543093
+2024-25	giant_virus_cpm	Chrysophyceae;Chrysolepidomonas [Chrysophytes and other ochrophytes]	genus	0.336431989063568	0.011237729340926452	56	0.026640491234783688
+2024-25	giant_virus_cpm	Chrysophyceae;Paraphysomonas [Chrysophytes and other ochrophytes]	genus	0.0430622009569378	0.7526658990382374	56	0.8060140161961045
+2024-25	giant_virus_cpm	Chrysophyceae;Prorocentrum minimum [Chrysophytes and other ochrophytes]	genus	0.15816814764183185	0.24431360339767738	56	0.33531300223405924
+2024-25	giant_virus_cpm	Chrysophyceae;groundwater metagenome [Chrysophytes and other ochrophytes]	genus	0.1307587149692413	0.3367676957257496	56	0.4324403365569285
+2024-25	giant_virus_cpm	Chrysophyceae;marine metagenome [Chrysophytes and other ochrophytes]	genus	0.1524265208475735	0.2620762395004784	56	0.3525549412327864
+2024-25	giant_virus_cpm	Chrysophyceae;wastewater metagenome [Chrysophytes and other ochrophytes]	genus	0.07826384142173616	0.5664117620765897	56	0.6667138449443191
+2024-25	giant_virus_cpm	Ciliophora [Ciliates]	genus	0.4701982228298018	0.0002556226356217904	56	0.0009419138421281189
+2024-25	giant_virus_cpm	Ciliophora;Intramacronucleata [Ciliates]	genus	0.5167464114832535	4.556316932023027e-05	56	0.00023053603581429943
+2024-25	giant_virus_cpm	Diatomea;Attheya [Diatoms]	genus	0.41353383458646625	0.0015353583843221114	56	0.004647200823974962
+2024-25	giant_virus_cpm	Diatomea;Bacillariophyceae [Diatoms]	genus	0.2876965140123035	0.03155132311266573	56	0.06405504230358779
+2024-25	giant_virus_cpm	Diatomea;Chaetoceros [Diatoms]	genus	0.22016404647983598	0.10300168273146969	56	0.1639322556148743
+2024-25	giant_virus_cpm	Diatomea;Cylindrotheca [Diatoms]	genus	0.23205741626794263	0.0852560982416377	56	0.1423734842557398
+2024-25	giant_virus_cpm	Diatomea;Fragilariopsis [Diatoms]	genus	0.2873547505126453	0.03176291834144869	56	0.06405504230358779
+2024-25	giant_virus_cpm	Diatomea;Mediophyceae [Diatoms]	genus	0.251742993848257	0.061255087522505	56	0.1104546525006872
+2024-25	giant_virus_cpm	Diatomea;Melosira [Diatoms]	genus	-0.47566643882433357	0.00021139067160771017	56	0.0008000603728656975
+2024-25	giant_virus_cpm	Diatomea;Nitzschia [Diatoms]	genus	0.18865345181134655	0.1637858314599545	56	0.24352367046019552
+2024-25	giant_virus_cpm	Diatomea;Skeletonema [Diatoms]	genus	0.4319207108680793	0.000887442430045426	56	0.0028651712741466612
+2024-25	giant_virus_cpm	Diatomea;Thalassiosira [Diatoms]	genus	0.12241968557758033	0.36874318953244606	56	0.4629775601907378
+2024-25	giant_virus_cpm	Diatomea;seawater metagenome [Diatoms]	genus	0.24791524265208478	0.06543710887913141	56	0.11553739536471641
+2024-25	giant_virus_cpm	Diatomea;uncultured marine bolidophyte [Diatoms]	genus	0.47580314422419695	0.00021038035936015478	56	0.0008000603728656975
+2024-25	giant_virus_cpm	Dictyochophyceae;Apedinella [Chrysophytes and other ochrophytes]	genus	0.18099794941900207	0.1818855809534474	56	0.2635009057402507
+2024-25	giant_virus_cpm	Dictyochophyceae;Pedinella [Chrysophytes and other ochrophytes]	genus	0.2631578947368421	0.05004632981696083	56	0.09321816377994352
+2024-25	giant_virus_cpm	Dictyochophyceae;Pedinellales [Chrysophytes and other ochrophytes]	genus	0.09043062200956938	0.5074472147261878	56	0.6057204429302031
+2024-25	giant_virus_cpm	Dictyochophyceae;Pteridomonas [Chrysophytes and other ochrophytes]	genus	-0.19254955570745047	0.15509783976705507	56	0.23368074524902965
+2024-25	giant_virus_cpm	Dinoflagellata;Dinophyceae [Dinoflagellates]	genus	0.27552973342447024	0.039846024738080466	56	0.0767488771943709
+2024-25	giant_virus_cpm	Dinophyceae;Prorocentrum [Dinoflagellates]	genus	0.12857142857142856	0.34498199239676197	56	0.43801084427903486
+2024-25	giant_virus_cpm	Euglenozoa;Euglenida [Euglenids]	genus	-0.060970608339029404	0.6553175497209284	56	0.7319224711611707
+2024-25	giant_virus_cpm	Euglenozoa;marine metagenome [Euglenids]	genus	0.3642515379357485	0.005783003821263937	56	0.015197196088437788
+2024-25	giant_virus_cpm	Eukaryota;Archaeplastida;uncultured Trebouxia photobiont;unclassified [Green algae (prasinophytes etc.)]	genus	-0.2534518113465482	0.059458915066634234	56	0.10954658808472285
+2024-25	giant_virus_cpm	Eukaryota;Archaeplastida;uncultured prasinophyte;unclassified [Green algae (prasinophytes etc.)]	genus	0.5708133971291867	4.357402317533691e-06	56	2.8778768980991637e-05
+2024-25	giant_virus_cpm	Eukaryota;SAR;Alveolata;unclassified [Other and unclassified eukaryotes]	genus	0.5464798359535201	1.3179521635110222e-05	56	7.446429723837276e-05
+2024-25	giant_virus_cpm	Eukaryota;SAR;Rhizaria;unclassified [Other Rhizaria]	genus	-0.016062884483937116	0.9064638221503521	56	0.9340159140090255
+2024-25	giant_virus_cpm	Eukaryota;unclassified [Other and unclassified eukaryotes]	genus	0.44190020505809985	0.0006504849252596465	56	0.0022274180774042437
+2024-25	giant_virus_cpm	Eustigmatales;Nannochloropsis [Chrysophytes and other ochrophytes]	genus	-0.09589883800410116	0.48200701568837995	56	0.5773864958245964
+2024-25	giant_virus_cpm	Glissomonadida;Corchorus olitorius [Cercozoa]	genus	0.37464114832535894	0.004444927558640734	56	0.012250654003082997
+2024-25	giant_virus_cpm	Glissomonadida;Heteromita [Cercozoa]	genus	0.23766233766233766	0.07777300682096092	56	0.1311693995637102
+2024-25	giant_virus_cpm	Goniomonas avonlea [Cryptophytes]	genus	0.06479835953520165	0.6351655506623327	56	0.7249869416650868
+2024-25	giant_virus_cpm	Guillardia;Guillardia theta [Cryptophytes]	genus	-0.11927546138072455	0.381260660887943	56	0.4769275425867626
+2024-25	giant_virus_cpm	Holozoa;Anthoathecata [Metazoa (hydrozoans, copepods, …)]	genus	0.49760765550239233	9.542920129498057e-05	56	0.00042448272053025434
+2024-25	giant_virus_cpm	Holozoa;Anthozoa [Metazoa (hydrozoans, copepods, …)]	genus	0.20211893369788106	0.13520917195079127	56	0.20929638945807413
+2024-25	giant_virus_cpm	Holozoa;Ctenophora [Metazoa (hydrozoans, copepods, …)]	genus	-0.22625642347908134	0.09358511940961613	56	0.15326258685922642
+2024-25	giant_virus_cpm	Holozoa;Cydippida [Metazoa (hydrozoans, copepods, …)]	genus	0.22174360270252666	0.10049275117624895	56	0.1614551784300872
+2024-25	giant_virus_cpm	Holozoa;Diaphanoeca [Choanoflagellates]	genus	0.5078605604921396	6.457477123572476e-05	56	0.00031272639212729563
+2024-25	giant_virus_cpm	Holozoa;Diptera [Metazoa (hydrozoans, copepods, …)]	genus	-0.0367053998632946	0.7882580200633827	56	0.8403127949732287
+2024-25	giant_virus_cpm	Holozoa;Dorylaimia [Metazoa (hydrozoans, copepods, …)]	genus	-0.29626621614348886	0.026617393676497743	56	0.05535764697136648
+2024-25	giant_virus_cpm	Holozoa;Hydrozoa [Metazoa (hydrozoans, copepods, …)]	genus	-0.33533834586466166	0.011521736241000913	56	0.026937024728960753
+2024-25	giant_virus_cpm	Holozoa;Leptothecata [Metazoa (hydrozoans, copepods, …)]	genus	-0.11496924128503078	0.39880956968368125	56	0.494556533280986
+2024-25	giant_virus_cpm	Holozoa;Maricola [Metazoa (hydrozoans, copepods, …)]	genus	0.2518796992481203	0.061109805397158615	56	0.1104546525006872
+2024-25	giant_virus_cpm	Holozoa;Ploimida [Metazoa (hydrozoans, copepods, …)]	genus	0.30902783715785315	0.02048008284483948	56	0.04508277976883496
+2024-25	giant_virus_cpm	Imbricatea;Esquamula [Cercozoa]	genus	0.47552973342447025	0.00021240540872540642	56	0.0008000603728656975
+2024-25	giant_virus_cpm	Intramacronucleata;DH114 [Ciliates]	genus	0.4472317156527683	0.0005488669793183192	56	0.0019381865207178147
+2024-25	giant_virus_cpm	Intramacronucleata;Mesodiniidae [Ciliates]	genus	0.2267259056732741	0.09288830326561452	56	0.15294286414579555
+2024-25	giant_virus_cpm	Intramacronucleata;Peniculia [Ciliates]	genus	0.48188653451811353	0.00016963954313928454	56	0.0006846167276692555
+2024-25	giant_virus_cpm	Kinetoplastea;Neobodo [Kinetoplastids and diplonemids]	genus	0.34381408065618596	0.009474025339038525	56	0.023105716474345755
+2024-25	giant_virus_cpm	Kinetoplastea;Parabodonida [Kinetoplastids and diplonemids]	genus	-0.2672880438243915	0.04642782764712802	56	0.0879275618568514
+2024-25	giant_virus_cpm	Labyrinthulomycetes;Sorodiplophrys [Labyrinthulids and hyphochytrids]	genus	0.36384142173615863	0.005842385535723397	56	0.015235143820078704
+2024-25	giant_virus_cpm	Mamiellophyceae;Bathycoccus [Green algae (prasinophytes etc.)]	genus	0.645933014354067	7.616079195238121e-08	56	8.328551119953946e-07
+2024-25	giant_virus_cpm	Mamiellophyceae;Micromonas [Green algae (prasinophytes etc.)]	genus	0.6904989747095011	3.896782498689326e-09	56	6.605046335278407e-08
+2024-25	giant_virus_cpm	Nucletmycea;Capnodiales [Fungi]	genus	-0.5031442241968559	7.740316294619379e-05	56	0.00036443989220499574
+2024-25	giant_virus_cpm	Nucletmycea;Dothideales [Fungi]	genus	-0.35967449449994177	0.006476669386787702	56	0.016633264561522962
+2024-25	giant_virus_cpm	Nucletmycea;Helotiales [Fungi]	genus	-0.4019822282980178	0.0021335293695473796	56	0.006344442598917208
+2024-25	giant_virus_cpm	Nucletmycea;Pleosporales [Fungi]	genus	-0.3723171565276829	0.004717888524830803	56	0.012757438397109903
+2024-25	giant_virus_cpm	Nucletmycea;Sporidiobolales [Fungi]	genus	-0.14633396214408456	0.28185095436010255	56	0.37323231846904203
+2024-25	giant_virus_cpm	Ochrophyta [Chrysophytes and other ochrophytes]	genus	0.35201640464798356	0.007800549121974234	56	0.019302088703279312
+2024-25	giant_virus_cpm	Ochrophyta;Chrysophyceae [Chrysophytes and other ochrophytes]	genus	0.3770334928229665	0.00417855933261226	56	0.011706872840955009
+2024-25	giant_virus_cpm	Ochrophyta;Diatomea [Diatoms]	genus	0.31954887218045114	0.016365373396300818	56	0.036690567463534635
+2024-25	giant_virus_cpm	Ochrophyta;Dictyochophyceae [Chrysophytes and other ochrophytes]	genus	0.16958304853041697	0.21148439695591506	56	0.30023664227092284
+2024-25	giant_virus_cpm	Ochrophyta;Synurales [Chrysophytes and other ochrophytes]	genus	0.0019138755980861245	0.9888306898084659	56	0.991756224393698
+2024-25	giant_virus_cpm	Opisthokonta [Other and unclassified eukaryotes]	genus	-0.024265208475734795	0.8591040812215007	56	0.9044605078698408
+2024-25	giant_virus_cpm	Opisthokonta;Helgoeca nana [Choanoflagellates]	genus	0.004169514695830486	0.9756697533551796	56	0.9814600783009076
+2024-25	giant_virus_cpm	Opisthokonta;Holozoa [Other and unclassified eukaryotes]	genus	0.016062884483937116	0.9064638221503521	56	0.9340159140090255
+2024-25	giant_virus_cpm	Opisthokonta;Nucletmycea [Fungi]	genus	-0.4862611073137389	0.00014494970948967733	56	0.0005992433111829343
+2024-25	giant_virus_cpm	Phaeocystis;Phaeocystis antarctica [Haptophytes]	genus	0.24463431305536568	0.0692010739461005	56	0.11788524657149785
+2024-25	giant_virus_cpm	Porphyra umbilicalis (laver) [Other and unclassified eukaryotes]	genus	0.30157211209842794	0.02390030072424577	56	0.051171489136382024
+2024-25	giant_virus_cpm	Rhodomonas;Storeatula sp. CCMP1868 [Cryptophytes]	genus	-0.005263157894736842	0.9692907946088704	56	0.980864416037036
+2024-25	giant_virus_cpm	Synurales;Mallomonas [Chrysophytes and other ochrophytes]	genus	0.16951469583048528	0.21167126107006062	56	0.30023664227092284
+2024-25	giant_virus_cpm	Synurales;Synura [Chrysophytes and other ochrophytes]	genus	0.06896787423103212	0.6135097452876067	56	0.7050162835677921
+2024-25	giant_virus_cpm	Synurales;Tessellaria lapponica [Chrysophytes and other ochrophytes]	genus	0.056869446343130556	0.6771826901292891	56	0.7502121959275458
+2024-25	giant_virus_cpm	Synurales;Tessellaria volvocina [Chrysophytes and other ochrophytes]	genus	-0.048051948051948054	0.7250776368560908	56	0.7878247400455602
+2024-25	giant_virus_cpm	Thecofilosea;Cryothecomonas [Cercozoa]	genus	-0.2781271360218729	0.037938771200910604	56	0.07391519216729135
+2024-25	giant_virus_cpm	Thecofilosea;Ebria [Cercozoa]	genus	0.21332877648667123	0.11442030783320159	56	0.1795763164604414
+2024-25	giant_virus_cpm	Thecofilosea;Protaspis [Cercozoa]	genus	-0.24825700615174304	0.0650546529591096	56	0.11546349399548772
+2024-25	giant_virus_cpm	Trebouxiophyceae;Trebouxia [Green algae (prasinophytes etc.)]	genus	-0.2809295967190704	0.03596621744969512	56	0.07088690532236423
+2024-25	giant_virus_cpm	uncultured Katablepharis [Katablepharids]	genus	0.6162679425837321	4.272699589354424e-07	56	3.7139619507465378e-06
+2024-25	giant_virus_cpm	uncultured marine cryptophyte [Cryptophytes]	genus	0.3002050580997949	0.02457695790198511	56	0.052072429554830955
+2024-25	giant_virus_cpm	Diatoms	group	0.2870813397129187	0.03193304468821928	56	0.06405504230358779
+2024-25	giant_virus_cpm	Haptophytes	group	0.13711551606288447	0.31359588131997984	56	0.4057595563644014
+2024-25	giant_virus_cpm	Green algae (prasinophytes etc.)	group	-0.016609706083390293	0.9032945614961091	56	0.9340159140090255
+2024-25	giant_virus_cpm	Cryptophytes	group	0.06370471633629529	0.6408973346390621	56	0.7290744847068524
+2024-25	giant_virus_cpm	Chrysophytes and other ochrophytes	group	0.26349965823650034	0.0497384403147208	56	0.09321816377994352
+2024-25	giant_virus_cpm	Dinoflagellates	group	0.21490088858509912	0.1117119649773453	56	0.17635907760872688
+2024-25	giant_virus_cpm	Syndiniales (parasitic dinoflagellates)	group	0.2974709501025291	0.025978736763203628	56	0.05436291211559278
+2024-25	giant_virus_cpm	Ciliates	group	0.5444976076555025	1.4368734037392171e-05	56	7.985247276517944e-05
+2024-25	giant_virus_cpm	Cercozoa	group	-0.14066985645933014	0.30109538142722364	56	0.3925820550147262
+2024-25	giant_virus_cpm	Other Rhizaria	group	-0.04572795625427205	0.7378862633071996	56	0.7943344198231722
+2024-25	giant_virus_cpm	Choanoflagellates	group	0.4869446343130554	0.00014140362609585383	56	0.0005991978655811806
+2024-25	giant_virus_cpm	Katablepharids	group	0.6086124401913876	6.480892326900823e-07	56	5.109354648417161e-06
+2024-25	giant_virus_cpm	Bicosoecids (Cafeteria etc.)	group	0.12494873547505127	0.3588574249295912	56	0.4539278621310874
+2024-25	giant_virus_cpm	MAST and other heterotrophic stramenopiles	group	-0.2473000683527	0.0661300683748322	56	0.1161559232076068
+2024-25	giant_virus_cpm	Telonemids	group	0.1101161995898838	0.4191425188079819	56	0.512957811826375
+2024-25	giant_virus_cpm	Kinetoplastids and diplonemids	group	0.30136705399863295	0.024000786940072984	56	0.051171489136382024
+2024-25	giant_virus_cpm	Euglenids	group	0.33226247436773754	0.012353926854381903	56	0.028684802764626476
+2024-25	giant_virus_cpm	Labyrinthulids and hyphochytrids	group	0.12925495557074507	0.3424017907884348	56	0.43636919953864434
+2024-25	giant_virus_cpm	Fungi	group	-0.4863978127136022	0.0001442340510479884	56	0.0005992433111829343
+2024-25	giant_virus_cpm	Metazoa (hydrozoans, copepods, …)	group	0.3359535201640465	0.011361230227403952	56	0.026746229493680135
+2024-25	giant_virus_cpm	Other and unclassified eukaryotes	group	0.15393028024606975	0.2573425005304848	56	0.3489564307193374
+2025-26	giant_virus_cpm	Arcellinida;Vermamoeba [Other and unclassified eukaryotes]	genus	-0.2842377381681514	0.041134134621544215	52	0.07833972829608701
+2025-26	giant_virus_cpm	Cercozoa [Cercozoa]	genus	-0.504567574489883	0.00013660721875851937	52	0.0005862005969511148
+2025-26	giant_virus_cpm	Cercozoa;Glissomonadida [Cercozoa]	genus	-0.17706821480406384	0.20919994613600712	52	0.29923536599201017
+2025-26	giant_virus_cpm	Cercozoa;Imbricatea [Cercozoa]	genus	-0.19192350379919748	0.17286779139756686	52	0.2525956089817895
+2025-26	giant_virus_cpm	Cercozoa;Thecofilosea [Cercozoa]	genus	-0.399982924955178	0.00330418733150933	52	0.009492538181200532
+2025-26	giant_virus_cpm	Chlorophyceae;Chlamydomonas [Green algae (prasinophytes etc.)]	genus	-0.3704430974131307	0.006865885341769269	52	0.017369665155670018
+2025-26	giant_virus_cpm	Chlorophyta;Trebouxiophyceae [Green algae (prasinophytes etc.)]	genus	-0.5408520447366174	3.4811246155628984e-05	52	0.00017880321889027613
+2025-26	giant_virus_cpm	Chrysophyceae;Chrysolepidomonas [Chrysophytes and other ochrophytes]	genus	-0.155809784000683	0.2700268966627835	52	0.36181469552839374
+2025-26	giant_virus_cpm	Chrysophyceae;Paraphysomonas [Chrysophytes and other ochrophytes]	genus	-0.38137112609920604	0.005278402940461875	52	0.013979520287629497
+2025-26	giant_virus_cpm	Chrysophyceae;Prorocentrum minimum [Chrysophytes and other ochrophytes]	genus	-0.3111073166567062	0.02477312838930676	52	0.05216205294394405
+2025-26	giant_virus_cpm	Chrysophyceae;groundwater metagenome [Chrysophytes and other ochrophytes]	genus	-0.2590284299496286	0.06370181589067307	52	0.11387507272652704
+2025-26	giant_virus_cpm	Chrysophyceae;marine metagenome [Chrysophytes and other ochrophytes]	genus	-0.355929309314437	0.009606946723153513	52	0.023164376011779342
+2025-26	giant_virus_cpm	Chrysophyceae;wastewater metagenome [Chrysophytes and other ochrophytes]	genus	-0.20361990950226244	0.147659547571517	52	0.22650039197621838
+2025-26	giant_virus_cpm	Ciliophora [Ciliates]	genus	0.5541705796977717	2.0236249273978114e-05	52	0.00011064658877223517
+2025-26	giant_virus_cpm	Ciliophora;Intramacronucleata [Ciliates]	genus	0.45539144540254417	0.0006932401680540437	52	0.0023292513041696483
+2025-26	giant_virus_cpm	Diatomea;Attheya [Diatoms]	genus	-0.606761717749509	1.8582440811703743e-06	52	1.3123848823265768e-05
+2025-26	giant_virus_cpm	Diatomea;Bacillariophyceae [Diatoms]	genus	0.2294886024075813	0.10172214575516908	52	0.16265946891982225
+2025-26	giant_virus_cpm	Diatomea;Chaetoceros [Diatoms]	genus	-0.00495176299837787	0.9722074496435626	52	0.9808878733010945
+2025-26	giant_virus_cpm	Diatomea;Cylindrotheca [Diatoms]	genus	0.19533851276359598	0.1652056918362578	52	0.24456213769646898
+2025-26	giant_virus_cpm	Diatomea;Fragilariopsis [Diatoms]	genus	0.6458635703918724	2.3348267035009404e-07	52	2.334179052460882e-06
+2025-26	giant_virus_cpm	Diatomea;Mediophyceae [Diatoms]	genus	0.7376419363100828	4.4366960833129195e-10	52	1.0026933148287199e-08
+2025-26	giant_virus_cpm	Diatomea;Melosira [Diatoms]	genus	-0.10527595348897754	0.4576215021483637	52	0.5501194653485649
+2025-26	giant_virus_cpm	Diatomea;Nitzschia [Diatoms]	genus	0.5842226585844787	5.441842772531434e-06	52	3.416267962755845e-05
+2025-26	giant_virus_cpm	Diatomea;Skeletonema [Diatoms]	genus	0.6816357892939467	2.65446317651282e-08	52	3.213796488706592e-07
+2025-26	giant_virus_cpm	Diatomea;Thalassiosira [Diatoms]	genus	0.8197729019038675	1.0679083905394079e-13	52	1.206736481309531e-11
+2025-26	giant_virus_cpm	Diatomea;seawater metagenome [Diatoms]	genus	0.08947323486724151	0.5281820430011374	52	0.6260619320887607
+2025-26	giant_virus_cpm	Diatomea;uncultured marine bolidophyte [Diatoms]	genus	0.014684538546913685	0.9177065418085671	52	0.9427349020397099
+2025-26	giant_virus_cpm	Dictyochophyceae;Apedinella [Chrysophytes and other ochrophytes]	genus	0.21284043370613848	0.12979220074316403	52	0.20183282592629637
+2025-26	giant_virus_cpm	Dictyochophyceae;Pedinella [Chrysophytes and other ochrophytes]	genus	-0.4481875342300394	0.000862228776047137	52	0.002814882240557967
+2025-26	giant_virus_cpm	Dictyochophyceae;Pedinellales [Chrysophytes and other ochrophytes]	genus	0.3914454025441817	0.0041097232987630915	52	0.011609968319005733
+2025-26	giant_virus_cpm	Dictyochophyceae;Pteridomonas [Chrysophytes and other ochrophytes]	genus	0.4971823788614532	0.00017714114901085426	52	0.0007064805825256423
+2025-26	giant_virus_cpm	Dinoflagellata;Dinophyceae [Dinoflagellates]	genus	0.6357892939468966	4.096424223750209e-07	52	3.6544416101350544e-06
+2025-26	giant_virus_cpm	Dinophyceae;Prorocentrum [Dinoflagellates]	genus	0.5887475454623069	4.414442439562139e-06	52	2.8778768980991637e-05
+2025-26	giant_virus_cpm	Euglenozoa;Euglenida [Euglenids]	genus	0.7043455989071971	5.661476076533854e-09	52	8.723819954295346e-08
+2025-26	giant_virus_cpm	Euglenozoa;marine metagenome [Euglenids]	genus	-0.06326304106548279	0.6559198998520678	52	0.7319224711611707
+2025-26	giant_virus_cpm	Eukaryota;Archaeplastida;uncultured Trebouxia photobiont;unclassified [Green algae (prasinophytes etc.)]	genus	-0.19303338171262702	0.17034987283445072	52	0.25108089952555995
+2025-26	giant_virus_cpm	Eukaryota;Archaeplastida;uncultured prasinophyte;unclassified [Green algae (prasinophytes etc.)]	genus	0.2083155468283104	0.13834544110008307	52	0.21317774787694616
+2025-26	giant_virus_cpm	Eukaryota;SAR;Alveolata;unclassified [Other and unclassified eukaryotes]	genus	0.5191667378126867	8.028802320725957e-05	52	0.0003728443817433013
+2025-26	giant_virus_cpm	Eukaryota;SAR;Rhizaria;unclassified [Other Rhizaria]	genus	-0.6124818577648765	1.3960007612231364e-06	52	1.028791865336181e-05
+2025-26	giant_virus_cpm	Eukaryota;unclassified [Other and unclassified eukaryotes]	genus	0.3130709468112354	0.023830760771751225	52	0.051171489136382024
+2025-26	giant_virus_cpm	Eustigmatales;Nannochloropsis [Chrysophytes and other ochrophytes]	genus	-0.5218133697600956	7.272264845175824e-05	52	0.00034722503979078937
+2025-26	giant_virus_cpm	Glissomonadida;Corchorus olitorius [Cercozoa]	genus	-0.38862802014855286	0.0044110778349361135	52	0.012250654003082997
+2025-26	giant_virus_cpm	Glissomonadida;Heteromita [Cercozoa]	genus	-0.2010586527789635	0.1529318263998293	52	0.23248380784548042
+2025-26	giant_virus_cpm	Goniomonas avonlea [Cryptophytes]	genus	0.6438145650132332	2.6220114428061214e-07	52	2.402329403003446e-06
+2025-26	giant_virus_cpm	Guillardia;Guillardia theta [Cryptophytes]	genus	0.41458208827798176	0.0022452167382231744	52	0.006618508471805706
+2025-26	giant_virus_cpm	Holozoa;Anthoathecata [Metazoa (hydrozoans, copepods, …)]	genus	-0.25572062934742446	0.06728644371780079	52	0.11697489446325368
+2025-26	giant_virus_cpm	Holozoa;Anthozoa [Metazoa (hydrozoans, copepods, …)]	genus	0.3012891658840604	0.029967085450143562	52	0.061568739197567675
+2025-26	giant_virus_cpm	Holozoa;Ctenophora [Metazoa (hydrozoans, copepods, …)]	genus	0.6995368296827292	7.946711050187012e-09	52	1.0775740184053589e-07
+2025-26	giant_virus_cpm	Holozoa;Cydippida [Metazoa (hydrozoans, copepods, …)]	genus	0.14949520824732518	0.2901567290280602	52	0.3808811671608246
+2025-26	giant_virus_cpm	Holozoa;Diaphanoeca [Choanoflagellates]	genus	0.3709553487577904	0.006783100858203249	52	0.01728925707466843
+2025-26	giant_virus_cpm	Holozoa;Diptera [Metazoa (hydrozoans, copepods, …)]	genus	0.20037992790204007	0.15435195462447585	52	0.23359514561472014
+2025-26	giant_virus_cpm	Holozoa;Dorylaimia [Metazoa (hydrozoans, copepods, …)]	genus	-0.18920003767510954	0.1791604779472433	52	0.26066696147689045
+2025-26	giant_virus_cpm	Holozoa;Hydrozoa [Metazoa (hydrozoans, copepods, …)]	genus	-0.5644156065909672	1.3119693587753867e-05	52	7.446429723837276e-05
+2025-26	giant_virus_cpm	Holozoa;Leptothecata [Metazoa (hydrozoans, copepods, …)]	genus	-0.46239221377956113	0.0005582260021745341	52	0.001950913553991413
+2025-26	giant_virus_cpm	Holozoa;Maricola [Metazoa (hydrozoans, copepods, …)]	genus	-0.4606386628812537	0.0005896058548581078	52	0.002039554946907128
+2025-26	giant_virus_cpm	Holozoa;Ploimida [Metazoa (hydrozoans, copepods, …)]	genus	0.5160574437108574	9.009352337997713e-05	52	0.0004072227256774966
+2025-26	giant_virus_cpm	Imbricatea;Esquamula [Cercozoa]	genus	0.25578417143345	0.06721609920227586	52	0.11697489446325368
+2025-26	giant_virus_cpm	Intramacronucleata;DH114 [Ciliates]	genus	-0.03543071800563476	0.8030807975210208	52	0.8534306907825268
+2025-26	giant_virus_cpm	Intramacronucleata;Mesodiniidae [Ciliates]	genus	0.600017075044822	2.58512807890989e-06	52	1.7527168375009055e-05
+2025-26	giant_virus_cpm	Intramacronucleata;Peniculia [Ciliates]	genus	-0.5837957824639288	5.549428561979844e-06	52	3.420465968202122e-05
+2025-26	giant_virus_cpm	Kinetoplastea;Neobodo [Kinetoplastids and diplonemids]	genus	-0.07922820797404592	0.5766304626443036	52	0.6745428809652952
+2025-26	giant_virus_cpm	Kinetoplastea;Parabodonida [Kinetoplastids and diplonemids]	genus	0.26911453106485517	0.05370679070349436	52	0.09948962868024365
+2025-26	giant_virus_cpm	Labyrinthulomycetes;Sorodiplophrys [Labyrinthulids and hyphochytrids]	genus	-0.6448087455197827	2.4787742150027066e-07	52	2.334179052460882e-06
+2025-26	giant_virus_cpm	Mamiellophyceae;Bathycoccus [Green algae (prasinophytes etc.)]	genus	0.7793050456757449	1.0101791874155843e-11	52	4.2806343066735386e-10
+2025-26	giant_virus_cpm	Mamiellophyceae;Micromonas [Green algae (prasinophytes etc.)]	genus	0.6862460513958849	1.961629827999544e-08	52	2.557663506507098e-07
+2025-26	giant_virus_cpm	Nucletmycea;Capnodiales [Fungi]	genus	0.15171177324340476	0.28298205258627473	52	0.37327204601847136
+2025-26	giant_virus_cpm	Nucletmycea;Dothideales [Fungi]	genus	0.10570355229786693	0.45578643847728606	52	0.5498633546042703
+2025-26	giant_virus_cpm	Nucletmycea;Helotiales [Fungi]	genus	-0.3857252625288141	0.004741702767067398	52	0.012757438397109903
+2025-26	giant_virus_cpm	Nucletmycea;Pleosporales [Fungi]	genus	0.1923503799197473	0.17189618758674335	52	0.2522632363285974
+2025-26	giant_virus_cpm	Nucletmycea;Sporidiobolales [Fungi]	genus	-0.13791375135904171	0.3295582696265951	52	0.42479183803580134
+2025-26	giant_virus_cpm	Ochrophyta [Chrysophytes and other ochrophytes]	genus	0.3392811406129941	0.013871082288823984	52	0.0315590395698747
+2025-26	giant_virus_cpm	Ochrophyta;Chrysophyceae [Chrysophytes and other ochrophytes]	genus	0.00034150089643985313	0.9980828981830704	52	0.9980828981830704
+2025-26	giant_virus_cpm	Ochrophyta;Diatomea [Diatoms]	genus	0.5300093912746521	5.3245491840937765e-05	52	0.0002654444372658515
+2025-26	giant_virus_cpm	Ochrophyta;Dictyochophyceae [Chrysophytes and other ochrophytes]	genus	0.2547596687441304	0.0683574575664104	52	0.11763034576148795
+2025-26	giant_virus_cpm	Ochrophyta;Synurales [Chrysophytes and other ochrophytes]	genus	-0.3732604798087595	0.0064212394370605505	52	0.016616795184454403
+2025-26	giant_virus_cpm	Opisthokonta [Other and unclassified eukaryotes]	genus	-0.5499871937163835	2.4055414468397644e-05	52	0.00012741852351229378
+2025-26	giant_virus_cpm	Opisthokonta;Helgoeca nana [Choanoflagellates]	genus	-0.43695039699479205	0.001200422169225844	52	0.003733423076766616
+2025-26	giant_virus_cpm	Opisthokonta;Holozoa [Other and unclassified eukaryotes]	genus	0.7503628447024673	1.5124478996178537e-10	52	4.661089436095022e-09
+2025-26	giant_virus_cpm	Opisthokonta;Nucletmycea [Fungi]	genus	0.07282506616579869	0.6079056545711582	52	0.7033447675755038
+2025-26	giant_virus_cpm	Phaeocystis;Phaeocystis antarctica [Haptophytes]	genus	0.6085545974558183	1.699929940035699e-06	52	1.2261196801534086e-05
+2025-26	giant_virus_cpm	Porphyra umbilicalis (laver) [Other and unclassified eukaryotes]	genus	-0.683684794672586	2.322136756214917e-08	52	2.915571705025396e-07
+2025-26	giant_virus_cpm	Rhodomonas;Storeatula sp. CCMP1868 [Cryptophytes]	genus	0.17126269956458637	0.22476117955835603	52	0.31278988111536254
+2025-26	giant_virus_cpm	Synurales;Mallomonas [Chrysophytes and other ochrophytes]	genus	-0.29804490736788186	0.03187116401297587	52	0.06405504230358779
+2025-26	giant_virus_cpm	Synurales;Synura [Chrysophytes and other ochrophytes]	genus	-0.46503884572696996	0.0005137134153630201	52	0.0018331457664006717
+2025-26	giant_virus_cpm	Synurales;Tessellaria lapponica [Chrysophytes and other ochrophytes]	genus	-0.35789293946896605	0.009188082792554047	52	0.022570725120839286
+2025-26	giant_virus_cpm	Synurales;Tessellaria volvocina [Chrysophytes and other ochrophytes]	genus	-0.23401348928540935	0.09496925459361745	52	0.15478162166940537
+2025-26	giant_virus_cpm	Thecofilosea;Cryothecomonas [Cercozoa]	genus	-0.12008883910252655	0.39643972152568274	52	0.4940921529309061
+2025-26	giant_virus_cpm	Thecofilosea;Ebria [Cercozoa]	genus	0.06317766584137284	0.6563552543746192	52	0.7319224711611707
+2025-26	giant_virus_cpm	Thecofilosea;Protaspis [Cercozoa]	genus	-0.05942115598053444	0.6756211155502917	52	0.7502121959275458
+2025-26	giant_virus_cpm	Trebouxiophyceae;Trebouxia [Green algae (prasinophytes etc.)]	genus	0.07914283274993596	0.5770425825366833	52	0.6745428809652952
+2025-26	giant_virus_cpm	uncultured Katablepharis [Katablepharids]	genus	0.8497396055664647	1.647085026297944e-15	52	5.58361823915003e-13
+2025-26	giant_virus_cpm	uncultured marine cryptophyte [Cryptophytes]	genus	0.49918893537095527	0.000165163266758063	52	0.0006745824991684742
+2025-26	giant_virus_cpm	Diatoms	group	0.6456074447195423	2.3690414971239566e-07	52	2.334179052460882e-06
+2025-26	giant_virus_cpm	Haptophytes	group	0.62776402288056	6.319677973751395e-07	52	5.1008829359564825e-06
+2025-26	giant_virus_cpm	Green algae (prasinophytes etc.)	group	0.086058225902843	0.5441056392091446	52	0.6426892393445993
+2025-26	giant_virus_cpm	Cryptophytes	group	0.2544181678476906	0.06874132461215164	52	0.11769348001777477
+2025-26	giant_virus_cpm	Chrysophytes and other ochrophytes	group	-0.4070690685563049	0.002744989967977125	52	0.007953432471318337
+2025-26	giant_virus_cpm	Dinoflagellates	group	0.6726713907624007	4.7070592797752234e-08	52	5.318976986146003e-07
+2025-26	giant_virus_cpm	Syndiniales (parasitic dinoflagellates)	group	0.657816101767267	1.1660642444564895e-07	52	1.2352993089710935e-06
+2025-26	giant_virus_cpm	Ciliates	group	0.23290361137197985	0.09659246829277547	52	0.15667390790072191
+2025-26	giant_virus_cpm	Cercozoa	group	-0.4897122854947494	0.00022902260084283702	52	0.0008531721064365028
+2025-26	giant_virus_cpm	Other Rhizaria	group	-0.5883206693417571	4.503054024637202e-06	52	2.880255310098135e-05
+2025-26	giant_virus_cpm	Choanoflagellates	group	-0.21736532058396651	0.121643219874375	52	0.19003249556411578
+2025-26	giant_virus_cpm	Katablepharids	group	0.8266882950567745	4.379864922993263e-14	52	7.423871044473581e-12
+2025-26	giant_virus_cpm	Bicosoecids (Cafeteria etc.)	group	-0.7844275591223426	5.997304258362985e-12	52	2.904408776550074e-10
+2025-26	giant_virus_cpm	MAST and other heterotrophic stramenopiles	group	-0.19883889695210447	0.15761235660814457	52	0.23537704356899125
+2025-26	giant_virus_cpm	Telonemids	group	-0.28558012464782717	0.04014616096401606	52	0.0768901048971833
+2025-26	giant_virus_cpm	Kinetoplastids and diplonemids	group	-0.10688978058567401	0.45071675336768585	52	0.5456892121130197
+2025-26	giant_virus_cpm	Euglenids	group	0.5281311363442329	5.7229181234726964e-05	52	0.00028116945563148464
+2025-26	giant_virus_cpm	Labyrinthulids and hyphochytrids	group	-0.28993426107743536	0.03707500605356455	52	0.07264986735351667
+2025-26	giant_virus_cpm	Fungi	group	0.1109024161188423	0.4337991855853954	52	0.5270893330231148
+2025-26	giant_virus_cpm	Metazoa (hydrozoans, copepods, …)	group	0.1532485272773841	0.2780768349531751	52	0.37113404350049745
+2025-26	giant_virus_cpm	Other and unclassified eukaryotes	group	0.49398104670024756	0.00019789853335652782	52	0.0007711218713547463
+2025-26	virophage_cpm	Arcellinida;Vermamoeba [Other and unclassified eukaryotes]	genus	0.14923775058056912	0.2909977058839338	52	0.3808811671608246
+2025-26	virophage_cpm	Cercozoa [Cercozoa]	genus	-0.07838822296751996	0.5806910425395272	52	0.6764751320305832
+2025-26	virophage_cpm	Cercozoa;Glissomonadida [Cercozoa]	genus	0.018155779413991997	0.8983460010310214	52	0.9340159140090255
+2025-26	virophage_cpm	Cercozoa;Imbricatea [Cercozoa]	genus	-0.04457200822961069	0.7537063219296907	52	0.8060140161961045
+2025-26	virophage_cpm	Cercozoa;Thecofilosea [Cercozoa]	genus	0.17088804699615218	0.22579222990726094	52	0.31278988111536254
+2025-26	virophage_cpm	Chlorophyceae;Chlamydomonas [Green algae (prasinophytes etc.)]	genus	-0.15952992906891547	0.25861322519444174	52	0.3492824037486683
+2025-26	virophage_cpm	Chlorophyta;Trebouxiophyceae [Green algae (prasinophytes etc.)]	genus	-0.428424766361451	0.0015316265148645981	52	0.004647200823974962
+2025-26	virophage_cpm	Chrysophyceae;Chrysolepidomonas [Chrysophytes and other ochrophytes]	genus	-0.04749758405935348	0.7380983547029476	52	0.7943344198231722
+2025-26	virophage_cpm	Chrysophyceae;Paraphysomonas [Chrysophytes and other ochrophytes]	genus	0.0484440938866232	0.7330707057248839	52	0.7939647579576218
+2025-26	virophage_cpm	Chrysophyceae;Prorocentrum minimum [Chrysophytes and other ochrophytes]	genus	-0.13466253451610183	0.3411961802612822	52	0.43636919953864434
+2025-26	virophage_cpm	Chrysophyceae;groundwater metagenome [Chrysophytes and other ochrophytes]	genus	-0.1523020358424921	0.28109129180481235	52	0.37323231846904203
+2025-26	virophage_cpm	Chrysophyceae;marine metagenome [Chrysophytes and other ochrophytes]	genus	-0.22311818019185428	0.11185015246571174	52	0.17635907760872688
+2025-26	virophage_cpm	Chrysophyceae;wastewater metagenome [Chrysophytes and other ochrophytes]	genus	-0.11151606692196034	0.4312437561175055	52	0.5258691846181093
+2025-26	virophage_cpm	Ciliophora [Ciliates]	genus	0.5792640142890718	6.8198035321888824e-06	52	4.0559884165123355e-05
+2025-26	virophage_cpm	Ciliophora;Intramacronucleata [Ciliates]	genus	0.6017221110997444	2.3798301542509708e-06	52	1.6464539230430185e-05
+2025-26	virophage_cpm	Diatomea;Attheya [Diatoms]	genus	-0.3845411289153092	0.0048826986710413045	52	0.013033345271519703
+2025-26	virophage_cpm	Diatomea;Bacillariophyceae [Diatoms]	genus	-0.45071077047625635	0.0007992353110990677	52	0.002656282063358666
+2025-26	virophage_cpm	Diatomea;Chaetoceros [Diatoms]	genus	-0.3056366278601876	0.027565013019864817	52	0.05697889886423276
+2025-26	virophage_cpm	Diatomea;Cylindrotheca [Diatoms]	genus	-0.35580164870548303	0.009634740465076364	52	0.023164376011779342
+2025-26	virophage_cpm	Diatomea;Fragilariopsis [Diatoms]	genus	0.3656109323699147	0.007691120213060973	52	0.01917124817814463
+2025-26	virophage_cpm	Diatomea;Mediophyceae [Diatoms]	genus	0.34220632573197246	0.013021803045689463	52	0.029826967787086
+2025-26	virophage_cpm	Diatomea;Melosira [Diatoms]	genus	-0.3429109738209606	0.012824017157562814	52	0.029573753853155058
+2025-26	virophage_cpm	Diatomea;Nitzschia [Diatoms]	genus	0.29178316584287617	0.035830908656855856	52	0.07088690532236423
+2025-26	virophage_cpm	Diatomea;Skeletonema [Diatoms]	genus	0.47411537711419866	0.00038434547675395995	52	0.001401001253974112
+2025-26	virophage_cpm	Diatomea;Thalassiosira [Diatoms]	genus	0.396759710321882	0.0035902428103619984	52	0.01022766649338418
+2025-26	virophage_cpm	Diatomea;seawater metagenome [Diatoms]	genus	-0.3872085657012512	0.004570133492923737	52	0.01249415527500925
+2025-26	virophage_cpm	Diatomea;uncultured marine bolidophyte [Diatoms]	genus	0.1716624641275547	0.22366462250118616	52	0.31278988111536254
+2025-26	virophage_cpm	Dictyochophyceae;Apedinella [Chrysophytes and other ochrophytes]	genus	0.7011056429630654	7.119734363708785e-09	52	1.0493869344770774e-07
+2025-26	virophage_cpm	Dictyochophyceae;Pedinella [Chrysophytes and other ochrophytes]	genus	0.1602525074877321	0.2564344839577815	52	0.3489564307193374
+2025-26	virophage_cpm	Dictyochophyceae;Pedinellales [Chrysophytes and other ochrophytes]	genus	0.7868078055049423	4.6842755332752495e-12	52	2.646615676300516e-10
+2025-26	virophage_cpm	Dictyochophyceae;Pteridomonas [Chrysophytes and other ochrophytes]	genus	0.5175269223359857	8.533033080369113e-05	52	0.00039090516408717965
+2025-26	virophage_cpm	Dinoflagellata;Dinophyceae [Dinoflagellates]	genus	0.7326846526547008	6.637619607921227e-10	52	1.4063456544283099e-08
+2025-26	virophage_cpm	Dinophyceae;Prorocentrum [Dinoflagellates]	genus	0.5784035508097357	7.0895564546596765e-06	52	4.1437235140166036e-05
+2025-26	virophage_cpm	Euglenozoa;Euglenida [Euglenids]	genus	0.7435264924943359	2.7179606377473156e-10	52	7.087605047664154e-09
+2025-26	virophage_cpm	Euglenozoa;marine metagenome [Euglenids]	genus	-0.2589134609322366	0.06382378707386471	52	0.11387507272652704
+2025-26	virophage_cpm	Eukaryota;Archaeplastida;uncultured Trebouxia photobiont;unclassified [Green algae (prasinophytes etc.)]	genus	-0.18043919161678307	0.20051972776914162	52	0.28926037324995324
+2025-26	virophage_cpm	Eukaryota;Archaeplastida;uncultured prasinophyte;unclassified [Green algae (prasinophytes etc.)]	genus	0.12743464128967844	0.3679692721321544	52	0.4629775601907378
+2025-26	virophage_cpm	Eukaryota;SAR;Alveolata;unclassified [Other and unclassified eukaryotes]	genus	0.7507543857207591	1.461686594722656e-10	52	4.661089436095022e-09
+2025-26	virophage_cpm	Eukaryota;SAR;Rhizaria;unclassified [Other Rhizaria]	genus	-0.23034607341827765	0.10041479324874363	52	0.1614551784300872
+2025-26	virophage_cpm	Eukaryota;unclassified [Other and unclassified eukaryotes]	genus	-0.23636931777363043	0.09159409310753334	52	0.152207831193401
+2025-26	virophage_cpm	Eustigmatales;Nannochloropsis [Chrysophytes and other ochrophytes]	genus	-0.5142129752512615	9.641642914698992e-05	52	0.00042448272053025434
+2025-26	virophage_cpm	Glissomonadida;Corchorus olitorius [Cercozoa]	genus	-0.03390226108584288	0.8114170604407149	52	0.8595949484043824
+2025-26	virophage_cpm	Glissomonadida;Heteromita [Cercozoa]	genus	0.05283245763123738	0.7099084929324958	52	0.7738230839360646
+2025-26	virophage_cpm	Goniomonas avonlea [Cryptophytes]	genus	0.6450034241103508	2.451597446208046e-07	52	2.334179052460882e-06
+2025-26	virophage_cpm	Guillardia;Guillardia theta [Cryptophytes]	genus	0.7004172721795966	7.472083909035788e-09	52	1.0554318521513049e-07
+2025-26	virophage_cpm	Holozoa;Anthoathecata [Metazoa (hydrozoans, copepods, …)]	genus	-0.07624357385927558	0.5911169443471433	52	0.6862624799098684
+2025-26	virophage_cpm	Holozoa;Anthozoa [Metazoa (hydrozoans, copepods, …)]	genus	0.4193038534804882	0.001974145594226842	52	0.005922436782680525
+2025-26	virophage_cpm	Holozoa;Ctenophora [Metazoa (hydrozoans, copepods, …)]	genus	0.7132534017264271	2.9668963355534435e-09	52	5.587654765292319e-08
+2025-26	virophage_cpm	Holozoa;Cydippida [Metazoa (hydrozoans, copepods, …)]	genus	0.02374929893551622	0.8672764174923533	52	0.9102374784207671
+2025-26	virophage_cpm	Holozoa;Diaphanoeca [Choanoflagellates]	genus	-0.3383342400749599	0.014155965119098252	52	0.03199248116916205
+2025-26	virophage_cpm	Holozoa;Diptera [Metazoa (hydrozoans, copepods, …)]	genus	0.2864544063635271	0.03951326024342436	52	0.07654282984297633
+2025-26	virophage_cpm	Holozoa;Dorylaimia [Metazoa (hydrozoans, copepods, …)]	genus	0.09237620235446409	0.514829545379336	52	0.6123761960827891
+2025-26	virophage_cpm	Holozoa;Hydrozoa [Metazoa (hydrozoans, copepods, …)]	genus	-0.43771777193828104	0.0011740183001049808	52	0.003685112997551745
+2025-26	virophage_cpm	Holozoa;Leptothecata [Metazoa (hydrozoans, copepods, …)]	genus	-0.24471581352319074	0.08038326505080415	52	0.13490062798130004
+2025-26	virophage_cpm	Holozoa;Maricola [Metazoa (hydrozoans, copepods, …)]	genus	-0.4940342635734776	0.00019753610214030246	52	0.0007711218713547463
+2025-26	virophage_cpm	Holozoa;Ploimida [Metazoa (hydrozoans, copepods, …)]	genus	0.26246737983049356	0.060138903003533535	52	0.10996626201537255
+2025-26	virophage_cpm	Imbricatea;Esquamula [Cercozoa]	genus	0.46903864258611555	0.0004525072355225555	52	0.0016319143919377266
+2025-26	virophage_cpm	Intramacronucleata;DH114 [Ciliates]	genus	0.055241755373378505	0.6973000963181197	52	0.7625313956511052
+2025-26	virophage_cpm	Intramacronucleata;Mesodiniidae [Ciliates]	genus	0.6331290280955125	4.7360511852452075e-07	52	3.915905736092989e-06
+2025-26	virophage_cpm	Intramacronucleata;Peniculia [Ciliates]	genus	-0.6231476517352136	8.065095029521722e-07	52	6.213789125017872e-06
+2025-26	virophage_cpm	Kinetoplastea;Neobodo [Kinetoplastids and diplonemids]	genus	-0.2950529270643534	0.0337152840000829	52	0.0672322428001653
+2025-26	virophage_cpm	Kinetoplastea;Parabodonida [Kinetoplastids and diplonemids]	genus	0.1995897010837977	0.15601759622137368	52	0.23402639433206052
+2025-26	virophage_cpm	Labyrinthulomycetes;Sorodiplophrys [Labyrinthulids and hyphochytrids]	genus	-0.6131325775929329	1.3508259286245863e-06	52	1.0176221995638549e-05
+2025-26	virophage_cpm	Mamiellophyceae;Bathycoccus [Green algae (prasinophytes etc.)]	genus	0.5051781087182323	0.00013366843634202044	52	0.0005809435887172427
+2025-26	virophage_cpm	Mamiellophyceae;Micromonas [Green algae (prasinophytes etc.)]	genus	0.6339894915748485	4.519607094558532e-07	52	3.830367012638356e-06
+2025-26	virophage_cpm	Nucletmycea;Capnodiales [Fungi]	genus	-0.17114618603995302	0.22508147672209242	52	0.31278988111536254
+2025-26	virophage_cpm	Nucletmycea;Dothideales [Fungi]	genus	-0.06436816393537036	0.6502948089406699	52	0.7319224711611707
+2025-26	virophage_cpm	Nucletmycea;Helotiales [Fungi]	genus	-0.32972960528159884	0.016982166224595866	52	0.03762715261528104
+2025-26	virophage_cpm	Nucletmycea;Pleosporales [Fungi]	genus	-0.013509276625576987	0.9242727659736225	52	0.946611684788695
+2025-26	virophage_cpm	Nucletmycea;Sporidiobolales [Fungi]	genus	-0.05824422566959575	0.6817005569341982	52	0.7527572925104012
+2025-26	virophage_cpm	Ochrophyta [Chrysophytes and other ochrophytes]	genus	0.05679058963618351	0.6892370370149088	52	0.7586082972339419
+2025-26	virophage_cpm	Ochrophyta;Chrysophyceae [Chrysophytes and other ochrophytes]	genus	-0.005765105311551962	0.9676446936031804	52	0.980864416037036
+2025-26	virophage_cpm	Ochrophyta;Diatomea [Diatoms]	genus	-0.05567198711304656	0.6950569847521537	52	0.7625313956511052
+2025-26	virophage_cpm	Ochrophyta;Dictyochophyceae [Chrysophytes and other ochrophytes]	genus	0.746366021976145	2.1354328656633662e-10	52	6.032597845499009e-09
+2025-26	virophage_cpm	Ochrophyta;Synurales [Chrysophytes and other ochrophytes]	genus	-0.06909521739068994	0.6264546055513902	52	0.7174598354118962
+2025-26	virophage_cpm	Opisthokonta [Other and unclassified eukaryotes]	genus	-0.7382776652703855	4.2105698706517924e-10	52	1.0026933148287199e-08
+2025-26	virophage_cpm	Opisthokonta;Helgoeca nana [Choanoflagellates]	genus	-0.5807268022039432	6.382951539401078e-06	52	3.8639653068874384e-05
+2025-26	virophage_cpm	Opisthokonta;Holozoa [Other and unclassified eukaryotes]	genus	0.16245550489865826	0.24986837787053776	52	0.34155395200851735
+2025-26	virophage_cpm	Opisthokonta;Nucletmycea [Fungi]	genus	-0.17045781525648415	0.22698026771203297	52	0.31278988111536254
+2025-26	virophage_cpm	Phaeocystis;Phaeocystis antarctica [Haptophytes]	genus	0.7979077843883782	1.417779502144971e-12	52	1.201568128067863e-10
+2025-26	virophage_cpm	Porphyra umbilicalis (laver) [Other and unclassified eukaryotes]	genus	-0.7605636693851909	6.08552852182686e-11	52	2.2922157432214506e-09
+2025-26	virophage_cpm	Rhodomonas;Storeatula sp. CCMP1868 [Cryptophytes]	genus	0.43221080567052994	0.0013756180794399098	52	0.004239404808455722
+2025-26	virophage_cpm	Synurales;Mallomonas [Chrysophytes and other ochrophytes]	genus	-0.0650510390378102	0.6468285723453344	52	0.7319224711611707
+2025-26	virophage_cpm	Synurales;Synura [Chrysophytes and other ochrophytes]	genus	-0.17519036439283278	0.21414823812283165	52	0.3024843863484997
+2025-26	virophage_cpm	Synurales;Tessellaria lapponica [Chrysophytes and other ochrophytes]	genus	-0.009551144620630862	0.9464212848251853	52	0.9659275160400961
+2025-26	virophage_cpm	Synurales;Tessellaria volvocina [Chrysophytes and other ochrophytes]	genus	-0.017811594022257553	0.9002632325826617	52	0.9340159140090255
+2025-26	virophage_cpm	Thecofilosea;Cryothecomonas [Cercozoa]	genus	0.33124777880870426	0.016451227889254467	52	0.036690567463534635
+2025-26	virophage_cpm	Thecofilosea;Ebria [Cercozoa]	genus	0.4553572732646714	0.0006939657277909572	52	0.0023292513041696483
+2025-26	virophage_cpm	Thecofilosea;Protaspis [Cercozoa]	genus	0.2354228079463607	0.09293873160481972	52	0.15294286414579555
+2025-26	virophage_cpm	Trebouxiophyceae;Trebouxia [Green algae (prasinophytes etc.)]	genus	-0.019790660024730615	0.889247189027407	52	0.9304160403712685
+2025-26	virophage_cpm	uncultured Katablepharis [Katablepharids]	genus	0.3157900969163537	0.02257572996710659	52	0.04905879781313547
+2025-26	virophage_cpm	uncultured marine cryptophyte [Cryptophytes]	genus	0.722703276294402	1.4550011805788746e-09	52	2.9014435306837557e-08
+2025-26	virophage_cpm	Diatoms	group	0.14481600357226795	0.30568908273001943	52	0.39704444078726664
+2025-26	virophage_cpm	Haptophytes	group	0.7868078055049423	4.6842755332752495e-12	52	2.646615676300516e-10
+2025-26	virophage_cpm	Green algae (prasinophytes etc.)	group	0.009120912880962806	0.9488314538092979	52	0.9659275160400961
+2025-26	virophage_cpm	Cryptophytes	group	0.5492338388602414	2.481003010485643e-05	52	0.0001293938493160974
+2025-26	virophage_cpm	Chrysophytes and other ochrophytes	group	-0.11926023823598536	0.39973005934805356	52	0.494556533280986
+2025-26	virophage_cpm	Dinoflagellates	group	0.711173065671298	3.4576107528658576e-09	52	6.169105501165926e-08
+2025-26	virophage_cpm	Syndiniales (parasitic dinoflagellates)	group	0.7057521457514805	5.120416244872199e-09	52	8.265814795293692e-08
+2025-26	virophage_cpm	Ciliates	group	0.35012258974186466	0.010943548124120479	52	0.026125794465329873
+2025-26	virophage_cpm	Cercozoa	group	-0.029772036385029534	0.8340448981186458	52	0.8808137709103456
+2025-26	virophage_cpm	Other Rhizaria	group	-0.17983686718124775	0.20205169521781802	52	0.2902352740628827
+2025-26	virophage_cpm	Choanoflagellates	group	-0.5505245340792456	2.3530167635427085e-05	52	0.00012661471156206002
+2025-26	virophage_cpm	Katablepharids	group	0.2732832010371497	0.04996538049217984	52	0.09321816377994352
+2025-26	virophage_cpm	Bicosoecids (Cafeteria etc.)	group	-0.4464944994275094	0.0009069616513240563	52	0.0029005660358382554
+2025-26	virophage_cpm	MAST and other heterotrophic stramenopiles	group	0.44176195029116083	0.0010432716131834837	52	0.0033053184754130932
+2025-26	virophage_cpm	Telonemids	group	0.2020368249481195	0.1509021373269696	52	0.23043164213442657
+2025-26	virophage_cpm	Kinetoplastids and diplonemids	group	-0.3673318593285869	0.007387844963617075	52	0.0185516995753051
+2025-26	virophage_cpm	Euglenids	group	0.6807126585027996	2.8183553209744475e-08	52	3.2945601855528885e-07
+2025-26	virophage_cpm	Labyrinthulids and hyphochytrids	group	0.3167366067436234	0.022152143597806824	52	0.04844888180423557
+2025-26	virophage_cpm	Fungi	group	-0.17054386160441773	0.22674231508002296	52	0.31278988111536254
+2025-26	virophage_cpm	Metazoa (hydrozoans, copepods, …)	group	0.11745326492937952	0.4069604618882144	52	0.49985361079748075
+2025-26	virophage_cpm	Other and unclassified eukaryotes	group	-0.0719347468724991	0.6123117161712142	52	0.7050162835677921

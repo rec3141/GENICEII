@@ -40,6 +40,7 @@ Site section `#nitrogen` (site/nitrogen.js, site/nitrogen.json). Code:
 
 **Nitrate is reduced but not denitrified.**
 - Cycloclasticus narGHI is +3.2 (BACI +4.5) and hcp +2.6.
+- Host-normalised, the narGHI rise is mostly the bloom: metabat_5432 share 3.7→8.2‰, lorbin_184 <1‰. metabat_9342 nirBD goes 0→2.7‰, i.e. assimilation is induced. The oxygen page (oxygen/) finds no within-genome low-O2 shift.
 - norBC is −2.8, nosZ stays low, and nirK/nirS are flat.
 
 **Other N pathways**

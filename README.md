@@ -147,3 +147,17 @@ Code: ice/popgen/scripts. The pipeline is map.sh (bwa mem vs all 911 MAGs, MAPQâ
 - copper monooxygenases in Cycloclasticus and Porticoccaceae 50-400-T64
 
 See nitrogen/NOTES.md.
+
+## 50-400-T64, oxygen, eukaryotes (2026-11-07)
+- `porticocc/`: Porticoccaceae 50-400-T64 genome comebin_2576, the second-largest diesel responder of 2025-26.
+  - Its CuMMO forms its own lineage, most likely an alkane monooxygenase.
+  - Its toolkit is constitutive: diesel selected the organism rather than inducing its genes.
+  - Site page `#porticocc`.
+- `oxygen/`: low-O2 expression index, at community level and within each genome.
+  - The diesel-pool shift towards high-affinity oxidases is composition (the Cycloclasticus bloom), not regulation.
+  - This revises the O2-limitation reading on the sulfur page. Site page `#oxygen`.
+- `euks/`: eukaryotes from 18S rRNA and plastid transcripts.
+  - Algae collapse in the 2025-26 diesel pool and bacterivorous chrysophytes and choanoflagellates rise.
+  - Giant viruses track their algal hosts; the control-pool virophage tracks Phaeocystis.
+  - Site page `#euks`.
+- Site nav is now grouped into dropdowns (NAV in site/app.js).

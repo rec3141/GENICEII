@@ -1,0 +1,128 @@
+{
+ "hits": [
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "pmoA, Crenothrix methanotroph",
+   "org": "Crenothrix polyspora",
+   "pid": 49.8,
+   "alen": 227
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "pmoA, gammaproteobacterial methanotroph",
+   "org": "Methylococcus capsulatus",
+   "pid": 48.3,
+   "alen": 236
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)",
+   "org": "Cycloclasticus sp. 44_32_T64",
+   "pid": 47.9,
+   "alen": 240
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "Cycloclasticus CuMMO (propane/ethane/butane; Rubin-Blum et al. 2017)",
+   "org": "Cycloclasticus symbiont of Bathymodiolus heckerae",
+   "pid": 48.3,
+   "alen": 236
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)",
+   "org": "Cycloclasticus sp. 46_120_T64",
+   "pid": 49.6,
+   "alen": 236
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "amoA, betaproteobacterial ammonia oxidiser",
+   "org": "Nitrosomonas europaea",
+   "pid": 43.6,
+   "alen": 243
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "Cycloclasticus CuMMO",
+   "org": "Cycloclasticus sp. (MAG)",
+   "pid": 47.7,
+   "alen": 237
+  },
+  {
+   "q": "Cycloclasticus metabat_9342 PmoA-like",
+   "desc": "amoA, gammaproteobacterial ammonia oxidiser",
+   "org": "Nitrosococcus oceani",
+   "pid": 43.3,
+   "alen": 240
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "50-400-T64 type genome, Deepwater Horizon plume simulation (Hu et al. 2017)",
+   "org": "Gammaproteobacteria bacterium 50_400_T64",
+   "pid": 81.4,
+   "alen": 264
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "Porticoccaceae CuMMO",
+   "org": "Porticoccaceae bacterium (MAG)",
+   "pid": 74.6,
+   "alen": 252
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)",
+   "org": "Cycloclasticus sp. 44_32_T64",
+   "pid": 46.8,
+   "alen": 237
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "Cycloclasticus CuMMO (propane/ethane/butane; Rubin-Blum et al. 2017)",
+   "org": "Cycloclasticus symbiont of Bathymodiolus heckerae",
+   "pid": 45.1,
+   "alen": 237
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "Cycloclasticus CuMMO, Deepwater Horizon plume simulation (Hu et al. 2017)",
+   "org": "Cycloclasticus sp. 46_120_T64",
+   "pid": 48.4,
+   "alen": 223
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "Cycloclasticus CuMMO",
+   "org": "Cycloclasticus sp. (MAG)",
+   "pid": 46.6,
+   "alen": 223
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "pmoA, verrucomicrobial methanotroph",
+   "org": "Methylacidiphilum infernorum",
+   "pid": 42.0,
+   "alen": 255
+  },
+  {
+   "q": "50-400-T64 PmoA-like",
+   "desc": "amoA, gammaproteobacterial ammonia oxidiser",
+   "org": "Nitrosococcus oceani",
+   "pid": 41.3,
+   "alen": 223
+  }
+ ],
+ "source": "local reference set",
+ "pairwise": "The 50-400-T64 and Cycloclasticus metabat_9342 subunit A proteins share 37% identity over 234 amino acids with each other.",
+ "best": {
+  "p_type": 81.4,
+  "p_cyclo": 48.4,
+  "p_pmo": 42.0,
+  "p_amo": 41.3,
+  "p_actino": NaN,
+  "c_cyclo": 49.6,
+  "c_pmo": 49.8,
+  "c_amo": 43.6
+ }
+}
