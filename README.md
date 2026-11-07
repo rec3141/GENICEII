@@ -181,3 +181,23 @@ See states/NOTES.md.
 - **Rhodopsins:** dominant and flat.
 - **Top ice:** expresses more light sensing.
 - **Sulfitobacter metabat_1122:** AAP tracks its nitrogen-hungry water state.
+
+## Bin domains (2026-11-07)
+`scripts/bin_domains.py` → `data/bin_domain.tsv` classifies every bin from the contig-level Tiara calls in the microscape contig table. Rule, length-weighted: eukarya ≥ 50% → eukaryote; organelle (organelle/plastid/mitochondrion) ≥ 50% → organelle; otherwise prokaryote. Result: 885 prokaryote, 23 organelle, 3 eukaryote.
+
+Helpers in `scripts/common.py`:
+
+| Helper | Use |
+|---|---|
+| `bin_domain(b)` | the bin's call |
+| `is_prokaryote(b)` | bacterial-genome filter |
+| `is_plastid(b)` | `plastid_label` rule, or a Tiara organelle call |
+| `special_label(b)` | plastid label, "Plastid/organelle (Tiara)" or "Eukaryote (Tiara)" |
+
+Every page's label function now calls `special_label`. Analyses that assume a bacterial genome skip non-prokaryote bins:
+- physiological states (per-MAG PCA and growth index)
+- the oxygen within-genome index
+- nitrogen host_nstress
+- light AAP/rhodopsin hosts
+
+The Eukaryotes page lists the eukaryotic nuclear bins. Rerun `bin_domains.py` whenever the bins change.

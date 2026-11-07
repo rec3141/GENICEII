@@ -34,7 +34,7 @@ J['stat_tc'] = {k: [r(v, 3) for v in st.loc[S, k]] for k in LAB}
 tpm = table('bin_tpm'); core = m[m.group.isin(['CTL', 'EXP']) & (m.medium == 'SW')]
 pl = []
 for b in tpm.index:
-    l = plastid_label(b)
+    l = special_label(b) if is_plastid(b) else ''
     if not l: continue
     d = {'bin': b.replace('dastool-', ''), 'label': l}
     for s, k in (('2024-25', '24'), ('2025-26', '25')):
@@ -43,6 +43,19 @@ for b in tpm.index:
     d['mean'] = r(tpm.loc[b, S].mean(), 0)
     if d['mean'] >= 50: pl.append(d)
 J['plastids'] = sorted(pl, key=lambda d: -d['mean'])
+# eukaryotic nuclear bins (bin_domain: Tiara eukarya >= 50% of bin length)
+BD = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0); SM = pd.read_csv(D + 'summary.tsv', sep='\t').set_index('bin')
+eb = []
+for b in BD.index[BD.call == 'eukaryote']:
+    if b not in tpm.index: continue
+    d = {'bin': b.replace('dastool-', ''), 'mbp': r(BD.bp[b] / 1e6, 1), 'contigs': int(BD.n_contigs[b]), 'tiara_euk': r(BD.frac_eukarya[b], 2),
+         'gtdb_note': str(SM.loc[b, 'domain']) if b in SM.index and 'domain' in SM.columns else ''}
+    for s_, k in (('2024-25', '24'), ('2025-26', '25')):
+        for f, sel in (('oil', core.phase == 'oiled'), ('ctl', core.phase == 'control'), ('pre_exp', (core.phase == 'pre') & (core.group == 'EXP')), ('pre_ctl', (core.phase == 'pre') & (core.group == 'CTL'))):
+            d[f'{f}{k}'] = r(tpm.loc[b, core.index[(core.season == s_) & sel]].median(), 0)
+    d['mean'] = r(tpm.loc[b, S].mean(), 0); d['tpm'] = [r(v, 1) for v in tpm.loc[b, S]]
+    eb.append(d)
+J['euk_bins'] = sorted(eb, key=lambda d: -d['mean'])
 # virus links: top 6 positive per season x virus (q < 0.05)
 vl = []
 for (s, v), x in VL.groupby(['season', 'virus']):

@@ -60,7 +60,7 @@ I['comm_anaer_cpm'] = np.log2(E.loc[grp('anaer')].sum() + 0.5)
 # within genome
 B = sub.bin.values
 HAr = R[ha].groupby(B[ha]).sum(); LAr = R[la].groupby(B[la]).sum()
-gen = sorted(set(HAr.index) & set(LAr.index) - {''})
+gen = sorted(g for g in set(HAr.index) & set(LAr.index) - {''} if is_prokaryote(g))   # prokaryote genomes only (bin_domain)
 HAr, LAr = HAr.reindex(gen).fillna(0), LAr.reindex(gen).fillna(0)
 T = HAr + LAr
 elig = [g for g in gen if T.loc[g].sum() >= 300 and HAr.loc[g].sum() >= 30 and LAr.loc[g].sum() >= 30]
@@ -69,7 +69,7 @@ Lc = L.sub(L.mean(1), axis=0)
 W = np.sqrt(T.loc[elig]).where(T.loc[elig] >= 20)
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).drop_duplicates('user_genome').set_index('user_genome')['classification']
 def blab(b):
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [y.split('__', 1)[1] for y in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in y and y.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b.replace('dastool-', '')
 lab = {g: blab(g) for g in gen}

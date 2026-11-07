@@ -48,7 +48,7 @@ def rank(b, r):
     x = [y[3:] for y in lin(b).split(';') if y.startswith(r + '__')]; return x[0] if x else ''
 def blab(b):
     if not b: return 'unbinned'
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [y.split('__', 1)[1] for y in lin(b).split(';') if '__' in y and y.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b.replace('dastool-', '')
 need = set(sub.contig[sub.bin == '']); kj = {}
@@ -63,8 +63,8 @@ def kgen(c_):
     g = l[5] if len(l) > 5 and l[5] not in ('', 'NA') else (l[4] if len(l) > 4 else l[-1])
     return f'unbinned ({g}, Kaiju)'
 sub['phylum'] = [rank(b, 'p') if b else (kj.get(c_, ['', ''])[1] if len(kj.get(c_, [])) > 1 else '') for b, c_ in zip(sub.bin, sub.contig)]
-sub['klass'] = [rank(b, 'c') if b else (kj.get(c_, ['', '', ''])[2] if len(kj.get(c_, [])) > 2 else '') for b, c_ in zip(sub.bin, sub.contig)]
-sub['plastid'] = [bool(plastid_label(b)) if b else False for b in sub.bin]
+sub['klass'] = ['Eukaryota (Tiara)' if b and bin_domain(b) == 'eukaryote' else 'Plastid/organelle' if b and is_plastid(b) else rank(b, 'c') if b else (kj.get(c_, ['', '', ''])[2] if len(kj.get(c_, [])) > 2 else '') for b, c_ in zip(sub.bin, sub.contig)]
+sub['plastid'] = [is_plastid(b) for b in sub.bin]
 bid = sub.bin.str.replace('dastool-', '', regex=False)
 sub['taxon'] = [blab(b) for b in sub.bin]
 sub['host'] = np.where(sub.bin == '', sub.contig.map(kgen), np.where(sub.taxon == bid, sub.taxon, sub.taxon + ' ' + bid))
@@ -124,11 +124,12 @@ for kind, ix_ in gsets.items():
     sb = sub.iloc[ix_]; V = M.iloc[ix_].groupby(sb.bin.values).sum(); V = V[V.index != '']
     for b in V.index:
         if b not in BIN.index: continue
+        if kind != 'photosynthesis (plastid/cyano)' and not is_prokaryote(b): continue   # AAP/rhodopsin hosts: prokaryotes only
         h = BIN.loc[b, S]; ok = h >= 200                           # genome CPM >= 200 (~ >= 300 CDS reads at median depth)
         if ok.sum() < 10: continue
         sh = (V.loc[b, S] / h.replace(0, np.nan) * 1e3).where(ok)
         share_samples[(kind, b)] = sh
-        row = dict(kind=kind, bin=b, taxon=blab(b), phylum=rank(b, 'p'), klass=rank(b, 'c'), n_ok=int(ok.sum()), host_mean=float(h.mean()), share_med=float(sh.median()))
+        row = dict(kind=kind, bin=b, taxon=blab(b), phylum=rank(b, 'p'), klass=('Eukaryota (Tiara)' if bin_domain(b) == 'eukaryote' else 'Plastid/organelle' if is_plastid(b) else rank(b, 'c')), n_ok=int(ok.sum()), host_mean=float(h.mean()), share_med=float(sh.median()))
         for s in ('2024-25', '2025-26'):
             for k, sel_ in (('oil', (core.phase == 'oiled')), ('ctl', (core.phase == 'control')), ('pre_exp', (core.phase == 'pre') & (core.group == 'EXP')), ('pre_ctl', (core.phase == 'pre') & (core.group == 'CTL'))):
                 cols = core.index[(core.season == s) & (core.medium == 'SW') & sel_]; v = sh[cols].dropna()

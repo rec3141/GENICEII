@@ -60,3 +60,6 @@ Question: did the stress responses (phage-shock psp, envelope stress; Metals & t
 - Cycloclasticus phage contig_0040828 DNA, diesel pool only: 0–8 reads per 4 M before dosing → 574 (day 11) and 468 (day 13).
 - 2024-25 phage contig_0010334 DNA: already 1,100–3,350 reads in the diesel pool before dosing, with no rise. The RNA peak was activity.
 - Virophage contig_0049668 DNA, control pool only: 7,418 (day 3) → 16,044 (day 12) and 15,906 (day 14) reads per 4 M; 0 in the diesel pool. This is the only clear viral bloom, and it is in the control pool.
+
+## Bin domains (2026-11-07)
+vhost and vprophage take their host labels from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README).

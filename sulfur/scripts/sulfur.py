@@ -69,7 +69,7 @@ def rank(b, r):
     return x[0] if x else ''
 def blab(b):
     if not isinstance(b, str) or not b: return 'unbinned'
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [y.split('__', 1)[1] for y in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in y and y.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b.replace('dastool-', '')
 

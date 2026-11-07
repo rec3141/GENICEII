@@ -56,7 +56,7 @@ for k, v in PANEL.items():
     d = pd.DataFrame({'bin': G.bin[sel].fillna('unbinned').values, 'cpm': cpm_ice[sel]}).groupby('bin').cpm.sum().sort_values(ascending=False)
     tot = d.sum()
     for b, c in d.head(5).items():
-        lab = plastid_label(b) or (TAX.get(b.replace('dastool-', ''), '') if b != 'unbinned' else 'unbinned')
+        lab = special_label(b) or (TAX.get(b.replace('dastool-', ''), '') if b != 'unbinned' else 'unbinned')
         host.append(dict(category=k, bin=b, share=c / tot if tot else 0, taxon=str(lab).split(';')[-1] if ';' in str(lab) else lab))
 H = pd.DataFrame(host); H.to_csv(C.O + 'panel_hosts.tsv', sep='\t', index=False)
 print(H.groupby('category').head(2).round(2).to_string())

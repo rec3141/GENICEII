@@ -56,3 +56,6 @@ No metals or trace elements were measured: the CMO 2024/2025 logs only note that
 - 2024-25 BACI rests on one pre-dosing library.
 - Broad families (TonB receptors, RND, MerR) overlap non-metal functions.
 - KO-only members on hypotheticals are excluded from the headline numbers but kept in out/cat_cpm_all.tsv.
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

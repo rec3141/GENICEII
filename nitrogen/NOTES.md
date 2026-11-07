@@ -67,3 +67,6 @@ Site section `#nitrogen` (site/nitrogen.js, site/nitrogen.json). Code:
 **Top vs bottom ice**
 - Nitrate transporters are higher in top ice in 0 of 13 pairs; urea transporters in 1 of 13.
 - One hypothesis is that brine concentrates nutrients.
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

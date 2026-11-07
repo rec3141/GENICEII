@@ -41,3 +41,6 @@ Site section `#sulfur` (site/sulfur.js, site/sulfur.json). Code:
 - **Hypotheses (labelled as such on the page):**
   - H2/sulfide sources: anoxic micro-niches in oil, oil snow or brine; fermenter and Hox H2; organosulfur in the diesel and from DMSP.
   - Low-O2 brine fits Sulfurimonas's ice preference.
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

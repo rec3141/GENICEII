@@ -108,3 +108,6 @@ Site section `#light`, first item under the Biogeochemistry menu (site/light.js,
 - **Framing (revised after user feedback):** "season" is not a cause, because microbes feel it through light, temperature, ice, brine and nutrients.
   - The time-controlled partial is a strict test for light effects beyond the shared seasonal trajectory. A null result does not rule light out.
   - metabat_1122 AAP tracks under-ice darkening (r −0.64) and not surface daylight (r +0.05). So its seasonal cue is darkening or another seasonal factor, not returning daylight.
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

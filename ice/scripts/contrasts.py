@@ -44,7 +44,7 @@ if __name__ == '__main__':
     Lb = clr(B, pseudo=1.0) / np.log(2)  # log2 units
     tax = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', index_col=0)['classification']
     def lab(b):
-        if plastid_label(b): return plastid_label(b)
+        if special_label(b): return special_label(b)
         t = str(tax.get(b.replace('dastool-', ''), '')).split(';')
         g = [x[3:] for x in t if len(x) > 3]
         return (g[-1] if g else '') or kaiju_bin_label(b)

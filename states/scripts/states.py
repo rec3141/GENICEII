@@ -30,13 +30,13 @@ import scipy.sparse as sp
 A = sp.csr_matrix((np.ones(len(codes)), (codes, np.arange(len(codes)))), shape=(len(ub), len(codes)))
 depth = pd.DataFrame((A @ Xc).toarray(), index=ub, columns=Sc)
 npass = (depth >= MIN_READS).sum(1)
-sel = npass[npass >= MIN_SAMPLES].index.tolist()
+sel = [b for b in npass[npass >= MIN_SAMPLES].index if is_prokaryote(b)]   # bacterial/archaeal genomes only (bin_domain; Tiara)
 print(f'{len(ub)} binned MAGs; {len(sel)} with >= {MIN_SAMPLES} core samples at >= {MIN_READS} CDS reads', flush=True)
 order = {b: np.where(codes == k)[0] for k, b in enumerate(ub)}
 
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).drop_duplicates('user_genome').set_index('user_genome')['classification']
 def blab(b):
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [y.split('__', 1)[1] for y in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in y and y.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b.replace('dastool-', '')
 

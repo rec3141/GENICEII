@@ -72,3 +72,6 @@ Site section `#states` (site/states.js, site/states.json), in the "Diesel respon
   - lorbin_184: no steady PC1 trend with day (r −0.08), so the text now rests on the growth index.
 - **Remaining deep outliers are coherent groups:** late-season 2025-26 diesel ice (metabat_8566, vamb_856_sub) and 2024-25 day-55 diesel samples (Colwellia lorbin_095, vamb_500_sub).
 - **Tooltip:** now spells out the ice layer (top/bottom section, etc.).
+
+## Bin domains (2026-11-07)
+Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.

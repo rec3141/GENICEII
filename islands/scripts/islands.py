@@ -74,7 +74,7 @@ GI['bin'] = GI.contig.map(c2b).fillna('unbinned')
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).set_index('user_genome')['classification']
 def lab(b):
     if b == 'unbinned': return 'unbinned'
-    if plastid_label(b): return plastid_label(b)
+    if special_label(b): return special_label(b)
     t = [x.split('__', 1)[1] for x in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in x and x.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or 'unclassified'
 GI['taxon'] = GI.bin.map(lab)
