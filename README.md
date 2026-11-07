@@ -171,3 +171,13 @@ See nitrogen/NOTES.md.
 - The Sulfurimonas pool difference is strain, not diesel.
 
 See states/NOTES.md.
+
+## Light (2026-11-07)
+`light/` covers light use and feeds the site page `#light` (first item under Biogeochemistry). See light/NOTES.md.
+- **Gene groups:** oxygenic photosynthesis, aerobic anoxygenic photosynthesis (AAP), rhodopsins, and light sensing/protection.
+- **Modelled light:** clear-sky PAR for Churchill (`par_model.py`), since no PAR was measured.
+- **Algae:** diesel removes the algae, but surviving plastids keep their photosynthesis share.
+- **AAP:** its rise in the diesel pool is composition, not induction.
+- **Rhodopsins:** dominant and flat.
+- **Top ice:** expresses more light sensing.
+- **Sulfitobacter metabat_1122:** AAP tracks its nitrogen-hungry water state.
