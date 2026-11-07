@@ -138,3 +138,12 @@ Code: ice/popgen/scripts. The pipeline is map.sh (bwa mem vs all 911 MAGs, MAPQ�
 - Sulfur & hydrogen: sulfur/ (scripts/sulfur.py, sulfur_site.py; out/; NOTES.md) → site/sulfur.json + sulfur.js. Supersedes the "Beyond hydrocarbons" markers subsection on the pathways page, which is now a pointer. Overview finding 4 was rewritten: 2025-26 BACI is a real diesel effect; 2024-25 is mostly pool history.
 - Metals & toxicity: metals/ (scripts/msets.py, mexpr.py, mmob.py, mbuild.py; grex/metal_ctx.sh; out/; NOTES.md) → site/metals.json + metals.js. No metal measurements exist; exposure is inferred from transcription.
 - Bakta locus-tag fix check: audit/bakta_fix/NOTES.md. The site is unaffected (coordinate remap). Grex mag_marine extra files were reconciled on Nov 2 and the RNA tables regenerated on Nov 4. Local IDs are the old tags; translate through locus_tag_map.tsv.
+
+## Nitrogen (2026-11-07)
+`nitrogen/` (scripts, out, NOTES.md) feeds the site page `#nitrogen`. It covers:
+- the diesel-driven N-scavenging response
+- nitrate reduction without full denitrification
+- the nitrifier decline
+- copper monooxygenases in Cycloclasticus and Porticoccaceae 50-400-T64
+
+See nitrogen/NOTES.md.
