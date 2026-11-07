@@ -13,6 +13,28 @@ function ltSeries(J, values) {
 }
 
 /* PAR strip: same geometry and x-domain as timecourse() in app.js, so it lines up with the chart drawn below it in the same box */
+/* under-ice model lines (per pool) and logged roof state (vertical lines: solid open, dotted closed) */
+function ltUnder(g, J, se, x, y) {
+  ['CTL', 'EXP'].forEach(pool => {
+    const U = J.underice.filter(d => d.season === se && d.pool === pool && d.day >= x.domain()[0] && d.day <= x.domain()[1] && d.under > 0);
+    g.append('path').attr('d', d3.line().x(d => x(d.day)).y(d => y(Math.max(y.domain()[0], d.under)))(U)).attr('fill', 'none').attr('stroke', css(POOL[pool])).attr('stroke-width', 2);
+  });
+}
+function ltRoof(g, J, se, x, ih) {
+  (J.roof || []).filter(d => d.season === se && d.day >= x.domain()[0] && d.day <= x.domain()[1]).forEach(d => {
+    const xx = x(d.day) + (d.pool === 'EXP' ? 1.5 : -1.5);
+    g.append('line').attr('x1', xx).attr('x2', xx).attr('y1', 0).attr('y2', ih).attr('stroke', css(POOL[d.pool])).attr('stroke-width', d.open ? 1.6 : 1)
+      .attr('stroke-dasharray', d.open ? null : '1 3').attr('opacity', d.open ? 0.8 : 0.6);
+  });
+}
+function ltTip(J, se, p, d) {
+  const u = pool => J.underice.find(q => q.season === se && q.pool === pool && q.day === d);
+  const roof = (J.roof || []).filter(q => q.season === se && q.day === d).map(q => `${q.pool === 'EXP' ? 'diesel' : 'control'} roof ${q.open ? 'open' : 'closed'}`).join(', ');
+  const row = (pool, lab) => { const q = u(pool); return q ? `<br>${lab}: ${q.under < 0.1 ? d3.format('.3f')(q.under) : fmt1(q.under)} under ${fmt(q.ice)} cm ice, ${fmt1(q.snow)} cm snow (${d3.format('.1%')(q.T)})` : ''; };
+  return `<b>${p.date}</b> (day ${p.day})<br>clear-sky surface PAR ${fmt1(p.par)} mol m⁻² d⁻¹, day length ${fmt1(p.dl)} h${row('CTL', 'control')}${row('EXP', 'diesel')}${roof ? '<br>' + roof : ''}`;
+}
+const ltLegend = () => el('div', { class: 'legend' }, `<span><i style="background:var(--grid);height:10px"></i>clear-sky surface PAR</span><span><i style="background:var(--ctl)"></i>under ice, control pool</span><span><i style="background:var(--exp)"></i>under ice, diesel pool</span><span style="color:var(--ink-2)">│ roof open · ┆ roof closed (2025-26 log)</span>`);
+
 function ltParStrip(box, J, series) {
   const W = width(box), gap = 28, pw = W < 620 ? W - 10 : (W - gap) / 2, cols = W < 620 ? 1 : 2, ph = 64;
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', (ph + 6) * Math.ceil(2 / cols)).attr('role', 'img').attr('aria-label', 'modelled clear-sky PAR');
@@ -22,14 +44,15 @@ function ltParStrip(box, J, series) {
     const g = svg.append('g').attr('transform', `translate(${gx + 46},${gy + 6})`), iw = pw - 56, ih = ph - 22;
     const days = series.filter(s => s.season === se).flatMap(s => s.pts.map(p => p.day));
     const x = d3.scaleLinear().domain([Math.min(-7, d3.min(days) ?? -7), Math.max(22, d3.max(days) ?? 22)]).range([0, iw]).nice();
-    const y = d3.scaleLinear().domain([0, pmax]).range([ih, 0]);
+    const y = d3.scaleLog().domain([0.01, pmax * 1.2]).range([ih, 0]).clamp(true);
     const P = J.par_daily.filter(d => d.season === se && d.day >= x.domain()[0] && d.day <= x.domain()[1]);
     g.append('path').attr('d', d3.area().x(d => x(d.day)).y0(ih).y1(d => y(d.par))(P)).attr('fill', css('--grid')).attr('stroke', css('--ink-3')).attr('stroke-width', 1);
-    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(2).tickFormat(tickf));
-    g.append('text').attr('x', iw).attr('y', 8).attr('text-anchor', 'end').style('font-size', '10.5px').attr('fill', css('--ink-3')).text('modelled clear-sky PAR, mol m⁻² d⁻¹');
+    ltUnder(g, J, se, x, y); ltRoof(g, J, se, x, ih);
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).tickValues([0.01, 0.1, 1, 10]).tickFormat(tickf));
+    g.append('text').attr('x', iw).attr('y', 8).attr('text-anchor', 'end').style('font-size', '10.5px').attr('fill', css('--ink-3')).text('modelled PAR, mol m⁻² d⁻¹ (log): surface, under ice');
     g.append('line').attr('x1', x(OIL[se])).attr('x2', x(OIL[se])).attr('y1', 0).attr('y2', ih).attr('stroke', css('--ink-3')).attr('stroke-dasharray', '2 3');
     g.append('rect').attr('x', 0).attr('y', 0).attr('width', iw).attr('height', ih).attr('fill', 'transparent')
-      .on('mousemove', ev => { const d = Math.round(x.invert(d3.pointer(ev)[0])); const p = P.find(q => q.day === d); if (p) showTip(ev, `<b>${p.date}</b> (day ${p.day})<br>clear-sky PAR ${fmt1(p.par)} mol m⁻² d⁻¹<br>day length ${fmt1(p.dl)} h`); })
+      .on('mousemove', ev => { const d = Math.round(x.invert(d3.pointer(ev)[0])); const p = P.find(q => q.day === d); if (p) showTip(ev, ltTip(J, se, p, d)); })
       .on('mouseleave', hideTip);
   });
 }
@@ -55,7 +78,9 @@ function lightSec(sec) {
 function ltSky(sec, J) {
   sec.append(el('h3', {}, 'How much light there was to use'));
   sec.append(el('p', { class: 'kicker' }, J.text.sky));
-  const box = fig(sec, 'Modelled clear-sky PAR at Churchill', 'Daily photosynthetically active radiation above the ice and roof under a cloudless sky (Haurwitz clear-sky irradiance × 0.45 × 4.57 µmol J⁻¹, solar position from the NOAA equations at 58.76° N, 94.07° W). It is an upper bound: cloud, snow, ice, the pool roof and oil all cut it, by an unknown amount. Ticks under the curve mark sampling days; the dashed line is dosing. Hover for date and day length.');
+  sec.append(el('p', { class: 'kicker' }, J.text.underice));
+  const box = fig(sec, 'Modelled PAR at Churchill: clear-sky surface and under the ice', 'Daily photosynthetically active radiation above the ice and roof under a cloudless sky (Haurwitz clear-sky irradiance × 0.45 × 4.57 µmol J⁻¹, solar position from the NOAA equations at 58.76° N, 94.07° W). Grey: clear-sky surface PAR, an upper bound. Coloured lines: under-ice PAR per pool from the measured snow and ice (log scale; no roof, cloud or oil). Vertical pool-coloured lines: logged roof state (solid open, dotted closed). Ticks under the curve mark sampling days; the dashed line is dosing. Hover for date, snow, ice and transmission.');
+  box.parentNode.insertBefore(ltLegend(), box);
   const W = width(box), gap = 28, cols = W < 620 ? 1 : 2, pw = cols === 2 ? (W - gap) / 2 : W - 10, ph = 190;
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', (ph + 40) * Math.ceil(2 / cols)).attr('role', 'img').attr('aria-label', 'modelled PAR');
   const pmax = d3.max(J.par_daily, d => d.par);
@@ -64,13 +89,14 @@ function ltSky(sec, J) {
     const g = svg.append('g').attr('transform', `translate(${gx + 46},${gy + 18})`), iw = pw - 56, ih = ph - 34;
     const sd = J.samples.filter(s => s.season === se && ['CTL', 'EXP'].includes(s.pool) && s.day != null).map(s => s.day);
     const x = d3.scaleLinear().domain([Math.min(-10, d3.min(sd)), Math.max(30, d3.max(sd) + 3)]).range([0, iw]).nice();
-    const y = d3.scaleLinear().domain([0, pmax * 1.05]).range([ih, 0]);
+    const y = d3.scaleLog().domain([0.01, pmax * 1.3]).range([ih, 0]).clamp(true);
     const P = J.par_daily.filter(d => d.season === se && d.day >= x.domain()[0] && d.day <= x.domain()[1]);
-    g.append('g').attr('class', 'gridl').call(d3.axisLeft(y).ticks(4).tickSize(-iw).tickFormat('')).select('.domain').remove();
+    g.append('g').attr('class', 'gridl').call(d3.axisLeft(y).tickValues([0.01, 0.1, 1, 10]).tickSize(-iw).tickFormat('')).select('.domain').remove();
     g.append('path').attr('d', d3.area().x(d => x(d.day)).y0(ih).y1(d => y(d.par))(P)).attr('fill', css('--grid'));
-    g.append('path').attr('d', d3.line().x(d => x(d.day)).y(d => y(d.par))(P)).attr('fill', 'none').attr('stroke', css('--ink-2')).attr('stroke-width', 2);
+    g.append('path').attr('d', d3.line().x(d => x(d.day)).y(d => y(d.par))(P)).attr('fill', 'none').attr('stroke', css('--ink-3')).attr('stroke-width', 1.5);
+    ltUnder(g, J, se, x, y); ltRoof(g, J, se, x, ih);
     g.append('g').attr('class', 'axis').attr('transform', `translate(0,${ih})`).call(d3.axisBottom(x).ticks(6));
-    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).ticks(4));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).tickValues([0.01, 0.1, 1, 10]).tickFormat(tickf));
     [...new Set(sd)].forEach(d => g.append('line').attr('x1', x(d)).attr('x2', x(d)).attr('y1', ih - 7).attr('y2', ih).attr('stroke', css('--ink'))
       .attr('stroke-width', 1.5));
     g.append('line').attr('x1', x(OIL[se])).attr('x2', x(OIL[se])).attr('y1', 0).attr('y2', ih).attr('stroke', css('--ink-3')).attr('stroke-dasharray', '2 3');
@@ -81,7 +107,7 @@ function ltSky(sec, J) {
     g.append('text').attr('x', iw).attr('y', ih + 28).attr('text-anchor', 'end').text('experiment day');
     if (k === 0) g.append('text').attr('transform', `translate(-34,${ih / 2}) rotate(-90)`).attr('text-anchor', 'middle').text('mol photons m⁻² d⁻¹');
     g.append('rect').attr('width', iw).attr('height', ih).attr('fill', 'transparent')
-      .on('mousemove', ev => { const d = Math.round(x.invert(d3.pointer(ev)[0])); const p = P.find(q => q.day === d); if (p) showTip(ev, `<b>${p.date}</b> (day ${p.day})<br>clear-sky PAR ${fmt1(p.par)} mol m⁻² d⁻¹<br>day length ${fmt1(p.dl)} h${sd.includes(d) ? '<br>sampling day' : ''}`); })
+      .on('mousemove', ev => { const d = Math.round(x.invert(d3.pointer(ev)[0])); const p = P.find(q => q.day === d); if (p) showTip(ev, ltTip(J, se, p, d) + (sd.includes(d) ? '<br>sampling day' : '')); })
       .on('mouseleave', hideTip);
   });
 }
