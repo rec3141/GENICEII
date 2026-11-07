@@ -49,8 +49,9 @@ function stExplorer(sec, J) {
   const c = el('div', { class: 'controls' }); sec.append(c);
   const sel = el('select', { id: 'stsel', 'aria-label': 'Genome' });
   const det = J.mags.filter(m => m.detail);
-  const og1 = document.createElement('optgroup'); og1.label = 'Key genomes'; det.filter(m => m.key).forEach(m => og1.append(new Option(`${m.taxon} (${m.bin})`, m.bin)));
-  const og2 = document.createElement('optgroup'); og2.label = 'Strongest diesel shifts'; det.filter(m => !m.key).forEach(m => og2.append(new Option(`${m.taxon} (${m.bin})`, m.bin)));
+  const only = m => { const w = [...new Set(J.detail[m.bin].idx.map(si => J.samples[si].season))]; return w.length === 1 ? `, ${w[0]} only` : ''; };
+  const og1 = document.createElement('optgroup'); og1.label = 'Key genomes'; det.filter(m => m.key).forEach(m => og1.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
+  const og2 = document.createElement('optgroup'); og2.label = 'Strongest diesel shifts'; det.filter(m => !m.key).forEach(m => og2.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
   sel.append(og1, og2);
   const ss = el('select', { id: 'stsea', 'aria-label': 'Winter' }); [['both', 'Both winters'], ['2025-26', '2025-26'], ['2024-25', '2024-25']].forEach(([v, l]) => ss.append(new Option(l, v)));
   const tr = el('input', { type: 'checkbox', id: 'sttraj' }); tr.checked = true;
@@ -73,6 +74,10 @@ function stScatter(v, J, m, d, season, traj) {
   const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--other)"></i>before dosing</span><span><i style="background:var(--ctl)"></i>control pool</span><span><i style="background:var(--exp)"></i>diesel pool</span><span style="color:var(--ink-2)">● seawater</span><span style="color:var(--ink-2)">▲ sea ice</span>`);
   box.parentNode.insertBefore(lg, box);
   const pts = d.idx.map((si, k) => ({ s: J.samples[si], x: d.pc[k][0], y: d.pc[k][1], depth: d.depth[k], cl: d.cl[k] })).filter(p => season === 'both' || p.s.season === season);
+  if (!pts.length) {
+    const have = [...new Set(d.idx.map(si => J.samples[si].season))].sort().join(' and ');
+    box.append(el('p', { class: 'note' }, `${m.bin} has too few reads for a profile in ${season}; it was profiled in ${have} only. Choose “Both winters” or ${have}.`)); return;
+  }
   const W = width(box), H = Math.min(460, Math.max(300, W * 0.6)), mg = { l: 46, r: 14, t: 10, b: 38 };
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', H).attr('role', 'img').attr('aria-label', 'PCA scatter');
   const ext = (a) => { const [lo, hi] = d3.extent(a); const p = (hi - lo) * 0.06 || 1; return [lo - p, hi + p]; };
