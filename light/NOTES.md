@@ -105,3 +105,6 @@ Site section `#light`, first item under the Biogeochemistry menu (site/light.js,
   - Median partial r in 2025-26: AAP −0.14, rhodopsin +0.06, plastid photosynthesis −0.16.
 - **Raw correlations are time trends.** Plastid photosystems vs under-ice PAR give r +0.74 to +0.81 in the 2025-26 diesel pool, because the algae collapsed as the ice thickened.
 - **metabat_1122:** AAP vs under-ice PAR is r −0.64 raw but +0.04 with time held constant. The site text no longer claims a light response.
+- **Framing (revised after user feedback):** "season" is not a cause, because microbes feel it through light, temperature, ice, brine and nutrients.
+  - The time-controlled partial is a strict test for light effects beyond the shared seasonal trajectory. A null result does not rule light out.
+  - metabat_1122 AAP tracks under-ice darkening (r −0.64) and not surface daylight (r +0.05). So its seasonal cue is darkening or another seasonal factor, not returning daylight.
