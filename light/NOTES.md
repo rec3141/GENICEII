@@ -94,3 +94,14 @@ Site section `#light`, first item under the Biogeochemistry menu (site/light.js,
 - **Correlations:** within-genome light-gene shares vs under-ice PAR have median r near 0.
 - **metabat_1122 AAP share:** r −0.64 with under-ice PAR in the diesel pool (2025-26 water), −0.36 in the control; r with day +0.69. This reverses the "+0.46 with surface PAR" reading: AAP rises as the water darkens, which fits light repression of bacteriochlorophyll synthesis. It is still confounded with season and nitrogen hunger.
 - **Roof state:** logged only on 2025-26 sampling days; drawn as pool-coloured vertical lines (solid = open, dotted = closed).
+
+## Correlations with modelled under-ice light (rerun 2026-11-07)
+- **Method:** `underice.py` now also writes `cat_under_corr.tsv` and `underice_partial.tsv`.
+  - Spearman correlation with under-ice PAR and with transmittance, per pool.
+  - A time-controlled partial: rank correlation after removing a linear trend in rank(day) within each pool, both pools pooled.
+- **Result: nothing passes.**
+  - Gene groups: smallest q is 0.22.
+  - 180 within-genome shares: smallest q is 0.17.
+  - Median partial r in 2025-26: AAP −0.14, rhodopsin +0.06, plastid photosynthesis −0.16.
+- **Raw correlations are time trends.** Plastid photosystems vs under-ice PAR give r +0.74 to +0.81 in the 2025-26 diesel pool, because the algae collapsed as the ice thickened.
+- **metabat_1122:** AAP vs under-ice PAR is r −0.64 raw but +0.04 with time held constant. The site text no longer claims a light response.
