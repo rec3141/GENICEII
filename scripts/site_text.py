@@ -29,4 +29,4 @@ CAVEATS = [
  {'h': 'Sample annotations', 't': 'Only CMO_EXP_DAY04_MOS (2025-26) is logged as suspected marine oil snow. The 2024-25 day 62–63 samples carry no material note; the log records oil snow on the pool surface from day 60. The 136 L diesel volume for 2025-26 is from the CMO 2025 sampling log.'},
 ]
 FOOTER = ('Built 2026-10-23 from danaSeq <span class="mono">illumina_rna</span> (strobealign → featureCounts, CDS only) on the marine Flye coassembly; '
-          'MAGs from DAS Tool; taxonomy GTDB-Tk r226 with Kaiju fallback; DNA abundance from nanopore read mapping. Analysis code: <span class="mono">/data/dev/rnaseq-exploration</span>.')
+          'MAGs from DAS Tool; taxonomy GTDB-Tk r226 with Kaiju fallback; DNA abundance from nanopore read mapping. Analysis code: <a href="https://github.com/rec3141/GENICEII">github.com/rec3141/GENICEII</a>.')
