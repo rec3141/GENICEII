@@ -59,7 +59,7 @@ def fnum(v, n=2):
 eg = []
 for x in EG.itertuples():
     d = {'id': x.mag, 'label': hull_mag_label(x.mag), 'status': x.status, 'network': str(x.network_ok) == 'True', 'mbp': r(x.bp / 1e6, 1),
-         'contigs': int(x.contigs), 'gc': r(x.gc, 1), 'tiara': fnum(x.tiara_euk), 'who': fnum(x.who_euk), 'rms': r(x.tsne_rms, 1), 'hint': x.taxonomy_hint,
+         'contigs': int(x.contigs), 'gc': r(x.gc, 1), 'tiara': fnum(x.tiara_euk), 'who': fnum(x.who_euk), 'rms': r(x.tsne_rms, 1), 'hint': x.taxonomy_hint, 'tax': x.taxonomy, 'tax_rank': x.taxonomy_rank, 'tax_conf': x.taxonomy_confidence,
          'src': x.source_group, 'gained': r(x.bp_gained / 1e6, 1), 'lost': fnum(float(x.bp_lost) / 1e6 if str(x.bp_lost) not in ('', 'nan') else '', 1),
          'caution': x.caution, 'dastool': dbin.get(x.mag, [])}
     a = DA[DA.group == x.mag]

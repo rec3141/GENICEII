@@ -25,6 +25,7 @@ Hull-curated MAGs (the site's eukaryotic and viral genome labels; E##/V## are ke
   euks/mags/scripts hull_panels.py -> hulls.tsv (polygons picked by eye; curated input) -> hull_mags.py -> hull_expr.py -> plot_hulls.py
   data/hull_mags.tsv           one row per EE## (and VV## passing the viral genome-group rule below; none at present)
   data/contig_hull_mag.tsv.gz  contig -> EE##/VV## (+ source group, Tiara call)
+  data/ee_taxonomy.tsv         per-EE taxonomy (euks/mags/scripts/identify.py); hull_mags.tsv gets taxonomy, _rank, _confidence
   data/organelle_groups.tsv    P## plastid / M## mitochondrial groups (P01 = the former V02, a plastid geNomad called viral)
   data/contig_organelle_group.tsv.gz contig -> P##/M##
   bin_domain.tsv:hull_mag      the EE## holding >= 50% of a eukaryote bin's bp
@@ -108,8 +109,14 @@ for i, x in HM.iterrows():
     CAU.append('; '.join(c))
 HM['caution'] = CAU
 HM['taxonomy_hint'] = HM.source_group.map(EGi.taxonomy_hint).fillna('').where(nh == 1, '')
+# taxonomy of each EE (euks/mags/scripts/identify.py: MarFERReT proteins + SILVA 18S/28S, rule-based confidence high/medium/low)
+TX = pd.read_csv(EM + 'ee_taxonomy.tsv', sep='\t', keep_default_na=False)
+TX.to_csv(DD + 'ee_taxonomy.tsv', sep='\t', index=False)
+_c = TX.set_index('mag').call.str.extract(r'^(?P<name>[^?(]+?)\??\s*\((?P<rank>[^)]+)\)$')
+HM['taxonomy'] = HM.mag.map(_c.name).fillna(''); HM['taxonomy_rank'] = HM.mag.map(_c['rank']).fillna('')
+HM['taxonomy_confidence'] = HM.mag.map(TX.set_index('mag').confidence).fillna('')
 HM[['mag', 'hull', 'source_group', 'status', 'network_ok', 'caution', 'contigs', 'bp', 'gc', 'n50', 'tiara_euk', 'who_euk', 'virus_bp', 'tsne_rms',
-    'bp_gained', 'bp_lost', 'excluded_prok_bp', 'expr_ppm_median', 'taxonomy_hint', 'note']].to_csv(DD + 'hull_mags.tsv', sep='\t', index=False)
+    'bp_gained', 'bp_lost', 'excluded_prok_bp', 'expr_ppm_median', 'taxonomy_hint', 'taxonomy', 'taxonomy_rank', 'taxonomy_confidence', 'note']].to_csv(DD + 'hull_mags.tsv', sep='\t', index=False)
 assert not CH.contig.duplicated().any()
 CH[['contig', 'mag', 'source_group', 'in_source', 'tiara']].to_csv(DD + 'contig_hull_mag.tsv.gz', sep='\t', index=False, compression='gzip')
 eh = T.merge(CH[['contig', 'mag']], left_on='id', right_on='contig', how='inner')

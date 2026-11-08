@@ -58,8 +58,10 @@ for x in HMT.itertuples():
     if x.mag.startswith('VV'):
         L[x.mag] = f'Virus MAG {x.mag} · {x.bp / 1e6:.1f} Mbp of contigs, GC {x.gc:.1f}%, {float(x.virus_bp):.0%} viral by geNomad · hull drawn on the contig map around group {x.source_group}'
         continue
+    tx = (f'{x.taxonomy} ({x.taxonomy_rank}), {x.taxonomy_confidence} confidence' if x.taxonomy_confidence in ('high', 'medium')
+          else f'taxonomy uncertain (best guess {x.taxonomy})' if x.taxonomy else 'taxonomy unknown')
     bits = [f'Eukaryote (Tiara, {float(x.tiara_euk):.0%} of length)', f'MAG {x.mag}, {x.bp / 1e6:.1f} Mbp, GC {x.gc:.1f}%, from group {x.source_group}',
-            f'18S: {x.taxonomy_hint}' if x.taxonomy_hint else 'no confident 18S hint', STL.get(x.status, x.status)]
+            tx, STL.get(x.status, x.status)]
     if x.caution: bits.append(x.caution)
     L[x.mag] = ' · '.join(bits)
 OGT = pd.read_csv(D + 'organelle_groups.tsv', sep='\t', keep_default_na=False)

@@ -1,0 +1,289 @@
+mag	contig_id	start	end	rrna_type	sub	kind	gene_length	vsearch_identity	vsearch_coverage	taxonomy
+EE30	contig_0003019	54215	54330	23S_rRNA	LSU	mito	116	81.9	1.0	Bacteria;Pseudomonadota;Alphaproteobacteria;Rickettsiales;Mitochondria;Incertae Sedis;Galaxea fascicularis
+EE30	contig_0003019	54435	54542	23S_rRNA	LSU	mito	108	84.3	1.0	Bacteria;Pseudomonadota;Alphaproteobacteria;Rickettsiales;Mitochondria;Incertae Sedis;microbial mat metagenome
+EE23	contig_0026242	28319	31890	28S_rRNA	LSU	nuclear	3572	98.4	0.866	Eukaryota;Archaeplastida;seawater metagenome
+EE23	contig_0026242	28500	29515	23S_rRNA	LSU	nuclear	1016	99.9	1.0	Eukaryota;Archaeplastida;seawater metagenome
+EE23	contig_0026242	28501	31489	23S_rRNA	LSU	nuclear	2989	98.4	1.0	Eukaryota;Archaeplastida;seawater metagenome
+EE23	contig_0026242	29659	31487	23S_rRNA	LSU	nuclear	1829	99.1	1.0	Eukaryota;Archaeplastida;Mantoniella squamata
+EE23	contig_0026242	32037	33817	18S_rRNA	SSU	plastid	1781	98.9	0.999	Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Mamiellophyceae;Mamiellales;Micromonas;Micromonas pusilla
+EE23	contig_0026242	32038	32964	16S_rRNA	SSU	plastid	927	99.2	1.0	Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Mamiellophyceae;Mamiellales;Micromonas;Micromonas pusilla
+EE23	contig_0026242	32039	32965	16S_rRNA	SSU	plastid	927	99.2	1.0	Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Mamiellophyceae;Mamiellales;Micromonas;Micromonas pusilla
+EE23	contig_0026242	33193	33811	16S_rRNA	SSU	plastid	619	99.4	1.0	Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Mamiellophyceae;uncultured Chlorophyta
+EE23	contig_0026242	33193	33815	16S_rRNA	SSU	plastid	623	99.4	1.0	Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Mamiellophyceae;uncultured Chlorophyta
+EE21	contig_0056493	58	695	18S_rRNA	SSU	nuclear	638	99.4	0.997	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia;Nitzschia longissima
+EE21	contig_0056493	67	694	16S_rRNA	SSU	nuclear	628	99.5	0.998	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia;Nitzschia longissima
+EE21	contig_0056493	68	689	16S_rRNA	SSU	nuclear	622	99.5	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia;Nitzschia longissima
+EE02	contig_0068175	103	617	28S_rRNA	LSU	nuclear	515	96.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Prorocentrum minimum
+EE02	contig_0068175	104	437	23S_rRNA	LSU	nuclear	334	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE02	contig_0068175	105	433	23S_rRNA	LSU	nuclear	329	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE04	contig_0082506	2283	2404	28S_rRNA	LSU	nuclear	122	82.7	0.902	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Acanthoecidae;Acanthoeca;Acanthoeca spectabilis
+EE04	contig_0114825	12030	12325	28S_rRNA	LSU	nuclear	296	88.9	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE04	contig_0114825	12056	12317	23S_rRNA	LSU	nuclear	262	90.8	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE04	contig_0114825	12057	12317	23S_rRNA	LSU	nuclear	261	90.8	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE34	contig_0115546	10824	11134	28S_rRNA	LSU	nuclear	311	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE01	contig_0124182	4229	6049	18S_rRNA	SSU	nuclear	1821	98.8	0.998	Eukaryota;SAR;Rhizaria;Cercozoa;Incertae Sedis;uncultured marine eukaryote
+EE01	contig_0124182	4231	4873	16S_rRNA	SSU	nuclear	643	98.6	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Incertae Sedis;uncultured marine eukaryote
+EE01	contig_0124182	4537	4874	16S_rRNA	SSU	nuclear	338	99.7	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Incertae Sedis;uncultured eukaryote
+EE01	contig_0124182	5113	6048	16S_rRNA	SSU	nuclear	936	99.6	0.998	Eukaryota;SAR;Rhizaria;Cercozoa;Incertae Sedis;uncultured marine eukaryote
+EE01	contig_0124182	5119	6047	16S_rRNA	SSU	nuclear	929	99.6	0.999	Eukaryota;SAR;Rhizaria;Cercozoa;Incertae Sedis;uncultured marine eukaryote
+EE01	contig_0124182	6313	10319	28S_rRNA	LSU	nuclear	4007	81.7	1.016	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE01	contig_0124182	6715	7138	23S_rRNA	LSU	nuclear	424	89.8	0.927	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE01	contig_0124182	6738	7138	23S_rRNA	LSU	nuclear	401	89.8	0.98	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE01	contig_0124182	7519	8858	23S_rRNA	LSU	nuclear	1340	94.4	1.001	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE01	contig_0124182	7710	10076	23S_rRNA	LSU	nuclear	2367	91.1	1.001	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE01	contig_0124182	9041	10077	23S_rRNA	LSU	nuclear	1037	95.3	1.001	Eukaryota;SAR;Rhizaria;Cercozoa;Imbricatea;Silicofilosea;Thaumatomonadida;Peregriniidae;Esquamula;Esquamula lacrimiformis
+EE21	contig_0128178	8578	8803	28S_rRNA	LSU	nuclear	226	88.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia sp. ChengR-2013
+EE03	contig_0166807	9489	9745	16S_rRNA	SSU	mito	257	82.8	1.016	Bacteria;Pseudomonadota;Alphaproteobacteria;Rickettsiales;Mitochondria;Incertae Sedis;Berkeleya fennica
+EE03	contig_0166807	9582	9740	16S_rRNA	SSU	mito	159	83.1	1.006	Bacteria;Pseudomonadota;Alphaproteobacteria;Rickettsiales;Mitochondria;Incertae Sedis;uncultured bacterium
+EE04	contig_0167361	7831	8212	28S_rRNA	LSU	nuclear	382	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0167361	8031	8210	23S_rRNA	LSU	nuclear	180	91.8	1.017	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE04	contig_0167361	8033	8231	23S_rRNA	LSU	nuclear	199	87.3	1.03	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE04	contig_0174854	4036	4224	28S_rRNA	LSU	nuclear	189	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0178452	5164	5308	18S_rRNA	SSU	nuclear	145	89.7	1.007	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE27	contig_0188209	8207	8715	18S_rRNA	SSU	nuclear	509	87.7	1.006	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Thalassiosira;uncultured marine eukaryote
+EE27	contig_0188209	9800	10227	18S_rRNA	SSU	nuclear	428	85.3	1.014	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Thalassiosira;uncultured marine eukaryote
+EE27	contig_0188209	10572	10835	18S_rRNA	SSU	nuclear	264	85.6	1.053	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Skeletonema;uncultured marine eukaryote
+EE27	contig_0188209	10608	10827	16S_rRNA	SSU	nuclear	220	87.4	1.05	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Skeletonema;uncultured marine eukaryote
+EE27	contig_0188209	10609	10835	16S_rRNA	SSU	nuclear	227	87.0	1.048	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Skeletonema;uncultured marine eukaryote
+EE01	contig_0189512	9448	9627	16S_rRNA	SSU	mito	180	81.7	1.0	Bacteria;Pseudomonadota;Alphaproteobacteria;Rickettsiales;Mitochondria;Incertae Sedis;uncultured bacterium
+EE31	contig_0193859	1	332	16S_rRNA	SSU	nuclear	332	99.4	0.994	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0193859	1	333	18S_rRNA	SSU	nuclear	333	99.4	0.991	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0193859	4	331	16S_rRNA	SSU	nuclear	328	99.4	0.997	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0193859	558	4282	28S_rRNA	LSU	nuclear	3725	89.6	0.954	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0193859	988	4084	23S_rRNA	LSU	nuclear	3097	90.9	1.005	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0193859	989	1375	23S_rRNA	LSU	nuclear	387	85.5	1.034	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0193859	1576	2909	23S_rRNA	LSU	nuclear	1334	91.7	1.001	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0193859	3062	4086	23S_rRNA	LSU	nuclear	1025	96.7	1.002	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;seawater metagenome
+EE31	contig_0193859	8893	10348	18S_rRNA	SSU	nuclear	1456	99.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0193859	8894	9523	16S_rRNA	SSU	nuclear	630	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;seawater metagenome
+EE31	contig_0193859	9164	9524	16S_rRNA	SSU	nuclear	361	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;seawater metagenome
+EE31	contig_0193859	9757	10331	16S_rRNA	SSU	nuclear	575	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0193859	9762	10347	16S_rRNA	SSU	nuclear	586	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE06	contig_0195213	436	496	28S_rRNA	LSU	plastid	61	95.3	0.705	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Solanales;Nicotiana;Nicotiana tabacum (common tobacco)
+EE04	contig_0197144	9587	9912	16S_rRNA	SSU	nuclear	326	96.0	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0197144	9605	9906	16S_rRNA	SSU	nuclear	302	99.7	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0197144	9605	10042	18S_rRNA	SSU	nuclear	438	99.1	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0199189	5145	5899	28S_rRNA	LSU	plastid	755	86.8	0.281	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_0199189	5155	5521	23S_rRNA	LSU	plastid	367	88.1	0.55	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_0199189	5176	5332	23S_rRNA	LSU	nuclear	157	97.5	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE27	contig_0199233	8457	8531	28S_rRNA	LSU	nuclear	75	85.3	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Arthropoda;Hexapoda;Insecta;Pterygota;Xestocephalus desertorum
+EE10	contig_0217973	4079	4140	28S_rRNA	LSU	nuclear	62	91.9	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Lophotrochozoa;Bryozoa;Gymnolaemata;Cheilostomatida;Schizomavella linearis
+EE32	contig_0220794	205	373	28S_rRNA	LSU	nuclear	169	94.1	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Craticula;Craticula pseudocitrus
+EE32	contig_0220794	707	1638	16S_rRNA	SSU	nuclear	932	98.5	0.945	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Incertae Sedis;uncultured stramenopile
+EE32	contig_0220794	709	2487	18S_rRNA	SSU	nuclear	1779	98.9	0.999	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Incertae Sedis;uncultured marine eukaryote
+EE32	contig_0220794	710	1636	16S_rRNA	SSU	nuclear	927	98.5	0.948	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Incertae Sedis;uncultured stramenopile
+EE32	contig_0220794	1860	2486	16S_rRNA	SSU	nuclear	627	99.8	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Incertae Sedis;uncultured marine eukaryote
+EE32	contig_0220794	1862	2479	16S_rRNA	SSU	nuclear	618	99.8	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Incertae Sedis;uncultured marine eukaryote
+EE31	contig_0221272	11	3671	28S_rRNA	LSU	nuclear	3661	86.6	1.021	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Fragilariopsis;Fragilariopsis cylindrus CCMP1102
+EE31	contig_0221272	183	1217	23S_rRNA	LSU	nuclear	1035	97.5	1.001	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Fragilariopsis;Fragilariopsis cylindrus CCMP1102
+EE31	contig_0221272	193	3172	23S_rRNA	LSU	nuclear	2980	91.8	1.018	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Cylindrotheca;Cylindrotheca closterium
+EE31	contig_0221272	1357	3168	23S_rRNA	LSU	nuclear	1812	88.9	1.032	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia sp. ChengR-2013
+EE31	contig_0221272	4154	5088	16S_rRNA	SSU	nuclear	935	99.1	0.996	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Coscinodiscophytina;Fragilariales;Thalassionema;Thalassionema bacillare
+EE31	contig_0221272	4156	5946	18S_rRNA	SSU	nuclear	1791	97.7	0.999	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;uncultured marine eukaryote
+EE31	contig_0221272	4157	5087	16S_rRNA	SSU	nuclear	931	99.1	0.999	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Coscinodiscophytina;Fragilariales;Thalassionema;Thalassionema bacillare
+EE31	contig_0221272	5318	5945	16S_rRNA	SSU	nuclear	628	99.5	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;uncultured marine eukaryote
+EE31	contig_0221272	5319	5940	16S_rRNA	SSU	nuclear	622	99.5	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;uncultured marine eukaryote
+EE31	contig_0221768	1041	4816	28S_rRNA	LSU	nuclear	3776	96.5	0.941	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0221768	1267	2290	23S_rRNA	LSU	nuclear	1024	97.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;seawater metagenome
+EE31	contig_0221768	1269	4397	23S_rRNA	LSU	nuclear	3129	96.1	1.001	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0221768	2444	3778	23S_rRNA	LSU	nuclear	1335	95.6	1.001	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0221768	3979	4376	23S_rRNA	LSU	nuclear	398	99.5	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE31	contig_0221768	5080	6875	18S_rRNA	SSU	nuclear	1796	99.8	0.998	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0221768	5082	6007	16S_rRNA	SSU	nuclear	926	99.7	0.999	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0221768	5082	6006	16S_rRNA	SSU	nuclear	925	99.7	0.999	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0221768	6247	6642	16S_rRNA	SSU	nuclear	396	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured Chaetoceros
+EE31	contig_0221768	6248	6874	16S_rRNA	SSU	nuclear	627	100.0	0.998	Eukaryota;SAR;Alveolata;Dinoflagellata;Incertae Sedis;uncultured marine eukaryote
+EE04	contig_0229989	15	660	18S_rRNA	SSU	nuclear	646	96.9	1.002	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0229989	23	357	16S_rRNA	SSU	nuclear	335	98.8	1.003	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0229989	23	658	16S_rRNA	SSU	nuclear	636	96.9	1.002	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0229989	4278	8245	28S_rRNA	LSU	nuclear	3968	84.4	0.636	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Heteromita;Heteromita globosa
+EE04	contig_0229989	4516	6884	23S_rRNA	LSU	nuclear	2369	85.7	1.003	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE04	contig_0229989	4516	5551	23S_rRNA	LSU	nuclear	1036	92.0	1.004	Eukaryota;SAR;Rhizaria;Cercozoa;Imbricatea;Silicofilosea;Thaumatomonadida;Peregriniidae;Esquamula;Esquamula lacrimiformis
+EE04	contig_0229989	5741	7073	23S_rRNA	LSU	nuclear	1333	84.7	1.003	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE04	contig_0229989	8491	9362	18S_rRNA	SSU	nuclear	872	96.7	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured Cercozoa
+EE04	contig_0229989	8492	9354	16S_rRNA	SSU	nuclear	863	96.6	1.001	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured Cercozoa
+EE04	contig_0229989	8493	9354	16S_rRNA	SSU	nuclear	862	96.6	1.002	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured Cercozoa
+EE04	contig_0234246	8986	9103	18S_rRNA	SSU	nuclear	118	87.4	1.008	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0245056	5588	5677	28S_rRNA	LSU	nuclear	90	98.9	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Heteromita;Heteromita globosa
+EE04	contig_0250590	7451	7706	18S_rRNA	SSU	nuclear	256	83.7	1.004	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured Cercozoa
+EE04	contig_0264515	5967	6032	28S_rRNA	LSU	nuclear	66	87.1	0.47	Eukaryota;SAR;Alveolata;Ciliophora;Intramacronucleata;Conthreep;Oligohymenophorea;Scuticociliatia;Daphnia magna
+EE04	contig_0272264	680	844	18S_rRNA	SSU	nuclear	165	95.3	1.024	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0283915	8012	8196	28S_rRNA	LSU	nuclear	185	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0300655	5736	5880	28S_rRNA	LSU	nuclear	145	82.9	1.007	Eukaryota;SAR;Rhizaria;Cercozoa;Imbricatea;Silicofilosea;Thaumatomonadida;Peregriniidae;Esquamula;Esquamula lacrimiformis
+EE02	contig_0312667	46	558	28S_rRNA	LSU	nuclear	513	96.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Prorocentrum minimum
+EE02	contig_0312667	47	378	23S_rRNA	LSU	nuclear	332	99.1	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE02	contig_0312667	48	382	23S_rRNA	LSU	nuclear	335	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE04	contig_0351499	957	1518	28S_rRNA	LSU	plastid	562	83.8	0.132	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_0353721	1164	1553	28S_rRNA	LSU	nuclear	390	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0353721	1174	1515	23S_rRNA	LSU	nuclear	342	99.7	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0353721	1175	1514	23S_rRNA	LSU	nuclear	340	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE31	contig_0358934	14	1442	28S_rRNA	LSU	nuclear	1429	83.7	0.633	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE31	contig_0358934	495	924	23S_rRNA	LSU	nuclear	430	91.3	0.967	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE31	contig_0358934	518	916	23S_rRNA	LSU	nuclear	399	90.8	0.985	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE31	contig_0358934	1841	2770	16S_rRNA	SSU	nuclear	930	98.4	0.997	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Stephanoeca;uncultured eukaryote
+EE31	contig_0358934	1841	2768	16S_rRNA	SSU	nuclear	928	98.4	0.997	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Stephanoeca;uncultured eukaryote
+EE31	contig_0358934	1842	3632	18S_rRNA	SSU	nuclear	1791	97.6	0.999	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Stephanoeca;uncultured eukaryote
+EE31	contig_0358934	3002	3626	16S_rRNA	SSU	nuclear	625	99.2	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE31	contig_0358934	3004	3630	16S_rRNA	SSU	nuclear	627	99.2	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE01	contig_0372501	3538	3657	23S_rRNA	LSU	plastid	120	81.7	1.0	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Solanales;Nicotiana;Nicotiana attenuata
+EE01	contig_0372501	3541	3686	28S_rRNA	LSU	nuclear	146	80.8	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Pelagophyceae;Pelagomonadales;Aureococcus;uncultured marine pelagophyte
+EE30	contig_0392638	854	1277	28S_rRNA	LSU	nuclear	424	98.1	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE30	contig_0392638	879	1237	23S_rRNA	LSU	nuclear	359	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE30	contig_0392638	879	1236	23S_rRNA	LSU	nuclear	358	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0395677	1062	1236	28S_rRNA	LSU	nuclear	175	84.0	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE02	contig_0398766	180	746	28S_rRNA	LSU	nuclear	567	96.8	0.996	Eukaryota;SAR;Stramenopiles;Ochrophyta;Synurales;Mallomonas;Mallomonas asmundae
+EE02	contig_0398766	360	717	23S_rRNA	LSU	nuclear	358	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE02	contig_0398766	364	704	23S_rRNA	LSU	nuclear	341	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE02	contig_0412746	2	324	18S_rRNA	SSU	nuclear	323	99.7	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Rhaphoneis;uncultured marine eukaryote
+EE34	contig_0417713	5864	6341	18S_rRNA	SSU	nuclear	478	99.2	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;uncultured marine eukaryote
+EE34	contig_0417713	5865	6318	16S_rRNA	SSU	nuclear	454	99.8	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;uncultured marine eukaryote
+EE34	contig_0417713	5870	6310	16S_rRNA	SSU	nuclear	441	99.8	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia;Nitzschia longissima
+EE31	contig_0429691	2497	4298	18S_rRNA	SSU	nuclear	1802	98.2	0.901	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;Chaetoceros sp. RCC2564
+EE31	contig_0429691	2498	3129	16S_rRNA	SSU	nuclear	632	99.6	0.869	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;Chaetoceros sp. RCC2564
+EE31	contig_0429691	2502	3126	16S_rRNA	SSU	nuclear	625	99.6	0.874	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;Chaetoceros sp. RCC2564
+EE31	contig_0429691	3368	4300	16S_rRNA	SSU	nuclear	933	96.3	0.995	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0429691	3379	4297	16S_rRNA	SSU	nuclear	919	96.4	0.998	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0429691	4615	6205	28S_rRNA	LSU	plastid	1591	83.9	0.192	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE31	contig_0429691	5147	6192	23S_rRNA	LSU	plastid	1046	84.6	0.279	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE31	contig_0429691	5148	5549	23S_rRNA	LSU	nuclear	402	86.6	1.022	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Thalassiosira;Conticribra weissflogiopsis
+EE31	contig_0429691	5737	6194	23S_rRNA	LSU	nuclear	458	94.1	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Cylindrotheca;Cylindrotheca closterium
+EE06	contig_0457293	4864	4991	18S_rRNA	SSU	nuclear	128	89.8	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Bicosta;uncultured eukaryote
+EE04	contig_0461402	1659	1792	28S_rRNA	LSU	prok	134	99.3	1.0	Bacteria;Bacillota;Bacilli;Bacillales;Bacillaceae;Bacillus;Bacillus cereus
+EE04	contig_0473456	3015	3130	28S_rRNA	LSU	nuclear	116	99.1	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE31	contig_0473868	3	1671	18S_rRNA	SSU	nuclear	1669	96.8	1.003	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0473868	16	804	16S_rRNA	SSU	nuclear	789	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0473868	18	806	16S_rRNA	SSU	nuclear	789	99.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;uncultured marine eukaryote
+EE31	contig_0473868	1045	1379	16S_rRNA	SSU	nuclear	335	97.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;seawater metagenome
+EE31	contig_0473868	1045	1375	16S_rRNA	SSU	nuclear	331	97.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Mediophyceae;Chaetoceros;seawater metagenome
+EE04	contig_0485007	4110	4219	28S_rRNA	LSU	nuclear	110	80.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Chytridiomycota;Incertae Sedis;Chytridiomycetes;Lobulomycetales;Lobulomycetaceae;Incertae Sedis;Lobulomycetales sp. AF011
+EE04	contig_0485007	4309	4942	18S_rRNA	SSU	plastid	634	86.8	0.369	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Solanales;Ipomoea;Ipomoea nil (Japanese morning glory)
+EE04	contig_0485007	4310	4948	16S_rRNA	SSU	nuclear	639	85.9	1.075	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured Cercozoa
+EE04	contig_0485007	4311	4952	16S_rRNA	SSU	nuclear	642	85.5	1.076	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured Cercozoa
+EE04	contig_0492659	5557	5743	28S_rRNA	LSU	plastid	187	92.2	0.273	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Fabales;Ammopiptanthus;Ammopiptanthus mongolicus
+EE29	contig_0494092	1	183	23S_rRNA	LSU	nuclear	183	98.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia sp. ChengR-2013
+EE29	contig_0494092	1	188	23S_rRNA	LSU	nuclear	188	98.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia sp. ChengR-2013
+EE29	contig_0494092	1	372	28S_rRNA	LSU	nuclear	372	96.7	0.989	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Nitzschia sp. ChengR-2013
+EE04	contig_0496835	4574	4653	28S_rRNA	LSU	nuclear	80	87.7	1.012	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Cnidaria;Hydrozoa;Trachylinae;Narcomedusae;Cunina frugifera
+EE27	contig_0500834	3986	4035	28S_rRNA	LSU	plastid	50	98.0	1.0	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Gossypium hirsutum (upland cotton)
+EE04	contig_0507464	5120	5788	28S_rRNA	LSU	plastid	669	82.7	0.416	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ammopiptanthus mongolicus
+EE04	contig_0507464	5133	5588	23S_rRNA	LSU	nuclear	456	84.8	1.009	Eukaryota;SAR;Rhizaria;Cercozoa;Cercomonadidae;Cercomonas;Cercomonadida sp. C15_1A03
+EE04	contig_0507464	5136	5551	23S_rRNA	LSU	nuclear	416	88.9	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Cercomonadidae;Cercomonas;Cercomonadida sp. C15_1A03
+EE04	contig_0551478	3650	3895	18S_rRNA	SSU	nuclear	246	93.5	0.126	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Arthropoda;Chelicerata;Arachnida;Solifugae;Gluvia dorsalis
+EE04	contig_0551478	3651	3883	16S_rRNA	SSU	nuclear	233	93.3	0.129	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Arthropoda;Chelicerata;Arachnida;Solifugae;Gluvia dorsalis
+EE04	contig_0551478	3652	3885	16S_rRNA	SSU	nuclear	234	93.1	0.124	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Arthropoda;Chelicerata;Arachnida;Solifugae;Gluvia dorsalis
+EE02	contig_0553049	42	272	18S_rRNA	SSU	nuclear	231	98.7	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Paraphysomonas;Paraphysomonas imperforata
+EE02	contig_0568649	4109	4378	18S_rRNA	SSU	nuclear	270	99.6	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Paraphysomonas;Paraphysomonas imperforata
+EE07	contig_0595623	4128	4205	18S_rRNA	SSU	plastid	78	91.8	0.628	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE07	contig_0595623	4312	4382	18S_rRNA	SSU	plastid	71	98.6	1.0	Eukaryota;Archaeplastida;Chloroplastida;Chlorophyta;Clade VII;Subclade A;uncultured prasinophyte
+EE16	contig_0624148	1066	1191	28S_rRNA	LSU	nuclear	126	87.3	1.0	Eukaryota;SAR;Rhizaria;Retaria;Polycystinea;KW16;hydrothermal vent metagenome
+EE21	contig_0638408	107	172	28S_rRNA	LSU	nuclear	66	93.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Raphidophyceae;Chattonellales;Heterosigma;Heterosigma akashiwo
+EE21	contig_0638408	3005	3070	28S_rRNA	LSU	nuclear	66	93.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Raphidophyceae;Chattonellales;Heterosigma;Heterosigma akashiwo
+EE04	contig_0646980	2073	2173	18S_rRNA	SSU	nuclear	101	91.3	1.02	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0648227	1243	2020	23S_rRNA	LSU	nuclear	778	81.0	1.036	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0648227	1289	2031	23S_rRNA	LSU	nuclear	743	81.8	1.035	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE25	contig_0680587	4211	4300	28S_rRNA	LSU	nuclear	90	85.7	1.011	Eukaryota;SAR;Alveolata;Dinoflagellata;MALV-I;Incertae Sedis;marine metagenome
+EE25	contig_0680587	4374	4572	28S_rRNA	LSU	nuclear	199	88.5	1.005	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Peridiniphycidae;Gonyaulacales;seawater metagenome
+EE04	contig_0688414	861	1200	23S_rRNA	LSU	nuclear	340	93.3	1.009	Eukaryota;SAR;Rhizaria;Cercozoa;Imbricatea;Silicofilosea;Thaumatomonadida;Peregriniidae;Esquamula;Esquamula lacrimiformis
+EE04	contig_0688414	861	1391	28S_rRNA	LSU	nuclear	531	93.0	0.618	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Bodomorpha;Bodomorpha minima
+EE04	contig_0688414	862	1197	23S_rRNA	LSU	nuclear	336	94.1	1.009	Eukaryota;SAR;Rhizaria;Cercozoa;Imbricatea;Silicofilosea;Thaumatomonadida;Peregriniidae;Esquamula;Esquamula lacrimiformis
+EE04	contig_0689515	3264	4031	28S_rRNA	LSU	nuclear	768	84.7	1.01	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE04	contig_0689515	3331	3984	23S_rRNA	LSU	nuclear	654	86.0	1.012	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE04	contig_0689515	3333	3977	23S_rRNA	LSU	nuclear	645	85.8	1.012	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Cryomonadida;Ventrifissuridae;Cercozoa sp. CC-2009d
+EE04	contig_0690131	980	1453	23S_rRNA	LSU	nuclear	474	80.7	0.251	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Nematozoa;Nematoda;Chromadorea;Tylenchida;Meloidogyne incognita (southern root-knot nematode)
+EE04	contig_0690131	1016	1454	28S_rRNA	LSU	nuclear	439	80.8	0.273	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Nematozoa;Nematoda;Chromadorea;Tylenchida;Meloidogyne incognita (southern root-knot nematode)
+EE04	contig_0690131	1017	1454	23S_rRNA	LSU	nuclear	438	80.8	0.274	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Nematozoa;Nematoda;Chromadorea;Tylenchida;Meloidogyne incognita (southern root-knot nematode)
+EE22	contig_0702496	35	127	18S_rRNA	SSU	nuclear	93	94.6	1.0	Eukaryota;SAR;Alveolata;Ciliophora;Intramacronucleata;Spirotrichea;Choreotrichia;Rimostrombidium;uncultured eukaryote
+EE04	contig_0702712	1521	1608	28S_rRNA	LSU	nuclear	88	85.4	1.011	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Bodomorpha;Bodomorpha minima
+EE04	contig_0752077	3866	4071	18S_rRNA	SSU	plastid	206	87.1	0.563	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Solanales;Ipomoea;Ipomoea nil (Japanese morning glory)
+EE07	contig_0761334	53	852	28S_rRNA	LSU	nuclear	800	89.7	1.016	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE07	contig_0761334	72	642	23S_rRNA	LSU	nuclear	571	95.3	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE07	contig_0761334	78	645	23S_rRNA	LSU	nuclear	568	95.8	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Acanthoecida;Stephanoecidae;Diaphanoeca;Diaphanoeca grandis
+EE06	contig_0762487	3783	3859	28S_rRNA	LSU	nuclear	77	83.1	1.0	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Peridiniphycidae;Gonyaulacales;Paragymnodinium shiwhaense
+EE33	contig_0775875	411	623	28S_rRNA	LSU	nuclear	213	99.5	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE33	contig_0775875	418	621	23S_rRNA	LSU	nuclear	204	99.5	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE33	contig_0775875	434	619	23S_rRNA	LSU	nuclear	186	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE04	contig_0780796	3557	4302	28S_rRNA	LSU	nuclear	746	97.5	0.964	Eukaryota;SAR;Stramenopiles;Ochrophyta;Dictyochophyceae;Apedinella;Apedinella radians
+EE04	contig_0780796	3744	4300	23S_rRNA	LSU	nuclear	557	98.6	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Dictyochophyceae;Apedinella;Apedinella radians
+EE04	contig_0780796	3746	4300	23S_rRNA	LSU	nuclear	555	98.6	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Dictyochophyceae;Apedinella;Apedinella radians
+EE07	contig_0784481	1859	1968	28S_rRNA	LSU	plastid	110	84.4	0.7	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Liliopsida;Poales;Hordeum;Hordeum vulgare
+EE07	contig_0784481	2792	2910	28S_rRNA	LSU	plastid	119	82.4	0.571	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Liliopsida;Poales;Hordeum;Hordeum vulgare
+EE03	contig_0787398	470	621	28S_rRNA	LSU	plastid	152	80.3	1.0	Bacteria;Cyanobacteriota;Cyanobacteriia;Chloroplast;Incertae Sedis;Incertae Sedis;Oltmannsiellopsis viridis
+EE04	contig_0789102	1673	1875	18S_rRNA	SSU	nuclear	203	99.5	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_0794158	1447	1529	28S_rRNA	LSU	nuclear	83	82.1	1.012	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Cantharellales;Clavulinaceae;Clavulicium;Stereopsis globosa
+EE34	contig_0838033	397	814	23S_rRNA	LSU	nuclear	418	81.9	1.002	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Prorocentrales;Prorocentrum;marine metagenome
+EE34	contig_0838033	422	813	23S_rRNA	LSU	nuclear	392	83.0	1.003	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Prorocentrales;Prorocentrum;marine metagenome
+EE34	contig_0838033	2516	2970	28S_rRNA	LSU	nuclear	455	93.5	1.02	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE34	contig_0838033	2540	2720	23S_rRNA	LSU	nuclear	181	90.6	1.0	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Gymnodinium;Gymnodinium aureolum
+EE34	contig_0838033	2541	2794	23S_rRNA	LSU	nuclear	254	89.4	1.0	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Gymnodinium;Gymnodinium aureolum
+EE34	contig_0838033	2972	4008	28S_rRNA	LSU	nuclear	1037	86.5	1.042	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Gymnodinium;Gymnodinium aureolum
+EE34	contig_0838033	2974	4001	23S_rRNA	LSU	nuclear	1028	86.5	1.043	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Gymnodinium;Gymnodinium aureolum
+EE34	contig_0838033	2974	3549	23S_rRNA	LSU	nuclear	576	89.1	1.007	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Gymnodiniphycidae;Gymnodinium;Gymnodinium aureolum
+EE34	contig_0838033	3713	4003	23S_rRNA	LSU	plastid	291	82.4	0.918	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Sapindales;Citrus;Citrus maxima
+EE21	contig_0842067	1181	1376	18S_rRNA	SSU	nuclear	196	93.4	1.0	Eukaryota;Discoba;Jakobida;Incertae Sedis;Scrupocellaria maderensis
+EE21	contig_0882347	42	1019	18S_rRNA	SSU	nuclear	978	99.2	0.98	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Tremellomycetes;Tremellales;Bulleribasidiaceae;Dioszegia;Dioszegia zsoltii var. yunnanensis
+EE21	contig_0882347	373	1017	16S_rRNA	SSU	nuclear	645	99.2	0.972	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Tremellomycetes;Tremellales;Bulleribasidiaceae;Dioszegia;Dioszegia zsoltii var. yunnanensis
+EE21	contig_0882347	383	713	16S_rRNA	SSU	nuclear	331	99.7	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Tremellomycetes;Tremellales;Bulleribasidiaceae;Dioszegia;Dioszegia aurantiaca
+EE04	contig_0884393	1554	1642	28S_rRNA	LSU	nuclear	89	81.9	1.056	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Aphelidea;Aphelidium;Aphelidium desmodesmi
+EE04	contig_0898834	3997	4044	28S_rRNA	LSU	nuclear	48	93.8	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Ascomycota;Pezizomycotina;Dothideomycetes;Capnodiales;Venturia inaequalis
+EE01	contig_0919411	574	896	28S_rRNA	LSU	nuclear	323	86.5	1.009	Eukaryota;SAR;Stramenopiles;Ochrophyta;Pelagophyceae;Pelagomonadales;Aureococcus;Aureococcus anophagefferens
+EE14	contig_0920449	3124	3266	23S_rRNA	LSU	plastid	143	86.6	0.783	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Sapindales;Citrus;Citrus maxima
+EE14	contig_0920449	3158	3251	28S_rRNA	LSU	nuclear	94	97.9	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Ecdysozoa;Arthropoda;Crustacea;Maxillopoda;Copepoda;Aphanizomenon flos-aquae WA102
+EE31	contig_0938657	3291	3635	28S_rRNA	LSU	nuclear	345	94.5	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Prorocentrum minimum
+EE31	contig_0938657	3467	3599	23S_rRNA	LSU	nuclear	133	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE06	contig_0967943	705	786	18S_rRNA	SSU	nuclear	82	91.5	1.0	Eukaryota;SAR;Alveolata;Ciliophora;Intramacronucleata;Conthreep;Oligohymenophorea;Peritrichia;metagenome
+EE04	contig_1002477	1005	1062	28S_rRNA	LSU	nuclear	58	96.6	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Gymnophrys sp. ATCC 50923
+EE02	contig_1015063	1	726	28S_rRNA	LSU	nuclear	726	97.2	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Prorocentrum minimum
+EE02	contig_1015063	2	540	23S_rRNA	LSU	nuclear	539	99.1	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE02	contig_1015063	2	548	23S_rRNA	LSU	nuclear	547	99.1	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Ochromonadales;Chrysolepidomonas;Chrysolepidomonas dendrolepidota
+EE06	contig_1031347	1793	2020	18S_rRNA	SSU	nuclear	228	97.0	1.009	Eukaryota;Incertae Sedis;Telonema;uncultured marine eukaryote
+EE06	contig_1031347	2745	3368	28S_rRNA	LSU	nuclear	624	95.2	1.0	Eukaryota;Incertae Sedis;Telonema;Telonema subtile
+EE06	contig_1031347	2758	3359	23S_rRNA	LSU	nuclear	602	95.0	1.0	Eukaryota;Incertae Sedis;Telonema;Telonema subtile
+EE06	contig_1031347	2982	3337	23S_rRNA	LSU	nuclear	356	99.4	1.0	Eukaryota;Incertae Sedis;Telonema;Telonema subtile
+EE04	contig_1041856	44	754	23S_rRNA	LSU	plastid	711	89.4	0.266	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_1041856	48	795	28S_rRNA	LSU	plastid	748	81.2	0.32	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_1041856	387	768	23S_rRNA	LSU	plastid	382	87.2	0.531	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_1051138	1564	1619	18S_rRNA	SSU	nuclear	56	91.1	1.0	Eukaryota;SAR;Alveolata;Dinoflagellata;MALV-I;Incertae Sedis;uncultured eukaryote
+EE04	contig_1051138	1758	1812	18S_rRNA	SSU	plastid	55	91.1	1.018	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Liliopsida;Poales;Triticum;Triticum aestivum (bread wheat)
+EE04	contig_1051138	2430	2484	18S_rRNA	SSU	nuclear	55	92.9	1.018	Eukaryota;SAR;Alveolata;Dinoflagellata;MALV-I;Incertae Sedis;uncultured eukaryote
+EE06	contig_1067597	716	813	28S_rRNA	LSU	nuclear	98	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Pucciniomycotina;Pucciniomycetes;Pucciniales;Pucciniaceae;Gymnosporangium;Gymnosporangium ellisii
+EE03	contig_1088171	2731	3212	18S_rRNA	SSU	nuclear	482	98.3	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Incertae Sedis;uncultured eukaryote
+EE03	contig_1088171	2732	3189	16S_rRNA	SSU	nuclear	458	98.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Incertae Sedis;uncultured eukaryote
+EE03	contig_1088171	2949	3181	16S_rRNA	SSU	nuclear	233	100.0	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Chrysophyceae;Incertae Sedis;Spumella sp.
+EE01	contig_1102736	49	850	18S_rRNA	SSU	nuclear	802	98.3	0.981	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Incertae Sedis;uncultured marine eukaryote
+EE01	contig_1102736	206	843	16S_rRNA	SSU	nuclear	638	99.5	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Incertae Sedis;uncultured eukaryote
+EE01	contig_1102736	206	848	16S_rRNA	SSU	nuclear	643	99.5	0.992	Eukaryota;SAR;Rhizaria;Cercozoa;Thecofilosea;Incertae Sedis;uncultured eukaryote
+EE04	contig_1138599	1454	1657	18S_rRNA	SSU	nuclear	204	86.3	1.005	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_1158075	865	977	28S_rRNA	LSU	nuclear	113	97.3	1.0	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Bodomorpha;Bodomorpha minima
+EE30	contig_1169587	1537	1701	18S_rRNA	SSU	prok	165	80.6	1.0	Bacteria;Patescibacteria;Saccharimonadia;Saccharimonadales;Incertae Sedis;Incertae Sedis;uncultured bacterium
+EE30	contig_1169587	2410	2484	16S_rRNA	SSU	mito	75	89.3	1.0	Bacteria;Pseudomonadota;Alphaproteobacteria;Rickettsiales;Mitochondria;Incertae Sedis;Chlorokybus atmophyticus
+EE30	contig_1169587	2640	2930	16S_rRNA	SSU	prok	291	82.5	1.0	Bacteria;Pseudomonadota;Alphaproteobacteria;Puniceispirillales;SAR116 clade;Incertae Sedis;uncultured Alphaproteobacteria bacterium
+EE30	contig_1169587	2648	2924	16S_rRNA	SSU	prok	277	83.4	1.0	Bacteria;Pseudomonadota;Alphaproteobacteria;Puniceispirillales;SAR116 clade;Incertae Sedis;uncultured Alphaproteobacteria bacterium
+EE06	contig_1177289	682	813	18S_rRNA	SSU	nuclear	132	87.1	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Clade L;uncultured freshwater eukaryote
+EE29	contig_1227654	1380	1813	23S_rRNA	LSU	plastid	434	80.0	0.311	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE06	contig_1248673	1024	1115	16S_rRNA	SSU	nuclear	92	93.5	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Craspedida;Codonosigidae;Monosiga;uncultured freshwater eukaryote
+EE06	contig_1248673	1024	1120	18S_rRNA	SSU	nuclear	97	89.7	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Choanoflagellata;Choanoflagellida;Craspedida;uncultured eukaryote
+EE21	contig_1272464	47	202	23S_rRNA	LSU	nuclear	156	91.7	1.0	Eukaryota;Archaeplastida;uncultured prasinophyte
+EE21	contig_1272464	47	202	28S_rRNA	LSU	nuclear	156	91.7	1.0	Eukaryota;Archaeplastida;uncultured prasinophyte
+EE21	contig_1272464	48	199	23S_rRNA	LSU	nuclear	152	91.4	1.0	Eukaryota;Archaeplastida;uncultured prasinophyte
+EE33	contig_1274975	2216	2655	23S_rRNA	LSU	nuclear	440	85.7	1.014	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE33	contig_1274975	2216	2639	23S_rRNA	LSU	nuclear	424	85.1	1.014	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE33	contig_1274975	2217	2656	28S_rRNA	LSU	nuclear	440	85.7	1.014	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;seawater metagenome
+EE16	contig_1288205	1226	1378	28S_rRNA	LSU	nuclear	153	84.7	1.065	Eukaryota;SAR;Rhizaria;Retaria;Polycystinea;KW16;hydrothermal vent metagenome
+EE34	contig_1293273	517	767	23S_rRNA	LSU	nuclear	251	93.3	1.004	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Prorocentrales;Prorocentrum;Prorocentrum micans
+EE34	contig_1293273	518	766	23S_rRNA	LSU	nuclear	249	92.4	1.0	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Prorocentrales;Prorocentrum;Prorocentrum micans
+EE34	contig_1293273	523	768	28S_rRNA	LSU	nuclear	246	93.5	1.0	Eukaryota;SAR;Alveolata;Dinoflagellata;Dinophyceae;Prorocentrales;Prorocentrum;Prorocentrum micans
+EE21	contig_1346065	29	158	23S_rRNA	LSU	nuclear	130	95.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Fragilariopsis;Fragilariopsis cylindrus CCMP1102
+EE21	contig_1346065	29	158	28S_rRNA	LSU	nuclear	130	95.4	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Fragilariopsis;Fragilariopsis cylindrus CCMP1102
+EE04	contig_1405319	108	959	28S_rRNA	LSU	plastid	852	88.5	0.338	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Ipomoea nil (Japanese morning glory)
+EE04	contig_1405319	133	387	23S_rRNA	LSU	nuclear	255	95.3	1.004	Eukaryota;SAR;Rhizaria;Cercozoa;Glissomonadida;Corchorus olitorius
+EE04	contig_1405319	145	908	23S_rRNA	LSU	plastid	764	92.8	0.272	Bacteria;Cyanobacteriota;Cyanobacteriia;Chloroplast;Incertae Sedis;Incertae Sedis;Ammopiptanthus mongolicus
+EE33	contig_1416963	1188	1316	28S_rRNA	LSU	nuclear	129	96.9	1.0	Eukaryota;SAR;Stramenopiles;Ochrophyta;Diatomea;Bacillariophytina;Bacillariophyceae;Craticula;Craticula pseudocitrus
+EE04	contig_1422138	51	189	18S_rRNA	SSU	nuclear	139	86.4	1.007	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_1427026	1603	1962	23S_rRNA	LSU	plastid	360	80.9	0.364	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Malvales;Gossypium;Gossypium arboreum
+EE04	contig_1427026	1612	1971	23S_rRNA	LSU	plastid	360	81.1	0.339	Eukaryota;Archaeplastida;Chloroplastida;Charophyta;Phragmoplastophyta;Streptophyta;Embryophyta;Tracheophyta;Spermatophyta;Magnoliophyta;Malvales;Gossypium;Gossypium arboreum
+EE31	contig_1428483	1445	1589	18S_rRNA	SSU	nuclear	145	89.7	1.007	Eukaryota;SAR;Rhizaria;Cercozoa;Novel Clade 2;uncultured eukaryote
+EE04	contig_1472247	501	592	28S_rRNA	LSU	nuclear	92	91.3	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Holozoa;Choanozoa;Metazoa;Animalia;BCP clade;Bilateria;Protostomia;Lophotrochozoa;Mollusca;Gastropoda;Acroloxus lacustris
+EE04	contig_1477497	470	871	23S_rRNA	LSU	nuclear	402	87.2	1.007	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Chytridiomycota;Incertae Sedis;Chytridiomycetes;Lobulomycetales;Lobulomycetaceae;Incertae Sedis;Lobulomycetales sp. AF011
+EE04	contig_1477497	474	872	23S_rRNA	LSU	nuclear	399	87.1	1.008	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Chytridiomycota;Incertae Sedis;Chytridiomycetes;Lobulomycetales;Lobulomycetaceae;Incertae Sedis;Lobulomycetales sp. AF011
+EE33	contig_1563114	1021	1074	28S_rRNA	LSU	nuclear	54	100.0	1.0	Eukaryota;Amorphea;Obazoa;Opisthokonta;Nucletmycea;Fungi;Dikarya;Basidiomycota;Agaricomycotina;Agaricomycetes;Incertae Sedis;Stereopsidaceae;Stereopsis;Stereopsis globosa
+EE04	contig_1567415	15	87	16S_rRNA	SSU	plastid	73	97.3	1.0	Bacteria;Cyanobacteriota;Cyanobacteriia;Chloroplast;Incertae Sedis;Incertae Sedis;Micromonas commoda

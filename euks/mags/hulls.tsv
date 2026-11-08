@@ -219,14 +219,19 @@ E29	E29	5	-0.6	-51
 E29	E29	6	-1	-53.5	
 E29	E29	7	-3	-54.3	
 E29	E29	8	-4	-56	
-E30	E30	1	-4.5	-38.5	disc
-E30	E30	2	-3.5	-36.3	
-E30	E30	3	-1.5	-35.8	
-E30	E30	4	0	-36.5	
-E30	E30	5	0.6	-38.5	
-E30	E30	6	0	-40.5	
-E30	E30	7	-1.5	-41.2	
-E30	E30	8	-3.5	-40.5	
+E30	E30	1	-7	-38.5	disc expanded 2026-11-08 to radius ~5 after the RNA re-check (out/hulls/check/E30.png); halo profile r equals the core at matched length; old disc in NOTES.md
+E30	E30	2	-6.3	-35.5	
+E30	E30	3	-4.5	-34	
+E30	E30	4	-2	-33.5	
+E30	E30	5	0	-33.8	
+E30	E30	6	1.5	-34.8	
+E30	E30	7	2.6	-37	
+E30	E30	8	2.6	-40	
+E30	E30	9	1.6	-42.3	
+E30	E30	10	-0.5	-43.7	
+E30	E30	11	-3	-43.8	
+E30	E30	12	-5.3	-42.4	
+E30	E30	13	-6.7	-40.6	
 E31	E31	1	-1	-48	core; sparse halo toward (-6,-36) excluded
 E31	E31	2	0	-45.5	
 E31	E31	3	2	-45.3	

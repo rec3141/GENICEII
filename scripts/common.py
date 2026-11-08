@@ -280,12 +280,13 @@ def is_virus_hull_mag(x):
 
 
 def hull_mag_label(mid):
-    """'Virus VV##', 'Eukaryote EE02 (Ochromonadales)', 'Eukaryote EE05', or 'Eukaryote EE08 (mixed group)' for doubtful MAGs."""
+    """'Virus VV##', 'Eukaryote EE05 (Minidiscus)', 'Eukaryote EE04', or 'Eukaryote EE08 (Oligohymenophorea, mixed group)'.
+    The name is the identify.py taxonomy call and is shown only at high or medium confidence; doubtful MAGs say 'mixed group'."""
     i = hull_mag_info(mid)
     if not i: return ''
     if mid.startswith('VV'): return f'Virus {mid}'
-    h = i.get('taxonomy_hint', '') or ''
-    tag = h if h else ('mixed group' if i.get('status') == 'doubtful' else '')
+    tax = i.get('taxonomy', '') if i.get('taxonomy_confidence', '') in ('high', 'medium') else ''
+    tag = ', '.join(x for x in (tax, 'mixed group' if i.get('status') == 'doubtful' else '') if x)
     return f'Eukaryote {mid}' + (f' ({tag})' if tag else '')
 
 

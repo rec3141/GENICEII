@@ -222,3 +222,50 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
   - `retired:VV01` is in `out/id_registry.tsv`; nothing was renumbered. Its contigs keep the per-contig vOTU handling on the Viruses page.
   - `hull_mags.py` now applies the rule. The current `out/hull_mags.tsv`/`contig_hull_mag.tsv`/`hull_mags_da.tsv` predate it and still list VV01; `bin_domains.py` drops it when wiring `data/`, and `plot_hulls.py` leaves retired ids out of the figure.
 - **`contig_host_label` order:** VV## (none at present) → P## ("Plastid P01", counted as plastid like `is_plastid`) → EE## (doubtful EE only if Tiara calls the contig eukaryotic) → fallback.
+
+## EE30 re-check with expression (2026-11-08)
+- **Why:** the user saw EE30 sitting inside a larger dense cloud of expressed contigs (bottom panel of `euk_hull_mags_tsne.png`).
+- **Tool:** `scripts/hull_check.py <hull> x0 x1 y0 y1` draws a gridded zoom (contigs ≥ 2 kb sized by cumulative RNA, coloured by Tiara) and a second panel coloured by each contig's mean RNA/DNA Pearson r with the hull's reference profile. The first run saves the current members as the reference (`out/hulls/check/<hull>_ref.tsv`), so a later polygon edit is judged against the old core. It also prints median r by contig length for reference, new and outside contigs.
+- **Finding:** in rings around the EE30 centre (−1.9, −38.6), r at matched contig length is the same out to radius ~4.5 and drops past 5. GC is flat (42.9–43.0%). The raw mean r falls earlier only because the halo contigs are shorter. The anticorrelated streak at (4, −42) and E31 below are kept out.
+- **Polygon:** EE30 in `hulls.tsv` is now a 13-vertex polygon of radius ~5. The old disc was (−4.5,−38.5) (−3.5,−36.3) (−1.5,−35.8) (0,−36.5) (0.6,−38.5) (0,−40.5) (−1.5,−41.2) (−3.5,−40.5).
+
+| EE30 | before | after |
+|---|---|---|
+| Size | 36.95 Mbp, 2,721 contigs | 71.77 Mbp, 7,855 contigs |
+| Tiara eukarya | 0.998 | 0.998 |
+| Median expression | 342 per million | 684 per million |
+| t-SNE RMS | 1.64 | 2.84 |
+| N50 | 27.5 kb | 13.3 kb |
+
+- **Added contigs:** 34.8 Mbp in 5,134 contigs, none of them in another MAG before.
+  - Summed profile against the old core: RNA ρ 0.96 and DNA ρ 0.80 (neighbouring MAGs reach ρ 0.61–0.85).
+  - Contig r with the old core profile at matched length: 0.25/0.34/0.43/0.62 (1–5, 5–10, 10–30, > 30 kb), against 0.26/0.34/0.45/0.71 for the core and 0.04/0.12/0.23/0.26 for contigs outside.
+  - Conclusion: the added contigs are the same genome.
+- **Proteins:** the expanded MAG is Chaetoceros (79% of MarFERReT votes).
+- **Caution:** EE30 now gets the "hull added 48.4 Mbp" caution. That rule fires on size alone.
+- **Downstream reruns:** `hull_mags.py`, `hull_expr.py`, `plot_hulls.py` and `heatmap.py`. `hull_mags.py` now also drops the retired VV01 from `out/`.
+
+## Taxonomy of the EE MAGs (2026-11-08, `scripts/identify.py`)
+- **Evidence:** existing danaSeq outputs, fetched once from `mag_marine` with `scripts/fetch_grex.sh` into `out/identify/grex/` (not committed):
+  - MetaEuk proteins against MarFERReT (`eukaryotic/marferret/marferret_proteins.tsv`). The pipeline left the taxonomy empty, so hits are mapped to NCBI lineages locally (MarFERReT taxonomies plus the BLAST taxdump).
+  - barrnap + vsearch/SILVA rRNA genes (`taxonomy/rrna/rrna_genes.tsv`).
+  - Kaiju from `contigs_full.pkl`, as a cross-check only. Kaiju classifies 1–55% of EE bp and mostly says Pseudomonadota, so it is uninformative for these MAGs.
+- **Rules** (the docstring has the details):
+  - The protein call is the deepest NCBI rank with ≥ 50% of alignment-length-weighted votes and ≥ 20 proteins. When the median identity is < 50%, the call goes no deeper than class.
+  - rRNA counts only with ≥ 2 nuclear rRNA contigs. Single rRNA contigs are often misbinned, e.g. a fungal 28S in EE30.
+  - Confidence:
+    - high: support ≥ 0.6, plus rRNA agreement or median identity ≥ 90%;
+    - medium: support ≥ 0.5 and not contradicted; or protein ≥ 0.3 corroborated by rRNA; or rRNA-only from ≥ 3 contigs;
+    - low: a best guess only.
+- **Output:** `out/ee_taxonomy.tsv` (with an empty `completeness` column; BUSCO is being run separately into `out/busco/`), copied to `data/ee_taxonomy.tsv`.
+- **Site wiring:** `hull_mags.tsv` gains `taxonomy`, `taxonomy_rank` and `taxonomy_confidence`. `hull_mag_label` names a MAG only at high or medium confidence. The old 18S `taxonomy_hint` is no longer used in labels.
+- **Calls:**
+  - Diatoms: EE05 Minidiscus (Thalassiosirales; its linked plastid's 16S says T. pseudonana), EE30 Chaetoceros, EE03 Attheya, EE29/EE31 Chaetocerotales, EE27 Thalassiosiraceae, EE26 Staurosira, and EE21 and EE32–EE35 pennates.
+  - Green algae: EE22 Micromonas, EE23 Bathycoccus, EE25 Picochlorum.
+  - EE02 and EE28 Chrysophyceae; EE04 Cercozoa (rRNA); EE07 Acanthoecida (choanoflagellate).
+  - EE12, EE14 and EE17: Calanidae (Calanus copepods), all "little CMO RNA". EE10: Metazoa (94% of kingdom votes, no close reference).
+  - EE01: Laminariales by proteins (kelp-like). Its two 18S/28S contigs say Cercozoa, but they sit on the hull's west edge.
+- **EE08:** a ciliate (Ciliophora 0.82 of protein votes, Oligohymenophorea 0.64, median identity 43%, so distant from references). It is not a metazoan: Metazoa gets < 4% of votes.
+  - 95% of its RNA sits on 5 contigs (24 kb) present in 123–128 of 128 libraries.
+  - Those contigs carry tubulin, ubiquitin and HSP90 with 72–96% identity to many lineages. They are conserved, highly expressed genes, probably taking cross-mapped reads from many eukaryotes.
+  - The rest of the genome has a median of 0.8 reads per million, so EE08's heatmap RNA row is not the genome's own expression.
