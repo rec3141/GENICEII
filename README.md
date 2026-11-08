@@ -275,3 +275,19 @@ The count matrices on disk keep all 130 columns; `all_samples()` lists them.
 | Islands | GI_1266 15 → 14× |
 | Nitrogen, sulfur, other 2024-25 log₂ diesel/control | shift by ≤ 0.26 |
 | 2025-26 contrasts | unchanged (no 2025-26 libraries removed) |
+
+## Eukaryotic genome groups (2026-11-08)
+DAS Tool and Binette lose most eukaryotic genomes: the 10 Mbp Binette cap, DAS Tool's prokaryotic single-copy-gene scoring, and no eukaryote-aware QC or taxonomy. See danaSeq #129. So the eukaryotic genomes are rebuilt from the individual binners' bins with a fixed rule.
+- **Rule** (`euks/mags/scripts`: survey → compact → final → expr → finalize):
+  - join bins that share ≥ 50% of the smaller bin;
+  - split groups at density gaps on the contig t-SNE;
+  - attach small nearby pieces whose GC matches;
+  - merge genomes that sit on top of each other.
+- **Result:** 21 groups, E01–E24.
+  - 8 clean and expressed: E02, E03, E04, E05, E06, E07, E13, E23.
+  - 8 clean but with little CMO RNA: their reads come mostly from the non-CMO samples of the coassembly. They are left out of the CMO network only.
+  - 5 doubtful.
+- **Labels:** `scripts/bin_domains.py` puts the groups into `data/`, and `common.py` (`euk_group`, `euk_group_label`, `contig_host_label`, `special_label`) labels them across the site. Unbinned contigs in a group are now labelled with the group instead of a Kaiju guess (Kaiju has no eukaryotes). `comebin_3937` is E05 and `comebin_4527` is E03.
+- **Eukaryotes page:** a genome-group table, the contig-map figure (`site/img/euk_groups_tsne.png`) and time courses.
+- **Viruses page:** eukaryotic genome groups are candidate hosts for vOTUs. Giant virus and virophage panels use the best-correlated group.
+- Details are in `euks/mags/NOTES.md`.

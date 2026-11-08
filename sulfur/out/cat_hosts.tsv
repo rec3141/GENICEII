@@ -460,7 +460,7 @@ NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_2375	UBA1
 NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_4188_sub	comebin_4188_sub		0.08846438447731615
 NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-lorbin_183	Ilumatobacter_A sp905182555	Actinomycetota	0.07704676732648794
 NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-vamb_488_sub	vamb_488_sub		0.0457291229499256
-NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_3937	Eukaryote (Tiara)	Asgardarchaeota	0.025765249113959852
+NiFe group 3 F420 / methyl-viologen (frh, mvh)	control	dastool-comebin_3937	Eukaryote E05	Asgardarchaeota	0.025765249113959852
 NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all		unbinned		0.27301261143271965
 NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-vamb_2202_sub	vamb_2202_sub		0.10703230807396598
 NiFe group 4 H2-evolving (hyc, hyf, ech, mbh)	all	dastool-metabat_8566	Pelagisphaera	Verrucomicrobiota	0.10405034760132595
@@ -586,13 +586,13 @@ rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-comebin_1140_sub	
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all		unbinned		0.0014663164713936369
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-comebin_4140_sub	comebin_4140_sub		3.322545329739938e-05
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-metabat_7327	JABMPE01	Planctomycetota	2.1928922212005143e-05
-rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-comebin_4527	Eukaryote (Tiara)		7.826739917424715e-06
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	all	dastool-comebin_4527	Eukaryote E03		7.826739917424715e-06
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.9931619770582154
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.006338465726608284
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel		unbinned		0.00041379427943902155
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_4140_sub	comebin_4140_sub		3.941054896142723e-05
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-metabat_7327	JABMPE01	Planctomycetota	2.3622542029365004e-05
-rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_4527	Eukaryote (Tiara)		8.527700736023821e-06
+rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	diesel	dastool-comebin_4527	Eukaryote E03		8.527700736023821e-06
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-semibin_088	Sulfurimonas	Campylobacterota	0.975048053265941
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control		unbinned		0.015375986482111139
 rTCA: pyruvate:ferredoxin oxidoreductase (porABCD)	control	dastool-comebin_1140_sub	Sulfurimonas (Kaiju)		0.009047276061503639

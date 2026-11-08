@@ -17,7 +17,7 @@ def kgen(l):
     g = l[5] if len(l) > 5 and l[5] not in ('', 'NA') else (l[4] if len(l) > 4 else l[-1])
     return f'unbinned ({g}, Kaiju)'
 bid = G.bin.str.replace('dastool-', '', regex=False)
-G['host'] = np.where(G.bin == '', G.kaiju.map(kgen), np.where(G.taxon == bid, G.taxon, G.taxon + ' ' + bid))
+G['host'] = np.where(G.bin == '', [contig_host_label(c, kgen(l)) for c, l in zip(G.contig, G.kaiju)], np.where(G.taxon == bid, G.taxon, G.taxon + ' ' + bid))   # unbinned contigs in a eukaryotic genome group take its label
 oil = list(m.index[m.phase == 'oiled']); ctl = list(m.index[m.phase == 'control'])
 J = {'groups': list(dict.fromkeys(summ.group)), 'categories': [], 'timecourse': {}}
 for c in summ.index:

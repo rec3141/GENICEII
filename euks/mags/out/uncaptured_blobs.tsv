@@ -1,0 +1,6 @@
+blob	contigs	bp	gc	depth_med	who_euk	cx	cy	semibin_bins	in_dastool_bp	rrna18S
+U0	153276	883608364	43.7	2.98	0.59	2.0	-50.4	semibin_1397 405.3Mb; semibin_1398 146.2Mb; semibin_1335 60.0Mb	9233342	SAR > Stramenopiles > Bacillariophytina (46); Amorphea > Obazoa > Choanozoa (37); Amorphea > Obazoa > Fungi (37)
+U2	4162	26195009	43.4	0.99	0.39	-44.1	92.1	semibin_1389 15.4Mb; semibin_1397 7.7Mb; semibin_1398 2.4Mb	4416	
+U3	1557	8070875	40.4	1.99	0.87	-22.0	-102.2	semibin_1397 5.3Mb; semibin_1304 1.3Mb; semibin_1398 0.9Mb	30231	
+U1	1292	7585299	40.6	2.87	0.25	-34.5	44.9	semibin_1397 4.1Mb; semibin_1398 2.5Mb; semibin_1399 0.4Mb	58772	Amorphea > Obazoa > Fungi (2); SAR > Stramenopiles > Bacillariophytina (1)
+U7	483	2998023	59.1	3.89	0.39	54.5	-94.1	semibin_1397 2.5Mb; semibin_1398 0.4Mb; semibin_1399 0.1Mb	0	SAR > Alveolata > Prorocentrales (1)

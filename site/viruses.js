@@ -95,7 +95,7 @@ function vrPairs(sec, J) {
   function draw() {
     wrap.innerHTML = '';
     const p = J.pairs[+sel.value];
-    const box = fig(wrap, `${p.votu} · ${p.label}${p.len ? ` · ${d3.format('.1f')(p.len / 1000)} kb` : ''}`, p.host ? `Dashed: host candidate ${p.host} (TPM). Colours: control pool blue, diesel pool orange.` : 'No host candidate shown.');
+    const box = fig(wrap, `${p.votu} · ${p.label}${p.len ? ` · ${d3.format('.1f')(p.len / 1000)} kb` : ''}`, p.host ? `Dashed: host candidate ${/^E\d\d$/.test(p.host) ? 'eukaryotic genome group ' + p.host + ' (reads per million on its contigs)' : p.host + ' (TPM)'}. Colours: control pool blue, diesel pool orange.` : 'No host candidate shown.');
     const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--ctl)"></i>Control pool</span><span><i style="background:var(--exp)"></i>Diesel pool</span><span style="color:var(--ink-2)"><i style="background:var(--ink-2)"></i>phage transcripts (CPM)</span>${p.host ? '<span style="color:var(--ink-2)"><i class="dash"></i>host MAG (TPM)</span>' : ''}`);
     box.parentNode.insertBefore(lg, box);
     const rows = p.pts.map(x => ({ ...x, medium: 'SW', name: `${x.pool} day ${x.day}` }));

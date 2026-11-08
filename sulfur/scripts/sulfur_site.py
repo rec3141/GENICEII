@@ -28,7 +28,7 @@ def kgen(c):
 def kphy(c):
     l = kj.get(c); return l[1] if l and len(l) > 1 else ''
 _bid = G.bin.str.replace('dastool-', '', regex=False)
-G['host'] = np.where(G.bin == '', G.contig.map(kgen), np.where(G.taxon == _bid, G.taxon, G.taxon + ' ' + _bid))
+G['host'] = np.where(G.bin == '', [contig_host_label(c, kgen(c)) for c in G.contig], np.where(G.taxon == _bid, G.taxon, G.taxon + ' ' + _bid))   # unbinned contigs in a eukaryotic genome group take its label
 G['phylum2'] = np.where(G.bin == '', G.contig.map(kphy), G.phylum)
 REDUCERS = 'Desulfobacterota|Thermodesulfobacteriota|Desulfuromonadota|Nitrospirota|Bacillota'
 

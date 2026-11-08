@@ -1,0 +1,22 @@
+group	bins	n_bins	contigs	union_bp	core_bp	gc	depth_med	tiara_euk_purity	tiara_org	who_euk	rrna18s	tsne_x	tsne_y
+EUK01	semibin_1384	1	56420	323601236	0	44.5	3.53	0.536	0.006	0.457	Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa; Amorphea > Obazoa > Opisthokonta > Nucletmycea > Fungi; Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Ipomoea nil (Japanese morning glory); Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta; Archaeplastida > Chloroplastida > Chlorophyta > Mamiellophyceae > Crustomastix stigmatica; Archaepla	4.5	-15.1
+EUK02	semibin_1280,comebin_1991,comebin_751,comebin_4693,metabat_6251,metabat_10781,metabat_11622,vamb_2078,vamb_3134,binette_996,binette_952	11	12180	64249131	59866260	44.6	3.04	0.942	0.01	0.975	Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa; Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta; SAR > Rhizaria > Cercozoa > Thecofilosea > Incertae Sedis	1.9	-66.6
+EUK03	semibin_1301,comebin_3836	2	8638	67186624	27994024	50.7	2.54	0.983	0.0	0.817	Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta; SAR > Alveolata > Ciliophora > Intramacronucleata > Conthreep; SAR > Stramenopiles > Ochrophyta > Chrysophyceae > Ochromonadales; SAR > Stramenopiles > Ochrophyta > Diatomea > Bacillariophytina	30.4	-63.8
+EUK04	semibin_1338,dastool-comebin_3937	2	8885	75724128	17045056	40.3	2.26	0.979	0.0	0.847		-21.9	-102.0
+EUK05	semibin_1279,binette_842,binette_818	3	7497	39565890	5253652	46.3	1.82	0.994	0.0	0.936	Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa; Amorphea > Obazoa > Opisthokonta > Nucletmycea > Aphelidea; Amorphea > Obazoa > Opisthokonta > Nucletmycea > Fungi; Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Ipomoea nil (Japanese morning glory); Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta; SAR > Alveolata > Ciliophora > Intramacr	18.0	-76.1
+EUK06	metabat_4578,vamb_3866	2	4472	23041033	10695765	44.1	3.48	0.504	0.018	0.808	SAR > Alveolata > Ciliophora > Intramacronucleata > Conthreep	24.9	-8.9
+EUK07	dastool-comebin_4527	1	2788	32910881	0	44.6	3.15	0.998	0.0	0.944		7.8	-42.8
+EUK08	comebin_3707	1	3265	23616047	0	51.3	4.55	0.974	0.0	0.686	Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa; Archaeplastida > Chloroplastida > Chlorophyta > Clade VII > Subclade A	34.2	-75.0
+EUK09	comebin_1009	1	1982	19351505	0	42.9	9.55	0.529	0.0	0.023		-12.5	-59.0
+EUK10	semibin_1317	1	1238	15701361	0	59.1	5.41	0.892	0.0	0.259	SAR > Alveolata > Ciliophora > Intramacronucleata > Spirotrichea	54.3	-94.0
+EUK11	vamb_1186	1	2816	14563140	0	45.1	0.0	0.462	0.002	0.633		-35.5	80.6
+EUK12	semibin_1315	1	1024	13444136	0	48.3	3.42	0.995	0.0	0.264		23.1	-111.2
+EUK13	binette_629	1	1592	5595233	0	36.6	2.98	0.947	0.001	0.876		-18.2	-64.4
+EUK14	binette_978	1	1157	4016404	0	40.8	2.98	0.956	0.008	0.901	Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa; SAR > Rhizaria > Cercozoa > Novel Clade 2 > uncultured eukaryote	-10.3	-76.5
+EUK15	binette_591	1	833	3452138	0	47.3	2.98	0.941	0.0	0.394		14.3	-68.6
+EUK16	binette_830	1	937	3407570	0	32.7	5.19	0.912	0.073	1.0	SAR > Rhizaria > Retaria > Polycystinea > KW16	-28.4	-79.5
+EUK17	binette_758	1	803	3092701	0	50.2	2.62	0.952	0.002	0.636		0.7	-71.0
+EUK18	comebin_3802	1	795	2849331	0	44.2	2.65	0.972	0.0	0.432		-0.1	-67.8
+EUK19	binette_825	1	548	2042577	0	46.0	2.98	0.983	0.002	0.682		-3.2	-72.2
+EUK20	binette_1014	1	541	1757318	0	38.8	2.76	0.181	0.0	0.063		-34.0	24.9
+EUK21	metabat_4788	1	268	1618480	0	49.0	2.9	0.985	0.0	0.954		32.2	-31.8

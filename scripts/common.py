@@ -140,14 +140,75 @@ def is_prokaryote(b):
     return bin_domain(b) == 'prokaryote'
 
 
+_EG = _EGI = _BEG = None
+def _euk_groups():
+    """Eukaryotic genome groups (scripts/bin_domains.py copies them from euks/mags): contig -> E## and group info."""
+    global _EG, _EGI, _BEG
+    if _EG is None:
+        c = pd.read_csv(D + 'contig_euk_group.tsv.gz', sep='\t')
+        _EG = dict(zip(c.contig, c.euk_group))
+        _EGI = pd.read_csv(D + 'euk_groups.tsv', sep='\t', keep_default_na=False).set_index('group')
+        _BEG = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0).get('euk_group', pd.Series(dtype=str)).dropna().to_dict()
+    return _EG, _EGI, _BEG
+
+
+def euk_group(contig):
+    """E## eukaryotic genome group of a contig, '' if none."""
+    return _euk_groups()[0].get(contig, '')
+
+
+def euk_group_info(gid):
+    """Row of data/euk_groups.tsv for a group (status, network_ok, bp, purity, taxonomy_hint, ...) as a dict; {} if unknown."""
+    I = _euk_groups()[1]
+    return I.loc[gid].to_dict() if gid in I.index else {}
+
+
+def is_euk_group(x):
+    """True for an E## eukaryotic genome group id."""
+    return isinstance(x, str) and x in _euk_groups()[1].index
+
+
+def euk_group_label(gid):
+    """'Eukaryote E02 (Ochromonadales)', 'Eukaryote E05', or 'Eukaryote E21 (mixed group)' for doubtful groups."""
+    i = euk_group_info(gid)
+    if not i: return ''
+    h = i.get('taxonomy_hint', '') or ''
+    tag = h if h else ('mixed group' if i.get('status') == 'doubtful' else '')
+    return f'Eukaryote {gid}' + (f' ({tag})' if tag else '')
+
+
+def contig_host_label(contig, fallback):
+    """Host label for an UNBINNED contig: its eukaryotic genome group if it has one, else `fallback` (e.g. a Kaiju label).
+    Contigs of doubtful (mixed) groups only take the group label if Tiara calls the contig itself eukaryotic.
+    Binned contigs should be labelled through their bin (special_label / GTDB), not through this."""
+    g = euk_group(contig)
+    if not g: return fallback
+    if euk_group_info(g).get('status') == 'doubtful':
+        if _TIARA_EUK is None: _load_tiara_euk()
+        if contig not in _TIARA_EUK: return fallback
+    return euk_group_label(g)
+
+
+_TIARA_EUK = None
+def _load_tiara_euk():
+    global _TIARA_EUK
+    c = pd.read_csv(D + 'contig_euk_group.tsv.gz', sep='\t')
+    _TIARA_EUK = set(c.contig[c.tiara == 'eukarya'])
+
+
 def special_label(b):
     """Label that overrides GTDB/Kaiju for non-prokaryote bins: the plastid label (plastid_label) if there is one, else
-    'Plastid/organelle (Tiara)' for organelle bins, 'Eukaryote (Tiara)' for eukaryotic nuclear bins; '' for prokaryotes."""
+    'Plastid/organelle (Tiara)' for organelle bins; for eukaryotic nuclear bins the label of the eukaryotic genome group
+    holding most of the bin (euk_group_label, e.g. comebin_3937 -> 'Eukaryote E05'), or 'Eukaryote (Tiara)'; '' for prokaryotes."""
     if not isinstance(b, str) or not b: return ''
     p = plastid_label(b)
     if p: return p
     d = bin_domain(b)
-    return 'Plastid/organelle (Tiara)' if d == 'organelle' else 'Eukaryote (Tiara)' if d == 'eukaryote' else ''
+    if d == 'organelle': return 'Plastid/organelle (Tiara)'
+    if d == 'eukaryote':
+        g = _euk_groups()[2].get(b if b.startswith('dastool-') else 'dastool-' + b, '')
+        return euk_group_label(g) if g else 'Eukaryote (Tiara)'
+    return ''
 
 
 def is_plastid(b):

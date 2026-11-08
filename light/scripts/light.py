@@ -63,11 +63,11 @@ def kgen(c_):
     g = l[5] if len(l) > 5 and l[5] not in ('', 'NA') else (l[4] if len(l) > 4 else l[-1])
     return f'unbinned ({g}, Kaiju)'
 sub['phylum'] = [rank(b, 'p') if b else (kj.get(c_, ['', ''])[1] if len(kj.get(c_, [])) > 1 else '') for b, c_ in zip(sub.bin, sub.contig)]
-sub['klass'] = ['Eukaryota (Tiara)' if b and bin_domain(b) == 'eukaryote' else 'Plastid/organelle' if b and is_plastid(b) else rank(b, 'c') if b else (kj.get(c_, ['', '', ''])[2] if len(kj.get(c_, [])) > 2 else '') for b, c_ in zip(sub.bin, sub.contig)]
+sub['klass'] = ['Eukaryota (genome group)' if not b and contig_host_label(c_, '').startswith('Eukaryote') else 'Eukaryota (Tiara)' if b and bin_domain(b) == 'eukaryote' else 'Plastid/organelle' if b and is_plastid(b) else rank(b, 'c') if b else (kj.get(c_, ['', '', ''])[2] if len(kj.get(c_, [])) > 2 else '') for b, c_ in zip(sub.bin, sub.contig)]
 sub['plastid'] = [is_plastid(b) for b in sub.bin]
 bid = sub.bin.str.replace('dastool-', '', regex=False)
 sub['taxon'] = [blab(b) for b in sub.bin]
-sub['host'] = np.where(sub.bin == '', sub.contig.map(kgen), np.where(sub.taxon == bid, sub.taxon, sub.taxon + ' ' + bid))
+sub['host'] = np.where(sub.bin == '', [contig_host_label(c_, kgen(c_)) for c_ in sub.contig], np.where(sub.taxon == bid, sub.taxon, sub.taxon + ' ' + bid))   # unbinned contigs in a eukaryotic genome group take its label
 # phototroph hosts: plastid MAGs, Cyanobacteriota MAGs (GTDB puts plastids there too), unbinned with Kaiju Cyanobacteria (mostly plastid-derived)
 phot = np.array(sub.plastid.values, dtype=bool) | sub.phylum.str.contains('Cyanobacteri', regex=True).values
 sub['phot'] = phot
