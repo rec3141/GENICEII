@@ -87,7 +87,7 @@ function overview(sec) {
   <div id="findings"></div>
   <div id="design"></div>`;
   const st = $('#stats', sec), n = D.samples.length;
-  const stats = [[n, 'RNA libraries (10 M read pairs each)'], [D.samples.filter(s => s.pool === 'EXP' && s.phase === 'oiled').length, 'diesel-pool samples after dosing'],
+  const stats = [[n, 'RNA libraries (all reads; median 31 M read pairs)'], [D.samples.filter(s => s.pool === 'EXP' && s.phase === 'oiled').length, 'diesel-pool samples after dosing'],
     [911, 'MAGs in the marine coassembly'], [D.dna_samples.length, 'CMO nanopore metagenomes (DNA)']];
   stats.forEach(([v, l]) => st.append(el('div', { class: 'stat' }, `<div class="v">${fmt(v)}</div><div class="l">${l}</div>`)));
   const F = (D.findings || []);
@@ -125,8 +125,8 @@ function community(sec) {
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', H);
   svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(6));
   svg.append('g').attr('class', 'axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6));
-  svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').text('PC1 (46.7%, season)');
-  svg.append('text').attr('transform', `translate(11,${m.t + 4}) rotate(90)`).text('PC2 (13.1%)');
+  svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').text('PC1 (47.1%, season)');
+  svg.append('text').attr('transform', `translate(11,${m.t + 4}) rotate(90)`).text('PC2 (13.0%)');
   svg.selectAll(null).data(pts).join('path').attr('d', s => d3.symbol(s.medium === 'SI' ? d3.symbolTriangle : s.medium === 'SW' ? d3.symbolCircle : d3.symbolSquare, 46)())
     .attr('transform', s => `translate(${x(s.pc[0])},${y(s.pc[1])})`)
     .attr('fill', s => s.phase === 'pre' ? 'none' : css(POOL[s.pool])).attr('stroke', s => s.phase === 'pre' ? css(POOL[s.pool]) : css('--panel')).attr('stroke-width', s => s.phase === 'pre' ? 1.6 : 1)
@@ -134,9 +134,9 @@ function community(sec) {
   ['2024-25', '2025-26'].forEach(t => { const ps = pts.filter(s => s.season === t); const cx = d3.mean(ps, s => s.pc[0]);
     svg.append('text').attr('class', 'ttl').attr('x', x(cx) + (t === '2024-25' ? 60 : 0)).attr('y', t === '2024-25' ? y(0) : y(d3.max(ps, s => s.pc[1])) - 14).attr('text-anchor', 'middle').text(`CMO ${t}`); });
   // variance partition table
-  const pb = fig($('#perm', sec), 'How much each factor explains', 'PERMANOVA on Aitchison distance (999 permutations; all p ≤ 0.005 except 2024-25 medium, p = 0.11). One pool per treatment means time points within a pool are pseudo-replicates, so read these as effect sizes rather than tests.');
-  const rows = [['Season', 0.497], ['Pool, both seasons', 0.117], ['Phase (pre/control/oiled)', 0.200], ['Season × pool × medium', 0.721],
-    ['2024-25: pool', 0.454], ['2024-25: oiled vs not', 0.432], ['2024-25: ice vs water', 0.032], ['2025-26: pool', 0.271], ['2025-26: oiled vs not', 0.301], ['2025-26: ice vs water', 0.101]];
+  const pb = fig($('#perm', sec), 'How much each factor explains', 'PERMANOVA on Aitchison distance (999 permutations; all p ≤ 0.005 except 2024-25 medium, p = 0.12). One pool per treatment means time points within a pool are pseudo-replicates, so read these as effect sizes rather than tests.');
+  const rows = [['Season', 0.501], ['Pool, both seasons', 0.115], ['Phase (pre/control/oiled)', 0.199], ['Season × pool × medium', 0.724],
+    ['2024-25: pool', 0.447], ['2024-25: oiled vs not', 0.427], ['2024-25: ice vs water', 0.031], ['2025-26: pool', 0.286], ['2025-26: oiled vs not', 0.318], ['2025-26: ice vs water', 0.105]];
   const bw = Math.min(width(pb), 520), bh = 22, sv = d3.select(pb).append('svg').attr('width', bw).attr('height', rows.length * bh + 24);
   const lab = bw < 460 ? 170 : 210, bx = d3.scaleLinear().domain([0, 0.75]).range([0, bw - lab - 50]);
   rows.forEach(([l, v], i) => { const g = sv.append('g').attr('transform', `translate(0,${i * bh + 6})`);
@@ -275,7 +275,7 @@ function qc(sec) {
   });
   const meth = el('div'); sec.insertBefore(meth, $('#cav', sec));
   meth.innerHTML = `<h3>Methods in brief</h3><ul>
-  <li><b>RNA.</b> 130 BGI DNBSEQ libraries, subsampled to 10 M read pairs. They were quality-trimmed, rRNA was removed (bbduk k31 against SILVA, with a subsample kept for rRNA taxonomy), and human reads were removed. Reads were aligned with strobealign to the 11 Gbp marine Flye coassembly; only alignments covering ≥80% of the read were kept. Read pairs on protein-coding genes (Bakta) were counted with featureCounts, and rRNA loci found by barrnap were masked. All expression values are per million protein-coding read pairs (CPM) or length-normalised (TPM).</li>
+  <li><b>RNA.</b> 130 BGI DNBSEQ libraries, used at full sequencing depth (4.37 G read pairs in total, 8.8–72 M per library; an earlier version of this site used the first 10 M pairs of each). They were quality-trimmed, rRNA was removed (bbduk k31 against SILVA, with a subsample kept for rRNA taxonomy), and human reads were removed. Reads were aligned with strobealign to the 11 Gbp marine Flye coassembly; only alignments covering ≥80% of the read were kept. Read pairs on protein-coding genes (Bakta) were counted with featureCounts, and rRNA loci found by barrnap were masked. All expression values are per million protein-coding read pairs (CPM) or length-normalised (TPM).</li>
   <li><b>Genomes.</b> MAGs come from the danaSeq <span class="mono">mag_analysis</span> pipeline: DAS Tool over seven binners, GTDB-Tk r226, and CheckM2 for the Cycloclasticus bins. Bins without a GTDB call are labelled by the majority Kaiju genus of their contigs.</li>
   <li><b>Function.</b> KEGG orthologs come from eggNOG-mapper, remapped onto the current Bakta genes by identical coordinates. KEGG module completeness is computed per MAG from those KOs, and hydrocarbon genes are confirmed with CANT-HYD HMMs at trusted cutoffs.</li>
   <li><b>DNA.</b> 72 CMO nanopore metagenomes were mapped to the same assembly; MAG abundance is the length-weighted mean depth as a share of binned coverage.</li>

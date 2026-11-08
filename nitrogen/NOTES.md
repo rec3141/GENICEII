@@ -70,3 +70,8 @@ Site section `#nitrogen` (site/nitrogen.js, site/nitrogen.json). Code:
 
 ## Bin domains (2026-11-07)
 Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.
+- **Full depth (2026-11-07):**
+  - Headline N-scavenging numbers are unchanged.
+  - metabat_9342 nirBD is 2.4‰ before dosing, 3.5‰ diesel and 1.5‰ control, so it is not switched on by diesel; the text was revised.
+  - metabat_5432 narGH after dosing: 7.8‰ diesel vs 6.8‰ control.
+  - nosZ is still trace (4.8 vs 2.3 CPM).

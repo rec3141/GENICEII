@@ -199,7 +199,7 @@ function popgenSec(sec, G) {
 }
 /* filled in once the fork JSON structures are known */
 function coldCharts(sec, C) {
-  sec.append(el('p', { class: 'kicker' }, 'Fifteen cold-adaptation gene categories, built from KEGG and Pfam (ice-binding proteins are DUF3494/PF11999), measured as CPM of protein-coding reads. The response is regulation within each taxon more than a change in who is present: cold-shock proteins rise in ice within 84% of 167 MAGs tested, and DEAD-box helicases within 77%. The amino-acid make-up of the expressed proteome barely moves between ice and water (≤0.2 SD).'));
+  sec.append(el('p', { class: 'kicker' }, 'Fifteen cold-adaptation gene categories, built from KEGG and Pfam (ice-binding proteins are DUF3494/PF11999), measured as CPM of protein-coding reads. The response is regulation within each taxon more than a change in who is present: cold-shock proteins rise in ice within 82% of 261 MAGs tested, and DEAD-box helicases within 78% (of 260). The amino-acid make-up of the expressed proteome barely moves between ice and water (≤0.2 SD).'));
   // A. category medians with IQR, ice-water and top-bottom
   const cats = C.categories.slice().sort((a, b) => b.ice.median_log2 - a.ice.median_log2);
   const box = fig(sec, 'Cold-adaptation categories: paired log₂ ratios', 'Dot = median over pairs; line = interquartile range. Numbers give the fraction of pairs higher in ice (left) or top ice (right), and the fraction of MAGs where the category rises in ice.');

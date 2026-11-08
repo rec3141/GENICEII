@@ -73,3 +73,4 @@ Install an under-ice O2 optode logger in each pool, and measure O2 in melted cor
 
 ## Bin domains (2026-11-07)
 Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.
+- **Full depth (2026-11-07):** conclusions are unchanged. The within-genome ice shift is now +0.13 (16 of 24 pairs, p = 0.04); the page wording follows p.

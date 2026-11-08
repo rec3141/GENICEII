@@ -10,3 +10,5 @@
 !/site/**
 /data/
 __pycache__/
+/data_capped/
+/data_full_raw/

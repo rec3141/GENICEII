@@ -19,7 +19,7 @@ function metalsSec(sec) {
   const zn = byName['Zn/Cd/Pb export (zntA, cadA, czcD) + sensors'], psp = byName['Phage-shock membrane stress (psp)'];
   [[`${d3.format('.1f')(2 ** d26(psp))}×`, 'phage-shock (psp) membrane-stress transcripts in the 2025-26 diesel pool, relative to its own pre-dosing level and the control'],
    [`${d3.format('.1f')(2 ** d26(zn))}×`, 'Zn/Cd/Pb export transcripts, same comparison; much of it carried by the Cycloclasticus bloom'],
-   ['13 of 13', 'top-vs-bottom ice pairs with more mercury and arsenic resistance transcripts at the colder, saltier top'],
+   [(() => { const t = n => J.cats.find(c => c.name.startsWith(n)).ice; const hg = t('Mercury'), as = t('Arsenic'); return hg.tb_up === as.tb_up ? `${hg.tb_up} of ${hg.tb_n}` : `${hg.tb_up} and ${as.tb_up} of ${hg.tb_n}`; })(), 'top-vs-bottom ice pairs with more mercury and arsenic resistance transcripts at the colder, saltier top'],
    [`${d3.format('.0f')(mob)}% vs ${d3.format('.1f')(J.hc_ref.mobile_assoc)}%`, 'of toxic-metal resistance genes vs hydrocarbon genes sit on or next to mobile elements']]
     .forEach(([v, l]) => st.append(el('div', { class: 'stat' }, `<div class="v">${v}</div><div class="l">${l}</div>`)));
   sec.append(el('h3', {}, 'What we found'));

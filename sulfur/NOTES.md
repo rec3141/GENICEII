@@ -15,7 +15,7 @@ Site section `#sulfur` (site/sulfur.js, site/sulfur.json). Code:
   - aclAB is 96% Sulfurimonas (+4.0 / +4.0, BACI +2.1). porABCD is 99% Sulfurimonas (+4.8 / +3.3, BACI +2.0).
   - fccAB sulfide dehydrogenase is +2.7 in 2025-26 (BACI +1.8): 58% semibin_088, 15% Cycloclasticus.
 - **Pool history vs diesel:**
-  - 2025-26: both pools had similar hydAB before dosing (about 2,950 vs 2,870 CPM). The diesel pool kept it while the control fell, so this winter shows a real diesel effect (BACI q=0.023 for semibin_088 at MAG level).
+  - 2025-26: both pools had similar hydAB before dosing (about 2,890 vs 2,820 CPM at full depth). The diesel pool kept it while the control fell, so this winter shows a real diesel effect (BACI q=0.023 for semibin_088 at MAG level).
   - 2024-25: the single diesel pre-dosing sample already held 903 CPM vs 15–69 in the control (after the day-5 relabel). Here the contrast is mostly pool history; MAG BACI is −0.3 to −1.3.
 - **Cycloclasticus is a hydrogen/sulfur actor too:**
   - It carries 93% of the bidirectional Hox hydrogenase (+5.7 in 2025-26, BACI +3.8).
