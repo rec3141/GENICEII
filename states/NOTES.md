@@ -75,3 +75,8 @@ Site section `#states` (site/states.js, site/states.json), in the "Diesel respon
 
 ## Bin domains (2026-11-07)
 Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.
+
+## Full-depth rebuild (2026-11-07)
+- MAGs passing the read threshold: 83 → 150. Pool-testable in 2025-26: 19 → 79 (67 significant). Ice is the main axis for 102.
+- lorbin_184 PC1 now trends with day (r −0.68), so the text says so again.
+- metabat_5376 pool difference: q = 0.067. Nitrosopumilus still has too few reads.

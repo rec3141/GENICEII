@@ -1,6 +1,6 @@
 # CMO RNA-seq exploration (2026-10-23)
 
-130 BGI metatranscriptomes (10M pairs/sample) mapped to the marine Flye coassembly
+130 BGI metatranscriptomes (full depth since 2026-11-07; previously the first 10M pairs/sample) mapped to the marine Flye coassembly
 (illumina_rna run in Grex ~/scratch/project_rnaseq/marine). Metadata from
 /data/dev/genice-sample-metadata. EXP = oiled pool, diesel both years: 2024-25 added DAY05 16:30; 2025-26 ~136 L injected DAY01
 (crude oil was only used for isolates/small incubations). CTL = unoiled pool. One pool each, so time points are
@@ -201,3 +201,37 @@ Every page's label function now calls `special_label`. Analyses that assume a ba
 - light AAP/rhodopsin hosts
 
 The Eukaryotes page lists the eukaryotic nuclear bins. Rerun `bin_domains.py` whenever the bins change.
+
+## Full-depth rebuild (2026-11-07)
+The whole site now uses the full-depth `illumina_rna` run.
+- **Source:** Grex `~/scratch/project_rnaseq/marine_full`, the same pipeline as the capped run but without `--max_read_pairs`.
+- **Depth:** 4.37 G read pairs used, up from 1.30 G. Pairs on protein-coding genes: 0.674 G (was 0.228 G); per-library median 4.27 M (was 1.49 M).
+- **Unchanged:** 130 samples, `samples.tsv` byte-identical, and rRNA/mapping percentages.
+
+**Gene IDs.** The full-depth tables carry the reconciled Bakta locus tags (danaSeq PR #100). Their feature order is identical to the capped run: an md5 of (contig, type, length) over all 13,335,085 rows matches. So the local gene table keeps the old tags and only the count matrix was swapped (row i = the same feature).
+- No ID translation was needed. Every gene-ID-keyed local input still joins as before (100% by row identity), including:
+  - the KO remap;
+  - CANT-HYD, hc_genes, island tables and the cold Pfam hits.
+- To join with new-tag outputs on Grex, use `mag_marine/annotation/bakta/extra/locus_tag_map.tsv`.
+
+**Files.**
+- Capped inputs are in `data_capped/` (not tracked), with site JSON and out/ snapshots in `data_capped/site_before`.
+- Raw full-depth tables are in `data_full_raw/`.
+- Batch logs are in `data_capped/rebuild_logs/` (run_batch.sh, *.status).
+
+**Before → after (headline numbers):**
+
+| Page | Change |
+|---|---|
+| Overview findings | aromatic diesel/control 43/37/26/16× → 42/38/28/16–18×; their BACI "11–14×" → 8–18× (the old range did not match the capped data either); Cycloclasticus share of aromatic families 83–99% → 85–100%; hydrogenase BACI +3.1 → +3.2; functions falling >2× everywhere 10 → 25 (rising 117 → 130; PsbZ drops out); 50-400-T64 CuMMO "30–40 CPM" → median ~140 CPM (also a pre-existing error) |
+| Community | PC1 46.7 → 47.1%; PERMANOVA R² within ±0.02 |
+| Physiological states | MAGs profiled 83 → 150; pool-testable in 2025-26 19 → 79 (significant 18 → 67); ice main axis 64/83 → 102/150; lorbin_184 PC1 trend with day r −0.08 → −0.68; Sulfitobacter metabat_5376 pool difference q ≈ 0.001 → 0.067 (growth-index drop 142 → 96‰ still holds) |
+| Nitrogen | headlines unchanged (nitrate transporters 2,221 vs 68 CPM, BACI +4.8); nosZ BACI −1.6 → +1.8 at < 5 CPM; metabat_9342 nirBD "0 → 2.7‰" → 2.4‰ before, 3.5‰ diesel, 1.5‰ control (switch-on claim withdrawn); metabat_5432 narGH diesel ≈ control after dosing |
+| Sulfur | unchanged within rounding (pre-dosing 2024-25 hydrogenase 907 vs 12–68 CPM) |
+| Oxygen | conclusion unchanged (regulation −0.01, composition +1.15); within-genome ice shift p 0.37 → 0.04 |
+| Light | plastid share 805/767 → 801/766‰; time-controlled partial: smallest q 0.22/0.17 → 0.07/0.09 (still none < 0.05) |
+| Metals | arsenic top > bottom ice 13/13 → 12/13 |
+| Viruses | transcribed vOTUs 13,618 → 9,959 (one read was ≥ 1 CPM at low depth) |
+| Islands | GI_2286 13 → 16×, GI_1266 18 → 15×, GI_2179 19 → 24× its host |
+| Ice | polyamines higher in ice 24/24 → 23/24; cold-shock up within 84% of 167 MAGs → 82% of 261 |
+| Cyclo, HGT, Eukaryotes | unchanged (the Eukaryotes page is rRNA-based) |

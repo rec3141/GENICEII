@@ -111,3 +111,4 @@ Site section `#light`, first item under the Biogeochemistry menu (site/light.js,
 
 ## Bin domains (2026-11-07)
 Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.
+- **Full depth (2026-11-07):** partial correlations: smallest q is 0.07 for gene groups and 0.09 for genomes, still none < 0.05. metabat_1122 AAP vs under-ice r −0.68 (diesel), partial r +0.01.
