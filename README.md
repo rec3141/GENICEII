@@ -235,3 +235,10 @@ The whole site now uses the full-depth `illumina_rna` run.
 | Islands | GI_2286 13 → 16×, GI_1266 18 → 15×, GI_2179 19 → 24× its host |
 | Ice | polyamines higher in ice 24/24 → 23/24; cold-shock up within 84% of 167 MAGs → 82% of 261 |
 | Cyclo, HGT, Eukaryotes | unchanged (the Eukaryotes page is rRNA-based) |
+
+## Response guilds (2026-11-07)
+`guilds/` holds the analysis behind the site page `#guilds` (Genomes & ice). It places all 150 profiled genomes in one space, two ways.
+- **Driver fingerprints:** commonality analysis of each genome's within-genome state on winter, ice, diesel pool, time and under-ice light, with the shared seasonal part reported separately. Mapped with UMAP and Gaussian-mixture clusters.
+- **Co-response guilds:** a numpy EM-PCA shared-factor model over all genomes' state scores, giving 4 factors.
+
+See guilds/NOTES.md.
