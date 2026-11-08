@@ -2,6 +2,8 @@
 import json, glob, os, numpy as np, pandas as pd
 D = '/data/dev/rnaseq-exploration/ice/popgen'; E = '/data/dev/rnaseq-exploration'
 S = pd.read_csv(f'{D}/samples_map.tsv', sep='\t', index_col=0)
+import sys as _s; _s.path.insert(0, '/data/dev/rnaseq-exploration/scripts'); from common import excluded_names
+S = S[~S.index.isin(excluded_names('metagenome'))]   # QC-excluded metagenomes (metadata qc_flag)
 P = pd.read_csv(f'{D}/abund_pct.tsv', sep='\t', index_col=0); S = S.loc[[s for s in S.index if s in P.columns]]; P = P[S.index]
 Cv = pd.read_csv(f'{D}/abund_cov.tsv', sep='\t', index_col=0)[S.index]
 tax = pd.read_csv(f'{E}/data/gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).drop_duplicates('user_genome').set_index('user_genome').classification

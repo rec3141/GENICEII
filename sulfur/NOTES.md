@@ -44,3 +44,8 @@ Site section `#sulfur` (site/sulfur.js, site/sulfur.json). Code:
 
 ## Bin domains (2026-11-07)
 Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (see the README). Eukaryotic and organelle bins are relabelled, and they are excluded wherever a bacterial genome is assumed. The three eukaryotic bins are comebin_4527, comebin_3937 and lorbin_494_sub.
+
+## Day-18 exclusion (2026-11-08)
+- The 2024-25 day-18 control libraries were removed (contamination). The 2024-25 control-ice pool FST for semibin_088 fell from 0.35 (1,899 sites) to 0.16 (95 sites), because that core carried most of the control-ice coverage.
+- The page now reports 2025-26 pool FST instead: 0.16 water, 0.13 ice, against 0.03 ice/water.
+- MAG-level 2024-25 BACI for the three Sulfurimonas MAGs is now −0.9 to +0.3 (all q = 1; was −0.3 to −1.2). The "pool history" reading is unchanged.

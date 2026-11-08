@@ -1,37 +1,37 @@
 category	season	induced_cpm	mobile_share	l2fc_total
-BMM toluene/phenol monooxygenase	2024-25	289.99	0.4	4.55
+BMM toluene/phenol monooxygenase	2024-25	290.04	0.4	4.82
 BMM toluene/phenol monooxygenase	2025-26	183.07	0.0	3.04
-C1-C4 alkane MO	2024-25	27.79	25.7	2.36
+C1-C4 alkane MO	2024-25	27.49	25.1	2.34
 C1-C4 alkane MO	2025-26	2.34	12.1	0.16
-CYP153	2024-25	415.51	28.0	2.3
+CYP153	2024-25	416.08	28.4	2.29
 CYP153	2025-26	161.36	60.2	0.89
-PAH lower (nahB/D/E/F)	2024-25	1.83	7.7	2.79
+PAH lower (nahB/D/E/F)	2024-25	1.82	7.6	2.75
 PAH lower (nahB/D/E/F)	2025-26	98.53	80.8	3.52
-RHO dioxygenase alpha/beta	2024-25	1056.12	4.7	1.85
+RHO dioxygenase alpha/beta	2024-25	1043.5	4.7	1.79
 RHO dioxygenase alpha/beta	2025-26	1539.34	1.5	0.86
-RHO ferredoxin/reductase	2024-25	5.72	57.7	1.44
+RHO ferredoxin/reductase	2024-25	5.64	58.0	1.38
 RHO ferredoxin/reductase	2025-26	0.98	45.9	-1.25
-alkB	2024-25	231.53	21.4	2.28
+alkB	2024-25	231.3	21.4	2.31
 alkB	2025-26	283.65	3.0	2.32
-alkG/alkT (rubredoxin system)	2024-25	24.15	2.9	0.41
+alkG/alkT (rubredoxin system)	2024-25	24.68	2.7	0.61
 alkG/alkT (rubredoxin system)	2025-26	43.53	3.0	1.09
-anaerobic (bss/bcr/bam)	2024-25	0.02	0.0	-1.18
+anaerobic (bss/bcr/bam)	2024-25	0.02	0.0	-1.27
 anaerobic (bss/bcr/bam)	2025-26	0.03	0.0	0.39
-extradiol dioxygenase	2024-25	178.24	1.6	0.76
+extradiol dioxygenase	2024-25	178.06	1.6	0.78
 extradiol dioxygenase	2025-26	775.62	6.1	2.89
-gentisate 1,2-dioxygenase	2024-25	5.6	51.0	2.22
+gentisate 1,2-dioxygenase	2024-25	5.55	51.0	2.15
 gentisate 1,2-dioxygenase	2025-26	1.74	9.9	-1.01
-intradiol dioxygenase	2024-25	33.63	32.5	0.23
+intradiol dioxygenase	2024-25	33.23	32.5	0.15
 intradiol dioxygenase	2025-26	10.34	9.3	-0.53
-ladA/almA	2024-25	9.21	0.2	2.4
+ladA/almA	2024-25	9.05	0.1	2.29
 ladA/almA	2025-26	3.34	0.4	3.12
-maleylacetate reductase	2024-25	2.98	21.4	1.17
+maleylacetate reductase	2024-25	2.95	21.1	1.07
 maleylacetate reductase	2025-26	0.56	15.3	0.09
-meta lower (xyl/dmp)	2024-25	371.91	1.3	2.71
+meta lower (xyl/dmp)	2024-25	371.19	1.3	2.68
 meta lower (xyl/dmp)	2025-26	1237.13	8.7	2.99
-ortho lower (cat/pca)	2024-25	87.54	14.7	0.06
+ortho lower (cat/pca)	2024-25	86.38	14.8	-0.01
 ortho lower (cat/pca)	2025-26	32.17	6.7	-0.38
-paa phenylacetate	2024-25	147.03	3.4	0.55
+paa phenylacetate	2024-25	145.95	3.4	0.47
 paa phenylacetate	2025-26	68.51	5.4	0.29
-salicylate hydroxylase	2024-25	20.94	1.6	1.01
+salicylate hydroxylase	2024-25	20.94	1.6	0.93
 salicylate hydroxylase	2025-26	189.08	6.5	3.62

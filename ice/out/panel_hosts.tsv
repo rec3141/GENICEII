@@ -1,101 +1,101 @@
 category	bin	share	taxon
-Osmolyte uptake (opu/pro ABC, BetT, ProP)		0.5589670083019708	
-Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-lorbin_104	0.07359160356030989	s__Pontimonas sp017857245
-Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-metabat_5376	0.04424880990885214	s__Sulfitobacter sp041552635
-Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-metabat_1104	0.03375615178554676	s__RS62 sp002340675
-Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-metabat_8154	0.022975936652787406	s__Aquiluna sp002390305
-Glycine betaine synthesis (betA/betB)		0.36834095636572534	
-Glycine betaine synthesis (betA/betB)	dastool-metabat_5376	0.09674672021805054	s__Sulfitobacter sp041552635
-Glycine betaine synthesis (betA/betB)	dastool-lorbin_032	0.06641692512341017	s__Sulfitobacter sp024636495
-Glycine betaine synthesis (betA/betB)	dastool-vamb_549	0.06599681949699625	s__Sulfitobacter sp013282155
-Glycine betaine synthesis (betA/betB)	dastool-lorbin_048	0.04277240657464068	s__
-Ectoine synthesis (ectABC/D)	dastool-lorbin_188	0.31665204530037394	s__RS62 sp000496475
-Ectoine synthesis (ectABC/D)	dastool-lorbin_059	0.17320908224145906	s__Perlucidibaca sp018066805
-Ectoine synthesis (ectABC/D)	dastool-metabat_9342	0.10632725748134325	s__
-Ectoine synthesis (ectABC/D)		0.10383418897301223	
-Ectoine synthesis (ectABC/D)	dastool-vamb_3279_sub	0.0756747232053872	
-Polyamine synthesis		0.24397190111999667	
-Polyamine synthesis	dastool-vamb_549	0.07623740013498446	s__Sulfitobacter sp013282155
-Polyamine synthesis	dastool-metabat_5376	0.05734403415883202	s__Sulfitobacter sp041552635
-Polyamine synthesis	dastool-lorbin_048	0.04493875435862172	s__
-Polyamine synthesis	dastool-semibin_088	0.039363459434757934	s__
-Peroxiredoxins and catalase		0.32389826852071696	
-Peroxiredoxins and catalase	dastool-semibin_088	0.17249709059710164	s__
-Peroxiredoxins and catalase	dastool-lorbin_184	0.08404056198761593	s__Cycloclasticus sp001566825
-Peroxiredoxins and catalase	dastool-lorbin_059	0.0445745841744829	s__Perlucidibaca sp018066805
-Peroxiredoxins and catalase	dastool-vamb_3279_sub	0.04186307252927804	
-Dps and osmY stress proteins		0.2747378811279484	
-Dps and osmY stress proteins	dastool-lorbin_029	0.20028677649923302	s__Parasphingorhabdus sp036964675
-Dps and osmY stress proteins	dastool-metabat_8244	0.13916534628614555	s__Cognaticolwellia sp024585285
-Dps and osmY stress proteins	dastool-lorbin_324	0.044564244685735846	s__
-Dps and osmY stress proteins	dastool-vamb_3279_sub	0.042901019327493024	
-Cold-shock proteins (cspA)		0.24984725100782051	
-Cold-shock proteins (cspA)	dastool-semibin_088	0.11682707319725544	s__
-Cold-shock proteins (cspA)	dastool-metabat_9342	0.06126076515231489	s__
-Cold-shock proteins (cspA)	dastool-metabat_5376	0.058330854839275845	s__Sulfitobacter sp041552635
-Cold-shock proteins (cspA)	dastool-vamb_4149	0.04084115053546636	s__UBA9145 sp001438145
-DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)		0.2911569849757827	
-DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-metabat_5376	0.06774607959804699	s__Sulfitobacter sp041552635
-DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-semibin_042	0.04418850378808038	s__
-DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-lorbin_059	0.03725648768282743	s__Perlucidibaca sp018066805
-DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-vamb_4149	0.02902747646672749	s__UBA9145 sp001438145
-Ribosome hibernation (raiA, hpf, rmf)		0.3490520826961267	
-Ribosome hibernation (raiA, hpf, rmf)	dastool-metabat_5376	0.07447944357505414	s__Sulfitobacter sp041552635
-Ribosome hibernation (raiA, hpf, rmf)	dastool-semibin_088	0.04984557370092806	s__
-Ribosome hibernation (raiA, hpf, rmf)	dastool-lorbin_048	0.04902775921984691	s__
-Ribosome hibernation (raiA, hpf, rmf)	dastool-lorbin_059	0.03505477035495061	s__Perlucidibaca sp018066805
-Branched-chain fatty acid start (bkd, fabH)		0.25912909218292474	
-Branched-chain fatty acid start (bkd, fabH)	dastool-metabat_9342	0.06577657753225655	s__
-Branched-chain fatty acid start (bkd, fabH)	dastool-lorbin_184	0.05781423300034013	s__Cycloclasticus sp001566825
-Branched-chain fatty acid start (bkd, fabH)	dastool-metabat_5376	0.05781321627042581	s__Sulfitobacter sp041552635
-Branched-chain fatty acid start (bkd, fabH)	dastool-lorbin_048	0.055100895570539196	s__
-Unsaturated fatty acids (fabA/fabB, desaturases)		0.2993279171601567	
-Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-metabat_5376	0.05290198628162576	s__Sulfitobacter sp041552635
-Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-vamb_549	0.0457248799956634	s__Sulfitobacter sp013282155
-Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-semibin_042	0.03827161996311945	s__
-Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-vamb_4149	0.03568255581839802	s__UBA9145 sp001438145
-Light harvesting and PSII (LHC, psbA)		0.4852215399463386	
-Light harvesting and PSII (LHC, psbA)	dastool-lorbin_567	0.1381384928520604	Plastid (Attheya septentrionalis)
-Light harvesting and PSII (LHC, psbA)	dastool-lorbin_632	0.08778600947562239	Plastid (unidentified alga)
-Light harvesting and PSII (LHC, psbA)	dastool-lorbin_511	0.04532329411154106	Plastid (Guillardia theta)
-Light harvesting and PSII (LHC, psbA)	dastool-metabat_9288_sub	0.03910703669845152	Plastid (unidentified alga)
-RuBisCO (rbcL/rbcS)		0.2772531904535465	
-RuBisCO (rbcL/rbcS)	dastool-lorbin_567	0.1836158287077358	Plastid (Attheya septentrionalis)
-RuBisCO (rbcL/rbcS)	dastool-metabat_8153	0.14113935836583488	Plastid (unidentified alga)
-RuBisCO (rbcL/rbcS)	dastool-metabat_1560	0.08300914179928408	Plastid (unidentified alga)
-RuBisCO (rbcL/rbcS)	dastool-lorbin_632	0.0751918106430222	Plastid (unidentified alga)
-MSHA pili and adhesins		0.6597639579130339	
-MSHA pili and adhesins	dastool-comebin_1140_sub	0.06073864255046923	
-MSHA pili and adhesins	dastool-lorbin_048	0.034829091702190035	s__
-MSHA pili and adhesins	dastool-semibin_088	0.03181654069636323	s__
-MSHA pili and adhesins	dastool-semibin_042	0.0202922642743559	s__
-Gas vesicles (gvpA)		0.9563278666019172	
-Gas vesicles (gvpA)	dastool-lorbin_155	0.03528109607707166	s__ASP10-02a sp963925635
-Gas vesicles (gvpA)	dastool-metabat_1066	0.004355184122441884	s__
-Gas vesicles (gvpA)	dastool-comebin_2557	0.004035853198569328	s__
+Osmolyte uptake (opu/pro ABC, BetT, ProP)		0.5587599218203474	
+Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-lorbin_104	0.07405338598990659	s__Pontimonas sp017857245
+Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-metabat_5376	0.043584650761645034	s__Sulfitobacter sp041552635
+Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-metabat_1104	0.033969354564081594	s__RS62 sp002340675
+Osmolyte uptake (opu/pro ABC, BetT, ProP)	dastool-metabat_8154	0.02311886271260015	s__Aquiluna sp002390305
+Glycine betaine synthesis (betA/betB)		0.3611839998072642	
+Glycine betaine synthesis (betA/betB)	dastool-metabat_5376	0.09732155509028195	s__Sulfitobacter sp041552635
+Glycine betaine synthesis (betA/betB)	dastool-lorbin_032	0.06750331489233248	s__Sulfitobacter sp024636495
+Glycine betaine synthesis (betA/betB)	dastool-vamb_549	0.06715766005368289	s__Sulfitobacter sp013282155
+Glycine betaine synthesis (betA/betB)	dastool-lorbin_048	0.04299593161647294	s__
+Ectoine synthesis (ectABC/D)	dastool-lorbin_188	0.3186728162878304	s__RS62 sp000496475
+Ectoine synthesis (ectABC/D)	dastool-lorbin_059	0.17109579925664886	s__Perlucidibaca sp018066805
+Ectoine synthesis (ectABC/D)	dastool-metabat_9342	0.10703136218529129	s__
+Ectoine synthesis (ectABC/D)		0.10417926447792748	
+Ectoine synthesis (ectABC/D)	dastool-vamb_3279_sub	0.07615047336207245	
+Polyamine synthesis		0.23129935354899187	
+Polyamine synthesis	dastool-vamb_549	0.07835172371301077	s__Sulfitobacter sp013282155
+Polyamine synthesis	dastool-metabat_5376	0.057637658042064666	s__Sulfitobacter sp041552635
+Polyamine synthesis	dastool-lorbin_048	0.04593876873127699	s__
+Polyamine synthesis	dastool-semibin_088	0.040329972573396426	s__
+Peroxiredoxins and catalase		0.3156124220403566	
+Peroxiredoxins and catalase	dastool-semibin_088	0.1755439781892438	s__
+Peroxiredoxins and catalase	dastool-lorbin_184	0.08558696603675701	s__Cycloclasticus sp001566825
+Peroxiredoxins and catalase	dastool-lorbin_059	0.04501777414982232	s__Perlucidibaca sp018066805
+Peroxiredoxins and catalase	dastool-vamb_3279_sub	0.042569470362904385	
+Dps and osmY stress proteins		0.2646966574510615	
+Dps and osmY stress proteins	dastool-lorbin_029	0.2052615067956614	s__Parasphingorhabdus sp036964675
+Dps and osmY stress proteins	dastool-metabat_8244	0.1413176640180396	s__Cognaticolwellia sp024585285
+Dps and osmY stress proteins	dastool-lorbin_324	0.04568129349946652	s__
+Dps and osmY stress proteins	dastool-vamb_3279_sub	0.04397624139837739	
+Cold-shock proteins (cspA)		0.2393339520097456	
+Cold-shock proteins (cspA)	dastool-semibin_088	0.11993943794080361	s__
+Cold-shock proteins (cspA)	dastool-metabat_9342	0.06294792290657202	s__
+Cold-shock proteins (cspA)	dastool-metabat_5376	0.05719861525392545	s__Sulfitobacter sp041552635
+Cold-shock proteins (cspA)	dastool-vamb_4149	0.04188294892246629	s__UBA9145 sp001438145
+DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)		0.26948531169033785	
+DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-metabat_5376	0.06611839892889661	s__Sulfitobacter sp041552635
+DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-semibin_042	0.04633202365228965	s__
+DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-lorbin_059	0.037333450966509106	s__Perlucidibaca sp018066805
+DEAD-box RNA helicases (csdA/deaD, srmB, rhlB, rhlE)	dastool-vamb_4149	0.030316233697282268	s__UBA9145 sp001438145
+Ribosome hibernation (raiA, hpf, rmf)		0.30629020248362876	
+Ribosome hibernation (raiA, hpf, rmf)	dastool-metabat_5376	0.0767578547351235	s__Sulfitobacter sp041552635
+Ribosome hibernation (raiA, hpf, rmf)	dastool-semibin_088	0.05423405737038551	s__
+Ribosome hibernation (raiA, hpf, rmf)	dastool-lorbin_048	0.05212024337448506	s__
+Ribosome hibernation (raiA, hpf, rmf)	dastool-lorbin_059	0.0368585029534364	s__Perlucidibaca sp018066805
+Branched-chain fatty acid start (bkd, fabH)		0.23755485475772348	
+Branched-chain fatty acid start (bkd, fabH)	dastool-metabat_9342	0.06854914218615774	s__
+Branched-chain fatty acid start (bkd, fabH)	dastool-lorbin_184	0.06025117491679275	s__Cycloclasticus sp001566825
+Branched-chain fatty acid start (bkd, fabH)	dastool-lorbin_048	0.05680494030427961	s__
+Branched-chain fatty acid start (bkd, fabH)	dastool-metabat_5376	0.05632919433817434	s__Sulfitobacter sp041552635
+Unsaturated fatty acids (fabA/fabB, desaturases)		0.28909827614850414	
+Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-metabat_5376	0.05235401763905414	s__Sulfitobacter sp041552635
+Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-vamb_549	0.04705820092050291	s__Sulfitobacter sp013282155
+Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-semibin_042	0.03937508264027045	s__
+Unsaturated fatty acids (fabA/fabB, desaturases)	dastool-vamb_4149	0.0365842486508119	s__UBA9145 sp001438145
+Light harvesting and PSII (LHC, psbA)		0.48520559568601346	
+Light harvesting and PSII (LHC, psbA)	dastool-lorbin_567	0.13813985776208934	Plastid (Attheya septentrionalis)
+Light harvesting and PSII (LHC, psbA)	dastool-lorbin_632	0.08779110383123197	Plastid (unidentified alga)
+Light harvesting and PSII (LHC, psbA)	dastool-lorbin_511	0.04533033012097504	Plastid (Guillardia theta)
+Light harvesting and PSII (LHC, psbA)	dastool-metabat_9288_sub	0.03910461130508398	Plastid (unidentified alga)
+RuBisCO (rbcL/rbcS)		0.27723867361562676	
+RuBisCO (rbcL/rbcS)	dastool-lorbin_567	0.18363380265837925	Plastid (Attheya septentrionalis)
+RuBisCO (rbcL/rbcS)	dastool-metabat_8153	0.1411267914016175	Plastid (unidentified alga)
+RuBisCO (rbcL/rbcS)	dastool-metabat_1560	0.08302228685075969	Plastid (unidentified alga)
+RuBisCO (rbcL/rbcS)	dastool-lorbin_632	0.075206030787578	Plastid (unidentified alga)
+MSHA pili and adhesins		0.6561516911211697	
+MSHA pili and adhesins	dastool-comebin_1140_sub	0.06200222084146528	
+MSHA pili and adhesins	dastool-lorbin_048	0.035346813676597325	s__
+MSHA pili and adhesins	dastool-semibin_088	0.03247076349870227	s__
+MSHA pili and adhesins	dastool-semibin_042	0.020715936793702244	s__
+Gas vesicles (gvpA)		0.9581254673294864	
+Gas vesicles (gvpA)	dastool-lorbin_155	0.0348357647458754	s__ASP10-02a sp963925635
+Gas vesicles (gvpA)	dastool-metabat_1066	0.004502074179370661	s__
+Gas vesicles (gvpA)	dastool-comebin_2557	0.0025366937452675556	s__
 Gas vesicles (gvpA)	dastool-comebin_2315_sub	0.0	
-Cyanophycin and PHA storage		0.21919425925478467	
-Cyanophycin and PHA storage	dastool-lorbin_184	0.0784674121562529	s__Cycloclasticus sp001566825
-Cyanophycin and PHA storage	dastool-lorbin_048	0.062028370820126875	s__
-Cyanophycin and PHA storage	dastool-metabat_9342	0.059221130222491564	s__
-Cyanophycin and PHA storage	dastool-semibin_042	0.04888691649744298	s__
-Flagellar motility (bacterial)	dastool-semibin_088	0.5268731850036358	s__
-Flagellar motility (bacterial)		0.2198965213663562	
-Flagellar motility (bacterial)	dastool-semibin_042	0.02534208504563946	s__
-Flagellar motility (bacterial)	dastool-comebin_1140_sub	0.02150293198530711	
-Flagellar motility (bacterial)	dastool-lorbin_095	0.01281137873117617	s__
-Methylotrophy (xoxF, exaA, mxaF)	dastool-vamb_500_sub	0.5146868139488813	
-Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_051	0.1299331931270303	s__BACL14 sp913058475
-Methylotrophy (xoxF, exaA, mxaF)		0.09926197936057954	
-Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_135	0.04509283152442207	s__Cognaticolwellia sp003061515
-Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_081	0.03325783284895397	s__BACL14 sp000168995
-DMSP and methanethiol (dmdA, ddd, mddA)		0.2907046134201769	
-DMSP and methanethiol (dmdA, ddd, mddA)	dastool-metabat_9342	0.16379769820996248	s__
-DMSP and methanethiol (dmdA, ddd, mddA)	dastool-lorbin_032	0.0725357831296944	s__Sulfitobacter sp024636495
-DMSP and methanethiol (dmdA, ddd, mddA)	dastool-lorbin_184	0.06797192539764194	s__Cycloclasticus sp001566825
-DMSP and methanethiol (dmdA, ddd, mddA)	dastool-metabat_1122	0.06229933461208107	s__Sulfitobacter sp017854675
-Siderophore uptake (fiu, cirA, tonB)		0.329904610712422	
-Siderophore uptake (fiu, cirA, tonB)	dastool-lorbin_029	0.08947889801696847	s__Parasphingorhabdus sp036964675
-Siderophore uptake (fiu, cirA, tonB)	dastool-lorbin_048	0.08019508538382866	s__
-Siderophore uptake (fiu, cirA, tonB)	dastool-semibin_072	0.042147381143887656	s__
-Siderophore uptake (fiu, cirA, tonB)	dastool-vamb_4149	0.04057206818814703	s__UBA9145 sp001438145
+Cyanophycin and PHA storage		0.20607568918432775	
+Cyanophycin and PHA storage	dastool-lorbin_184	0.08034648874131209	s__Cycloclasticus sp001566825
+Cyanophycin and PHA storage	dastool-lorbin_048	0.06203993230140933	s__
+Cyanophycin and PHA storage	dastool-metabat_9342	0.06063931181003049	s__
+Cyanophycin and PHA storage	dastool-semibin_042	0.05004100004843367	s__
+Flagellar motility (bacterial)	dastool-semibin_088	0.5328130213268699	s__
+Flagellar motility (bacterial)		0.21570672203923222	
+Flagellar motility (bacterial)	dastool-semibin_042	0.025619132827234412	s__
+Flagellar motility (bacterial)	dastool-comebin_1140_sub	0.02173306143924829	
+Flagellar motility (bacterial)	dastool-lorbin_095	0.012954375303313956	s__
+Methylotrophy (xoxF, exaA, mxaF)	dastool-vamb_500_sub	0.5209341560332276	
+Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_051	0.1316002800119825	s__BACL14 sp913058475
+Methylotrophy (xoxF, exaA, mxaF)		0.09142974253359216	
+Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_135	0.045567395736237325	s__Cognaticolwellia sp003061515
+Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_081	0.033671227232661034	s__BACL14 sp000168995
+DMSP and methanethiol (dmdA, ddd, mddA)		0.29075607141643817	
+DMSP and methanethiol (dmdA, ddd, mddA)	dastool-metabat_9342	0.16426654960940362	s__
+DMSP and methanethiol (dmdA, ddd, mddA)	dastool-lorbin_032	0.07274340816839503	s__Sulfitobacter sp024636495
+DMSP and methanethiol (dmdA, ddd, mddA)	dastool-lorbin_184	0.06816648693723415	s__Cycloclasticus sp001566825
+DMSP and methanethiol (dmdA, ddd, mddA)	dastool-metabat_1122	0.062477659036272205	s__Sulfitobacter sp017854675
+Siderophore uptake (fiu, cirA, tonB)		0.31854312178025856	
+Siderophore uptake (fiu, cirA, tonB)	dastool-lorbin_029	0.09257523014706653	s__Parasphingorhabdus sp036964675
+Siderophore uptake (fiu, cirA, tonB)	dastool-lorbin_048	0.08234958347430898	s__
+Siderophore uptake (fiu, cirA, tonB)	dastool-vamb_4149	0.04177285340839582	s__UBA9145 sp001438145
+Siderophore uptake (fiu, cirA, tonB)	dastool-semibin_072	0.0406110572446832	s__

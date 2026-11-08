@@ -85,7 +85,7 @@ function mtCourse(sec, J) {
 function mtIce(sec, J) {
   sec.append(el('h3', {}, 'In the ice: brine concentrates metals'));
   const cats = J.cats.slice().sort((a, b) => b.ice.tb - a.ice.tb);
-  const box = fig(sec, 'Ice vs water and top vs bottom ice, paired', 'Each dot is one pair (same pool and day); the bar is the mean log₂ ratio, and the number counts pairs higher in ice (left) or in top ice (right). 24 ice–water pairs, 13 top–bottom pairs (2024-25). Top ice is colder, with saltier and smaller brine pockets (see Ice vs water).');
+  const box = fig(sec, 'Ice vs water and top vs bottom ice, paired', 'Each dot is one pair (same pool and day); the bar is the mean log₂ ratio, and the number counts pairs higher in ice (left) or in top ice (right). 23 ice–water pairs, 13 top–bottom pairs (2024-25). Top ice is colder, with saltier and smaller brine pockets (see Ice vs water).');
   const W = Math.max(700, width(box)), lw = Math.min(250, W * 0.34), rh = 22, pw = (W - lw - 20) / 2, H = cats.length * rh + 44;
   const svg = d3.select(box).append('svg').attr('width', W).attr('height', H);
   [['iw', 'ice − water'], ['tb', 'top − bottom ice']].forEach(([k, t], i) => {

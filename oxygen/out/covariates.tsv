@@ -1,52 +1,52 @@
 subset	covariate	index	n	rho	p
-all CTL/EXP water	log_cyclo	comm_HA_LA	60	-0.12236732425673802	0.3516359062978594
-all CTL/EXP water	log_cyclo	within_HA_LA	60	0.37160322311753274	0.0034629614892964654
-all CTL/EXP water	log_cyclo	within_HA_LA_noCyclo	60	0.32509030286190616	0.0112634631615742
-all CTL/EXP water	log_cyclo	regulation_HA_logodds	60	0.22539594331758825	0.08335531791859722
+all CTL/EXP water	log_cyclo	comm_HA_LA	59	-0.1158386908240795	0.38229117279977526
+all CTL/EXP water	log_cyclo	within_HA_LA	59	0.373115137346581	0.0036081224329361887
+all CTL/EXP water	log_cyclo	within_HA_LA_noCyclo	59	0.31864406779661025	0.013906538302129378
+all CTL/EXP water	log_cyclo	regulation_HA_logodds	59	0.2137931034482759	0.10397101511674832
 all CTL/EXP water	water_temp_c	comm_HA_LA	28	-0.19711834686183843	0.3147013350062312
 all CTL/EXP water	water_temp_c	within_HA_LA	28	-0.2597130308235364	0.1819900801746909
 all CTL/EXP water	water_temp_c	within_HA_LA_noCyclo	28	-0.27783254460192264	0.15229104747856326
-all CTL/EXP water	water_temp_c	regulation_HA_logodds	28	0.045024246358414344	0.8200358455365241
+all CTL/EXP water	water_temp_c	regulation_HA_logodds	28	0.05545669368536401	0.7792581929667891
 all CTL/EXP water	ice_thickness_cm	comm_HA_LA	11	-0.31097267869312945	0.35195250957180635
 all CTL/EXP water	ice_thickness_cm	within_HA_LA	11	0.25991746278828737	0.44019427266188976
 all CTL/EXP water	ice_thickness_cm	within_HA_LA_noCyclo	11	0.25991746278828737	0.44019427266188976
 all CTL/EXP water	ice_thickness_cm	regulation_HA_logodds	11	0.19029671382713895	0.5751657064456013
-all CTL/EXP water	core_thickness_cm	comm_HA_LA	33	-0.0693192233180949	0.7014854721726729
-all CTL/EXP water	core_thickness_cm	within_HA_LA	33	0.21030747413455908	0.24010038767790165
-all CTL/EXP water	core_thickness_cm	within_HA_LA_noCyclo	33	0.16264001790613547	0.365829680978162
-all CTL/EXP water	core_thickness_cm	regulation_HA_logodds	33	-0.10490197233367872	0.561249302636174
-all CTL/EXP water	core_T_top	comm_HA_LA	33	-0.16058529863801044	0.37199859488871323
-all CTL/EXP water	core_T_top	within_HA_LA	33	-0.42973766960495796	0.012562577056086197
-all CTL/EXP water	core_T_top	within_HA_LA_noCyclo	33	-0.3303996374276307	0.06038887046872571
-all CTL/EXP water	core_T_top	regulation_HA_logodds	33	-0.35825455861248934	0.04064097256777286
+all CTL/EXP water	core_thickness_cm	comm_HA_LA	32	-0.07438168279168793	0.6857810888930825
+all CTL/EXP water	core_thickness_cm	within_HA_LA	32	0.21173003764960674	0.24469940473819485
+all CTL/EXP water	core_thickness_cm	within_HA_LA_noCyclo	32	0.16606999474777853	0.363673375004022
+all CTL/EXP water	core_thickness_cm	regulation_HA_logodds	32	-0.10494445344371814	0.5675804003800545
+all CTL/EXP water	core_T_top	comm_HA_LA	32	-0.14598817014098905	0.42529869865444264
+all CTL/EXP water	core_T_top	within_HA_LA	32	-0.38402436685258906	0.03001328177771273
+all CTL/EXP water	core_T_top	within_HA_LA_noCyclo	32	-0.27669636787125673	0.12525983390649273
+all CTL/EXP water	core_T_top	regulation_HA_logodds	32	-0.32364086142226833	0.0707728961561922
 all CTL/EXP water	core_Vb_top	comm_HA_LA	22	-0.2738131892541559	0.21755195417004547
 all CTL/EXP water	core_Vb_top	within_HA_LA	22	-0.5138999105208479	0.014423317228128136
-all CTL/EXP water	core_Vb_top	within_HA_LA_noCyclo	22	-0.40185944059639167	0.06375320577874131
+all CTL/EXP water	core_Vb_top	within_HA_LA_noCyclo	22	-0.39900126534321667	0.0658426673419738
 all CTL/EXP water	core_Vb_top	regulation_HA_logodds	22	-0.37670749836845246	0.08397062652476084
 all CTL/EXP water	core_Sbrine_top	comm_HA_LA	22	0.39385654988750196	0.06973433403311913
 all CTL/EXP water	core_Sbrine_top	within_HA_LA	22	0.508183560014498	0.015745065667067126
-all CTL/EXP water	core_Sbrine_top	within_HA_LA_noCyclo	22	0.3664180674570228	0.09349378039380768
+all CTL/EXP water	core_Sbrine_top	within_HA_LA_noCyclo	22	0.36813297260892774	0.09185354388186805
 all CTL/EXP water	core_Sbrine_top	regulation_HA_logodds	22	0.4281546529256008	0.0468206956821131
-all CTL/EXP water	day	comm_HA_LA	60	0.08431629210910312	0.5218382048699123
-all CTL/EXP water	day	within_HA_LA	60	0.3254703456537468	0.011163073941439406
-all CTL/EXP water	day	within_HA_LA_noCyclo	60	0.29795836515361385	0.020765833188362
-all CTL/EXP water	day	regulation_HA_logodds	60	0.07819633689168223	0.5525956751885747
-control pool water	log_cyclo	comm_HA_LA	28	-0.5949644225506295	0.0008395214060386342
-control pool water	log_cyclo	within_HA_LA	28	0.5309250136836344	0.003650931759494084
-control pool water	log_cyclo	within_HA_LA_noCyclo	28	0.5615763546798029	0.00187392816068906
-control pool water	log_cyclo	regulation_HA_logodds	28	0.41215106732348106	0.02930308679619864
+all CTL/EXP water	day	comm_HA_LA	59	0.08534736387387286	0.5204101493126768
+all CTL/EXP water	day	within_HA_LA	59	0.35104479662623467	0.006409129736962603
+all CTL/EXP water	day	within_HA_LA_noCyclo	59	0.32017696361734344	0.013429788155564682
+all CTL/EXP water	day	regulation_HA_logodds	59	0.09315941260692875	0.4828107535956189
+control pool water	log_cyclo	comm_HA_LA	27	-0.5873015873015872	0.0012786088681232255
+control pool water	log_cyclo	within_HA_LA	27	0.5543345543345543	0.0026962776253369393
+control pool water	log_cyclo	within_HA_LA_noCyclo	27	0.5824175824175825	0.0014351508279335711
+control pool water	log_cyclo	regulation_HA_logodds	27	0.40170940170940167	0.037803367821591896
 control pool water	water_temp_c	comm_HA_LA	14	0.26461004723578263	0.3606019117041653
 control pool water	water_temp_c	within_HA_LA	14	-0.3153269729559742	0.2721321666093753
 control pool water	water_temp_c	within_HA_LA_noCyclo	14	-0.37706931731099025	0.18384011096983385
 control pool water	water_temp_c	regulation_HA_logodds	14	-0.05733217690108623	0.845646891473811
-control pool water	core_thickness_cm	comm_HA_LA	9	-0.725796546409961	0.026851581350997234
-control pool water	core_thickness_cm	within_HA_LA	9	0.3375797890278889	0.37429460976889534
-control pool water	core_thickness_cm	within_HA_LA_noCyclo	9	0.3375797890278889	0.37429460976889534
-control pool water	core_thickness_cm	regulation_HA_logodds	9	-0.1603503997882472	0.6802554808932004
-control pool water	core_T_top	comm_HA_LA	9	0.6920385675071721	0.038865094872450955
-control pool water	core_T_top	within_HA_LA	9	-0.5401276624446221	0.13330775647816348
-control pool water	core_T_top	within_HA_LA_noCyclo	9	-0.5401276624446221	0.13330775647816348
-control pool water	core_T_top	regulation_HA_logodds	9	-0.12659242088545833	0.7455273182862315
+control pool water	core_thickness_cm	comm_HA_LA	8	-0.6386005678432409	0.08833208816147775
+control pool water	core_thickness_cm	within_HA_LA	8	0.277128548309331	0.5063754253085383
+control pool water	core_thickness_cm	within_HA_LA_noCyclo	8	0.277128548309331	0.5063754253085383
+control pool water	core_thickness_cm	regulation_HA_logodds	8	-0.26507948099153394	0.5257681332737646
+control pool water	core_T_top	comm_HA_LA	8	0.6626987024788349	0.07330582330837658
+control pool water	core_T_top	within_HA_LA	8	-0.3494229522161129	0.3962076825398591
+control pool water	core_T_top	within_HA_LA_noCyclo	8	-0.3494229522161129	0.3962076825398591
+control pool water	core_T_top	regulation_HA_logodds	8	0.048196269271187996	0.909771840305317
 control pool water	core_Vb_top	comm_HA_LA	6	0.7650368522374495	0.0763256359782481
 control pool water	core_Vb_top	within_HA_LA	6	-0.6473388749701496	0.16462459468137824
 control pool water	core_Vb_top	within_HA_LA_noCyclo	6	-0.6473388749701496	0.16462459468137824
@@ -55,18 +55,18 @@ control pool water	core_Sbrine_top	comm_HA_LA	6	-0.7650368522374495	0.0763256359
 control pool water	core_Sbrine_top	within_HA_LA	6	0.6473388749701496	0.16462459468137824
 control pool water	core_Sbrine_top	within_HA_LA_noCyclo	6	0.6473388749701496	0.16462459468137824
 control pool water	core_Sbrine_top	regulation_HA_logodds	6	0.08827348295047496	0.8679336982351337
-control pool water	day	comm_HA_LA	28	-0.2700484068605582	0.1645920653936227
-control pool water	day	within_HA_LA	28	0.1886226435736691	0.3364225716753894
-control pool water	day	within_HA_LA_noCyclo	28	0.15846495346741382	0.42059126478813863
-control pool water	day	regulation_HA_logodds	28	-0.034818424031767395	0.8603765825390768
+control pool water	day	comm_HA_LA	27	-0.2706841256934781	0.1720597495083168
+control pool water	day	within_HA_LA	27	0.21562972724734694	0.280054102669055
+control pool water	day	within_HA_LA_noCyclo	27	0.19666654556034624	0.3255089502122449
+control pool water	day	regulation_HA_logodds	27	-0.0018351466148710377	0.9927517454432901
 diesel pool water	log_cyclo	comm_HA_LA	32	0.12390029325513194	0.4992876116300388
-diesel pool water	log_cyclo	within_HA_LA	32	0.187316715542522	0.30461455892104966
+diesel pool water	log_cyclo	within_HA_LA	32	0.19391495601173017	0.28758203793960885
 diesel pool water	log_cyclo	within_HA_LA_noCyclo	32	0.09054252199413489	0.6221380952492982
-diesel pool water	log_cyclo	regulation_HA_logodds	32	-0.0531524926686217	0.7726445452531766
+diesel pool water	log_cyclo	regulation_HA_logodds	32	-0.06011730205278592	0.7437885890144961
 diesel pool water	water_temp_c	comm_HA_LA	14	-0.42951646043242975	0.12534880405993243
 diesel pool water	water_temp_c	within_HA_LA	14	-0.19383306932335295	0.506702462995552
 diesel pool water	water_temp_c	within_HA_LA_noCyclo	14	-0.23127809407900063	0.4262887541878128
-diesel pool water	water_temp_c	regulation_HA_logodds	14	0.13876685644740042	0.6361348947213585
+diesel pool water	water_temp_c	regulation_HA_logodds	14	0.1828198267481624	0.5315897870685644
 diesel pool water	ice_thickness_cm	comm_HA_LA	7	-0.6557892373388906	0.10973558561115253
 diesel pool water	ice_thickness_cm	within_HA_LA	7	0.11572751247156894	0.8048478404268485
 diesel pool water	ice_thickness_cm	within_HA_LA_noCyclo	7	0.11572751247156894	0.8048478404268485
@@ -90,62 +90,62 @@ diesel pool water	core_Sbrine_top	regulation_HA_logodds	16	0.2472764282371146	0.
 diesel pool water	day	comm_HA_LA	32	0.4440595833665624	0.010896034421195251
 diesel pool water	day	within_HA_LA	32	0.4243685865077882	0.015489010967764004
 diesel pool water	day	within_HA_LA_noCyclo	32	0.37541713637289154	0.034232113329296626
-diesel pool water	day	regulation_HA_logodds	32	0.136548781955238	0.45614745018529335
-all ice	log_cyclo	comm_HA_LA	48	-0.23035171515414676	0.11522861756860879
-all ice	log_cyclo	within_HA_LA	48	0.3644159791576205	0.010883251423716768
-all ice	log_cyclo	within_HA_LA_noCyclo	48	0.4066435084672167	0.00412912164946522
-all ice	log_cyclo	regulation_HA_logodds	48	0.27887537993920974	0.05492778416800561
+diesel pool water	day	regulation_HA_logodds	32	0.12789946557801943	0.48542960041635363
+all ice	log_cyclo	comm_HA_LA	47	-0.18223866790009252	0.2201908339222867
+all ice	log_cyclo	within_HA_LA	47	0.3319842738205366	0.022621612024830907
+all ice	log_cyclo	within_HA_LA_noCyclo	47	0.3847132284921369	0.007583642127009797
+all ice	log_cyclo	regulation_HA_logodds	47	0.2513876040703053	0.08828547701820294
 all ice	ice_thickness_cm	comm_HA_LA	19	-0.6389928424093072	0.0032275119209019348
-all ice	ice_thickness_cm	within_HA_LA	19	-0.579777738064323	0.009270796434758496
-all ice	ice_thickness_cm	within_HA_LA_noCyclo	19	-0.5903834283947679	0.0077858823120289635
+all ice	ice_thickness_cm	within_HA_LA	19	-0.5408902068526916	0.016788680041700425
+all ice	ice_thickness_cm	within_HA_LA_noCyclo	19	-0.5550311272932849	0.013636324099270326
 all ice	ice_thickness_cm	regulation_HA_logodds	19	-0.5143759810265792	0.024245601775651708
-all ice	core_thickness_cm	comm_HA_LA	43	-0.40317995377826105	0.007345410941183861
-all ice	core_thickness_cm	within_HA_LA	43	-0.15682163773766788	0.3152451068778042
-all ice	core_thickness_cm	within_HA_LA_noCyclo	43	-0.11617819204986496	0.45814782374316476
-all ice	core_thickness_cm	regulation_HA_logodds	43	-0.19019921603994178	0.22183739595892693
-all ice	core_T_top	comm_HA_LA	43	0.14950107842242405	0.33864391070665284
-all ice	core_T_top	within_HA_LA	43	-0.1713553078933803	0.27190240941580135
-all ice	core_T_top	within_HA_LA_noCyclo	43	-0.21982783761961897	0.15665132415189625
-all ice	core_T_top	regulation_HA_logodds	43	0.09354215174938721	0.5507527850634947
+all ice	core_thickness_cm	comm_HA_LA	42	-0.41463411608528017	0.00633081109168028
+all ice	core_thickness_cm	within_HA_LA	42	-0.15380278414914228	0.33081296927220954
+all ice	core_thickness_cm	within_HA_LA_noCyclo	42	-0.11320014841811211	0.47536293363393667
+all ice	core_thickness_cm	regulation_HA_logodds	42	-0.21868579604732852	0.16410936983760602
+all ice	core_T_top	comm_HA_LA	42	0.10160287368472641	0.5220097073310999
+all ice	core_T_top	within_HA_LA	42	-0.12124176779950578	0.4443596485832814
+all ice	core_T_top	within_HA_LA_noCyclo	42	-0.18064536487396246	0.2522778918337028
+all ice	core_T_top	regulation_HA_logodds	42	0.15443312190258335	0.3288109448677547
 all ice	core_Vb_top	comm_HA_LA	25	-0.22979110277140916	0.2691585628274131
-all ice	core_Vb_top	within_HA_LA	25	-0.21895919893706664	0.2929946699077916
-all ice	core_Vb_top	within_HA_LA_noCyclo	25	-0.17176304651600283	0.41166058911227804
+all ice	core_Vb_top	within_HA_LA	25	-0.2386887380639048	0.25053631861918596
+all ice	core_Vb_top	within_HA_LA_noCyclo	25	-0.19420056160142657	0.35227312310542847
 all ice	core_Vb_top	regulation_HA_logodds	25	-0.029787735544441925	0.8875977667382671
 all ice	core_Sbrine_top	comm_HA_LA	25	0.07350220459018138	0.7269626950854252
-all ice	core_Sbrine_top	within_HA_LA	25	0.34197867819852806	0.09428066793645672
-all ice	core_Sbrine_top	within_HA_LA_noCyclo	25	0.3025195999448517	0.14160106814629086
+all ice	core_Sbrine_top	within_HA_LA	25	0.381050902743835	0.06020008560033532
+all ice	core_Sbrine_top	within_HA_LA_noCyclo	25	0.3257308224470143	0.11206962664299627
 all ice	core_Sbrine_top	regulation_HA_logodds	25	0.04216705421226195	0.8413789887816645
-all ice	day	comm_HA_LA	48	-0.47251159597637865	0.0006962127255015957
-all ice	day	within_HA_LA	48	-0.05247711935978886	0.723164480661331
-all ice	day	within_HA_LA_noCyclo	48	0.0016857934716616111	0.9909269316236372
-all ice	day	regulation_HA_logodds	48	-0.08189693446201246	0.5800079517723573
+all ice	day	comm_HA_LA	47	-0.49504765463155215	0.00040380515726393015
+all ice	day	within_HA_LA	47	-0.01877067760100912	0.9003406435448612
+all ice	day	within_HA_LA_noCyclo	47	0.03377563284379109	0.821681255193006
+all ice	day	regulation_HA_logodds	47	-0.09790878131390558	0.5126415558705919
 top ice	log_cyclo	comm_HA_LA	13	0.24725274725274726	0.415405119725538
-top ice	log_cyclo	within_HA_LA	13	0.21428571428571427	0.4820544547023681
-top ice	log_cyclo	within_HA_LA_noCyclo	13	0.2692307692307692	0.3737330422818916
+top ice	log_cyclo	within_HA_LA	13	0.14835164835164835	0.6286094178894162
+top ice	log_cyclo	within_HA_LA_noCyclo	13	0.24725274725274726	0.415405119725538
 top ice	log_cyclo	regulation_HA_logodds	13	0.0879120879120879	0.775195408889122
 top ice	ice_thickness_cm	comm_HA_LA	9	-0.435150252552976	0.24175711150708434
-top ice	ice_thickness_cm	within_HA_LA	9	-0.12552411131335847	0.7476182289428042
-top ice	ice_thickness_cm	within_HA_LA_noCyclo	9	-0.12552411131335847	0.7476182289428042
+top ice	ice_thickness_cm	within_HA_LA	9	-0.18410202992625907	0.6353826478012163
+top ice	ice_thickness_cm	within_HA_LA_noCyclo	9	-0.18410202992625907	0.6353826478012163
 top ice	ice_thickness_cm	regulation_HA_logodds	9	-0.217575126276488	0.5738746583219766
 top ice	core_thickness_cm	comm_HA_LA	11	-0.21918036718906714	0.517289827901559
-top ice	core_thickness_cm	within_HA_LA	11	-0.42922821907858977	0.1877033857120047
-top ice	core_thickness_cm	within_HA_LA_noCyclo	11	-0.18265030599088924	0.5908938449268891
+top ice	core_thickness_cm	within_HA_LA	11	-0.4109631884795008	0.209256245801089
+top ice	core_thickness_cm	within_HA_LA_noCyclo	11	-0.21461410953929488	0.5262710345104308
 top ice	core_thickness_cm	regulation_HA_logodds	11	-0.28310797428587836	0.3989002218282989
 top ice	core_T_top	comm_HA_LA	11	-0.03644656380625642	0.9152761385497562
-top ice	core_T_top	within_HA_LA	11	-0.06378148666094874	0.8522059712863589
-top ice	core_T_top	within_HA_LA_noCyclo	11	-0.20956774188597443	0.5362719074923922
+top ice	core_T_top	within_HA_LA	11	0.013667461427346159	0.9681862209072394
+top ice	core_T_top	within_HA_LA_noCyclo	11	-0.1640095371281539	0.6298952986969342
 top ice	core_T_top	regulation_HA_logodds	11	0.06833730713673078	0.8417602513964069
 top ice	core_Vb_top	comm_HA_LA	7	-0.30631873731649006	0.504027008666588
-top ice	core_Vb_top	within_HA_LA	7	-0.198206241793023	0.6700850339168265
+top ice	core_Vb_top	within_HA_LA	7	-0.07207499701564472	0.877959250822513
 top ice	core_Vb_top	within_HA_LA_noCyclo	7	-0.07207499701564472	0.877959250822513
 top ice	core_Vb_top	regulation_HA_logodds	7	-0.16216874328520064	0.7282995630820221
 top ice	core_Sbrine_top	comm_HA_LA	7	0.09009374626955591	0.8476720796198264
-top ice	core_Sbrine_top	within_HA_LA	7	0.5225437283634242	0.22887787757609507
+top ice	core_Sbrine_top	within_HA_LA	7	0.396412483586046	0.37863470950041306
 top ice	core_Sbrine_top	within_HA_LA_noCyclo	7	0.396412483586046	0.37863470950041306
 top ice	core_Sbrine_top	regulation_HA_logodds	7	0.4504687313477795	0.310429301851323
 top ice	day	comm_HA_LA	13	-0.41046987709801197	0.16356915668194108
-top ice	day	within_HA_LA	13	-0.17355437756493122	0.5706872439132389
-top ice	day	within_HA_LA_noCyclo	13	0.05509662779839086	0.8581175038427515
+top ice	day	within_HA_LA	13	-0.14876089505565535	0.6276518893352828
+top ice	day	within_HA_LA_noCyclo	13	0.0385676394588736	0.900451657138637
 top ice	day	regulation_HA_logodds	13	-0.07989011030766675	0.7952976759144667
 CTL/EXP all media	roof_open Yes vs No	comm_HA_LA	54	-0.4362368204820801	0.22489637058987877
-CTL/EXP all media	roof_open Yes vs No	within_HA_LA	54	-0.11049135619385707	0.13281429570067238
+CTL/EXP all media	roof_open Yes vs No	within_HA_LA	54	-0.11148507897951014	0.13865244249702618

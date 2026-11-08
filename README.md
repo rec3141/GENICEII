@@ -127,7 +127,7 @@ Code: ice/popgen/scripts. The pipeline is map.sh (bwa mem vs all 911 MAGs, MAPQ�
 - Outputs: popgen_summary.tsv, paired_fst_vs_null.tsv, fst_outlier_genes.tsv, abundance_icewater_dna.tsv; site data in ice.json → popgen.
 - No within-species ice/water structure: for 22 of 23 well-covered species, the median same-day ice-vs-water FST equals the consecutive-day water-vs-water FST (median excess −0.002). Top vs bottom ice also matches the baseline.
 - The exception is MAG-120531 lorbin_317 (Flavobacteriaceae): FST 0.16 vs 0.08 baseline, and lower π in ice (0.0051 vs 0.0074).
-- The pools hold different strains (ice, control vs diesel FST): Cognaticolwellia lorbin_135 0.37, Sulfurimonas semibin_088 0.35, Colwellia 0.27–0.28, UBA9145 0.17. Low-coverage MAGs reach 0.7 or more (Sulfitobacter vamb_549, UBA5078, BACL14 lorbin_054).
+- The pools hold different strains (ice, control vs diesel FST, 2024-25): Colwellia 0.24, Sulfitobacter metabat_5376 0.20, UBA9145 0.17. Before the day-18 control ice core was excluded (2026-11-08) the list was led by Cognaticolwellia lorbin_135 (0.37) and Sulfurimonas semibin_088 (0.35); both relied on that core. For semibin_088 the 2025-26 pools give FST 0.16 (water) and 0.13 (ice) against 0.03 between ice and water. Low-coverage MAGs reach 0.7 or more (Sulfitobacter vamb_549, UBA5078, BACL14 lorbin_054).
 - Ecotypes sit at the species level. In DNA:
   - Cognaticolwellia lorbin_135 is higher in ice in 19/19 pairs; metabat_8244 18/19; Glaciecola 18/19. All three are top-enriched.
   - Colwellia vamb_500_sub and lorbin_095 lean to water and bottom ice.
@@ -237,8 +237,41 @@ The whole site now uses the full-depth `illumina_rna` run.
 | Cyclo, HGT, Eukaryotes | unchanged (the Eukaryotes page is rRNA-based) |
 
 ## Response guilds (2026-11-07)
-`guilds/` holds the analysis behind the site page `#guilds` (Genomes & ice). It places all 150 profiled genomes in one space, two ways.
+`guilds/` holds the analysis behind the site page `#guilds` (Genomes & ice). It places all profiled genomes (149 after the day-18 exclusion) in one space, two ways.
 - **Driver fingerprints:** commonality analysis of each genome's within-genome state on winter, ice, diesel pool, time and under-ice light, with the shared seasonal part reported separately. Mapped with UMAP and Gaussian-mixture clusters.
-- **Co-response guilds:** a numpy EM-PCA shared-factor model over all genomes' state scores, giving 4 factors.
+- **Co-response guilds:** a numpy EM-PCA shared-factor model over all genomes' state scores. The number of factors is the largest K with split-half stability ≥ 0.7: 4 before the day-18 exclusion, 3 after (K = 4 now scores 0.69, so the weak mixed factor drops out). Fingerprint clusters went from 5 to 3 (Gaussian-mixture k chosen by silhouette); the per-driver shares barely moved.
 
 See guilds/NOTES.md.
+
+Note (2026-11-08): site/cyclo.json and site/hgt.json are copies of cyclo/cyclo.json and hgt/hgt.json; copy them after rerunning those builders.
+
+## Day-18 control libraries excluded (2026-11-08)
+Both 2024-25 day-18 control RNA libraries were flagged `contamination` in the metadata archive (`sources/sample_corrections.tsv`), together with the Illumina metagenome of the same ice core:
+- `V350357237_L01_D09` (CMO_CTL_DAY18_SI);
+- `V350357237_L02_D10` (CMO_CTL_DAY18_SW);
+- `2599682_plate1_E02` (metagenome).
+
+They carry a transient hydrocarbon-degrader community (Zhongshania, Oleispira, Perlucidibaca) with oxygenase transcription above the diesel pool's. It is absent on days 16 and 20.
+
+**One rule for all exclusions.** `scripts/common.py` defines `EXCLUDE_FLAGS = (low_yield, pool_mismatch, contamination)`:
+- `samples()`, `meta()`, `table()` and `genes()` drop flagged RNA libraries;
+- `excluded_names('metagenome')` drops flagged metagenomes in popgen, the mg screen and the porticocc and sulfur site builders.
+
+The count matrices on disk keep all 130 columns; `all_samples()` lists them.
+
+**Samples:** RNA 130 → 128; metagenomes on the site 167 → 166; popgen mapping set 55 → 54; ice–water RNA pairs 24 → 23.
+
+**Before → after:**
+
+| Page | Change |
+|---|---|
+| Overview findings | functions falling >2× in every comparison 25 → 31 (rising 130 → 128) |
+| Physiological states | 150 → 149 genomes; 2025-26 pool-testable 79 → 78 (significant 67 → 68); metabat_5376 q 0.067 → 0.095 |
+| Physiological states (site) | every profiled genome now has detail data |
+| Response guilds | 4 → 3 factors (K = 4 stability 0.71 → 0.69, cutoff 0.7); fingerprint clusters 5 → 3; median unique R² ice 0.24 → 0.26, diesel 0.10 → 0.11 |
+| Sulfur | Sulfurimonas 2024-25 MAG BACI "−0.3 to −1.2" → −0.9 to +0.3 (all q = 1; pool-history reading unchanged); pool FST now from 2025-26 (0.16 water, 0.13 ice vs 0.03 ice/water) |
+| Ice popgen | 2024-25 control-ice pool FST lost Cognaticolwellia lorbin_135 (0.37) and Sulfurimonas semibin_088 (0.35 → 0.16, 95 sites); both relied on the day-18 core |
+| Light | metabat_1122 AAP water vs ice 4.9/2.9‰ → 5.9/2.7‰; r with its N-acquisition share +0.45 → +0.33 |
+| Islands | GI_1266 15 → 14× |
+| Nitrogen, sulfur, other 2024-25 log₂ diesel/control | shift by ≤ 0.26 |
+| 2025-26 contrasts | unchanged (no 2025-26 libraries removed) |

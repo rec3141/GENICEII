@@ -22,7 +22,7 @@ info['day'] = info.name.map(day)
 R = R.join(info[['name', 'label_original', 'qc_flag', 'gid', 'season', 'pool', 'medium', 'day']])
 R.to_csv('../out/mg_kmer.tsv', sep='\t')
 T = [c for c in R.columns if c not in ('name', 'label_original', 'qc_flag', 'gid', 'season', 'pool', 'medium', 'day')]
-R = R[~R.qc_flag.isin(['low_yield', 'pool_mismatch'])]   # failed or unidentifiable libraries stay in mg_kmer.tsv but not on the site
+R = R[~R.qc_flag.isin(EXCLUDE_FLAGS)]   # QC-excluded libraries (failed, unidentifiable, contaminated) stay in mg_kmer.tsv but not on the site
 LAB = {'metabat_9342': 'Cycloclasticus metabat_9342 (2024-25 bloom)', 'lorbin_184': 'Cycloclasticus lorbin_184 (2025-26 bloom)', 'comebin_3787_sub': 'Cycloclasticus comebin_3787_sub',
        'lorbin_722_sub': 'Cycloclasticus lorbin_722_sub', 'metabat_5432': 'Cycloclasticus metabat_5432', 'lorbin_167': 'Sulfurimonas lorbin_167', 'semibin_088': 'Sulfurimonas semibin_088',
        'lorbin_032': 'Sulfitobacter lorbin_032', 'metabat_1122': 'Sulfitobacter metabat_1122', 'comebin_2596': 'Casp-alpha2 comebin_2596', 'comebin_2576': 'Porticoccaceae 50-400-T64 comebin_2576',

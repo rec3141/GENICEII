@@ -5,6 +5,8 @@ import sys, subprocess, numpy as np, pandas as pd, os
 D = '/data/dev/rnaseq-exploration/ice/popgen'; BCF = os.path.expanduser('~/apps/bcftools-1.9/bcftools')
 b = sys.argv[1]
 S = pd.read_csv(f'{D}/samples_map.tsv', sep='\t', index_col=0)
+import sys as _s; _s.path.insert(0, '/data/dev/rnaseq-exploration/scripts'); from common import excluded_names
+S = S[~S.index.isin(excluded_names('metagenome'))]   # QC-excluded metagenomes (metadata qc_flag)
 S = S[[os.path.exists(f'{D}/bam/{s}.bam.bai') for s in S.index]]
 cb = pd.read_csv(f'{D}/ref/contig_bin_len.tsv', sep='\t')
 cb = cb[cb.bin == 'dastool-' + b]

@@ -9,6 +9,24 @@ OIL_DAY = {'CMO 2024-25': 5.5, 'CMO 2025-26': 1}
 CORR = '/data/dev/genice-sample-metadata/sources/sample_corrections.tsv'
 
 
+# Libraries whose metadata qc_flag marks them for exclusion (sources/sample_corrections.tsv in the metadata archive):
+# failed Illumina libraries (low_yield), unidentifiable pool (pool_mismatch), and sampling/handling contamination
+# (contamination: the day-18 2024-25 control RNA libraries and their metagenome). 'swap' rows are relabelled, not excluded.
+EXCLUDE_FLAGS = ('low_yield', 'pool_mismatch', 'contamination')
+
+
+def excluded(dataset='rna'):
+    """Library ids (RNA sample ids, Illumina genohub ids, nanopore run_barcodes) excluded from all analyses."""
+    c = corrections(dataset)
+    return set(c.index[c.qc_flag.isin(EXCLUDE_FLAGS)])
+
+
+def excluded_names(dataset='metagenome'):
+    """Sample names (after relabelling) of QC-excluded libraries, for tables keyed by sample name (e.g. ice/popgen)."""
+    c = corrections(dataset); c = c[c.qc_flag.isin(EXCLUDE_FLAGS)]
+    return set(np.where(c.sample_name_corrected != '', c.sample_name_corrected, c.label_original))
+
+
 def corrections(dataset):
     """Label corrections / QC flags (rna|metagenome|nanopore) from the cross-platform identity check, indexed by library id."""
     c = pd.read_csv(CORR, sep='\t', comment='#', dtype=str).fillna('')
@@ -17,6 +35,7 @@ def corrections(dataset):
 
 def meta():
     m = pd.read_csv(META, sep='\t', dtype=str).set_index('sample')
+    m = m[~m.index.isin(excluded('rna'))]          # QC-excluded libraries never reach an analysis
     m['season'] = m['experiment'].str[-7:]
     tp = m['timepoint'].fillna('')
     m['day'] = [(-int(t[3:]) if t.startswith('PRE') else int(t[3:])) if t else np.nan for t in tp]
@@ -34,7 +53,9 @@ def meta():
 
 
 def table(name, index_cols=1):
-    return pd.read_csv(D + f'marine_coassembly.{name}.tsv', sep='\t', index_col=list(range(index_cols)))
+    t = pd.read_csv(D + f'marine_coassembly.{name}.tsv', sep='\t', index_col=list(range(index_cols)))
+    ex = excluded('rna')                            # QC-excluded libraries, whether samples are columns or rows
+    return t.drop(columns=[c for c in t.columns if c in ex]).drop(index=[i for i in t.index if i in ex])
 
 
 def clr(x, pseudo=0.5):
@@ -42,13 +63,24 @@ def clr(x, pseudo=0.5):
     return l - l.mean(axis=0)
 
 
+def all_samples():
+    """Every RNA library in the count matrices, in column order (including QC-excluded ones)."""
+    return pd.read_csv(D + 'marine_coassembly.samples.tsv', sep='\t')['sample'].tolist()
+
+
 def genes():
+    """Gene x sample counts restricted to samples() (columns in the same order), and the gene table."""
     import scipy.sparse as sp
-    return sp.load_npz(D + 'gene_counts.npz').tocsr(), pd.read_pickle(D + 'genemap.pkl')
+    X = sp.load_npz(D + 'gene_counts.npz').tocsc()
+    A = all_samples(); keep = [i for i, s in enumerate(A) if s not in excluded('rna')]
+    if X.shape[1] != len(A): raise ValueError(f'gene_counts has {X.shape[1]} columns, samples.tsv {len(A)}')
+    return X[:, keep].tocsr(), pd.read_pickle(D + 'genemap.pkl')
 
 
 def samples():
-    return pd.read_csv(D + 'marine_coassembly.samples.tsv', sep='\t')['sample'].tolist()
+    """RNA libraries used in analyses: all_samples() minus QC-excluded libraries."""
+    ex = excluded('rna')
+    return [s for s in all_samples() if s not in ex]
 
 
 def bh(p):
