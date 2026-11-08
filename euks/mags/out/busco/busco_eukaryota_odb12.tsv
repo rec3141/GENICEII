@@ -1,0 +1,31 @@
+mag	Mbp	call	conf	C	S	D	F	M	E
+EE01	40.1	Laminariales (order)	medium	0.0	0.0	0.0	3.1	96.9	
+EE02	38.81	Chrysophyceae (class)	medium	52.7	50.4	2.3	7.0	40.3	50.0
+EE03	28.78	Attheya (genus)	medium	55.8	53.5	2.3	7.8	36.4	52.8
+EE04	34.77	Cercozoa (rRNA)	medium	2.3	2.3	0.0	4.7	93.0	66.7
+EE05	81.76	Minidiscus (genus)	high	79.1	61.2	17.8	7.8	13.2	46.1
+EE06	26.84	Choanoflagellata? (class)	low	12.4	12.4	0.0	13.2	74.4	37.5
+EE07	23.78	Acanthoecida (order)	medium	26.4	26.4	0.0	2.3	71.3	35.3
+EE08	15.55	Oligohymenophorea (class)	medium	17.8	14.7	3.1	6.2	76.0	21.7
+EE10	11.24	Metazoa (kingdom)	medium	1.6	1.6	0.0	3.1	95.3	
+EE12	8.93	Calanidae (family)	medium	0.8	0.8	0.0	0.0	99.2	100.0
+EE13	2.22	Metazoa? (kingdom)	low	0.8	0.8	0.0	0.8	98.4	100.0
+EE14	8.33	Calanidae (family)	medium	0.0	0.0	0.0	0.8	99.2	
+EE15	2.14	Bacillariophyta? (phylum)	low	3.9	3.9	0.0	0.8	95.3	60.0
+EE16	7.28	Haptophyta? (phylum)	low	0.0	0.0	0.0	0.0	100.0	
+EE17	2.53	Calanidae (family)	medium	1.6	1.6	0.0	0.0	98.4	
+EE21	21.87	Bacillariophyta (phylum)	high	1.6	1.6	0.0	0.8	97.7	
+EE22	18.05	Micromonas (genus)	high	65.9	65.9	0.0	10.1	24.0	37.6
+EE23	13.78	Bathycoccus (genus)	high	62.8	60.5	2.3	6.2	31.0	22.2
+EE25	7.8	Picochlorum (genus)	medium	42.6	42.6	0.0	11.6	45.7	58.2
+EE26	8.43	Staurosira (genus)	medium	20.9	20.9	0.0	2.3	76.7	55.6
+EE27	12.21	Thalassiosiraceae (family)	medium	12.4	12.4	0.0	1.6	86.0	43.8
+EE28	4.96	Chromulinales (order)	medium	7.0	7.0	0.0	1.6	91.5	44.4
+EE29	10.55	Chaetocerotales (order)	medium	5.4	5.4	0.0	0.8	93.8	28.6
+EE30	71.77	Chaetoceros (genus)	medium	88.4	51.2	37.2	4.7	7.0	51.8
+EE31	14.66	Chaetocerotales (order)	medium	11.6	11.6	0.0	2.3	86.0	66.7
+EE32	19.79	Naviculales (order)	medium	32.6	31.8	0.8	8.5	58.9	54.8
+EE33	17.87	Bacillariophyceae (class)	medium	25.6	24.0	1.6	6.2	68.2	48.5
+EE34	7.52	Bacillariophyceae (class)	medium	0.8	0.8	0.0	0.0	99.2	
+EE35	5.55	Bacillariophyceae (class)	medium	1.6	1.6	0.0	0.0	98.4	50.0
+EE36	3.07	Ascomycota? (phylum)	low	6.2	6.2	0.0	0.8	93.0	37.5
