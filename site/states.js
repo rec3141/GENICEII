@@ -66,7 +66,11 @@ function stExplorer(sec, J) {
     stFunc(v, J, m, d);
   }
   sel.onchange = draw; ss.onchange = draw; tr.onchange = draw;
-  sel.value = (det.find(m => m.bin === 'lorbin_184') || det[0]).bin; draw();
+  let want = null; try { want = localStorage.getItem('cmo-states-mag'); localStorage.removeItem('cmo-states-mag'); } catch (e) { /* storage blocked */ }
+  sel.value = (det.find(m => m.bin === want) || det.find(m => m.bin === 'lorbin_184') || det[0]).bin; draw();
+  // a genome picked elsewhere (Response guilds page) is preselected when this page is shown again
+  addEventListener('hashchange', () => { if (location.hash !== '#states') return; let w = null; try { w = localStorage.getItem('cmo-states-mag'); localStorage.removeItem('cmo-states-mag'); } catch (e) { /* storage blocked */ }
+    if (w && det.find(m => m.bin === w)) { sel.value = w; draw(); } });
 }
 
 const ST_LAYER = { TOP: 'top section', BOT: 'bottom section', HIGH: 'upper section (labelled “High”)', LOW: 'lower section (labelled “Low”)', MID: 'middle section', PANCAKE: 'pancake ice' };
