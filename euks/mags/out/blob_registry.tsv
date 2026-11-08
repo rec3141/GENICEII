@@ -1,13 +1,13 @@
 blob	seed	decision	bp	tiara_euk	virus_bp	annulus_euk_bp	annulus_profile_r	expr_ppm_median
-B01	55,-95	eukaryote, already in E22	13956916	0.89	0.13	1109750	0.36	56.2
-B02	45,-100	prokaryote, no ID	5571853	0.0	0.43	3976		5.1
-B03	57,-47	new eukaryote E25; split test D 1.93	7497126	0.99	0.21	827197	-0.0	583.4
-B04	27,-30	eukaryote fragment (< 2 Mbp), not registered	549916	1.0	0.06	9793051	0.03	6.6
-B05	19,-30	new eukaryote E26	3440016	1.0	0.04	5800598	0.37	34.0
-B06	9,-48	new eukaryote E27; split test D 2.21	5048732	1.0	0.03	24222393	0.36	162.9
-B07	14,-58	new eukaryote E28; split test D 2.81	5010776	0.95	0.03	548162	-0.05	12.5
-B08	-3,-53	new eukaryote E29; split test D 3.74	7016070	1.0	0.05	16344412	0.23	1503.1
-B09	-2,-38	new eukaryote E30; split test D 2.17	23403474	1.0	0.23	30712671	0.15	126.6
-B10	-12,-60	virus, already in V01	12435619	0.49	1.0	2009987	0.45	225.7
-B11	-42,-32	prokaryote, no ID	2343390	0.0	0.46	26077		12.1
-B12	-48,-28	new virus V02	4950014	0.0	0.78	759727	0.08	10637.8
+B01	55,-95	eukaryote, already in E22	13956916	0.89	0.13	1109750.0	0.36	56.2
+B02	45,-100	prokaryote, no ID	5571853	0.0	0.43	3976.0		5.1
+B03	57,-47	new eukaryote E25; split test D 1.93	7497126	0.99	0.21	827197.0	-0.0	583.4
+B04	27,-30	eukaryote fragment (< 2 Mbp), not registered	549916	1.0	0.06	9793051.0	0.03	6.6
+B05	19,-30	new eukaryote E26	3440016	1.0	0.04	5800598.0	0.37	34.0
+B06	9,-48	new eukaryote E27; split test D 2.21	5048732	1.0	0.03	24222393.0	0.36	162.9
+B07	14,-58	new eukaryote E28; split test D 2.81	5010776	0.95	0.03	548162.0	-0.05	12.5
+B08	-3,-53	new eukaryote E29; split test D 3.74	7016070	1.0	0.05	16344412.0	0.23	1503.1
+B09	-2,-38	new eukaryote E30; split test D 2.17	23403474	1.0	0.23	30712671.0	0.15	126.6
+B10	-12,-60	virus, already in V01	12435619	0.49	1.0	2009987.0	0.45	225.7
+B11	-42,-32	prokaryote, no ID	2343390	0.0	0.46	26077.0		12.1
+B12	-48,-28	new plastid group P01	4950014		0.78			

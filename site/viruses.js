@@ -95,7 +95,7 @@ function vrPairs(sec, J) {
   function draw() {
     wrap.innerHTML = '';
     const p = J.pairs[+sel.value];
-    const box = fig(wrap, `${p.votu} · ${p.label}${p.len ? ` · ${d3.format('.1f')(p.len / 1000)} kb` : ''}`, p.host ? `Dashed: host candidate ${/^E\d\d$/.test(p.host) ? 'eukaryotic genome group ' + p.host + ' (reads per million on its contigs)' : p.host + ' (TPM)'}. Colours: control pool blue, diesel pool orange.` : 'No host candidate shown.');
+    const box = fig(wrap, `${p.votu} · ${p.label}${p.len ? ` · ${d3.format('.1f')(p.len / 1000)} kb` : ''}`, p.host ? `Dashed: host candidate ${/^EE\d\d$/.test(p.host) ? 'eukaryotic MAG ' + p.host + ' (reads per million on its contigs)' : p.host + ' (TPM)'}. Colours: control pool blue, diesel pool orange.` : 'No host candidate shown.');
     const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--ctl)"></i>Control pool</span><span><i style="background:var(--exp)"></i>Diesel pool</span><span style="color:var(--ink-2)"><i style="background:var(--ink-2)"></i>phage transcripts (CPM)</span>${p.host ? '<span style="color:var(--ink-2)"><i class="dash"></i>host MAG (TPM)</span>' : ''}`);
     box.parentNode.insertBefore(lg, box);
     const rows = p.pts.map(x => ({ ...x, medium: 'SW', name: `${x.pool} day ${x.day}` }));
@@ -114,25 +114,9 @@ function vrHosts(sec, J) {
 }
 
 function vrGroups(sec, J) {
-  const V = J.virus_groups || []; if (!V.length) return;
-  sec.append(el('h3', {}, 'Large viral genome groups'));
-  sec.append(el('p', { class: 'kicker' }, `The eukaryotic-genome binning (Eukaryotes page) also turns up ${V.length} large groups of contigs that are mostly viral by geNomad: compact on the contig map, they are kept as virus groups (V##) rather than eukaryotes. V01 was first grouped as eukaryote E09; V02 was found by the expression/coverage kernel. ${(() => { const o = V.filter(v => (v.organelle || 0) >= 0.5); return o.length ? `Caution: ${o.map(v => v.id).join(', ')} ${o.length > 1 ? 'are' : 'is'} mostly plastid/organelle DNA by Tiara (${o.map(v => d3.format('.0%')(v.organelle)).join(', ')} of length), lies on plastid MAGs and carries photosystem and RuBisCO genes, so it is more likely algal plastid DNA that geNomad reads as viral than a virus.` : ''; })()} V01 (19 Mbp, almost entirely viral by geNomad and not organelle) is the better candidate for a giant virus. Expression is the share of reads on the group’s contigs per million contig-assigned reads. Differential abundance: log₂, tested per library with BH correction; * q < 0.05, ** < 0.01, *** < 0.001.`));
-  const DAC = [['RNA', 'diesel_vs_control_2024-25', 'RNA diesel ÷ ctl 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'RNA diesel ÷ ctl 25-26'], ['RNA', 'baci_2025-26_SW', 'RNA BACI 25-26'],
-               ['RNA', 'ice_vs_water', 'RNA ice ÷ water'], ['DNA', 'diesel_vs_control_2024-25', 'DNA diesel ÷ ctl 24-25'], ['DNA', 'ice_vs_water', 'DNA ice ÷ water']];
-  const star = q => q == null ? '' : q < 0.001 ? '***' : q < 0.01 ? '**' : q < 0.05 ? '*' : '';
-  const box = fig(sec, 'Viral genome groups', 'Size and GC of the group’s contigs; viral = share of its length called viral by geNomad; organelle = share Tiara calls plastid/organelle; median = reads per million over all pool libraries. Hover a cell for its q.');
-  box.innerHTML = `<div class="tablewrap"><table><thead><tr><th>Group</th><th class="num">Size</th><th class="num">GC</th><th class="num">viral</th><th class="num">organelle</th><th class="num">median</th>${DAC.map(c => `<th class="num">${c[2]}</th>`).join('')}<th>Origin</th></tr></thead><tbody>${
-    V.map(v => `<tr><td><b>${v.id}</b></td><td class="num">${d3.format('.1f')(v.mbp)} Mbp, ${fmt(v.contigs)} contigs</td><td class="num">${v.gc ?? '–'}</td><td class="num">${v.viral == null ? '–' : d3.format('.0%')(v.viral)}</td><td class="num">${v.organelle == null ? '–' : d3.format('.0%')(v.organelle)}</td><td class="num">${v.median == null ? '–' : fmt(v.median)}</td>${
-      DAC.map(c => { const x = v.da[c[0] + '|' + c[1]]; return x ? `<td class="num" title="q = ${x[1]}">${vrSgn(x[0])}${star(x[1])}</td>` : '<td class="num">–</td>'; }).join('')}<td style="font-size:12px;color:var(--ink-2)">${v.note}</td></tr>`).join('')}</tbody></table></div>`;
-  const c = el('div', { class: 'controls' }); sec.append(c);
-  const sel = el('select', { id: 'vrvg', 'aria-label': 'Viral genome group' }); V.forEach(v => sel.append(new Option(`Virus ${v.id}`, v.id))); c.append(el('label', { for: 'vrvg' }, 'Viral group'), sel);
-  const v2 = el('div'); sec.append(v2);
-  function draw() { v2.innerHTML = ''; const v = V.find(x => x.id === sel.value);
-    const b = fig(v2, `${v.id}: reads per million`, 'Reads on the group’s contigs per million contig-assigned reads; lines join per-day means of replicate libraries.');
-    legendPools(b.parentNode.insertBefore(el('div'), b));
-    const rows = J.vg_samples.map((s, i) => ({ ...s, v: v.expr[i] })).filter(r => ['CTL', 'EXP'].includes(r.pool) && ['SW', 'SI'].includes(r.medium));
-    timecourse(b, vrSeries(rows, r => r.v), { ylab: 'per million', unit: 'per million', h: 190, floor: 1 }); }
-  sel.onchange = draw; draw();
+  // no viral genome groups: the tailed-phage cluster is many phages (contigs stay individual vOTUs); the former V02 is plastid P01
+  const p = J.phage_cluster;
+  sec.append(el('p', { class: 'kicker' }, `${p ? `A cluster of tailed-phage contigs (about ${d3.format(',')(Math.round(p.contigs / 100) * 100)} contigs, ${d3.format('.0f')(p.mbp)} Mbp) sits inside the eukaryotic region of the contig map; it is many phages, not one genome. ` : ''}The group formerly listed here as virus V02 is algal plastid DNA, now plastid group P01 (<a href="#euks">Eukaryotes</a> page).`));
 }
 
 function vrProphage(sec, J) {

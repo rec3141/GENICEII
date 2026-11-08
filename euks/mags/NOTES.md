@@ -150,3 +150,75 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
   - it carries psbA/D, psaA/B, petB/D and rbcL: on the Light page "Virus V02" hosts 15–30% of those transcripts.
   - geNomad calls 78% of it viral ("Heunggongvirae"). The V## rule (≥ 50% geNomad viral) should probably exclude groups that are ≥ 50% Tiara organelle.
 - **Viruses page:** shows an organelle column and a caution for V02.
+
+## STATE FOR RESUMING (2026-11-08, end of session)
+
+### Pipeline order (all in `scripts/`, Python `/data/miniforge3/bin/python3`)
+1. `survey.py` (candidate config `LIST`) → `compact.py` → `final.py` (split rule + ID registry) → `expr.py` → `finalize.py` (virus rule, statuses).
+2. `kernel.py` (seed config `SEEDS`) → `da.py` → `register_blobs.py` (organelle → P/M, virus → V, eukaryote → E) → `plot.py`.
+3. `hull_panels.py` → **`hulls.tsv`** (curated, hand-picked; never regenerated) → `hull_mags.py` → `plot_hulls.py`.
+4. `organelle.py`: exploratory, see Pending. Do NOT run it as part of the pipeline: it rewrites the organelle tables with a flawed split.
+- Always run `final.py` before `finalize.py`. `finalize.py` rewrites `contig_euk_group.tsv` from bin groups, and `register_blobs.py` appends the kernel blobs afterwards.
+
+### Rules (see sections above for details)
+- **Eukaryote groups (E##):**
+  - Built by containment + density gaps (DBSCAN eps 1.5).
+  - Seeds must be ≥ 50% Tiara eukarya.
+  - GC/24-unit merge; footprint merge.
+  - Split rule (`eukshared.split_parts`): Ashman D > 3, > 5 units apart, minor part ≥ 2 Mbp and ≥ 10%.
+- **Viruses (V##):** ≥ 50% geNomad viral AND < 50% Tiara organelle.
+- **Organelles (P##/M##):** ≥ 50% Tiara organelle. P vs M by marker genes, because Tiara's second-stage call is not in the contig table.
+- **IDs:** shared registry `out/id_registry.tsv`.
+  - V02 is retired: it was a plastid, now P01. The keys `retired:V02` and `retired:VV02` keep those numbers from ever being reused.
+- **Hull MAGs:**
+  - EE##/VV## = point-in-polygon on `hulls.tsv`, contigs ≥ 1 kb.
+  - EE hulls exclude Tiara bacteria/archaea.
+  - Overlaps go to the source group, else the nearer centroid.
+  - Single-hull sources map E05 → EE05; extra E21 cores → EE32–EE36.
+  - `network_ok` (EE) = purity ≥ 0.9, ≥ 4 Mbp, median ≥ 10 reads per million.
+
+### Output files (`out/`) and their state
+- **Current, wired by the coordinator:** `contig_euk_group.tsv` and `euk_groups.tsv` (E01–E08, E10, E12–E18, E21–E31). Contigs are unique.
+- **Current:**
+  - `virus_groups.tsv` / `contig_virus_group.tsv` (V01 only).
+  - `organelle_groups.tsv` / `contig_organelle_group.tsv` (P01, unsplit, 335 contigs, 4.95 Mbp).
+  - `hull_mags.tsv` / `contig_hull_mag.tsv` / `hull_mags_da.tsv` (EE01–EE36 + VV01; 85,878 contigs, unique).
+  - `euk_groups_tsne.png`, `euk_hull_mags_tsne.png`.
+  - `hulls/panels/*.png` (drawing panels), `hulls/verify/*.png`, `hulls/verify_expr_sheet_*.png`.
+- **Snapshots:** `*.before_split.tsv` (pre-E03-split eukaryote table; pre-split organelle tables = the current ones). `out/v1/` is the ID-continuity reference for `final.py`.
+- **Marker table:** `organelle_markers.tsv`, the plastid/mito marker copies on P01 by bin.
+
+### Pending (not done; user deferred)
+1. **Plastid P01 split.**
+   - P01 holds about 21 plastid genomes of markers (rbcL 33, psaA 29, psaB 34, psbD 23, petB 45, atpB 8; mito cox1 5, cob 1). Most copies sit on unbinned contigs (rbcL 23, psaB 25).
+   - Nine organelle bins inside it are single plastids of 100–130 kb, 1 marker copy each: metabat_1343, lorbin_603, metabat_11799, lorbin_507, lorbin_663, lorbin_613, lorbin_732_sub, lorbin_892, metabat_7332_sub (16S host Thalassiosira pseudonana).
+   - Plan:
+     - one P per organelle bin;
+     - split the unbinned remainder by RNA+DNA profile co-variation (average-linkage, r ≥ 0.85; keep clusters ≥ 50 kb carrying rbcL/psaA/psaB);
+     - the parent ID goes to the largest part.
+   - The `organelle.py` draft gives the parent ID to the largest bin and lumps the remainder into it. Fix that before use.
+2. **Host links.** Spearman of each plastid's RNA profile against the E## groups. Draft top matches: E05 for most bins (ρ 0.8–0.97), E07 for lorbin_663, E21 for metabat_1343/metabat_11799. Lineage agreement is not checked yet.
+3. **Coassembly-wide organelle check.** Tiara-organelle contigs ≥ 1 kb: 313 in P01 (4.9 Mbp), 36 in 16 other organelle bins (1.6 Mbp; plastid MAGs elsewhere on the map, e.g. metabat_9288_sub, lorbin_635, lorbin_511, metabat_7265, metabat_8525), 105 in non-organelle bins (1.2 Mbp), 9,808 unbinned (53.7 Mbp, location not yet mapped).
+4. **Hulls to re-check with expression (user asked whether hulls used expression; they did not).** Hulls were drawn on spatial density with contigs sized by length. Review the expression check sheets `hulls/verify_expr_sheet_*.png` for:
+   - EE01 (median expression 1 → 104 per million after gaining 2.3 Mbp: probably an expressed neighbour inside the hull);
+   - EE12 (+6.1 Mbp), EE14 (+6.0), EE30 (+14.6), EE31 (+9.5), EE27 (+7.6): large gains;
+   - EE36 (E21F) and EE13: small or uncertain;
+   - EE08 (6.5 Mbp of prokaryotic contigs excluded).
+5. **M## series:** no mitochondrial group exists yet (the rule is ready).
+
+## Site wiring of the hull MAGs (2026-11-08, PR #17)
+- **EE## (and P##) are the site's eukaryotic and organelle labels.** E##/V## stay in `data/` as provenance only; each EE records its `source_group`.
+- **Expression:** `scripts/hull_expr.py` (run after `hull_mags.py`) writes `out/hull_mags_expr_samples.tsv`: EE/VV/P × 128 libraries, reads per million contig-assigned reads. It uses the same metric as `expr.py`, and its medians equal `hull_mags.tsv:expr_ppm_median` exactly. DA comes from `out/hull_mags_da.tsv`.
+- **`scripts/bin_domains.py`** writes:
+  - `data/hull_mags.tsv`, with `status` (same thresholds as the E## groups) and a rule-based `caution`:
+    - "uncertain: hull may include an expressed neighbour": median expression ≥ 10× the source group's and ≥ 10 per million. Only EE01 (1.1 → 104).
+    - "hull added X Mbp to the Y Mbp source group": gained ≥ 4 Mbp and ≥ 50% of the source. EE12, EE14, EE16, EE26, EE27, EE29, EE30, EE31.
+    - "hull drawn on a sparse or small core": hull note starts "UNSURE". EE12, EE13, EE36.
+  - `data/contig_hull_mag.tsv.gz`, `data/organelle_groups.tsv`, `data/contig_organelle_group.tsv.gz`;
+  - `bin_domain.tsv:hull_mag` (comebin_3937 → EE05, comebin_4527 → EE03, lorbin_494_sub → EE30).
+- **Viral genome-group rule (VV## and V##):** a viral group needs ≥ 50% of its bp in geNomad Nucleocytoviricota or another giant-virus / eukaryotic-virus class (Megaviricetes, Maveriviricetes, Pokkesviricetes, Polintoviricetes, Alsuviricetes, Pisoniviricetes, Revtraviricetes).
+  - Tailed-phage (Caudoviricetes) clusters are many phages that cluster together on composition, not genome groups.
+  - V01/VV01 has 2,165 contigs and 20.9 Mbp, is 97% Caudoviricetes, spans 1–405× depth, and its largest contig is 569 kb. It fails the rule (0% giant-virus classes), so **no VV## exist**.
+  - `retired:VV01` is in `out/id_registry.tsv`; nothing was renumbered. Its contigs keep the per-contig vOTU handling on the Viruses page.
+  - `hull_mags.py` now applies the rule. The current `out/hull_mags.tsv`/`contig_hull_mag.tsv`/`hull_mags_da.tsv` predate it and still list VV01; `bin_domains.py` drops it when wiring `data/`, and `plot_hulls.py` leaves retired ids out of the figure.
+- **`contig_host_label` order:** VV## (none at present) → P## ("Plastid P01", counted as plastid like `is_plastid`) → EE## (doubtful EE only if Tiara calls the contig eukaryotic) → fallback.

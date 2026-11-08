@@ -4,7 +4,10 @@ eukaryote: Tiara-eukarya >= 0.5 and geNomad virus < 0.5; skipped if >= 30% of it
   'diffuse' if Tiara-eukarya contigs >= 2 kb in the annulus r..2r around the blob centroid (r = 90th-pct member distance), not in
   the blob, outweigh the blob AND follow the blob's expression/coverage profile (median r >= 0.6): a disc cut from a larger
   co-varying cloud, not a genome with an expression boundary. Otherwise a new E## (next free number).
-virus: geNomad virus >= 0.5; skipped if >= 30% already in a V## group; else next free V##.
+organelle: Tiara organelle >= 0.5 (checked first) -> P## (plastid) or M## (mitochondrion) by marker genes (Tiara's second-stage call
+  is not in the contig table): psbA/D, psaA/B, rbcL vs cox1-3, cob, nad; the kind with >= 2x the other's count wins, else not
+  registered. Written to out/organelle_groups.tsv and out/contig_organelle_group.tsv.
+virus: geNomad virus >= 0.5 and organelle < 0.5; skipped if >= 30% already in a V## group; else next free V##.
 prokaryote: no ID (reported only).
 Appends to out/contig_euk_group.tsv, out/euk_groups.tsv, out/contig_virus_group.tsv, out/virus_groups.tsv; writes out/blob_registry.tsv.
 Idempotent: previously registered blob contigs (source 'kernel_blob:...') are removed before re-adding."""
@@ -18,6 +21,19 @@ EG = pd.read_csv(O + 'euk_groups.tsv', sep='\t'); EG = EG[~EG.note.fillna('').st
 CV = pd.read_csv(O + 'contig_virus_group.tsv', sep='\t'); CV = CV[~CV.source_bins.fillna('').astype(str).str.startswith('kernel_blob:')]
 VG = pd.read_csv(O + 'virus_groups.tsv', sep='\t'); VG = VG[~VG.note.fillna('').str.startswith('kernel blob')]
 X = pd.read_csv(O + 'da_blobs_abundance_rna.tsv', sep='\t', index_col=0)
+GM = pd.read_pickle('/data/dev/rnaseq-exploration/data/genemap.pkl')[['contig', 'product']]
+PL_RX = r'[Pp]hotosystem|Ribulose bisphosphate carboxylase large|\bpsb[A-Z]\b|\bpsa[A-Z]\b|\brbcL\b'
+MT_RX = r'[Cc]ytochrome c oxidase subunit [123]\b|[Cc]ytochrome b\b|NADH dehydrogenase subunit|NADH-ubiquinone oxidoreductase chain|\bcox[123]\b|\bcob\b|\bnad\d'
+def org_kind(ids):
+    # Tiara's second-stage plastid/mitochondrion call is not in the contig table, so marker genes decide (>= 2x more of one kind)
+    p = GM['product'][GM.contig.isin(ids)].fillna(''); npl = int(p.str.contains(PL_RX, regex=True).sum()); nmt = int(p.str.contains(MT_RX, regex=True).sum())
+    return ('P' if npl >= 2 * max(nmt, 1) else 'M' if nmt >= 2 * max(npl, 1) else '?'), npl, nmt
+import os
+CO = pd.read_csv(O + 'contig_organelle_group.tsv', sep='\t') if os.path.exists(O + 'contig_organelle_group.tsv') else pd.DataFrame(columns=['contig', 'oid', 'source_bins'])
+CO = CO[~CO.source_bins.fillna('').astype(str).str.startswith('kernel_blob:')]
+OG = pd.read_csv(O + 'organelle_groups.tsv', sep='\t') if os.path.exists(O + 'organelle_groups.tsv') else pd.DataFrame(columns=['oid', 'note'])
+OG = OG[~OG.note.fillna('').str.startswith('kernel blob')]
+addCO, addO = [], []
 RN = pd.read_pickle(O + 'kernel_rna_cpm.pkl'); DN = pd.read_pickle(O + 'kernel_dna_share.pkl')
 lR = np.log1p(RN * 10); lD = np.log1p(DN * 1e6)
 def prof_corr(ids_in, ids_out):
@@ -49,6 +65,23 @@ for _, x in K.iterrows():
     tl = g.length[g.tiara.notna()].sum(); te = g.length[g.tiara == 'eukarya'].sum() / tl if tl else 0
     common = dict(contigs=len(g), bp=int(L), gc=round(np.average(g.gc, weights=g.length), 1), n50=int(np.sort(g.length.values)[::-1][np.searchsorted(np.cumsum(np.sort(g.length.values)[::-1]), L / 2)]),
                   depth_med=round(g.depth.median(), 2), tiara_euk=round(te, 3), tsne_rms=x.rms, cx=round(cx, 1), cy=round(cy, 1), expr_ppm_median=round(expr, 1))
+    org = g.length[(g.tiara == 'organelle').values].sum() / max(g.length[g.tiara.notna().values].sum(), 1)
+    if org >= 0.5:
+        kind, npl, nmt = org_kind(ids)
+        if kind == '?': dec = f'organelle blob ({org:.0%} Tiara organelle), plastid/mito markers ambiguous ({npl}/{nmt}); not registered'
+        else:
+            if str(IDS.get(f'blob:{x.seed}', '')).startswith('ORG'): IDS.pop(f'blob:{x.seed}')      # earlier placeholder
+            oid = allocate(IDS, f'blob:{x.seed}', kind, taken=list(OG.oid) if len(OG) else []); dec = f'new {"plastid" if kind == "P" else "mitochondrial"} group {oid}'
+            db = g.bin.fillna(''); pb = g.length[db != ''].groupby(db[db != '']).sum().sort_values(ascending=False)
+            kj = g.length.groupby(g[['kaiju_phylum', 'kaiju_class', 'kaiju_genus']].fillna('').agg(' > '.join, axis=1)).sum().sort_values(ascending=False)
+            r16 = g[g.rrna_domain.notna()][['rrna_domain', 'rrna_phylum', 'rrna_class', 'rrna_genus']].fillna('').agg(' > '.join, axis=1).value_counts()
+            addO.append(dict(oid=oid, note=(f'kernel blob {b} at ({x.seed}); formerly V02 (geNomad called it {x.virus_bp:.0%} viral)' if x.seed == '-48,-28' else f'kernel blob {b} at ({x.seed})'),
+                             parts=b, kind='plastid' if kind == 'P' else 'mitochondrion', plastid_markers=npl, mito_markers=nmt, tiara_organelle=round(org, 3), virus_bp=x.virus_bp,
+                             dastool_bins='; '.join(f'{k.replace("dastool-", "")} {v / L:.0%}' for k, v in pb.head(4).items()),
+                             kaiju_lineage='; '.join(f'{k} {v / L:.0%}' for k, v in kj.head(2).items()), rrna='; '.join(f'{k} ({n})' for k, n in r16.head(3).items()),
+                             status='organelle (no hull yet)', **common))
+            addCO += [dict(contig=c, oid=oid, source_bins=f'kernel_blob:{b}', tiara=T.tiara.get(c, ''), gc=T.gc[c], length=T.length[c]) for c in ids]
+        reg.append(dict(blob=b, seed=x.seed, decision=dec, bp=int(L), tiara_euk=None, virus_bp=x.virus_bp)); continue
     if x.virus_bp >= 0.5:
         if inV >= 0.3: dec = 'virus, already in ' + ','.join(sorted(set(CV.vid[CV.contig.isin(ids)])))
         else:
@@ -73,6 +106,8 @@ pd.concat([CE, pd.DataFrame(addC)]).to_csv(O + 'contig_euk_group.tsv', sep='\t',
 pd.concat([EG, pd.DataFrame(addG)]).to_csv(O + 'euk_groups.tsv', sep='\t', index=False)
 pd.concat([CV, pd.DataFrame(addCV)]).to_csv(O + 'contig_virus_group.tsv', sep='\t', index=False)
 pd.concat([VG, pd.DataFrame(addV)]).to_csv(O + 'virus_groups.tsv', sep='\t', index=False)
+pd.concat([CO, pd.DataFrame(addCO)]).to_csv(O + 'contig_organelle_group.tsv', sep='\t', index=False)
+pd.concat([OG, pd.DataFrame(addO)]).to_csv(O + 'organelle_groups.tsv', sep='\t', index=False)
 save_ids(IDS)
 R = pd.DataFrame(reg); R.to_csv(O + 'blob_registry.tsv', sep='\t', index=False)
 pd.set_option('display.width', 250); print(R.to_string(index=False))

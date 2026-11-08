@@ -203,7 +203,7 @@ def is_virus_group(x):
 
 
 def virus_group_label(vid):
-    """'Virus V02' (a large viral genome group from the eukaryotic-region binning; geNomad-viral >= 50% of its length)."""
+    """'Virus V01' (provenance only: V## groups are not used as labels on the site; see the viral genome-group rule in _hull_mags)."""
     return f'Virus {vid}' if is_virus_group(vid) else ''
 
 
@@ -240,39 +240,141 @@ def group_da():
     return A[['group', 'blob', 'data', 'contrast', 'log2_effect', 'q']]
 
 
+_HM = _HMI = _HMT = None
+def _hull_mags():
+    """Hull-curated MAGs (EE## eukaryotic, VV## viral; euks/mags hull_mags.py, copied by scripts/bin_domains.py): contig -> MAG,
+    MAG info (data/hull_mags.tsv), and the contigs Tiara calls eukaryotic.
+    Viral genome-group rule (VV## and V##): >= 50% of bp in geNomad Nucleocytoviricota or another giant-virus / eukaryotic-virus
+    class. Tailed-phage (Caudoviricetes) clusters are many phages, not genomes; bin_domains.py leaves them out of data/, so the
+    former VV01/V01 (97% Caudoviricetes) has no genome label and its contigs keep the per-contig vOTU handling. No VV## exist now."""
+    global _HM, _HMI, _HMT
+    if _HM is None:
+        c = pd.read_csv(D + 'contig_hull_mag.tsv.gz', sep='\t')
+        _HM = dict(zip(c.contig, c.mag)); _HMT = set(c.contig[c.tiara == 'eukarya'])
+        _HMI = pd.read_csv(D + 'hull_mags.tsv', sep='\t', keep_default_na=False).set_index('mag')
+    return _HM, _HMI, _HMT
+
+
+def hull_mag(contig):
+    """EE##/VV## hull MAG of a contig, '' if none."""
+    return _hull_mags()[0].get(contig, '')
+
+
+def hull_mag_info(mid):
+    """Row of data/hull_mags.tsv (source_group, status, network_ok, caution, bp, bp_gained, bp_lost, ...) as a dict; {} if unknown."""
+    I = _hull_mags()[1]
+    return I.loc[mid].to_dict() if mid in I.index else {}
+
+
+def is_hull_mag(x):
+    """True for an EE## or VV## hull MAG id."""
+    return isinstance(x, str) and x in _hull_mags()[1].index
+
+
+def is_euk_hull_mag(x):
+    return is_hull_mag(x) and x.startswith('EE')
+
+
+def is_virus_hull_mag(x):
+    return is_hull_mag(x) and x.startswith('VV')
+
+
+def hull_mag_label(mid):
+    """'Virus VV##', 'Eukaryote EE02 (Ochromonadales)', 'Eukaryote EE05', or 'Eukaryote EE08 (mixed group)' for doubtful MAGs."""
+    i = hull_mag_info(mid)
+    if not i: return ''
+    if mid.startswith('VV'): return f'Virus {mid}'
+    h = i.get('taxonomy_hint', '') or ''
+    tag = h if h else ('mixed group' if i.get('status') == 'doubtful' else '')
+    return f'Eukaryote {mid}' + (f' ({tag})' if tag else '')
+
+
+def hull_mag_expression():
+    """EE##/P## (and the retired VV01) x RNA libraries: reads on the MAG's contigs per million contig-assigned reads (euks/mags hull_expr.py; the
+    same metric as group_expression() and hull_mags.tsv expr_ppm_median). QC-excluded libraries already removed."""
+    return pd.read_csv(EM + 'hull_mags_expr_samples.tsv', sep='\t', index_col=0)
+
+
+def hull_mag_da():
+    """Per-MAG differential abundance (RNA and DNA) of the EE##/VV## hull MAGs (euks/mags hull_mags.py via dacore, the same tests as
+    group_da()). Long table: group, data, contrast, log2_effect, q."""
+    A = pd.read_csv(EM + 'hull_mags_da.tsv', sep='\t').rename(columns={'blob': 'group'})
+    A = A[A.group.map(is_hull_mag)]                                      # wired MAGs only (drops the retired VV01)
+    return A[['group', 'data', 'contrast', 'log2_effect', 'q']]
+
+
+_OG = _OGI = None
+def _organelle_groups():
+    """Organelle groups (P## plastid, M## mitochondrial; >= 50% Tiara organelle, euks/mags register_blobs.py): contig -> id, info."""
+    global _OG, _OGI
+    if _OG is None:
+        c = pd.read_csv(D + 'contig_organelle_group.tsv.gz', sep='\t')
+        _OG = dict(zip(c.contig, c.oid))
+        _OGI = pd.read_csv(D + 'organelle_groups.tsv', sep='\t', keep_default_na=False).set_index('oid')
+    return _OG, _OGI
+
+
+def organelle_group(contig):
+    """P##/M## organelle group of a contig, '' if none."""
+    return _organelle_groups()[0].get(contig, '')
+
+
+def organelle_group_info(oid):
+    I = _organelle_groups()[1]
+    return I.loc[oid].to_dict() if oid in I.index else {}
+
+
+def is_organelle_group(x):
+    return isinstance(x, str) and x in _organelle_groups()[1].index
+
+
+def organelle_group_label(oid):
+    """'Plastid P01' or 'Mitochondrion M01'."""
+    if not is_organelle_group(oid): return ''
+    return ('Mitochondrion ' if oid.startswith('M') else 'Plastid ') + oid
+
+
+def contig_is_plastid(contig):
+    """True for a contig in a P## plastid group (the contig-level counterpart of is_plastid for unbinned contigs)."""
+    return organelle_group(contig).startswith('P')
+
+
 def contig_host_label(contig, fallback):
-    """Host label for an UNBINNED contig: 'Virus V02' if it belongs to a virus group (a virus, not a host); its eukaryotic
-    genome group if it has one; else `fallback` (e.g. a Kaiju label). Contigs of doubtful (mixed) eukaryotic groups only take
-    the group label if Tiara calls the contig itself eukaryotic. Binned contigs are labelled through their bin."""
-    v = virus_group(contig)
-    if v: return virus_group_label(v)
-    g = euk_group(contig)
-    if not g: return fallback
-    if euk_group_info(g).get('status') == 'doubtful':
-        if _TIARA_EUK is None: _load_tiara_euk()
-        if contig not in _TIARA_EUK: return fallback
-    return euk_group_label(g)
+    """Host label for an UNBINNED contig, in this order: 'Virus VV##' if it is in a viral hull MAG (a virus, not a host; none at
+    present, see _hull_mags);
+    'Plastid P01' if it is in a P## organelle group (plastid DNA, never a bacterial host); its eukaryotic hull MAG (EE##) if it
+    has one; else `fallback` (e.g. a Kaiju label). Contigs of doubtful (mixed) EE MAGs only take the label if Tiara calls the
+    contig itself eukaryotic. Binned contigs are labelled through their bin. E##/V## groups are provenance only."""
+    h = hull_mag(contig)
+    if h.startswith('VV'): return hull_mag_label(h)
+    o = organelle_group(contig)
+    if o: return organelle_group_label(o)
+    if not h: return fallback
+    if hull_mag_info(h).get('status') == 'doubtful' and contig not in _hull_mags()[2]: return fallback
+    return hull_mag_label(h)
 
 
-_TIARA_EUK = None
-def _load_tiara_euk():
-    global _TIARA_EUK
-    c = pd.read_csv(D + 'contig_euk_group.tsv.gz', sep='\t')
-    _TIARA_EUK = set(c.contig[c.tiara == 'eukarya'])
+_BHM = None
+def _bin_hull_mag():
+    global _BHM
+    if _BHM is None:
+        _BHM = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0).get('hull_mag', pd.Series(dtype=str)).dropna().to_dict()
+    return _BHM
 
 
 def special_label(b):
     """Label that overrides GTDB/Kaiju for non-prokaryote bins: the plastid label (plastid_label) if there is one, else
     'Plastid/organelle (Tiara)' for organelle bins; for eukaryotic nuclear bins the label of the eukaryotic genome group
-    holding most of the bin (euk_group_label, e.g. comebin_3937 -> 'Eukaryote E05'), or 'Eukaryote (Tiara)'; '' for prokaryotes."""
+    holding most of the bin (hull_mag_label, e.g. comebin_3937 -> 'Eukaryote EE05'), or 'Eukaryote (Tiara)'; '' for prokaryotes."""
     if not isinstance(b, str) or not b: return ''
     p = plastid_label(b)
     if p: return p
     d = bin_domain(b)
     if d == 'organelle': return 'Plastid/organelle (Tiara)'
     if d == 'eukaryote':
-        g = _euk_groups()[2].get(b if b.startswith('dastool-') else 'dastool-' + b, '')
-        return euk_group_label(g) if g else 'Eukaryote (Tiara)'
+        k = b if b.startswith('dastool-') else 'dastool-' + b
+        g = _bin_hull_mag().get(k, '')
+        return hull_mag_label(g) if g else 'Eukaryote (Tiara)'
     return ''
 
 

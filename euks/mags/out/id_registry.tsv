@@ -5,10 +5,44 @@ blob:9,-48	E27
 blob:14,-58	E28
 blob:-3,-53	E29
 blob:-2,-38	E30
-blob:-48,-28	V02
 virusgroup:E09	V01
 group:EUK01	E21
 group:EUK10	E22
 group:EUK12	E23
 group:EUK11	E24
 split:E03:2	E31
+hull:E01	EE01
+hull:E02	EE02
+hull:E03	EE03
+hull:E04	EE04
+hull:E05	EE05
+hull:E06	EE06
+hull:E07	EE07
+hull:E08	EE08
+hull:E10	EE10
+hull:E12	EE12
+hull:E13	EE13
+hull:E14	EE14
+hull:E15	EE15
+hull:E16	EE16
+hull:E17	EE17
+hull:E21E	EE21
+hull:E21A	EE32
+hull:E21B	EE33
+hull:E21D	EE34
+hull:E21C	EE35
+hull:E21F	EE36
+hull:E22	EE22
+hull:E23	EE23
+hull:E25	EE25
+hull:E26	EE26
+hull:E27	EE27
+hull:E28	EE28
+hull:E29	EE29
+hull:E30	EE30
+hull:E31	EE31
+hull:V01	VV01
+retired:V02 (plastid, 2026-11-08)	V02
+retired:VV02 (V02 was a plastid)	VV02
+blob:-48,-28	P01
+retired:VV01 (Caudoviricetes phage cluster, not a genome; 2026-11-08)	VV01

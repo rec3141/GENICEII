@@ -4,7 +4,7 @@ out/euk_groups.tsv       : group summary with compactness, purity, taxonomy hint
    network_ok = Tiara-eukarya purity >= 0.9 AND >= 4 Mbp AND median contig-read share >= 10 per million (core libraries)
    AND t-SNE RMS radius <= 12 (single compact genome; clean eukaryotic genomes here are 3-6, diffuse multi-genome groups ~20).
    taxonomy_hint = lowest SILVA 18S rank shared by >= 2/3 of the group's 18S hits (>= 2 hits), else '' (no confident hint).
-out/virus_groups.tsv, out/contig_virus_group.tsv: groups that are >= 50% geNomad-viral get V## IDs (out/virus_ids.tsv) and are
+out/virus_groups.tsv, out/contig_virus_group.tsv: groups that are >= 50% geNomad-viral and < 50% Tiara organelle get V## IDs (out/virus_ids.tsv) and are
    kept out of the eukaryotic tables.
 out/euk_groups_tsne.png  : all contigs light grey; groups coloured (colour-blind-safe Okabe-Ito + Tol muted); doubtful groups
    (network_ok False) as hollow grey outlines; unbinned Tiara-eukarya contigs >= 5 kb as small dark-grey dots; zoom panel."""
@@ -53,7 +53,12 @@ S['virus_bp'] = [T.length.reindex(CE.contig[CE.euk_group == g]).where(T.genomad_
                  T.length.reindex(CE.contig[CE.euk_group == g]).sum() for g in S.group]
 import os
 VID = pd.read_csv(O + 'virus_ids.tsv', sep='\t').set_index('from_group').vid.to_dict() if os.path.exists(O + 'virus_ids.tsv') else {}
-for g in S.group[S.virus_bp >= 0.5]:
+def _org(g):
+    ids = CE.contig[CE.euk_group == g]; t = T.tiara.reindex(ids); L = T.length.reindex(ids); tl = L[t.notna().values].sum()
+    return L[(t == 'organelle').values].sum() / tl if tl else 0.0
+S['organelle_bp'] = [_org(g) for g in S.group]
+# V## rule: >= 50% geNomad-viral AND < 50% Tiara organelle (plastids carry phage-like genes; 2026-11-08 V02 was a plastid)
+for g in S.group[(S.virus_bp >= 0.5) & (S.organelle_bp < 0.5)]:
     if g not in VID: VID[g] = f'V{len(VID) + 1:02d}'
 pd.DataFrame({'from_group': list(VID), 'vid': list(VID.values())}).to_csv(O + 'virus_ids.tsv', sep='\t', index=False)
 V = S[S.group.isin(VID)].copy(); V.insert(0, 'vid', V.group.map(VID)); V['note'] = 'was ' + V.group; V['status'] = 'virus'; V['network_ok'] = False

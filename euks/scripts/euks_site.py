@@ -43,26 +43,29 @@ for b in tpm.index:
     d['mean'] = r(tpm.loc[b, S].mean(), 0)
     if d['mean'] >= 50: pl.append(d)
 J['plastids'] = sorted(pl, key=lambda d: -d['mean'])
-# eukaryotic genome groups (E##): consolidated from the raw binner outputs by euks/mags/scripts (survey -> compact -> final ->
-# expr -> finalize) and copied into data/ by scripts/bin_domains.py. Expression = reads on the group's contigs per million
-# contig-assigned reads (any read on the contig, so intron-containing genes count), from euks/mags/out/group_expr_samples.tsv.
-EG = pd.read_csv(D + 'euk_groups.tsv', sep='\t', keep_default_na=False)
-GX = group_expression()          # E## and V## x libraries (common.py: expr.py groups + kernel-blob groups)
-DA = group_da()                  # per-group RNA/DNA differential abundance (da.py, via blob_registry)
+# eukaryotic MAGs: hull-curated EE## (euks/mags: survey -> compact -> final -> expr -> finalize -> kernel -> da -> register_blobs give
+# the E## source groups; hulls drawn by eye on the contig map, hulls.tsv -> hull_mags.py -> hull_expr.py), copied into data/ by
+# scripts/bin_domains.py. Expression = reads on the MAG's contigs per million contig-assigned reads (any read on the contig, so
+# intron-containing genes count), from euks/mags/out/hull_mags_expr_samples.tsv; DA from hull_mags_da.tsv (dacore).
+HM = pd.read_csv(D + 'hull_mags.tsv', sep='\t', keep_default_na=False)
+EG = HM[HM.mag.str.startswith('EE')]
+GX = hull_mag_expression()       # EE/P x libraries (common.py)
+DA = hull_mag_da()               # per-MAG RNA/DNA differential abundance
 BD = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0)
-dbin = {g: [b.replace('dastool-', '') for b in BD.index[BD.get('euk_group', pd.Series(dtype=str)).reindex(BD.index) == g]] for g in EG.group}
+dbin = {g: [b.replace('dastool-', '') for b in BD.index[BD.get('hull_mag', pd.Series(dtype=str)).reindex(BD.index) == g]] for g in EG.mag}
 core_all = m[m.group.isin(['CTL', 'EXP']) & m.medium.isin(['SW', 'SI'])]
+def fnum(v, n=2):
+    return r(float(v), n) if str(v) not in ('', 'nan') else None
 eg = []
 for x in EG.itertuples():
-    d = {'id': x.group, 'label': euk_group_label(x.group), 'status': x.status, 'network': str(x.network_ok) == 'True', 'mbp': r(x.bp / 1e6, 1),
-         'contigs': int(x.contigs), 'gc': r(x.gc, 1), 'tiara': r(x.tiara_euk, 2), 'who': r(float(x.who_euk), 2) if str(x.who_euk) not in ('', 'nan') else None,
-         'rms': r(x.tsne_rms, 1), 'hint': x.taxonomy_hint, 'parts': x.parts, 'note': x.note, 'dastool': dbin.get(x.group, []),
-         'baci25': r(float(x.baci_2025), 2) if str(x.baci_2025) not in ('', 'nan') else None,
-         'ice': r(float(x.ice_vs_water_log2), 2) if str(x.ice_vs_water_log2) not in ('', 'nan') else None}
-    a = DA[DA.group == x.group]
+    d = {'id': x.mag, 'label': hull_mag_label(x.mag), 'status': x.status, 'network': str(x.network_ok) == 'True', 'mbp': r(x.bp / 1e6, 1),
+         'contigs': int(x.contigs), 'gc': r(x.gc, 1), 'tiara': fnum(x.tiara_euk), 'who': fnum(x.who_euk), 'rms': r(x.tsne_rms, 1), 'hint': x.taxonomy_hint,
+         'src': x.source_group, 'gained': r(x.bp_gained / 1e6, 1), 'lost': fnum(float(x.bp_lost) / 1e6 if str(x.bp_lost) not in ('', 'nan') else '', 1),
+         'caution': x.caution, 'dastool': dbin.get(x.mag, [])}
+    a = DA[DA.group == x.mag]
     if len(a): d['da'] = {f'{y.data}|{y.contrast}': [r(y.log2_effect, 2), r(y.q, 4)] for y in a.itertuples()}
-    if x.group in GX.index:
-        v = GX.loc[x.group].reindex(S)
+    if x.mag in GX.index:
+        v = GX.loc[x.mag].reindex(S)
         for s_, k in (('2024-25', '24'), ('2025-26', '25')):
             for f, sel in (('oil', core.phase == 'oiled'), ('ctl', core.phase == 'control'), ('pre_exp', (core.phase == 'pre') & (core.group == 'EXP')), ('pre_ctl', (core.phase == 'pre') & (core.group == 'CTL'))):
                 d[f'{f}{k}'] = r(v[core.index[(core.season == s_) & sel]].median(), 0)
@@ -74,11 +77,16 @@ J['euk_groups'] = sorted(eg, key=lambda d: (order.get(d['status'], 3), -(d.get('
 J['da_contrasts'] = [['RNA', 'diesel_vs_control_2024-25', 'RNA diesel ÷ control 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'RNA diesel ÷ control 25-26'],
                      ['RNA', 'baci_2025-26_SW', 'RNA BACI 25-26'], ['RNA', 'ice_vs_water', 'RNA ice ÷ water'],
                      ['DNA', 'diesel_vs_control_2024-25', 'DNA diesel ÷ control 24-25'], ['DNA', 'ice_vs_water', 'DNA ice ÷ water']]
-# contig-map figure (euks/mags/scripts/finalize.py) -> site/img, palette-compressed for the web
+J['euk_sources'] = {'groups': int(pd.read_csv(D + 'euk_groups.tsv', sep='\t').shape[0]), 'split': sorted(EG.mag[EG.source_group == 'E21'])}
+# contig-map figure with the hull outlines (euks/mags/scripts/plot_hulls.py) -> site/img, palette-compressed for the web
 from PIL import Image
 os.makedirs(E0 + 'site/img', exist_ok=True)
-Image.open(E0 + 'euks/mags/out/euk_groups_tsne.png').convert('RGB').quantize(colors=128, method=Image.Quantize.MEDIANCUT).save(E0 + 'site/img/euk_groups_tsne.png', optimize=True)
-J['euk_missed'] = {'tiara_euk_5kb_mbp': 883, 'in_groups_mbp': round(EG.bp.sum() / 1e6)}
+im = Image.open(E0 + 'euks/mags/out/euk_hull_mags_tsne.png').convert('RGB')
+im.quantize(colors=128, method=Image.Quantize.MEDIANCUT).save(E0 + 'site/img/euk_hull_mags_tsne.png', optimize=True)
+if os.path.getsize(E0 + 'site/img/euk_hull_mags_tsne.png') > 1e6:
+    im.resize((im.width * 3 // 4, im.height * 3 // 4), Image.LANCZOS).quantize(colors=128, method=Image.Quantize.MEDIANCUT).save(E0 + 'site/img/euk_hull_mags_tsne.png', optimize=True)
+print('figure', im.size, os.path.getsize(E0 + 'site/img/euk_hull_mags_tsne.png') // 1000, 'kB')
+J['euk_missed'] = {'tiara_euk_5kb_mbp': 883, 'in_groups_mbp': round(EG.bp.sum() / 1e6)}   # EE MAGs (all contigs >= 1 kb)
 # virus links: top 6 positive per season x virus (q < 0.05)
 vl = []
 for (s, v), x in VL.groupby(['season', 'virus']):
@@ -94,5 +102,5 @@ for n in GS.index:
     gz.append({'group': n, 'role': gsum.role[n], 'rho': r(rho), 'p': r(p, 4)})
 J['bloom_links'] = sorted(gz, key=lambda d: -(d['rho'] or -9))
 json.dump(J, open(E0 + 'site/euks.json', 'w'), separators=(',', ':'), allow_nan=False)
-print(os.path.getsize(E0 + 'site/euks.json') // 1000, 'kB;', len(J['genera']), 'genera;', len(J['plastids']), 'plastids;', len(J['euk_groups']), 'euk groups')
+print(os.path.getsize(E0 + 'site/euks.json') // 1000, 'kB;', len(J['genera']), 'genera;', len(J['plastids']), 'plastids;', len(J['euk_groups']), 'EE MAGs')
 print(pd.DataFrame(J['bloom_links']).to_string()); print(pd.DataFrame(J['plastids'])[['bin', 'label', 'mean', 'pre_exp25', 'pre_ctl25', 'oil25', 'ctl25', 'oil24', 'ctl24']].to_string())

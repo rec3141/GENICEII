@@ -115,7 +115,8 @@ BIN = pd.read_pickle(E0 + 'nitrogen/out/bin_cds_cpm.pkl')
 pl = [b for b in BIN.index if is_plastid(b)]
 phot_cats = [c for c in summ.index if summ.loc[c, 'group'] == 'Oxygenic photosynthesis']
 pidx = np.unique(np.concatenate([mem[c] for c in phot_cats]))
-pmask = G.iloc[pidx].plastid.astype(str).eq('True').values
+pmask = G.iloc[pidx].plastid.astype(str).eq('True').to_numpy().copy()
+pmask &= G.iloc[pidx].bin.fillna('').astype(str).ne('').values        # plastid MAGs only, as the denominator (unbinned plastid-group P01 contigs are plastid too)
 psum = M.iloc[pidx[pmask]].sum(0); ptot = BIN.loc[pl, S].sum(0)
 J['plastid'] = {'share': [r(a / b * 1e3, 1) if b > 50 else None for a, b in zip(psum[S], ptot[S])], 'tpm': [r(v, 1) for v in ptot[S]], 'n_bins': len(pl)}
 # metabat_1122

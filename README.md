@@ -286,13 +286,17 @@ DAS Tool and Binette lose most eukaryotic genomes: the 10 Mbp Binette cap, DAS T
   - merge genomes that sit on top of each other;
   - split a group into two lobes when a 2-component GMM clears Ashman's D > 3 (E03 → E03 + E31);
   - add compact blobs found by an expression/coverage kernel (E25–E30);
-  - give groups ≥ 50% geNomad-viral a V## ID (V01 = old E09, plus V02).
+  - give groups ≥ 50% geNomad-viral and < 50% Tiara organelle a V## ID (V01 = old E09); organelle groups become P##/M##.
 - **IDs:** all come from `euks/mags/out/id_registry.tsv`.
-- **Result:** 27 eukaryotic groups (14 clean and expressed: E02–E07, E13, E23, E25, E27–E31; 1 clean under 4 Mbp, 8 clean with little CMO RNA, 4 doubtful) and 2 virus groups.
-- **V02 caution:** V02 is 99% Tiara organelle, sits on plastid MAGs and carries photosystem genes. It is probably plastid DNA misread as viral, and the Viruses page says so.
+- **Source groups (provenance):** 27 eukaryotic groups E##, plus V01. The former V02 is now plastid group P01.
+- **Hull MAGs, the site's labels:**
+  - Each EE## is drawn by hand as an outline around its source group on the contig map (`euks/mags/hulls.tsv`). Every contig of at least 1 kb inside the outline belongs to it, except Tiara bacteria/archaea.
+  - `hull_mags.py` → `hull_expr.py` → `plot_hulls.py`.
+  - Result: 30 EE MAGs (21 network-ready, 4 under 4 Mbp, 4 with little CMO RNA, 1 doubtful). `data/hull_mags.tsv` has a rule-based `caution` column (EE01: the hull may include an expressed neighbour; eight MAGs gained ≥ 4 Mbp and ≥ 50% from their outlines).
+- **Viral genome-group rule:** a VV/V group needs ≥ 50% of its bp in geNomad Nucleocytoviricota or another giant/eukaryotic-virus class. V01/VV01 is 97% Caudoviricetes, many tailed phages rather than one genome, so it was retired and no VV## exist.
 - **Shared code:**
-  - `scripts/bin_domains.py` copies the tables to `data/` (`euk_groups.tsv`, `contig_euk_group.tsv.gz`, `virus_groups.tsv`, `contig_virus_group.tsv.gz`).
-  - `common.py` provides `euk_group`, `euk_group_label`, `virus_group`, `virus_group_label`, `contig_host_label`, `group_expression` and `group_da`.
-  - V## contigs are labelled as viruses, not hosts.
-- **Eukaryotes page:** all groups, the contig-map figure, time courses, and RNA/DNA differential-abundance columns for the kernel-found groups.
-- **Viruses page:** a viral-group section (V01, V02). Giant viruses and virophages get the best-correlated eukaryotic group as host; for both panels that is still E07.
+  - `scripts/bin_domains.py` copies the tables to `data/`: `hull_mags.tsv`, `contig_hull_mag.tsv.gz`, `organelle_groups.tsv`, `contig_organelle_group.tsv.gz`, plus the E##/V## provenance tables.
+  - `common.py` provides `hull_mag*`, `organelle_group*`, `contig_is_plastid`, `hull_mag_expression`, `hull_mag_da` and `contig_host_label`. The label order is VV → "Plastid P01" → EE → fallback.
+- **Eukaryotes page:** the EE table (source group, gained/lost Mbp, cautions, RNA/DNA differential abundance), the hull figure and time courses.
+- **Viruses page:** giant viruses and virophages get the best-correlated EE MAG as host (EE07 for both panels). One line notes the tailed-phage cluster and the former V02 (now P01).
+- **Light page:** plastid transcripts formerly credited to "Virus V02" go to "Plastid P01".

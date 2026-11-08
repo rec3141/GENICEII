@@ -1,0 +1,31 @@
+mag	hull	source_group	status	network_ok	caution	contigs	bp	gc	n50	tiara_euk	who_euk	virus_bp	tsne_rms	bp_gained	bp_lost	excluded_prok_bp	expr_ppm_median	taxonomy_hint	note
+EE01	E01	E01	network	True	uncertain: hull may include an expressed neighbour	7177	40101825	47.1	6160	0.988	0.996	0.002	3.19	2346819	7918121.0	370183	103.7		dense cloud; satellite islands at (-2,-70),(4,-68),(6.5,-68.5) excluded
+EE02	E02	E02	network	True		4840	38808702	48.8	10695	0.995	0.853	0.04	3.5	8070288	5341809.0	418829	744.0	Ochromonadales	elongated core; island at (13.5,-62) excluded
+EE03	E03	E03	network	True		2902	28781225	45.0	14099	0.996	0.933	0.073	2.02	7828936	3848573.0	155358	863.1		diagonal core
+EE04	E04	E04	network	True		6908	34772173	47.2	5682	0.998	0.963	0.006	3.9	6839554	4055667.0	113864	3107.2		oval core
+EE05	E05	E05	network	True		10785	81758796	40.2	9884	0.991	0.846	0.057	3.62	10173737	3541011.0	1069417	979.7		large disc; spur at (-16,-95.5) excluded
+EE06	E06	E06	network	True		5023	26843551	53.0	5948	0.995	0.907	0.006	2.89	8580250	4978221.0	298202	485.8		core with eastern lobe; satellites (42,-80),(29,-74) excluded
+EE07	E07	E07	network	True		3514	23782633	51.5	7986	0.987	0.684	0.023	2.37	4191056	3447405.0	168245	459.9		diagonal core
+EE08	E08	E08	doubtful	False		3101	15554833	44.0	5555	0.748	0.831	0.014	2.11	1498846	7742149.0	6520083	24.8		disc (doubtful source: Tiara purity 0.51)
+EE10	E10	E10	little CMO RNA	False		2372	11243865	37.1	4922	0.988	0.998	0.007	1.68	1256842	2627987.0	164173	2.8		oval core; streaks at (-19.5,-60.5),(-22,-60) excluded
+EE12	E12	E12	little CMO RNA	False	hull added 6.1 Mbp to the 4.9 Mbp source group; hull drawn on a sparse or small core	2542	8929246	35.9	3627	0.994	0.943	0.001	1.89	6120418	2084062.0	88465	0.0		UNSURE: sparse diffuse group, densest part only
+EE13	E13	E13	<4 Mbp	False	hull drawn on a sparse or small core	476	2216028	52.2	4972	1.0	0.935	0.0	0.87	958917	2767896.0	0	20.1		UNSURE: small dense core; streak (36.5,-84) and halo excluded
+EE14	E14	E14	little CMO RNA	False	hull added 6.0 Mbp to the 3.8 Mbp source group	2368	8334655	40.2	3633	0.989	0.927	0.001	2.36	6029184	1490931.0	94635	7.4		core
+EE15	E15	E15	<4 Mbp	False		590	2138582	45.7	3720	0.996	0.434	0.007	0.68	179200	512529.0	32108	2.1		compact blob
+EE16	E16	E16	little CMO RNA	False	hull added 4.7 Mbp to the 3.1 Mbp source group	2020	7282093	32.3	3739	0.926	1.0	0.003	1.44	4681509	488292.0	12453	0.0		diffuse disc
+EE17	E17	E17	<4 Mbp	False		634	2525148	49.2	4140	0.996	0.601	0.003	1.11	1348343	1403664.0	7556	0.2		core; streak at (-1,-80) excluded
+EE21	E21E	E21	network	True		4468	21868771	44.3	5507	0.991	0.943	0.007	3.44	4020293		265840	40.0		E21 core E (1,-60); two lobes kept together
+EE22	E22	E22	network	True		1681	18046458	59.2	14112	0.917	0.265	0.121	1.24	3071794	628987.0	591965	385.5		disc
+EE23	E23	E23	network	True		1180	13783243	48.3	17301	0.996	0.266	0.223	1.11	1125888	696246.0	21900	407.8		core
+EE25	E25	E25	network	True		794	7800649	58.0	12990	0.994	0.217	0.196	0.67	627850	324327.0	153857	562.2		compact core
+EE26	E26	E26	network	True	hull added 5.3 Mbp to the 3.4 Mbp source group	1135	8434285	47.3	8708	1.0	0.773	0.036	1.03	5301573	304736.0	4607	45.4		diagonal streak
+EE27	E27	E27	network	True	hull added 7.6 Mbp to the 5.0 Mbp source group	2033	12208550	46.3	6965	0.992	0.959	0.017	1.84	7576450	328377.0	198787	211.6		disc
+EE28	E28	E28	network	True		913	4959141	46.6	5944	0.987	0.635	0.024	0.97	461402	513037.0	189252	24.3		core
+EE29	E29	E29	network	True	hull added 4.7 Mbp to the 7.0 Mbp source group	1009	10549491	41.3	16323	0.997	0.991	0.025	1.72	4712962	1052242.0	82537	130.7		diagonal streak
+EE30	E30	E30	network	True	hull added 14.6 Mbp to the 23.4 Mbp source group	2721	36954614	42.9	27450	0.998	0.918	0.167	1.64	14603069	1051929.0	206191	342.0		disc
+EE31	E31	E31	network	True	hull added 9.5 Mbp to the 7.6 Mbp source group	1657	14662185	43.4	13502	0.995	0.984	0.062	1.77	9486915	2381775.0	152260	1262.7		core; sparse halo toward (-6,-36) excluded
+EE32	E21A	E21	network	True		4099	19785637	50.2	5141	0.999	0.85	0.025	2.3	7626358		147701	89.4		E21 core A (26.5,-31); user seed (27,-30)
+EE33	E21B	E21	network	True		3629	17874072	47.9	5344	0.996	0.85	0.025	2.38	3127579		225218	91.6		E21 core B (20,-38)
+EE34	E21D	E21	network	True		1557	7516466	50.2	5403	0.97	0.835	0.013	2.11	2064752		670204	68.8		E21 core D (24,-46)
+EE35	E21C	E21	network	True		972	5552496	46.8	6510	0.994	0.905	0.013	1.32	1536561		95502	14.0		E21 core C (18,-43.5)
+EE36	E21F	E21	<4 Mbp	False	hull drawn on a sparse or small core	613	3068628	51.6	5413	0.962	0.836	0.086	1.35	2214286		513467	10.8		UNSURE: E21 small core F (35.5,-36)

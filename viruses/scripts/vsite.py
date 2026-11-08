@@ -39,33 +39,24 @@ key = [('contig_0040828', 'dastool-lorbin_722_sub', 'Cycloclasticus phage (2025-
        ('contig_0049668', None, 'Virophage, control pool (2025-26)'), ('contig_0000564', None, 'Giant virus contig (2025-26)')]
 x = m[(m.group != 'other') & (m.medium == 'SW')]
 J['pairs'] = []
-EGX = group_expression()
+EGX = hull_mag_expression()                                                      # EE## eukaryotic MAGs (common.py)
 def host_series(h):
-    return EGX.loc[h] if is_euk_group(h) else B.loc[h]
+    return EGX.loc[h] if is_euk_hull_mag(h) else B.loc[h]
 for v, h, lab in key:
     if v not in U.index: continue
     if h is None and v in H.index and isinstance(H.loc[v].get('euk_host'), str) and H.loc[v, 'euk_host']:
-        h = H.loc[v, 'euk_host']                                                # giant virus / virophage: best-correlated eukaryotic genome group
+        h = H.loc[v, 'euk_host']                                                # giant virus / virophage: best-correlated eukaryotic MAG (EE##)
     hs = host_series(h) if h else None
     J['pairs'].append({'votu': v, 'label': lab, 'host': h.replace('dastool-', '') if h else None, 'len': r(info.loc[v, 'length'], 0) if v in info.index else None,
                        'pts': [{'season': x.season[i], 'pool': x.group[i], 'day': int(x.day[i]), 'phage': r(U.loc[v, i], 1), 'host': r(hs.get(i), 0) if h else None} for i in x.index]})
 J['hosts'] = [{'votu': v, **{k: (r(y[k], 1) if isinstance(y[k], (float, np.floating)) else (y[k] if isinstance(y[k], str) else None)) for k in
                ['cls', 'length', 'checkv_quality', 'oil_2024-25', 'ctl_2024-25', 'oil_2025-26', 'ctl_2025-26', 'baci_2025-26', 'host1', 'rho1', 'host2', 'rho2', 'binned']}}
               for v, y in H.iterrows()]
-# large viral genome groups (V##) from the eukaryotic-region binning (euks/mags; >= 50% geNomad-viral)
-VG = pd.read_csv(D + 'virus_groups.tsv', sep='\t', keep_default_na=False); DAv = group_da()
-CVt = pd.read_csv(EM + 'contig_virus_group.tsv', sep='\t')                  # Tiara call per contig: a plastid check on V## groups
-org = (CVt[CVt.tiara == 'organelle'].groupby('vid').length.sum() / CVt.groupby('vid').length.sum()).fillna(0).to_dict()
-xs = m[(m.group != 'other')]
-J['virus_groups'] = []
-for y in VG.itertuples():
-    e = EGX.loc[y.vid] if y.vid in EGX.index else None
-    a = DAv[DAv.group == y.vid]
-    J['virus_groups'].append({'id': y.vid, 'note': y.note, 'mbp': r(y.bp / 1e6, 2), 'contigs': int(y.contigs), 'gc': r(y.gc, 1), 'viral': r(float(y.virus_bp), 2) if str(y.virus_bp) else None, 'organelle': r(org.get(y.vid, 0.0), 2),
-        'median': r(e[[c for c in xs.index if c in e.index]].median(), 0) if e is not None else None,
-        'expr': [r(e.get(c), 1) if e is not None else None for c in U.columns],
-        'da': {f'{z.data}|{z.contrast}': [r(z.log2_effect, 2), r(z.q, 4)] for z in a.itertuples()}})
-J['vg_samples'] = [{'season': m.season[c], 'pool': m.group[c], 'medium': m.medium[c], 'day': None if pd.isna(m.day[c]) else int(m.day[c]), 'name': m.sample_name[c]} for c in U.columns]
+# no viral genome groups on the site: a VV/V group needs >= 50% of bp in geNomad Nucleocytoviricota or another giant/eukaryotic-virus
+# class (scripts/bin_domains.py). The former V01/VV01 is a tailed-phage (Caudoviricetes) cluster, many phages, not one genome; its
+# contigs keep the per-contig vOTU handling. The former V02 is plastid group P01. Sizes of the phage cluster for one line of text:
+_vv = pd.read_csv(EM + 'hull_mags.tsv', sep='\t').set_index('mag')
+J['phage_cluster'] = {'contigs': int(_vv.contigs['VV01']), 'mbp': r(_vv.bp['VV01'] / 1e6, 1)} if 'VV01' in _vv.index else None
 # prophages
 P = pd.read_csv(V + 'out/prophage.tsv', sep='\t', keep_default_na=False)
 for c in P.columns:
