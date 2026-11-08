@@ -42,7 +42,7 @@ function virusesSec(sec) {
     <li><b>The phage-shock signal is not phage-driven.</b> The UBA9145 MAG behind the psp response carries no prophage and no filamentous-phage genes, and Inoviridae (Faserviricetes) transcripts are near zero in the diesel pool. Envelope stress from hydrocarbons remains the simpler explanation.</li>
     <li><b>Ice is not a viral hotspot.</b> Tailed-phage transcripts are slightly lower in ice than in the water beneath it (higher in ice in only 6 of 23 same-day pairs) and lower in the cold, salty top ice than at the bottom (2 of 13 pairs). Giant viruses and virophages show no consistent difference.</li>
     <li><b>No convincing prophage induction.</b> The provirus regions whose transcripts rise in the diesel pool express host-like genes at their edges (sugar and EPS genes, partitioning and transposition genes), not phage structural genes.</li>`));
-  vrDNA(sec, J); vrActivity(sec, J); vrDiversity(sec, J); vrPairs(sec, J); vrHosts(sec, J); vrProphage(sec, J); vrIce(sec, J); vrConc(sec, J);
+  vrDNA(sec, J); vrActivity(sec, J); vrDiversity(sec, J); vrPairs(sec, J); vrHosts(sec, J); vrGroups(sec, J); vrProphage(sec, J); vrIce(sec, J); vrConc(sec, J);
 }
 
 function vrDNA(sec, J) {
@@ -95,7 +95,7 @@ function vrPairs(sec, J) {
   function draw() {
     wrap.innerHTML = '';
     const p = J.pairs[+sel.value];
-    const box = fig(wrap, `${p.votu} · ${p.label}${p.len ? ` · ${d3.format('.1f')(p.len / 1000)} kb` : ''}`, p.host ? `Dashed: host candidate ${p.host} (TPM). Colours: control pool blue, diesel pool orange.` : 'No host candidate shown.');
+    const box = fig(wrap, `${p.votu} · ${p.label}${p.len ? ` · ${d3.format('.1f')(p.len / 1000)} kb` : ''}`, p.host ? `Dashed: host candidate ${/^EE\d\d$/.test(p.host) ? 'eukaryotic MAG ' + p.host + ' (reads per million on its contigs)' : p.host + ' (TPM)'}. Colours: control pool blue, diesel pool orange.` : 'No host candidate shown.');
     const lg = el('div', { class: 'legend' }, `<span><i style="background:var(--ctl)"></i>Control pool</span><span><i style="background:var(--exp)"></i>Diesel pool</span><span style="color:var(--ink-2)"><i style="background:var(--ink-2)"></i>phage transcripts (CPM)</span>${p.host ? '<span style="color:var(--ink-2)"><i class="dash"></i>host MAG (TPM)</span>' : ''}`);
     box.parentNode.insertBefore(lg, box);
     const rows = p.pts.map(x => ({ ...x, medium: 'SW', name: `${x.pool} day ${x.day}` }));
@@ -111,6 +111,12 @@ function vrHosts(sec, J) {
   const H = J.hosts.slice().sort((a, b) => Math.max(b['oil_2024-25'] || 0, b['oil_2025-26'] || 0) - Math.max(a['oil_2024-25'] || 0, a['oil_2025-26'] || 0));
   box.innerHTML = `<div class="tablewrap" style="max-height:420px"><table><thead><tr><th>vOTU</th><th>Class</th><th class="num">kb</th><th>CheckV</th><th class="num">24-25 diesel</th><th class="num">24-25 ctl</th><th class="num">25-26 diesel</th><th class="num">25-26 ctl</th><th class="num">BACI 25-26</th><th>Host candidate (ρ)</th></tr></thead><tbody>${
     H.map(h => `<tr><td class="mono">${h.votu}</td><td>${h.cls || ''}</td><td class="num">${h.length ? d3.format('.1f')(h.length / 1000) : ''}</td><td>${h.checkv_quality || ''}</td>${['oil_2024-25', 'ctl_2024-25', 'oil_2025-26', 'ctl_2025-26'].map(k => `<td class="num">${h[k] == null ? '–' : fmt1(h[k])}</td>`).join('')}<td class="num">${h['baci_2025-26'] == null ? '–' : `<span class="pill ${h['baci_2025-26'] > 0 ? 'up' : 'down'}">${vrSgn(h['baci_2025-26'])}</span>`}</td><td>${h.host1} (${h.rho1})</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function vrGroups(sec, J) {
+  // no viral genome groups: the tailed-phage cluster is many phages (contigs stay individual vOTUs); the former V02 is plastid P01
+  const p = J.phage_cluster;
+  sec.append(el('p', { class: 'kicker' }, `${p ? `A cluster of tailed-phage contigs (about ${d3.format(',')(Math.round(p.contigs / 100) * 100)} contigs, ${d3.format('.0f')(p.mbp)} Mbp) sits inside the eukaryotic region of the contig map; it is many phages, not one genome. ` : ''}The group formerly listed here as virus V02 is algal plastid DNA, now plastid group P01 (<a href="#euks">Eukaryotes</a> page).`));
 }
 
 function vrProphage(sec, J) {

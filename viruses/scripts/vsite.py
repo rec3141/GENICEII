@@ -1,6 +1,6 @@
 """site/viruses.json: viral DNA share (nanopore + Illumina), viral transcription by class and lytic/lysogeny markers, richness/Shannon,
 phage-host time courses, diesel-bloom vOTUs with candidate hosts, prophage table, ice-vs-water contrasts, virus-concentrate method test."""
-import sys, json, os; sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts'); sys.path.insert(0, '/data/dev/rnaseq-exploration/ice/scripts')
+import re, sys, json, os; sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts'); sys.path.insert(0, '/data/dev/rnaseq-exploration/ice/scripts')
 from common import *
 import contrasts as IC
 V = '/data/dev/rnaseq-exploration/viruses/'
@@ -39,13 +39,24 @@ key = [('contig_0040828', 'dastool-lorbin_722_sub', 'Cycloclasticus phage (2025-
        ('contig_0049668', None, 'Virophage, control pool (2025-26)'), ('contig_0000564', None, 'Giant virus contig (2025-26)')]
 x = m[(m.group != 'other') & (m.medium == 'SW')]
 J['pairs'] = []
+EGX = hull_mag_expression()                                                      # EE## eukaryotic MAGs (common.py)
+def host_series(h):
+    return EGX.loc[h] if is_euk_hull_mag(h) else B.loc[h]
 for v, h, lab in key:
     if v not in U.index: continue
+    if h is None and v in H.index and isinstance(H.loc[v].get('euk_host'), str) and H.loc[v, 'euk_host']:
+        h = H.loc[v, 'euk_host']                                                # giant virus / virophage: best-correlated eukaryotic MAG (EE##)
+    hs = host_series(h) if h else None
     J['pairs'].append({'votu': v, 'label': lab, 'host': h.replace('dastool-', '') if h else None, 'len': r(info.loc[v, 'length'], 0) if v in info.index else None,
-                       'pts': [{'season': x.season[i], 'pool': x.group[i], 'day': int(x.day[i]), 'phage': r(U.loc[v, i], 1), 'host': r(B.loc[h, i], 0) if h else None} for i in x.index]})
+                       'pts': [{'season': x.season[i], 'pool': x.group[i], 'day': int(x.day[i]), 'phage': r(U.loc[v, i], 1), 'host': r(hs.get(i), 0) if h else None} for i in x.index]})
 J['hosts'] = [{'votu': v, **{k: (r(y[k], 1) if isinstance(y[k], (float, np.floating)) else (y[k] if isinstance(y[k], str) else None)) for k in
                ['cls', 'length', 'checkv_quality', 'oil_2024-25', 'ctl_2024-25', 'oil_2025-26', 'ctl_2025-26', 'baci_2025-26', 'host1', 'rho1', 'host2', 'rho2', 'binned']}}
               for v, y in H.iterrows()]
+# no viral genome groups on the site: a VV/V group needs >= 50% of bp in geNomad Nucleocytoviricota or another giant/eukaryotic-virus
+# class (scripts/bin_domains.py). The former V01/VV01 is a tailed-phage (Caudoviricetes) cluster, many phages, not one genome; its
+# contigs keep the per-contig vOTU handling. The former V02 is plastid group P01. Sizes of the phage cluster for one line of text:
+_vv = pd.read_csv(EM + 'hull_mags.tsv', sep='\t').set_index('mag')
+J['phage_cluster'] = {'contigs': int(_vv.contigs['VV01']), 'mbp': r(_vv.bp['VV01'] / 1e6, 1)} if 'VV01' in _vv.index else None
 # prophages
 P = pd.read_csv(V + 'out/prophage.tsv', sep='\t', keep_default_na=False)
 for c in P.columns:

@@ -1,0 +1,2 @@
+oid	kind	note	contigs	bp	gc	n50	tiara_organelle	virus_bp	plastid_markers	mito_markers	dastool_bins	status	expr_ppm_median
+P01	plastid	kernel blob B12 at (-48,-28); formerly V02 (geNomad called it 78% viral)	335.0	4950014.0	30.4	22058.0	0.998	0.78	486.0	6.0	lorbin_356_sub 3%; lorbin_664_sub 3%; metabat_1343 3%; lorbin_603 2%	organelle (no hull yet)	10637.8

@@ -19,7 +19,7 @@ function showTip(ev, html) { tip.innerHTML = html; tip.style.opacity = 1; const 
 function hideTip() { tip.style.opacity = 0; }
 function el(tag, attrs = {}, html = '') { const e = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (html) e.innerHTML = html; return e; }
 // a chart title naming exactly one MAG gets that MAG's full lineage (site/lineage.json, scripts/lineage.py) as a subtitle
-const MAG_RX = /\b((?:dastool-)?(?:comebin|metabat|lorbin|semibin|vamb|maxbin|concoct|binette)_\d+(?:_sub)?)\b/g;
+const MAG_RX = /\b((?:dastool-)?(?:comebin|metabat|lorbin|semibin|vamb|maxbin|concoct|binette)_\d+(?:_sub)?|(?:EE|VV|[EVP])\d\d)\b/g;   // MAG ids, hull MAGs (EE##, VV##), plastid groups (P##), older groups (E##, V##)
 function magLineage(title) {
   if (!title || !D.lineage) return '';
   const ids = [...new Set([...String(title).replace(/<[^>]*>/g, '').matchAll(MAG_RX)].map(m => m[1].replace('dastool-', '')))];

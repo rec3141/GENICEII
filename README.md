@@ -275,3 +275,28 @@ The count matrices on disk keep all 130 columns; `all_samples()` lists them.
 | Islands | GI_1266 15 → 14× |
 | Nitrogen, sulfur, other 2024-25 log₂ diesel/control | shift by ≤ 0.26 |
 | 2025-26 contrasts | unchanged (no 2025-26 libraries removed) |
+
+## Eukaryotic genome groups (2026-11-08)
+DAS Tool and Binette lose most eukaryotic genomes: the 10 Mbp Binette cap, DAS Tool's prokaryotic single-copy-gene scoring, and no eukaryote-aware QC or taxonomy. See danaSeq #129. So the eukaryotic genomes are rebuilt from the individual binners' bins with fixed rules.
+- **Run order** (`euks/mags/scripts`, details in `euks/mags/NOTES.md`): survey → compact → final → expr → finalize → kernel → da → register_blobs → plot.
+- **Rules:**
+  - join bins that share ≥ 50% of the smaller bin;
+  - split groups at density gaps on the contig t-SNE;
+  - attach small nearby pieces whose GC matches;
+  - merge genomes that sit on top of each other;
+  - split a group into two lobes when a 2-component GMM clears Ashman's D > 3 (E03 → E03 + E31);
+  - add compact blobs found by an expression/coverage kernel (E25–E30);
+  - give groups ≥ 50% geNomad-viral and < 50% Tiara organelle a V## ID (V01 = old E09); organelle groups become P##/M##.
+- **IDs:** all come from `euks/mags/out/id_registry.tsv`.
+- **Source groups (provenance):** 27 eukaryotic groups E##, plus V01. The former V02 is now plastid group P01.
+- **Hull MAGs, the site's labels:**
+  - Each EE## is drawn by hand as an outline around its source group on the contig map (`euks/mags/hulls.tsv`). Every contig of at least 1 kb inside the outline belongs to it, except Tiara bacteria/archaea.
+  - `hull_mags.py` → `hull_expr.py` → `plot_hulls.py`.
+  - Result: 30 EE MAGs (21 network-ready, 4 under 4 Mbp, 4 with little CMO RNA, 1 doubtful). `data/hull_mags.tsv` has a rule-based `caution` column (EE01: the hull may include an expressed neighbour; eight MAGs gained ≥ 4 Mbp and ≥ 50% from their outlines).
+- **Viral genome-group rule:** a VV/V group needs ≥ 50% of its bp in geNomad Nucleocytoviricota or another giant/eukaryotic-virus class. V01/VV01 is 97% Caudoviricetes, many tailed phages rather than one genome, so it was retired and no VV## exist.
+- **Shared code:**
+  - `scripts/bin_domains.py` copies the tables to `data/`: `hull_mags.tsv`, `contig_hull_mag.tsv.gz`, `organelle_groups.tsv`, `contig_organelle_group.tsv.gz`, plus the E##/V## provenance tables.
+  - `common.py` provides `hull_mag*`, `organelle_group*`, `contig_is_plastid`, `hull_mag_expression`, `hull_mag_da` and `contig_host_label`. The label order is VV → "Plastid P01" → EE → fallback.
+- **Eukaryotes page:** the EE table (source group, gained/lost Mbp, cautions, RNA/DNA differential abundance), the hull figure and time courses.
+- **Viruses page:** giant viruses and virophages get the best-correlated EE MAG as host (EE07 for both panels). One line notes the tailed-phage cluster and the former V02 (now P01).
+- **Light page:** plastid transcripts formerly credited to "Virus V02" go to "Plastid P01".

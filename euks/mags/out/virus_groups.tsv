@@ -1,0 +1,2 @@
+vid	note	parts	contigs	bp	gc	n50	depth_med	tiara_euk	tiara_bac	who_euk	tsne_rms	cx	cy	taxonomy_hint	rrna18S	expr_ppm_median	ctl_2025_SW	oil_2025_SW	baci_2025	ice_vs_water_log2	status	network_ok	virus_bp	organelle_bp
+V01	was E09	EUK09	1920	19087886	42.9	14720	9.65	0.531	0.001	0.024	1.9	-12.2	-60.8			171.1	568.9084082120278	82.57693424196019	-3.25	-0.97	virus	False	0.9835676407539315	0.0
