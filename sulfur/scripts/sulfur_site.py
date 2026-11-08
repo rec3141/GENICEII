@@ -82,7 +82,7 @@ tpm = table('bin_tpm')
 J['sulfurimonas']['tpm'] = {b.replace('dastool-', ''): [r(v, 0) for v in tpm.loc[b, S]] for b in SB if b in tpm.index}
 # DNA: Illumina competitive mapping (% of reads) and nanopore (% of binned coverage)
 pa = pd.read_csv(E0 + 'ice/popgen/abund_pct.tsv', sep='\t', index_col=0)
-sm = pd.read_csv(E0 + 'ice/popgen/samples_map.tsv', sep='\t', index_col=0)
+sm = pd.read_csv(E0 + 'ice/popgen/samples_map.tsv', sep='\t', index_col=0); sm = sm[~sm.index.isin(excluded_names('metagenome'))]
 pa = pa[[c for c in pa.columns if c in sm.index]]
 J['sulfurimonas']['dna_illumina'] = {'samples': [{'name': s, 'season': sm.season[s], 'pool': sm.pool[s], 'layer': sm.layer[s], 'day': int(sm.day[s])} for s in pa.columns],
                                      'pct': {b.replace('dastool-', ''): [r(v, 3) for v in pa.loc[b]] for b in SB if b in pa.index}}
@@ -99,7 +99,10 @@ for b in SB:
     bb = baci[(baci.bin == b)]
     J['sulfurimonas']['stats'].append({'bin': b.replace('dastool-', ''), 'rna_ice': r(iw.delta.get(b)), 'rna_ice_up': int(iw.n_up.get(b, 0)), 'rna_ice_n': int(iw.n.get(b, 0)),
         'rna_top': r(tb.delta.get(b)), 'dna_ice': r(ab.log2_ice_water.get(b)), 'dna_ice_up': int(ab.n_pairs_up.get(b, 0)) if b in ab.index else None, 'dna_ice_n': int(ab.n_pairs.get(b, 0)) if b in ab.index else None,
-        'fst_pool_ice': r(ps['fst|2024-25|ice_ctl_vs_exp'].get(b), 3) if b in ps.index else None, 'fst_ice_water': r(ps['fst|2024-25|ice_vs_water'].get(b), 3) if b in ps.index else None,
+        # pool and ice/water FST from 2025-26 (both pools well covered; 2024-25 control ice lost most coverage when the day-18 core was excluded)
+        'fst_pool_water': r(ps['fst|2025-26|water_ctl_vs_exp'].get(b), 3) if b in ps.index and ps['sites|2025-26|water_ctl_vs_exp'].get(b, 0) >= 1000 else None,
+        'fst_pool_ice': r(ps['fst|2025-26|ice_ctl_vs_exp'].get(b), 3) if b in ps.index and ps['sites|2025-26|ice_ctl_vs_exp'].get(b, 0) >= 1000 else None,
+        'fst_ice_water': r(ps['fst|2025-26|ice_vs_water'].get(b), 3) if b in ps.index and ps['sites|2025-26|ice_vs_water'].get(b, 0) >= 1000 else None,
         'baci24': r(bb[bb.season == '2024-25'].interaction.mean()), 'baci25': r(bb[bb.season == '2025-26'].interaction.mean()), 'baci25_q': r(bb[bb.season == '2025-26'].q.min(), 4)})
 json.dump(J, open(E0 + 'site/sulfur.json', 'w'), separators=(',', ':'), allow_nan=False)
 pd.set_option('display.width', 250)

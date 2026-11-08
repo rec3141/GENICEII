@@ -2,6 +2,8 @@
 import pandas as pd, subprocess, io, os, sys
 D = '/data/dev/rnaseq-exploration/ice/popgen'
 S = pd.read_csv(f'{D}/samples_map.tsv', sep='\t', index_col=0)
+import sys as _s; _s.path.insert(0, '/data/dev/rnaseq-exploration/scripts'); from common import excluded_names
+S = S[~S.index.isin(excluded_names('metagenome'))]   # QC-excluded metagenomes (metadata qc_flag)
 cb = pd.read_csv(f'{D}/ref/contig_bin_len.tsv', sep='\t').set_index('contig')
 blen = cb.groupby('bin').len.sum()
 R = {}

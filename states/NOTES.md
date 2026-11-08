@@ -80,3 +80,9 @@ Labels come from `special_label`, using the Tiara-based `data/bin_domain.tsv` (s
 - MAGs passing the read threshold: 83 → 150. Pool-testable in 2025-26: 19 → 79 (67 significant). Ice is the main axis for 102.
 - lorbin_184 PC1 now trends with day (r −0.68), so the text says so again.
 - metabat_5376 pool difference: q = 0.067. Nitrosopumilus still has too few reads.
+
+## Day-18 exclusion (2026-11-08)
+- 149 genomes are profiled (was 150).
+- Every profiled genome now has detail data in site/states.json, so links from other pages (Light, Response guilds) always resolve.
+- 2025-26 pool-testable genomes: 78, of which 68 differ (was 79/67).
+- metabat_5376 pool difference q = 0.095 (was 0.067).

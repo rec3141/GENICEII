@@ -18,7 +18,7 @@ J = {'samples': [{'id': s, 'name': core.sample_name[s], 'season': core.season[s]
 R['short'] = R.bin.str.replace('dastool-', '', regex=False); R['key'] = R.short.isin(KEY)
 R['rank'] = R['R2_2025-26'].fillna(-1)
 J['n_pass'] = int(len(R)); J['min_reads'] = 3000; J['min_samples'] = 20
-detail = set(R.sort_values('rank', ascending=False).head(60).bin) | set(R.bin[R.key])
+detail = set(R.bin)   # every profiled genome gets detail data (other pages link to any of them, e.g. Light → metabat_1122, Response guilds → all)
 J['mags'] = []
 for x in R.sort_values('rank', ascending=False).itertuples():
     J['mags'].append({'bin': x.short, 'taxon': x.taxon, 'n': int(x.n), 'n_fit': int(x.n_fit), 'genes': int(x.genes), 'ev': [r(x.pc1), r(x.pc2), r(x.pc3)], 'rd1': r(x.r_depth_pc1, 2), 'rd2': r(x.r_depth_pc2, 2),

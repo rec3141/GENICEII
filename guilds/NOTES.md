@@ -86,3 +86,19 @@ Site page `#guilds` (Genomes & ice). Code:
 - 63 genomes are single-winter.
 - Strain switches inside a MAG look like state changes.
 - Clusters are soft: read the maps as gradients.
+
+## Day-18 exclusion (2026-11-08)
+- Rebuilt with the two 2024-25 day-18 control libraries excluded: 149 genomes, 106 libraries.
+- Median unique R² barely changed:
+
+| Driver | Before | After |
+|---|---|---|
+| ice | 0.244 | 0.264 |
+| diesel | 0.099 | 0.107 |
+| winter | 0.082 | 0.082 |
+
+- Two model-selection steps are near their thresholds:
+  - K: 4 → 3 (K = 4 split-half stability 0.69 vs cutoff 0.7).
+  - Fingerprint clusters: 5 → 3 (silhouette 0.11 → 0.13).
+- Treat cluster and guild boundaries as soft.
+- The cache guilds/out/fingerprint_rows.pkl must be deleted whenever the sample set changes.

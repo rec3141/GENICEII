@@ -1,73 +1,73 @@
 bin	label	category	season	pool	phase	n	median	genes
-dastool-metabat_9342	Cycloclasticus metabat_9342	Mercury (mer)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Mercury (mer)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Mercury (mer)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Mercury (mer)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Mercury (mer)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Arsenic (ars, aio)	2024-25	CTL	control	5	436.9356248179435	5
+dastool-metabat_9342	Cycloclasticus metabat_9342	Arsenic (ars, aio)	2024-25	CTL	control	4	417.3936130853195	5
 dastool-metabat_9342	Cycloclasticus metabat_9342	Arsenic (ars, aio)	2024-25	CTL	pre	1	419.69781757134865	5
 dastool-metabat_9342	Cycloclasticus metabat_9342	Arsenic (ars, aio)	2024-25	EXP	oiled	12	506.37126612874295	5
 dastool-metabat_9342	Cycloclasticus metabat_9342	Arsenic (ars, aio)	2025-26	EXP	oiled	23	521.3981813631434	5
-dastool-metabat_9342	Cycloclasticus metabat_9342	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	5	1212.6111560226354	8
+dastool-metabat_9342	Cycloclasticus metabat_9342	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	4	1799.860382069404	8
 dastool-metabat_9342	Cycloclasticus metabat_9342	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	pre	1	1678.7912702853946	8
 dastool-metabat_9342	Cycloclasticus metabat_9342	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	oiled	12	1957.3939940714322	8
 dastool-metabat_9342	Cycloclasticus metabat_9342	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	oiled	23	2429.9677824496257	8
-dastool-metabat_9342	Cycloclasticus metabat_9342	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	5	2586.0354087925202	8
+dastool-metabat_9342	Cycloclasticus metabat_9342	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	4	2531.0019747137667	8
 dastool-metabat_9342	Cycloclasticus metabat_9342	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	pre	1	1678.7912702853946	8
 dastool-metabat_9342	Cycloclasticus metabat_9342	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	oiled	12	3097.32946057196	8
 dastool-metabat_9342	Cycloclasticus metabat_9342	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	oiled	23	1642.7914311998948	8
-dastool-metabat_9342	Cycloclasticus metabat_9342	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	5	404.20371867421176	4
+dastool-metabat_9342	Cycloclasticus metabat_9342	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	4	432.5803326476987	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	pre	1	559.5970900951315	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	oiled	12	582.2773501610882	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	oiled	23	802.9531992992409	4
-dastool-metabat_9342	Cycloclasticus metabat_9342	Chromate (chrA)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Chromate (chrA)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Chromate (chrA)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Chromate (chrA)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Chromate (chrA)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Tellurite (ter, teh)	2024-25	CTL	control	5	67.36728644570196	1
+dastool-metabat_9342	Cycloclasticus metabat_9342	Tellurite (ter, teh)	2024-25	CTL	control	4	33.68364322285098	1
 dastool-metabat_9342	Cycloclasticus metabat_9342	Tellurite (ter, teh)	2024-25	CTL	pre	1	139.89927252378288	1
 dastool-metabat_9342	Cycloclasticus metabat_9342	Tellurite (ter, teh)	2024-25	EXP	oiled	12	31.76958773447766	1
 dastool-metabat_9342	Cycloclasticus metabat_9342	Tellurite (ter, teh)	2025-26	EXP	oiled	23	39.10221318526629	1
-dastool-metabat_9342	Cycloclasticus metabat_9342	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Metallothionein (smtA, bmtA)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Metallothionein (smtA, bmtA)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Metallothionein (smtA, bmtA)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Metallothionein (smtA, bmtA)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Metallothionein (smtA, bmtA)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Iron storage and Fur regulation	2024-25	CTL	control	5	397.85160135269547	4
+dastool-metabat_9342	Cycloclasticus metabat_9342	Iron storage and Fur regulation	2024-25	CTL	control	4	367.34401679060267	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Iron storage and Fur regulation	2024-25	CTL	pre	1	139.89927252378288	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Iron storage and Fur regulation	2024-25	EXP	oiled	12	685.6280863406332	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Iron storage and Fur regulation	2025-26	EXP	oiled	23	741.5766564565532	4
-dastool-metabat_9342	Cycloclasticus metabat_9342	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	5	1602.097290999126	12
+dastool-metabat_9342	Cycloclasticus metabat_9342	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	4	1630.771149417697	12
 dastool-metabat_9342	Cycloclasticus metabat_9342	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	pre	1	839.3956351426973	12
 dastool-metabat_9342	Cycloclasticus metabat_9342	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	oiled	12	1442.3705787845806	12
 dastool-metabat_9342	Cycloclasticus metabat_9342	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	oiled	23	1685.6070904246642	12
-dastool-metabat_9342	Cycloclasticus metabat_9342	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	5	606.3055780113177	2
+dastool-metabat_9342	Cycloclasticus metabat_9342	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	4	625.8226516404889	2
 dastool-metabat_9342	Cycloclasticus metabat_9342	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	pre	1	699.4963626189143	2
 dastool-metabat_9342	Cycloclasticus metabat_9342	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	oiled	12	472.0218261659878	2
 dastool-metabat_9342	Cycloclasticus metabat_9342	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	oiled	23	617.6895781311605	2
-dastool-metabat_9342	Cycloclasticus metabat_9342	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	5	596.7774020290432	3
+dastool-metabat_9342	Cycloclasticus metabat_9342	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	4	500.49056035162744	3
 dastool-metabat_9342	Cycloclasticus metabat_9342	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	pre	1	279.79854504756577	3
 dastool-metabat_9342	Cycloclasticus metabat_9342	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	oiled	12	1032.1123860413095	3
 dastool-metabat_9342	Cycloclasticus metabat_9342	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	oiled	23	1540.8062436148655	3
-dastool-metabat_9342	Cycloclasticus metabat_9342	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Membrane cis-trans isomerase (cti)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Membrane cis-trans isomerase (cti)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Membrane cis-trans isomerase (cti)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Phage-shock membrane stress (psp)	2024-25	CTL	control	5	0.0	0
+dastool-metabat_9342	Cycloclasticus metabat_9342	Phage-shock membrane stress (psp)	2024-25	CTL	control	4	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Phage-shock membrane stress (psp)	2024-25	CTL	pre	1	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Phage-shock membrane stress (psp)	2024-25	EXP	oiled	12	0.0	0
 dastool-metabat_9342	Cycloclasticus metabat_9342	Phage-shock membrane stress (psp)	2025-26	EXP	oiled	23	0.0	0
-dastool-metabat_9342	Cycloclasticus metabat_9342	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	5	7190.928367290495	5
+dastool-metabat_9342	Cycloclasticus metabat_9342	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	4	7527.884807006739	5
 dastool-metabat_9342	Cycloclasticus metabat_9342	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	pre	1	9093.452714045887	5
 dastool-metabat_9342	Cycloclasticus metabat_9342	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	oiled	12	5578.076170209923	5
 dastool-metabat_9342	Cycloclasticus metabat_9342	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	oiled	23	5878.505567431324	5
-dastool-metabat_9342	Cycloclasticus metabat_9342	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	5	14105.282566608279	4
+dastool-metabat_9342	Cycloclasticus metabat_9342	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	4	13606.675655573292	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	pre	1	6855.064353665361	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	oiled	12	13839.10888069496	4
 dastool-metabat_9342	Cycloclasticus metabat_9342	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	oiled	23	14398.121824618036	4
@@ -161,92 +161,92 @@ dastool-lorbin_184	Cycloclasticus lorbin_184	Protein-folding stress (dnaK, groEL
 dastool-lorbin_184	Cycloclasticus lorbin_184	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	CTL	pre	4	21462.02973879977	6
 dastool-lorbin_184	Cycloclasticus lorbin_184	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	oiled	29	21899.917819781	6
 dastool-lorbin_184	Cycloclasticus lorbin_184	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	pre	5	13831.93160492111	6
-dastool-lorbin_369	Oleispira lorbin_369	Mercury (mer)	2024-25	CTL	control	3	298.60135127064825	2
+dastool-lorbin_369	Oleispira lorbin_369	Mercury (mer)	2024-25	CTL	control	1	187.3126873126873	2
 dastool-lorbin_369	Oleispira lorbin_369	Mercury (mer)	2024-25	CTL	pre	2	472.6043803536578	2
 dastool-lorbin_369	Oleispira lorbin_369	Mercury (mer)	2024-25	EXP	oiled	18	209.5957721770722	2
 dastool-lorbin_369	Oleispira lorbin_369	Mercury (mer)	2024-25	EXP	pre	1	257.8449320578604	2
 dastool-lorbin_369	Oleispira lorbin_369	Mercury (mer)	2025-26	EXP	oiled	13	193.40489314379656	2
-dastool-lorbin_369	Oleispira lorbin_369	Arsenic (ars, aio)	2024-25	CTL	control	3	901.152187439655	6
+dastool-lorbin_369	Oleispira lorbin_369	Arsenic (ars, aio)	2024-25	CTL	control	1	499.5004995004995	6
 dastool-lorbin_369	Oleispira lorbin_369	Arsenic (ars, aio)	2024-25	CTL	pre	2	727.2794876810244	6
 dastool-lorbin_369	Oleispira lorbin_369	Arsenic (ars, aio)	2024-25	EXP	oiled	18	419.825287357178	6
 dastool-lorbin_369	Oleispira lorbin_369	Arsenic (ars, aio)	2024-25	EXP	pre	1	618.827836938865	6
 dastool-lorbin_369	Oleispira lorbin_369	Arsenic (ars, aio)	2025-26	EXP	oiled	13	651.4110403664712	6
-dastool-lorbin_369	Oleispira lorbin_369	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	3	686.8131868131869	3
+dastool-lorbin_369	Oleispira lorbin_369	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	1	686.8131868131869	3
 dastool-lorbin_369	Oleispira lorbin_369	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	pre	2	372.6443643600553	3
 dastool-lorbin_369	Oleispira lorbin_369	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	oiled	18	112.76015286560786	3
 dastool-lorbin_369	Oleispira lorbin_369	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	pre	1	103.13797282314415	3
 dastool-lorbin_369	Oleispira lorbin_369	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	oiled	13	493.8115951165185	3
-dastool-lorbin_369	Oleispira lorbin_369	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	3	750.9601561997125	5
+dastool-lorbin_369	Oleispira lorbin_369	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	1	437.06293706293707	5
 dastool-lorbin_369	Oleispira lorbin_369	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	pre	2	1195.4724768027736	5
 dastool-lorbin_369	Oleispira lorbin_369	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	oiled	18	1139.9389238643753	5
 dastool-lorbin_369	Oleispira lorbin_369	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	pre	1	747.7503029677952	5
 dastool-lorbin_369	Oleispira lorbin_369	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	oiled	13	451.7850763831978	5
-dastool-lorbin_369	Oleispira lorbin_369	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	3	64.36801338854679	1
+dastool-lorbin_369	Oleispira lorbin_369	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	1	0.0	1
 dastool-lorbin_369	Oleispira lorbin_369	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	pre	2	36.38215818962381	1
 dastool-lorbin_369	Oleispira lorbin_369	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	oiled	18	0.0	1
 dastool-lorbin_369	Oleispira lorbin_369	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	pre	1	0.0	1
 dastool-lorbin_369	Oleispira lorbin_369	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	oiled	13	63.039778099981085	1
-dastool-lorbin_369	Oleispira lorbin_369	Chromate (chrA)	2024-25	CTL	control	3	0.0	0
+dastool-lorbin_369	Oleispira lorbin_369	Chromate (chrA)	2024-25	CTL	control	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Chromate (chrA)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Chromate (chrA)	2024-25	EXP	oiled	18	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Chromate (chrA)	2024-25	EXP	pre	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Chromate (chrA)	2025-26	EXP	oiled	13	0.0	0
-dastool-lorbin_369	Oleispira lorbin_369	Tellurite (ter, teh)	2024-25	CTL	control	3	0.0	0
+dastool-lorbin_369	Oleispira lorbin_369	Tellurite (ter, teh)	2024-25	CTL	control	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Tellurite (ter, teh)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Tellurite (ter, teh)	2024-25	EXP	oiled	18	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Tellurite (ter, teh)	2024-25	EXP	pre	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Tellurite (ter, teh)	2025-26	EXP	oiled	13	0.0	0
-dastool-lorbin_369	Oleispira lorbin_369	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	3	0.0	1
+dastool-lorbin_369	Oleispira lorbin_369	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	1	0.0	1
 dastool-lorbin_369	Oleispira lorbin_369	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	pre	2	49.98000799680128	1
 dastool-lorbin_369	Oleispira lorbin_369	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	oiled	18	24.62811545660526	1
 dastool-lorbin_369	Oleispira lorbin_369	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	pre	1	51.56898641157208	1
 dastool-lorbin_369	Oleispira lorbin_369	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	oiled	13	0.0	1
-dastool-lorbin_369	Oleispira lorbin_369	Metallothionein (smtA, bmtA)	2024-25	CTL	control	3	0.0	0
+dastool-lorbin_369	Oleispira lorbin_369	Metallothionein (smtA, bmtA)	2024-25	CTL	control	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Metallothionein (smtA, bmtA)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Metallothionein (smtA, bmtA)	2024-25	EXP	oiled	18	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Metallothionein (smtA, bmtA)	2024-25	EXP	pre	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Metallothionein (smtA, bmtA)	2025-26	EXP	oiled	13	0.0	0
-dastool-lorbin_369	Oleispira lorbin_369	Iron storage and Fur regulation	2024-25	CTL	control	3	836.7841740511082	5
+dastool-lorbin_369	Oleispira lorbin_369	Iron storage and Fur regulation	2024-25	CTL	control	1	187.3126873126873	5
 dastool-lorbin_369	Oleispira lorbin_369	Iron storage and Fur regulation	2024-25	CTL	pre	2	1140.717401462612	5
 dastool-lorbin_369	Oleispira lorbin_369	Iron storage and Fur regulation	2024-25	EXP	oiled	18	222.12907732618686	5
 dastool-lorbin_369	Oleispira lorbin_369	Iron storage and Fur regulation	2024-25	EXP	pre	1	154.70695923471624	5
 dastool-lorbin_369	Oleispira lorbin_369	Iron storage and Fur regulation	2025-26	EXP	oiled	13	483.4102395078005	5
-dastool-lorbin_369	Oleispira lorbin_369	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	3	2110.116215645915	20
+dastool-lorbin_369	Oleispira lorbin_369	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	1	2435.064935064935	20
 dastool-lorbin_369	Oleispira lorbin_369	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	pre	2	2668.404369315361	20
 dastool-lorbin_369	Oleispira lorbin_369	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	oiled	18	1621.1373987677705	20
 dastool-lorbin_369	Oleispira lorbin_369	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	pre	1	1753.3455379934508	20
 dastool-lorbin_369	Oleispira lorbin_369	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	oiled	13	3283.657489264966	20
-dastool-lorbin_369	Oleispira lorbin_369	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	3	187.3126873126873	4
+dastool-lorbin_369	Oleispira lorbin_369	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	1	187.3126873126873	4
 dastool-lorbin_369	Oleispira lorbin_369	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	pre	2	86.36216618642509	4
 dastool-lorbin_369	Oleispira lorbin_369	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	oiled	18	108.93321529353179	4
 dastool-lorbin_369	Oleispira lorbin_369	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	pre	1	283.62942526364645	4
 dastool-lorbin_369	Oleispira lorbin_369	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	oiled	13	220.63922334993381	4
-dastool-lorbin_369	Oleispira lorbin_369	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	3	0.0	0
+dastool-lorbin_369	Oleispira lorbin_369	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	oiled	18	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	pre	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	oiled	13	0.0	0
-dastool-lorbin_369	Oleispira lorbin_369	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	3	1719.943783318934	3
+dastool-lorbin_369	Oleispira lorbin_369	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	1	561.938061938062	3
 dastool-lorbin_369	Oleispira lorbin_369	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	pre	2	3017.9007491815178	3
 dastool-lorbin_369	Oleispira lorbin_369	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	oiled	18	705.1323347877653	3
 dastool-lorbin_369	Oleispira lorbin_369	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	pre	1	1392.3626331124462	3
 dastool-lorbin_369	Oleispira lorbin_369	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	oiled	13	1934.0489314379654	3
-dastool-lorbin_369	Oleispira lorbin_369	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	3	0.0	0
+dastool-lorbin_369	Oleispira lorbin_369	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Membrane cis-trans isomerase (cti)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Membrane cis-trans isomerase (cti)	2024-25	EXP	oiled	18	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Membrane cis-trans isomerase (cti)	2024-25	EXP	pre	1	0.0	0
 dastool-lorbin_369	Oleispira lorbin_369	Membrane cis-trans isomerase (cti)	2025-26	EXP	oiled	13	0.0	0
-dastool-lorbin_369	Oleispira lorbin_369	Phage-shock membrane stress (psp)	2024-25	CTL	control	3	300.38406247988496	1
+dastool-lorbin_369	Oleispira lorbin_369	Phage-shock membrane stress (psp)	2024-25	CTL	control	1	249.75024975024974	1
 dastool-lorbin_369	Oleispira lorbin_369	Phage-shock membrane stress (psp)	2024-25	CTL	pre	2	186.32218218002765	1
 dastool-lorbin_369	Oleispira lorbin_369	Phage-shock membrane stress (psp)	2024-25	EXP	oiled	18	61.94498762002584	1
 dastool-lorbin_369	Oleispira lorbin_369	Phage-shock membrane stress (psp)	2024-25	EXP	pre	1	25.78449320578604	1
 dastool-lorbin_369	Oleispira lorbin_369	Phage-shock membrane stress (psp)	2025-26	EXP	oiled	13	281.08310690527503	1
-dastool-lorbin_369	Oleispira lorbin_369	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	3	874.1258741258741	3
+dastool-lorbin_369	Oleispira lorbin_369	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	1	874.1258741258741	3
 dastool-lorbin_369	Oleispira lorbin_369	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	pre	2	881.630902903337	3
 dastool-lorbin_369	Oleispira lorbin_369	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	oiled	18	4154.427141586921	3
 dastool-lorbin_369	Oleispira lorbin_369	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	pre	1	876.6727689967254	3
 dastool-lorbin_369	Oleispira lorbin_369	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	oiled	13	15319.029326337488	3
-dastool-lorbin_369	Oleispira lorbin_369	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	3	44069.57809619741	3
+dastool-lorbin_369	Oleispira lorbin_369	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	1	18419.08091908092	3
 dastool-lorbin_369	Oleispira lorbin_369	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	pre	2	6537.783634999759	3
 dastool-lorbin_369	Oleispira lorbin_369	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	oiled	18	8017.0747756446335	3
 dastool-lorbin_369	Oleispira lorbin_369	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	pre	1	4512.286311012556	3
@@ -359,97 +359,97 @@ dastool-lorbin_029	Parasphingorhabdus lorbin_029	Protein-folding stress (dnaK, g
 dastool-lorbin_029	Parasphingorhabdus lorbin_029	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	pre	1	39667.47646522927	4
 dastool-lorbin_029	Parasphingorhabdus lorbin_029	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	CTL	control	6	25947.97654750092	4
 dastool-lorbin_029	Parasphingorhabdus lorbin_029	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	oiled	23	23048.716605552647	4
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Mercury (mer)	2024-25	CTL	control	27	237.32836073910832	14
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Mercury (mer)	2024-25	CTL	control	25	237.32836073910832	14
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mercury (mer)	2024-25	CTL	pre	2	155.22968375612476	14
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mercury (mer)	2024-25	EXP	oiled	14	110.35437187950717	14
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mercury (mer)	2025-26	CTL	control	4	115.88788171746063	14
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mercury (mer)	2025-26	EXP	oiled	22	74.53177210708176	14
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Arsenic (ars, aio)	2024-25	CTL	control	27	477.064880823792	6
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Arsenic (ars, aio)	2024-25	CTL	control	25	469.4381929390973	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Arsenic (ars, aio)	2024-25	CTL	pre	2	500.3301055965871	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Arsenic (ars, aio)	2024-25	EXP	oiled	14	246.51888322184715	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Arsenic (ars, aio)	2025-26	CTL	control	4	144.3594805605333	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Arsenic (ars, aio)	2025-26	EXP	oiled	22	268.86662635154596	6
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	27	3123.3532774364826	13
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	25	3534.4909384192047	13
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	pre	2	3663.741628914535	13
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	oiled	14	1107.644218493443	13
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Copper (cop, cue, pco, cus sensors)	2025-26	CTL	control	4	3230.1154199111006	13
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	oiled	22	2647.9784810724504	13
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	27	2486.943546381497	28
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	25	2486.943546381497	28
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	pre	2	3328.663190030371	28
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	oiled	14	5679.082239707163	28
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	CTL	control	4	1919.6590439897668	28
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	oiled	22	1965.4857810257326	28
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	27	39.816842524387816	2
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	25	39.816842524387816	2
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	pre	2	45.3026186255711	2
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	oiled	14	134.3679680413581	2
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	CTL	control	4	47.35894926277902	2
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	oiled	22	27.7081076898442	2
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Chromate (chrA)	2024-25	CTL	control	27	0.0	0
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Chromate (chrA)	2024-25	CTL	control	25	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Chromate (chrA)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Chromate (chrA)	2024-25	EXP	oiled	14	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Chromate (chrA)	2025-26	CTL	control	4	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Chromate (chrA)	2025-26	EXP	oiled	22	0.0	0
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Tellurite (ter, teh)	2024-25	CTL	control	27	67.70730746503841	1
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Tellurite (ter, teh)	2024-25	CTL	control	25	67.70730746503841	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Tellurite (ter, teh)	2024-25	CTL	pre	2	60.79334994446771	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Tellurite (ter, teh)	2024-25	EXP	oiled	14	0.0	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Tellurite (ter, teh)	2025-26	CTL	control	4	191.7184298233123	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Tellurite (ter, teh)	2025-26	EXP	oiled	22	92.05618601261786	1
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	27	0.0	0
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	25	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	oiled	14	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Nickel/cobalt export (rcnA, nreB)	2025-26	CTL	control	4	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	oiled	22	0.0	0
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Metallothionein (smtA, bmtA)	2024-25	CTL	control	27	0.0	0
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Metallothionein (smtA, bmtA)	2024-25	CTL	control	25	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Metallothionein (smtA, bmtA)	2024-25	CTL	pre	2	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Metallothionein (smtA, bmtA)	2024-25	EXP	oiled	14	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Metallothionein (smtA, bmtA)	2025-26	CTL	control	4	0.0	0
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Metallothionein (smtA, bmtA)	2025-26	EXP	oiled	22	0.0	0
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron storage and Fur regulation	2024-25	CTL	control	27	480.10636202481777	3
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron storage and Fur regulation	2024-25	CTL	control	25	480.10636202481777	3
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron storage and Fur regulation	2024-25	CTL	pre	2	511.1631747640405	3
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron storage and Fur regulation	2024-25	EXP	oiled	14	372.0059491904665	3
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron storage and Fur regulation	2025-26	CTL	control	4	863.0427078517569	3
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron storage and Fur regulation	2025-26	EXP	oiled	22	590.3505942397771	3
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	27	19736.217857481734	32
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	25	21190.123415914113	32
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	pre	2	15169.072303872668	32
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	oiled	14	17726.847494624762	32
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron uptake (siderophores, TonB, Feo)	2025-26	CTL	control	4	44428.5226989353	32
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	oiled	22	38286.37161814976	32
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	27	106.69511869831955	4
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	25	86.98137356014762	4
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	pre	2	85.11068992225479	4
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	oiled	14	82.86455119627075	4
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	CTL	control	4	209.7873790164349	4
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	oiled	22	128.95639285961482	4
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	27	20.724529553179142	1
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	25	18.743088486120744	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	pre	2	15.98976654940838	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	oiled	14	0.0	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Ni/Co uptake (nik, cbi, nixA)	2025-26	CTL	control	4	81.21421487682794	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	oiled	22	52.33092528122893	1
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	27	1822.7928356316374	7
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	25	1826.549008444824	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	pre	2	2624.770452116212	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	oiled	14	1780.5105972658662	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	CTL	control	4	983.508996626273	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	oiled	22	2693.6063379086763	7
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	27	109.73678847450186	1
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	25	109.73678847450186	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Membrane cis-trans isomerase (cti)	2024-25	CTL	pre	2	117.09022302107155	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Membrane cis-trans isomerase (cti)	2024-25	EXP	oiled	14	89.90626332206446	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Membrane cis-trans isomerase (cti)	2025-26	CTL	control	4	123.13045301552484	1
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Membrane cis-trans isomerase (cti)	2025-26	EXP	oiled	22	155.99209130064088	1
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Phage-shock membrane stress (psp)	2024-25	CTL	control	27	2796.333695821035	7
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Phage-shock membrane stress (psp)	2024-25	CTL	control	25	2796.333695821035	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Phage-shock membrane stress (psp)	2024-25	CTL	pre	2	4263.191529440511	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Phage-shock membrane stress (psp)	2024-25	EXP	oiled	14	2192.080540789574	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Phage-shock membrane stress (psp)	2025-26	CTL	control	4	1188.7311100983152	7
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Phage-shock membrane stress (psp)	2025-26	EXP	oiled	22	2636.4793819222937	7
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	27	6014.140686158778	11
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	25	7041.57289408646	11
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	pre	2	8754.398417493672	11
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	oiled	14	3358.984146330892	11
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	CTL	control	4	7631.358925652752	11
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	oiled	22	16833.56140517901	11
-dastool-lorbin_135	Cognaticolwellia lorbin_135	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	27	26627.758526354188	6
+dastool-lorbin_135	Cognaticolwellia lorbin_135	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	25	24753.267538010135	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	pre	2	45282.70388751287	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	oiled	14	25198.311262827894	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	CTL	control	4	21730.992018837194	6
 dastool-lorbin_135	Cognaticolwellia lorbin_135	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	oiled	22	20081.796838790047	6
-dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2024-25	CTL	control	24	38.4134627473653	1
+dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2024-25	CTL	control	22	38.4134627473653	1
 dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2024-25	CTL	pre	2	62.890384471611455	1
 dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2024-25	EXP	oiled	29	30.732824192879203	1
 dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2024-25	EXP	pre	1	51.57829585310502	1
@@ -457,7 +457,7 @@ dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2025-26	CTL	control	4	43
 dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2025-26	CTL	pre	5	44.20671057866584	1
 dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2025-26	EXP	oiled	6	45.15895953757225	1
 dastool-semibin_042	Colwellia semibin_042	Mercury (mer)	2025-26	EXP	pre	5	37.34548306382343	1
-dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2024-25	CTL	control	24	312.6959074543861	3
+dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2024-25	CTL	control	22	312.6959074543861	3
 dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2024-25	CTL	pre	2	250.5020963512951	3
 dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2024-25	EXP	oiled	29	235.80456517638183	3
 dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2024-25	EXP	pre	1	137.5421222749467	3
@@ -465,7 +465,7 @@ dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2025-26	CTL	control
 dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2025-26	CTL	pre	5	1149.798048291518	3
 dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2025-26	EXP	oiled	6	337.9606799086131	3
 dastool-semibin_042	Colwellia semibin_042	Arsenic (ars, aio)	2025-26	EXP	pre	5	1276.256314809891	3
-dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	24	133.72909001068035	2
+dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	22	146.8174444955222	2
 dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	pre	2	133.97341895541135	2
 dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	oiled	29	133.43118286743612	2
 dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	pre	1	203.18722608798944	2
@@ -473,7 +473,7 @@ dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	20
 dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2025-26	CTL	pre	5	132.62013173599752	2
 dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	oiled	6	240.73076779310287	2
 dastool-semibin_042	Colwellia semibin_042	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	pre	5	125.75452716297788	2
-dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	24	871.4113664196611	4
+dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	22	871.4113664196611	4
 dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	pre	2	575.3358167012085	4
 dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	oiled	29	1527.6396191558904	4
 dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	pre	1	264.1433939143863	4
@@ -481,7 +481,7 @@ dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr,
 dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	CTL	pre	5	3007.7462067111387	4
 dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	oiled	6	1688.1186200625214	4
 dastool-semibin_042	Colwellia semibin_042	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	pre	5	2576.838331403817	4
-dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	24	481.658296943722	2
+dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	22	515.0469996964628	2
 dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	pre	2	878.7052853743826	2
 dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	oiled	29	292.75718718894547	2
 dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	pre	1	553.2944464242174	2
@@ -489,7 +489,7 @@ dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + s
 dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	CTL	pre	5	1045.6605088881142	2
 dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	oiled	6	1207.5021954585372	2
 dastool-semibin_042	Colwellia semibin_042	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	pre	5	1006.036217303823	2
-dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2024-25	CTL	control	24	0.0	0
+dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2024-25	CTL	control	22	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2024-25	CTL	pre	2	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2024-25	EXP	oiled	29	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2024-25	EXP	pre	1	0.0	0
@@ -497,7 +497,7 @@ dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2025-26	CTL	control	4	
 dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2025-26	EXP	oiled	6	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Chromate (chrA)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2024-25	CTL	control	24	0.0	1
+dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2024-25	CTL	control	22	0.0	1
 dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2024-25	CTL	pre	2	18.1999612584025	1
 dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2024-25	EXP	oiled	29	20.980414782800256	1
 dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2024-25	EXP	pre	1	9.37787197329182	1
@@ -505,7 +505,7 @@ dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2025-26	CTL	contr
 dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2025-26	CTL	pre	5	0.0	1
 dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2025-26	EXP	oiled	6	0.0	1
 dastool-semibin_042	Colwellia semibin_042	Tellurite (ter, teh)	2025-26	EXP	pre	5	53.177346450412124	1
-dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	24	0.0	0
+dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	22	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	pre	2	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	oiled	29	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	pre	1	0.0	0
@@ -513,7 +513,7 @@ dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2025
 dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	oiled	6	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2024-25	CTL	control	24	0.0	0
+dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2024-25	CTL	control	22	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2024-25	CTL	pre	2	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2024-25	EXP	oiled	29	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2024-25	EXP	pre	1	0.0	0
@@ -521,7 +521,7 @@ dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2025-26	C
 dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2025-26	EXP	oiled	6	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Metallothionein (smtA, bmtA)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2024-25	CTL	control	24	393.8645384671082	5
+dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2024-25	CTL	control	22	414.399144773993	5
 dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2024-25	CTL	pre	2	434.53904976877527	5
 dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2024-25	EXP	oiled	29	349.055368907893	5
 dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2024-25	EXP	pre	1	265.70637257660155	5
@@ -529,7 +529,7 @@ dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2025-2
 dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2025-26	CTL	pre	5	412.74801733541676	5
 dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2025-26	EXP	oiled	6	628.928578656748	5
 dastool-semibin_042	Colwellia semibin_042	Iron storage and Fur regulation	2025-26	EXP	pre	5	493.9491232403062	5
-dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	24	3086.6843349607807	23
+dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	22	3086.6843349607807	23
 dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	pre	2	3339.313069279402	23
 dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	oiled	29	3028.6343612334804	23
 dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	pre	1	2147.532681883827	23
@@ -537,7 +537,7 @@ dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	
 dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2025-26	CTL	pre	5	7001.975294082962	23
 dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	oiled	6	4643.230818390339	23
 dastool-semibin_042	Colwellia semibin_042	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	pre	5	5018.820577164366	23
-dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	24	70.54695727524268	1
+dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	22	76.5607484801233	1
 dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	pre	2	48.3141070175202	1
 dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	oiled	29	52.70231099633719	1
 dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	pre	1	50.01531719088971	1
@@ -545,7 +545,7 @@ dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2025
 dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	CTL	pre	5	86.76507271997657	1
 dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	oiled	6	112.6535599695377	1
 dastool-semibin_042	Colwellia semibin_042	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	pre	5	148.18473697209188	1
-dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	24	0.0	0
+dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	22	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	pre	2	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	oiled	29	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	pre	1	0.0	0
@@ -553,7 +553,7 @@ dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2025-26	
 dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	oiled	6	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	24	4012.712568750315	5
+dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	22	4012.712568750315	5
 dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	pre	2	4875.653943134817	5
 dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	oiled	29	4008.685485217972	5
 dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	pre	1	6567.636338628705	5
@@ -561,7 +561,7 @@ dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-to
 dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	CTL	pre	5	9124.056928738259	5
 dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	oiled	6	8782.987831678063	5
 dastool-semibin_042	Colwellia semibin_042	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	pre	5	9710.326768861492	5
-dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	24	0.0	0
+dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	22	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2024-25	CTL	pre	2	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2024-25	EXP	oiled	29	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2024-25	EXP	pre	1	0.0	0
@@ -569,7 +569,7 @@ dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	202
 dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2025-26	EXP	oiled	6	0.0	0
 dastool-semibin_042	Colwellia semibin_042	Membrane cis-trans isomerase (cti)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2024-25	CTL	control	24	3892.515224308191	7
+dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2024-25	CTL	control	22	4121.790116001779	7
 dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2024-25	CTL	pre	2	2884.4865769889598	7
 dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2024-25	EXP	oiled	29	6821.088532044906	7
 dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2024-25	EXP	pre	1	3258.8105107189076	7
@@ -577,7 +577,7 @@ dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2025
 dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2025-26	CTL	pre	5	9813.889748463816	7
 dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2025-26	EXP	oiled	6	10523.890747699723	7
 dastool-semibin_042	Colwellia semibin_042	Phage-shock membrane stress (psp)	2025-26	EXP	pre	5	8425.553319919516	7
-dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	24	1768.3169516625635	4
+dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	22	1653.7083549257354	4
 dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	pre	2	1850.8604601783532	4
 dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	oiled	29	1264.8554639120925	4
 dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	pre	1	739.2889072278385	4
@@ -585,7 +585,7 @@ dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, 
 dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	CTL	pre	5	3476.025725844061	4
 dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	oiled	6	3462.8006951766024	4
 dastool-semibin_042	Colwellia semibin_042	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	pre	5	2726.2202636591105	4
-dastool-semibin_042	Colwellia semibin_042	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	24	24011.24061602867	5
+dastool-semibin_042	Colwellia semibin_042	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	22	22194.25439692012	5
 dastool-semibin_042	Colwellia semibin_042	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	pre	2	15105.607843544249	5
 dastool-semibin_042	Colwellia semibin_042	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	oiled	29	20921.506173916838	5
 dastool-semibin_042	Colwellia semibin_042	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	pre	1	5909.622321836062	5
@@ -701,133 +701,133 @@ dastool-lorbin_032	Sulfitobacter lorbin_032	Protein-folding stress (dnaK, groEL,
 dastool-lorbin_032	Sulfitobacter lorbin_032	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	CTL	control	3	32743.469363187673	5
 dastool-lorbin_032	Sulfitobacter lorbin_032	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	oiled	29	16697.350925641815	5
 dastool-lorbin_032	Sulfitobacter lorbin_032	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	pre	3	26461.667189624513	5
-dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Mercury (mer)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2024-25	CTL	control	5	1001.8785222291797	6
+dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2024-25	CTL	control	3	1001.8785222291797	6
 dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2024-25	EXP	oiled	24	1535.211070019795	6
 dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2024-25	EXP	pre	1	1150.9888040179974	6
 dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2025-26	CTL	control	14	637.7273074002503	6
 dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2025-26	CTL	pre	5	742.5881297988007	6
 dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2025-26	EXP	oiled	29	1094.8514683477997	6
 dastool-semibin_088	Sulfurimonas semibin_088	Arsenic (ars, aio)	2025-26	EXP	pre	5	831.2017524120924	6
-dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	5	4143.126177024482	5
+dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	3	3189.4013738959766	5
 dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	oiled	24	5538.440915391551	5
 dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	pre	1	3766.8724495134456	5
 dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2025-26	CTL	control	14	13580.635265413734	5
 dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2025-26	CTL	pre	5	2602.5612284929666	5
 dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	oiled	29	2042.1763150540637	5
 dastool-semibin_088	Sulfurimonas semibin_088	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	pre	5	1743.9325679407063	5
-dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	5	183.5632244191535	4
+dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	3	250.46963055729492	4
 dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	oiled	24	259.8167839306372	4
 dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	pre	1	418.5413832792717	4
 dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	CTL	control	14	400.228627178137	4
 dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	CTL	pre	5	527.212263768351	4
 dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	oiled	29	372.7563186741824	4
 dastool-semibin_088	Sulfurimonas semibin_088	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	pre	5	458.00249259048854	4
-dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Chromate (chrA)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2024-25	CTL	control	5	0.0	2
+dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2024-25	CTL	control	3	0.0	2
 dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2024-25	EXP	oiled	24	46.560087377567086	2
 dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2024-25	EXP	pre	1	52.317672909908964	2
 dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2025-26	CTL	control	14	34.71367921323475	2
 dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2025-26	CTL	pre	5	60.22572602112718	2
 dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2025-26	EXP	oiled	29	83.86357715627533	2
 dastool-semibin_088	Sulfurimonas semibin_088	Tellurite (ter, teh)	2025-26	EXP	pre	5	59.699573377664095	2
-dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	5	122.6692836113837	1
+dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	3	125.54927809165098	1
 dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	oiled	24	214.25675043821576	1
 dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	pre	1	366.2237103693628	1
 dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2025-26	CTL	control	14	130.92053373682282	1
 dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2025-26	CTL	pre	5	397.91409244172655	1
 dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	oiled	29	327.23101430826597	1
 dastool-semibin_088	Sulfurimonas semibin_088	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	pre	5	277.4438176269306	1
-dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Metallothionein (smtA, bmtA)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2024-25	CTL	control	5	125.54927809165098	4
+dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2024-25	CTL	control	3	125.54927809165098	4
 dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2024-25	EXP	oiled	24	177.08477569159274	4
 dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2024-25	EXP	pre	1	156.9530187297269	4
 dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2025-26	CTL	control	14	108.21061243165849	4
 dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2025-26	CTL	pre	5	192.65258084402848	4
 dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2025-26	EXP	oiled	29	235.1420378494271	4
 dastool-semibin_088	Sulfurimonas semibin_088	Iron storage and Fur regulation	2025-26	EXP	pre	5	225.02146888504157	4
-dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	5	368.00785083415116	5
+dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	3	368.00785083415116	5
 dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	oiled	24	226.20236175234606	5
 dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	pre	1	156.9530187297269	5
 dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2025-26	CTL	control	14	325.69196444014494	5
 dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2025-26	CTL	pre	5	399.31625847671353	5
 dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	oiled	29	397.53602250665483	5
 dastool-semibin_088	Sulfurimonas semibin_088	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	pre	5	480.16645770533785	5
-dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	5	0.0	3
+dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	3	0.0	3
 dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	oiled	24	112.31623598242568	3
 dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	pre	1	104.63534581981793	3
 dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	CTL	control	14	120.42228812532642	3
 dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	CTL	pre	5	206.946789841396	3
 dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	oiled	29	151.92868521455208	3
 dastool-semibin_088	Sulfurimonas semibin_088	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	pre	5	220.43923180911557	3
-dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	5	125.23481527864746	1
+dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	3	125.23481527864746	1
 dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	oiled	24	173.35643310174805	1
 dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	pre	1	209.27069163963586	1
 dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	CTL	control	14	90.21258369815446	1
 dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	CTL	pre	5	96.36116163380349	1
 dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	oiled	29	197.7769866698311	1
 dastool-semibin_088	Sulfurimonas semibin_088	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	pre	5	157.38789447008295	1
-dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Membrane cis-trans isomerase (cti)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2024-25	CTL	control	5	0.0	0
+dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2024-25	CTL	control	3	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2024-25	EXP	oiled	24	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2024-25	EXP	pre	1	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2025-26	CTL	control	14	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2025-26	CTL	pre	5	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2025-26	EXP	oiled	29	0.0	0
 dastool-semibin_088	Sulfurimonas semibin_088	Phage-shock membrane stress (psp)	2025-26	EXP	pre	5	0.0	0
-dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	5	1632.1406151914628	2
+dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	3	2576.054955839058	2
 dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	oiled	24	3778.6959200282627	2
 dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	pre	1	2877.472010044993	2
 dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	CTL	control	14	2026.3314932902363	2
 dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	CTL	pre	5	2247.8655748462447	2
 dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	oiled	29	3183.558195680011	2
 dastool-semibin_088	Sulfurimonas semibin_088	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	pre	5	3128.6435550739534	2
-dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	5	1962.7085377821393	2
+dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	3	1962.7085377821393	2
 dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	oiled	24	2521.5935104085315	2
 dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	pre	1	1517.21251438736	2
 dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	CTL	control	14	20925.59167433415	2
 dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	CTL	pre	5	1761.8954211735695	2
 dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	oiled	29	3382.254951758207	2
 dastool-semibin_088	Sulfurimonas semibin_088	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2025-26	EXP	pre	5	1986.1454245991379	2
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2024-25	CTL	control	27	163.75809951281965	4
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2024-25	CTL	control	25	163.75809951281965	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2024-25	CTL	pre	2	89.63887826029398	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2024-25	EXP	oiled	29	74.08175662661313	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2024-25	EXP	pre	1	16.354700749863028	4
@@ -835,7 +835,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2025-26	
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2025-26	CTL	pre	5	0.0	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2025-26	EXP	oiled	29	0.0	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mercury (mer)	2025-26	EXP	pre	5	0.0	4
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2024-25	CTL	control	27	91.15134877186962	2
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2024-25	CTL	control	25	92.87293125545628	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2024-25	CTL	pre	2	140.09126802182234	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2024-25	EXP	oiled	29	93.91876027236441	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2024-25	EXP	pre	1	89.95085412424666	2
@@ -843,7 +843,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	202
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2025-26	CTL	pre	5	116.74741696339967	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2025-26	EXP	oiled	29	116.05351725052638	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Arsenic (ars, aio)	2025-26	EXP	pre	5	132.52249201183866	2
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	27	625.9523643927946	6
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	control	25	625.9523643927946	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2024-25	CTL	pre	2	798.3411727157246	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	oiled	29	661.7427315032234	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2024-25	EXP	pre	1	752.3162344936993	6
@@ -851,7 +851,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco,
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2025-26	CTL	pre	5	642.9624616277102	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	oiled	29	602.0783555201577	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Copper (cop, cue, pco, cus sensors)	2025-26	EXP	pre	5	588.1223784649188	6
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	27	1828.3888194827966	9
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	control	25	1834.7001481023012	9
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	CTL	pre	2	2734.5597910337237	9
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	oiled	29	1714.8750916464044	9
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2024-25	EXP	pre	1	2665.8162222276737	9
@@ -859,7 +859,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	CTL	pre	5	1552.7950310559006	9
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	oiled	29	1148.8692707703472	9
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Heavy-metal RND efflux (czc, cus, cnr, sil)	2025-26	EXP	pre	5	1764.3671353947568	9
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	27	1184.3054801793646	1
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	control	25	1184.3054801793646	1
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	CTL	pre	2	1557.2516910117797	1
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	oiled	29	2565.2243995670897	1
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2024-25	EXP	pre	1	948.5726434920557	1
@@ -867,7 +867,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA,
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	CTL	pre	5	2141.6728076639647	1
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	oiled	29	1736.8842967845371	1
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Zn/Cd/Pb export (zntA, cadA, czcD) + sensors	2025-26	EXP	pre	5	752.1538952454757	1
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2024-25	CTL	control	27	0.0	0
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2024-25	CTL	control	25	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2024-25	CTL	pre	2	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2024-25	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2024-25	EXP	pre	1	0.0	0
@@ -875,7 +875,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2025-2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2025-26	CTL	pre	5	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2025-26	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Chromate (chrA)	2025-26	EXP	pre	5	0.0	0
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2024-25	CTL	control	27	0.0	0
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2024-25	CTL	control	25	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2024-25	CTL	pre	2	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2024-25	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2024-25	EXP	pre	1	0.0	0
@@ -883,7 +883,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2025-26	CTL	pre	5	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2025-26	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Tellurite (ter, teh)	2025-26	EXP	pre	5	0.0	0
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	27	0.0	0
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	control	25	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2024-25	CTL	pre	2	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2024-25	EXP	pre	1	0.0	0
@@ -891,7 +891,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2025-26	CTL	pre	5	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Nickel/cobalt export (rcnA, nreB)	2025-26	EXP	pre	5	0.0	0
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2024-25	CTL	control	27	0.0	0
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2024-25	CTL	control	25	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2024-25	CTL	pre	2	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2024-25	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2024-25	EXP	pre	1	0.0	0
@@ -899,7 +899,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA,
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2025-26	CTL	pre	5	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2025-26	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Metallothionein (smtA, bmtA)	2025-26	EXP	pre	5	0.0	0
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2024-25	CTL	control	27	559.601265444995	2
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2024-25	CTL	control	25	559.601265444995	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2024-25	CTL	pre	2	807.893628919512	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2024-25	EXP	oiled	29	650.3270275084191	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2024-25	EXP	pre	1	809.55768711822	2
@@ -907,7 +907,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur r
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2025-26	CTL	pre	5	617.3090751217659	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2025-26	EXP	oiled	29	972.116315054871	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron storage and Fur regulation	2025-26	EXP	pre	5	532.9780146568954	2
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	27	43897.41719972333	31
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	control	25	44300.28769320664	31
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2024-25	CTL	pre	2	54152.75427811677	31
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	oiled	29	47143.822443993966	31
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2024-25	EXP	pre	1	58549.82868450965	31
@@ -915,7 +915,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (sideropho
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2025-26	CTL	pre	5	48896.305642611966	31
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	oiled	29	36262.017314413024	31
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Iron uptake (siderophores, TonB, Feo)	2025-26	EXP	pre	5	52046.7702967589	31
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	27	514.9164869822675	4
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	control	25	530.5157054753641	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	CTL	pre	2	666.6586363208236	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	oiled	29	491.37785421433296	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2024-25	EXP	pre	1	605.1239277449321	4
@@ -923,7 +923,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	CTL	pre	5	680.9927360774818	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	oiled	29	577.8244907921676	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Mn/Zn uptake (mnt, sit, znu, Zur)	2025-26	EXP	pre	5	737.4631268436578	4
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	27	0.0	0
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	control	25	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2024-25	CTL	pre	2	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2024-25	EXP	pre	1	0.0	0
@@ -931,7 +931,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2025-26	CTL	pre	5	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Ni/Co uptake (nik, cbi, nixA)	2025-26	EXP	pre	5	0.0	0
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	27	1528.8257631799574	2
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	control	25	1576.2925598991174	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	CTL	pre	2	1656.931357317669	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	oiled	29	1537.756915753228	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2024-25	EXP	pre	1	1766.3076809852073	2
@@ -939,7 +939,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND 
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	CTL	pre	5	1812.8640835367771	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	oiled	29	1843.1831480397893	2
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Solvent/multidrug RND efflux (acrAB-tolC, mexAB-oprM, ttg, srp)	2025-26	EXP	pre	5	2462.720900652215	2
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	27	0.0	0
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2024-25	CTL	control	25	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2024-25	CTL	pre	2	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2024-25	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2024-25	EXP	pre	1	0.0	0
@@ -947,7 +947,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans iso
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2025-26	CTL	pre	5	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2025-26	EXP	oiled	29	0.0	0
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Membrane cis-trans isomerase (cti)	2025-26	EXP	pre	5	0.0	0
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2024-25	CTL	control	27	1574.344893451919	4
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2024-25	CTL	control	25	1831.026098509204	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2024-25	CTL	pre	2	2077.9419427584953	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2024-25	EXP	oiled	29	18807.78929672177	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2024-25	EXP	pre	1	5969.465773700005	4
@@ -955,7 +955,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane s
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2025-26	CTL	pre	5	2028.3012468286593	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2025-26	EXP	oiled	29	43921.88414277355	4
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Phage-shock membrane stress (psp)	2025-26	EXP	pre	5	2370.137080330285	4
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	27	16279.06976744186	3
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	control	25	21506.33855331842	3
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	CTL	pre	2	7520.109034048261	3
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	oiled	29	28684.806786597463	3
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2024-25	EXP	pre	1	7130.64952694028	3
@@ -963,7 +963,7 @@ dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat,
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	CTL	pre	5	17243.95240614867	3
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	oiled	29	10826.969627610506	3
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Oxidative stress (kat, sod, ahp, dps, osmC)	2025-26	EXP	pre	5	6007.833463346498	3
-dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	27	18302.15898607525	6
+dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	control	25	17281.884594342355	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	CTL	pre	2	8098.520966219207	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	oiled	29	15893.861332794559	6
 dastool-vamb_4149	UBA9145 vamb_4149 (Pseudohongiellaceae)	Protein-folding stress (dnaK, groEL, ibpA, clpB, htpG)	2024-25	EXP	pre	1	9673.805493543983	6

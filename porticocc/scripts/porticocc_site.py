@@ -23,7 +23,7 @@ J['stats'] = {'size': int(q['size']), 'compl': r(q.SCG_completeness, 0), 'contam
                           'oil': med(s, core.phase == 'oiled'), 'ctl': med(s, core.phase == 'control')} for s in ('2024-25', '2025-26')},
               'tpm_max': r(tpm.loc[BIN, S].max(), 0)}
 # DNA: Illumina k-mer screen and nanopore
-k = pd.read_csv(B + 'out/mg_kmer.tsv', sep='\t'); k = k[k.pool.isin(['CTL', 'EXP']) & k.day.notna() & k.medium.isin(['SW', 'SI'])]
+k = pd.read_csv(B + 'out/mg_kmer.tsv', sep='\t', keep_default_na=False, na_values=['']); k = k[~k.qc_flag.isin(EXCLUDE_FLAGS)]; k = k[k.pool.isin(['CTL', 'EXP']) & k.day.notna() & k.medium.isin(['SW', 'SI'])]
 J['mg'] = [{'season': x.season, 'pool': x.pool, 'medium': x.medium, 'day': int(x.day), 'v': {b: r(getattr(x, b), 4) for b in ('comebin_2576', 'lorbin_184', 'metabat_9342')}} for x in k.itertuples()]
 dr = pd.read_csv(B + 'out/dna_rel_abundance.tsv', sep='\t', index_col=0); di = pd.read_csv(B + 'out/dna_samples.tsv', sep='\t', index_col=0)
 dk = [c for c in dr.columns if c in di.index and di.loc[c, 'group'] in ('CTL', 'EXP') and pd.notna(di.loc[c, 'day'])]

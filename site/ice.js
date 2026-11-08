@@ -65,7 +65,7 @@ function panelChart(sec, I) {
   sec.append(el('h3', {}, 'What ice life switches on'));
   sec.append(el('p', { class: 'kicker' }, 'Twenty curated groups of KEGG orthologs, summed per library (CPM of protein-coding reads, corrected KO assignments). Each dot is one pair; the bar is the mean log₂ ratio. Pick a comparison. Hover a row to see which genomes carry most of those transcripts in ice.'));
   const c = el('div', { class: 'controls' }); sec.append(c);
-  const opts = [['iw', 'Ice minus water (24 pairs)'], ['tb', 'Top minus bottom ice (13 pairs, 2024-25)']]; let mode = 'iw';
+  const opts = [['iw', 'Ice minus water (23 pairs)'], ['tb', 'Top minus bottom ice (13 pairs, 2024-25)']]; let mode = 'iw';
   opts.forEach(([k, l]) => { const b = el('button', { class: 'chip', 'aria-pressed': k === mode }, l); b.onclick = () => { mode = k; c.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); }; c.append(b); });
   const box = fig(sec, '', 'Log₂ ratio of category CPM within each pair. Orange means higher in ice (or top ice); blue means higher in water (or bottom ice). Pairs are days within one pool, so “n of N” measures consistency, not replication.');
   function draw() {

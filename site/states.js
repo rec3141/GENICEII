@@ -51,7 +51,7 @@ function stExplorer(sec, J) {
   const det = J.mags.filter(m => m.detail);
   const only = m => { const w = [...new Set(J.detail[m.bin].idx.map(si => J.samples[si].season))]; return w.length === 1 ? `, ${w[0]} only` : ''; };
   const og1 = document.createElement('optgroup'); og1.label = 'Key genomes'; det.filter(m => m.key).forEach(m => og1.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
-  const og2 = document.createElement('optgroup'); og2.label = 'Strongest diesel shifts'; det.filter(m => !m.key).forEach(m => og2.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
+  const og2 = document.createElement('optgroup'); og2.label = 'All other genomes (table order)'; det.filter(m => !m.key).forEach(m => og2.append(new Option(`${m.taxon} (${m.bin}${only(m)})`, m.bin)));
   sel.append(og1, og2);
   const ss = el('select', { id: 'stsea', 'aria-label': 'Winter' }); [['both', 'Both winters'], ['2025-26', '2025-26'], ['2024-25', '2024-25']].forEach(([v, l]) => ss.append(new Option(l, v)));
   const tr = el('input', { type: 'checkbox', id: 'sttraj' }); tr.checked = true;
