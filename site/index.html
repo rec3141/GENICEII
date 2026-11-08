@@ -39,6 +39,11 @@ p, li { max-width: 68ch }
 .lede { font-size: 19px; color: var(--ink-2); max-width: 62ch; margin: 0 }
 nav.sec { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule) }
 .fig .lineage { font: 12px/1.35 var(--f-display); color: var(--ink-3); margin: -2px 0 6px }
+.theme { margin-left: auto; display: inline-flex; align-self: center; border: 1px solid var(--rule); border-radius: 7px; overflow: hidden }
+.theme button { font: 600 12.5px/1 var(--f-display); color: var(--ink-2); background: transparent; border: 0; padding: 7px 10px; cursor: pointer }
+.theme button + button { border-left: 1px solid var(--rule) }
+.theme button[aria-checked="true"] { background: var(--ink); color: var(--bg) }
+.theme button:hover { color: var(--ink) }
 nav.sec .wrap { display: flex; flex-wrap: wrap; gap: 4px; padding-block: 8px }
 nav.sec details.dd { position: relative }
 nav.sec summary { list-style: none; cursor: pointer; font: 600 14px/1 var(--f-display); color: var(--ink-2); padding: 9px 12px; border-radius: 6px; white-space: nowrap }
@@ -94,6 +99,7 @@ svg .ttl { fill: var(--ink); font-weight: 650; font-size: 12px }
 footer { border-top: 1px solid var(--rule); padding-block: 24px 40px; color: var(--ink-3); font-size: 14px }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important } }
 </style>
+<script>try { const t = localStorage.getItem('cmo-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
 </head>
 <body>
 <header class="mast"><div class="wrap">
