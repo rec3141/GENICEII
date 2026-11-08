@@ -44,12 +44,16 @@ for b, g in T.groupby('bin'):
 EG = pd.read_csv(D + 'euk_groups.tsv', sep='\t', keep_default_na=False)
 for x in EG.itertuples():
     bits = [f'Eukaryote (Tiara, {x.tiara_euk:.0%} of length)', f'genome group {x.group}, {x.bp / 1e6:.1f} Mbp, GC {x.gc:.1f}%',
-            f'18S: {x.taxonomy_hint}' if x.taxonomy_hint else 'no confident 18S hint', {'network': 'clean, expressed', 'little CMO RNA': 'clean; most of its reads come from non-CMO samples of the coassembly', 'low RNA': 'clean, barely expressed', 'doubtful': 'doubtful (mixed or impure)'}.get(x.status, x.status)]
+            f'18S: {x.taxonomy_hint}' if x.taxonomy_hint else 'no confident 18S hint', {'network': 'clean, expressed', 'little CMO RNA': 'clean; most of its reads come from non-CMO samples of the coassembly', '<4 Mbp': 'clean, under 4 Mbp', 'low RNA': 'clean, barely expressed', 'doubtful': 'doubtful (mixed or impure)'}.get(x.status, x.status)]
     L[x.group] = ' · '.join(bits)
+VGT = pd.read_csv(D + 'virus_groups.tsv', sep='\t', keep_default_na=False)
+for x in VGT.itertuples():
+    vb = f', {float(x.virus_bp):.0%} viral by geNomad' if str(x.virus_bp) else ''
+    L[x.vid] = f'Virus group {x.vid} · {x.bp / 1e6:.1f} Mbp of contigs, GC {x.gc:.1f}%{vb} · from the eukaryotic-region binning ({x.note})'
 if dom is not None and 'euk_group' in dom.columns:
     for b, g in dom.euk_group.dropna().items():
         s_ = b.replace('dastool-', '')
         if s_ in L: L[s_] = L[s_].replace('Eukaryote (Tiara)', f'Eukaryote (Tiara), part of genome group {g}', 1)
 json.dump(L, open(OUT, 'w'), separators=(',', ':'), ensure_ascii=False)
 print(len(L), 'bins;', os.path.getsize(OUT) // 1000, 'kB')
-for b in ('E02', 'E05', 'comebin_4318_sub', 'comebin_2576', 'lorbin_184', 'comebin_4527', 'comebin_3937', 'metabat_8153', 'semibin_088'): print(b, '→', L.get(b))
+for b in ('E02', 'E05', 'E31', 'E25', 'V01', 'V02', 'comebin_4318_sub', 'comebin_2576', 'lorbin_184', 'comebin_4527', 'comebin_3937', 'metabat_8153', 'semibin_088'): print(b, '→', L.get(b))

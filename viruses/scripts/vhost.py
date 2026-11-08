@@ -9,7 +9,7 @@ from scipy.stats import spearmanr
 V = '/data/dev/rnaseq-exploration/viruses/'
 U = pd.read_pickle(V + 'out/votu_rna_cpm.pkl'); R = pd.read_csv(V + 'out/votu_rna.tsv', sep='\t', index_col=0)
 B = table('bin_tpm')[U.columns]; B = B[B.max(1) >= 500]
-EGX = pd.read_csv('/data/dev/rnaseq-exploration/euks/mags/out/group_expr_samples.tsv', sep='\t', index_col=0)[U.columns]
+EGX = group_expression().reindex(columns=U.columns)                 # E## and V## (common.py); hosts are eukaryotic groups only
 EGX = EGX[[is_euk_group(g) and euk_group_info(g).get('status') != 'doubtful' for g in EGX.index]]
 B = pd.concat([B, EGX[EGX.max(1) >= 500]])
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).set_index('user_genome')['classification']
@@ -18,6 +18,9 @@ def lab(b):
     if special_label(b): return special_label(b)
     t = [x.split('__', 1)[1] for x in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in x and x.split('__', 1)[1]]
     return (t[-1] if t else '') or kaiju_bin_label(b) or b
+# viruses of eukaryotes (geNomad class): only these get a best eukaryotic host candidate; for phages it would be meaningless
+EUK_VIRUS_CLASSES = {'Megaviricetes', 'Maveriviricetes', 'Pokkesviricetes', 'Polintoviricetes', 'Alsuviricetes', 'Pisoniviricetes', 'Revtraviricetes'}
+def euk_virus(v): return str(R.loc[v, 'cls']) in EUK_VIRUS_CLASSES if v in R.index else False
 sel = set(R[(R['oil_2025-26'] >= 20)].sort_values('baci_2025-26', ascending=False).head(15).index) | \
       set(R[(R['oil_2024-25'] >= 20)].sort_values('lfc_2024-25', ascending=False).head(15).index) | set(R.sort_values('mean_cpm', ascending=False).head(15).index)
 Br = B.rank(axis=1).values; Bz = (Br - Br.mean(1, keepdims=True)) / Br.std(1, keepdims=True)
@@ -30,7 +33,7 @@ for v in sel:
     eb = ei[int(np.argmax(rho[ei]))] if ei else None                           # virophages must be eukaryotes)
     rows.append(dict(votu=v, binned=R.loc[v, 'bin'] if isinstance(R.loc[v, 'bin'], str) else '', **{f'host{i+1}': (lab(B.index[j]) if is_euk_group(B.index[j]) else f'{lab(B.index[j])} ({B.index[j].replace("dastool-", "")})') for i, j in enumerate(o)},
                      **{f'rho{i+1}': round(float(rho[j]), 2) for i, j in enumerate(o)},
-                     euk_host=B.index[eb] if eb is not None else '', euk_rho=round(float(rho[eb]), 2) if eb is not None else np.nan))
+                     euk_host=B.index[eb] if eb is not None and euk_virus(v) else '', euk_rho=round(float(rho[eb]), 2) if eb is not None and euk_virus(v) else np.nan))
 H = pd.DataFrame(rows).set_index('votu').join(R[['cls', 'length', 'checkv_quality', 'oil_2024-25', 'ctl_2024-25', 'oil_2025-26', 'ctl_2025-26', 'baci_2025-26']])
 H.to_csv(V + 'out/votu_hosts.tsv', sep='\t')
 pd.set_option('display.width', 280); pd.set_option('display.max_colwidth', 45)

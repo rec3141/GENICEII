@@ -1,13 +1,12 @@
 group	status	network_ok	bp	contigs	gc	tiara_euk	who_euk	tsne_rms	taxonomy_hint	rrna18S	expr_ppm_median	baci_2025	ice_vs_water_log2	note	parts
 E01	little CMO RNA	False	45673127	8207	46.9	0.966	0.998	3.9		Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (1); SAR > Rhizaria > Cercozoa > Thecofilosea > Incertae Sedis (1)	1.1	-0.65	-0.29	unchanged	EUK02a
 E02	network	True	36080223	3688	49.3	0.985	0.82	6.1	Ochromonadales	SAR > Stramenopiles > Ochrophyta > Chrysophyceae > Ochromonadales (3)	586.9	2.29	-0.97	unchanged	EUK03a
-E03	network	True	32357907	2640	44.6	0.998	0.945	5.4			1127.6	0.35	1.49	unchanged	EUK07
+E03	network	True	24800862	1935	45.0	0.999	0.937	2.7			983.4	0.33	1.48	unchanged; split into 2 (Ashman D 3.96)	EUK07
 E04	network	True	31988286	5941	46.8	0.998	0.961	4.9		SAR > Rhizaria > Cercozoa > Novel Clade 2 > uncultured eukaryote (12); Amorphea > Obazoa > Opisthokonta > Nucletmycea > Fungi (5); Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (4); Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa (3)	8261.2	-5.56	3.05	unchanged	EUK05
 E05	network	True	75126070	8758	40.2	0.978	0.848	3.8			959.3	-3.07	-1.79	grew 27.9 -> 75.1 Mbp	EUK04
 E06	network	True	23241522	3667	52.7	0.986	0.866	4.6		Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (1); SAR > Alveolata > Ciliophora > Intramacronucleata > Conthreep (1)	517.7	1.49	-0.64	unchanged	EUK03b
 E07	network	True	23038982	3102	51.3	0.976	0.687	3.2		Archaeplastida > Chloroplastida > Chlorophyta > Clade VII > Subclade A (1); Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa (1)	235.2	-1.27	-1.44	unchanged	EUK08
 E08	doubtful	False	21798136	4151	44.2	0.509	0.818	2.4			27.8	-0.69	0.1	unchanged	EUK06
-E09	doubtful	False	19087886	1920	42.9	0.531	0.024	1.9			171.1	-3.25	-0.97	unchanged	EUK09
 E10	little CMO RNA	False	12615010	2551	37.3	0.956	0.96	3.8		Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa (1)	0.4	0.17	-0.39	unchanged	EUK02b
 E12	little CMO RNA	False	4892890	1410	36.4	0.997	1.0	3.7			0.0	0.0	0.0	unchanged	EUK13
 E13	network	True	4025007	524	53.9	0.995	0.556	3.4			57.9	1.12	2.04	unchanged	EUK03c
@@ -20,3 +19,10 @@ E21	doubtful	False	144781420	31382	49.0	0.959	0.78	20.4		SAR > Stramenopiles > O
 E22	doubtful	False	15603651	1233	59.1	0.892	0.257	1.2		SAR > Alveolata > Ciliophora > Intramacronucleata > Spirotrichea (1)	293.7	-1.27	-0.46	new	EUK10
 E23	network	True	13353601	1015	48.3	0.995	0.266	1.1			378.7	-3.11	-1.62	new	EUK12
 E24	doubtful	False	251619	66	47.1	0.883	0.665	5.3			0.0	0.85	-0.14	new	EUK11
+E31	network	True	7557045	705	43.2	0.995	0.973	4.4			140.5	0.38	1.55	split from E03 (Ashman D 3.96, 10.3 units apart)	EUK07
+E25	network	True	7497126	670	58.0	0.99	0.215	0.7			583.4			kernel blob B03 at (57,-47)	B03
+E26	<4 Mbp	False	3440016	318	47.3	1.0	0.775	1.0			34.0			kernel blob B05 at (19,-30)	B05
+E27	network	True	5048732	617	46.3	0.996	0.979	1.8			162.9			kernel blob B06 at (9,-48)	B06
+E28	network	True	5010776	899	46.5	0.953	0.635	1.0			12.5			kernel blob B07 at (14,-58)	B07
+E29	network	True	7016070	345	41.4	0.996	1.0	1.7			1503.1			kernel blob B08 at (-3,-53)	B08
+E30	network	True	23403474	674	42.9	1.0	0.92	1.6			126.6			kernel blob B09 at (-2,-38)	B09

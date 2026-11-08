@@ -10,11 +10,16 @@ Output: data/bin_domain.tsv (bin, bp, n_contigs, frac_*, call, rule, euk_group)
 Eukaryotic genome groups (second layer). DAS Tool keeps almost no eukaryotic bins, so eukaryotic nuclear genomes are
 consolidated separately from the raw binner outputs by euks/mags/scripts, run in this order:
   survey.py (candidate bins = config LIST at its top) -> compact.py (t-SNE density-gap split) -> final.py (footprint merge,
-  stable E## ids against out/v1) -> expr.py (contig-read expression) -> finalize.py (wiring tables + figure).
+  split rule, stable ids) -> expr.py (contig-read expression) -> finalize.py (wiring tables) -> kernel.py (expression/coverage
+  kernel blobs) -> da.py (per-blob RNA/DNA differential abundance) -> register_blobs.py (blobs -> new E##/V##) -> plot.py.
+  Ids come from one registry (euks/mags/out/id_registry.tsv); groups >= 50% geNomad-viral get V## ids and are kept out of
+  the eukaryotic tables.
 This script copies their wiring tables into data/:
   data/euk_groups.tsv          one row per E## group (status network / little CMO RNA / doubtful, network_ok, purity, taxonomy hint)
   data/contig_euk_group.tsv.gz contig -> euk_group (+ Tiara call); one group per contig (contigs shared by two overlapping
                                groups go to the larger group, as in euks/mags finalize)
+  data/virus_groups.tsv        one row per V## virus group (from the same pipeline)
+  data/contig_virus_group.tsv.gz contig -> V##
 and adds bin_domain.tsv:euk_group = the E## group holding >= 50% of a eukaryote bin's bp (e.g. comebin_3937 -> E05).
 scripts/common.py (euk_group, euk_group_info, euk_group_label, contig_host_label, special_label) reads these."""
 import os
@@ -51,6 +56,11 @@ share = eg.groupby(['bin', 'euk_group']).length.sum().div(bp, level='bin').reset
 share = share.sort_values('share', ascending=False).drop_duplicates('bin')
 D['euk_group'] = share[share.share >= 0.5].set_index('bin').euk_group.reindex(D.index)
 D.loc[D.call != 'eukaryote', 'euk_group'] = np.nan
+VG = pd.read_csv(EM + 'virus_groups.tsv', sep='\t')
+VG.to_csv(DD + 'virus_groups.tsv', sep='\t', index=False)
+CV = pd.read_csv(EM + 'contig_virus_group.tsv', sep='\t').drop_duplicates('contig')
+CV[['contig', 'vid', 'tiara']].to_csv(DD + 'contig_virus_group.tsv.gz', sep='\t', index=False, compression='gzip')
+print('virus groups:', list(VG.vid), '| contigs:', len(CV), '| contigs in both a virus and a euk group:', len(set(CV.contig) & set(CE.contig)))
 D.sort_index().to_csv(OUT, sep='\t', index_label='bin')
 print('eukaryote bins -> groups:', D.euk_group.dropna().to_dict(), '| groups:', len(EG), '| contigs in groups:', len(CE))
 print(D.call.value_counts().to_dict())

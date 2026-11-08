@@ -42,7 +42,7 @@ function virusesSec(sec) {
     <li><b>The phage-shock signal is not phage-driven.</b> The UBA9145 MAG behind the psp response carries no prophage and no filamentous-phage genes, and Inoviridae (Faserviricetes) transcripts are near zero in the diesel pool. Envelope stress from hydrocarbons remains the simpler explanation.</li>
     <li><b>Ice is not a viral hotspot.</b> Tailed-phage transcripts are slightly lower in ice than in the water beneath it (higher in ice in only 6 of 23 same-day pairs) and lower in the cold, salty top ice than at the bottom (2 of 13 pairs). Giant viruses and virophages show no consistent difference.</li>
     <li><b>No convincing prophage induction.</b> The provirus regions whose transcripts rise in the diesel pool express host-like genes at their edges (sugar and EPS genes, partitioning and transposition genes), not phage structural genes.</li>`));
-  vrDNA(sec, J); vrActivity(sec, J); vrDiversity(sec, J); vrPairs(sec, J); vrHosts(sec, J); vrProphage(sec, J); vrIce(sec, J); vrConc(sec, J);
+  vrDNA(sec, J); vrActivity(sec, J); vrDiversity(sec, J); vrPairs(sec, J); vrHosts(sec, J); vrGroups(sec, J); vrProphage(sec, J); vrIce(sec, J); vrConc(sec, J);
 }
 
 function vrDNA(sec, J) {
@@ -111,6 +111,28 @@ function vrHosts(sec, J) {
   const H = J.hosts.slice().sort((a, b) => Math.max(b['oil_2024-25'] || 0, b['oil_2025-26'] || 0) - Math.max(a['oil_2024-25'] || 0, a['oil_2025-26'] || 0));
   box.innerHTML = `<div class="tablewrap" style="max-height:420px"><table><thead><tr><th>vOTU</th><th>Class</th><th class="num">kb</th><th>CheckV</th><th class="num">24-25 diesel</th><th class="num">24-25 ctl</th><th class="num">25-26 diesel</th><th class="num">25-26 ctl</th><th class="num">BACI 25-26</th><th>Host candidate (ρ)</th></tr></thead><tbody>${
     H.map(h => `<tr><td class="mono">${h.votu}</td><td>${h.cls || ''}</td><td class="num">${h.length ? d3.format('.1f')(h.length / 1000) : ''}</td><td>${h.checkv_quality || ''}</td>${['oil_2024-25', 'ctl_2024-25', 'oil_2025-26', 'ctl_2025-26'].map(k => `<td class="num">${h[k] == null ? '–' : fmt1(h[k])}</td>`).join('')}<td class="num">${h['baci_2025-26'] == null ? '–' : `<span class="pill ${h['baci_2025-26'] > 0 ? 'up' : 'down'}">${vrSgn(h['baci_2025-26'])}</span>`}</td><td>${h.host1} (${h.rho1})</td></tr>`).join('')}</tbody></table></div>`;
+}
+
+function vrGroups(sec, J) {
+  const V = J.virus_groups || []; if (!V.length) return;
+  sec.append(el('h3', {}, 'Large viral genome groups'));
+  sec.append(el('p', { class: 'kicker' }, `The eukaryotic-genome binning (Eukaryotes page) also turns up ${V.length} large groups of contigs that are mostly viral by geNomad: compact on the contig map, they are kept as virus groups (V##) rather than eukaryotes. V01 was first grouped as eukaryote E09; V02 was found by the expression/coverage kernel. ${(() => { const o = V.filter(v => (v.organelle || 0) >= 0.5); return o.length ? `Caution: ${o.map(v => v.id).join(', ')} ${o.length > 1 ? 'are' : 'is'} mostly plastid/organelle DNA by Tiara (${o.map(v => d3.format('.0%')(v.organelle)).join(', ')} of length), lies on plastid MAGs and carries photosystem and RuBisCO genes, so it is more likely algal plastid DNA that geNomad reads as viral than a virus.` : ''; })()} V01 (19 Mbp, almost entirely viral by geNomad and not organelle) is the better candidate for a giant virus. Expression is the share of reads on the group’s contigs per million contig-assigned reads. Differential abundance: log₂, tested per library with BH correction; * q < 0.05, ** < 0.01, *** < 0.001.`));
+  const DAC = [['RNA', 'diesel_vs_control_2024-25', 'RNA diesel ÷ ctl 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'RNA diesel ÷ ctl 25-26'], ['RNA', 'baci_2025-26_SW', 'RNA BACI 25-26'],
+               ['RNA', 'ice_vs_water', 'RNA ice ÷ water'], ['DNA', 'diesel_vs_control_2024-25', 'DNA diesel ÷ ctl 24-25'], ['DNA', 'ice_vs_water', 'DNA ice ÷ water']];
+  const star = q => q == null ? '' : q < 0.001 ? '***' : q < 0.01 ? '**' : q < 0.05 ? '*' : '';
+  const box = fig(sec, 'Viral genome groups', 'Size and GC of the group’s contigs; viral = share of its length called viral by geNomad; organelle = share Tiara calls plastid/organelle; median = reads per million over all pool libraries. Hover a cell for its q.');
+  box.innerHTML = `<div class="tablewrap"><table><thead><tr><th>Group</th><th class="num">Size</th><th class="num">GC</th><th class="num">viral</th><th class="num">organelle</th><th class="num">median</th>${DAC.map(c => `<th class="num">${c[2]}</th>`).join('')}<th>Origin</th></tr></thead><tbody>${
+    V.map(v => `<tr><td><b>${v.id}</b></td><td class="num">${d3.format('.1f')(v.mbp)} Mbp, ${fmt(v.contigs)} contigs</td><td class="num">${v.gc ?? '–'}</td><td class="num">${v.viral == null ? '–' : d3.format('.0%')(v.viral)}</td><td class="num">${v.organelle == null ? '–' : d3.format('.0%')(v.organelle)}</td><td class="num">${v.median == null ? '–' : fmt(v.median)}</td>${
+      DAC.map(c => { const x = v.da[c[0] + '|' + c[1]]; return x ? `<td class="num" title="q = ${x[1]}">${vrSgn(x[0])}${star(x[1])}</td>` : '<td class="num">–</td>'; }).join('')}<td style="font-size:12px;color:var(--ink-2)">${v.note}</td></tr>`).join('')}</tbody></table></div>`;
+  const c = el('div', { class: 'controls' }); sec.append(c);
+  const sel = el('select', { id: 'vrvg', 'aria-label': 'Viral genome group' }); V.forEach(v => sel.append(new Option(`Virus ${v.id}`, v.id))); c.append(el('label', { for: 'vrvg' }, 'Viral group'), sel);
+  const v2 = el('div'); sec.append(v2);
+  function draw() { v2.innerHTML = ''; const v = V.find(x => x.id === sel.value);
+    const b = fig(v2, `${v.id}: reads per million`, 'Reads on the group’s contigs per million contig-assigned reads; lines join per-day means of replicate libraries.');
+    legendPools(b.parentNode.insertBefore(el('div'), b));
+    const rows = J.vg_samples.map((s, i) => ({ ...s, v: v.expr[i] })).filter(r => ['CTL', 'EXP'].includes(r.pool) && ['SW', 'SI'].includes(r.medium));
+    timecourse(b, vrSeries(rows, r => r.v), { ylab: 'per million', unit: 'per million', h: 190, floor: 1 }); }
+  sel.onchange = draw; draw();
 }
 
 function vrProphage(sec, J) {

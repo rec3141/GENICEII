@@ -47,7 +47,8 @@ J['plastids'] = sorted(pl, key=lambda d: -d['mean'])
 # expr -> finalize) and copied into data/ by scripts/bin_domains.py. Expression = reads on the group's contigs per million
 # contig-assigned reads (any read on the contig, so intron-containing genes count), from euks/mags/out/group_expr_samples.tsv.
 EG = pd.read_csv(D + 'euk_groups.tsv', sep='\t', keep_default_na=False)
-GX = pd.read_csv(E0 + 'euks/mags/out/group_expr_samples.tsv', sep='\t', index_col=0)
+GX = group_expression()          # E## and V## x libraries (common.py: expr.py groups + kernel-blob groups)
+DA = group_da()                  # per-group RNA/DNA differential abundance (da.py, via blob_registry)
 BD = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0)
 dbin = {g: [b.replace('dastool-', '') for b in BD.index[BD.get('euk_group', pd.Series(dtype=str)).reindex(BD.index) == g]] for g in EG.group}
 core_all = m[m.group.isin(['CTL', 'EXP']) & m.medium.isin(['SW', 'SI'])]
@@ -55,9 +56,11 @@ eg = []
 for x in EG.itertuples():
     d = {'id': x.group, 'label': euk_group_label(x.group), 'status': x.status, 'network': str(x.network_ok) == 'True', 'mbp': r(x.bp / 1e6, 1),
          'contigs': int(x.contigs), 'gc': r(x.gc, 1), 'tiara': r(x.tiara_euk, 2), 'who': r(float(x.who_euk), 2) if str(x.who_euk) not in ('', 'nan') else None,
-         'rms': r(x.tsne_rms, 1), 'hint': x.taxonomy_hint, 'parts': x.parts, 'dastool': dbin.get(x.group, []),
+         'rms': r(x.tsne_rms, 1), 'hint': x.taxonomy_hint, 'parts': x.parts, 'note': x.note, 'dastool': dbin.get(x.group, []),
          'baci25': r(float(x.baci_2025), 2) if str(x.baci_2025) not in ('', 'nan') else None,
          'ice': r(float(x.ice_vs_water_log2), 2) if str(x.ice_vs_water_log2) not in ('', 'nan') else None}
+    a = DA[DA.group == x.group]
+    if len(a): d['da'] = {f'{y.data}|{y.contrast}': [r(y.log2_effect, 2), r(y.q, 4)] for y in a.itertuples()}
     if x.group in GX.index:
         v = GX.loc[x.group].reindex(S)
         for s_, k in (('2024-25', '24'), ('2025-26', '25')):
@@ -66,8 +69,11 @@ for x in EG.itertuples():
         d['median'] = r(v[core_all.index].median(), 0)
         d['expr'] = [r(t, 1) for t in v]
     eg.append(d)
-order = {'network': 0, 'little CMO RNA': 1, 'doubtful': 2}
+order = {'network': 0, '<4 Mbp': 1, 'little CMO RNA': 2, 'doubtful': 3}
 J['euk_groups'] = sorted(eg, key=lambda d: (order.get(d['status'], 3), -(d.get('median') or 0)))
+J['da_contrasts'] = [['RNA', 'diesel_vs_control_2024-25', 'RNA diesel ÷ control 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'RNA diesel ÷ control 25-26'],
+                     ['RNA', 'baci_2025-26_SW', 'RNA BACI 25-26'], ['RNA', 'ice_vs_water', 'RNA ice ÷ water'],
+                     ['DNA', 'diesel_vs_control_2024-25', 'DNA diesel ÷ control 24-25'], ['DNA', 'ice_vs_water', 'DNA ice ÷ water']]
 # contig-map figure (euks/mags/scripts/finalize.py) -> site/img, palette-compressed for the web
 from PIL import Image
 os.makedirs(E0 + 'site/img', exist_ok=True)

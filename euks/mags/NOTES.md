@@ -93,3 +93,60 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
 - 2026-11-08: the figure has a unit grid (t-SNE 1/2) and a third panel. That panel shows the eukaryotic region with contigs ≥ 2 kb sized by cumulative expression (per-library contig reads per million, summed over the 128 analysed libraries); labels give group totals.
 - Status "low RNA" was renamed "little CMO RNA": the assembly is about 50% non-CMO samples, so this is not a quality flag.
 - Contigs claimed by two groups now go to the larger group. 60 contigs were affected.
+
+## Blob capture, viruses, differential abundance (2026-11-08)
+
+**Run order:** survey → compact → final → expr → finalize → kernel → da → register_blobs → plot.
+
+**`kernel.py`** captures blobs at the user's seed points (config `SEEDS`) with an expression/coverage kernel.
+- **Profiles:** RNA = per-library contig reads per million (128 libraries); DNA = per-sample depth × length share from Grex `mag_marine/mapping/depths.txt` (72 CMO nanopore libraries; 30 of the 102 are not in the table).
+- **Score:** Gaussian spatial kernel (σ 3) × mean Pearson r with the blob's log profile. Members score ≥ 0.5; the profile is recomputed until membership is stable.
+- **Why not density alone:** pure density clustering (DBSCAN, HDBSCAN) either merges the whole eukaryotic region or splits blobs (see `seeds_hdbscan.png`).
+
+**`da.py`** runs per-blob DA in RNA and DNA.
+- Contrasts: diesel vs control after dosing, per season; BACI 2025-26 seawater; ice vs water, paired.
+- BH correction within each contrast × data type.
+- DNA has no 2025-26 diesel-vs-control or BACI test: the control pool's nanopore libraries stop at day 3.
+
+**`register_blobs.py`** is the rule for turning blobs into new E##/V## groups.
+- Diffuse = surrounding Tiara-eukarya contigs outweigh the blob AND follow its profile (median r ≥ 0.6).
+- Results:
+  - New eukaryotic groups E25–E30.
+  - V02 (new virus, (−48, −28)).
+  - B01 = E22; B10 = V01.
+  - B04 is a fragment.
+  - B02 and B11 are prokaryotic (B11 = `comebin_277`).
+
+**Viruses:** groups with ≥ 50% of bp geNomad 'Viruses' get V## IDs (`virus_ids.tsv`) and are kept out of the eukaryotic tables. E09 became V01.
+
+## Split rule and shared ID registry (2026-11-08)
+
+**`scripts/eukshared.py`** holds two shared pieces.
+- **Split rule (`split_parts`):** a group splits into the two parts of a 2-component GMM on contig t-SNE coordinates when all of these hold:
+  - Ashman's D > 3;
+  - the centres are > 5 units apart;
+  - the minor part is ≥ 2 Mbp and ≥ 10% of the group.
+- **ID allocator:** one allocator, `out/id_registry.tsv`, keyed by `split:<parent>:<k>`, `blob:<seed>` and `group:<refined group>`.
+  - Used by `final.py` (splits and new groups) and `register_blobs.py` (blobs; the split test also runs there).
+  - IDs are stable across reruns.
+
+**Effect on current groups:** only E03 split.
+- E03 (24.8 Mbp, the larger lobe) and E31 (7.6 Mbp, "split from E03", centres 10.3 units apart). Both lobes are 100% `comebin_4527`.
+- Kernel blobs have D 1.9–3.7 but are compact (centres < 5 units apart), so none split.
+- E21 has D 2.7 and stays whole.
+
+## Site wiring after the split, blob and virus update (2026-11-08)
+- **New data tables:** `scripts/bin_domains.py` now also writes `data/virus_groups.tsv` and `data/contig_virus_group.tsv.gz`.
+- **New helpers in `common.py`:**
+  - `virus_group`, `virus_group_label` ("Virus V02"), `is_virus_group`;
+  - `group_expression()`: E## and V## × libraries from `group_expr_samples.tsv`. IDs are renamed via `virus_ids.tsv`, and kernel-blob groups use the blob's RNA abundance through `blob_registry.tsv`;
+  - `group_da()`: per-group DA from `da_blobs.tsv` through `blob_registry.tsv`.
+  - `contig_host_label` labels V## contigs "Virus V##" before checking eukaryotic groups.
+- **`comebin_4527` → E03:** it holds 77% of the bin's bp.
+- **V02 is probably plastid DNA, not a virus:**
+  - 98.7% of its 4.95 Mbp is Tiara organelle;
+  - its contigs sit in the plastid MAGs `metabat_1683`, `lorbin_892`, `metabat_11799`, `lorbin_663` and others;
+  - Kaiju and 16S say Cyanobacteriota;
+  - it carries psbA/D, psaA/B, petB/D and rbcL: on the Light page "Virus V02" hosts 15–30% of those transcripts.
+  - geNomad calls 78% of it viral ("Heunggongvirae"). The V## rule (≥ 50% geNomad viral) should probably exclude groups that are ≥ 50% Tiara organelle.
+- **Viruses page:** shows an organelle column and a caution for V02.

@@ -277,17 +277,22 @@ The count matrices on disk keep all 130 columns; `all_samples()` lists them.
 | 2025-26 contrasts | unchanged (no 2025-26 libraries removed) |
 
 ## Eukaryotic genome groups (2026-11-08)
-DAS Tool and Binette lose most eukaryotic genomes: the 10 Mbp Binette cap, DAS Tool's prokaryotic single-copy-gene scoring, and no eukaryote-aware QC or taxonomy. See danaSeq #129. So the eukaryotic genomes are rebuilt from the individual binners' bins with a fixed rule.
-- **Rule** (`euks/mags/scripts`: survey → compact → final → expr → finalize):
+DAS Tool and Binette lose most eukaryotic genomes: the 10 Mbp Binette cap, DAS Tool's prokaryotic single-copy-gene scoring, and no eukaryote-aware QC or taxonomy. See danaSeq #129. So the eukaryotic genomes are rebuilt from the individual binners' bins with fixed rules.
+- **Run order** (`euks/mags/scripts`, details in `euks/mags/NOTES.md`): survey → compact → final → expr → finalize → kernel → da → register_blobs → plot.
+- **Rules:**
   - join bins that share ≥ 50% of the smaller bin;
   - split groups at density gaps on the contig t-SNE;
   - attach small nearby pieces whose GC matches;
-  - merge genomes that sit on top of each other.
-- **Result:** 21 groups, E01–E24.
-  - 8 clean and expressed: E02, E03, E04, E05, E06, E07, E13, E23.
-  - 8 clean but with little CMO RNA: their reads come mostly from the non-CMO samples of the coassembly. They are left out of the CMO network only.
-  - 5 doubtful.
-- **Labels:** `scripts/bin_domains.py` puts the groups into `data/`, and `common.py` (`euk_group`, `euk_group_label`, `contig_host_label`, `special_label`) labels them across the site. Unbinned contigs in a group are now labelled with the group instead of a Kaiju guess (Kaiju has no eukaryotes). `comebin_3937` is E05 and `comebin_4527` is E03.
-- **Eukaryotes page:** a genome-group table, the contig-map figure (`site/img/euk_groups_tsne.png`) and time courses.
-- **Viruses page:** eukaryotic genome groups are candidate hosts for vOTUs. Giant virus and virophage panels use the best-correlated group.
-- Details are in `euks/mags/NOTES.md`.
+  - merge genomes that sit on top of each other;
+  - split a group into two lobes when a 2-component GMM clears Ashman's D > 3 (E03 → E03 + E31);
+  - add compact blobs found by an expression/coverage kernel (E25–E30);
+  - give groups ≥ 50% geNomad-viral a V## ID (V01 = old E09, plus V02).
+- **IDs:** all come from `euks/mags/out/id_registry.tsv`.
+- **Result:** 27 eukaryotic groups (14 clean and expressed: E02–E07, E13, E23, E25, E27–E31; 1 clean under 4 Mbp, 8 clean with little CMO RNA, 4 doubtful) and 2 virus groups.
+- **V02 caution:** V02 is 99% Tiara organelle, sits on plastid MAGs and carries photosystem genes. It is probably plastid DNA misread as viral, and the Viruses page says so.
+- **Shared code:**
+  - `scripts/bin_domains.py` copies the tables to `data/` (`euk_groups.tsv`, `contig_euk_group.tsv.gz`, `virus_groups.tsv`, `contig_virus_group.tsv.gz`).
+  - `common.py` provides `euk_group`, `euk_group_label`, `virus_group`, `virus_group_label`, `contig_host_label`, `group_expression` and `group_da`.
+  - V## contigs are labelled as viruses, not hosts.
+- **Eukaryotes page:** all groups, the contig-map figure, time courses, and RNA/DNA differential-abundance columns for the kernel-found groups.
+- **Viruses page:** a viral-group section (V01, V02). Giant viruses and virophages get the best-correlated eukaryotic group as host; for both panels that is still E07.

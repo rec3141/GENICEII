@@ -4,6 +4,8 @@ out/euk_groups.tsv       : group summary with compactness, purity, taxonomy hint
    network_ok = Tiara-eukarya purity >= 0.9 AND >= 4 Mbp AND median contig-read share >= 10 per million (core libraries)
    AND t-SNE RMS radius <= 12 (single compact genome; clean eukaryotic genomes here are 3-6, diffuse multi-genome groups ~20).
    taxonomy_hint = lowest SILVA 18S rank shared by >= 2/3 of the group's 18S hits (>= 2 hits), else '' (no confident hint).
+out/virus_groups.tsv, out/contig_virus_group.tsv: groups that are >= 50% geNomad-viral get V## IDs (out/virus_ids.tsv) and are
+   kept out of the eukaryotic tables.
 out/euk_groups_tsne.png  : all contigs light grey; groups coloured (colour-blind-safe Okabe-Ito + Tol muted); doubtful groups
    (network_ok False) as hollow grey outlines; unbinned Tiara-eukarya contigs >= 5 kb as small dark-grey dots; zoom panel."""
 import pandas as pd, numpy as np
@@ -21,7 +23,6 @@ for _, b in listed.iterrows():
     for c in T.index[T[COL[b.binner]] == b.bin]: src.setdefault(c, []).append(b.bin)
 CE['source_bins'] = CE.contig.map(lambda c: ','.join(src.get(c, [])))
 CE['tiara'] = T.tiara.reindex(CE.contig).fillna('').values; CE['gc'] = T.gc.reindex(CE.contig).values; CE['length'] = T.length.reindex(CE.contig).values
-CE[['contig', 'euk_group', 'source_bins', 'tiara', 'gc', 'length']].to_csv(O + 'contig_euk_group.tsv', sep='\t', index=False)
 # taxonomy hint from 18S hits
 RANKS = ['rrna_phylum', 'rrna_class', 'rrna_order', 'rrna_family', 'rrna_genus']
 def hint(ids):
@@ -46,7 +47,21 @@ for _, x in G.iterrows():
                      baci_2025=round(e.get('baci_2025-26'), 2) if e is not None else np.nan, ice_vs_water_log2=round(e.get('ice_vs_water_log2'), 2) if e is not None else np.nan,
                      status='network' if ok else ('doubtful' if (x.tiara_euk < 0.9 or x.rms > 12) else ('little CMO RNA' if expr < 10 else '<4 Mbp')),
                      network_ok=ok))
-S = pd.DataFrame(rows); S.to_csv(O + 'euk_groups.tsv', sep='\t', index=False)
+S = pd.DataFrame(rows)
+# viral groups: >= 50% of bp geNomad 'Viruses' -> V## (stable via out/virus_ids.tsv), kept aside from the eukaryotic tables
+S['virus_bp'] = [T.length.reindex(CE.contig[CE.euk_group == g]).where(T.genomad_domain.reindex(CE.contig[CE.euk_group == g]).eq('Viruses').values, 0).sum() /
+                 T.length.reindex(CE.contig[CE.euk_group == g]).sum() for g in S.group]
+import os
+VID = pd.read_csv(O + 'virus_ids.tsv', sep='\t').set_index('from_group').vid.to_dict() if os.path.exists(O + 'virus_ids.tsv') else {}
+for g in S.group[S.virus_bp >= 0.5]:
+    if g not in VID: VID[g] = f'V{len(VID) + 1:02d}'
+pd.DataFrame({'from_group': list(VID), 'vid': list(VID.values())}).to_csv(O + 'virus_ids.tsv', sep='\t', index=False)
+V = S[S.group.isin(VID)].copy(); V.insert(0, 'vid', V.group.map(VID)); V['note'] = 'was ' + V.group; V['status'] = 'virus'; V['network_ok'] = False
+V.drop(columns=['group']).to_csv(O + 'virus_groups.tsv', sep='\t', index=False)
+CV = CE[CE.euk_group.isin(VID)].copy(); CV.insert(1, 'vid', CV.euk_group.map(VID)); CV.drop(columns=['euk_group']).to_csv(O + 'contig_virus_group.tsv', sep='\t', index=False)
+S = S[~S.group.isin(VID)]; CE = CE[~CE.euk_group.isin(VID)]
+CE[['contig', 'euk_group', 'source_bins', 'tiara', 'gc', 'length']].to_csv(O + 'contig_euk_group.tsv', sep='\t', index=False)
+S.to_csv(O + 'euk_groups.tsv', sep='\t', index=False)
 # cumulative expression per contig: sum over analysed RNA libraries of contig read share (per million)
 import sys, scipy.io; sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
 from common import samples, all_samples, D as DD

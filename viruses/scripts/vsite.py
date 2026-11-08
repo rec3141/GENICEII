@@ -39,7 +39,7 @@ key = [('contig_0040828', 'dastool-lorbin_722_sub', 'Cycloclasticus phage (2025-
        ('contig_0049668', None, 'Virophage, control pool (2025-26)'), ('contig_0000564', None, 'Giant virus contig (2025-26)')]
 x = m[(m.group != 'other') & (m.medium == 'SW')]
 J['pairs'] = []
-EGX = pd.read_csv('/data/dev/rnaseq-exploration/euks/mags/out/group_expr_samples.tsv', sep='\t', index_col=0)
+EGX = group_expression()
 def host_series(h):
     return EGX.loc[h] if is_euk_group(h) else B.loc[h]
 for v, h, lab in key:
@@ -52,6 +52,20 @@ for v, h, lab in key:
 J['hosts'] = [{'votu': v, **{k: (r(y[k], 1) if isinstance(y[k], (float, np.floating)) else (y[k] if isinstance(y[k], str) else None)) for k in
                ['cls', 'length', 'checkv_quality', 'oil_2024-25', 'ctl_2024-25', 'oil_2025-26', 'ctl_2025-26', 'baci_2025-26', 'host1', 'rho1', 'host2', 'rho2', 'binned']}}
               for v, y in H.iterrows()]
+# large viral genome groups (V##) from the eukaryotic-region binning (euks/mags; >= 50% geNomad-viral)
+VG = pd.read_csv(D + 'virus_groups.tsv', sep='\t', keep_default_na=False); DAv = group_da()
+CVt = pd.read_csv(EM + 'contig_virus_group.tsv', sep='\t')                  # Tiara call per contig: a plastid check on V## groups
+org = (CVt[CVt.tiara == 'organelle'].groupby('vid').length.sum() / CVt.groupby('vid').length.sum()).fillna(0).to_dict()
+xs = m[(m.group != 'other')]
+J['virus_groups'] = []
+for y in VG.itertuples():
+    e = EGX.loc[y.vid] if y.vid in EGX.index else None
+    a = DAv[DAv.group == y.vid]
+    J['virus_groups'].append({'id': y.vid, 'note': y.note, 'mbp': r(y.bp / 1e6, 2), 'contigs': int(y.contigs), 'gc': r(y.gc, 1), 'viral': r(float(y.virus_bp), 2) if str(y.virus_bp) else None, 'organelle': r(org.get(y.vid, 0.0), 2),
+        'median': r(e[[c for c in xs.index if c in e.index]].median(), 0) if e is not None else None,
+        'expr': [r(e.get(c), 1) if e is not None else None for c in U.columns],
+        'da': {f'{z.data}|{z.contrast}': [r(z.log2_effect, 2), r(z.q, 4)] for z in a.itertuples()}})
+J['vg_samples'] = [{'season': m.season[c], 'pool': m.group[c], 'medium': m.medium[c], 'day': None if pd.isna(m.day[c]) else int(m.day[c]), 'name': m.sample_name[c]} for c in U.columns]
 # prophages
 P = pd.read_csv(V + 'out/prophage.tsv', sep='\t', keep_default_na=False)
 for c in P.columns:

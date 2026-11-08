@@ -3,6 +3,9 @@
    and GC differs by <= 2 points.
 2) Uncaptured blobs: Tiara-eukarya contigs >= 3 kb outside all groups, DBSCAN(eps=1.5, min_samples=20 kb-weighted); blobs >= 2 Mbp.
 3) Taxonomy hints: SILVA 18S/16S hits on the contigs, plastid bins overlapping (data/plastid_bins.tsv), sendsketch hits.
+Split rule (eukshared.split_parts): a final group splits into its two 2-component GMM parts when clearly bimodal on the t-SNE
+(Ashman D > 3, centres > 5 units apart, minor part >= 2 Mbp and >= 10%); the larger part keeps the ID, others get IDs from the
+shared registry (out/id_registry.tsv).
 Out: out/euk_groups_final.tsv, out/contig_euk_group.tsv (contig -> group, source), out/uncaptured_blobs.tsv, out/tsne_final.png"""
 import pandas as pd, numpy as np, itertools
 from sklearn.cluster import DBSCAN
@@ -47,31 +50,39 @@ for root, gs in order:
         keep = max(inh, key=lambda e: v1bp[e]); names[root] = keep; used.update(inh)
         newbp = newL; notes[root] = ('merged ' + '+'.join(sorted(inh)) + '; ' if len(inh) > 1 else '') + (f'grew {v1bp[keep] / 1e6:.1f} -> {newbp / 1e6:.1f} Mbp' if newbp > 1.1 * v1bp[keep] else ('shrank' if newbp < 0.9 * v1bp[keep] else 'unchanged')) + (('; absorbed ' + '+'.join(absorbed)) if absorbed else '')
     elif absorbed: notes[root] = 'new; absorbed ' + '+'.join(absorbed); used.update(absorbed)
-nxt = (max([int(e[1:]) for e in v1bp.index], default=0) + 1)
-for root, gs in order:
-    if root not in names: names[root] = f'E{nxt:02d}'; notes.setdefault(root, 'new'); nxt += 1
+import sys; sys.path.insert(0, '/data/dev/rnaseq-exploration/euks/mags/scripts')
+from eukshared import load_ids, save_ids, allocate
+IDS = load_ids()
+for root, gs in order:     # brand-new groups take IDs from the shared registry (key = the refined group they came from)
+    if root not in names: names[root] = allocate(IDS, f'group:{root}', 'E', taken=list(v1bp.index)); notes.setdefault(root, 'new')
 claimed = set()      # a contig claimed by two groups goes to the larger one (order = largest first)
 for k, (root, gs) in enumerate(order, 1):
     ids = sorted(set(sum((grp[g] for g in gs), [])) - claimed); claimed.update(ids)
-    g = T.loc[ids]; L = g.length.sum(); tl = g.length[g.tiara.notna()].sum()
-    name = names[root]
-    r18 = g[g.rrna_domain == 'Eukaryota'][['rrna_phylum', 'rrna_class', 'rrna_order', 'rrna_family', 'rrna_genus']].fillna('')
-    r18 = r18.apply(lambda z: ' > '.join(x for x in z if x), axis=1).value_counts()
-    r16 = g[g.rrna_domain == 'Bacteria'][['rrna_phylum', 'rrna_genus']].fillna('').apply(lambda z: ' > '.join(x for x in z if x), axis=1).value_counts()
-    ss = g[g.sendsketch_domain.notna()][['sendsketch_phylum', 'sendsketch_genus']].fillna('').apply(lambda z: ' '.join(z), axis=1).value_counts()
-    db = g.bin.dropna().value_counts()
-    pb = [b for b in db.index if b in set(pl.bin)]
-    rows.append(dict(group=name, note=notes[root], parts='+'.join(gs), contigs=len(g), bp=int(L), gc=round(np.average(g.gc, weights=g.length), 1), depth_med=round(g.depth.median(), 2),
-                     n50=int(np.sort(g.length.values)[::-1][np.searchsorted(np.cumsum(np.sort(g.length.values)[::-1]), L / 2)]),
-                     tiara_euk=round(g.length[g.tiara == 'eukarya'].sum() / tl, 3) if tl else np.nan, tiara_bac=round(g.length[g.tiara == 'bacteria'].sum() / tl, 3) if tl else np.nan,
-                     tiara_org=round(g.length[g.tiara == 'organelle'].sum() / tl, 3) if tl else np.nan,
-                     who_euk=round(g.length[g.whokaryote == 'eukaryote'].sum() / max(g.length[g.whokaryote.notna()].sum(), 1), 3),
-                     cx=round(np.average(g.tsne_x, weights=g.length), 1), cy=round(np.average(g.tsne_y, weights=g.length), 1),
-                     rms=round(np.sqrt(np.average((g.tsne_x - np.average(g.tsne_x, weights=g.length)) ** 2 + (g.tsne_y - np.average(g.tsne_y, weights=g.length)) ** 2, weights=g.length)), 1),
-                     dastool_bins='; '.join(f'{b.replace("dastool-", "")} {v}' for b, v in db.head(3).items()),
-                     rrna18S='; '.join(f'{t} ({n})' for t, n in r18.head(4).items()), rrna16S='; '.join(f'{t} ({n})' for t, n in r16.head(3).items()),
-                     sendsketch='; '.join(f'{t} ({n})' for t, n in ss.head(3).items()), plastid_bins=','.join(pb)))
-    cmap += [dict(contig=c, euk_group=name, source='binned') for c in ids]
+    from eukshared import split_parts, load_ids, save_ids, allocate
+    parts, sst = split_parts(T.loc[ids])
+    for j, ids in enumerate(parts):
+        g = T.loc[ids]; L = g.length.sum(); tl = g.length[g.tiara.notna()].sum()
+        name = names[root] if j == 0 else allocate(IDS, f'split:{names[root]}:{j + 1}', 'E', taken=list(names.values()) + list(v1bp.index))
+        note_ = notes[root] if j == 0 else f'split from {names[root]} (Ashman D {sst.get("ashman_D")}, {sst.get("sep")} units apart)'
+        if j == 0 and len(parts) > 1: note_ = f'{notes[root]}; split into {len(parts)} (Ashman D {sst.get("ashman_D")})'
+        r18 = g[g.rrna_domain == 'Eukaryota'][['rrna_phylum', 'rrna_class', 'rrna_order', 'rrna_family', 'rrna_genus']].fillna('')
+        r18 = r18.apply(lambda z: ' > '.join(x for x in z if x), axis=1).value_counts()
+        r16 = g[g.rrna_domain == 'Bacteria'][['rrna_phylum', 'rrna_genus']].fillna('').apply(lambda z: ' > '.join(x for x in z if x), axis=1).value_counts()
+        ss = g[g.sendsketch_domain.notna()][['sendsketch_phylum', 'sendsketch_genus']].fillna('').apply(lambda z: ' '.join(z), axis=1).value_counts()
+        db = g.bin.dropna().value_counts()
+        pb = [b for b in db.index if b in set(pl.bin)]
+        rows.append(dict(group=name, note=note_, parts='+'.join(gs), contigs=len(g), bp=int(L), gc=round(np.average(g.gc, weights=g.length), 1), depth_med=round(g.depth.median(), 2),
+                         n50=int(np.sort(g.length.values)[::-1][np.searchsorted(np.cumsum(np.sort(g.length.values)[::-1]), L / 2)]),
+                         tiara_euk=round(g.length[g.tiara == 'eukarya'].sum() / tl, 3) if tl else np.nan, tiara_bac=round(g.length[g.tiara == 'bacteria'].sum() / tl, 3) if tl else np.nan,
+                         tiara_org=round(g.length[g.tiara == 'organelle'].sum() / tl, 3) if tl else np.nan,
+                         who_euk=round(g.length[g.whokaryote == 'eukaryote'].sum() / max(g.length[g.whokaryote.notna()].sum(), 1), 3),
+                         cx=round(np.average(g.tsne_x, weights=g.length), 1), cy=round(np.average(g.tsne_y, weights=g.length), 1),
+                         rms=round(np.sqrt(np.average((g.tsne_x - np.average(g.tsne_x, weights=g.length)) ** 2 + (g.tsne_y - np.average(g.tsne_y, weights=g.length)) ** 2, weights=g.length)), 1),
+                         dastool_bins='; '.join(f'{b.replace("dastool-", "")} {v}' for b, v in db.head(3).items()),
+                         rrna18S='; '.join(f'{t} ({n})' for t, n in r18.head(4).items()), rrna16S='; '.join(f'{t} ({n})' for t, n in r16.head(3).items()),
+                         sendsketch='; '.join(f'{t} ({n})' for t, n in ss.head(3).items()), plastid_bins=','.join(pb)))
+        cmap += [dict(contig=c, euk_group=name, source='binned') for c in ids]
+save_ids(IDS)
 G = pd.DataFrame(rows).sort_values('group'); G.to_csv(O + 'euk_groups_final.tsv', sep='\t', index=False); pd.DataFrame(cmap).to_csv(O + 'contig_euk_group.tsv', sep='\t', index=False)
 # uncaptured eukaryotic blobs
 ing = set(pd.DataFrame(cmap).contig)

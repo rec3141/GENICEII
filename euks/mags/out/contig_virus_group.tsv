@@ -1,0 +1,2256 @@
+contig	vid	source	source_bins	tiara	gc	length
+contig_0001934	V01	binned	comebin_1009	unknown	41.12	191225
+contig_0003243	V01	binned	comebin_1009	unknown	42.46	136861
+contig_0003449	V01	binned	comebin_1009	eukarya	41.64	131303
+contig_0003481	V01	binned	comebin_1009	unknown	43.25	130290
+contig_0005159	V01	binned	comebin_1009	unknown	43.53	99692
+contig_0005820	V01	binned	comebin_1009	unknown	41.5	91854
+contig_0006249	V01	binned	comebin_1009	unknown	40.18	87318
+contig_0007170	V01	binned	comebin_1009	unknown	45.31	79237
+contig_0007345	V01	binned	comebin_1009	unknown	41.25	76226
+contig_0008517	V01	binned	comebin_1009	unknown	42.16	70380
+contig_0008522	V01	binned	comebin_1009	unknown	40.55	70473
+contig_0008688	V01	binned	comebin_1009	unknown	42.61	69255
+contig_0008814	V01	binned	comebin_1009	eukarya	41.85	69192
+contig_0008816	V01	binned	comebin_1009	unknown	41.45	68782
+contig_0008906	V01	binned	comebin_1009	unknown	40.69	68392
+contig_0009304	V01	binned	comebin_1009	unknown	44.13	67620
+contig_0009387	V01	binned	comebin_1009	unknown	45.52	65986
+contig_0009419	V01	binned	comebin_1009	eukarya	40.9	65736
+contig_0009791	V01	binned	comebin_1009	unknown	43.55	63581
+contig_0009943	V01	binned	comebin_1009	eukarya	43.66	63327
+contig_0010308	V01	binned	comebin_1009	eukarya	41.94	62061
+contig_0010318	V01	binned	comebin_1009	eukarya	42.99	62039
+contig_0010339	V01	binned	comebin_1009	unknown	41.93	61596
+contig_0010414	V01	binned	comebin_1009	unknown	41.18	61469
+contig_0010430	V01	binned	comebin_1009	eukarya	40.79	61067
+contig_0010827	V01	binned	comebin_1009	eukarya	44.12	59975
+contig_0011289	V01	binned	comebin_1009	unknown	44.36	57975
+contig_0011559	V01	binned	comebin_1009	eukarya	42.32	57510
+contig_0011703	V01	binned	comebin_1009	eukarya	41.29	56936
+contig_0012366	V01	binned	comebin_1009	unknown	44.7	54934
+contig_0012958	V01	binned	comebin_1009	archaea	41.72	53139
+contig_0013203	V01	binned	comebin_1009	eukarya	38.56	52706
+contig_0013480	V01	binned	comebin_1009	unknown	44.2	51774
+contig_0013682	V01	binned	comebin_1009	eukarya	42.38	50798
+contig_0014023	V01	binned	comebin_1009	unknown	40.36	50188
+contig_0014051	V01	binned	comebin_1009	unknown	43.31	50162
+contig_0014088	V01	binned	comebin_1009	eukarya	41.06	49946
+contig_0014378	V01	binned	comebin_1009	unknown	44.75	49916
+contig_0014721	V01	binned	comebin_1009	archaea	39.63	49338
+contig_0014839	V01	binned	comebin_1009	archaea	43.58	48429
+contig_0015520	V01	binned	comebin_1009	archaea	45.4	47128
+contig_0016467	V01	binned	comebin_1009	unknown	44.19	45367
+contig_0016833	V01	binned	comebin_1009	eukarya	44.99	44888
+contig_0016845	V01	binned	comebin_1009	unknown	42.19	44808
+contig_0017437	V01	binned	comebin_1009	eukarya	42.29	43779
+contig_0017511	V01	binned	comebin_1009	prokarya	40.38	43172
+contig_0017839	V01	binned	comebin_1009	eukarya	43.44	43081
+contig_0017898	V01	binned	comebin_1009	eukarya	41.42	43042
+contig_0018189	V01	binned	comebin_1009	eukarya	45.63	42661
+contig_0018785	V01	binned	comebin_1009	eukarya	40.83	41864
+contig_0019406	V01	binned	comebin_1009	unknown	41.31	40889
+contig_0019497	V01	binned	comebin_1009	unknown	41.21	40827
+contig_0019537	V01	binned	comebin_1009	unknown	42.05	41011
+contig_0019881	V01	binned	comebin_1009	eukarya	44.24	40558
+contig_0019893	V01	binned	comebin_1009	unknown	41.17	40234
+contig_0020059	V01	binned	comebin_1009	unknown	42.7	39259
+contig_0020125	V01	binned	comebin_1009	eukarya	41.25	40336
+contig_0020446	V01	binned	comebin_1009	eukarya	42.04	39113
+contig_0020850	V01	binned	comebin_1009	unknown	43.26	39014
+contig_0020978	V01	binned	comebin_1009	archaea	41.06	38328
+contig_0021512	V01	binned	comebin_1009	eukarya	42.47	38270
+contig_0021544	V01	binned	comebin_1009	unknown	42.48	38254
+contig_0021726	V01	binned	comebin_1009	unknown	41.8	37844
+contig_0021924	V01	binned	comebin_1009	eukarya	44.29	37637
+contig_0022000	V01	binned	comebin_1009	eukarya	40.76	37705
+contig_0022272	V01	binned	comebin_1009	unknown	42.89	37575
+contig_0022514	V01	binned	comebin_1009	unknown	41.55	37154
+contig_0022779	V01	binned	comebin_1009	unknown	42.97	36555
+contig_0023830	V01	binned	comebin_1009	unknown	43.72	36023
+contig_0024125	V01	binned	comebin_1009	archaea	41.24	34763
+contig_0025174	V01	binned	comebin_1009	unknown	42.4	35058
+contig_0025450	V01	binned	comebin_1009	unknown	41.24	34701
+contig_0026477	V01	binned	comebin_1009	prokarya	41.36	33970
+contig_0026673	V01	binned	comebin_1009	unknown	42.88	33627
+contig_0027305	V01	binned	comebin_1009	unknown	41.18	33079
+contig_0027582	V01	binned	comebin_1009	archaea	40.07	32874
+contig_0027914	V01	binned	comebin_1009	unknown	43.96	32498
+contig_0028133	V01	binned	comebin_1009	eukarya	42.68	31468
+contig_0028258	V01	binned	comebin_1009	eukarya	41.39	32217
+contig_0028324	V01	binned	comebin_1009	archaea	42.43	32252
+contig_0028509	V01	binned	comebin_1009	eukarya	45.09	32223
+contig_0028740	V01	binned	comebin_1009	eukarya	43.35	31980
+contig_0028755	V01	binned	comebin_1009	unknown	43.7	32028
+contig_0029419	V01	binned	comebin_1009	archaea	42.14	30845
+contig_0029608	V01	binned	comebin_1009	eukarya	43.11	31933
+contig_0030709	V01	binned	comebin_1009	eukarya	48.29	30779
+contig_0031074	V01	binned	comebin_1009	archaea	46.6	30236
+contig_0031077	V01	binned	comebin_1009	eukarya	43.13	30110
+contig_0031369	V01	binned	comebin_1009	unknown	43.58	30705
+contig_0031716	V01	binned	comebin_1009	eukarya	42.67	30119
+contig_0031879	V01	binned	comebin_1009	unknown	49.04	29976
+contig_0032048	V01	binned	comebin_1009	eukarya	43.04	29410
+contig_0032120	V01	binned	comebin_1009	unknown	42.23	29859
+contig_0032309	V01	binned	comebin_1009	eukarya	40.64	29774
+contig_0032360	V01	binned	comebin_1009	unknown	44.26	29692
+contig_0032400	V01	binned	comebin_1009	archaea	41.87	29665
+contig_0032476	V01	binned	comebin_1009	eukarya	40.02	29600
+contig_0032505	V01	binned	comebin_1009	eukarya	44.51	29620
+contig_0032739	V01	binned	comebin_1009	eukarya	41.96	29671
+contig_0032865	V01	binned	comebin_1009	unknown	41.48	29675
+contig_0032876	V01	binned	comebin_1009	eukarya	41.04	29395
+contig_0032930	V01	binned	comebin_1009	unknown	40.12	29419
+contig_0032937	V01	binned	comebin_1009	eukarya	40.29	29369
+contig_0032957	V01	binned	comebin_1009	archaea	42.72	29621
+contig_0033254	V01	binned	comebin_1009	eukarya	42.62	29198
+contig_0034052	V01	binned	comebin_1009	unknown	43.27	28802
+contig_0034872	V01	binned	comebin_1009	eukarya	39.88	28346
+contig_0035070	V01	binned	comebin_1009	eukarya	41.93	28182
+contig_0035154	V01	binned	comebin_1009	eukarya	44.3	27395
+contig_0035237	V01	binned	comebin_1009	eukarya	41.21	28095
+contig_0035965	V01	binned	comebin_1009	eukarya	43.59	28085
+contig_0036304	V01	binned	comebin_1009	unknown	43.42	27632
+contig_0037210	V01	binned	comebin_1009	eukarya	43.21	27020
+contig_0037652	V01	binned	comebin_1009	archaea	42.86	27006
+contig_0037669	V01	binned	comebin_1009	archaea	42.56	26984
+contig_0038213	V01	binned	comebin_1009	unknown	43.19	26774
+contig_0038238	V01	binned	comebin_1009	eukarya	44.64	26830
+contig_0038283	V01	binned	comebin_1009	unknown	44.51	26880
+contig_0038358	V01	binned	comebin_1009	unknown	45.96	27013
+contig_0038390	V01	binned	comebin_1009	eukarya	40.93	26167
+contig_0038502	V01	binned	comebin_1009	archaea	45.85	26637
+contig_0038817	V01	binned	comebin_1009	unknown	41.83	26493
+contig_0038943	V01	binned	comebin_1009	eukarya	44.29	26501
+contig_0038986	V01	binned	comebin_1009	unknown	42.96	26574
+contig_0038996	V01	binned	comebin_1009	eukarya	44.15	26698
+contig_0039126	V01	binned	comebin_1009	eukarya	42.27	26576
+contig_0039291	V01	binned	comebin_1009	eukarya	46.93	26387
+contig_0040210	V01	binned	comebin_1009	unknown	41.8	25317
+contig_0040281	V01	binned	comebin_1009	eukarya	42.39	25797
+contig_0040574	V01	binned	comebin_1009	unknown	40.16	25792
+contig_0041553	V01	binned	comebin_1009	eukarya	42.26	25397
+contig_0041805	V01	binned	comebin_1009	archaea	40.76	25367
+contig_0042702	V01	binned	comebin_1009	unknown	39.73	25115
+contig_0042708	V01	binned	comebin_1009	eukarya	42.92	24480
+contig_0043133	V01	binned	comebin_1009	eukarya	43.57	24762
+contig_0043318	V01	binned	comebin_1009	eukarya	42.89	24836
+contig_0043872	V01	binned	comebin_1009	archaea	44.27	24290
+contig_0044367	V01	binned	comebin_1009	eukarya	42.2	22587
+contig_0045186	V01	binned	comebin_1009	unknown	44.16	24056
+contig_0045466	V01	binned	comebin_1009	eukarya	44.89	23981
+contig_0045912	V01	binned	comebin_1009	unknown	40.39	23569
+contig_0046201	V01	binned	comebin_1009	archaea	42.22	23739
+contig_0046472	V01	binned	comebin_1009	unknown	41.06	23738
+contig_0046684	V01	binned	comebin_1009	archaea	42.07	23543
+contig_0046925	V01	binned	comebin_1009	unknown	42.81	23492
+contig_0046962	V01	binned	comebin_1009	unknown	43.93	23566
+contig_0047056	V01	binned	comebin_1009	eukarya	41.47	23433
+contig_0047182	V01	binned	comebin_1009	eukarya	41.0	23428
+contig_0047282	V01	binned	comebin_1009	unknown	40.19	22825
+contig_0047347	V01	binned	comebin_1009	eukarya	43.45	20865
+contig_0047734	V01	binned	comebin_1009	unknown	40.72	23263
+contig_0047770	V01	binned	comebin_1009	unknown	42.0	23231
+contig_0047902	V01	binned	comebin_1009	eukarya	43.14	23202
+contig_0048041	V01	binned	comebin_1009	unknown	43.95	23063
+contig_0048060	V01	binned	comebin_1009	unknown	44.15	21989
+contig_0048321	V01	binned	comebin_1009	unknown	42.7	23052
+contig_0048483	V01	binned	comebin_1009	eukarya	42.95	23054
+contig_0048579	V01	binned	comebin_1009	eukarya	43.06	23086
+contig_0048586	V01	binned	comebin_1009	unknown	40.04	22972
+contig_0048692	V01	binned	comebin_1009	unknown	40.91	22838
+contig_0049690	V01	binned	comebin_1009	eukarya	45.26	22530
+contig_0049904	V01	binned	comebin_1009	unknown	44.2	19407
+contig_0050004	V01	binned	comebin_1009	eukarya	46.03	22511
+contig_0050271	V01	binned	comebin_1009	unknown	42.98	22457
+contig_0051223	V01	binned	comebin_1009	eukarya	41.93	21752
+contig_0051292	V01	binned	comebin_1009	eukarya	42.57	22370
+contig_0051441	V01	binned	comebin_1009	eukarya	41.66	21560
+contig_0051478	V01	binned	comebin_1009	archaea	48.96	22416
+contig_0051568	V01	binned	comebin_1009	unknown	40.84	21768
+contig_0051691	V01	binned	comebin_1009	eukarya	40.66	21877
+contig_0052055	V01	binned	comebin_1009	archaea	41.32	21536
+contig_0052118	V01	binned	comebin_1009	eukarya	45.84	21966
+contig_0052549	V01	binned	comebin_1009	eukarya	46.12	21594
+contig_0052725	V01	binned	comebin_1009	eukarya	41.35	22378
+contig_0052788	V01	binned	comebin_1009	unknown	39.63	21084
+contig_0052799	V01	binned	comebin_1009	unknown	44.7	21802
+contig_0053160	V01	binned	comebin_1009	eukarya	40.22	21690
+contig_0053310	V01	binned	comebin_1009	archaea	42.84	21671
+contig_0053511	V01	binned	comebin_1009	eukarya	43.42	21570
+contig_0053816	V01	binned	comebin_1009	eukarya	43.89	21351
+contig_0053927	V01	binned	comebin_1009	unknown	41.89	21350
+contig_0054529	V01	binned	comebin_1009	unknown	43.11	21657
+contig_0054595	V01	binned	comebin_1009	eukarya	46.14	20874
+contig_0054659	V01	binned	comebin_1009	eukarya	41.43	21576
+contig_0056037	V01	binned	comebin_1009	eukarya	40.77	21194
+contig_0056246	V01	binned	comebin_1009	unknown	42.83	20887
+contig_0056522	V01	binned	comebin_1009	unknown	43.73	19552
+contig_0056529	V01	binned	comebin_1009	archaea	44.52	20848
+contig_0057739	V01	binned	comebin_1009	eukarya	43.64	20545
+contig_0058726	V01	binned	comebin_1009	eukarya	41.93	20765
+contig_0058825	V01	binned	comebin_1009	archaea	42.45	19381
+contig_0059143	V01	binned	comebin_1009	unknown	41.99	19996
+contig_0059384	V01	binned	comebin_1009	eukarya	39.97	20147
+contig_0059476	V01	binned	comebin_1009	unknown	41.52	20157
+contig_0059712	V01	binned	comebin_1009	eukarya	41.36	19839
+contig_0059871	V01	binned	comebin_1009	eukarya	41.64	20082
+contig_0059979	V01	binned	comebin_1009	eukarya	42.3	20354
+contig_0060122	V01	binned	comebin_1009	eukarya	40.37	20026
+contig_0060626	V01	binned	comebin_1009	eukarya	43.2	19052
+contig_0060718	V01	binned	comebin_1009	eukarya	44.19	19926
+contig_0060840	V01	binned	comebin_1009	archaea	40.74	19943
+contig_0061258	V01	binned	comebin_1009	archaea	44.14	19799
+contig_0062150	V01	binned	comebin_1009	archaea	41.21	19624
+contig_0062191	V01	binned	comebin_1009	unknown	45.42	20074
+contig_0062886	V01	binned	comebin_1009	prokarya	44.21	19547
+contig_0063030	V01	binned	comebin_1009	unknown	41.55	19364
+contig_0063105	V01	binned	comebin_1009	eukarya	42.61	19471
+contig_0063301	V01	binned	comebin_1009	eukarya	43.91	19421
+contig_0063766	V01	binned	comebin_1009	eukarya	41.59	18762
+contig_0063878	V01	binned	comebin_1009	unknown	42.45	19371
+contig_0063957	V01	binned	comebin_1009	eukarya	40.18	19324
+contig_0064242	V01	binned	comebin_1009	eukarya	42.94	19295
+contig_0064464	V01	binned	comebin_1009	eukarya	41.08	19287
+contig_0064605	V01	binned	comebin_1009	eukarya	42.78	19893
+contig_0064768	V01	binned	comebin_1009	eukarya	46.73	19183
+contig_0065475	V01	binned	comebin_1009	unknown	40.6	19015
+contig_0066018	V01	binned	comebin_1009	unknown	41.66	19175
+contig_0066372	V01	binned	comebin_1009	eukarya	43.33	19281
+contig_0066633	V01	binned	comebin_1009	eukarya	43.9	18872
+contig_0067025	V01	binned	comebin_1009	eukarya	47.21	18892
+contig_0067277	V01	binned	comebin_1009	eukarya	43.38	18914
+contig_0067700	V01	binned	comebin_1009	eukarya	43.45	18924
+contig_0068615	V01	binned	comebin_1009	archaea	45.71	18583
+contig_0068963	V01	binned	comebin_1009	archaea	40.21	18505
+contig_0069055	V01	binned	comebin_1009	eukarya	40.92	18552
+contig_0069363	V01	binned	comebin_1009	unknown	43.23	18292
+contig_0069592	V01	binned	comebin_1009	archaea	39.92	18435
+contig_0069958	V01	binned	comebin_1009	archaea	43.75	18511
+contig_0070067	V01	binned	comebin_1009	eukarya	41.47	18355
+contig_0070155	V01	binned	comebin_1009	eukarya	42.94	18469
+contig_0070235	V01	binned	comebin_1009	prokarya	42.41	18285
+contig_0070286	V01	binned	comebin_1009	eukarya	42.73	16556
+contig_0071527	V01	binned	comebin_1009	eukarya	44.24	18028
+contig_0072038	V01	binned	comebin_1009	eukarya	42.4	18084
+contig_0072256	V01	binned	comebin_1009	eukarya	41.2	18076
+contig_0072488	V01	binned	comebin_1009	eukarya	41.86	18027
+contig_0073109	V01	binned	comebin_1009	eukarya	42.81	17922
+contig_0073865	V01	binned	comebin_1009	eukarya	42.24	17806
+contig_0073906	V01	binned	comebin_1009	eukarya	43.52	17897
+contig_0073965	V01	binned	comebin_1009	archaea	39.62	17859
+contig_0073983	V01	binned	comebin_1009	archaea	40.33	17803
+contig_0074126	V01	binned	comebin_1009	eukarya	41.43	17763
+contig_0074330	V01	binned	comebin_1009	eukarya	44.58	17871
+contig_0074359	V01	binned	comebin_1009	unknown	44.19	16218
+contig_0074640	V01	binned	comebin_1009	eukarya	42.13	17119
+contig_0074650	V01	binned	comebin_1009	unknown	42.19	17484
+contig_0074665	V01	binned	comebin_1009	unknown	43.11	17688
+contig_0075027	V01	binned	comebin_1009	eukarya	41.36	17687
+contig_0075376	V01	binned	comebin_1009	eukarya	42.37	17570
+contig_0075666	V01	binned	comebin_1009	eukarya	42.21	17570
+contig_0077102	V01	binned	comebin_1009	eukarya	43.43	17383
+contig_0077683	V01	binned	comebin_1009	eukarya	41.42	17347
+contig_0077818	V01	binned	comebin_1009	unknown	46.72	17296
+contig_0077945	V01	binned	comebin_1009	eukarya	41.85	17255
+contig_0079254	V01	binned	comebin_1009	eukarya	42.6	17130
+contig_0079597	V01	binned	comebin_1009	unknown	43.35	17096
+contig_0079684	V01	binned	comebin_1009	archaea	46.62	17021
+contig_0080641	V01	binned	comebin_1009	eukarya	43.26	17068
+contig_0080804	V01	binned	comebin_1009	eukarya	41.97	16529
+contig_0080887	V01	binned	comebin_1009	eukarya	41.76	16836
+contig_0080929	V01	binned	comebin_1009	eukarya	40.22	16113
+contig_0081380	V01	binned	comebin_1009	eukarya	43.95	17271
+contig_0081617	V01	binned	comebin_1009	archaea	39.24	16823
+contig_0081634	V01	binned	comebin_1009	archaea	44.47	16941
+contig_0081808	V01	binned	comebin_1009	eukarya	43.13	16872
+contig_0082237	V01	binned	comebin_1009	unknown	41.31	16577
+contig_0082556	V01	binned	comebin_1009	unknown	40.87	16727
+contig_0082622	V01	binned	comebin_1009	eukarya	45.64	16828
+contig_0082642	V01	binned	comebin_1009	eukarya	42.09	17002
+contig_0082834	V01	binned	comebin_1009	archaea	43.43	17025
+contig_0083125	V01	binned	comebin_1009	archaea	38.43	16779
+contig_0084090	V01	binned	comebin_1009	eukarya	42.87	16584
+contig_0084719	V01	binned	comebin_1009	archaea	44.16	16317
+contig_0085241	V01	binned	comebin_1009	archaea	43.47	16437
+contig_0085573	V01	binned	comebin_1009	eukarya	40.69	16429
+contig_0086448	V01	binned	comebin_1009	eukarya	45.95	17053
+contig_0086494	V01	binned	comebin_1009	archaea	43.33	16463
+contig_0086542	V01	binned	comebin_1009	eukarya	42.24	16325
+contig_0087138	V01	binned	comebin_1009	archaea	44.93	16228
+contig_0087190	V01	binned	comebin_1009	eukarya	42.24	15912
+contig_0087406	V01	binned	comebin_1009	eukarya	43.93	15976
+contig_0087645	V01	binned	comebin_1009	unknown	43.78	16216
+contig_0087805	V01	binned	comebin_1009	archaea	45.59	16172
+contig_0088029	V01	binned	comebin_1009	eukarya	41.54	16114
+contig_0088170	V01	binned	comebin_1009	archaea	41.62	16133
+contig_0088282	V01	binned	comebin_1009	archaea	46.83	16222
+contig_0088645	V01	binned	comebin_1009	eukarya	42.17	16151
+contig_0089664	V01	binned	comebin_1009	eukarya	39.29	15986
+contig_0089763	V01	binned	comebin_1009	eukarya	42.36	16006
+contig_0090257	V01	binned	comebin_1009	unknown	40.18	15937
+contig_0090493	V01	binned	comebin_1009	eukarya	42.47	14990
+contig_0091093	V01	binned	comebin_1009	archaea	42.83	15896
+contig_0091256	V01	binned	comebin_1009	eukarya	41.41	15800
+contig_0091343	V01	binned	comebin_1009	eukarya	40.79	15712
+contig_0091424	V01	binned	comebin_1009	eukarya	44.78	15441
+contig_0091548	V01	binned	comebin_1009	eukarya	40.17	16401
+contig_0092713	V01	binned	comebin_1009	eukarya	43.97	15334
+contig_0092751	V01	binned	comebin_1009	eukarya	43.63	15691
+contig_0092784	V01	binned	comebin_1009	eukarya	44.88	15679
+contig_0092799	V01	binned	comebin_1009	unknown	40.13	15980
+contig_0093156	V01	binned	comebin_1009	archaea	41.44	15659
+contig_0093310	V01	binned	comebin_1009	eukarya	41.62	16007
+contig_0093944	V01	binned	comebin_1009	eukarya	39.9	15312
+contig_0094170	V01	binned	comebin_1009	archaea	41.76	15232
+contig_0094267	V01	binned	comebin_1009	unknown	41.76	15307
+contig_0097018	V01	binned	comebin_1009	prokarya	45.33	15091
+contig_0097168	V01	binned	comebin_1009	eukarya	42.54	15959
+contig_0097495	V01	binned	comebin_1009	eukarya	42.54	15310
+contig_0097743	V01	binned	comebin_1009	unknown	43.49	14989
+contig_0097867	V01	binned	comebin_1009	eukarya	45.56	15252
+contig_0098568	V01	binned	comebin_1009	eukarya	43.49	15170
+contig_0098943	V01	binned	comebin_1009	archaea	44.77	15135
+contig_0099266	V01	binned	comebin_1009	eukarya	42.2	15081
+contig_0100008	V01	binned	comebin_1009	eukarya	40.52	15057
+contig_0100037	V01	binned	comebin_1009	archaea	43.06	15050
+contig_0100614	V01	binned	comebin_1009	eukarya	44.27	14964
+contig_0100733	V01	binned	comebin_1009	eukarya	43.59	14963
+contig_0100854	V01	binned	comebin_1009	eukarya	44.03	15060
+contig_0100889	V01	binned	comebin_1009	unknown	43.06	14894
+contig_0100916	V01	binned	comebin_1009	eukarya	46.28	14933
+contig_0101886	V01	binned	comebin_1009	unknown	42.16	14940
+contig_0101962	V01	binned	comebin_1009	eukarya	42.47	14887
+contig_0102175	V01	binned	comebin_1009	eukarya	43.45	14843
+contig_0103290	V01	binned	comebin_1009	eukarya	43.8	14672
+contig_0103530	V01	binned	comebin_1009	eukarya	43.39	13083
+contig_0103857	V01	binned	comebin_1009	eukarya	44.26	14771
+contig_0103958	V01	binned	comebin_1009	eukarya	42.64	14689
+contig_0104083	V01	binned	comebin_1009	unknown	42.76	14760
+contig_0104084	V01	binned	comebin_1009	eukarya	43.55	14557
+contig_0104174	V01	binned	comebin_1009	eukarya	42.89	14720
+contig_0104231	V01	binned	comebin_1009	eukarya	42.79	14709
+contig_0104493	V01	binned	comebin_1009	eukarya	45.05	14864
+contig_0105465	V01	binned	comebin_1009	unknown	43.36	14215
+contig_0105986	V01	binned	comebin_1009	unknown	40.74	14623
+contig_0106082	V01	binned	comebin_1009	unknown	43.43	14155
+contig_0106450	V01	binned	comebin_1009	unknown	40.82	14514
+contig_0106460	V01	binned	comebin_1009	eukarya	42.26	14556
+contig_0106641	V01	binned	comebin_1009	eukarya	40.65	14599
+contig_0106835	V01	binned	comebin_1009	eukarya	43.04	14499
+contig_0106975	V01	binned	comebin_1009	unknown	46.85	14484
+contig_0107320	V01	binned	comebin_1009	eukarya	44.02	14376
+contig_0108494	V01	binned	comebin_1009	unknown	45.86	14366
+contig_0108583	V01	binned	comebin_1009	unknown	44.78	14419
+contig_0108698	V01	binned	comebin_1009	eukarya	41.51	14271
+contig_0108818	V01	binned	comebin_1009	eukarya	41.24	14206
+contig_0109129	V01	binned	comebin_1009	eukarya	43.3	14632
+contig_0109162	V01	binned	comebin_1009	unknown	42.15	14386
+contig_0109502	V01	binned	comebin_1009	unknown	43.54	14291
+contig_0110181	V01	binned	comebin_1009	unknown	43.95	14245
+contig_0110388	V01	binned	comebin_1009	eukarya	43.35	14185
+contig_0110650	V01	binned	comebin_1009	eukarya	44.58	14198
+contig_0111159	V01	binned	comebin_1009	eukarya	43.41	14512
+contig_0111321	V01	binned	comebin_1009	unknown	44.44	13817
+contig_0111962	V01	binned	comebin_1009	eukarya	42.7	14197
+contig_0111980	V01	binned	comebin_1009	eukarya	41.03	14176
+contig_0112201	V01	binned	comebin_1009	unknown	43.29	14108
+contig_0112646	V01	binned	comebin_1009	archaea	42.49	14142
+contig_0112770	V01	binned	comebin_1009	unknown	46.28	13997
+contig_0112887	V01	binned	comebin_1009	archaea	42.15	13690
+contig_0113009	V01	binned	comebin_1009	eukarya	43.15	14074
+contig_0113078	V01	binned	comebin_1009	unknown	43.61	13680
+contig_0113610	V01	binned	comebin_1009	unknown	45.43	13829
+contig_0113948	V01	binned	comebin_1009	eukarya	42.64	13986
+contig_0113979	V01	binned	comebin_1009	eukarya	41.47	13885
+contig_0114135	V01	binned	comebin_1009	unknown	47.23	13934
+contig_0114605	V01	binned	comebin_1009	eukarya	42.07	13963
+contig_0114744	V01	binned	comebin_1009	archaea	43.07	14045
+contig_0114913	V01	binned	comebin_1009	unknown	44.42	13901
+contig_0115344	V01	binned	comebin_1009	eukarya	43.04	13385
+contig_0115526	V01	binned	comebin_1009	eukarya	42.0	13875
+contig_0116248	V01	binned	comebin_1009	unknown	41.44	13848
+contig_0116303	V01	binned	comebin_1009	archaea	41.59	13807
+contig_0116531	V01	binned	comebin_1009	unknown	41.81	13812
+contig_0116943	V01	binned	comebin_1009	eukarya	42.66	13807
+contig_0117122	V01	binned	comebin_1009	eukarya	40.36	13834
+contig_0117719	V01	binned	comebin_1009	eukarya	45.64	13883
+contig_0118028	V01	binned	comebin_1009	eukarya	42.47	13718
+contig_0118199	V01	binned	comebin_1009	unknown	42.14	14243
+contig_0118228	V01	binned	comebin_1009	eukarya	42.59	13697
+contig_0118751	V01	binned	comebin_1009	unknown	42.95	13683
+contig_0118778	V01	binned	comebin_1009	unknown	41.71	13974
+contig_0119059	V01	binned	comebin_1009	unknown	41.85	13676
+contig_0119095	V01	binned	comebin_1009	archaea	47.25	13647
+contig_0119619	V01	binned	comebin_1009	eukarya	45.94	13674
+contig_0119858	V01	binned	comebin_1009	prokarya	39.91	13696
+contig_0120003	V01	binned	comebin_1009	unknown	42.14	13625
+contig_0120027	V01	binned	comebin_1009	eukarya	43.1	13123
+contig_0120498	V01	binned	comebin_1009	unknown	43.04	13540
+contig_0120978	V01	binned	comebin_1009	unknown	46.32	13567
+contig_0121548	V01	binned	comebin_1009	unknown	44.68	13523
+contig_0121875	V01	binned	comebin_1009	eukarya	43.1	13601
+contig_0122359	V01	binned	comebin_1009	unknown	42.63	13483
+contig_0122492	V01	binned	comebin_1009	eukarya	41.95	13453
+contig_0122787	V01	binned	comebin_1009	unknown	42.42	13075
+contig_0122808	V01	binned	comebin_1009	eukarya	44.63	13397
+contig_0122945	V01	binned	comebin_1009	eukarya	42.88	13406
+contig_0122971	V01	binned	comebin_1009	unknown	46.59	13408
+contig_0123054	V01	binned	comebin_1009	eukarya	43.25	13405
+contig_0123511	V01	binned	comebin_1009	unknown	46.72	13839
+contig_0123821	V01	binned	comebin_1009	unknown	44.21	13360
+contig_0123938	V01	binned	comebin_1009	unknown	45.85	13362
+contig_0124547	V01	binned	comebin_1009	archaea	43.83	13257
+contig_0124566	V01	binned	comebin_1009	eukarya	43.92	13353
+contig_0124609	V01	binned	comebin_1009	eukarya	43.1	13303
+contig_0124956	V01	binned	comebin_1009	unknown	44.24	13761
+contig_0125301	V01	binned	comebin_1009	archaea	42.84	13276
+contig_0125977	V01	binned	comebin_1009	eukarya	43.78	13336
+contig_0126995	V01	binned	comebin_1009	eukarya	42.03	13266
+contig_0127068	V01	binned	comebin_1009	eukarya	41.19	13125
+contig_0127123	V01	binned	comebin_1009	unknown	42.6	13531
+contig_0127455	V01	binned	comebin_1009	eukarya	44.77	13225
+contig_0128191	V01	binned	comebin_1009	eukarya	44.04	13118
+contig_0129352	V01	binned	comebin_1009	eukarya	42.48	13036
+contig_0129492	V01	binned	comebin_1009	eukarya	43.36	13063
+contig_0129502	V01	binned	comebin_1009	archaea	47.06	13072
+contig_0131023	V01	binned	comebin_1009	unknown	43.64	12923
+contig_0131895	V01	binned	comebin_1009	unknown	42.86	12820
+contig_0132441	V01	binned	comebin_1009	unknown	41.96	12868
+contig_0132999	V01	binned	comebin_1009	unknown	47.38	11713
+contig_0133124	V01	binned	comebin_1009	eukarya	43.17	12735
+contig_0133178	V01	binned	comebin_1009	eukarya	41.21	12812
+contig_0133543	V01	binned	comebin_1009	unknown	42.49	12782
+contig_0133575	V01	binned	comebin_1009	eukarya	43.62	12857
+contig_0133667	V01	binned	comebin_1009	eukarya	43.4	12723
+contig_0134118	V01	binned	comebin_1009	eukarya	43.44	12818
+contig_0134447	V01	binned	comebin_1009	eukarya	44.13	12737
+contig_0134479	V01	binned	comebin_1009	unknown	43.74	12493
+contig_0135088	V01	binned	comebin_1009	eukarya	42.81	12726
+contig_0135408	V01	binned	comebin_1009	unknown	43.18	12769
+contig_0136040	V01	binned	comebin_1009	eukarya	40.99	12630
+contig_0136207	V01	binned	comebin_1009	eukarya	42.88	12693
+contig_0136492	V01	binned	comebin_1009	eukarya	41.77	12630
+contig_0136572	V01	binned	comebin_1009	eukarya	42.66	13170
+contig_0136775	V01	binned	comebin_1009	eukarya	42.37	12628
+contig_0136909	V01	binned	comebin_1009	eukarya	42.78	12617
+contig_0136936	V01	binned	comebin_1009	eukarya	40.25	12619
+contig_0138309	V01	binned	comebin_1009	eukarya	42.79	12338
+contig_0138720	V01	binned	comebin_1009	eukarya	43.47	12551
+contig_0139046	V01	binned	comebin_1009	eukarya	45.87	12081
+contig_0139066	V01	binned	comebin_1009	archaea	42.11	12557
+contig_0139094	V01	binned	comebin_1009	eukarya	41.84	12514
+contig_0139471	V01	binned	comebin_1009	eukarya	44.01	12497
+contig_0139727	V01	binned	comebin_1009	eukarya	42.91	12469
+contig_0140083	V01	binned	comebin_1009	eukarya	44.37	11971
+contig_0140429	V01	binned	comebin_1009	archaea	46.28	12516
+contig_0140521	V01	binned	comebin_1009	archaea	44.31	12516
+contig_0141335	V01	binned	comebin_1009	unknown	42.73	12396
+contig_0142409	V01	binned	comebin_1009	eukarya	41.79	12338
+contig_0142441	V01	binned	comebin_1009	unknown	44.02	12357
+contig_0142662	V01	binned	comebin_1009	unknown	41.39	12351
+contig_0142771	V01	binned	comebin_1009	unknown	43.08	12267
+contig_0142781	V01	binned	comebin_1009	eukarya	48.06	12373
+contig_0143299	V01	binned	comebin_1009	unknown	43.16	12323
+contig_0143347	V01	binned	comebin_1009	eukarya	42.49	12316
+contig_0143800	V01	binned	comebin_1009	eukarya	42.75	12283
+contig_0143870	V01	binned	comebin_1009	eukarya	43.66	12272
+contig_0143954	V01	binned	comebin_1009	eukarya	42.76	12271
+contig_0144444	V01	binned	comebin_1009	unknown	46.63	12257
+contig_0144905	V01	binned	comebin_1009	unknown	43.26	11432
+contig_0144953	V01	binned	comebin_1009	archaea	42.87	12187
+contig_0145383	V01	binned	comebin_1009	eukarya	42.91	12265
+contig_0146008	V01	binned	comebin_1009	eukarya	43.91	12176
+contig_0146022	V01	binned	comebin_1009	unknown	46.44	12227
+contig_0146161	V01	binned	comebin_1009	eukarya	45.17	12173
+contig_0146217	V01	binned	comebin_1009	unknown	43.57	12217
+contig_0146528	V01	binned	comebin_1009	eukarya	45.66	9925
+contig_0146658	V01	binned	comebin_1009	unknown	43.48	11550
+contig_0146754	V01	binned	comebin_1009	eukarya	41.57	12747
+contig_0146919	V01	binned	comebin_1009	unknown	40.57	12161
+contig_0146936	V01	binned	comebin_1009	eukarya	44.56	12128
+contig_0147032	V01	binned	comebin_1009	unknown	43.0	12173
+contig_0147115	V01	binned	comebin_1009	eukarya	40.54	12094
+contig_0147451	V01	binned	comebin_1009	eukarya	45.55	12112
+contig_0147789	V01	binned	comebin_1009	archaea	43.87	12048
+contig_0147998	V01	binned	comebin_1009	unknown	49.73	12069
+contig_0148090	V01	binned	comebin_1009	eukarya	44.04	12070
+contig_0148163	V01	binned	comebin_1009	unknown	46.58	12021
+contig_0148262	V01	binned	comebin_1009	unknown	42.31	12256
+contig_0148378	V01	binned	comebin_1009	eukarya	40.42	12047
+contig_0148737	V01	binned	comebin_1009	eukarya	41.2	12030
+contig_0148915	V01	binned	comebin_1009	eukarya	39.95	12061
+contig_0149155	V01	binned	comebin_1009	eukarya	39.98	11990
+contig_0149666	V01	binned	comebin_1009	unknown	42.86	11799
+contig_0150339	V01	binned	comebin_1009	eukarya	41.39	11965
+contig_0150472	V01	binned	comebin_1009	unknown	41.48	12177
+contig_0150886	V01	binned	comebin_1009	unknown	48.05	11986
+contig_0151374	V01	binned	comebin_1009	eukarya	42.88	11930
+contig_0151719	V01	binned	comebin_1009	eukarya	42.7	11968
+contig_0151814	V01	binned	comebin_1009	archaea	47.42	11905
+contig_0152121	V01	binned	comebin_1009	unknown	40.89	11899
+contig_0152136	V01	binned	comebin_1009	archaea	40.72	11654
+contig_0152448	V01	binned	comebin_1009	eukarya	43.16	11840
+contig_0152486	V01	binned	comebin_1009	unknown	51.18	11848
+contig_0152713	V01	binned	comebin_1009	unknown	43.22	11862
+contig_0152853	V01	binned	comebin_1009	eukarya	43.8	11928
+contig_0152881	V01	binned	comebin_1009	eukarya	41.59	11388
+contig_0153315	V01	binned	comebin_1009	eukarya	42.21	12138
+contig_0153599	V01	binned	comebin_1009	unknown	42.88	11529
+contig_0153917	V01	binned	comebin_1009	archaea	42.96	11593
+contig_0154297	V01	binned	comebin_1009	eukarya	43.18	11800
+contig_0154698	V01	binned	comebin_1009	unknown	41.0	12028
+contig_0155818	V01	binned	comebin_1009	eukarya	43.75	11583
+contig_0156187	V01	binned	comebin_1009	unknown	44.76	11748
+contig_0156836	V01	binned	comebin_1009	eukarya	43.11	10577
+contig_0157352	V01	binned	comebin_1009	unknown	44.9	11879
+contig_0157707	V01	binned	comebin_1009	eukarya	40.74	11680
+contig_0157999	V01	binned	comebin_1009	unknown	42.85	11576
+contig_0158041	V01	binned	comebin_1009	eukarya	43.72	11426
+contig_0158886	V01	binned	comebin_1009	archaea	44.3	11595
+contig_0158917	V01	binned	comebin_1009	unknown	43.14	11243
+contig_0159231	V01	binned	comebin_1009	eukarya	42.46	11613
+contig_0159687	V01	binned	comebin_1009	unknown	41.49	11829
+contig_0159996	V01	binned	comebin_1009	eukarya	42.84	11480
+contig_0160037	V01	binned	comebin_1009	archaea	43.5	11595
+contig_0160105	V01	binned	comebin_1009	unknown	44.1	11568
+contig_0160427	V01	binned	comebin_1009	eukarya	43.37	11304
+contig_0160904	V01	binned	comebin_1009	eukarya	43.29	11518
+contig_0161750	V01	binned	comebin_1009	eukarya	44.43	11629
+contig_0161800	V01	binned	comebin_1009	eukarya	40.34	11508
+contig_0161816	V01	binned	comebin_1009	eukarya	40.11	11510
+contig_0161934	V01	binned	comebin_1009	eukarya	42.62	11478
+contig_0162548	V01	binned	comebin_1009	eukarya	43.46	11239
+contig_0163128	V01	binned	comebin_1009	eukarya	42.1	11500
+contig_0163234	V01	binned	comebin_1009	eukarya	43.78	11420
+contig_0163462	V01	binned	comebin_1009	archaea	48.06	11442
+contig_0163469	V01	binned	comebin_1009	archaea	43.12	11420
+contig_0163483	V01	binned	comebin_1009	eukarya	44.87	11378
+contig_0163870	V01	binned	comebin_1009	eukarya	43.58	11350
+contig_0164025	V01	binned	comebin_1009	unknown	44.2	11442
+contig_0164303	V01	binned	comebin_1009	eukarya	50.39	9853
+contig_0164363	V01	binned	comebin_1009	eukarya	40.06	11167
+contig_0164627	V01	binned	comebin_1009	unknown	41.49	11587
+contig_0165916	V01	binned	comebin_1009	unknown	43.58	11504
+contig_0166304	V01	binned	comebin_1009	eukarya	41.42	11341
+contig_0166809	V01	binned	comebin_1009	eukarya	42.43	11397
+contig_0167026	V01	binned	comebin_1009	archaea	43.59	11320
+contig_0167209	V01	binned	comebin_1009	eukarya	43.62	11349
+contig_0167556	V01	binned	comebin_1009	unknown	39.27	11257
+contig_0168360	V01	binned	comebin_1009	unknown	42.78	11262
+contig_0168414	V01	binned	comebin_1009	unknown	46.22	11349
+contig_0169339	V01	binned	comebin_1009	archaea	43.37	10550
+contig_0169439	V01	binned	comebin_1009	eukarya	43.41	11222
+contig_0169948	V01	binned	comebin_1009	archaea	43.32	11195
+contig_0170217	V01	binned	comebin_1009	unknown	42.17	11164
+contig_0170330	V01	binned	comebin_1009	eukarya	41.64	11163
+contig_0170540	V01	binned	comebin_1009	archaea	44.16	11146
+contig_0171063	V01	binned	comebin_1009	eukarya	44.82	11149
+contig_0171296	V01	binned	comebin_1009	archaea	40.0	11112
+contig_0171347	V01	binned	comebin_1009	unknown	43.76	11181
+contig_0171761	V01	binned	comebin_1009	unknown	41.82	11196
+contig_0172092	V01	binned	comebin_1009	unknown	43.54	10435
+contig_0172408	V01	binned	comebin_1009	eukarya	44.67	10843
+contig_0172703	V01	binned	comebin_1009	unknown	42.5	11067
+contig_0172965	V01	binned	comebin_1009	eukarya	47.76	11088
+contig_0173078	V01	binned	comebin_1009	eukarya	43.2	10880
+contig_0173676	V01	binned	comebin_1009	archaea	42.64	9720
+contig_0173858	V01	binned	comebin_1009	eukarya	41.28	11038
+contig_0174270	V01	binned	comebin_1009	eukarya	41.83	11048
+contig_0174804	V01	binned	comebin_1009	eukarya	46.52	11147
+contig_0174911	V01	binned	comebin_1009	eukarya	41.35	11010
+contig_0174915	V01	binned	comebin_1009	archaea	44.44	11620
+contig_0175245	V01	binned	comebin_1009	eukarya	44.98	10895
+contig_0175278	V01	binned	comebin_1009	unknown	43.62	10988
+contig_0175366	V01	binned	comebin_1009	eukarya	44.67	10960
+contig_0175449	V01	binned	comebin_1009	eukarya	46.08	10980
+contig_0175552	V01	binned	comebin_1009	eukarya	43.7	11132
+contig_0175684	V01	binned	comebin_1009	eukarya	38.78	10959
+contig_0176172	V01	binned	comebin_1009	eukarya	42.78	10937
+contig_0176425	V01	binned	comebin_1009	unknown	41.68	10987
+contig_0176758	V01	binned	comebin_1009	unknown	45.07	10112
+contig_0177110	V01	binned	comebin_1009	eukarya	44.33	10922
+contig_0177952	V01	binned	comebin_1009	eukarya	43.85	10883
+contig_0178002	V01	binned	comebin_1009	unknown	41.29	10876
+contig_0178128	V01	binned	comebin_1009	eukarya	44.61	10876
+contig_0178209	V01	binned	comebin_1009	unknown	40.15	10875
+contig_0178632	V01	binned	comebin_1009	eukarya	42.51	10838
+contig_0179170	V01	binned	comebin_1009	eukarya	44.29	8670
+contig_0179337	V01	binned	comebin_1009	unknown	44.4	10660
+contig_0179698	V01	binned	comebin_1009	unknown	37.58	10808
+contig_0180316	V01	binned	comebin_1009	eukarya	45.65	10696
+contig_0180794	V01	binned	comebin_1009	unknown	42.53	10385
+contig_0181121	V01	binned	comebin_1009	unknown	43.73	10790
+contig_0181122	V01	binned	comebin_1009	eukarya	41.63	10770
+contig_0181817	V01	binned	comebin_1009	archaea	43.79	10999
+contig_0182517	V01	binned	comebin_1009	unknown	42.25	10782
+contig_0183205	V01	binned	comebin_1009	unknown	43.29	10699
+contig_0183557	V01	binned	comebin_1009	unknown	44.56	10697
+contig_0184052	V01	binned	comebin_1009	eukarya	43.35	10673
+contig_0184347	V01	binned	comebin_1009	eukarya	45.42	10680
+contig_0184589	V01	binned	comebin_1009	unknown	44.31	10682
+contig_0185311	V01	binned	comebin_1009	eukarya	44.82	10642
+contig_0185464	V01	binned	comebin_1009	unknown	42.7	10635
+contig_0186292	V01	binned	comebin_1009	eukarya	43.81	10600
+contig_0186297	V01	binned	comebin_1009	eukarya	46.41	10577
+contig_0186904	V01	binned	comebin_1009	eukarya	44.58	10597
+contig_0187577	V01	binned	comebin_1009	eukarya	43.6	10567
+contig_0187641	V01	binned	comebin_1009	unknown	44.78	10534
+contig_0187659	V01	binned	comebin_1009	eukarya	39.83	11314
+contig_0188081	V01	binned	comebin_1009	unknown	46.6	10430
+contig_0188228	V01	binned	comebin_1009	archaea	41.72	10522
+contig_0188245	V01	binned	comebin_1009	eukarya	45.71	10557
+contig_0188683	V01	binned	comebin_1009	eukarya	44.56	10596
+contig_0189298	V01	binned	comebin_1009	archaea	43.5	10512
+contig_0189632	V01	binned	comebin_1009	unknown	43.58	10561
+contig_0190408	V01	binned	comebin_1009	eukarya	39.56	10457
+contig_0190727	V01	binned	comebin_1009	unknown	42.57	10091
+contig_0190888	V01	binned	comebin_1009	eukarya	42.68	10471
+contig_0190971	V01	binned	comebin_1009	eukarya	42.51	10714
+contig_0191092	V01	binned	comebin_1009	unknown	42.55	10509
+contig_0191536	V01	binned	comebin_1009	archaea	45.21	9851
+contig_0191806	V01	binned	comebin_1009	eukarya	47.5	10431
+contig_0191929	V01	binned	comebin_1009	eukarya	45.2	10416
+contig_0193024	V01	binned	comebin_1009	archaea	42.66	10390
+contig_0194232	V01	binned	comebin_1009	unknown	45.14	10391
+contig_0194919	V01	binned	comebin_1009	eukarya	45.65	10315
+contig_0195058	V01	binned	comebin_1009	eukarya	45.76	9468
+contig_0195335	V01	binned	comebin_1009	unknown	40.56	10333
+contig_0195545	V01	binned	comebin_1009	unknown	40.51	10052
+contig_0195646	V01	binned	comebin_1009	eukarya	42.1	10179
+contig_0195746	V01	binned	comebin_1009	unknown	40.16	10305
+contig_0195857	V01	binned	comebin_1009	eukarya	42.58	10321
+contig_0196147	V01	binned	comebin_1009	eukarya	42.44	10293
+contig_0196153	V01	binned	comebin_1009	eukarya	40.1	10108
+contig_0196430	V01	binned	comebin_1009	eukarya	46.01	10290
+contig_0196524	V01	binned	comebin_1009	eukarya	45.08	10254
+contig_0196789	V01	binned	comebin_1009	unknown	42.92	10270
+contig_0197173	V01	binned	comebin_1009	eukarya	41.03	10017
+contig_0197615	V01	binned	comebin_1009	archaea	43.59	10588
+contig_0197910	V01	binned	comebin_1009	unknown	41.48	10253
+contig_0198233	V01	binned	comebin_1009	unknown	42.32	10221
+contig_0198752	V01	binned	comebin_1009	eukarya	46.62	10228
+contig_0198822	V01	binned	comebin_1009	eukarya	40.49	10581
+contig_0199037	V01	binned	comebin_1009	unknown	42.46	10209
+contig_0199111	V01	binned	comebin_1009	eukarya	44.09	10267
+contig_0200893	V01	binned	comebin_1009	unknown	47.06	10146
+contig_0200995	V01	binned	comebin_1009	eukarya	43.78	10187
+contig_0201232	V01	binned	comebin_1009	archaea	42.52	9806
+contig_0202121	V01	binned	comebin_1009	unknown	42.42	10101
+contig_0204868	V01	binned	comebin_1009	unknown	42.19	10102
+contig_0205138	V01	binned	comebin_1009	eukarya	44.34	10095
+contig_0206198	V01	binned	comebin_1009	eukarya	45.18	9996
+contig_0206321	V01	binned	comebin_1009	eukarya	43.72	9940
+contig_0206996	V01	binned	comebin_1009	archaea	41.24	9951
+contig_0207217	V01	binned	comebin_1009	archaea	41.11	9959
+contig_0207953	V01	binned	comebin_1009	eukarya	46.27	9961
+contig_0208075	V01	binned	comebin_1009	eukarya	44.34	9941
+contig_0209176	V01	binned	comebin_1009	archaea	45.32	9923
+contig_0209283	V01	binned	comebin_1009	eukarya	43.41	9879
+contig_0209862	V01	binned	comebin_1009	archaea	48.47	9871
+contig_0210682	V01	binned	comebin_1009	eukarya	40.65	10438
+contig_0210944	V01	binned	comebin_1009	eukarya	42.81	8140
+contig_0211267	V01	binned	comebin_1009	archaea	43.11	9986
+contig_0211539	V01	binned	comebin_1009	eukarya	40.98	9846
+contig_0212769	V01	binned	comebin_1009	archaea	44.42	9913
+contig_0213879	V01	binned	comebin_1009	archaea	47.45	9821
+contig_0214562	V01	binned	comebin_1009	eukarya	43.76	9351
+contig_0215124	V01	binned	comebin_1009	eukarya	43.58	9644
+contig_0215627	V01	binned	comebin_1009	eukarya	42.28	9788
+contig_0217408	V01	binned	comebin_1009	eukarya	45.06	9796
+contig_0217477	V01	binned	comebin_1009	eukarya	42.75	9683
+contig_0217575	V01	binned	comebin_1009	eukarya	44.3	9761
+contig_0217757	V01	binned	comebin_1009	eukarya	42.0	9702
+contig_0217996	V01	binned	comebin_1009	eukarya	44.11	9674
+contig_0218566	V01	binned	comebin_1009	eukarya	42.92	9800
+contig_0218635	V01	binned	comebin_1009	eukarya	44.56	9641
+contig_0219083	V01	binned	comebin_1009	eukarya	47.81	9657
+contig_0219454	V01	binned	comebin_1009	archaea	43.14	9626
+contig_0219762	V01	binned	comebin_1009	eukarya	43.69	9641
+contig_0219987	V01	binned	comebin_1009	eukarya	40.97	9583
+contig_0220036	V01	binned	comebin_1009	eukarya	39.02	9605
+contig_0220323	V01	binned	comebin_1009	eukarya	44.57	9582
+contig_0221552	V01	binned	comebin_1009	eukarya	42.76	9934
+contig_0221706	V01	binned	comebin_1009	eukarya	45.96	9594
+contig_0222143	V01	binned	comebin_1009	archaea	43.46	9735
+contig_0222561	V01	binned	comebin_1009	eukarya	44.69	9586
+contig_0224540	V01	binned	comebin_1009	eukarya	41.86	9506
+contig_0226355	V01	binned	comebin_1009	archaea	41.85	9424
+contig_0228119	V01	binned	comebin_1009	eukarya	44.1	9367
+contig_0228167	V01	binned	comebin_1009	eukarya	42.85	9412
+contig_0229270	V01	binned	comebin_1009	eukarya	45.3	10202
+contig_0230029	V01	binned	comebin_1009	archaea	40.29	9345
+contig_0230408	V01	binned	comebin_1009	eukarya	39.54	9404
+contig_0230516	V01	binned	comebin_1009	archaea	39.97	9346
+contig_0231008	V01	binned	comebin_1009	archaea	43.32	9238
+contig_0231359	V01	binned	comebin_1009	archaea	45.28	9363
+contig_0231420	V01	binned	comebin_1009	eukarya	44.72	9340
+contig_0232047	V01	binned	comebin_1009	eukarya	45.7	9484
+contig_0232775	V01	binned	comebin_1009	archaea	42.2	9315
+contig_0233324	V01	binned	comebin_1009	archaea	42.19	8945
+contig_0233578	V01	binned	comebin_1009	eukarya	47.18	9289
+contig_0234242	V01	binned	comebin_1009	eukarya	41.28	9321
+contig_0234513	V01	binned	comebin_1009	eukarya	41.4	8544
+contig_0234814	V01	binned	comebin_1009	archaea	43.94	9271
+contig_0235106	V01	binned	comebin_1009	archaea	40.05	9244
+contig_0235449	V01	binned	comebin_1009	archaea	43.66	9228
+contig_0235840	V01	binned	comebin_1009	eukarya	46.3	9231
+contig_0235895	V01	binned	comebin_1009	eukarya	42.49	9253
+contig_0236150	V01	binned	comebin_1009	archaea	41.68	9228
+contig_0236427	V01	binned	comebin_1009	eukarya	41.96	9215
+contig_0236960	V01	binned	comebin_1009	eukarya	46.48	9194
+contig_0237407	V01	binned	comebin_1009	eukarya	45.09	9193
+contig_0237891	V01	binned	comebin_1009	eukarya	43.28	9179
+contig_0238419	V01	binned	comebin_1009	eukarya	41.58	9207
+contig_0239075	V01	binned	comebin_1009	archaea	45.85	9151
+contig_0239296	V01	binned	comebin_1009	eukarya	46.08	9156
+contig_0239429	V01	binned	comebin_1009	eukarya	41.3	9290
+contig_0239947	V01	binned	comebin_1009	eukarya	45.73	9153
+contig_0240014	V01	binned	comebin_1009	eukarya	42.23	9165
+contig_0240097	V01	binned	comebin_1009	archaea	47.72	9156
+contig_0240753	V01	binned	comebin_1009	archaea	45.83	9131
+contig_0241251	V01	binned	comebin_1009	eukarya	45.58	9108
+contig_0242010	V01	binned	comebin_1009	archaea	44.2	9589
+contig_0242391	V01	binned	comebin_1009	archaea	39.04	7840
+contig_0242393	V01	binned	comebin_1009	eukarya	42.62	8852
+contig_0242564	V01	binned	comebin_1009	unknown	37.08	9084
+contig_0242609	V01	binned	comebin_1009	archaea	42.98	9066
+contig_0243422	V01	binned	comebin_1009	archaea	41.04	9071
+contig_0243874	V01	binned	comebin_1009	eukarya	41.06	9039
+contig_0244353	V01	binned	comebin_1009	archaea	41.74	9040
+contig_0244890	V01	binned	comebin_1009	eukarya	41.39	9035
+contig_0244988	V01	binned	comebin_1009	eukarya	44.59	9027
+contig_0245011	V01	binned	comebin_1009	eukarya	41.97	9023
+contig_0245068	V01	binned	comebin_1009	eukarya	44.0	9039
+contig_0245387	V01	binned	comebin_1009	eukarya	48.56	9002
+contig_0245696	V01	binned	comebin_1009	archaea	46.0	9003
+contig_0245877	V01	binned	comebin_1009	eukarya	43.7	8987
+contig_0245885	V01	binned	comebin_1009	archaea	49.42	8863
+contig_0245945	V01	binned	comebin_1009	archaea	46.02	8997
+contig_0246054	V01	binned	comebin_1009	eukarya	44.65	8734
+contig_0246263	V01	binned	comebin_1009	eukarya	43.42	9023
+contig_0246341	V01	binned	comebin_1009	archaea	44.69	8981
+contig_0246427	V01	binned	comebin_1009	eukarya	44.46	9003
+contig_0246945	V01	binned	comebin_1009	eukarya	38.74	8967
+contig_0247392	V01	binned	comebin_1009	archaea	39.8	8978
+contig_0247643	V01	binned	comebin_1009	archaea	42.94	8953
+contig_0247947	V01	binned	comebin_1009	archaea	44.99	8955
+contig_0248102	V01	binned	comebin_1009	eukarya	44.26	9026
+contig_0248588	V01	binned	comebin_1009	eukarya	42.8	8968
+contig_0248907	V01	binned	comebin_1009	eukarya	43.89	8880
+contig_0248986	V01	binned	comebin_1009	archaea	45.23	8925
+contig_0249084	V01	binned	comebin_1009	eukarya	44.06	8997
+contig_0249694	V01	binned	comebin_1009	eukarya	41.73	8907
+contig_0249776	V01	binned	comebin_1009	eukarya	43.47	8256
+contig_0249876	V01	binned	comebin_1009	eukarya	44.73	8907
+contig_0250294	V01	binned	comebin_1009	eukarya	43.87	8942
+contig_0250339	V01	binned	comebin_1009	archaea	41.1	8902
+contig_0250448	V01	binned	comebin_1009	eukarya	42.27	8936
+contig_0250810	V01	binned	comebin_1009	eukarya	44.32	8472
+contig_0251607	V01	binned	comebin_1009	eukarya	46.25	8890
+contig_0251804	V01	binned	comebin_1009	eukarya	40.22	8871
+contig_0253156	V01	binned	comebin_1009	archaea	43.2	8870
+contig_0253344	V01	binned	comebin_1009	eukarya	42.25	8896
+contig_0253557	V01	binned	comebin_1009	unknown	44.88	8852
+contig_0254010	V01	binned	comebin_1009	eukarya	46.5	8821
+contig_0254138	V01	binned	comebin_1009	archaea	43.42	8483
+contig_0254599	V01	binned	comebin_1009	archaea	42.26	8859
+contig_0255416	V01	binned	comebin_1009	eukarya	40.83	8341
+contig_0255491	V01	binned	comebin_1009	eukarya	43.41	8903
+contig_0255600	V01	binned	comebin_1009	eukarya	44.47	8773
+contig_0255709	V01	binned	comebin_1009	eukarya	44.19	8775
+contig_0255944	V01	binned	comebin_1009	archaea	39.43	8785
+contig_0255954	V01	binned	comebin_1009	unknown	41.25	8864
+contig_0256913	V01	binned	comebin_1009	archaea	46.5	8704
+contig_0257013	V01	binned	comebin_1009	eukarya	41.39	8768
+contig_0259443	V01	binned	comebin_1009	eukarya	40.4	8705
+contig_0260014	V01	binned	comebin_1009	eukarya	47.56	8697
+contig_0260816	V01	binned	comebin_1009	eukarya	43.51	8791
+contig_0261096	V01	binned	comebin_1009	eukarya	45.19	8671
+contig_0261321	V01	binned	comebin_1009	bacteria	41.79	8693
+contig_0261446	V01	binned	comebin_1009	archaea	46.05	8702
+contig_0261637	V01	binned	comebin_1009	eukarya	43.58	8698
+contig_0261657	V01	binned	comebin_1009	eukarya	40.95	8700
+contig_0262162	V01	binned	comebin_1009	eukarya	47.15	8646
+contig_0263194	V01	binned	comebin_1009	eukarya	40.95	8634
+contig_0263409	V01	binned	comebin_1009	eukarya	45.4	8648
+contig_0263477	V01	binned	comebin_1009	eukarya	41.4	8628
+contig_0265026	V01	binned	comebin_1009	eukarya	42.16	8592
+contig_0265297	V01	binned	comebin_1009	eukarya	42.66	8582
+contig_0267871	V01	binned	comebin_1009	eukarya	44.56	8465
+contig_0268416	V01	binned	comebin_1009	archaea	40.05	8485
+contig_0268779	V01	binned	comebin_1009	eukarya	41.64	8503
+contig_0269057	V01	binned	comebin_1009	eukarya	43.87	8282
+contig_0269485	V01	binned	comebin_1009	eukarya	47.5	8537
+contig_0269520	V01	binned	comebin_1009	eukarya	42.27	8547
+contig_0269953	V01	binned	comebin_1009	eukarya	45.69	8516
+contig_0269958	V01	binned	comebin_1009	archaea	43.6	8474
+contig_0270050	V01	binned	comebin_1009	archaea	46.17	8551
+contig_0270626	V01	binned	comebin_1009	eukarya	50.5	8484
+contig_0270680	V01	binned	comebin_1009	eukarya	41.84	8511
+contig_0271107	V01	binned	comebin_1009	eukarya	42.66	8469
+contig_0271402	V01	binned	comebin_1009	unknown	44.37	8490
+contig_0272497	V01	binned	comebin_1009	eukarya	40.77	8436
+contig_0272569	V01	binned	comebin_1009	archaea	40.92	8186
+contig_0273084	V01	binned	comebin_1009	eukarya	46.73	8404
+contig_0273290	V01	binned	comebin_1009	eukarya	44.49	8426
+contig_0273619	V01	binned	comebin_1009	archaea	44.14	8439
+contig_0274222	V01	binned	comebin_1009	eukarya	40.66	7774
+contig_0275487	V01	binned	comebin_1009	eukarya	41.61	8445
+contig_0275545	V01	binned	comebin_1009	eukarya	39.44	8465
+contig_0276791	V01	binned	comebin_1009	archaea	42.41	8184
+contig_0279126	V01	binned	comebin_1009	archaea	37.59	8315
+contig_0279218	V01	binned	comebin_1009	unknown	45.57	8254
+contig_0279867	V01	binned	comebin_1009	eukarya	41.03	8302
+contig_0281736	V01	binned	comebin_1009	eukarya	43.25	8182
+contig_0281811	V01	binned	comebin_1009	eukarya	43.53	8284
+contig_0282417	V01	binned	comebin_1009	eukarya	43.13	8198
+contig_0282814	V01	binned	comebin_1009	archaea	41.86	8365
+contig_0284199	V01	binned	comebin_1009	eukarya	43.04	8288
+contig_0285514	V01	binned	comebin_1009	archaea	40.02	8200
+contig_0285552	V01	binned	comebin_1009	archaea	42.9	8229
+contig_0285678	V01	binned	comebin_1009	eukarya	41.9	8251
+contig_0286111	V01	binned	comebin_1009	archaea	41.2	8220
+contig_0286571	V01	binned	comebin_1009	eukarya	46.97	8193
+contig_0286767	V01	binned	comebin_1009	eukarya	43.13	8168
+contig_0287937	V01	binned	comebin_1009	eukarya	43.3	8164
+contig_0288107	V01	binned	comebin_1009	eukarya	43.04	8167
+contig_0289111	V01	binned	comebin_1009	eukarya	41.88	8143
+contig_0293656	V01	binned	comebin_1009	eukarya	42.63	8043
+contig_0293721	V01	binned	comebin_1009	archaea	46.19	8060
+contig_0295500	V01	binned	comebin_1009	eukarya	41.83	8046
+contig_0296553	V01	binned	comebin_1009	archaea	38.89	8355
+contig_0296650	V01	binned	comebin_1009	eukarya	38.17	7841
+contig_0297132	V01	binned	comebin_1009	eukarya	46.48	7581
+contig_0297311	V01	binned	comebin_1009	eukarya	42.91	8003
+contig_0299364	V01	binned	comebin_1009	eukarya	46.09	7987
+contig_0300481	V01	binned	comebin_1009	archaea	45.8	7997
+contig_0300599	V01	binned	comebin_1009	archaea	43.83	7987
+contig_0303891	V01	binned	comebin_1009	eukarya	41.52	7886
+contig_0304618	V01	binned	comebin_1009	archaea	45.39	7533
+contig_0306399	V01	binned	comebin_1009	eukarya	43.33	7604
+contig_0307023	V01	binned	comebin_1009	eukarya	47.55	7852
+contig_0307477	V01	binned	comebin_1009	eukarya	40.56	7825
+contig_0307764	V01	binned	comebin_1009	eukarya	46.49	7847
+contig_0308590	V01	binned	comebin_1009	archaea	44.41	7948
+contig_0309124	V01	binned	comebin_1009	eukarya	45.23	7818
+contig_0309547	V01	binned	comebin_1009	eukarya	41.88	7755
+contig_0309725	V01	binned	comebin_1009	eukarya	42.43	7810
+contig_0309887	V01	binned	comebin_1009	eukarya	42.33	7791
+contig_0310375	V01	binned	comebin_1009	archaea	43.8	7834
+contig_0311247	V01	binned	comebin_1009	eukarya	45.78	7761
+contig_0311268	V01	binned	comebin_1009	eukarya	42.37	7982
+contig_0312229	V01	binned	comebin_1009	eukarya	40.69	7768
+contig_0312448	V01	binned	comebin_1009	eukarya	38.79	7795
+contig_0313239	V01	binned	comebin_1009	archaea	43.55	7734
+contig_0313389	V01	binned	comebin_1009	eukarya	42.53	7756
+contig_0314477	V01	binned	comebin_1009	eukarya	42.62	7731
+contig_0314863	V01	binned	comebin_1009	eukarya	46.79	7726
+contig_0315267	V01	binned	comebin_1009	eukarya	41.69	7278
+contig_0316141	V01	binned	comebin_1009	eukarya	42.93	7699
+contig_0316849	V01	binned	comebin_1009	archaea	43.51	7690
+contig_0316980	V01	binned	comebin_1009	eukarya	46.51	7508
+contig_0317664	V01	binned	comebin_1009	eukarya	46.84	7652
+contig_0317862	V01	binned	comebin_1009	eukarya	47.53	7718
+contig_0318283	V01	binned	comebin_1009	archaea	43.5	7694
+contig_0318796	V01	binned	comebin_1009	archaea	39.41	7603
+contig_0318906	V01	binned	comebin_1009	archaea	41.34	7656
+contig_0319237	V01	binned	comebin_1009	eukarya	41.77	7681
+contig_0319330	V01	binned	comebin_1009	archaea	44.36	7297
+contig_0320594	V01	binned	comebin_1009	unknown	46.48	7627
+contig_0320615	V01	binned	comebin_1009	archaea	42.65	7650
+contig_0321429	V01	binned	comebin_1009	eukarya	44.41	7553
+contig_0323697	V01	binned	comebin_1009	eukarya	40.73	7582
+contig_0324292	V01	binned	comebin_1009	eukarya	41.2	7576
+contig_0325045	V01	binned	comebin_1009	eukarya	43.64	7575
+contig_0326505	V01	binned	comebin_1009	unknown	42.75	7575
+contig_0326979	V01	binned	comebin_1009	eukarya	44.24	7540
+contig_0327609	V01	binned	comebin_1009	eukarya	47.28	7455
+contig_0328759	V01	binned	comebin_1009	eukarya	46.25	7360
+contig_0330141	V01	binned	comebin_1009	eukarya	45.83	7493
+contig_0330688	V01	binned	comebin_1009	eukarya	40.11	7449
+contig_0330728	V01	binned	comebin_1009	eukarya	44.37	7149
+contig_0330896	V01	binned	comebin_1009	eukarya	42.06	7566
+contig_0331689	V01	binned	comebin_1009	archaea	41.5	7480
+contig_0331698	V01	binned	comebin_1009	archaea	40.74	7464
+contig_0333268	V01	binned	comebin_1009	archaea	41.86	7461
+contig_0333464	V01	binned	comebin_1009	eukarya	43.57	7579
+contig_0334006	V01	binned	comebin_1009	eukarya	43.71	7349
+contig_0335717	V01	binned	comebin_1009	archaea	45.66	7425
+contig_0336872	V01	binned	comebin_1009	eukarya	42.07	7388
+contig_0337537	V01	binned	comebin_1009	eukarya	44.24	7158
+contig_0339123	V01	binned	comebin_1009	archaea	39.51	7456
+contig_0342259	V01	binned	comebin_1009	archaea	41.4	5374
+contig_0342403	V01	binned	comebin_1009	eukarya	45.33	7293
+contig_0343224	V01	binned	comebin_1009	eukarya	44.32	6396
+contig_0344184	V01	binned	comebin_1009	eukarya	41.77	7299
+contig_0345668	V01	binned	comebin_1009	eukarya	44.19	7438
+contig_0347197	V01	binned	comebin_1009	archaea	46.62	7158
+contig_0347205	V01	binned	comebin_1009	archaea	43.75	6896
+contig_0347505	V01	binned	comebin_1009	eukarya	46.27	6897
+contig_0349256	V01	binned	comebin_1009	eukarya	43.75	7069
+contig_0349792	V01	binned	comebin_1009	eukarya	43.84	7221
+contig_0351057	V01	binned	comebin_1009	eukarya	49.16	7213
+contig_0352937	V01	binned	comebin_1009	eukarya	39.22	7190
+contig_0354987	V01	binned	comebin_1009	eukarya	43.19	7126
+contig_0355217	V01	binned	comebin_1009	archaea	42.5	6878
+contig_0356278	V01	binned	comebin_1009	eukarya	41.57	7135
+contig_0357700	V01	binned	comebin_1009	eukarya	45.7	7053
+contig_0357885	V01	binned	comebin_1009	eukarya	45.16	7137
+contig_0359349	V01	binned	comebin_1009	eukarya	47.54	5966
+contig_0359353	V01	binned	comebin_1009	eukarya	43.71	5887
+contig_0359748	V01	binned	comebin_1009	eukarya	41.38	7098
+contig_0360418	V01	binned	comebin_1009	eukarya	39.68	7100
+contig_0360943	V01	binned	comebin_1009	archaea	45.53	7096
+contig_0361263	V01	binned	comebin_1009	eukarya	43.26	7067
+contig_0362058	V01	binned	comebin_1009	eukarya	45.2	7108
+contig_0362420	V01	binned	comebin_1009	eukarya	43.63	7106
+contig_0362718	V01	binned	comebin_1009	eukarya	44.7	7056
+contig_0363038	V01	binned	comebin_1009	eukarya	45.45	7041
+contig_0363698	V01	binned	comebin_1009	eukarya	41.42	7359
+contig_0363974	V01	binned	comebin_1009	eukarya	40.09	7041
+contig_0365671	V01	binned	comebin_1009	archaea	41.33	7009
+contig_0366296	V01	binned	comebin_1009	eukarya	41.14	7001
+contig_0368550	V01	binned	comebin_1009	eukarya	48.09	6989
+contig_0368766	V01	binned	comebin_1009	eukarya	43.91	6999
+contig_0369514	V01	binned	comebin_1009	eukarya	44.34	6965
+contig_0369945	V01	binned	comebin_1009	eukarya	41.12	7600
+contig_0370486	V01	binned	comebin_1009	eukarya	41.71	6943
+contig_0371156	V01	binned	comebin_1009	eukarya	40.68	6947
+contig_0371262	V01	binned	comebin_1009	archaea	40.42	6905
+contig_0373812	V01	binned	comebin_1009	eukarya	41.73	6918
+contig_0375702	V01	binned	comebin_1009	archaea	41.84	6859
+contig_0376722	V01	binned	comebin_1009	eukarya	41.29	6972
+contig_0378169	V01	binned	comebin_1009	archaea	40.42	6861
+contig_0379365	V01	binned	comebin_1009	eukarya	44.22	6932
+contig_0379775	V01	binned	comebin_1009	eukarya	42.09	6855
+contig_0380150	V01	binned	comebin_1009	archaea	42.7	6855
+contig_0381631	V01	binned	comebin_1009	eukarya	43.01	6850
+contig_0382420	V01	binned	comebin_1009	eukarya	43.07	7291
+contig_0382436	V01	binned	comebin_1009	eukarya	38.95	6813
+contig_0382530	V01	binned	comebin_1009	eukarya	43.26	6815
+contig_0382668	V01	binned	comebin_1009	eukarya	44.62	6696
+contig_0383005	V01	binned	comebin_1009	eukarya	43.26	6798
+contig_0383214	V01	binned	comebin_1009	eukarya	43.75	6844
+contig_0383831	V01	binned	comebin_1009	archaea	43.11	6717
+contig_0384162	V01	binned	comebin_1009	archaea	42.88	6802
+contig_0384774	V01	binned	comebin_1009	archaea	39.84	6788
+contig_0385433	V01	binned	comebin_1009	archaea	36.69	6782
+contig_0385507	V01	binned	comebin_1009,vamb_1186	archaea	43.0	6888
+contig_0386236	V01	binned	comebin_1009	unknown	43.65	5620
+contig_0388848	V01	binned	comebin_1009	eukarya	46.5	6780
+contig_0390594	V01	binned	comebin_1009	eukarya	42.62	6764
+contig_0390595	V01	binned	comebin_1009	archaea	40.76	6739
+contig_0391332	V01	binned	comebin_1009	eukarya	44.53	6696
+contig_0392230	V01	binned	comebin_1009	eukarya	45.41	6765
+contig_0392509	V01	binned	comebin_1009	eukarya	40.71	6693
+contig_0392569	V01	binned	comebin_1009	eukarya	44.12	6663
+contig_0393095	V01	binned	comebin_1009	eukarya	44.99	6588
+contig_0393605	V01	binned	comebin_1009	archaea	45.86	6629
+contig_0394465	V01	binned	comebin_1009	eukarya	43.77	6682
+contig_0394538	V01	binned	comebin_1009	eukarya	38.87	6682
+contig_0395279	V01	binned	comebin_1009	eukarya	38.2	6659
+contig_0395960	V01	binned	comebin_1009	eukarya	40.08	6666
+contig_0396425	V01	binned	comebin_1009	eukarya	44.01	6674
+contig_0397791	V01	binned	comebin_1009	eukarya	42.61	6646
+contig_0399068	V01	binned	comebin_1009	archaea	41.23	6622
+contig_0402272	V01	binned	comebin_1009	eukarya	43.99	6601
+contig_0404047	V01	binned	comebin_1009	eukarya	42.62	6593
+contig_0406861	V01	binned	comebin_1009	eukarya	49.96	5965
+contig_0407641	V01	binned	comebin_1009	eukarya	45.46	6553
+contig_0408163	V01	binned	comebin_1009	archaea	42.85	6495
+contig_0408385	V01	binned	comebin_1009	eukarya	45.27	6541
+contig_0411342	V01	binned	comebin_1009	eukarya	43.53	5902
+contig_0415714	V01	binned	comebin_1009	eukarya	42.88	6509
+contig_0415985	V01	binned	comebin_1009	eukarya	41.71	6478
+contig_0416442	V01	binned	comebin_1009	eukarya	41.12	6467
+contig_0417123	V01	binned	comebin_1009	eukarya	45.42	6477
+contig_0420227	V01	binned	comebin_1009	archaea	42.97	6453
+contig_0422599	V01	binned	comebin_1009	eukarya	39.73	5280
+contig_0422741	V01	binned	comebin_1009	eukarya	38.82	6396
+contig_0423173	V01	binned	comebin_1009	eukarya	40.04	6394
+contig_0423520	V01	binned	comebin_1009	eukarya	41.88	6401
+contig_0423673	V01	binned	comebin_1009	archaea	40.68	6409
+contig_0424690	V01	binned	comebin_1009	eukarya	42.61	6465
+contig_0424726	V01	binned	comebin_1009	eukarya	43.54	6445
+contig_0425088	V01	binned	comebin_1009	eukarya	40.22	6380
+contig_0426444	V01	binned	comebin_1009	archaea	40.34	6597
+contig_0428108	V01	binned	comebin_1009	eukarya	40.41	6288
+contig_0429760	V01	binned	comebin_1009	eukarya	42.32	6331
+contig_0429863	V01	binned	comebin_1009	archaea	42.8	5671
+contig_0430195	V01	binned	comebin_1009	eukarya	42.12	6610
+contig_0430321	V01	binned	comebin_1009	archaea	39.86	6324
+contig_0430512	V01	binned	comebin_1009	eukarya	44.39	6646
+contig_0430598	V01	binned	comebin_1009	eukarya	41.85	6310
+contig_0431975	V01	binned	comebin_1009	eukarya	43.1	6308
+contig_0432085	V01	binned	comebin_1009	eukarya	42.81	6332
+contig_0432432	V01	binned	comebin_1009	eukarya	40.82	6316
+contig_0432465	V01	binned	comebin_1009	eukarya	41.13	6304
+contig_0433142	V01	binned	comebin_1009	archaea	45.51	6115
+contig_0433672	V01	binned	comebin_1009	archaea	42.98	6279
+contig_0433722	V01	binned	comebin_1009	eukarya	45.31	6307
+contig_0434678	V01	binned	comebin_1009	eukarya	40.01	6313
+contig_0434698	V01	binned	comebin_1009	archaea	40.95	6283
+contig_0437228	V01	binned	comebin_1009	eukarya	44.54	5950
+contig_0437253	V01	binned	comebin_1009	archaea	42.05	6233
+contig_0437857	V01	binned	comebin_1009	eukarya	49.36	6301
+contig_0439954	V01	binned	comebin_1009	eukarya	43.07	6250
+contig_0440499	V01	binned	comebin_1009	eukarya	40.75	6601
+contig_0442627	V01	binned	comebin_1009	eukarya	40.08	6220
+contig_0442779	V01	binned	comebin_1009	eukarya	40.98	6015
+contig_0443820	V01	binned	comebin_1009	eukarya	41.47	6214
+contig_0443834	V01	binned	comebin_1009	eukarya	45.46	6282
+contig_0444172	V01	binned	comebin_1009	eukarya	39.84	6210
+contig_0446761	V01	binned	comebin_1009	eukarya	44.21	6204
+contig_0448069	V01	binned	comebin_1009	eukarya	43.42	6184
+contig_0448697	V01	binned	comebin_1009	eukarya	44.13	6179
+contig_0449984	V01	binned	comebin_1009	eukarya	40.31	6153
+contig_0453180	V01	binned	comebin_1009	archaea	40.65	6140
+contig_0454356	V01	binned	comebin_1009	eukarya	45.88	6111
+contig_0455732	V01	binned	comebin_1009	unknown	41.24	6098
+contig_0457460	V01	binned	comebin_1009	eukarya	43.87	6105
+contig_0460618	V01	binned	comebin_1009	eukarya	44.74	6046
+contig_0461077	V01	binned	comebin_1009	eukarya	45.4	6068
+contig_0462165	V01	binned	comebin_1009	archaea	41.71	6064
+contig_0464059	V01	binned	comebin_1009	eukarya	40.33	5557
+contig_0464366	V01	binned	comebin_1009	archaea	39.25	6026
+contig_0465609	V01	binned	comebin_1009	archaea	41.27	5999
+contig_0466213	V01	binned	comebin_1009	eukarya	42.5	6024
+contig_0469550	V01	binned	comebin_1009	eukarya	38.64	5989
+contig_0470750	V01	binned	comebin_1009	eukarya	46.06	5766
+contig_0471034	V01	binned	comebin_1009	archaea	44.64	6002
+contig_0471975	V01	binned	comebin_1009	archaea	45.16	5863
+contig_0476758	V01	binned	comebin_1009	eukarya	43.26	6377
+contig_0476812	V01	binned	comebin_1009	eukarya	42.98	5929
+contig_0478018	V01	binned	comebin_1009	unknown	46.12	5926
+contig_0480390	V01	binned	comebin_1009	eukarya	44.99	5975
+contig_0481395	V01	binned	comebin_1009	archaea	41.41	5897
+contig_0481928	V01	binned	comebin_1009	eukarya	41.19	5875
+contig_0482598	V01	binned	comebin_1009	eukarya	44.3	5907
+contig_0485653	V01	binned	comebin_1009	eukarya	41.67	5858
+contig_0485756	V01	binned	comebin_1009	archaea	38.73	5854
+contig_0487150	V01	binned	comebin_1009	archaea	47.81	5878
+contig_0487419	V01	binned	comebin_1009	eukarya	44.84	5772
+contig_0488921	V01	binned	comebin_1009	eukarya	39.85	5832
+contig_0490966	V01	binned	comebin_1009	eukarya	46.56	5747
+contig_0491189	V01	binned	comebin_1009	eukarya	45.56	5858
+contig_0491923	V01	binned	comebin_1009	eukarya	41.89	5825
+contig_0497400	V01	binned	comebin_1009	eukarya	43.44	5705
+contig_0500466	V01	binned	comebin_1009	eukarya	43.23	5420
+contig_0503746	V01	binned	comebin_1009	eukarya	40.32	5741
+contig_0504638	V01	binned	comebin_1009	eukarya	43.52	5669
+contig_0504670	V01	binned	comebin_1009	eukarya	43.73	5772
+contig_0505931	V01	binned	comebin_1009	eukarya	45.88	5349
+contig_0509862	V01	binned	comebin_1009	eukarya	43.96	5689
+contig_0509962	V01	binned	comebin_1009	eukarya	43.27	5702
+contig_0510443	V01	binned	comebin_1009	eukarya	45.83	5176
+contig_0512292	V01	binned	comebin_1009	eukarya	42.96	5656
+contig_0512514	V01	binned	comebin_1009	archaea	38.97	5684
+contig_0516062	V01	binned	comebin_1009	eukarya	45.81	5623
+contig_0517052	V01	binned	comebin_1009	archaea	45.91	5936
+contig_0517232	V01	binned	comebin_1009	archaea	50.02	5764
+contig_0518300	V01	binned	comebin_1009	eukarya	49.35	5526
+contig_0519938	V01	binned	comebin_1009	eukarya	41.68	5622
+contig_0520471	V01	binned	comebin_1009	eukarya	42.24	5566
+contig_0522918	V01	binned	comebin_1009	eukarya	41.28	5576
+contig_0525779	V01	binned	comebin_1009	eukarya	45.83	5573
+contig_0527141	V01	binned	comebin_1009	archaea	43.22	5564
+contig_0529462	V01	binned	comebin_1009	eukarya	42.25	5560
+contig_0530586	V01	binned	comebin_1009	eukarya	45.11	5580
+contig_0530959	V01	binned	comebin_1009	eukarya	44.73	5560
+contig_0531593	V01	binned	comebin_1009	eukarya	41.1	5533
+contig_0533966	V01	binned	comebin_1009	eukarya	39.78	6264
+contig_0534828	V01	binned	comebin_1009	archaea	41.03	5510
+contig_0536615	V01	binned	comebin_1009	archaea	40.56	5496
+contig_0538864	V01	binned	comebin_1009	eukarya	44.12	5501
+contig_0540944	V01	binned	comebin_1009	eukarya	46.17	5480
+contig_0541021	V01	binned	comebin_1009	eukarya	47.07	5475
+contig_0541792	V01	binned	comebin_1009	eukarya	45.91	5458
+contig_0542263	V01	binned	comebin_1009	eukarya	42.14	5475
+contig_0544888	V01	binned	comebin_1009	archaea	44.87	5489
+contig_0546567	V01	binned	comebin_1009	eukarya	39.93	5414
+contig_0548396	V01	binned	comebin_1009	eukarya	45.45	5430
+contig_0549569	V01	binned	comebin_1009	eukarya	44.42	5461
+contig_0552503	V01	binned	comebin_1009	eukarya	43.38	4806
+contig_0552748	V01	binned	comebin_1009	eukarya	40.3	5417
+contig_0553052	V01	binned	comebin_1009	archaea	39.47	5442
+contig_0554710	V01	binned	comebin_1009	eukarya	45.45	5340
+contig_0554803	V01	binned	comebin_1009	archaea	45.38	5414
+contig_0558811	V01	binned	comebin_1009	eukarya	38.0	5360
+contig_0559531	V01	binned	comebin_1009	eukarya	43.7	5279
+contig_0563745	V01	binned	comebin_1009	archaea	47.61	5367
+contig_0564590	V01	binned	comebin_1009	eukarya	42.1	5318
+contig_0564818	V01	binned	comebin_1009	eukarya	41.38	5317
+contig_0567247	V01	binned	comebin_1009	archaea	43.56	5390
+contig_0569623	V01	binned	comebin_1009	archaea	40.34	5342
+contig_0570647	V01	binned	comebin_1009	eukarya	39.45	5280
+contig_0573295	V01	binned	comebin_1009	eukarya	41.48	5260
+contig_0577137	V01	binned	comebin_1009	unknown	45.11	5201
+contig_0578877	V01	binned	comebin_1009	eukarya	43.82	5274
+contig_0580748	V01	binned	comebin_1009	eukarya	38.64	5231
+contig_0586259	V01	binned	comebin_1009	eukarya	47.74	5197
+contig_0588000	V01	binned	comebin_1009	eukarya	43.11	5185
+contig_0591460	V01	binned	comebin_1009	eukarya	41.66	5173
+contig_0594142	V01	binned	comebin_1009	archaea	42.81	5102
+contig_0597736	V01	binned	comebin_1009	archaea	40.11	5126
+contig_0600648	V01	binned	comebin_1009	eukarya	43.99	5137
+contig_0601068	V01	binned	comebin_1009	eukarya	48.14	5123
+contig_0603967	V01	binned	comebin_1009	archaea	47.22	5203
+contig_0607959	V01	binned	comebin_1009	eukarya	41.45	5098
+contig_0610083	V01	binned	comebin_1009	eukarya	50.08	5082
+contig_0612591	V01	binned	comebin_1009	archaea	42.88	4909
+contig_0620596	V01	binned	comebin_1009	eukarya	48.47	5001
+contig_0621705	V01	binned	comebin_1009	archaea	42.0	4995
+contig_0622148	V01	binned	comebin_1009	archaea	46.39	4995
+contig_0623335	V01	binned	comebin_1009	eukarya	42.05	5044
+contig_0627167	V01	binned	comebin_1009	archaea	39.02	4562
+contig_0628981	V01	binned	comebin_1009	eukarya	48.36	4969
+contig_0629150	V01	binned	comebin_1009	eukarya	43.86	4982
+contig_0629499	V01	binned	comebin_1009	eukarya	40.43	5189
+contig_0629723	V01	binned	comebin_1009	eukarya	39.54	4972
+contig_0631092	V01	binned	comebin_1009	eukarya	51.59	4949
+contig_0633865	V01	binned	comebin_1009	eukarya	40.09	4932
+contig_0634117	V01	binned	comebin_1009	eukarya	45.19	4935
+contig_0634857	V01	binned	comebin_1009	eukarya	42.66	4955
+contig_0635251	V01	binned	comebin_1009	eukarya	45.46	4967
+contig_0637149	V01	binned	comebin_1009	eukarya	39.13	4904
+contig_0637294	V01	binned	comebin_1009	eukarya	48.05	4916
+contig_0637394	V01	binned	comebin_1009	eukarya	43.36	4929
+contig_0638071	V01	binned	comebin_1009	eukarya	44.22	4914
+contig_0639916	V01	binned	comebin_1009	eukarya	44.09	4917
+contig_0641076	V01	binned	comebin_1009	eukarya	47.49	4902
+contig_0643277	V01	binned	comebin_1009	archaea	41.24	4888
+contig_0643698	V01	binned	comebin_1009	eukarya	42.69	4879
+contig_0645710	V01	binned	comebin_1009	eukarya	42.3	4877
+contig_0645833	V01	binned	comebin_1009	eukarya	42.82	4865
+contig_0646489	V01	binned	comebin_1009	archaea	48.06	4879
+contig_0648967	V01	binned	comebin_1009	eukarya	41.84	4873
+contig_0650194	V01	binned	comebin_1009	archaea	40.19	4854
+contig_0650753	V01	binned	comebin_1009	eukarya	41.27	4853
+contig_0651269	V01	binned	comebin_1009	archaea	43.48	4848
+contig_0651860	V01	binned	comebin_1009	eukarya	44.06	4828
+contig_0653484	V01	binned	comebin_1009	eukarya	41.05	4853
+contig_0655255	V01	binned	comebin_1009	eukarya	41.95	4877
+contig_0655341	V01	binned	comebin_1009	eukarya	40.69	4842
+contig_0656777	V01	binned	comebin_1009	eukarya	43.25	4823
+contig_0657467	V01	binned	comebin_1009	eukarya	42.12	5105
+contig_0658868	V01	binned	comebin_1009	eukarya	43.06	4824
+contig_0658941	V01	binned	comebin_1009	eukarya	39.44	4810
+contig_0659092	V01	binned	comebin_1009	archaea	40.49	4749
+contig_0659805	V01	binned	comebin_1009	archaea	45.47	4799
+contig_0659989	V01	binned	comebin_1009	archaea	44.05	4822
+contig_0660338	V01	binned	comebin_1009	eukarya	43.51	4806
+contig_0660838	V01	binned	comebin_1009	eukarya	47.07	4778
+contig_0660977	V01	binned	comebin_1009	archaea	43.21	4800
+contig_0661276	V01	binned	comebin_1009	eukarya	40.54	4800
+contig_0661606	V01	binned	comebin_1009	eukarya	44.55	4795
+contig_0667810	V01	binned	comebin_1009	archaea	39.57	4334
+contig_0668198	V01	binned	comebin_1009	eukarya	45.58	4794
+contig_0670737	V01	binned	comebin_1009	eukarya	43.83	4755
+contig_0672710	V01	binned	comebin_1009	archaea	40.09	4754
+contig_0673993	V01	binned	comebin_1009	eukarya	48.67	4759
+contig_0675932	V01	binned	comebin_1009	eukarya	40.48	4758
+contig_0677477	V01	binned	comebin_1009	archaea	43.06	4724
+contig_0677493	V01	binned	comebin_1009	eukarya	42.59	5487
+contig_0678879	V01	binned	comebin_1009	archaea	42.01	4746
+contig_0678984	V01	binned	comebin_1009	eukarya	38.89	4716
+contig_0679739	V01	binned	comebin_1009	archaea	43.94	4727
+contig_0680723	V01	binned	comebin_1009	eukarya	43.09	4748
+contig_0683239	V01	binned	comebin_1009	archaea	41.66	4695
+contig_0683550	V01	binned	comebin_1009	eukarya	42.76	4696
+contig_0688305	V01	binned	comebin_1009	eukarya	40.43	4705
+contig_0688609	V01	binned	comebin_1009	eukarya	41.34	4623
+contig_0690792	V01	binned	comebin_1009	archaea	46.0	4696
+contig_0691724	V01	binned	comebin_1009	archaea	40.92	4695
+contig_0693933	V01	binned	comebin_1009	eukarya	38.1	4378
+contig_0695636	V01	binned	comebin_1009	bacteria	43.26	4223
+contig_0696330	V01	binned	comebin_1009	eukarya	45.93	4659
+contig_0696340	V01	binned	comebin_1009	eukarya	49.74	4741
+contig_0698253	V01	binned	comebin_1009	eukarya	40.94	4594
+contig_0701019	V01	binned	comebin_1009	prokarya	43.59	4630
+contig_0702279	V01	binned	comebin_1009	eukarya	48.88	4765
+contig_0702595	V01	binned	comebin_1009	archaea	41.82	4622
+contig_0705252	V01	binned	comebin_1009	unknown	39.0	4610
+contig_0705594	V01	binned	comebin_1009	eukarya	37.34	4598
+contig_0708076	V01	binned	comebin_1009	eukarya	45.58	4623
+contig_0711960	V01	binned	comebin_1009	eukarya	40.04	4580
+contig_0712977	V01	binned	comebin_1009	eukarya	52.85	4568
+contig_0713129	V01	binned	comebin_1009	eukarya	49.58	4574
+contig_0714970	V01	binned	comebin_1009	eukarya	43.89	4582
+contig_0715986	V01	binned	comebin_1009	eukarya	42.87	4595
+contig_0716673	V01	binned	comebin_1009	eukarya	38.56	4551
+contig_0716825	V01	binned	comebin_1009	eukarya	42.05	4554
+contig_0718728	V01	binned	comebin_1009	archaea	42.29	4542
+contig_0720604	V01	binned	comebin_1009	eukarya	49.13	4576
+contig_0721469	V01	binned	comebin_1009	eukarya	40.26	4530
+contig_0721893	V01	binned	comebin_1009	archaea	41.61	4535
+contig_0724935	V01	binned	comebin_1009	eukarya	39.81	4516
+contig_0725786	V01	binned	comebin_1009	archaea	37.61	4512
+contig_0727236	V01	binned	comebin_1009	eukarya	42.65	4516
+contig_0728199	V01	binned	comebin_1009	eukarya	43.01	4508
+contig_0728847	V01	binned	comebin_1009	unknown	42.25	4502
+contig_0729264	V01	binned	comebin_1009	archaea	39.54	4497
+contig_0730236	V01	binned	comebin_1009	eukarya	40.77	4479
+contig_0730295	V01	binned	comebin_1009	eukarya	41.92	4492
+contig_0731720	V01	binned	comebin_1009	archaea	46.14	4554
+contig_0731968	V01	binned	comebin_1009	eukarya	42.17	4487
+contig_0732211	V01	binned	comebin_1009	eukarya	40.86	4486
+contig_0732784	V01	binned	comebin_1009	archaea	45.97	4516
+contig_0733326	V01	binned	comebin_1009	archaea	36.15	4479
+contig_0734954	V01	binned	comebin_1009	eukarya	44.44	4480
+contig_0738490	V01	binned	comebin_1009	eukarya	46.64	4460
+contig_0739315	V01	binned	comebin_1009	eukarya	40.88	4464
+contig_0742684	V01	binned	comebin_1009	archaea	42.8	4449
+contig_0743212	V01	binned	comebin_1009	eukarya	39.73	4438
+contig_0744506	V01	binned	comebin_1009	eukarya	43.25	4449
+contig_0747289	V01	binned	comebin_1009	eukarya	47.26	4460
+contig_0747515	V01	binned	comebin_1009	eukarya	44.58	4421
+contig_0757139	V01	binned	comebin_1009	archaea	45.84	4387
+contig_0758948	V01	binned	comebin_1009	eukarya	42.81	4391
+contig_0759021	V01	binned	comebin_1009	eukarya	42.24	4543
+contig_0759915	V01	binned	comebin_1009	eukarya	43.4	4389
+contig_0762561	V01	binned	comebin_1009	eukarya	41.45	4372
+contig_0766043	V01	binned	comebin_1009	archaea	47.92	4345
+contig_0766273	V01	binned	comebin_1009	archaea	40.43	4356
+contig_0767570	V01	binned	comebin_1009	eukarya	39.15	4353
+contig_0768596	V01	binned	comebin_1009	eukarya	40.51	4782
+contig_0769697	V01	binned	comebin_1009	prokarya	42.23	4333
+contig_0769817	V01	binned	comebin_1009	archaea	41.02	4334
+contig_0771744	V01	binned	comebin_1009	eukarya	49.05	4271
+contig_0773400	V01	binned	comebin_1009	eukarya	43.65	4293
+contig_0773527	V01	binned	comebin_1009	eukarya	42.76	4324
+contig_0773855	V01	binned	comebin_1009	eukarya	39.87	4314
+contig_0775487	V01	binned	comebin_1009	eukarya	41.0	4246
+contig_0777137	V01	binned	comebin_1009	eukarya	38.95	4082
+contig_0777316	V01	binned	comebin_1009	archaea	42.95	4258
+contig_0778089	V01	binned	comebin_1009	eukarya	42.48	4701
+contig_0780174	V01	binned	comebin_1009	eukarya	47.32	4009
+contig_0782794	V01	binned	comebin_1009	eukarya	44.65	4298
+contig_0783473	V01	binned	comebin_1009	eukarya	51.6	4300
+contig_0784307	V01	binned	comebin_1009	archaea	46.29	4277
+contig_0784421	V01	binned	comebin_1009	eukarya	40.23	4285
+contig_0786230	V01	binned	comebin_1009	eukarya	44.21	4811
+contig_0788093	V01	binned	comebin_1009	archaea	43.24	4302
+contig_0788506	V01	binned	comebin_1009	eukarya	42.57	4259
+contig_0788535	V01	binned	comebin_1009	archaea	39.39	3501
+contig_0789849	V01	binned	comebin_1009	eukarya	47.7	4291
+contig_0790085	V01	binned	comebin_1009	eukarya	43.1	4251
+contig_0791418	V01	binned	comebin_1009	eukarya	45.62	4268
+contig_0795609	V01	binned	comebin_1009	archaea	43.81	4234
+contig_0796562	V01	binned	comebin_1009	eukarya	42.18	4225
+contig_0797119	V01	binned	comebin_1009	archaea	43.92	4251
+contig_0799476	V01	binned	comebin_1009	archaea	42.1	4040
+contig_0800926	V01	binned	comebin_1009	eukarya	43.03	4285
+contig_0800991	V01	binned	comebin_1009	archaea	42.95	4263
+contig_0802962	V01	binned	comebin_1009	eukarya	44.63	4212
+contig_0807191	V01	binned	comebin_1009	eukarya	40.31	4155
+contig_0809345	V01	binned	comebin_1009	eukarya	41.6	3974
+contig_0809902	V01	binned	comebin_1009	eukarya	42.18	3971
+contig_0813186	V01	binned	comebin_1009	eukarya	40.59	3858
+contig_0816665	V01	binned	comebin_1009	eukarya	38.17	4155
+contig_0816816	V01	binned	comebin_1009	eukarya	44.97	4156
+contig_0817695	V01	binned	comebin_1009	archaea	42.29	4155
+contig_0821522	V01	binned	comebin_1009	eukarya	45.15	4133
+contig_0826494	V01	binned	comebin_1009	eukarya	40.58	3891
+contig_0828274	V01	binned	comebin_1009,vamb_1186	archaea	42.14	4134
+contig_0829974	V01	binned	comebin_1009	eukarya	41.33	4101
+contig_0834162	V01	binned	comebin_1009	eukarya	46.57	4110
+contig_0835275	V01	binned	comebin_1009	archaea	43.49	4130
+contig_0836269	V01	binned	comebin_1009	archaea	49.63	3826
+contig_0837965	V01	binned	comebin_1009	eukarya	42.78	4086
+contig_0844587	V01	binned	comebin_1009	eukarya	41.63	4052
+contig_0845459	V01	binned	comebin_1009	eukarya	45.11	4057
+contig_0845864	V01	binned	comebin_1009	eukarya	41.07	4044
+contig_0847284	V01	binned	comebin_1009	bacteria	43.84	4065
+contig_0847679	V01	binned	comebin_1009	archaea	39.87	4048
+contig_0848709	V01	binned	comebin_1009	eukarya	39.24	4047
+contig_0851910	V01	binned	comebin_1009	eukarya	47.93	4039
+contig_0852660	V01	binned	comebin_1009	archaea	44.68	4022
+contig_0853862	V01	binned	comebin_1009	eukarya	41.75	4017
+contig_0853995	V01	binned	comebin_1009	eukarya	40.2	4020
+contig_0857846	V01	binned	comebin_1009	eukarya	40.01	4009
+contig_0862858	V01	binned	comebin_1009	eukarya	44.93	3986
+contig_0863157	V01	binned	comebin_1009	eukarya	43.05	3995
+contig_0865801	V01	binned	comebin_1009	eukarya	45.66	3979
+contig_0865951	V01	binned	comebin_1009	eukarya	47.2	3987
+contig_0865954	V01	binned	comebin_1009	eukarya	42.91	4062
+contig_0866552	V01	binned	comebin_1009	eukarya	41.86	4035
+contig_0866676	V01	binned	comebin_1009	bacteria	44.78	3982
+contig_0871096	V01	binned	comebin_1009	eukarya	50.41	3981
+contig_0877222	V01	binned	comebin_1009	eukarya	43.71	3935
+contig_0878998	V01	binned	comebin_1009	eukarya	41.05	3929
+contig_0879178	V01	binned	comebin_1009	eukarya	40.83	3931
+contig_0882526	V01	binned	comebin_1009	eukarya	42.09	3918
+contig_0883743	V01	binned	comebin_1009	eukarya	40.17	3913
+contig_0884392	V01	binned	comebin_1009		43.16	2667
+contig_0884908	V01	binned	comebin_1009	eukarya	40.99	3889
+contig_0885399	V01	binned	comebin_1009	eukarya	46.24	3914
+contig_0886251	V01	binned	comebin_1009	eukarya	42.56	3907
+contig_0896069	V01	binned	comebin_1009	eukarya	42.03	3871
+contig_0896675	V01	binned	comebin_1009	unknown	46.64	3872
+contig_0896846	V01	binned	comebin_1009	eukarya	44.12	3878
+contig_0902483	V01	binned	comebin_1009	archaea	42.24	3866
+contig_0902771	V01	binned	comebin_1009	eukarya	44.65	3810
+contig_0905456	V01	binned	comebin_1009	archaea	44.68	3850
+contig_0906310	V01	binned	comebin_1009	archaea	38.68	3837
+contig_0906387	V01	binned	comebin_1009,vamb_1186	eukarya	44.48	3876
+contig_0907876	V01	binned	comebin_1009	archaea	40.54	3833
+contig_0908752	V01	binned	comebin_1009	eukarya	39.54	3829
+contig_0911462	V01	binned	comebin_1009	eukarya	44.99	3821
+contig_0914138	V01	binned	comebin_1009	eukarya	42.23	3810
+contig_0917629	V01	binned	comebin_1009	eukarya	41.02	3798
+contig_0918504	V01	binned	comebin_1009	archaea	38.25	3799
+contig_0920223	V01	binned	comebin_1009	eukarya	45.37	3668
+contig_0921897	V01	binned	comebin_1009	eukarya	42.64	3785
+contig_0922637	V01	binned	comebin_1009	archaea	40.72	3794
+contig_0923572	V01	binned	comebin_1009	archaea	42.77	3788
+contig_0932562	V01	binned	comebin_1009	eukarya	44.88	3679
+contig_0932907	V01	binned	comebin_1009	eukarya	46.02	3748
+contig_0935755	V01	binned	comebin_1009	eukarya	43.24	3742
+contig_0938903	V01	binned	comebin_1009	eukarya	38.64	3727
+contig_0940166	V01	binned	comebin_1009	eukarya	43.95	3725
+contig_0942581	V01	binned	comebin_1009	eukarya	46.21	3716
+contig_0946732	V01	binned	comebin_1009	eukarya	45.52	3719
+contig_0950624	V01	binned	comebin_1009	eukarya	43.61	3726
+contig_0950780	V01	binned	comebin_1009	archaea	46.01	3688
+contig_0952828	V01	binned	comebin_1009	eukarya	45.31	3688
+contig_0953108	V01	binned	comebin_1009	archaea	38.1	3682
+contig_0956269	V01	binned	comebin_1009	archaea	45.21	3552
+contig_0956563	V01	binned	comebin_1009	eukarya	43.81	3670
+contig_0959127	V01	binned	comebin_1009	archaea	41.34	3563
+contig_0959308	V01	binned	comebin_1009	eukarya	42.57	3669
+contig_0960917	V01	binned	comebin_1009	archaea	43.71	3679
+contig_0961760	V01	binned	comebin_1009	eukarya	40.82	3655
+contig_0962607	V01	binned	comebin_1009	eukarya	50.18	3711
+contig_0962699	V01	binned	comebin_1009	archaea	40.08	3658
+contig_0962735	V01	binned	comebin_1009	eukarya	43.91	3653
+contig_0964861	V01	binned	comebin_1009	archaea	39.64	3645
+contig_0966528	V01	binned	comebin_1009	bacteria	43.98	3638
+contig_0970344	V01	binned	comebin_1009	eukarya	40.94	3630
+contig_0973808	V01	binned	comebin_1009	archaea	52.13	3643
+contig_0975522	V01	binned	comebin_1009	eukarya	46.36	3611
+contig_0977837	V01	binned	comebin_1009	archaea	42.65	3601
+contig_0979428	V01	binned	comebin_1009	eukarya	47.14	3600
+contig_0980311	V01	binned	comebin_1009	eukarya	50.15	3599
+contig_0980333	V01	binned	comebin_1009	eukarya	41.61	3595
+contig_0981532	V01	binned	comebin_1009	eukarya	40.3	3593
+contig_0984827	V01	binned	comebin_1009	eukarya	41.99	3594
+contig_0985534	V01	binned	comebin_1009	eukarya	43.06	3581
+contig_0986714	V01	binned	comebin_1009	eukarya	38.7	3548
+contig_0988194	V01	binned	comebin_1009	archaea	48.38	3764
+contig_1000416	V01	binned	comebin_1009	eukarya	37.79	3538
+contig_1001419	V01	binned	comebin_1009	eukarya	41.19	3535
+contig_1002455	V01	binned	comebin_1009	eukarya	49.08	3529
+contig_1003242	V01	binned	comebin_1009	eukarya	38.15	3536
+contig_1004957	V01	binned	comebin_1009	eukarya	42.48	3557
+contig_1006914	V01	binned	comebin_1009	archaea	42.82	3529
+contig_1007573	V01	binned	comebin_1009	eukarya	44.35	3475
+contig_1010057	V01	binned	comebin_1009	eukarya	49.12	3508
+contig_1011584	V01	binned	comebin_1009	archaea	40.7	3506
+contig_1011656	V01	binned	comebin_1009	archaea	43.36	3503
+contig_1011926	V01	binned	comebin_1009	archaea	41.01	3526
+contig_1012607	V01	binned	comebin_1009	eukarya	44.39	3503
+contig_1014958	V01	binned	comebin_1009	eukarya	40.61	3484
+contig_1015320	V01	binned	comebin_1009	archaea	39.46	3490
+contig_1015634	V01	binned	comebin_1009	eukarya	49.77	3506
+contig_1018898	V01	binned	comebin_1009	eukarya	44.52	3486
+contig_1019359	V01	binned	comebin_1009	eukarya	44.39	3478
+contig_1021790	V01	binned	comebin_1009	eukarya	39.78	3469
+contig_1025113	V01	binned	comebin_1009	eukarya	43.94	3482
+contig_1031123	V01	binned	comebin_1009	eukarya	43.68	3372
+contig_1031442	V01	binned	comebin_1009	eukarya	41.94	3441
+contig_1034494	V01	binned	comebin_1009	eukarya	45.28	3657
+contig_1034578	V01	binned	comebin_1009	eukarya	41.43	3432
+contig_1038421	V01	binned	comebin_1009	eukarya	45.35	3427
+contig_1039162	V01	binned	comebin_1009	eukarya	41.31	3428
+contig_1043550	V01	binned	comebin_1009	eukarya	42.09	3421
+contig_1045348	V01	binned	comebin_1009	archaea	38.57	3433
+contig_1046245	V01	binned	comebin_1009	eukarya	39.97	3448
+contig_1049972	V01	binned	comebin_1009	eukarya	43.24	3388
+contig_1050159	V01	binned	comebin_1009	eukarya	43.06	3421
+contig_1051878	V01	binned	comebin_1009	eukarya	47.0	3385
+contig_1053291	V01	binned	comebin_1009	archaea	46.74	3406
+contig_1053532	V01	binned	comebin_1009	eukarya	39.05	3388
+contig_1053566	V01	binned	comebin_1009	eukarya	41.59	3383
+contig_1055689	V01	binned	comebin_1009	eukarya	51.7	3389
+contig_1056145	V01	binned	comebin_1009	eukarya	43.02	3375
+contig_1056189	V01	binned	comebin_1009	eukarya	42.48	3371
+contig_1059508	V01	binned	comebin_1009	eukarya	43.15	3360
+contig_1062787	V01	binned	comebin_1009	archaea	41.06	3356
+contig_1065958	V01	binned	comebin_1009	archaea	45.72	3867
+contig_1066298	V01	binned	comebin_1009	eukarya	39.1	3340
+contig_1066727	V01	binned	comebin_1009	eukarya	43.1	3339
+contig_1067308	V01	binned	comebin_1009	archaea	49.6	3341
+contig_1070646	V01	binned	comebin_1009	eukarya	42.88	3295
+contig_1072484	V01	binned	comebin_1009	archaea	41.84	3327
+contig_1074237	V01	binned	comebin_1009	eukarya	39.0	3331
+contig_1074259	V01	binned	comebin_1009	eukarya	41.42	3322
+contig_1074471	V01	binned	comebin_1009	eukarya	39.7	3033
+contig_1075518	V01	binned	comebin_1009	eukarya	45.67	3313
+contig_1077741	V01	binned	comebin_1009	eukarya	39.73	3307
+contig_1077925	V01	binned	comebin_1009	archaea	44.8	3310
+contig_1079853	V01	binned	comebin_1009	eukarya	45.45	3360
+contig_1080255	V01	binned	comebin_1009	eukarya	40.28	3302
+contig_1083890	V01	binned	comebin_1009	eukarya	40.19	3289
+contig_1084619	V01	binned	comebin_1009	eukarya	40.13	3287
+contig_1085422	V01	binned	comebin_1009	eukarya	46.39	3294
+contig_1095499	V01	binned	comebin_1009	eukarya	41.92	3256
+contig_1097227	V01	binned	comebin_1009	archaea	39.53	3253
+contig_1098714	V01	binned	comebin_1009	eukarya	41.83	3254
+contig_1099369	V01	binned	comebin_1009	eukarya	40.89	3245
+contig_1099763	V01	binned	comebin_1009	archaea	46.4	3246
+contig_1100564	V01	binned	comebin_1009	eukarya	44.25	3259
+contig_1102043	V01	binned	comebin_1009	eukarya	36.29	3238
+contig_1102272	V01	binned	comebin_1009	archaea	39.68	3238
+contig_1103304	V01	binned	comebin_1009	archaea	43.17	3236
+contig_1105445	V01	binned	comebin_1009	archaea	40.55	3228
+contig_1106420	V01	binned	comebin_1009	archaea	40.81	3225
+contig_1117833	V01	binned	comebin_1009	eukarya	48.75	3194
+contig_1119529	V01	binned	comebin_1009	archaea	46.47	3226
+contig_1122208	V01	binned	comebin_1009	eukarya	37.54	3181
+contig_1123122	V01	binned	comebin_1009	eukarya	49.16	3206
+contig_1123654	V01	binned	comebin_1009	eukarya	40.68	3183
+contig_1125528	V01	binned	comebin_1009	eukarya	43.91	3186
+contig_1128111	V01	binned	comebin_1009	eukarya	41.48	3182
+contig_1128637	V01	binned	comebin_1009	archaea	47.07	3172
+contig_1130187	V01	binned	comebin_1009	archaea	38.52	3157
+contig_1130912	V01	binned	comebin_1009	eukarya	40.23	3157
+contig_1134126	V01	binned	comebin_1009	eukarya	42.51	3145
+contig_1135113	V01	binned	comebin_1009	archaea	37.25	3144
+contig_1138649	V01	binned	comebin_1009	eukarya	44.68	3142
+contig_1144375	V01	binned	comebin_1009	archaea	43.53	3122
+contig_1144469	V01	binned	comebin_1009	archaea	41.74	3153
+contig_1145441	V01	binned	comebin_1009	eukarya	45.82	3123
+contig_1145934	V01	binned	comebin_1009	archaea	42.7	3124
+contig_1145942	V01	binned	comebin_1009	eukarya	41.57	3130
+contig_1146202	V01	binned	comebin_1009	archaea	46.2	3143
+contig_1148155	V01	binned	comebin_1009	archaea	43.73	3119
+contig_1150986	V01	binned	comebin_1009	eukarya	45.43	3099
+contig_1151479	V01	binned	comebin_1009	eukarya	41.81	3097
+contig_1152057	V01	binned	comebin_1009	eukarya	45.77	3107
+contig_1152666	V01	binned	comebin_1009	eukarya	44.52	3118
+contig_1157535	V01	binned	comebin_1009	eukarya	46.95	3084
+contig_1163982	V01	binned	comebin_1009	eukarya	44.17	3052
+contig_1168928	V01	binned	comebin_1009	eukarya	42.03	3081
+contig_1171086	V01	binned	comebin_1009		45.29	2029
+contig_1171174	V01	binned	comebin_1009	eukarya	38.87	3000
+contig_1172164	V01	binned	comebin_1009	archaea	44.54	3038
+contig_1176409	V01	binned	comebin_1009	eukarya	49.38	3050
+contig_1177627	V01	binned	comebin_1009	eukarya	41.98	3025
+contig_1178236	V01	binned	comebin_1009	eukarya	43.63	3023
+contig_1178870	V01	binned	comebin_1009	eukarya	45.59	3029
+contig_1183990	V01	binned	comebin_1009	eukarya	44.31	3006
+contig_1187335	V01	binned	comebin_1009		40.69	2996
+contig_1188267	V01	binned	comebin_1009		40.89	2996
+contig_1190942	V01	binned	comebin_1009		44.85	2983
+contig_1191382	V01	binned	comebin_1009		40.03	2985
+contig_1191971	V01	binned	comebin_1009		39.58	2984
+contig_1193740	V01	binned	comebin_1009		38.3	2979
+contig_1194824	V01	binned	comebin_1009		47.87	2985
+contig_1194905	V01	binned	comebin_1009	archaea	41.82	3422
+contig_1197306	V01	binned	comebin_1009		39.85	2974
+contig_1198016	V01	binned	comebin_1009		41.51	2973
+contig_1200271	V01	binned	comebin_1009		41.91	2971
+contig_1201749	V01	binned	comebin_1009		40.64	2965
+contig_1204574	V01	binned	comebin_1009		41.78	2982
+contig_1207482	V01	binned	comebin_1009		40.98	2948
+contig_1210565	V01	binned	comebin_1009		41.78	2817
+contig_1210796	V01	binned	comebin_1009		45.84	2932
+contig_1214361	V01	binned	comebin_1009		49.73	2922
+contig_1217040	V01	binned	comebin_1009		43.81	2947
+contig_1217651	V01	binned	comebin_1009		43.6	2915
+contig_1217667	V01	binned	comebin_1009		40.8	2863
+contig_1219150	V01	binned	comebin_1009		42.77	2668
+contig_1220634	V01	binned	comebin_1009		40.96	2903
+contig_1223567	V01	binned	comebin_1009		43.14	2923
+contig_1224357	V01	binned	comebin_1009		40.51	2891
+contig_1224785	V01	binned	comebin_1009		43.46	2899
+contig_1225609	V01	binned	comebin_1009		42.59	2893
+contig_1229243	V01	binned	comebin_1009		38.96	2877
+contig_1229621	V01	binned	comebin_1009		39.86	2885
+contig_1232358	V01	binned	comebin_1009		46.04	2867
+contig_1233845	V01	binned	comebin_1009		48.87	2867
+contig_1234218	V01	binned	comebin_1009		48.3	2861
+contig_1235430	V01	binned	comebin_1009		40.64	2862
+contig_1236337	V01	binned	comebin_1009		46.54	2789
+contig_1236948	V01	binned	comebin_1009		51.43	2860
+contig_1242386	V01	binned	comebin_1009		43.72	2749
+contig_1242443	V01	binned	comebin_1009		40.98	2555
+contig_1246326	V01	binned	comebin_1009		43.84	2810
+contig_1246572	V01	binned	comebin_1009		39.08	2830
+contig_1248381	V01	binned	comebin_1009		36.97	2824
+contig_1252565	V01	binned	comebin_1009		41.42	2820
+contig_1252624	V01	binned	comebin_1009		40.88	2808
+contig_1257360	V01	binned	comebin_1009		49.42	2744
+contig_1257933	V01	binned	comebin_1009		45.56	2792
+contig_1258121	V01	binned	comebin_1009		41.39	2793
+contig_1259973	V01	binned	comebin_1009		42.89	2786
+contig_1260399	V01	binned	comebin_1009		47.44	2797
+contig_1262717	V01	binned	comebin_1009		42.0	2624
+contig_1263914	V01	binned	comebin_1009		45.52	2766
+contig_1265678	V01	binned	comebin_1009		45.21	2800
+contig_1269715	V01	binned	comebin_1009		46.23	2808
+contig_1270370	V01	binned	comebin_1009		41.81	2755
+contig_1270981	V01	binned	comebin_1009		38.56	2757
+contig_1271530	V01	binned	comebin_1009		42.83	2762
+contig_1272013	V01	binned	comebin_1009		43.31	2752
+contig_1273289	V01	binned	comebin_1009		41.51	2746
+contig_1275609	V01	binned	comebin_1009		42.71	2744
+contig_1278692	V01	binned	comebin_1009		39.32	2729
+contig_1280446	V01	binned	comebin_1009		47.67	2725
+contig_1280591	V01	binned	comebin_1009		37.02	2723
+contig_1280956	V01	binned	comebin_1009		43.44	2723
+contig_1282062	V01	binned	comebin_1009		52.29	2729
+contig_1283014	V01	binned	comebin_1009		41.88	1841
+contig_1284290	V01	binned	comebin_1009		37.9	2710
+contig_1285605	V01	binned	comebin_1009		46.12	2708
+contig_1285660	V01	binned	comebin_1009		37.46	2707
+contig_1287372	V01	binned	comebin_1009		42.23	2714
+contig_1287985	V01	binned	comebin_1009		46.3	2715
+contig_1290154	V01	binned	comebin_1009		45.35	2712
+contig_1291042	V01	binned	comebin_1009		43.63	2693
+contig_1293617	V01	binned	comebin_1009		46.7	2709
+contig_1293722	V01	binned	comebin_1009		45.49	2684
+contig_1294021	V01	binned	comebin_1009		39.82	2697
+contig_1294359	V01	binned	comebin_1009		49.61	2798
+contig_1296767	V01	binned	comebin_1009		39.94	2674
+contig_1298376	V01	binned	comebin_1009		44.26	2648
+contig_1300935	V01	binned	comebin_1009		42.45	2648
+contig_1302946	V01	binned	comebin_1009		41.68	2615
+contig_1305298	V01	binned	comebin_1009		41.56	2647
+contig_1305385	V01	binned	comebin_1009		45.35	2624
+contig_1305930	V01	binned	comebin_1009		43.55	2645
+contig_1307806	V01	binned	comebin_1009		38.69	2639
+contig_1308983	V01	binned	comebin_1009		43.11	2640
+contig_1313768	V01	binned	comebin_1009		46.47	2617
+contig_1313889	V01	binned	comebin_1009		36.18	2620
+contig_1314854	V01	binned	comebin_1009		51.88	2656
+contig_1315528	V01	binned	comebin_1009		37.97	2615
+contig_1316759	V01	binned	comebin_1009		40.89	2612
+contig_1318592	V01	binned	comebin_1009		46.63	2623
+contig_1319889	V01	binned	comebin_1009		42.33	2601
+contig_1320366	V01	binned	comebin_1009		44.09	2599
+contig_1320647	V01	binned	comebin_1009		38.68	2593
+contig_1321590	V01	binned	comebin_1009		38.11	2595
+contig_1326176	V01	binned	comebin_1009		47.95	2611
+contig_1327078	V01	binned	comebin_1009		43.65	2584
+contig_1327080	V01	binned	comebin_1009		43.21	2578
+contig_1328066	V01	binned	comebin_1009		39.28	2574
+contig_1328699	V01	binned	comebin_1009		43.91	2576
+contig_1331974	V01	binned	comebin_1009		41.27	2566
+contig_1333081	V01	binned	comebin_1009		40.44	2574
+contig_1333611	V01	binned	comebin_1009		40.3	2556
+contig_1333717	V01	binned	comebin_1009		41.92	2555
+contig_1335968	V01	binned	comebin_1009		41.32	2551
+contig_1336446	V01	binned	comebin_1009		43.7	2547
+contig_1337013	V01	binned	comebin_1009		37.11	2544
+contig_1337294	V01	binned	comebin_1009		44.87	2554
+contig_1337938	V01	binned	comebin_1009		43.1	2543
+contig_1338166	V01	binned	comebin_1009		47.82	2541
+contig_1338543	V01	binned	comebin_1009		43.76	2539
+contig_1339043	V01	binned	comebin_1009		46.7	2561
+contig_1342104	V01	binned	comebin_1009		40.23	2565
+contig_1342981	V01	binned	comebin_1009		40.44	2532
+contig_1345055	V01	binned	comebin_1009		40.51	2530
+contig_1345634	V01	binned	comebin_1009		44.59	2525
+contig_1345793	V01	binned	comebin_1009		43.98	2517
+contig_1346175	V01	binned	comebin_1009		48.01	2535
+contig_1346888	V01	binned	comebin_1009		42.17	1717
+contig_1347821	V01	binned	comebin_1009		41.36	2529
+contig_1348796	V01	binned	comebin_1009		40.37	2507
+contig_1349529	V01	binned	comebin_1009		40.02	2501
+contig_1352969	V01	binned	comebin_1009		40.0	2490
+contig_1353087	V01	binned	comebin_1009		48.34	2507
+contig_1354123	V01	binned	comebin_1009		49.54	2489
+contig_1355400	V01	binned	comebin_1009		39.13	2305
+contig_1355866	V01	binned	comebin_1009		46.27	2479
+contig_1355906	V01	binned	comebin_1009		50.93	2362
+contig_1356477	V01	binned	comebin_1009		41.75	2534
+contig_1356487	V01	binned	comebin_1009		41.51	2551
+contig_1358303	V01	binned	comebin_1009		44.35	2379
+contig_1358540	V01	binned	comebin_1009		41.4	2471
+contig_1359790	V01	binned	comebin_1009		42.14	2468
+contig_1360152	V01	binned	comebin_1009		38.28	2466
+contig_1361514	V01	binned	comebin_1009		48.78	2460
+contig_1361957	V01	binned	comebin_1009		50.24	2458
+contig_1363133	V01	binned	comebin_1009		50.2	2466
+contig_1363483	V01	binned	comebin_1009		42.94	2457
+contig_1366085	V01	binned	comebin_1009		46.14	2488
+contig_1366221	V01	binned	comebin_1009		43.6	2438
+contig_1366382	V01	binned	comebin_1009		51.1	2464
+contig_1366845	V01	binned	comebin_1009		46.64	2455
+contig_1368616	V01	binned	comebin_1009		46.63	2436
+contig_1369047	V01	binned	comebin_1009		42.3	2428
+contig_1369048	V01	binned	comebin_1009		43.68	2436
+contig_1369212	V01	binned	comebin_1009		44.37	2247
+contig_1371197	V01	binned	comebin_1009		41.31	2312
+contig_1371991	V01	binned	comebin_1009		40.85	2421
+contig_1373498	V01	binned	comebin_1009		37.12	2422
+contig_1376495	V01	binned	comebin_1009		42.49	2410
+contig_1377888	V01	binned	comebin_1009		39.54	2405
+contig_1379436	V01	binned	comebin_1009		45.28	2407
+contig_1379804	V01	binned	comebin_1009		42.43	2399
+contig_1380694	V01	binned	comebin_1009		44.08	2391
+contig_1381377	V01	binned	comebin_1009		45.44	2388
+contig_1382771	V01	binned	comebin_1009		40.73	2352
+contig_1385147	V01	binned	comebin_1009		45.31	2375
+contig_1385372	V01	binned	comebin_1009		47.85	2368
+contig_1385862	V01	binned	comebin_1009		41.55	2373
+contig_1386410	V01	binned	comebin_1009		44.72	2375
+contig_1386481	V01	binned	comebin_1009		44.95	2438
+contig_1387191	V01	binned	comebin_1009		43.07	2366
+contig_1387304	V01	binned	comebin_1009		46.56	2367
+contig_1387313	V01	binned	comebin_1009		44.64	2314
+contig_1388291	V01	binned	comebin_1009		38.87	2362
+contig_1388355	V01	binned	comebin_1009		39.56	2366
+contig_1388984	V01	binned	comebin_1009		43.11	2366
+contig_1389184	V01	binned	comebin_1009		47.64	2376
+contig_1390233	V01	binned	comebin_1009		40.12	2368
+contig_1390829	V01	binned	comebin_1009		39.97	2352
+contig_1391368	V01	binned	comebin_1009		44.87	2358
+contig_1392531	V01	binned	comebin_1009		42.8	2215
+contig_1393129	V01	binned	comebin_1009		46.96	2383
+contig_1394139	V01	binned	comebin_1009		44.35	2370
+contig_1394554	V01	binned	comebin_1009		46.59	2378
+contig_1395419	V01	binned	comebin_1009		42.03	2346
+contig_1395840	V01	binned	comebin_1009		43.09	2360
+contig_1396520	V01	binned	comebin_1009		38.88	2330
+contig_1396890	V01	binned	comebin_1009		44.46	2330
+contig_1397102	V01	binned	comebin_1009		39.97	2327
+contig_1398672	V01	binned	comebin_1009		45.47	2395
+contig_1401324	V01	binned	comebin_1009		43.46	2310
+contig_1401878	V01	binned	comebin_1009		44.39	2309
+contig_1403035	V01	binned	comebin_1009		42.64	2303
+contig_1403424	V01	binned	comebin_1009		46.33	2301
+contig_1403769	V01	binned	comebin_1009		35.35	2300
+contig_1404493	V01	binned	comebin_1009		43.6	2266
+contig_1405585	V01	binned	comebin_1009		42.35	2293
+contig_1405958	V01	binned	comebin_1009		42.84	2292
+contig_1408136	V01	binned	comebin_1009		42.0	2112
+contig_1408840	V01	binned	comebin_1009		42.74	2279
+contig_1410121	V01	binned	comebin_1009		46.04	2274
+contig_1410658	V01	binned	comebin_1009		43.13	2272
+contig_1412739	V01	binned	comebin_1009		40.95	2264
+contig_1413949	V01	binned	comebin_1009		37.91	2258
+contig_1413990	V01	binned	comebin_1009		41.01	2258
+contig_1415187	V01	binned	comebin_1009		46.58	2250
+contig_1417384	V01	binned	comebin_1009		38.94	2247
+contig_1418452	V01	binned	comebin_1009		40.01	2267
+contig_1418488	V01	binned	comebin_1009		44.17	1707
+contig_1418909	V01	binned	comebin_1009		46.18	2237
+contig_1419007	V01	binned	comebin_1009		40.59	2237
+contig_1420024	V01	binned	comebin_1009		38.22	2232
+contig_1420451	V01	binned	comebin_1009		45.56	2232
+contig_1420507	V01	binned	comebin_1009		43.82	2232
+contig_1422166	V01	binned	comebin_1009		48.49	2225
+contig_1422906	V01	binned	comebin_1009		44.93	2230
+contig_1423386	V01	binned	comebin_1009		42.38	1904
+contig_1424809	V01	binned	comebin_1009		44.73	2211
+contig_1426868	V01	binned	comebin_1009		39.15	2202
+contig_1427711	V01	binned	comebin_1009		43.96	2202
+contig_1428763	V01	binned	comebin_1009		45.13	2196
+contig_1428768	V01	binned	comebin_1009		37.48	2188
+contig_1429232	V01	binned	comebin_1009		40.68	2220
+contig_1429387	V01	binned	comebin_1009		44.46	2184
+contig_1429508	V01	binned	comebin_1009		36.73	2167
+contig_1430259	V01	binned	comebin_1009		45.58	2172
+contig_1430372	V01	binned	comebin_1009		42.56	2183
+contig_1431136	V01	binned	comebin_1009		39.88	2164
+contig_1431244	V01	binned	comebin_1009		38.12	2167
+contig_1432549	V01	binned	comebin_1009		41.83	2204
+contig_1433210	V01	binned	comebin_1009		45.07	2141
+contig_1433430	V01	binned	comebin_1009		39.49	2165
+contig_1433595	V01	binned	comebin_1009		45.02	2137
+contig_1434020	V01	binned	comebin_1009		42.18	2148
+contig_1434215	V01	binned	comebin_1009		41.58	2138
+contig_1434729	V01	binned	comebin_1009		45.01	2126
+contig_1435534	V01	binned	comebin_1009		38.82	2133
+contig_1435958	V01	binned	comebin_1009		46.9	2113
+contig_1436901	V01	binned	comebin_1009		44.42	2107
+contig_1437101	V01	binned	comebin_1009		40.77	2102
+contig_1437204	V01	binned	comebin_1009		43.63	2102
+contig_1437206	V01	binned	comebin_1009		39.61	2103
+contig_1437881	V01	binned	comebin_1009		40.61	2115
+contig_1438181	V01	binned	comebin_1009		44.29	2091
+contig_1439720	V01	binned	comebin_1009		45.42	2076
+contig_1440964	V01	binned	comebin_1009		43.77	2072
+contig_1441235	V01	binned	comebin_1009		46.5	1600
+contig_1441267	V01	binned	comebin_1009		43.06	2060
+contig_1442822	V01	binned	comebin_1009		40.53	2053
+contig_1443333	V01	binned	comebin_1009		42.67	2039
+contig_1443973	V01	binned	comebin_1009		43.95	2050
+contig_1444270	V01	binned	comebin_1009		48.15	2029
+contig_1444461	V01	binned	comebin_1009		39.97	1984
+contig_1444676	V01	binned	comebin_1009		42.84	2024
+contig_1445292	V01	binned	comebin_1009		47.89	2019
+contig_1446076	V01	binned	comebin_1009		41.69	2015
+contig_1446261	V01	binned	comebin_1009		41.4	2017
+contig_1447146	V01	binned	comebin_1009		46.55	2000
+contig_1447149	V01	binned	comebin_1009		45.11	2006
+contig_1447433	V01	binned	comebin_1009		46.07	1997
+contig_1448008	V01	binned	comebin_1009		45.19	2005
+contig_1448574	V01	binned	comebin_1009		51.86	2129
+contig_1448609	V01	binned	comebin_1009		42.71	1529
+contig_1448840	V01	binned	comebin_1009		40.41	1987
+contig_1449191	V01	binned	comebin_1009		44.47	1979
+contig_1449403	V01	binned	comebin_1009		38.88	1983
+contig_1450107	V01	binned	comebin_1009		37.52	1959
+contig_1451214	V01	binned	comebin_1009		42.98	1959
+contig_1451743	V01	binned	comebin_1009		44.35	1984
+contig_1451926	V01	binned	comebin_1009		41.27	1970
+contig_1452152	V01	binned	comebin_1009		49.57	1963
+contig_1453523	V01	binned	comebin_1009		42.33	1937
+contig_1453744	V01	binned	comebin_1009		37.74	1974
+contig_1454542	V01	binned	comebin_1009		38.97	1927
+contig_1454567	V01	binned	comebin_1009		42.33	1904
+contig_1454665	V01	binned	comebin_1009		46.17	1956
+contig_1455156	V01	binned	comebin_1009		44.77	1827
+contig_1455212	V01	binned	comebin_1009		44.64	1949
+contig_1455230	V01	binned	comebin_1009		49.19	1923
+contig_1455237	V01	binned	comebin_1009		44.53	1927
+contig_1455963	V01	binned	comebin_1009		46.33	1919
+contig_1456064	V01	binned	comebin_1009		42.47	1966
+contig_1456598	V01	binned	comebin_1009		47.05	1815
+contig_1456851	V01	binned	comebin_1009		49.4	1909
+contig_1457025	V01	binned	comebin_1009		44.03	1910
+contig_1457652	V01	binned	comebin_1009		45.36	1898
+contig_1457753	V01	binned	comebin_1009		44.62	1896
+contig_1457872	V01	binned	comebin_1009		50.67	2025
+contig_1458852	V01	binned	comebin_1009		47.5	1800
+contig_1459461	V01	binned	comebin_1009		40.43	1880
+contig_1459511	V01	binned	comebin_1009		38.92	1881
+contig_1461141	V01	binned	comebin_1009		41.3	1867
+contig_1461217	V01	binned	comebin_1009		40.71	1867
+contig_1461260	V01	binned	comebin_1009		44.47	1518
+contig_1461861	V01	binned	comebin_1009		41.07	1858
+contig_1461908	V01	binned	comebin_1009		49.28	1875
+contig_1462218	V01	binned	comebin_1009		38.24	1867
+contig_1462219	V01	binned	comebin_1009		41.35	1855
+contig_1462297	V01	binned	comebin_1009		40.74	2241
+contig_1462574	V01	binned	comebin_1009		46.23	1856
+contig_1462812	V01	binned	comebin_1009		47.78	1825
+contig_1463448	V01	binned	comebin_1009		42.08	1849
+contig_1464476	V01	binned	comebin_1009		47.81	1853
+contig_1464708	V01	binned	comebin_1009		42.52	1832
+contig_1464836	V01	binned	comebin_1009		49.48	1831
+contig_1464905	V01	binned	comebin_1009		43.7	1826
+contig_1465234	V01	binned	comebin_1009		41.6	1654
+contig_1466919	V01	binned	comebin_1009		39.62	1820
+contig_1467691	V01	binned	comebin_1009		44.9	1815
+contig_1468128	V01	binned	comebin_1009		41.32	1803
+contig_1469607	V01	binned	comebin_1009		50.44	1800
+contig_1471841	V01	binned	comebin_1009		38.84	1769
+contig_1471871	V01	binned	comebin_1009		43.1	1768
+contig_1472073	V01	binned	comebin_1009		42.73	1767
+contig_1472126	V01	binned	comebin_1009		51.7	1708
+contig_1472886	V01	binned	comebin_1009		45.79	1673
+contig_1472910	V01	binned	comebin_1009		39.8	1764
+contig_1472911	V01	binned	comebin_1009		36.95	1759
+contig_1473469	V01	binned	comebin_1009		44.05	1755
+contig_1474109	V01	binned	comebin_1009		47.61	1756
+contig_1475495	V01	binned	comebin_1009		37.26	1739
+contig_1475746	V01	binned	comebin_1009		46.14	1734
+contig_1475948	V01	binned	comebin_1009		47.84	1739
+contig_1476144	V01	binned	comebin_1009		54.55	1736
+contig_1477158	V01	binned	comebin_1009		41.84	1721
+contig_1477456	V01	binned	comebin_1009		43.93	1698
+contig_1477988	V01	binned	comebin_1009		42.27	1727
+contig_1478315	V01	binned	comebin_1009		40.89	1712
+contig_1478369	V01	binned	comebin_1009		42.34	1710
+contig_1479140	V01	binned	comebin_1009		39.32	1704
+contig_1479630	V01	binned	comebin_1009		40.22	1698
+contig_1480203	V01	binned	comebin_1009		50.0	1696
+contig_1480205	V01	binned	comebin_1009		42.3	1721
+contig_1480744	V01	binned	comebin_1009		43.13	1688
+contig_1480746	V01	binned	comebin_1009		39.75	1688
+contig_1480997	V01	binned	comebin_1009		41.44	1694
+contig_1482268	V01	binned	comebin_1009		39.58	1675
+contig_1482355	V01	binned	comebin_1009		44.99	1596
+contig_1482658	V01	binned	comebin_1009		39.63	1673
+contig_1482831	V01	binned	comebin_1009		38.14	1670
+contig_1483011	V01	binned	comebin_1009		46.57	1675
+contig_1483110	V01	binned	comebin_1009		41.01	1624
+contig_1483818	V01	binned	comebin_1009		44.3	1684
+contig_1483847	V01	binned	comebin_1009		42.84	1662
+contig_1484307	V01	binned	comebin_1009		42.86	1666
+contig_1484573	V01	binned	comebin_1009		46.89	1657
+contig_1485208	V01	binned	comebin_1009		45.94	1441
+contig_1485444	V01	binned	comebin_1009		41.86	1653
+contig_1485566	V01	binned	comebin_1009		40.08	1649
+contig_1486147	V01	binned	comebin_1009		43.25	1644
+contig_1487175	V01	binned	comebin_1009		47.67	1632
+contig_1487685	V01	binned	comebin_1009		44.64	1633
+contig_1488776	V01	binned	comebin_1009		45.98	1566
+contig_1489534	V01	binned	comebin_1009		46.68	1613
+contig_1490087	V01	binned	comebin_1009		41.3	1610
+contig_1490103	V01	binned	comebin_1009		45.2	1772
+contig_1490813	V01	binned	comebin_1009		41.87	1612
+contig_1491003	V01	binned	comebin_1009		36.74	1603
+contig_1491203	V01	binned	comebin_1009		42.96	1478
+contig_1491876	V01	binned	comebin_1009		49.75	1598
+contig_1492933	V01	binned	comebin_1009		44.23	1585
+contig_1493560	V01	binned	comebin_1009		40.72	1579
+contig_1493803	V01	binned	comebin_1009		45.59	1577
+contig_1494262	V01	binned	comebin_1009		49.06	1549
+contig_1495041	V01	binned	comebin_1009		44.76	1566
+contig_1495409	V01	binned	comebin_1009		46.88	1570
+contig_1495848	V01	binned	comebin_1009		45.5	1567
+contig_1496701	V01	binned	comebin_1009		45.14	1522
+contig_1497138	V01	binned	comebin_1009		50.48	1563
+contig_1497612	V01	binned	comebin_1009		44.25	1557
+contig_1498947	V01	binned	comebin_1009		43.39	1459
+contig_1499412	V01	binned	comebin_1009		46.09	2044
+contig_1500200	V01	binned	comebin_1009		50.23	1505
+contig_1501074	V01	binned	comebin_1009		44.9	1528
+contig_1501699	V01	binned	comebin_1009		41.96	1511
+contig_1502291	V01	binned	comebin_1009,binette_629		36.64	1504
+contig_1502494	V01	binned	comebin_1009		37.3	1504
+contig_1502568	V01	binned	comebin_1009		47.65	1381
+contig_1502594	V01	binned	comebin_1009		39.16	1162
+contig_1502913	V01	binned	comebin_1009		37.87	1500
+contig_1502964	V01	binned	comebin_1009		49.0	1500
+contig_1503553	V01	binned	comebin_1009		50.29	1384
+contig_1503708	V01	binned	comebin_1009		48.96	1495
+contig_1504823	V01	binned	comebin_1009		46.78	1383
+contig_1505211	V01	binned	comebin_1009		38.46	2288
+contig_1506054	V01	binned	comebin_1009		42.59	1357
+contig_1506068	V01	binned	comebin_1009		47.26	1479
+contig_1506442	V01	binned	comebin_1009		42.21	1841
+contig_1507118	V01	binned	comebin_1009		44.17	1467
+contig_1507717	V01	binned	comebin_1009		47.1	1463
+contig_1507955	V01	binned	comebin_1009		48.8	1461
+contig_1508460	V01	binned	comebin_1009		45.38	1461
+contig_1509732	V01	binned	comebin_1009		42.95	1446
+contig_1510819	V01	binned	comebin_1009		43.22	1439
+contig_1511206	V01	binned	comebin_1009		45.64	1435
+contig_1511714	V01	binned	comebin_1009		43.54	1431
+contig_1511820	V01	binned	comebin_1009		45.25	1326
+contig_1512200	V01	binned	comebin_1009		38.99	1426
+contig_1512234	V01	binned	comebin_1009		39.68	1424
+contig_1512824	V01	binned	comebin_1009		44.88	1444
+contig_1513584	V01	binned	comebin_1009		45.69	1416
+contig_1513947	V01	binned	comebin_1009		43.95	1654
+contig_1514062	V01	binned	comebin_1009		43.64	1414
+contig_1514171	V01	binned	comebin_1009		46.97	1418
+contig_1514559	V01	binned	comebin_1009		42.74	1399
+contig_1514560	V01	binned	comebin_1009		42.87	1409
+contig_1515178	V01	binned	comebin_1009		43.58	1347
+contig_1515332	V01	binned	comebin_1009		43.85	1391
+contig_1515472	V01	binned	comebin_1009		39.1	1243
+contig_1515553	V01	binned	comebin_1009		43.46	1399
+contig_1515916	V01	binned	comebin_1009		47.08	1419
+contig_1516678	V01	binned	comebin_1009		42.12	1396
+contig_1517205	V01	binned	comebin_1009		39.21	1390
+contig_1518138	V01	binned	comebin_1009		43.27	1345
+contig_1518829	V01	binned	comebin_1009		48.08	1381
+contig_1518959	V01	binned	comebin_1009		39.93	1380
+contig_1519998	V01	binned	comebin_1009		45.96	1362
+contig_1520368	V01	binned	comebin_1009		42.7	1363
+contig_1521023	V01	binned	comebin_1009		41.18	1241
+contig_1521935	V01	binned	comebin_1009		40.92	1349
+contig_1522012	V01	binned	comebin_1009		47.56	1268
+contig_1524709	V01	binned	comebin_1009		50.61	1316
+contig_1525083	V01	binned	comebin_1009		44.3	1325
+contig_1525395	V01	binned	comebin_1009		40.1	1227
+contig_1525735	V01	binned	comebin_1009		43.4	1325
+contig_1526185	V01	binned	comebin_1009		40.29	1318
+contig_1526862	V01	binned	comebin_1009		41.78	1314
+contig_1527107	V01	binned	comebin_1009		40.88	1311
+contig_1527407	V01	binned	comebin_1009		43.56	1313
+contig_1527427	V01	binned	comebin_1009		40.78	1307
+contig_1529770	V01	binned	comebin_1009		48.33	1291
+contig_1529996	V01	binned	comebin_1009		46.87	1293
+contig_1530431	V01	binned	comebin_1009		47.26	1316
+contig_1530444	V01	binned	comebin_1009		47.92	1298
+contig_1531086	V01	binned	comebin_1009		45.63	1258
+contig_1531694	V01	binned	comebin_1009		40.34	1165
+contig_1533119	V01	binned	comebin_1009		43.73	1267
+contig_1533375	V01	binned	comebin_1009		42.45	1265
+contig_1533398	V01	binned	comebin_1009		38.31	1266
+contig_1533399	V01	binned	comebin_1009		47.39	1188
+contig_1534102	V01	binned	comebin_1009		45.08	1260
+contig_1534853	V01	binned	comebin_1009		43.29	1088
+contig_1535414	V01	binned	comebin_1009		39.71	1254
+contig_1535470	V01	binned	comebin_1009		50.12	1211
+contig_1535597	V01	binned	comebin_1009		39.46	1252
+contig_1536090	V01	binned	comebin_1009		38.65	1247
+contig_1536728	V01	binned	comebin_1009		45.37	1243
+contig_1537148	V01	binned	comebin_1009		43.22	1247
+contig_1537592	V01	binned	comebin_1009		43.86	1035
+contig_1537718	V01	binned	comebin_1009		46.7	1242
+contig_1538012	V01	binned	comebin_1009		46.27	1100
+contig_1538764	V01	binned	comebin_1009		50.49	1228
+contig_1538879	V01	binned	comebin_1009		50.16	1232
+contig_1539027	V01	binned	comebin_1009		45.27	1226
+contig_1539615	V01	binned	comebin_1009		48.29	1228
+contig_1539901	V01	binned	comebin_1009		49.17	1328
+contig_1544209	V01	binned	comebin_1009		39.35	1192
+contig_1544615	V01	binned	comebin_1009		43.91	1191
+contig_1546318	V01	binned	comebin_1009		38.75	1164
+contig_1547634	V01	binned	comebin_1009		36.86	1172
+contig_1549408	V01	binned	comebin_1009		50.82	1157
+contig_1549740	V01	binned	comebin_1009		44.1	1170
+contig_1550387	V01	binned	comebin_1009		44.32	1153
+contig_1553718	V01	binned	comebin_1009		43.36	1130
+contig_1555971	V01	binned	comebin_1009		45.61	1116
+contig_1557250	V01	binned	comebin_1009		42.68	1024
+contig_1557498	V01	binned	comebin_1009		39.55	1120
+contig_1557634	V01	binned	comebin_1009		43.07	1133
+contig_1559673	V01	binned	comebin_1009		45.14	1081
+contig_1562238	V01	binned	comebin_1009		43.53	1082
+contig_1562628	V01	binned	comebin_1009		37.42	1077
+contig_1564544	V01	binned	comebin_1009		53.25	1031
+contig_1565370	V01	binned	comebin_1009		43.88	1062
+contig_1566642	V01	binned	comebin_1009		44.88	1065
+contig_1567193	V01	binned	comebin_1009		42.91	1086
+contig_1567319	V01	binned	comebin_1009		49.38	1053
+contig_1567379	V01	binned	comebin_1009		43.48	1051
+contig_1569377	V01	binned	comebin_1009		48.47	1011
+contig_1569874	V01	binned	comebin_1009		41.6	1036
+contig_1570040	V01	binned	comebin_1009		38.76	1045
+contig_1570825	V01	binned	comebin_1009		43.08	1033
+contig_1571356	V01	binned	comebin_1009		53.11	1028
+contig_1571550	V01	binned	comebin_1009		46.18	1035
+contig_1571716	V01	binned	comebin_1009		43.23	1027
+contig_1571952	V01	binned	comebin_1009		40.68	1025
+contig_1572168	V01	binned	comebin_1009		37.9	1029
+contig_1572517	V01	binned	comebin_1009		38.49	1021
+contig_1572819	V01	binned	comebin_1009		42.9	1021
+contig_1574152	V01	binned	comebin_1009		45.41	1013
+contig_1575086	V01	binned	comebin_1009		45.36	1014
+contig_1576379	V01	binned	comebin_1009		44.0	1009
+contig_0053833	V02		kernel_blob:B12	organelle	29.8	21118
+contig_0009031	V02		kernel_blob:B12	organelle	29.66	67739
+contig_0315440	V02		kernel_blob:B12	organelle	28.54	7730
+contig_0183817	V02		kernel_blob:B12	organelle	26.91	10675
+contig_0246958	V02		kernel_blob:B12	organelle	32.77	8984
+contig_1086417	V02		kernel_blob:B12	organelle	33.05	3283
+contig_0587311	V02		kernel_blob:B12	organelle	30.64	5330
+contig_0711944	V02		kernel_blob:B12	organelle	33.95	4575
+contig_1022564	V02		kernel_blob:B12	organelle	33.06	3479
+contig_0104723	V02		kernel_blob:B12	organelle	27.86	14715
+contig_0097175	V02		kernel_blob:B12	organelle	30.54	15283
+contig_0318405	V02		kernel_blob:B12	organelle	30.26	7666
+contig_0501771	V02		kernel_blob:B12	organelle	30.29	5735
+contig_0045383	V02		kernel_blob:B12	organelle	29.59	24092
+contig_0753849	V02		kernel_blob:B12	organelle	32.67	4411
+contig_0147597	V02		kernel_blob:B12	organelle	30.94	12135
+contig_0710627	V02		kernel_blob:B12	organelle	33.82	4613
+contig_0491027	V02		kernel_blob:B12	organelle	27.15	5842
+contig_0276548	V02		kernel_blob:B12	organelle	29.27	8371
+contig_0186539	V02		kernel_blob:B12	organelle	30.05	10588
+contig_0008414	V02		kernel_blob:B12	organelle	31.39	71014
+contig_0009231	V02		kernel_blob:B12	organelle	31.3	66806
+contig_0183775	V02		kernel_blob:B12	organelle	28.12	10433
+contig_0327318	V02		kernel_blob:B12	organelle	29.7	7524
+contig_0007858	V02		kernel_blob:B12	organelle	33.07	74273
+contig_0012608	V02		kernel_blob:B12	organelle	28.77	54216
+contig_0583793	V02		kernel_blob:B12	organelle	30.48	5206
+contig_0122304	V02		kernel_blob:B12	organelle	31.87	13453
+contig_1085421	V02		kernel_blob:B12	organelle	32.72	3328
+contig_0225916	V02		kernel_blob:B12	organelle	31.35	9586
+contig_0051697	V02		kernel_blob:B12	organelle	28.99	22058
+contig_0145975	V02		kernel_blob:B12	organelle	30.7	12269
+contig_0136124	V02		kernel_blob:B12	organelle	33.18	12723
+contig_0274687	V02		kernel_blob:B12	organelle	31.36	8448
+contig_0373004	V02		kernel_blob:B12	organelle	31.81	6907
+contig_0828552	V02		kernel_blob:B12	organelle	28.21	4123
+contig_0084414	V02		kernel_blob:B12	organelle	29.98	16539
+contig_0162039	V02		kernel_blob:B12	organelle	31.06	11475
+contig_1267850	V02		kernel_blob:B12		33.84	2763
+contig_0355258	V02		kernel_blob:B12	organelle	30.81	7164
+contig_0364915	V02		kernel_blob:B12	organelle	32.92	7019
+contig_0147830	V02		kernel_blob:B12	organelle	33.18	12100
+contig_0273937	V02		kernel_blob:B12	organelle	31.69	8414
+contig_0021289	V02		kernel_blob:B12	organelle	27.7	38611
+contig_0010030	V02		kernel_blob:B12	organelle	30.21	63105
+contig_0370577	V02		kernel_blob:B12	organelle	32.3	6945
+contig_0590294	V02		kernel_blob:B12	organelle	30.78	5204
+contig_0469965	V02		kernel_blob:B12	organelle	31.06	5988
+contig_1358312	V02		kernel_blob:B12		32.5	2492
+contig_1109051	V02		kernel_blob:B12	organelle	29.26	3219
+contig_0056007	V02		kernel_blob:B12	organelle	32.13	20975
+contig_0360145	V02		kernel_blob:B12	organelle	29.82	7100
+contig_0395162	V02		kernel_blob:B12	organelle	28.51	6731
+contig_1368768	V02		kernel_blob:B12		33.29	2436
+contig_1286309	V02		kernel_blob:B12		32.58	2707
+contig_1350304	V02		kernel_blob:B12		30.45	2509
+contig_0286633	V02		kernel_blob:B12	organelle	30.51	8182
+contig_0104936	V02		kernel_blob:B12	organelle	31.74	14694
+contig_0160257	V02		kernel_blob:B12	organelle	30.04	11570
+contig_0125060	V02		kernel_blob:B12	organelle	33.77	13518
+contig_0356275	V02		kernel_blob:B12	organelle	29.92	7139
+contig_0015762	V02		kernel_blob:B12	organelle	31.41	46647
+contig_1434651	V02		kernel_blob:B12		34.77	2134
+contig_1155819	V02		kernel_blob:B12	organelle	31.33	3093
+contig_0693321	V02		kernel_blob:B12	organelle	27.63	4676
+contig_1361425	V02		kernel_blob:B12		32.15	2473
+contig_0959688	V02		kernel_blob:B12	organelle	31.33	3853
+contig_0062491	V02		kernel_blob:B12	organelle	28.79	19607
+contig_0066290	V02		kernel_blob:B12	organelle	30.25	18976
+contig_0066866	V02		kernel_blob:B12	organelle	30.04	18836
+contig_0485330	V02		kernel_blob:B12	organelle	28.05	5858
+contig_1183710	V02		kernel_blob:B12	organelle	35.22	3018
+contig_0590554	V02		kernel_blob:B12	organelle	30.64	5179
+contig_0021062	V02		kernel_blob:B12	organelle	28.85	38787
+contig_0060161	V02		kernel_blob:B12	organelle	28.28	19917
+contig_0408058	V02		kernel_blob:B12	organelle	29.62	6560
+contig_0506590	V02		kernel_blob:B12	organelle	30.18	5713
+contig_0540737	V02		kernel_blob:B12	organelle	27.89	5465
+contig_0318143	V02		kernel_blob:B12	organelle	31.79	7666
+contig_0360711	V02		kernel_blob:B12	organelle	32.96	7129
+contig_0026591	V02		kernel_blob:B12	organelle	29.12	33562
+contig_0111847	V02		kernel_blob:B12	organelle	31.55	14180
+contig_0545644	V02		kernel_blob:B12	organelle	31.11	5487
+contig_0231117	V02		kernel_blob:B12	organelle	30.37	9335
+contig_0319826	V02		kernel_blob:B12	organelle	28.57	7630
+contig_1148906	V02		kernel_blob:B12	organelle	32.26	3106
+contig_0613112	V02		kernel_blob:B12	organelle	31.43	5106
+contig_1426884	V02		kernel_blob:B12		33.73	2206
+contig_0188756	V02		kernel_blob:B12	organelle	29.25	10527
+contig_0111318	V02		kernel_blob:B12	organelle	31.47	14159
+contig_0104917	V02		kernel_blob:B12	organelle	35.53	14643
+contig_0014312	V02		kernel_blob:B12	organelle	33.3	49520
+contig_0104342	V02		kernel_blob:B12	organelle	33.03	14703
+contig_1100663	V02		kernel_blob:B12	organelle	32.93	3246
+contig_0164915	V02		kernel_blob:B12	organelle	27.4	11396
+contig_0111697	V02		kernel_blob:B12	organelle	33.29	14079
+contig_0654500	V02		kernel_blob:B12	organelle	31.48	4848
+contig_0341649	V02		kernel_blob:B12	organelle	30.62	7319
+contig_0016572	V02		kernel_blob:B12	organelle	29.8	45200
+contig_0594893	V02		kernel_blob:B12	organelle	27.55	5161
+contig_0178348	V02		kernel_blob:B12	organelle	31.03	10929
+contig_0047145	V02		kernel_blob:B12	organelle	28.14	23425
+contig_0006194	V02		kernel_blob:B12	organelle	28.87	88024
+contig_0235225	V02		kernel_blob:B12	organelle	31.95	9242
+contig_0389458	V02		kernel_blob:B12	organelle	31.58	6751
+contig_1368597	V02		kernel_blob:B12		28.79	2435
+contig_1056228	V02		kernel_blob:B12	organelle	34.23	3386
+contig_0305888	V02		kernel_blob:B12	organelle	31.14	7862
+contig_1231035	V02		kernel_blob:B12		31.33	2873
+contig_0472271	V02		kernel_blob:B12	organelle	35.34	5959
+contig_0015144	V02		kernel_blob:B12	organelle	31.61	47641
+contig_0336731	V02		kernel_blob:B12	organelle	32.6	7407
+contig_0832645	V02		kernel_blob:B12	organelle	29.79	4106
+contig_0336407	V02		kernel_blob:B12	organelle	31.36	7408
+contig_0150574	V02		kernel_blob:B12	organelle	28.22	12163
+contig_0834529	V02		kernel_blob:B12	organelle	31.09	4107
+contig_0142399	V02		kernel_blob:B12	organelle	30.9	12360
+contig_0251099	V02		kernel_blob:B12	organelle	31.28	8878
+contig_0013250	V02		kernel_blob:B12	organelle	34.2	52355
+contig_0348660	V02		kernel_blob:B12	organelle	28.65	7232
+contig_0081859	V02		kernel_blob:B12	organelle	28.18	16823
+contig_1107487	V02		kernel_blob:B12	organelle	27.33	3223
+contig_0121321	V02		kernel_blob:B12	organelle	27.64	13524
+contig_0107134	V02		kernel_blob:B12	organelle	29.98	14464
+contig_0316235	V02		kernel_blob:B12	organelle	32.02	7711
+contig_0180377	V02		kernel_blob:B12	organelle	29.09	10789
+contig_0099478	V02		kernel_blob:B12	organelle	27.44	14856
+contig_1236990	V02		kernel_blob:B12		31.62	2865
+contig_0550117	V02		kernel_blob:B12	organelle	31.46	5416
+contig_0020382	V02		kernel_blob:B12	organelle	30.0	39607
+contig_0817533	V02		kernel_blob:B12	organelle	29.89	4149
+contig_0224873	V02		kernel_blob:B12	organelle	27.66	9481
+contig_0294069	V02		kernel_blob:B12	organelle	30.12	8088
+contig_0006102	V02		kernel_blob:B12	organelle	28.78	88927
+contig_0239863	V02		kernel_blob:B12	organelle	31.09	9147
+contig_0371188	V02		kernel_blob:B12	organelle	31.2	6935
+contig_0094380	V02		kernel_blob:B12	organelle	30.66	15541
+contig_0088892	V02		kernel_blob:B12	organelle	29.15	16067
+contig_0259261	V02		kernel_blob:B12	organelle	30.86	8821
+contig_0821063	V02		kernel_blob:B12	organelle	28.9	4139
+contig_0382761	V02		kernel_blob:B12	organelle	34.24	6810
+contig_0274038	V02		kernel_blob:B12	organelle	31.3	8428
+contig_0182448	V02		kernel_blob:B12	organelle	30.99	10714
+contig_0296618	V02		kernel_blob:B12	organelle	30.62	8854
+contig_0157642	V02		kernel_blob:B12	organelle	32.47	11639
+contig_0545098	V02		kernel_blob:B12	organelle	30.72	5442
+contig_0008341	V02		kernel_blob:B12	organelle	29.35	70965
+contig_0067517	V02		kernel_blob:B12	organelle	31.48	18759
+contig_0009158	V02		kernel_blob:B12	organelle	29.54	67149
+contig_0090282	V02		kernel_blob:B12	organelle	30.86	15925
+contig_0014944	V02		kernel_blob:B12	organelle	30.43	48131
+contig_0611659	V02		kernel_blob:B12	organelle	31.15	5062
+contig_0024286	V02		kernel_blob:B12	organelle	29.39	35532
+contig_1389235	V02		kernel_blob:B12		35.78	2367
+contig_0005193	V02		kernel_blob:B12	organelle	28.98	100004
+contig_0090097	V02		kernel_blob:B12	organelle	28.46	15957
+contig_0465921	V02		kernel_blob:B12	organelle	34.07	5953
+contig_0105826	V02		kernel_blob:B12	organelle	32.31	14729
+contig_0063515	V02		kernel_blob:B12	organelle	28.65	19400
+contig_0676147	V02		kernel_blob:B12	organelle	29.78	4734
+contig_0009228	V02		kernel_blob:B12	organelle	30.29	66807
+contig_0087625	V02		kernel_blob:B12	organelle	28.6	16204
+contig_0139510	V02		kernel_blob:B12	organelle	31.43	12577
+contig_0333654	V02		kernel_blob:B12	organelle	29.44	7460
+contig_0239589	V02		kernel_blob:B12	organelle	31.21	9168
+contig_0046076	V02		kernel_blob:B12	organelle	31.72	23736
+contig_1259250	V02		kernel_blob:B12		29.96	2804
+contig_1369014	V02		kernel_blob:B12		32.81	2435
+contig_0339883	V02		kernel_blob:B12	organelle	30.19	7417
+contig_0070017	V02		kernel_blob:B12	organelle	31.21	18344
+contig_0153738	V02		kernel_blob:B12	organelle	32.85	11822
+contig_0730102	V02		kernel_blob:B12	organelle	28.45	4506
+contig_0113814	V02		kernel_blob:B12	organelle	30.38	13983
+contig_0203095	V02		kernel_blob:B12	organelle	30.69	10068
+contig_0095074	V02		kernel_blob:B12	organelle	30.42	15562
+contig_0179445	V02		kernel_blob:B12	organelle	30.75	11057
+contig_0553377	V02		kernel_blob:B12	organelle	31.64	5386
+contig_0014056	V02		kernel_blob:B12	organelle	31.54	50136
+contig_0095846	V02		kernel_blob:B12	organelle	29.78	15391
+contig_0018693	V02		kernel_blob:B12	organelle	29.49	41965
+contig_0539676	V02		kernel_blob:B12	organelle	32.3	5468
+contig_0212247	V02		kernel_blob:B12	organelle	30.34	9809
+contig_0352503	V02		kernel_blob:B12	organelle	29.87	7207
+contig_0260945	V02		kernel_blob:B12	organelle	32.01	8690
+contig_0047518	V02		kernel_blob:B12	organelle	31.01	23321
+contig_0025624	V02		kernel_blob:B12	organelle	29.06	34340
+contig_0171405	V02		kernel_blob:B12	organelle	32.12	11110
+contig_1172427	V02		kernel_blob:B12	organelle	29.85	3039
+contig_1032336	V02		kernel_blob:B12	organelle	30.46	3447
+contig_1276098	V02		kernel_blob:B12		29.96	2737
+contig_0257650	V02		kernel_blob:B12	organelle	28.17	8739
+contig_0415649	V02		kernel_blob:B12	organelle	31.27	6467
+contig_0497629	V02		kernel_blob:B12	organelle	32.1	5791
+contig_1131892	V02		kernel_blob:B12	organelle	30.55	3185
+contig_0011209	V02		kernel_blob:B12	organelle	31.16	58696
+contig_0247583	V02		kernel_blob:B12	organelle	29.55	8953
+contig_0575177	V02		kernel_blob:B12	organelle	30.65	5266
+contig_0100634	V02		kernel_blob:B12	organelle	29.52	14984
+contig_0674747	V02		kernel_blob:B12	organelle	29.81	4784
+contig_0119311	V02		kernel_blob:B12	organelle	32.17	13653
+contig_0938305	V02		kernel_blob:B12	organelle	32.11	3743
+contig_0054814	V02		kernel_blob:B12	organelle	30.39	21342
+contig_0137540	V02		kernel_blob:B12	organelle	33.05	12592
+contig_1235261	V02		kernel_blob:B12		30.4	2868
+contig_0020367	V02		kernel_blob:B12	organelle	26.76	39593
+contig_0415175	V02		kernel_blob:B12	organelle	29.3	6477
+contig_0207278	V02		kernel_blob:B12	organelle	29.79	10008
+contig_1058211	V02		kernel_blob:B12	organelle	33.22	3399
+contig_0027414	V02		kernel_blob:B12	organelle	32.02	32243
+contig_0276597	V02		kernel_blob:B12	organelle	33.96	8391
+contig_0841496	V02		kernel_blob:B12	organelle	31.58	4063
+contig_0340020	V02		kernel_blob:B12	organelle	29.04	7379
+contig_0020841	V02		kernel_blob:B12	organelle	32.31	39027
+contig_0052278	V02		kernel_blob:B12	organelle	31.2	21910
+contig_0014821	V02		kernel_blob:B12	organelle	31.9	48627
+contig_0147156	V02		kernel_blob:B12	organelle	29.25	12131
+contig_0015033	V02		kernel_blob:B12	organelle	32.49	48037
+contig_0862434	V02		kernel_blob:B12	organelle	34.04	3931
+contig_0125920	V02		kernel_blob:B12	organelle	27.31	13255
+contig_0023546	V02		kernel_blob:B12	organelle	32.46	37053
+contig_0644835	V02		kernel_blob:B12	organelle	32.43	4882
+contig_0081017	V02		kernel_blob:B12	organelle	31.03	16905
+contig_0344144	V02		kernel_blob:B12	organelle	29.84	7300
+contig_0061967	V02		kernel_blob:B12	organelle	29.82	19675
+contig_0344506	V02		kernel_blob:B12	organelle	29.35	7281
+contig_0306150	V02		kernel_blob:B12	organelle	31.99	7849
+contig_0741563	V02		kernel_blob:B12	organelle	31.96	4446
+contig_1234514	V02		kernel_blob:B12		29.22	2861
+contig_0873378	V02		kernel_blob:B12	organelle	30.75	3961
+contig_0433533	V02		kernel_blob:B12	organelle	30.14	6295
+contig_0453576	V02		kernel_blob:B12	organelle	28.23	6135
+contig_0432144	V02		kernel_blob:B12	organelle	27.72	6317
+contig_0698017	V02		kernel_blob:B12	organelle	28.57	4666
+contig_0017860	V02		kernel_blob:B12	organelle	30.68	43055
+contig_0503308	V02		kernel_blob:B12	organelle	31.61	5717
+contig_0235571	V02		kernel_blob:B12	organelle	29.52	9227
+contig_0244349	V02		kernel_blob:B12	organelle	30.64	9036
+contig_0310930	V02		kernel_blob:B12	organelle	28.54	7778
+contig_0155834	V02		kernel_blob:B12	organelle	30.68	11737
+contig_0133856	V02		kernel_blob:B12	organelle	28.85	12785
+contig_0435932	V02		kernel_blob:B12	organelle	29.34	6278
+contig_0047994	V02		kernel_blob:B12	organelle	29.57	23138
+contig_0326638	V02		kernel_blob:B12	organelle	32.39	7561
+contig_0333184	V02		kernel_blob:B12	organelle	30.45	7505
+contig_0632816	V02		kernel_blob:B12	organelle	31.94	4950
+contig_0979935	V02		kernel_blob:B12	organelle	30.14	3607
+contig_0088657	V02		kernel_blob:B12	organelle	30.1	16081
+contig_0615929	V02		kernel_blob:B12	organelle	29.19	5043
+contig_0362728	V02		kernel_blob:B12	organelle	28.91	7046
+contig_0306831	V02		kernel_blob:B12	organelle	29.13	7842
+contig_0031592	V02		kernel_blob:B12	organelle	30.11	30142
+contig_0296451	V02		kernel_blob:B12	organelle	28.34	8039
+contig_0065023	V02		kernel_blob:B12	organelle	31.98	19216
+contig_0035840	V02		kernel_blob:B12	organelle	31.15	27903
+contig_0382534	V02		kernel_blob:B12	organelle	30.57	6762
+contig_0079012	V02		kernel_blob:B12	organelle	28.99	17145
+contig_0158264	V02		kernel_blob:B12	organelle	30.24	11658
+contig_0316043	V02		kernel_blob:B12	organelle	31.85	7698
+contig_0183668	V02		kernel_blob:B12	organelle	33.62	10694
+contig_0067821	V02		kernel_blob:B12	organelle	32.05	18744
+contig_0897803	V02		kernel_blob:B12	organelle	33.28	3873
+contig_0226298	V02		kernel_blob:B12	organelle	29.99	9454
+contig_0523918	V02		kernel_blob:B12	organelle	28.19	5597
+contig_0352177	V02		kernel_blob:B12	organelle	30.73	7194
+contig_0537118	V02		kernel_blob:B12	organelle	26.53	5489
+contig_0087119	V02		kernel_blob:B12	organelle	29.14	16331
+contig_0136177	V02		kernel_blob:B12	organelle	29.51	12661
+contig_1175686	V02		kernel_blob:B12	organelle	29.57	3030
+contig_0049434	V02		kernel_blob:B12	organelle	30.45	22692
+contig_0322645	V02		kernel_blob:B12	organelle	31.65	7639
+contig_0451533	V02		kernel_blob:B12	organelle	35.45	6133
+contig_0007934	V02		kernel_blob:B12	organelle	30.21	73768
+contig_0151560	V02		kernel_blob:B12	organelle	31.52	11911
+contig_0625575	V02		kernel_blob:B12	organelle	28.1	4996
+contig_0055508	V02		kernel_blob:B12	organelle	26.05	21113
+contig_0091026	V02		kernel_blob:B12	organelle	31.38	15865
+contig_0168900	V02		kernel_blob:B12	organelle	31.52	11203
+contig_1087744	V02		kernel_blob:B12	organelle	30.52	3277
+contig_0511515	V02		kernel_blob:B12	organelle	31.89	5675
+contig_0061483	V02		kernel_blob:B12	organelle	29.26	19743
+contig_0027920	V02		kernel_blob:B12	organelle	30.44	32567
+contig_0333435	V02		kernel_blob:B12	organelle	32.03	7458
+contig_0628753	V02		kernel_blob:B12	organelle	32.08	4966
+contig_0396959	V02		kernel_blob:B12	organelle	31.56	6680
+contig_0456424	V02		kernel_blob:B12	organelle	28.9	5772
+contig_0008590	V02		kernel_blob:B12	organelle	29.53	70053
+contig_0116201	V02		kernel_blob:B12	organelle	30.97	14057
+contig_0410974	V02		kernel_blob:B12	organelle	30.01	6511
+contig_0086519	V02		kernel_blob:B12	organelle	33.18	16168
+contig_0801003	V02		kernel_blob:B12	organelle	30.78	4262
+contig_0292873	V02		kernel_blob:B12	eukarya	33.54	8088
+contig_0477240	V02		kernel_blob:B12	organelle	29.52	5939
+contig_0134232	V02		kernel_blob:B12	organelle	34.37	12826
+contig_0936823	V02		kernel_blob:B12	organelle	29.01	3736
+contig_0043293	V02		kernel_blob:B12	organelle	29.54	24729
+contig_0204168	V02		kernel_blob:B12	organelle	31.55	10046
+contig_0150790	V02		kernel_blob:B12	organelle	29.32	11983
+contig_0844235	V02		kernel_blob:B12	organelle	30.49	4051
+contig_0020132	V02		kernel_blob:B12	organelle	29.84	39930
+contig_0555383	V02		kernel_blob:B12	organelle	29.04	5416
+contig_0706540	V02		kernel_blob:B12	organelle	32.69	4684
+contig_1360520	V02		kernel_blob:B12		36.79	2468
+contig_0488036	V02		kernel_blob:B12	organelle	29.84	5822
+contig_0373662	V02		kernel_blob:B12	organelle	30.09	6913
+contig_0413396	V02		kernel_blob:B12	organelle	30.12	6577
+contig_0036151	V02		kernel_blob:B12	organelle	30.08	27826
+contig_0084580	V02		kernel_blob:B12	organelle	30.46	16562
+contig_1233756	V02		kernel_blob:B12		32.17	2869
+contig_1112132	V02		kernel_blob:B12	organelle	34.1	3223
+contig_0196210	V02		kernel_blob:B12	organelle	28.88	10217
+contig_0189068	V02		kernel_blob:B12	organelle	31.74	10545
+contig_0090008	V02		kernel_blob:B12	organelle	27.88	15985
+contig_0259550	V02		kernel_blob:B12	organelle	30.54	8701
+contig_0552962	V02		kernel_blob:B12	organelle	33.13	5397
+contig_0610697	V02		kernel_blob:B12	organelle	32.91	5059
+contig_1421375	V02		kernel_blob:B12		32.06	2227
+contig_1170833	V02		kernel_blob:B12	organelle	28.86	3063
+contig_0103194	V02		kernel_blob:B12	organelle	28.32	14799
+contig_0360827	V02		kernel_blob:B12	organelle	33.59	7133
+contig_0198465	V02		kernel_blob:B12	organelle	32.01	10214
+contig_0200225	V02		kernel_blob:B12	organelle	30.16	10212
+contig_0065413	V02		kernel_blob:B12	organelle	29.08	19096
+contig_0087345	V02		kernel_blob:B12	organelle	31.26	16246
+contig_0188359	V02		kernel_blob:B12	organelle	31.01	10546
+contig_0703552	V02		kernel_blob:B12	organelle	31.05	4683
+contig_0184290	V02		kernel_blob:B12	organelle	27.86	10651
+contig_0255069	V02		kernel_blob:B12	organelle	32.82	8905
+contig_0012596	V02		kernel_blob:B12	organelle	29.77	54235
+contig_0021148	V02		kernel_blob:B12	organelle	29.74	38650
+contig_0078568	V02		kernel_blob:B12	organelle	29.68	17209
+contig_0324868	V02		kernel_blob:B12	organelle	28.79	7571
+contig_1306562	V02		kernel_blob:B12		34.87	2644
+contig_0447305	V02		kernel_blob:B12	organelle	29.54	6174
+contig_0007123	V02		kernel_blob:B12	organelle	30.43	79263
+contig_1108332	V02		kernel_blob:B12	organelle	30.56	3220

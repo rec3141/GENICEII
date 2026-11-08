@@ -177,10 +177,75 @@ def euk_group_label(gid):
     return f'Eukaryote {gid}' + (f' ({tag})' if tag else '')
 
 
+_VG = _VGI = None
+def _virus_groups():
+    """Virus groups (V##; euks/mags groups >= 50% geNomad-viral, copied by scripts/bin_domains.py): contig -> V## and info."""
+    global _VG, _VGI
+    if _VG is None:
+        c = pd.read_csv(D + 'contig_virus_group.tsv.gz', sep='\t')
+        _VG = dict(zip(c.contig, c.vid))
+        _VGI = pd.read_csv(D + 'virus_groups.tsv', sep='\t', keep_default_na=False).set_index('vid')
+    return _VG, _VGI
+
+
+def virus_group(contig):
+    """V## virus group of a contig, '' if none."""
+    return _virus_groups()[0].get(contig, '')
+
+
+def virus_group_info(vid):
+    I = _virus_groups()[1]
+    return I.loc[vid].to_dict() if vid in I.index else {}
+
+
+def is_virus_group(x):
+    return isinstance(x, str) and x in _virus_groups()[1].index
+
+
+def virus_group_label(vid):
+    """'Virus V02' (a large viral genome group from the eukaryotic-region binning; geNomad-viral >= 50% of its length)."""
+    return f'Virus {vid}' if is_virus_group(vid) else ''
+
+
+EM = '/data/dev/rnaseq-exploration/euks/mags/out/'
+def group_expression():
+    """Groups (E## and V##) x RNA libraries: reads on the group's contigs per million contig-assigned reads.
+    From euks/mags/out/group_expr_samples.tsv (expr.py), with ids renamed through virus_ids.tsv (e.g. E09 -> V01); groups
+    registered from kernel blobs (E25-E30, V02) take the blob's abundance (da_blobs_abundance_rna.tsv, same metric) via
+    blob_registry.tsv. Columns follow the libraries in those files (QC-excluded libraries already removed)."""
+    import re
+    E = pd.read_csv(EM + 'group_expr_samples.tsv', sep='\t', index_col=0)
+    ren = pd.read_csv(EM + 'virus_ids.tsv', sep='\t').set_index('from_group').vid.to_dict()
+    E = E.rename(index=ren)
+    B = pd.read_csv(EM + 'da_blobs_abundance_rna.tsv', sep='\t', index_col=0)
+    for x in pd.read_csv(EM + 'blob_registry.tsv', sep='\t').itertuples():
+        m = re.search(r'new (?:eukaryote|virus) ([EV]\d\d)', x.decision)
+        if m and m.group(1) not in E.index and x.blob in B.index: E.loc[m.group(1)] = B.loc[x.blob].reindex(E.columns)
+    return E
+
+
+def group_da():
+    """Per-group differential abundance (RNA and DNA) from euks/mags/out/da_blobs.tsv (da.py), mapped from blobs to groups
+    through blob_registry.tsv (new groups, and blobs that are 'already in' a group). Long table: group, data, contrast,
+    log2_effect, q."""
+    import re
+    R = pd.read_csv(EM + 'blob_registry.tsv', sep='\t')
+    ren = pd.read_csv(EM + 'virus_ids.tsv', sep='\t').set_index('from_group').vid.to_dict()
+    mp = {}
+    for x in R.itertuples():
+        m = re.search(r'(?:new (?:eukaryote|virus)|already in) ([EV]\d\d)', x.decision)
+        if m: mp[x.blob] = ren.get(m.group(1), m.group(1))
+    A = pd.read_csv(EM + 'da_blobs.tsv', sep='\t')
+    A = A[A.blob.isin(mp)].assign(group=lambda d: d.blob.map(mp))
+    return A[['group', 'blob', 'data', 'contrast', 'log2_effect', 'q']]
+
+
 def contig_host_label(contig, fallback):
-    """Host label for an UNBINNED contig: its eukaryotic genome group if it has one, else `fallback` (e.g. a Kaiju label).
-    Contigs of doubtful (mixed) groups only take the group label if Tiara calls the contig itself eukaryotic.
-    Binned contigs should be labelled through their bin (special_label / GTDB), not through this."""
+    """Host label for an UNBINNED contig: 'Virus V02' if it belongs to a virus group (a virus, not a host); its eukaryotic
+    genome group if it has one; else `fallback` (e.g. a Kaiju label). Contigs of doubtful (mixed) eukaryotic groups only take
+    the group label if Tiara calls the contig itself eukaryotic. Binned contigs are labelled through their bin."""
+    v = virus_group(contig)
+    if v: return virus_group_label(v)
     g = euk_group(contig)
     if not g: return fallback
     if euk_group_info(g).get('status') == 'doubtful':
