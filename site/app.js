@@ -684,6 +684,22 @@ async function boot() {
       if (fn) fn(sec); else sec.innerHTML = `<h2>${SECTIONS.find(s => s[0] === ok)[1]}</h2><p class="kicker">This section is still being assembled.</p>`; }
     try { localStorage.setItem('cmo-sec', ok); } catch (e) { /* storage blocked */ }
   }
+  // theme picker: Auto follows the browser; Light/Dark set data-theme on <html> (tokens in index.html). Charts read colours
+  // when drawn, so a change clears the rendered sections and redraws the visible one, keeping the scroll position.
+  const THEMES = [['auto', 'Auto'], ['light', 'Light'], ['dark', 'Dark']];
+  const tp = el('div', { class: 'theme', role: 'radiogroup', 'aria-label': 'Colour theme' });
+  let cur = 'auto'; try { cur = localStorage.getItem('cmo-theme') || 'auto'; } catch (e) { /* storage blocked */ }
+  const redraw = () => { const y = scrollY; for (const k in done) { delete done[k]; $('#v-' + k).innerHTML = ''; } go(); scrollTo({ top: y }); };
+  const setTheme = (t, draw = true) => {
+    if (t === 'auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme', t);
+    tp.querySelectorAll('button').forEach(b => b.setAttribute('aria-checked', b.dataset.t === t));
+    try { localStorage.setItem('cmo-theme', t); } catch (e) { /* storage blocked */ }
+    cur = t; if (draw) redraw();
+  };
+  THEMES.forEach(([t, l]) => { const b = el('button', { type: 'button', role: 'radio', 'data-t': t, 'aria-checked': t === cur }, l); b.onclick = () => { if (t !== cur) setTheme(t); }; tp.append(b); });
+  nav.append(tp);
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { if (cur === 'auto') redraw(); });
+  setTheme(cur, false);
   addEventListener('hashchange', () => { go(); scrollTo({ top: 0 }); });
   if (!location.hash) { try { const k = localStorage.getItem('cmo-sec'); if (k) history.replaceState(null, '', '#' + k); } catch (e) { /* storage blocked */ } }
   go();
