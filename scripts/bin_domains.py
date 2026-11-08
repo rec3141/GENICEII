@@ -13,8 +13,8 @@ consolidated separately from the raw binner outputs by euks/mags/scripts, run in
   stable E## ids against out/v1) -> expr.py (contig-read expression) -> finalize.py (wiring tables + figure).
 This script copies their wiring tables into data/:
   data/euk_groups.tsv          one row per E## group (status network / little CMO RNA / doubtful, network_ok, purity, taxonomy hint)
-  data/contig_euk_group.tsv.gz contig -> euk_group (+ Tiara call); one group per contig (clean > little CMO RNA > doubtful,
-                               then the smaller group, for the ~60 contigs that two overlapping groups share)
+  data/contig_euk_group.tsv.gz contig -> euk_group (+ Tiara call); one group per contig (contigs shared by two overlapping
+                               groups go to the larger group, as in euks/mags finalize)
 and adds bin_domain.tsv:euk_group = the E## group holding >= 50% of a eukaryote bin's bp (e.g. comebin_3937 -> E05).
 scripts/common.py (euk_group, euk_group_info, euk_group_label, contig_host_label, special_label) reads these."""
 import os
@@ -41,11 +41,10 @@ EG = pd.read_csv(EM + 'euk_groups.tsv', sep='\t')
 EG[['group', 'status', 'network_ok', 'bp', 'contigs', 'gc', 'tiara_euk', 'who_euk', 'tsne_rms', 'taxonomy_hint', 'rrna18S', 'expr_ppm_median',
     'baci_2025', 'ice_vs_water_log2', 'note', 'parts']].to_csv(DD + 'euk_groups.tsv', sep='\t', index=False)
 CE = pd.read_csv(EM + 'contig_euk_group.tsv', sep='\t')
-# a few contigs (60) sit in two overlapping groups; keep one per contig: clean (network) > little CMO RNA > doubtful, then the smaller group
-rank = EG.set_index('group').status.map({'network': 0, 'little CMO RNA': 1, 'low RNA': 1, 'doubtful': 2}).fillna(3)
-CE = CE.assign(_r=CE.euk_group.map(rank), _bp=CE.euk_group.map(EG.set_index('group').bp)).sort_values(['contig', '_r', '_bp', 'euk_group'])
-print('contigs in two groups (resolved):', int(CE.contig.duplicated().sum()))
-CE = CE.drop_duplicates('contig')
+# euks/mags/out/contig_euk_group.tsv is deduplicated upstream (a contig shared by two overlapping groups goes to the larger
+# group); guard: if duplicates ever reappear, apply the same rule here
+print('duplicate contigs in contig_euk_group.tsv:', int(CE.contig.duplicated().sum()))
+CE = CE.assign(_bp=CE.euk_group.map(EG.set_index('group').bp)).sort_values(['contig', '_bp', 'euk_group'], ascending=[True, False, True]).drop_duplicates('contig')
 CE[['contig', 'euk_group', 'tiara']].to_csv(DD + 'contig_euk_group.tsv.gz', sep='\t', index=False, compression='gzip')
 eg = T.merge(CE[['contig', 'euk_group']], left_on='id', right_on='contig', how='inner')
 share = eg.groupby(['bin', 'euk_group']).length.sum().div(bp, level='bin').reset_index(name='share')

@@ -9,14 +9,14 @@ E07	network	True	23038982	3102	51.3	0.976	0.687	3.2		Archaeplastida > Chloroplas
 E08	doubtful	False	21798136	4151	44.2	0.509	0.818	2.4			27.8	-0.69	0.1	unchanged	EUK06
 E09	doubtful	False	19087886	1920	42.9	0.531	0.024	1.9			171.1	-3.25	-0.97	unchanged	EUK09
 E10	little CMO RNA	False	12615010	2551	37.3	0.956	0.96	3.8		Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa (1)	0.4	0.17	-0.39	unchanged	EUK02b
-E12	little CMO RNA	False	4925439	1418	36.4	0.997	1.0	3.8			0.0	0.0	0.0	unchanged	EUK13
+E12	little CMO RNA	False	4892890	1410	36.4	0.997	1.0	3.7			0.0	0.0	0.0	unchanged	EUK13
 E13	network	True	4025007	524	53.9	0.995	0.556	3.4			57.9	1.12	2.04	unchanged	EUK03c
 E14	little CMO RNA	False	3796402	1091	40.8	0.965	0.923	4.9		Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa (1)	2.5	-2.08	-1.56	unchanged	EUK14
-E15	little CMO RNA	False	2475440	636	46.1	0.977	0.295	6.6			5.7	-1.35	-0.85	unchanged	EUK15+EUK18
+E15	little CMO RNA	False	2471911	635	46.1	0.977	0.295	6.5			5.7	-1.35	-0.85	unchanged	EUK15+EUK18
 E16	little CMO RNA	False	3088876	834	32.5	0.913	1.0	1.7		SAR > Rhizaria > Retaria > Polycystinea > KW16 (1)	0.0	0.0	0.0	unchanged	EUK16
-E17	little CMO RNA	False	2789637	723	50.1	0.974	0.682	3.6			0.5	-0.03	0.85	unchanged	EUK17
+E17	little CMO RNA	False	2580469	677	50.1	0.971	0.689	3.4			0.5	-0.03	0.85	unchanged	EUK17
 E18	little CMO RNA	False	1903909	511	45.7	0.986	0.671	3.1			0.0	-0.39	0.0	unchanged	EUK19
 E21	doubtful	False	144781420	31382	49.0	0.959	0.78	20.4		SAR > Stramenopiles > Ochrophyta > Diatomea > Bacillariophytina (12); Amorphea > Obazoa > Opisthokonta > Nucletmycea > Fungi (2); SAR > Stramenopiles > Ochrophyta > Chrysophyceae > Ochromonas sp. LO244K-D (2); Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (2)	220.5	-0.34	0.7	new; absorbed E19	EUK01+EUK21
 E22	doubtful	False	15603651	1233	59.1	0.892	0.257	1.2		SAR > Alveolata > Ciliophora > Intramacronucleata > Spirotrichea (1)	293.7	-1.27	-0.46	new	EUK10
 E23	network	True	13353601	1015	48.3	0.995	0.266	1.1			378.7	-3.11	-1.62	new	EUK12
-E24	doubtful	False	271632	71	47.2	0.842	0.717	7.1			0.0	0.85	-0.14	new	EUK11
+E24	doubtful	False	251619	66	47.1	0.883	0.665	5.3			0.0	0.85	-0.14	new	EUK11

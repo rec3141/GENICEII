@@ -81,7 +81,7 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
   - `data/euk_groups.tsv`: one row per group.
   - `data/contig_euk_group.tsv.gz`: contig → E## plus its Tiara call.
   - It also adds `bin_domain.tsv:euk_group`: the group holding ≥ 50% of a DAS Tool eukaryote bin's bp. Result: `comebin_3937` → E05, `comebin_4527` → E03. `lorbin_494_sub` is in no group and stays "Eukaryote (Tiara)".
-- **One group per contig:** 60 contigs are in two overlapping groups (mostly E21 with E17 or E01). `data/` keeps one group per contig: clean > low RNA > doubtful, then the smaller group. The tables in `euks/mags/out` still list both, so `expr.py` counts these contigs in both groups.
+- **One group per contig:** 60 contigs had been assigned to two overlapping groups (mostly E21 with E17 or E01). `contig_euk_group.tsv` is now deduplicated upstream: each goes to the larger group, so E12, E15, E17 and E24 shrank slightly. `bin_domains.py` keeps the same rule as a guard.
 - **Helpers in `scripts/common.py`:**
   - `euk_group(contig)` and `euk_group_info(gid)`;
   - `is_euk_group(x)`;
@@ -90,3 +90,6 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
   - `special_label` maps eukaryote bins to their group's label.
 - **E03** has two dense lobes about 10 t-SNE units apart. It passes the compactness rule (RMS 5.4) but may be two related genomes. It is kept as one group for now.
 - **Reproducibility check:** rerunning survey → compact → final → expr → finalize on 2026-11-08 reproduced all 21 groups exactly: the same bp, contigs, purity, status and expression.
+- 2026-11-08: the figure has a unit grid (t-SNE 1/2) and a third panel. That panel shows the eukaryotic region with contigs ≥ 2 kb sized by cumulative expression (per-library contig reads per million, summed over the 128 analysed libraries); labels give group totals.
+- Status "low RNA" was renamed "little CMO RNA": the assembly is about 50% non-CMO samples, so this is not a quality flag.
+- Contigs claimed by two groups now go to the larger group. 60 contigs were affected.
