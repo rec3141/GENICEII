@@ -6,7 +6,12 @@ that are >= 50% Tiara organelle, and viral hulls with < 50% of bp in geNomad Nuc
 scripts/bin_domains.py applies the same rule when wiring the site. A contig inside two polygons goes to the polygon whose source group
 already holds it, else to the nearer polygon centroid. IDs (shared registry out/id_registry.tsv, key 'hull:<hull id>'): a source
 group with one hull -> EE<n>/VV<n> (E05 -> EE05, V01 -> VV01); with several hulls the largest by bp takes EE<n> and the others
-take the next number above every E/EE in use.
+take the next number above every E/EE in use. A hull whose source group was retired because the RNA split guard undid its split
+(registry 'retired:E31 ...' + 'split:E03:2' -> E31) counts as a hull of the parent group (E31 hull -> E03), keeping its EE id.
+Merges (scripts/merge_mags.py, run after this script; it reruns this script when its decisions change): registry keys
+'retired:EEnn (merged into EEmm, <date>)' relabel EEnn's contigs to EEmm. A merged MAG lists all its hulls ('E03+E29+E31') and
+source groups; bp_gained/lost are against the union of the source groups. Pre-merge membership stays recoverable from the
+`hull` column of contig_hull_mag.tsv plus the registry ('hull:<hull id>' -> unmerged EE id).
 Summaries: size, GC, N50, Tiara/Whokaryote purity, geNomad virus share, t-SNE RMS, expression (contig reads per million, 128
 RNA libraries), BACI/ice from dacore contrasts on RNA and DNA (CMO nanopore depth x length share), bp gained (contigs not in the
 source group) and lost (source-group contigs outside the hull).
@@ -16,12 +21,13 @@ from matplotlib.path import Path
 import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts'); sys.path.insert(0, '/data/dev/rnaseq-exploration/euks/mags/scripts')
 from common import samples, all_samples, nanopore_samples, D as DD
-from eukshared import load_ids, save_ids
+from eukshared import load_ids, save_ids, resolve_source, merged_into
 import dacore
 O = '/data/dev/rnaseq-exploration/euks/mags/out/'; HF = '/data/dev/rnaseq-exploration/euks/mags/hulls.tsv'
 T = pd.read_pickle(O + 'contigs_full.pkl').set_index('id'); T = T[T.tsne_x.notna() & (T.length >= 1000)]
 H = pd.read_csv(HF, sep='\t', comment='#')
 _valid = set(pd.read_csv(O + 'contig_euk_group.tsv', sep='\t').euk_group) | set(pd.read_csv(O + 'contig_virus_group.tsv', sep='\t').vid)
+H['source_group'] = [resolve_source(g, _valid) for g in H.source_group]     # E31 (split undone) -> E03
 skipped_hulls = sorted(set(H.id[~H.source_group.isin(_valid)]))
 H = H[H.source_group.isin(_valid)]     # e.g. V02 retired as a plastid: no VV hull
 CE = pd.read_csv(O + 'contig_euk_group.tsv', sep='\t').set_index('contig').euk_group
@@ -76,6 +82,8 @@ for src, hs in hsrc.groupby(hsrc):
             used.add(num(IDS[key]))
         hid2mag[h] = IDS[key]
 save_ids(IDS)
+hid2mag_raw = dict(hid2mag); MERGE = merged_into(IDS)     # {EE29: EE03, ...} from merge_mags.py
+hid2mag = {h: MERGE.get(m, m) for h, m in hid2mag.items()}
 CM = pd.DataFrame({'contig': M.index, 'mag': M.map(hid2mag).values, 'hull': M.values, 'source_group': M.map(hsrc).values})
 CM['in_source'] = [src_of.get(c, '') == s for c, s in zip(CM.contig, CM.source_group)]
 CM['tiara'] = T.tiara.reindex(CM.contig).fillna('').values; CM['gc'] = T.gc.reindex(CM.contig).values; CM['length'] = T.length.reindex(CM.contig).values
@@ -104,11 +112,13 @@ def eff(m, d, c):
 # summaries
 SG = pd.concat([CE.rename('g'), CV.rename('g')]).reset_index().rename(columns={'index': 'contig'})
 rows = []
+srcs_of = {mg: set(g0.source_group) for mg, g0 in CM.groupby('mag')}
 for mg, g0 in CM.groupby('mag'):
-    s = T.loc[g0.contig]; L = s.length.sum(); src = g0.source_group.iloc[0]; hid = g0.hull.iloc[0]
-    srcC = SG.contig[SG.g == src]; srcC = srcC[srcC.isin(T.index)]
+    s = T.loc[g0.contig]; L = s.length.sum(); hl = sorted(g0.hull.unique()); srcs = sorted(g0.source_group.unique())
+    hid = '+'.join(hl); src = '+'.join(srcs)
+    srcC = SG.contig[SG.g.isin(srcs)]; srcC = srcC[srcC.isin(T.index)]
     gained = s.length[~s.index.isin(srcC)].sum(); lost = T.length[srcC[~srcC.isin(s.index)]].sum()
-    if src == 'E21': lost = np.nan     # E21 is split into several hulls; per-hull loss is not meaningful
+    if any(set(srcs) & set(o) for mg2, o in srcs_of.items() if mg2 != mg): lost = np.nan     # a source group shared with another MAG (E21 cores; E03 -> EE03 + EE31): per-MAG loss is not meaningful
     tl = s.length[s.tiara.notna()].sum(); wl = s.length[s.whokaryote.notna()].sum()
     srt = np.sort(s.length.values)[::-1]; n50 = int(srt[np.searchsorted(np.cumsum(srt), L / 2)])
     cx, cy = np.average(s.tsne_x, weights=s.length), np.average(s.tsne_y, weights=s.length)
@@ -121,21 +131,22 @@ for mg, g0 in CM.groupby('mag'):
                      tiara_euk=round(te, 3), tiara_bac=round(s.length[s.tiara == 'bacteria'].sum() / tl, 3) if tl else np.nan,
                      who_euk=round(s.length[s.whokaryote == 'eukaryote'].sum() / wl, 3) if wl else np.nan, virus_bp=round(vir, 3),
                      tsne_rms=round(np.sqrt(np.average((s.tsne_x - cx) ** 2 + (s.tsne_y - cy) ** 2, weights=s.length)), 2), cx=round(cx, 1), cy=round(cy, 1),
-                     bp_gained=int(gained), bp_lost=lost, excluded_prok_contigs=excl[hid][0], excluded_prok_bp=excl[hid][1],
+                     bp_gained=int(gained), bp_lost=lost, excluded_prok_contigs=sum(excl[h][0] for h in hl), excluded_prok_bp=sum(excl[h][1] for h in hl),
+                     merged_from=','.join(sorted({hid2mag_raw[h] for h in hl} - {mg})),
                      expr_ppm_median=round(expr, 1), baci_2025_rna=b[0], baci_2025_rna_q=b[1], ice_vs_water_rna=iw[0], ice_vs_water_rna_q=iw[1],
                      dvc_2024_dna=bd[0], dvc_2024_dna_q=bd[1], network_ok=ok,
-                     note=H[(H.id == hid) & H.note.notna()].note.iloc[0] if (H[(H.id == hid)].note.notna()).any() else ''))
+                     note=' | '.join(H[(H.id == h) & H.note.notna()].note.iloc[0] for h in hl if (H[H.id == h].note.notna()).any())))
 S2 = pd.DataFrame(rows).sort_values('mag'); S2.to_csv(O + 'hull_mags.tsv', sep='\t', index=False)
 # verification panels
 os.makedirs(O + 'hulls/verify', exist_ok=True)
 for _, x in S2.iterrows():
-    h = H[H.id == x.hull].sort_values('vertex_order'); v = h[['x', 'y']].values
+    vs = [H[H.id == h].sort_values('vertex_order')[['x', 'y']].values for h in x.hull.split('+')]; v = np.vstack(vs)
     x0, x1 = v[:, 0].min() - 5, v[:, 0].max() + 5; y0, y1 = v[:, 1].min() - 5, v[:, 1].max() + 5
     b = T[T.tsne_x.between(x0, x1) & T.tsne_y.between(y0, y1)]
     fig, ax = plt.subplots(figsize=(6, 6)); ax.scatter(b.tsne_x, b.tsne_y, s=.6, c='#ced4da', lw=0)
-    src = SG.contig[SG.g == x.source_group]; sc = b[b.index.isin(src)]; ax.scatter(sc.tsne_x, sc.tsne_y, s=2, c='#fd7e14', lw=0, alpha=.5, label=f'source {x.source_group}')
+    src = SG.contig[SG.g.isin(x.source_group.split('+'))]; sc = b[b.index.isin(src)]; ax.scatter(sc.tsne_x, sc.tsne_y, s=2, c='#fd7e14', lw=0, alpha=.5, label=f'source {x.source_group}')
     mm = b[b.index.isin(CM.contig[CM.mag == x.mag])]; ax.scatter(mm.tsne_x, mm.tsne_y, s=2, c='#1c7ed6', lw=0, alpha=.6, label=f'{x.mag} members')
-    ax.plot(np.r_[v[:, 0], v[0, 0]], np.r_[v[:, 1], v[0, 1]], c='k', lw=1.2)
+    for v in vs: ax.plot(np.r_[v[:, 0], v[0, 0]], np.r_[v[:, 1], v[0, 1]], c='k', lw=1.2)
     ax.set_xlim(x0, x1); ax.set_ylim(y0, y1); ax.set_aspect('equal'); ax.grid(alpha=.3); ax.legend(fontsize=7, loc='lower left')
     ax.set_title(f'{x.mag} ({x.hull}): {x.bp / 1e6:.1f} Mbp; +{x.bp_gained / 1e6:.1f} gained', fontsize=9)
     plt.tight_layout(); plt.savefig(O + f'hulls/verify/{x.mag}.png', dpi=80); plt.close()

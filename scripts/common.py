@@ -279,14 +279,38 @@ def is_virus_hull_mag(x):
     return is_hull_mag(x) and x.startswith('VV')
 
 
+def taxon_display(name, rank, pid, order='', klass=''):
+    """Display name of an identify.py taxonomy call (user rule 2026-11-08). A genus call whose median protein identity is < 90%
+    (no close reference genome) shows the deepest of order/class with protein support >= 0.5 plus the genus as '-like':
+    'Trebouxiophyceae (Picochlorum-like)', 'Chaetocerotales (Attheya-like)'. Genus calls at >= 90% (Micromonas, Bathycoccus,
+    Minidiscus) keep the plain genus. order/klass are ee_taxonomy.tsv protein_order/protein_class cells ('Name support')."""
+    if rank != 'genus' or not name: return name
+    try: p = float(pid)
+    except (TypeError, ValueError): return name
+    if p >= 90: return name
+    for cell in (order, klass):
+        f = str(cell).rsplit(' ', 1)
+        if len(f) == 2 and f[0] and float(f[1]) >= 0.5: return f'{f[0]} ({name}-like)'
+    return f'{name}-like'
+
+
 def hull_mag_label(mid):
-    """'Virus VV##', 'Eukaryote EE05 (Minidiscus)', 'Eukaryote EE04', or 'Eukaryote EE08 (Oligohymenophorea, mixed group)'.
-    The name is the identify.py taxonomy call and is shown only at high or medium confidence; doubtful MAGs say 'mixed group'."""
+    """'Virus VV##', 'Eukaryote EE05 (Minidiscus, ≥ 2 strains)', 'Eukaryote EE30 (Chaetoceros spp., ≥ 2 species)', 'Eukaryote EE04',
+    'Eukaryote EE01 (doubtful)' or 'Eukaryote EE08 (Oligohymenophorea, mixed group)'.
+    The name is the identify.py taxonomy call (as taxon_display: distant genus calls read 'Order, Genus-like') and is shown
+    only at high or medium confidence. genome_status (euks/mags coding.py
+    rules): 'doubtful, not a genome' -> '(doubtful)' with no name; 'multi-genome (≥ 2 species|strains)' -> the sub-label, and a
+    genus name becomes 'Genus spp.' for ≥ 2 species. Tiara-doubtful MAGs say 'mixed group'."""
     i = hull_mag_info(mid)
     if not i: return ''
     if mid.startswith('VV'): return f'Virus {mid}'
-    tax = i.get('taxonomy', '') if i.get('taxonomy_confidence', '') in ('high', 'medium') else ''
-    tag = ', '.join(x for x in (tax, 'mixed group' if i.get('status') == 'doubtful' else '') if x)
+    gs = str(i.get('genome_status', '') or '')
+    if gs.startswith('doubtful'): return f'Eukaryote {mid} (doubtful)'
+    tax = (i.get('taxonomy_display') or i.get('taxonomy', '')) if i.get('taxonomy_confidence', '') in ('high', 'medium') else ''
+    tax = tax.replace(' (', ', ').rstrip(')') if tax.endswith('-like)') else tax          # 'Trebouxiophyceae, Picochlorum-like' inside the label's brackets
+    multi = gs[gs.find('(') + 1:-1] if gs.startswith('multi-genome') else ''
+    if tax and multi.endswith('species') and i.get('taxonomy_rank', '') == 'genus' and '-like' not in tax: tax += ' spp.'
+    tag = ', '.join(x for x in (tax, multi, 'mixed group' if i.get('status') == 'doubtful' else '') if x)
     return f'Eukaryote {mid}' + (f' ({tag})' if tag else '')
 
 

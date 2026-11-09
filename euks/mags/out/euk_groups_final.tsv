@@ -1,7 +1,7 @@
 group	note	parts	contigs	bp	gc	depth_med	n50	tiara_euk	tiara_bac	tiara_org	who_euk	cx	cy	rms	dastool_bins	rrna18S	rrna16S	sendsketch	plastid_bins
 E01	unchanged	EUK02a	8207	45673127	46.9	3.23	6097	0.966	0.005	0.01	0.998	8.7	-73.2	3.9	lorbin_780 4; maxbin_001 1; comebin_4527 1	Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (1); SAR > Rhizaria > Cercozoa > Thecofilosea > Incertae Sedis (1)	Pseudomonadota > Incertae Sedis (1)		
 E02	unchanged	EUK03a	3688	36080223	49.3	2.9	12581	0.985	0.001	0.0	0.82	24.8	-56.9	6.1		SAR > Stramenopiles > Ochrophyta > Chrysophyceae > Ochromonadales (3)			
-E03	unchanged; split into 2 (Ashman D 3.96)	EUK07	1935	24800862	45.0	3.15	16704	0.999	0.0	0.0	0.937	9.7	-41.5	2.7	comebin_4527 1935				
+E03	unchanged; two t-SNE lobes kept whole: parts co-vary in RNA (rho 0.996 >= 0.9)	EUK07	2640	32357907	44.6	3.17	16437	0.998	0.0	0.0	0.945	7.7	-42.9	5.4	comebin_4527 2640				
 E04	unchanged	EUK05	5941	31988286	46.8	1.79	6097	0.998	0.0	0.0	0.961	20.4	-80.5	4.9		SAR > Rhizaria > Cercozoa > Novel Clade 2 > uncultured eukaryote (12); Amorphea > Obazoa > Opisthokonta > Nucletmycea > Fungi (5); Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (4); Amorphea > Obazoa > Opisthokonta > Holozoa > Choanozoa (3)	Bacillota > Bacillus (1)		
 E05	grew 27.9 -> 75.1 Mbp	EUK04	8758	75126070	40.2	2.24	10665	0.978	0.002	0.0	0.848	-22.1	-102.4	3.8	comebin_3937 1652; lorbin_421_sub 1				
 E06	unchanged	EUK03b	3667	23241522	52.7	2.18	7196	0.986	0.008	0.0	0.866	40.5	-72.1	4.6	maxbin_263_sub 4; maxbin_289 1	Archaeplastida > Chloroplastida > Charophyta > Phragmoplastophyta > Streptophyta (1); SAR > Alveolata > Ciliophora > Intramacronucleata > Conthreep (1)			
@@ -20,4 +20,3 @@ E21	new; absorbed E19	EUK01+EUK21	31382	144781420	49.0	2.98	4887	0.959	0.024	0.0
 E22	new	EUK10	1233	15603651	59.1	5.41	15450	0.892	0.009	0.0	0.257	54.3	-94.2	1.2		SAR > Alveolata > Ciliophora > Intramacronucleata > Spirotrichea (1)			
 E23	new	EUK12	1015	13353601	48.3	3.42	17907	0.995	0.001	0.0	0.266	23.2	-111.7	1.1	lorbin_455_sub 1				
 E24	new	EUK11	66	251619	47.1	0.0	3877	0.883	0.081	0.0	0.665	28.4	-67.5	5.3	comebin_3436_sub 1				
-E31	split from E03 (Ashman D 3.96, 10.3 units apart)	EUK07	705	7557045	43.2	3.28	15344	0.995	0.0	0.0	0.973	1.1	-47.2	4.4	comebin_4527 705				

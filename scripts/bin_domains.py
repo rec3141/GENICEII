@@ -30,7 +30,9 @@ Hull-curated MAGs (the site's eukaryotic and viral genome labels; E##/V## are ke
   data/contig_organelle_group.tsv.gz contig -> P##/M##
   bin_domain.tsv:hull_mag      the EE## holding >= 50% of a eukaryote bin's bp
 scripts/common.py (hull_mag*, organelle_group*, euk_group*, virus_group*, contig_host_label, special_label) reads these."""
-import os
+import os, sys
+sys.path.insert(0, "/data/dev/rnaseq-exploration/scripts")
+from common import taxon_display
 import pandas as pd, numpy as np
 SRC = '/data/dev/fastsne/data/microscape/contigs_microscape.tsv.gz'
 OUT = '/data/dev/rnaseq-exploration/data/bin_domain.tsv'
@@ -91,21 +93,37 @@ HM = HM[~HM.mag.isin(vv_drop)].copy(); CH = CH[~CH.mag.isin(vv_drop)]
 EGi = EG.set_index('group')
 num = lambda c: pd.to_numeric(HM[c], errors='coerce')
 nh = HM.groupby('source_group').mag.transform('size')                       # E21 -> several hulls (EE21, EE32-EE36)
-src_bp = HM.source_group.map(EGi.bp).astype(float).where(nh == 1)
-src_ex = HM.source_group.map(EGi.expr_ppm_median).astype(float)
+# merged MAGs (euks/mags merge_mags.py) list their source groups as 'E03+E29': sizes add up, expression takes the bp-weighted mean
+_sb = lambda g: sum(float(EGi.bp.get(x, np.nan)) for x in str(g).split('+'))
+_se = lambda g: (sum(float(EGi.bp.get(x, np.nan)) * float(EGi.expr_ppm_median.get(x, np.nan)) for x in str(g).split('+')) / _sb(g))
+src_bp = HM.source_group.map(_sb).astype(float).where(nh == 1)
+src_ex = HM.source_group.map(_se).astype(float)
 # status, same thresholds as the E## groups: doubtful if Tiara-eukarya purity < 0.9; then under 4 Mbp; then under 10 reads per million
 HM['status'] = np.select([HM.mag.str.startswith('VV'), num('tiara_euk') < 0.9, num('bp') < 4e6, num('expr_ppm_median') < 10],
                          ['virus', 'doubtful', '<4 Mbp', 'little CMO RNA'], 'network')
+# genome status (euks/mags coding.py rules, in ee_taxonomy.tsv): 'doubtful, not a genome' (BUSCO C < 1%, coding < 2%, not metazoan)
+# -> status doubtful and not network-ready; 'multi-genome (≥ 2 species|strains)' (BUSCO D >= 10%, duplicate-copy identity < 98%)
+# -> stays network-ready with a caution note
+TX0 = pd.read_csv(EM + 'ee_taxonomy.tsv', sep='\t', keep_default_na=False).set_index('mag')
+HM['genome_status'] = HM.mag.map(TX0.genome_status).fillna('') if 'genome_status' in TX0 else ''
+HM['busco'] = HM.mag.map(TX0.completeness).fillna('') if 'completeness' in TX0 else ''
+HM['coding_pct'] = HM.mag.map(TX0.coding_pct) if 'coding_pct' in TX0 else np.nan
+HM.loc[HM.genome_status.str.startswith('doubtful'), 'status'] = 'doubtful'
+HM['network_ok'] = (HM.network_ok.astype(str) == 'True') & ~HM.genome_status.str.startswith('doubtful')
 # cautions (rules): expression jumped >= 10x over the source group (to >= 10 per million) -> the hull probably took in an expressed
-# neighbour; the hull added >= 4 Mbp and >= 50% of the source group's size; the hull was drawn on a sparse or small core
+# neighbour; the hull added >= 4 Mbp and >= 50% of the source group's size, unless the hull note in hulls.tsv says
+# 'RECHECKED <date>' (re-checked against the core's expression profile or a lineage panel: EE30, EE12); the hull was drawn on a
+# sparse or small core; multi-genome status
 CAU = []
 for i, x in HM.iterrows():
     c = []
     e, se = num('expr_ppm_median')[i], src_ex[i]
     if e >= 10 and np.isfinite(se) and e >= 10 * max(se, 0.1): c.append('uncertain: hull may include an expressed neighbour')
     g, sb = num('bp_gained')[i], src_bp[i]
-    if np.isfinite(sb) and g >= 4e6 and g >= 0.5 * sb: c.append(f'hull added {g / 1e6:.1f} Mbp to the {sb / 1e6:.1f} Mbp source group')
+    if np.isfinite(sb) and g >= 4e6 and g >= 0.5 * sb and 'RECHECKED' not in str(x.note): c.append(f'hull added {g / 1e6:.1f} Mbp to the {sb / 1e6:.1f} Mbp source group')
     if str(x.note).startswith('UNSURE'): c.append('hull drawn on a sparse or small core')
+    if str(x.genome_status).startswith('multi-genome'):
+        c.append(f"more than one genome: {x.genome_status[x.genome_status.find('(') + 1:-1]} (BUSCO duplication {x.busco.split('D ')[-1].rstrip(']')})")
     CAU.append('; '.join(c))
 HM['caution'] = CAU
 HM['taxonomy_hint'] = HM.source_group.map(EGi.taxonomy_hint).fillna('').where(nh == 1, '')
@@ -115,8 +133,11 @@ TX.to_csv(DD + 'ee_taxonomy.tsv', sep='\t', index=False)
 _c = TX.set_index('mag').call.str.extract(r'^(?P<name>[^?(]+?)\??\s*\((?P<rank>[^)]+)\)$')
 HM['taxonomy'] = HM.mag.map(_c.name).fillna(''); HM['taxonomy_rank'] = HM.mag.map(_c['rank']).fillna('')
 HM['taxonomy_confidence'] = HM.mag.map(TX.set_index('mag').confidence).fillna('')
-HM[['mag', 'hull', 'source_group', 'status', 'network_ok', 'caution', 'contigs', 'bp', 'gc', 'n50', 'tiara_euk', 'who_euk', 'virus_bp', 'tsne_rms',
-    'bp_gained', 'bp_lost', 'excluded_prok_bp', 'expr_ppm_median', 'taxonomy_hint', 'taxonomy', 'taxonomy_rank', 'taxonomy_confidence', 'note']].to_csv(DD + 'hull_mags.tsv', sep='\t', index=False)
+_t = TX.set_index('mag')
+HM['taxonomy_display'] = [taxon_display(x.taxonomy, x.taxonomy_rank, _t.protein_pid_median.get(x.mag, ''), _t.protein_order.get(x.mag, ''), _t.protein_class.get(x.mag, ''))
+                          for x in HM.itertuples()]
+HM[['mag', 'hull', 'source_group', 'merged_from', 'status', 'genome_status', 'network_ok', 'caution', 'busco', 'coding_pct', 'contigs', 'bp', 'gc', 'n50', 'tiara_euk', 'who_euk', 'virus_bp', 'tsne_rms',
+    'bp_gained', 'bp_lost', 'excluded_prok_bp', 'expr_ppm_median', 'taxonomy_hint', 'taxonomy', 'taxonomy_rank', 'taxonomy_confidence', 'taxonomy_display', 'note']].to_csv(DD + 'hull_mags.tsv', sep='\t', index=False)
 assert not CH.contig.duplicated().any()
 CH[['contig', 'mag', 'source_group', 'in_source', 'tiara']].to_csv(DD + 'contig_hull_mag.tsv.gz', sep='\t', index=False, compression='gzip')
 eh = T.merge(CH[['contig', 'mag']], left_on='id', right_on='contig', how='inner')

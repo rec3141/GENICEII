@@ -156,8 +156,9 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
 ### Pipeline order (all in `scripts/`, Python `/data/miniforge3/bin/python3`)
 1. `survey.py` (candidate config `LIST`) → `compact.py` → `final.py` (split rule + ID registry) → `expr.py` → `finalize.py` (virus rule, statuses).
 2. `kernel.py` (seed config `SEEDS`) → `da.py` → `register_blobs.py` (organelle → P/M, virus → V, eukaryote → E) → `plot.py`.
-3. `hull_panels.py` → **`hulls.tsv`** (curated, hand-picked; never regenerated) → `hull_mags.py` → `plot_hulls.py`.
-4. `organelle.py`: exploratory, see Pending. Do NOT run it as part of the pipeline: it rewrites the organelle tables with a flawed split.
+3. `hull_panels.py` → **`hulls.tsv`** (curated, hand-picked; never regenerated) → `hull_mags.py` → **`merge_mags.py`** (reruns `hull_mags.py` when the merges change) → `hull_expr.py` → `plot_hulls.py` → `heatmap.py`.
+4. BUSCO and identity: `busco_table.py` (runs BUSCO on any MAG whose membership has no cached run) → `busco_dups.py` → `identify.py` → `coding.py` (adds BUSCO, coding and `genome_status` to `ee_taxonomy.tsv`). Then the site: `scripts/bin_domains.py` and the page scripts.
+5. `organelle.py`: exploratory, see Pending. Do NOT run it as part of the pipeline: it rewrites the organelle tables with a flawed split.
 - Always run `final.py` before `finalize.py`. `finalize.py` rewrites `contig_euk_group.tsv` from bin groups, and `register_blobs.py` appends the kernel blobs afterwards.
 
 ### Rules (see sections above for details)
@@ -165,7 +166,7 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
   - Built by containment + density gaps (DBSCAN eps 1.5).
   - Seeds must be ≥ 50% Tiara eukarya.
   - GC/24-unit merge; footprint merge.
-  - Split rule (`eukshared.split_parts`): Ashman D > 3, > 5 units apart, minor part ≥ 2 Mbp and ≥ 10%.
+  - Split rule (`eukshared.split_parts`): Ashman D > 3, > 5 units apart, minor part ≥ 2 Mbp and ≥ 10%, **and** the parts' RNA profiles differ (Spearman ρ < 0.9 between the parts' summed per-library RNA; guard added 2026-11-08).
 - **Viruses (V##):** ≥ 50% geNomad viral AND < 50% Tiara organelle.
 - **Organelles (P##/M##):** ≥ 50% Tiara organelle. P vs M by marker genes, because Tiara's second-stage call is not in the contig table.
 - **IDs:** shared registry `out/id_registry.tsv`.
@@ -269,3 +270,24 @@ Run in this order: `survey.py` → `compact.py` → `final.py` → `expr.py`.
   - 95% of its RNA sits on 5 contigs (24 kb) present in 123–128 of 128 libraries.
   - Those contigs carry tubulin, ubiquitin and HSP90 with 72–96% identity to many lineages. They are conserved, highly expressed genes, probably taking cross-mapped reads from many eukaryotes.
   - The rest of the genome has a median of 0.8 reads per million, so EE08's heatmap RNA row is not the genome's own expression.
+
+## Split guard, merge rule and relabel rules (2026-11-08, user-approved)
+- **Split guard** (`eukshared.split_parts`): a density split now also needs the parts' RNA profiles to differ, Spearman ρ < 0.9 between the parts' summed per-library RNA (reads per million contig-assigned reads, 128 libraries; the `hull_expr.py` metric, `eukshared.rna_profile`).
+  - E03's two lobes have ρ 0.996, so E03 is whole again. `final.py` retires split IDs a rerun no longer produces: `retired:E31 (split of E03 undone by the RNA split guard, 2026-11-08)`.
+  - The E31 hull keeps its id EE31: `hull_mags.py` resolves a hull whose source group was retired by the guard to the parent (`eukshared.resolve_source`: E31 → E03).
+  - Reran final → expr → finalize → da → register_blobs → plot; only the 705 E31 contigs changed (to E03). Kernel blobs, viruses and organelles are unchanged.
+- **Merge rule** (`scripts/merge_mags.py`, after `hull_mags.py`). A pair of EE MAGs merges only if all hold: RNA ρ ≥ 0.95; DNA ρ ≥ 0.8 (`eukshared.dna_profile`, CMO nanopore depth × length share); skani AF < 10% both ways (`skani dist --min-af 0`; no output = below the 80% ANI screen = AF 0); BUSCO on the union D < 5% and C above the best part.
+  - Transitive in decreasing RNA ρ; a growing group is re-tested as a whole (summed profiles, skani of group FASTAs, BUSCO of the union).
+  - The lowest EE number is kept; others get `retired:EEnn (merged into EEmm, <date>)`. `hull_mags.py` applies these keys (`eukshared.merged_into`); merged MAGs list all hulls/source groups (`E03+E29`) and a `merged_from` column. `merge_mags.py` reruns `hull_mags.py` when the merge set changes.
+  - Every pair goes to `out/mag_merge_tests.tsv`. skani runs for pairs with RNA ρ ≥ 0.8 or the same source group; union BUSCO runs for candidates and near-misses (same source group, or RNA ρ ≥ 0.9 failing one rule).
+- **BUSCO cache** (`scripts/buscolib.py`): runs are keyed by the md5 of the sorted contig ids (`out/busco/runs/<label>_<md5>/`, with `members.txt`); older runs under `out/busco/run_*` are adopted when their input FASTA still exists, predates the summary and holds exactly the MAG's contigs. FASTAs are cut from `ee_contigs.fa.gz` + `ee_contigs_add1.fa.gz`.
+  - `busco_table.py` writes `out/busco/busco_eukaryota_odb12.tsv` for the current MAG set (newest matching run per MAG; runs BUSCO when none matches). `busco_dups.py` reads the chosen runs.
+- **Relabel rules** (`coding.py` → `ee_taxonomy.tsv:genome_status`; `bin_domains.py` → `data/hull_mags.tsv`; `common.hull_mag_label`):
+  - `doubtful, not a genome`: BUSCO C < 1% AND coding < 2% AND not a metazoan call (protein kingdom vote Metazoa ≥ 0.5, or a metazoan taxon in the call). Status doubtful, not network-ready, label "EE01 (doubtful)".
+  - `multi-genome (≥ 2 species)`: BUSCO D ≥ 10% AND median duplicate-copy identity < 90%; `(≥ 2 strains)` for 90–98%. Stays network-ready with a caution; label e.g. "EE30 (Chaetoceros spp., ≥ 2 species)".
+  - Hulls whose note in `hulls.tsv` contains `RECHECKED <date>` (E30: expression re-check; E12: copepod lineage panel) are exempt from the "hull added X Mbp" caution.
+- **Heatmap:** a MAG whose 5 most-read contigs hold ≥ 90% of its RNA reads is labelled `EE##*` and its RNA row is hatched (`out/hull_mags_rna_flags.tsv`).
+- **Result (2026-11-08):** merged EE29 → EE03 (RNA ρ 0.979, DNA 0.854, AF 1.6/4.4%, BUSCO 55.8 [2.3] + 5.4 [0] → 59.7 [2.3]) and EE13 → EE06 (ρ 0.950, DNA 0.827, AF 0.2/2.9%, 12.4 + 0.8 → 13.2 [0]; borderline on RNA and one extra BUSCO). Not merged: EE03 + EE31 (RNA ρ 0.53; the union would give 64.3 [3.9]). EE31's summed RNA is 83% on its 5 most-read contigs (two 10-kb contigs, contig_0221272 and contig_0193859, in the 9.5 Mbp the hull added); without its top 5 contigs ρ with EE03 is 0.97, and its E31 core alone has ρ 0.99. E21 pieces: best RNA ρ 0.82 (EE33/EE35), none pass. All pairs: `out/mag_merge_tests.tsv`.
+- **RNA flags:** EE01 and EE04 have 83% and 94% of their reads on one 18S/28S rRNA contig each; EE08 on conserved-gene contigs; EE10 on two contigs. Their RNA medians (e.g. EE04 3,107 per million) are not genome expression.
+- **Distant genus calls read "-like"** (user rule 2026-11-08; `common.taxon_display`, written by `scripts/bin_domains.py` as `data/hull_mags.tsv:taxonomy_display` and used by `hull_mag_label`, the Eukaryotes table and `lineage.json`): a genus call with median protein identity (`protein_pid_median`) < 90% shows the deepest of order/class with protein support ≥ 0.5, plus the genus as "-like": EE25 "Trebouxiophyceae (Picochlorum-like)", EE03 "Chaetocerotales (Attheya-like)", EE26 "Fragilariales (Staurosira-like)", EE30 "Chaetocerotales (Chaetoceros-like)". Genus calls at ≥ 90% keep the plain genus (Micromonas, Bathycoccus, Minidiscus). Inside a label the brackets become commas: "Eukaryote EE30 (Chaetocerotales, Chaetoceros-like, ≥ 2 species)".
+- **Published Hudson Bay context:** `euks/literature_context.tsv` (curated by hand; `#ref` lines hold citations) is read by `euks/scripts/euks_site.py` into `euks.json:literature` and shown under the Eukaryotes table. MAG ids are mapped through the registry (`retired:EEnn (merged into EEmm …)`), so EE14/EE17 show as EE12 and EE29 as EE03; EE13 shows as EE06.

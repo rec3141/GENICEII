@@ -1,31 +1,27 @@
-mag	Mbp	call	conf	C	S	D	F	M	E
-EE01	40.1	Laminariales (order)	medium	0.0	0.0	0.0	3.1	96.9	
-EE02	38.81	Chrysophyceae (class)	medium	52.7	50.4	2.3	7.0	40.3	50.0
-EE03	28.78	Attheya (genus)	medium	55.8	53.5	2.3	7.8	36.4	52.8
-EE04	34.77	Cercozoa (rRNA)	medium	2.3	2.3	0.0	4.7	93.0	66.7
-EE05	81.76	Minidiscus (genus)	high	79.1	61.2	17.8	7.8	13.2	46.1
-EE06	26.84	Choanoflagellata? (class)	low	12.4	12.4	0.0	13.2	74.4	37.5
-EE07	23.78	Acanthoecida (order)	medium	26.4	26.4	0.0	2.3	71.3	35.3
-EE08	15.55	Oligohymenophorea (class)	medium	17.8	14.7	3.1	6.2	76.0	21.7
-EE10	11.24	Metazoa (kingdom)	medium	1.6	1.6	0.0	3.1	95.3	
-EE12	8.93	Calanidae (family)	medium	0.8	0.8	0.0	0.0	99.2	100.0
-EE13	2.22	Metazoa? (kingdom)	low	0.8	0.8	0.0	0.8	98.4	100.0
-EE14	8.33	Calanidae (family)	medium	0.0	0.0	0.0	0.8	99.2	
-EE15	2.14	Bacillariophyta? (phylum)	low	3.9	3.9	0.0	0.8	95.3	60.0
-EE16	7.28	Haptophyta? (phylum)	low	0.0	0.0	0.0	0.0	100.0	
-EE17	2.53	Calanidae (family)	medium	1.6	1.6	0.0	0.0	98.4	
-EE21	21.87	Bacillariophyta (phylum)	high	1.6	1.6	0.0	0.8	97.7	
-EE22	18.05	Micromonas (genus)	high	65.9	65.9	0.0	10.1	24.0	37.6
-EE23	13.78	Bathycoccus (genus)	high	62.8	60.5	2.3	6.2	31.0	22.2
-EE25	7.8	Picochlorum (genus)	medium	42.6	42.6	0.0	11.6	45.7	58.2
-EE26	8.43	Staurosira (genus)	medium	20.9	20.9	0.0	2.3	76.7	55.6
-EE27	12.21	Thalassiosiraceae (family)	medium	12.4	12.4	0.0	1.6	86.0	43.8
-EE28	4.96	Chromulinales (order)	medium	7.0	7.0	0.0	1.6	91.5	44.4
-EE29	10.55	Chaetocerotales (order)	medium	5.4	5.4	0.0	0.8	93.8	28.6
-EE30	71.77	Chaetoceros (genus)	medium	88.4	51.2	37.2	4.7	7.0	51.8
-EE31	14.66	Chaetocerotales (order)	medium	11.6	11.6	0.0	2.3	86.0	66.7
-EE32	19.79	Naviculales (order)	medium	32.6	31.8	0.8	8.5	58.9	54.8
-EE33	17.87	Bacillariophyceae (class)	medium	25.6	24.0	1.6	6.2	68.2	48.5
-EE34	7.52	Bacillariophyceae (class)	medium	0.8	0.8	0.0	0.0	99.2	
-EE35	5.55	Bacillariophyceae (class)	medium	1.6	1.6	0.0	0.0	98.4	50.0
-EE36	3.07	Ascomycota? (phylum)	low	6.2	6.2	0.0	0.8	93.0	37.5
+mag	Mbp	C	S	D	F	M	n	matches_members	summary	fasta
+EE01	40.1	0.0	0.0	0.0	3.1	96.9	129.0	True	run_euk_miniprot/EE01.fa/short_summary.specific.eukaryota_odb12.EE01.fa.txt	mags/EE01.fa
+EE02	38.81	52.7	50.4	2.3	7.0	40.3	129.0	True	run_euk_miniprot/EE02.fa/short_summary.specific.eukaryota_odb12.EE02.fa.txt	mags/EE02.fa
+EE03	39.33	59.7	57.4	2.3	7.8	32.6	129.0	True	runs/EE03_EE29_ee24dac979/short_summary.specific.eukaryota_odb12.EE03_EE29_ee24dac979.txt	fasta/EE03_EE29_ee24dac979.fa
+EE04	34.77	2.3	2.3	0.0	4.7	93.0	129.0	True	run_euk_miniprot/EE04.fa/short_summary.specific.eukaryota_odb12.EE04.fa.txt	mags/EE04.fa
+EE05	81.76	79.1	61.2	17.8	7.8	13.2	129.0	True	run_euk_miniprot/EE05.fa/short_summary.specific.eukaryota_odb12.EE05.fa.txt	mags/EE05.fa
+EE06	29.06	13.2	13.2	0.0	14.0	72.9	129.0	True	runs/EE06_EE13_2b126a216c/short_summary.specific.eukaryota_odb12.EE06_EE13_2b126a216c.txt	fasta/EE06_EE13_2b126a216c.fa
+EE07	23.78	26.4	26.4	0.0	2.3	71.3	129.0	True	run_euk_miniprot/EE07.fa/short_summary.specific.eukaryota_odb12.EE07.fa.txt	mags/EE07.fa
+EE08	15.55	17.8	14.7	3.1	6.2	76.0	129.0	True	run_euk_miniprot/EE08.fa/short_summary.specific.eukaryota_odb12.EE08.fa.txt	mags/EE08.fa
+EE10	11.24	1.6	1.6	0.0	3.1	95.3	129.0	True	run_euk_miniprot/EE10.fa/short_summary.specific.eukaryota_odb12.EE10.fa.txt	mags/EE10.fa
+EE12	44.97	5.4	5.4	0.0	2.3	92.2	129.0	True	run_EE12_copepod/short_summary.specific.eukaryota_odb12.run_EE12_copepod.txt	mags/EE12.fa
+EE15	2.14	3.9	3.9	0.0	0.8	95.3	129.0	True	run_euk_miniprot/EE15.fa/short_summary.specific.eukaryota_odb12.EE15.fa.txt	mags/EE15.fa
+EE16	7.28	0.0	0.0	0.0	0.0	100.0	129.0	True	run_euk_miniprot/EE16.fa/short_summary.specific.eukaryota_odb12.EE16.fa.txt	mags/EE16.fa
+EE21	21.87	1.6	1.6	0.0	0.8	97.7	129.0	True	run_euk_miniprot/EE21.fa/short_summary.specific.eukaryota_odb12.EE21.fa.txt	mags/EE21.fa
+EE22	18.05	65.9	65.9	0.0	10.1	24.0	129.0	True	run_euk_miniprot/EE22.fa/short_summary.specific.eukaryota_odb12.EE22.fa.txt	mags/EE22.fa
+EE23	13.78	62.8	60.5	2.3	6.2	31.0	129.0	True	run_euk_miniprot/EE23.fa/short_summary.specific.eukaryota_odb12.EE23.fa.txt	mags/EE23.fa
+EE25	7.8	42.6	42.6	0.0	11.6	45.7	129.0	True	run_euk_miniprot/EE25.fa/short_summary.specific.eukaryota_odb12.EE25.fa.txt	mags/EE25.fa
+EE26	8.43	20.9	20.9	0.0	2.3	76.7	129.0	True	run_euk_miniprot/EE26.fa/short_summary.specific.eukaryota_odb12.EE26.fa.txt	mags/EE26.fa
+EE27	12.21	12.4	12.4	0.0	1.6	86.0	129.0	True	run_euk_miniprot/EE27.fa/short_summary.specific.eukaryota_odb12.EE27.fa.txt	mags/EE27.fa
+EE28	4.96	7.0	7.0	0.0	1.6	91.5	129.0	True	run_euk_miniprot/EE28.fa/short_summary.specific.eukaryota_odb12.EE28.fa.txt	mags/EE28.fa
+EE30	71.77	88.4	51.2	37.2	4.7	7.0	129.0	True	run_euk_miniprot/EE30.fa/short_summary.specific.eukaryota_odb12.EE30.fa.txt	mags/EE30.fa
+EE31	14.66	11.6	11.6	0.0	2.3	86.0	129.0	True	run_euk_miniprot/EE31.fa/short_summary.specific.eukaryota_odb12.EE31.fa.txt	mags/EE31.fa
+EE32	19.79	32.6	31.8	0.8	8.5	58.9	129.0	True	run_euk_miniprot/EE32.fa/short_summary.specific.eukaryota_odb12.EE32.fa.txt	mags/EE32.fa
+EE33	17.87	25.6	24.0	1.6	6.2	68.2	129.0	True	run_euk_miniprot/EE33.fa/short_summary.specific.eukaryota_odb12.EE33.fa.txt	mags/EE33.fa
+EE34	7.52	0.8	0.8	0.0	0.0	99.2	129.0	True	run_euk_miniprot/EE34.fa/short_summary.specific.eukaryota_odb12.EE34.fa.txt	mags/EE34.fa
+EE35	5.55	1.6	1.6	0.0	0.0	98.4	129.0	True	run_euk_miniprot/EE35.fa/short_summary.specific.eukaryota_odb12.EE35.fa.txt	mags/EE35.fa
+EE36	3.07	6.2	6.2	0.0	0.8	93.0	129.0	True	run_euk_miniprot/EE36.fa/short_summary.specific.eukaryota_odb12.EE36.fa.txt	mags/EE36.fa

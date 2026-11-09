@@ -9,7 +9,12 @@ MAGs with < MIN_N such contigs are not shown (the 'little CMO RNA' groups).
 DNA: nanopore depth per contig per library is too sparse for any contig median; length-weighted mean depth per Gbp mapped.
 Transform: 4th root. Rows: Ward clustering on both blocks, each block z-scored per row after the transform.
 Columns: Ward clustering within each block. Colour: viridis, a separate scale per block.
-Out: out/hull_mags_relabund_{rna,dna}.tsv, out/hull_mags_heatmap.png"""
+RNA artefact flag: a MAG whose TOP_N (5) most-read contigs carry >= TOP_SHARE (90%) of its RNA reads is labelled '<id>*' on the
+RNA rows and hatched, since its RNA row is then not the genome's own expression: EE08 (conserved, highly expressed
+tubulin/ubiquitin/HSP90 contigs taking cross-mapped reads from many eukaryotes); EE01 and EE04 (83% and 94% of their reads on one
+18S/28S rRNA contig each); EE10 (2 contigs). Listed in out/hull_mags_rna_flags.tsv.
+Retired ids (out/id_registry.tsv) are left out.
+Out: out/hull_mags_relabund_{rna,dna}.tsv, out/hull_mags_rna_flags.tsv, out/hull_mags_heatmap.png"""
 import sys, gzip
 import numpy as np, pandas as pd, scipy.io
 from scipy.cluster.hierarchy import linkage, leaves_list
@@ -19,9 +24,12 @@ sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
 from common import samples, all_samples, meta, nanopore_samples, D as DD
 O = '/data/dev/rnaseq-exploration/euks/mags/out/'
 MIN_DET, MIN_N = 0.25, 5
+TOP_N, TOP_SHARE = 5, 0.9
 
 H = pd.read_csv(O + 'contig_hull_mag.tsv', sep='\t')
-H = H[H.mag.str.startswith('EE')]
+sys.path.insert(0, '/data/dev/rnaseq-exploration/euks/mags/scripts'); from eukshared import load_ids
+RET = {v for k, v in load_ids().items() if k.startswith('retired:')}
+H = H[H.mag.str.startswith('EE') & ~H.mag.isin(RET)]
 T = pd.read_pickle(O + 'contigs_full.pkl').set_index('id')
 L = T.length.reindex(H.contig).values / 1e3
 
@@ -32,6 +40,10 @@ pos = pd.Series(np.arange(len(T)), index=np.sort(T.index.values))
 tot = np.asarray(Cm[:, kc].sum(0)).ravel()
 rr = Cm[pos[H.contig].values][:, kc].toarray()
 RNA_c = pd.DataFrame(rr / tot * 1e6 / L[:, None], index=H.contig.values, columns=S)
+reads = pd.Series(rr.sum(1), index=H.contig.values)
+top = reads.groupby(H.mag.values).apply(lambda r: r.nlargest(TOP_N).sum() / max(r.sum(), 1))
+FL = pd.DataFrame({'top5_rna_share': top.round(3), 'flag': top >= TOP_SHARE}); FL.to_csv(O + 'hull_mags_rna_flags.tsv', sep='\t')
+print('RNA artefact flags (top', TOP_N, 'contigs >=', TOP_SHARE, 'of reads):', list(FL.index[FL.flag]))
 
 # DNA
 ns = nanopore_samples()
@@ -95,8 +107,11 @@ def block(col, X, ann, co, title, cb_col):
         if i == 0: a.set_title(title, fontsize=11)
     ax = fig.add_subplot(gs[3, col]); M = X.loc[rows_ord].values[:, co]
     im = ax.imshow(M, aspect='auto', cmap='viridis', interpolation='nearest')
+    if col == 0:      # hatch flagged RNA rows
+        for y, m in enumerate(rows_ord):
+            if FL.flag.get(m, False): ax.add_patch(plt.Rectangle((-0.5, y - 0.5), M.shape[1], 1, fill=False, hatch='////', ec='white', lw=0))
     ax.set_xticks([]); ax.set_xlabel(f'{X.shape[1]} libraries (Ward order)', fontsize=9)
-    if col == 0: ax.set_yticks(range(len(rows_ord))); ax.set_yticklabels(rows_ord, fontsize=8)
+    if col == 0: ax.set_yticks(range(len(rows_ord))); ax.set_yticklabels([m + ('*' if FL.flag.get(m, False) else '') for m in rows_ord], fontsize=8)
     else: ax.set_yticks([])
     cax = fig.add_subplot(gs[3, cb_col]); cb = fig.colorbar(im, cax=cax); cb.ax.tick_params(labelsize=7)
     cb.set_label(title.split(':')[0] + ' (4th root)', fontsize=8)
@@ -104,6 +119,8 @@ block(0, R4, rna_ann, co_r, 'RNA: reads per kb per million', 2)
 block(1, D4, dna_ann, co_d, 'DNA: depth per Gbp mapped', 4)
 hs = [Patch(color=c, label=f'{k}: {v}') for k in PAL for v, c in PAL[k].items() if v != 'other'] + [Patch(color='#d9d9d9', label='other / unassigned')]
 fig.legend(handles=hs, loc='lower center', ncol=7, fontsize=8, frameon=False)
+if FL.flag.any():
+    fig.text(0.5, 0.925, f"* RNA row not the genome's own expression: >= {TOP_SHARE:.0%} of the MAG's reads sit on its {TOP_N} most-read contigs (rRNA or conserved, highly expressed genes)", fontsize=9, ha="center")
 fig.suptitle('Eukaryotic hull MAGs (EE##): RNA = median over contig profiles, DNA = length-weighted mean; 4th root, Ward clustering', fontsize=13)
 fig.savefig(O + 'hull_mags_heatmap.png', dpi=130, bbox_inches='tight')
 print('rows', len(rows_ord), 'RNA libs', R4.shape[1], 'DNA libs', D4.shape[1])

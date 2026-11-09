@@ -4,8 +4,9 @@
 2) Uncaptured blobs: Tiara-eukarya contigs >= 3 kb outside all groups, DBSCAN(eps=1.5, min_samples=20 kb-weighted); blobs >= 2 Mbp.
 3) Taxonomy hints: SILVA 18S/16S hits on the contigs, plastid bins overlapping (data/plastid_bins.tsv), sendsketch hits.
 Split rule (eukshared.split_parts): a final group splits into its two 2-component GMM parts when clearly bimodal on the t-SNE
-(Ashman D > 3, centres > 5 units apart, minor part >= 2 Mbp and >= 10%); the larger part keeps the ID, others get IDs from the
-shared registry (out/id_registry.tsv).
+(Ashman D > 3, centres > 5 units apart, minor part >= 2 Mbp and >= 10%) AND the parts' summed per-library RNA profiles differ
+(Spearman rho < 0.9); the larger part keeps the ID, others get IDs from the shared registry (out/id_registry.tsv). A split ID that a
+rerun no longer produces (E31: E03's lobes co-vary, rho 0.996) is retired in the registry ('retired:<id> (...)'), never reused.
 Out: out/euk_groups_final.tsv, out/contig_euk_group.tsv (contig -> group, source), out/uncaptured_blobs.tsv, out/tsne_final.png"""
 import pandas as pd, numpy as np, itertools
 from sklearn.cluster import DBSCAN
@@ -64,7 +65,8 @@ for k, (root, gs) in enumerate(order, 1):
         g = T.loc[ids]; L = g.length.sum(); tl = g.length[g.tiara.notna()].sum()
         name = names[root] if j == 0 else allocate(IDS, f'split:{names[root]}:{j + 1}', 'E', taken=list(names.values()) + list(v1bp.index))
         note_ = notes[root] if j == 0 else f'split from {names[root]} (Ashman D {sst.get("ashman_D")}, {sst.get("sep")} units apart)'
-        if j == 0 and len(parts) > 1: note_ = f'{notes[root]}; split into {len(parts)} (Ashman D {sst.get("ashman_D")})'
+        if j == 0 and len(parts) > 1: note_ = f'{notes[root]}; split into {len(parts)} (Ashman D {sst.get("ashman_D")}, RNA rho {sst.get("rna_rho")})'
+        if j == 0 and 'kept_whole' in sst: note_ = f'{notes[root]}; two t-SNE lobes kept whole: {sst["kept_whole"]}'
         r18 = g[g.rrna_domain == 'Eukaryota'][['rrna_phylum', 'rrna_class', 'rrna_order', 'rrna_family', 'rrna_genus']].fillna('')
         r18 = r18.apply(lambda z: ' > '.join(x for x in z if x), axis=1).value_counts()
         r16 = g[g.rrna_domain == 'Bacteria'][['rrna_phylum', 'rrna_genus']].fillna('').apply(lambda z: ' > '.join(x for x in z if x), axis=1).value_counts()
@@ -82,6 +84,11 @@ for k, (root, gs) in enumerate(order, 1):
                          rrna18S='; '.join(f'{t} ({n})' for t, n in r18.head(4).items()), rrna16S='; '.join(f'{t} ({n})' for t, n in r16.head(3).items()),
                          sendsketch='; '.join(f'{t} ({n})' for t, n in ss.head(3).items()), plastid_bins=','.join(pb)))
         cmap += [dict(contig=c, euk_group=name, source='binned') for c in ids]
+made = {r['group'] for r in rows}
+import datetime
+for k, v in list(IDS.items()):     # split IDs this run no longer produces are retired (kept in the registry, never reused)
+    if k.startswith('split:') and v not in made and not any(kk.startswith(f'retired:{v} ') for kk in IDS):
+        IDS[f'retired:{v} (split of {k.split(":")[1]} undone by the RNA split guard, {datetime.date.today()})'] = v
 save_ids(IDS)
 G = pd.DataFrame(rows).sort_values('group'); G.to_csv(O + 'euk_groups_final.tsv', sep='\t', index=False); pd.DataFrame(cmap).to_csv(O + 'contig_euk_group.tsv', sep='\t', index=False)
 # uncaptured eukaryotic blobs

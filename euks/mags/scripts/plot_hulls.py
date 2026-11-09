@@ -15,7 +15,7 @@ RET = {v for k, v in load_ids().items() if k.startswith('retired:')}         # e
 S = S[~S.mag.isin(RET)]; CM = CM[CM.mag.isin(S.mag)]
 PAL = ['#E69F00', '#56B4E9', '#009E73', '#0072B2', '#D55E00', '#CC79A7', '#F0E442', '#332288', '#117733', '#882255', '#44AA99', '#999933', '#AA4499', '#88CCEE', '#DDCC77', '#CC6677']
 col = {m: ('#000000' if m.startswith('VV') else PAL[k % len(PAL)]) for k, m in enumerate(S.sort_values('bp', ascending=False).mag)}
-poly = {x.mag: H[H.id == x.hull].sort_values('vertex_order')[['x', 'y']].values for x in S.itertuples()}
+poly = {x.mag: [H[H.id == h].sort_values('vertex_order')[['x', 'y']].values for h in x.hull.split('+')] for x in S.itertuples()}     # merged MAGs: several hulls
 Z = (-50, 60, -118, -25)
 fig = plt.figure(figsize=(16, 17.5)); gsp = fig.add_gridspec(2, 2, width_ratios=[1, 1.15], height_ratios=[1, 1.05])
 axes = [fig.add_subplot(gsp[0, 0]), fig.add_subplot(gsp[0, 1]), fig.add_subplot(gsp[1, :])]
@@ -31,10 +31,9 @@ for i, ax in enumerate(axes):
         if zoom: s = s[s.tsne_x.between(Z[0], Z[1]) & s.tsne_y.between(Z[2], Z[3])]
         if len(s) == 0: continue
         ax.scatter(s.tsne_x, s.tsne_y, s=(size(s.cum_ppm) if i == 2 else (1.2 if not zoom else 2.5)), color=col[m], lw=0, alpha=.7 if i == 2 else .8, rasterized=True)
-        v = poly[m]; ax.plot(np.r_[v[:, 0], v[0, 0]], np.r_[v[:, 1], v[0, 1]], c='k' if not m.startswith('VV') else '#c92a2a', lw=.9 if zoom else .5)
-        if zoom or True:
-            lab = m + (f" {S.set_index('mag').cum if False else ''}" if False else '')
-            if i == 2: lab = f"{m} {s.cum_ppm.sum() / 1e3:.0f}k"
+        for v in poly[m]: ax.plot(np.r_[v[:, 0], v[0, 0]], np.r_[v[:, 1], v[0, 1]], c='k' if not m.startswith('VV') else '#c92a2a', lw=.9 if zoom else .5)
+        for k, v in enumerate(poly[m]):      # a merged MAG labels each of its hulls; the total goes on the first
+            lab = m if (i < 2 or k > 0) else f"{m} {s.cum_ppm.sum() / 1e3:.0f}k"
             ax.annotate(lab, (v[:, 0].max(), v[:, 1].max()), fontsize=7.5 if i == 0 else 8.5, weight='bold', ha='left', va='bottom',
                         bbox=dict(boxstyle='round,pad=0.12', fc='white' if not m.startswith('VV') else '#fff3bf', ec='none', alpha=.8))
     st = 20 if not zoom else 10
@@ -51,12 +50,12 @@ mags = list(S.sort_values('mag').mag)
 for k in range(0, len(mags), 9):
     fig, axs = plt.subplots(3, 3, figsize=(15, 15))
     for ax, m in zip(axs.ravel(), mags[k:k + 9]):
-        v = poly[m]; x0, x1 = v[:, 0].min() - 4, v[:, 0].max() + 4; y0, y1 = v[:, 1].min() - 4, v[:, 1].max() + 4
+        v = np.vstack(poly[m]); x0, x1 = v[:, 0].min() - 4, v[:, 0].max() + 4; y0, y1 = v[:, 1].min() - 4, v[:, 1].max() + 4
         b = T[T.tsne_x.between(x0, x1) & T.tsne_y.between(y0, y1) & (T.length >= 1000)].sort_values('cum_ppm')
         ins = b.index.isin(CM.contig[CM.mag == m])
         ax.scatter(b.tsne_x[~ins], b.tsne_y[~ins], s=size(b.cum_ppm[~ins]), c='#adb5bd', lw=0, alpha=.5)
         ax.scatter(b.tsne_x[ins], b.tsne_y[ins], s=size(b.cum_ppm[ins]), c=col[m] if not m.startswith('VV') else '#1c7ed6', lw=0, alpha=.6)
-        ax.plot(np.r_[v[:, 0], v[0, 0]], np.r_[v[:, 1], v[0, 1]], c='k', lw=1)
+        for vv in poly[m]: ax.plot(np.r_[vv[:, 0], vv[0, 0]], np.r_[vv[:, 1], vv[0, 1]], c='k', lw=1)
         ax.set_xlim(x0, x1); ax.set_ylim(y0, y1); ax.set_aspect('equal'); ax.grid(alpha=.3); ax.tick_params(labelsize=7)
         x = S.set_index('mag').loc[m]; ax.set_title(f'{m} ({x.hull}) {x.bp / 1e6:.1f} Mbp, median {x.expr_ppm_median:.0f}/M', fontsize=9)
     for ax in axs.ravel()[len(mags[k:k + 9]):]: ax.axis('off')
