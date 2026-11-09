@@ -41,6 +41,9 @@ for layer in LAYERS:
     DRV.append(dr.assign(layer=layer))
     for m in ('spring', 'spieceasi', 'spearman'):
         M[m] = pd.read_csv(os.path.join(OUT, f'edges_{m}_{layer}.tsv'), sep='\t')
+        # one key order for every method: R (SPIEC-EASI) sorts ids case-insensitively, Python by code point, so 'contig_..' vs
+        # 'EE04' came out in opposite orders and the same pair was two different edges (fixed 2026-11-08)
+        M[m][['a', 'b']] = [edge_key(a, b) for a, b in zip(M[m].a, M[m].b)]
     for m, E in M.items():
         bad = set(E.a) | set(E.b)
         assert bad <= set(N.index), (m, layer, sorted(bad - set(N.index))[:5])

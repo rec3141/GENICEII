@@ -14,5 +14,5 @@ JULIA_DEPOT_PATH=/data/scratch/grid-envs/julia-depot /data/scratch/grid-envs/con
 $PY scripts/consensus.py                  # consensus, overlaps, known pairs
 $PY scripts/layout.py                     # t-SNE positions
 $PY ../scripts/lineage.py                 # site/lineage.json (adds the vOTU nodes)
-$PY scripts/network_site.py               # site/network.json
+$PY scripts/network_site.py               # site/network.json + network_{dna,rna}.json (full edge sets, permissivity steps)
 # validation of the SPRING port (simulation + R reference): $PY scripts/validate_spring.py

@@ -1,11 +1,11 @@
 layer	method	nodes	edges	positive	in_consensus	sign_conflicts
-dna	flashweave	494	741	612	440	
-dna	spring	494	5681	4450	916	
-dna	spieceasi	494	3610	2463	840	
-dna	spearman	494	3853	2565	914	
-dna	consensus	494	1238	1109	1238	9.0
-rna	flashweave	590	1776	1290	1641	
-rna	spring	590	9946	6176	5912	
-rna	spieceasi	590	6131	3970	4561	
-rna	spearman	590	73142	36137	7726	
-rna	consensus	590	7878	5212	7878	204.0
+dna	flashweave	493	740	611	442	
+dna	spring	493	5694	4455	926	
+dna	spieceasi	493	3611	2465	866	
+dna	spearman	493	3834	2550	921	
+dna	consensus	493	1253	1123	1253	8.0
+rna	flashweave	588	1855	1354	1699	
+rna	spring	588	10051	6682	5739	
+rna	spieceasi	588	6424	4060	4787	
+rna	spearman	588	69711	34471	7876	
+rna	consensus	588	8067	5506	8067	214.0

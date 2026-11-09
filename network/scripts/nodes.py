@@ -14,8 +14,15 @@ Contigs are assigned to one node only, in the order virus > organelle group > EE
 binned into a plastid bin counts for the virus only).
 
 Abundance:
-  - RNA: read pairs on the node's contigs (data/marine_coassembly.contig_counts.mtx.gz), the 128 analysed libraries
-    (common.samples()); library size = all contig-assigned read pairs. The same metric as the EE expression tables.
+  - RNA: the outlier-resistant profile of euks/mags/scripts/robustexpr.py (2026-11-08), applied to every node so the layer is
+    consistent: per contig reads per kb per million contig-assigned reads (data/marine_coassembly.contig_counts.mtx.gz, the 128
+    analysed libraries, common.samples()); contigs detected in >= 25% of libraries, each scaled to mean 1; per-library 10% trimmed
+    mean x the node's median contig level. A few rRNA, conserved-gene or neighbour contigs therefore cannot set a MAG's profile
+    (EE04: 94% of its reads on one rRNA contig). The methods need counts, so the profile is turned back into read-pair
+    pseudo-counts: profile x node kb x library size / 1e6. Nodes with < 5 such contigs (every vOTU, small bins) fall back to the
+    length-weighted mean, which gives back their summed read pairs exactly. Library size = all contig-assigned read pairs. The old
+    summed counts are kept in cache/rna_counts_summed.tsv; nodes_all.tsv records rna_contigs_used, rna_thin (< 20 contigs) and
+    rna_rho_robust_summed.
   - DNA: nanopore coverage (depth x length) on the node's contigs (euks/mags/dna/depths.txt.gz, jgi depth table of the
     mag_marine mapping) in CMO pool libraries (CTL/EXP, seawater or sea ice, with a day; blanks, source sites and enrichments are
     left out); resequenced runs of the same sample are summed. Library size = coverage summed over all contigs.
@@ -106,7 +113,18 @@ assert C.shape[0] == len(ids)
 pos = pd.Series(np.arange(len(ids)), index=ids)
 codes = pd.Categorical(A.values, categories=N.index).codes
 M = sp.csr_matrix((np.ones(len(A)), (codes, pos[A.index].values)), shape=(len(N), len(ids)))
-R = pd.DataFrame((M @ C).toarray(), index=N.index, columns=S)
+Rsum = pd.DataFrame((M @ C).toarray(), index=N.index, columns=S)
+sys.path.insert(0, E0 + 'euks/mags/scripts'); import robustexpr as RX
+from scipy.stats import spearmanr
+RP, RI = RX.robust_profiles(A)                                       # node x library, reads per kb per million
+size = np.asarray(C.sum(0)).ravel()
+R = RP.reindex(N.index).fillna(0).mul(RI.kb.reindex(N.index).fillna(0), axis=0) * size / 1e6
+N['rna_contigs_used'] = RI.n_used.reindex(N.index).fillna(0).astype(int); N['rna_method'] = RI.method.reindex(N.index).fillna('')
+N['rna_thin'] = RI.thin.reindex(N.index).fillna(False).astype(bool) & (N.rna_method == 'robust')
+N['rna_rho_robust_summed'] = [round(spearmanr(R.loc[n], Rsum.loc[n]).correlation, 3) if Rsum.loc[n].sum() > 0 else np.nan for n in N.index]
+print('robust vs summed RNA, Spearman by domain:'); print(N.groupby('domain').rna_rho_robust_summed.describe().round(3).to_string())
+print('EE / organelle-group nodes:'); print(N.loc[N.kind.isin(['EE MAG', 'organelle group']), ['rna_contigs_used', 'rna_thin', 'rna_rho_robust_summed']].to_string())
+Rsum.to_csv(os.path.join(CACHE, 'rna_counts_summed.tsv'), sep='\t')
 m = meta().loc[S]
 light = pd.read_csv(E0 + 'light/out/underice_samples.tsv', sep='\t', index_col=0)
 rl = pd.DataFrame({'size': np.asarray(C.sum(0)).ravel(), 'season': m.season, 'group': m.group, 'medium': m.medium, 'day': m.day,
