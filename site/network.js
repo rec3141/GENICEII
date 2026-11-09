@@ -24,18 +24,15 @@ async function networkSec(sec) {
   if (!J) { sec.innerHTML = '<h2>Network</h2><p class="kicker">network.json is missing.</p>'; return; }
   await Promise.all(J.layer_list.map(l => nwLayer(l.key)));
   const cons = l => J.layers[l].summary.find(s => s.method === 'consensus');
-  const kn = J.known, knHit = new Set(kn.filter(k => k.consensus).map(k => k.a + '|' + k.b));
   sec.innerHTML = `<h2>Network</h2>
   <p class="kicker">Which genomes rise and fall together? Each point is a genome: a bacterial or archaeal MAG, a eukaryotic MAG, a virus or a plastid. There are three networks. The two DNA networks ask who is there together: one uses nanopore metagenomes, the other the ${J.layers.mgdna ? J.layers.mgdna.n_libs : ''} Illumina metagenomes of the pools. The RNA network uses the ${J.layers.rna.n_libs} Illumina RNA libraries (metatranscriptomes) and asks who is active together. A genome’s RNA level is the typical level of its contigs, so a few very busy contigs (such as rRNA genes) cannot set it. Five methods look for links, and the slider sets how much agreement a link needs: from four or five methods with strong scores to any single method. The default is the consensus: at least two methods agree on the sign, and one of them has already accounted for winter, pool, sea ice or seawater, and time. A link means two genomes co-vary more than these shared drivers explain. It is a lead for grazing, infection or a shared niche, not proof of any of them.</p>`;
   const st = el('div', { class: 'stat-row' }); sec.append(st);
   const LL = J.layer_list.slice().reverse(), names = LL.map(l => l.label).join(' / ');
   [[LL.map(l => J.layers[l.key].n_nodes).join(' / '), `genomes in the ${names} network`],
-   [LL.map(l => fmt(cons(l.key).edges)).join(' / '), `consensus links, ${names}`],
-   [`${knHit.size} of ${new Set(kn.map(k => k.a + '|' + k.b)).size}`, 'expected virus–host and plastid–host pairs in the consensus of at least one layer']]
+   [LL.map(l => fmt(cons(l.key).edges)).join(' / '), `consensus links, ${names}`]]
     .forEach(([v, l]) => st.append(el('div', { class: 'stat' }, `<div class="v">${v}</div><div class="l">${l}</div>`)));
   nwGraph(sec, J);
   nwPartners(sec, J);
-  nwKnown(sec, J);
   nwMethods(sec, J);
   nwReading(sec, J);
 }
@@ -88,7 +85,8 @@ function nwGraph(sec, J) {
     fmsg.textContent = hits.length === 1 ? '' : `${hits.length} genomes match: ${hits.slice(0, 6).map(h => h[0].id).join(', ')}${hits.length > 6 ? ', …' : ''}`;
     await draw(); box.scrollIntoView({ behavior: 'smooth', block: 'center' }); };
   // sample picker: node size = that library's value for the genome (network_{layer}_samples.json, loaded on first use)
-  const cs = el('div', { class: 'controls' }); sec.append(cs);
+  // sticky under the section nav so the arrows stay reachable while looking at the map
+  const cs = el('div', { class: 'controls', style: 'position:sticky;top:var(--nwstick,44px);z-index:4;background:var(--bg);padding:4px 0;border-bottom:1px solid var(--rule)' }); sec.append(cs);
   const ss = el('select', { id: 'nwsample', 'aria-label': 'Sample', style: 'max-width:420px' });
   const bPrev = el('button', { class: 'chip', title: 'Previous sample', 'aria-label': 'Previous sample' }, '◀'), bNext = el('button', { class: 'chip', title: 'Next sample', 'aria-label': 'Next sample' }, '▶');
   const bPlay = el('button', { class: 'chip', title: 'Play through the samples, one per second', 'aria-pressed': 'false' }, '▶▶');
@@ -120,7 +118,7 @@ function nwGraph(sec, J) {
   c2.append(el('span', { style: 'color:var(--ink-2)' }, 'Methods'));
   M.forEach(m => { const id = 'nwm-' + m.key, cb = el('input', { type: 'checkbox', id }); cb.checked = true;
     cb.onchange = () => { S.bits = cb.checked ? S.bits | m.bit : S.bits & ~m.bit; draw(); }; c2.append(cb, el('label', { for: id, style: 'margin-right:6px' }, m.label)); });
-  // permissivity slider + known-pair benchmark
+  // permissivity slider
   const P = J.params, steps = J.steps;
   const pw = el('div', { class: 'controls', style: 'align-items:flex-start;gap:18px;flex-wrap:wrap' }); sec.append(pw);
   const left = el('div', { style: 'flex:1 1 340px;min-width:300px' }); pw.append(left);
@@ -129,7 +127,6 @@ function nwGraph(sec, J) {
   const lab = el('div', { style: 'font-weight:600;margin-top:2px' }), cnt = el('div', { style: 'color:var(--ink-2);font-size:13px' });
   left.append(el('label', { for: 'nwperm', style: 'display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2)' }, '<span>strict</span><span>Permissivity</span><span>permissive</span>'), sl, dl, lab, cnt);
   sl.oninput = () => { S.step = +sl.value - 1; S.sel = null; draw(); };
-  const bench = el('div', { style: 'flex:1 1 360px;min-width:300px' }); pw.append(bench);
   const lg = el('div', { class: 'legend' }); sec.append(lg);
   lg.innerHTML = Object.values(NW_DOM).map(([c, l]) => `<span><i style="background:var(${c});height:10px;width:10px;border-radius:50%"></i>${l}</span>`).join('') +
     `<span><i style="background:none;border:1.5px dashed var(--ink-2);height:9px;width:9px;border-radius:50%"></i>doubtful MAG</span>` +
@@ -141,24 +138,8 @@ function nwGraph(sec, J) {
   const wl = el('div', { class: 'legend', style: 'margin-top:2px' }); sec.append(wl);     // line-width legend
   const box = fig(sec, '', `Point size follows median abundance or, with a sample picked, the genome’s level in that sample (RNA: reads per kb per million; nanopore DNA: parts per million of the aligned bases; Illumina DNA: per million mapped read pairs), on one square-root scale for all samples of the layer; genomes not detected in the sample are small hollow dots. ◀ ▶ or the arrow keys step through the samples in time order (winter, then control and diesel pool, seawater before sea ice, then day). Layouts: “t-SNE” places genomes by their abundance across the libraries (fourth root of the share of each library), so genomes with similar profiles sit close together. The other layouts are force-directed: each method’s positive links pull their genomes together, more strongly for higher scores, and all genomes push each other apart. Genomes without a positive link in that method sit on the ring around it. With several methods switched on, line width grows with the number of supporting methods; with exactly one, width and darkness follow that method’s score. Hover a point for its lineage and partners; click it to show only its links, click the background to clear. Strong scores: SPRING and SPIEC-EASI find the link in at least ${P.strong_stab * 100}% of their subsamples; the residual Spearman has |ρ| at least ${P.strong_rho} and q below ${P.strong_q}; the Presence Pearson has |r| at least ${P.strong_pp_r}, q below ${P.strong_q} and both genomes present together in at least ${P.strong_pp_n} libraries; FlashWeave counts whenever it reports a link. Links found only by the residual Spearman are included down to |ρ| ${P.sp_floor} (q below 0.05).`);
   const info = el('p', { class: 'cap', style: 'margin-top:4px' }); box.parentNode.insertBefore(info, box.nextSibling);
-  const kp = [...new Map(J.known.map(k => [k.a + '|' + k.b, k])).values()];
   const short = id => id.startsWith('contig_') ? 'c' + id.slice(7).replace(/^0+/, '') : id;
   const layerLabel = k => J.layer_list.find(l => l.key === k).label;
-
-  function benchTable(L) {
-    // known pairs recovered at every step, for the current layer and method selection
-    const E = L.edges, n = E.a.length, ix = new Map(L.nodes.map((d, i) => [d.id, i]));
-    const pk = kp.map(p => { const a = ix.get(p.a), b = ix.get(p.b); if (a == null || b == null) return -1;
-      for (let i = 0; i < n; i++) if ((E.a[i] === a && E.b[i] === b) || (E.a[i] === b && E.b[i] === a)) return i; return -1; });
-    const sg = i => { if (S.hideSame && E.same[i]) return 0; const p = nwPass(E, i, st0, S.bits, designBits); return p ? (p < 0 ? -E.s[i] : E.s[i]) : 0; };   // shown sign, 0 = not shown
-    let st0; const keep = v => v && (S.sign === 'both' || (S.sign === 'pos') === (v > 0));
-    const rows = steps.map((st, k) => { st0 = st; let c = 0; for (let i = 0; i < n; i++) if (keep(sg(i))) c++;
-      return { k, c, hit: pk.map(i => { const v = i >= 0 ? sg(i) : 0; return keep(v) ? v : 0; }) }; });
-    const which = S.sign === 'both' ? '' : S.sign === 'pos' ? ', positive links only' : ', negative links only';
-    bench.innerHTML = `<div style="font-size:12.5px;color:var(--ink-2);margin-bottom:3px">Expected pairs recovered (${layerLabel(S.layer)}${which}): ● found as a positive link, ○ as a negative link, · not found</div>
-    <div class="tablewrap" style="max-height:none"><table style="font-size:12px"><thead><tr><th>Step</th><th class="num">Links</th>${kp.map(p => `<th title="${p.pair}" class="num">${short(p.a)}<br>${p.b}</th>`).join('')}<th class="num">Found</th></tr></thead><tbody>${
-      rows.map(r => `<tr style="${r.k === S.step ? 'background:var(--panel-2,rgba(127,127,127,.15));font-weight:600' : ''}"><td>${r.k + 1}</td><td class="num">${fmt(r.c)}</td>${r.hit.map(h => `<td class="num" style="color:${h > 0 ? 'var(--s3)' : h < 0 ? 'var(--s7)' : 'var(--ink-3)'}">${h > 0 ? '●' : h < 0 ? '○' : '·'}</td>`).join('')}<td class="num">${r.hit.filter(Boolean).length} / ${kp.length}</td></tr>`).join('')}</tbody></table></div>`;
-  }
 
   // line style: by the number of supporting methods, or, with exactly one method switched on, by that method's score class
   const single = () => nwPop(S.bits) === 1 ? M.find(m => m.bit === S.bits) : null;
@@ -182,7 +163,6 @@ function nwGraph(sec, J) {
     const L = await nwLayer(S.layer), N = L.nodes, E = L.edges, step = steps[S.step], m1 = single();
     J.layers[S.layer].data = L;
     lab.textContent = `Step ${S.step + 1} of ${steps.length}: ${step.label}`;
-    benchTable(L);
     box.innerHTML = '';
     const inView = (a, b) => {
       if (S.view === 'grazer') { const g = n => n.role === 'grazer', t = n => n.domain === 'prokaryote' || n.role === 'alga' || n.domain === 'organelle'; return (g(a) && t(b)) || (g(b) && t(a)); }
@@ -315,19 +295,6 @@ function nwFocus(J, id) {
   const i = NW_ROWS[L].nodes.findIndex(n => n.id === id);
   setTimeout(() => { const c = [...sec.querySelectorAll('.fig svg circle')].find(e => d3.select(e).datum() === i);
     if (c) { const f = c.closest('.fig'); c.dispatchEvent(new MouseEvent('click', { bubbles: true })); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' }); } }, 80);
-}
-
-function nwKnown(sec, J) {
-  sec.append(el('h3', {}, 'Check against expected pairs'));
-  const pairs = [...new Map(J.known.map(k => [k.a + '|' + k.b, k])).values()];
-  const name = id => { for (const { key: l } of J.layer_list) { const n = NW_ROWS[l] && NW_ROWS[l].nodes.find(x => x.id === id); if (n) return n.label; } return id; };
-  const ab = Object.fromEntries(J.methods.map(m => [m.key, m.label]));
-  const cell = k => !k ? '–' : !k.in_layer ? 'not in this layer' : k.methods.length ? `${k.consensus ? '<b>found</b>' : 'one method'}: ${k.methods.map(m => ab[m] + (k.signs[m] < 0 ? ' (−)' : '')).join(', ')}` : 'not found';
-  const box = el('div', { class: 'note' }), LL = J.layer_list.slice().reverse(); sec.append(box);
-  box.innerHTML = `<p style="margin:0 0 6px">The Viruses and Eukaryotes pages matched giant viruses, the virophage and a plastid to likely eukaryotic hosts by simple correlation. These pairs were not used to tune the methods. This table shows the consensus (slider step ${J.default_step + 1}); the table beside the slider shows every step.</p>
-  <div class="tablewrap" style="max-height:none;border:0"><table><thead><tr><th>Pair</th>${LL.map(l => `<th>${l.label}</th>`).join('')}</tr></thead><tbody>${
-    pairs.map(p => `<tr><td style="white-space:normal;min-width:220px">${name(p.a)} – ${name(p.b)}<div style="font-size:11.5px;color:var(--ink-3)">${p.pair}</div></td>${
-      LL.map(l => `<td style="white-space:normal">${cell(J.known.find(k => k.a === p.a && k.b === p.b && k.layer === l.key))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
 }
 
 function nwMethods(sec, J) {
