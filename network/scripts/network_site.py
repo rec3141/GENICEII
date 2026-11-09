@@ -191,8 +191,9 @@ for layer in LAYERS:
                       **({'genus': genus(x)} if x.domain == 'prokaryote' else {}), **({'feat': True} if x.domain == 'prokaryote' and genus(x) in FEATURED else {}),
                       'ab': r(share[i].median(), 2), 'mean': r(share[i].mean(), 2), 'prev': r((X[i] > 0).mean(), 2)})
     T, n_drop = edge_table(layer)
+    SCORE_SCALE = 1000     # 0.001 resolution, so the single-method cutoff slider has fine steps
     strong = strong_bits(T)
-    def sp(m, v, f=100):       # sparse: one value per edge that method reports (either sign), in edge order
+    def sp(m, v, f=SCORE_SCALE):       # sparse: one value per edge that method reports (either sign), in edge order; scores x SCORE_SCALE
         has = T[f'{m}_sign'].to_numpy() != 0
         return np.round(np.abs(np.nan_to_num(np.asarray(v, float)[has])) * f).astype(int).tolist()
     nb = len(METHODS)
