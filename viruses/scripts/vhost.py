@@ -1,6 +1,6 @@
 """Candidate hosts for the diesel-responsive vOTUs: Spearman correlation across all 130 RNA libraries between each vOTU's transcripts
 and each MAG's TPM (data bin_tpm), top 3 MAGs; plus direct links (vOTU binned in a MAG). Correlation is only a hint at hosts.
-Eukaryotic MAGs (hull-curated EE##, euks/mags; non-doubtful, contig-read share per million) are candidates too, since DAS Tool keeps
+Eukaryotic MAGs (hull-curated EE##, euks/mags; non-doubtful, outlier-resistant RNA profile, robustexpr.py) are candidates too, since DAS Tool keeps
 almost no eukaryotic bins and giant viruses / virophages infect eukaryotes.
 Out: out/votu_hosts.tsv"""
 import sys; sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
@@ -9,9 +9,10 @@ from scipy.stats import spearmanr
 V = '/data/dev/rnaseq-exploration/viruses/'
 U = pd.read_pickle(V + 'out/votu_rna_cpm.pkl'); R = pd.read_csv(V + 'out/votu_rna.tsv', sep='\t', index_col=0)
 B = table('bin_tpm')[U.columns]; B = B[B.max(1) >= 500]
-EGX = hull_mag_expression().reindex(columns=U.columns)              # EE## (common.py); hosts are eukaryotic MAGs only
+EGX = hull_mag_expression().reindex(columns=U.columns)              # EE## (common.py; robust profile); hosts are eukaryotic MAGs only
 EGX = EGX[[is_euk_hull_mag(g) and hull_mag_info(g).get('status') != 'doubtful' for g in EGX.index]]
-B = pd.concat([B, EGX[EGX.max(1) >= 500]])
+pk = hull_mag_expression('summed').max(axis=1)                      # inclusion: peak >= 500 reads per million (summed), as for TPM
+B = pd.concat([B, EGX[pk.reindex(EGX.index).fillna(0) >= 500]])     # correlation (rank-based) uses the robust profile
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).set_index('user_genome')['classification']
 def lab(b):
     if is_euk_hull_mag(b): return hull_mag_label(b)

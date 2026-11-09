@@ -111,16 +111,17 @@ HM['coding_pct'] = HM.mag.map(TX0.coding_pct) if 'coding_pct' in TX0 else np.nan
 HM.loc[HM.genome_status.str.startswith('doubtful'), 'status'] = 'doubtful'
 HM['network_ok'] = (HM.network_ok.astype(str) == 'True') & ~HM.genome_status.str.startswith('doubtful')
 # cautions (rules): expression jumped >= 10x over the source group (to >= 10 per million) -> the hull probably took in an expressed
-# neighbour; the hull added >= 4 Mbp and >= 50% of the source group's size, unless the hull note in hulls.tsv says
-# 'RECHECKED <date>' (re-checked against the core's expression profile or a lineage panel: EE30, EE12); the hull was drawn on a
-# sparse or small core; multi-genome status
+# neighbour; the hull added >= 4 Mbp and >= 50% of the source group's size. A hull whose note in hulls.tsv says 'RECHECKED <date>'
+# (re-checked against the core's expression profile or drawn on a lineage panel: EE30, EE12) is exempt from both automatic hull
+# cautions. Also: the hull was drawn on a sparse or small core; multi-genome status
 CAU = []
 for i, x in HM.iterrows():
     c = []
     e, se = num('expr_ppm_median')[i], src_ex[i]
-    if e >= 10 and np.isfinite(se) and e >= 10 * max(se, 0.1): c.append('uncertain: hull may include an expressed neighbour')
+    rechecked = 'RECHECKED' in str(x.note)
+    if not rechecked and e >= 10 and np.isfinite(se) and e >= 10 * max(se, 0.1): c.append('uncertain: hull may include an expressed neighbour')
     g, sb = num('bp_gained')[i], src_bp[i]
-    if np.isfinite(sb) and g >= 4e6 and g >= 0.5 * sb and 'RECHECKED' not in str(x.note): c.append(f'hull added {g / 1e6:.1f} Mbp to the {sb / 1e6:.1f} Mbp source group')
+    if np.isfinite(sb) and g >= 4e6 and g >= 0.5 * sb and not rechecked: c.append(f'hull added {g / 1e6:.1f} Mbp to the {sb / 1e6:.1f} Mbp source group')
     if str(x.note).startswith('UNSURE'): c.append('hull drawn on a sparse or small core')
     if str(x.genome_status).startswith('multi-genome'):
         c.append(f"more than one genome: {x.genome_status[x.genome_status.find('(') + 1:-1]} (BUSCO duplication {x.busco.split('D ')[-1].rstrip(']')})")

@@ -2,17 +2,15 @@
 Per contig (>= 1 kb, as in contig_hull_mag.tsv):
   RNA = reads per kb per million CDS-library reads (contig counts, 128 analysed libraries);
   DNA = depth x 1e9 / sample's total mapped bp (depth*length summed over all contigs), CMO nanopore libraries.
-RNA: a per-sample median over contigs is 0 for most MAGs (eukaryotic contigs are sparse), so the median is taken over contig
-profiles: contigs detected in >= MIN_DET of libraries; each contig's profile is scaled to mean 1; MAG profile = per-sample median of
-those, times the MAG's median contig level. A few very highly expressed contigs (e.g. EE01's two) therefore cannot dominate.
-MAGs with < MIN_N such contigs are not shown (the 'little CMO RNA' groups).
+RNA: the shared outlier-resistant profile (robustexpr.robust_profiles, also used by hull_expr.py, merge_mags.py, the Eukaryotes
+page and the network): contigs detected in >= 25% of libraries, each scaled to mean 1, per-library 10% trimmed mean times the MAG's
+median contig level. MAGs that fall back to the length-weighted mean (< 5 such contigs; the 'little CMO RNA' groups) are not shown.
 DNA: nanopore depth per contig per library is too sparse for any contig median; length-weighted mean depth per Gbp mapped.
 Transform: 4th root. Rows: Ward clustering on both blocks, each block z-scored per row after the transform.
 Columns: Ward clustering within each block. Colour: viridis, a separate scale per block.
-RNA artefact flag: a MAG whose TOP_N (5) most-read contigs carry >= TOP_SHARE (90%) of its RNA reads is labelled '<id>*' on the
-RNA rows and hatched, since its RNA row is then not the genome's own expression: EE08 (conserved, highly expressed
-tubulin/ubiquitin/HSP90 contigs taking cross-mapped reads from many eukaryotes); EE01 and EE04 (83% and 94% of their reads on one
-18S/28S rRNA contig each); EE10 (2 contigs). Listed in out/hull_mags_rna_flags.tsv.
+Thin-profile flag: a MAG whose robust profile rests on < 20 contigs (robustexpr 'thin') is labelled '<id>*' and its RNA row is
+hatched, since a handful of dominant contigs can still be a large share of so few: EE08 (9 contigs, 5 of them conserved
+tubulin/ubiquitin/HSP90), EE10, EE12. Listed in out/hull_mags_rna_flags.tsv with the share of reads on the 5 most-read contigs.
 Retired ids (out/id_registry.tsv) are left out.
 Out: out/hull_mags_relabund_{rna,dna}.tsv, out/hull_mags_rna_flags.tsv, out/hull_mags_heatmap.png"""
 import sys, gzip
@@ -23,8 +21,6 @@ from matplotlib.patches import Patch
 sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
 from common import samples, all_samples, meta, nanopore_samples, D as DD
 O = '/data/dev/rnaseq-exploration/euks/mags/out/'
-MIN_DET, MIN_N = 0.25, 5
-TOP_N, TOP_SHARE = 5, 0.9
 
 H = pd.read_csv(O + 'contig_hull_mag.tsv', sep='\t')
 sys.path.insert(0, '/data/dev/rnaseq-exploration/euks/mags/scripts'); from eukshared import load_ids
@@ -33,17 +29,15 @@ H = H[H.mag.str.startswith('EE') & ~H.mag.isin(RET)]
 T = pd.read_pickle(O + 'contigs_full.pkl').set_index('id')
 L = T.length.reindex(H.contig).values / 1e3
 
-# RNA
-Cm = scipy.io.mmread(DD + 'marine_coassembly.contig_counts.mtx.gz').tocsr()
-ALL = all_samples(); S = samples(); kc = [ALL.index(x) for x in S]
-pos = pd.Series(np.arange(len(T)), index=np.sort(T.index.values))
-tot = np.asarray(Cm[:, kc].sum(0)).ravel()
-rr = Cm[pos[H.contig].values][:, kc].toarray()
-RNA_c = pd.DataFrame(rr / tot * 1e6 / L[:, None], index=H.contig.values, columns=S)
-reads = pd.Series(rr.sum(1), index=H.contig.values)
-top = reads.groupby(H.mag.values).apply(lambda r: r.nlargest(TOP_N).sum() / max(r.sum(), 1))
-FL = pd.DataFrame({'top5_rna_share': top.round(3), 'flag': top >= TOP_SHARE}); FL.to_csv(O + 'hull_mags_rna_flags.tsv', sep='\t')
-print('RNA artefact flags (top', TOP_N, 'contigs >=', TOP_SHARE, 'of reads):', list(FL.index[FL.flag]))
+# RNA (robustexpr; same per-contig metric as before: reads per kb per million contig-assigned reads)
+import robustexpr as RX
+S = samples()
+RNA, INFO = RX.robust_profiles(H.set_index('contig').mag)
+FL = pd.DataFrame({'n_contigs_used': INFO.n_used, 'top5_rna_share': INFO.top5_share, 'flag': INFO.thin & (INFO.method == 'robust')})
+FL.to_csv(O + 'hull_mags_rna_flags.tsv', sep='\t')
+print('thin robust profiles (< %d contigs):' % RX.THIN_N, list(FL.index[FL.flag]))
+print(INFO.to_string())
+dropped = sorted(INFO.index[INFO.method != 'robust']); RNA = RNA.drop(index=dropped)
 
 # DNA
 ns = nanopore_samples()
@@ -60,22 +54,11 @@ DNA_c = pd.DataFrame.from_dict(rows, orient='index', columns=[c.replace('.sorted
 DNA_c = DNA_c.reindex(H.contig.values).fillna(0)
 
 g = H.mag.values; kb = pd.Series(L, index=H.contig.values)
-def robust(C, name):
-    # contigs detected (>0) in >= MIN_DET of the block's libraries carry a usable per-sample profile
-    det = (C > 0).mean(axis=1); ok = det >= MIN_DET
-    pooled = C.mean(axis=1)
-    level = pooled[ok].groupby(g[ok.values]).median()                       # typical contig level of the MAG
-    rel = C[ok].div(pooled[ok], axis=0)                                      # each contig's profile, mean 1
-    prof = rel.groupby(g[ok.values]).median()                                # per-sample median over contigs
-    n = ok.groupby(g).sum(); print(name, 'contigs used per MAG (detected in >=', MIN_DET, 'of libraries):'); print(n.to_string())
-    out = prof.mul(level, axis=0)
-    return out[n.reindex(out.index) >= MIN_N]
-RNA = robust(RNA_c, 'RNA')
 # DNA: nanopore depth per contig per library is too sparse for a contig median (few contigs are covered in >= 25% of libraries);
 # the length-weighted mean is used (no expression-style outlier contigs in DNA: e.g. EE01's top contigs carry ~8% of DNA signal)
 DNA = DNA_c.mul(kb, axis=0).groupby(g).sum().div(kb.groupby(g).sum(), axis=0)
 DNA = DNA.reindex(RNA.index)
-print('MAGs shown:', len(RNA), '; dropped (< MIN_N RNA-detected contigs):', sorted(set(g) - set(RNA.index)))
+print('MAGs shown:', len(RNA), '; dropped (< 5 RNA-detected contigs):', dropped)
 RNA.to_csv(O + 'hull_mags_relabund_rna.tsv', sep='\t'); DNA.to_csv(O + 'hull_mags_relabund_dna.tsv', sep='\t')
 
 # column annotations
@@ -114,14 +97,14 @@ def block(col, X, ann, co, title, cb_col):
     if col == 0: ax.set_yticks(range(len(rows_ord))); ax.set_yticklabels([m + ('*' if FL.flag.get(m, False) else '') for m in rows_ord], fontsize=8)
     else: ax.set_yticks([])
     cax = fig.add_subplot(gs[3, cb_col]); cb = fig.colorbar(im, cax=cax); cb.ax.tick_params(labelsize=7)
-    cb.set_label(title.split(':')[0] + ' (4th root)', fontsize=8)
-block(0, R4, rna_ann, co_r, 'RNA: reads per kb per million', 2)
-block(1, D4, dna_ann, co_d, 'DNA: depth per Gbp mapped', 4)
+    cb.set_label(title.split(' ')[0] + ' (4th root)', fontsize=8)
+block(0, R4, rna_ann, co_r, 'RNA (Illumina metatranscriptomes): reads per kb per million', 2)
+block(1, D4, dna_ann, co_d, 'DNA (nanopore metagenomes): depth per Gbp mapped', 4)
 hs = [Patch(color=c, label=f'{k}: {v}') for k in PAL for v, c in PAL[k].items() if v != 'other'] + [Patch(color='#d9d9d9', label='other / unassigned')]
 fig.legend(handles=hs, loc='lower center', ncol=7, fontsize=8, frameon=False)
 if FL.flag.any():
-    fig.text(0.5, 0.925, f"* RNA row not the genome's own expression: >= {TOP_SHARE:.0%} of the MAG's reads sit on its {TOP_N} most-read contigs (rRNA or conserved, highly expressed genes)", fontsize=9, ha="center")
-fig.suptitle('Eukaryotic hull MAGs (EE##): RNA = median over contig profiles, DNA = length-weighted mean; 4th root, Ward clustering', fontsize=13)
+    fig.text(0.5, 0.925, f"* RNA profile rests on fewer than {RX.THIN_N} contigs, so a few dominant contigs (rRNA or conserved genes) may still set it", fontsize=9, ha="center")
+fig.suptitle('Eukaryotic MAGs (EE##). RNA: Illumina metatranscriptomes, robust MAG profile (trimmed mean over contig profiles); DNA: nanopore metagenomes, length-weighted mean; 4th root, Ward clustering', fontsize=12)
 fig.savefig(O + 'hull_mags_heatmap.png', dpi=130, bbox_inches='tight')
 print('rows', len(rows_ord), 'RNA libs', R4.shape[1], 'DNA libs', D4.shape[1])
 print(pd.DataFrame({'rna_median': RNA.median(axis=1).round(2), 'dna_median': DNA.median(axis=1).round(2)}).loc[rows_ord].to_string())

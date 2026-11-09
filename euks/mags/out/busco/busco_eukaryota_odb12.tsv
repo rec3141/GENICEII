@@ -1,7 +1,7 @@
 mag	Mbp	C	S	D	F	M	n	matches_members	summary	fasta
 EE01	40.1	0.0	0.0	0.0	3.1	96.9	129.0	True	run_euk_miniprot/EE01.fa/short_summary.specific.eukaryota_odb12.EE01.fa.txt	mags/EE01.fa
 EE02	38.81	52.7	50.4	2.3	7.0	40.3	129.0	True	run_euk_miniprot/EE02.fa/short_summary.specific.eukaryota_odb12.EE02.fa.txt	mags/EE02.fa
-EE03	39.33	59.7	57.4	2.3	7.8	32.6	129.0	True	runs/EE03_EE29_ee24dac979/short_summary.specific.eukaryota_odb12.EE03_EE29_ee24dac979.txt	fasta/EE03_EE29_ee24dac979.fa
+EE03	53.99	68.2	64.3	3.9	8.5	23.3	129.0	True	run_merged_03_29_31/short_summary.specific.eukaryota_odb12.run_merged_03_29_31.txt	merged/EE03_29_31.fa
 EE04	34.77	2.3	2.3	0.0	4.7	93.0	129.0	True	run_euk_miniprot/EE04.fa/short_summary.specific.eukaryota_odb12.EE04.fa.txt	mags/EE04.fa
 EE05	81.76	79.1	61.2	17.8	7.8	13.2	129.0	True	run_euk_miniprot/EE05.fa/short_summary.specific.eukaryota_odb12.EE05.fa.txt	mags/EE05.fa
 EE06	29.06	13.2	13.2	0.0	14.0	72.9	129.0	True	runs/EE06_EE13_2b126a216c/short_summary.specific.eukaryota_odb12.EE06_EE13_2b126a216c.txt	fasta/EE06_EE13_2b126a216c.fa
@@ -19,7 +19,6 @@ EE26	8.43	20.9	20.9	0.0	2.3	76.7	129.0	True	run_euk_miniprot/EE26.fa/short_summa
 EE27	12.21	12.4	12.4	0.0	1.6	86.0	129.0	True	run_euk_miniprot/EE27.fa/short_summary.specific.eukaryota_odb12.EE27.fa.txt	mags/EE27.fa
 EE28	4.96	7.0	7.0	0.0	1.6	91.5	129.0	True	run_euk_miniprot/EE28.fa/short_summary.specific.eukaryota_odb12.EE28.fa.txt	mags/EE28.fa
 EE30	71.77	88.4	51.2	37.2	4.7	7.0	129.0	True	run_euk_miniprot/EE30.fa/short_summary.specific.eukaryota_odb12.EE30.fa.txt	mags/EE30.fa
-EE31	14.66	11.6	11.6	0.0	2.3	86.0	129.0	True	run_euk_miniprot/EE31.fa/short_summary.specific.eukaryota_odb12.EE31.fa.txt	mags/EE31.fa
 EE32	19.79	32.6	31.8	0.8	8.5	58.9	129.0	True	run_euk_miniprot/EE32.fa/short_summary.specific.eukaryota_odb12.EE32.fa.txt	mags/EE32.fa
 EE33	17.87	25.6	24.0	1.6	6.2	68.2	129.0	True	run_euk_miniprot/EE33.fa/short_summary.specific.eukaryota_odb12.EE33.fa.txt	mags/EE33.fa
 EE34	7.52	0.8	0.8	0.0	0.0	99.2	129.0	True	run_euk_miniprot/EE34.fa/short_summary.specific.eukaryota_odb12.EE34.fa.txt	mags/EE34.fa

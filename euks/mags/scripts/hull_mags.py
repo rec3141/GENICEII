@@ -13,7 +13,7 @@ Merges (scripts/merge_mags.py, run after this script; it reruns this script when
 source groups; bp_gained/lost are against the union of the source groups. Pre-merge membership stays recoverable from the
 `hull` column of contig_hull_mag.tsv plus the registry ('hull:<hull id>' -> unmerged EE id).
 Summaries: size, GC, N50, Tiara/Whokaryote purity, geNomad virus share, t-SNE RMS, expression (contig reads per million, 128
-RNA libraries), BACI/ice from dacore contrasts on RNA and DNA (CMO nanopore depth x length share), bp gained (contigs not in the
+RNA libraries, summed; used by the status rule), BACI/ice from dacore contrasts on RNA (robustexpr profile) and DNA (CMO nanopore depth x length share), bp gained (contigs not in the
 source group) and lost (source-group contigs outside the hull).
 Out: out/hull_mags.tsv, out/contig_hull_mag.tsv, out/hull_mags_da.tsv, out/hulls/verify/<id>.png"""
 import pandas as pd, numpy as np, sys, gzip, scipy.io, re, os
@@ -105,7 +105,11 @@ with gzip.open(O + '../dna/depths.txt.gz', 'rt') as fh:
         m = c2m.get(f[0])
         if m: acc[mi[m]] += v
 ab_d = pd.DataFrame(acc / totals, index=mags, columns=[c.replace('.sorted.bam', '') for c in use])
-R = dacore.run(ab_r, ab_d); R.to_csv(O + 'hull_mags_da.tsv', sep='\t', index=False)
+# DA on RNA uses the outlier-resistant profile (robustexpr; the hull_expr.py / Eukaryotes page metric since 2026-11-08), so a few rRNA
+# or conserved-gene contigs cannot decide a MAG's diesel or ice effect; expr_ppm_median (status rule) stays on the summed reads
+import robustexpr as RX
+ab_rr, _ = RX.robust_profiles(CM.set_index('contig').mag); ab_rr = ab_rr.reindex(ab_r.index)
+R = dacore.run(ab_rr, ab_d); R.to_csv(O + 'hull_mags_da.tsv', sep='\t', index=False)
 def eff(m, d, c):
     x = R[(R.blob == m) & (R.data == d) & (R.contrast == c)]
     return (round(x.log2_effect.iloc[0], 2), x.q.iloc[0]) if len(x) else (np.nan, np.nan)

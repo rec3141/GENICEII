@@ -314,10 +314,15 @@ def hull_mag_label(mid):
     return f'Eukaryote {mid}' + (f' ({tag})' if tag else '')
 
 
-def hull_mag_expression():
-    """EE##/P## (and the retired VV01) x RNA libraries: reads on the MAG's contigs per million contig-assigned reads (euks/mags hull_expr.py; the
-    same metric as group_expression() and hull_mags.tsv expr_ppm_median). QC-excluded libraries already removed."""
-    return pd.read_csv(EM + 'hull_mags_expr_samples.tsv', sep='\t', index_col=0)
+def hull_mag_expression(kind='robust'):
+    """EE##/P## x RNA libraries (euks/mags hull_expr.py; QC-excluded libraries already removed).
+    kind='robust' (default, since 2026-11-08): the outlier-resistant profile of euks/mags/scripts/robustexpr.py, reads per kb per
+    million contig-assigned reads (contigs detected in >= 25% of libraries, each scaled to mean 1, per-library 10% trimmed mean x the
+    MAG's median contig level), so a few rRNA / conserved-gene contigs cannot set a MAG's profile.
+    kind='summed': the old metric, reads on all the MAG's contigs per million contig-assigned reads (as group_expression() and
+    hull_mags.tsv expr_ppm_median). kind='kb': the MAG's total contig length in kb (robust x kb = robust reads per million)."""
+    if kind == 'kb': return pd.read_csv(EM + 'hull_mags_expr_method.tsv', sep='\t', index_col=0).kb
+    return pd.read_csv(EM + ('hull_mags_expr_samples_summed.tsv' if kind == 'summed' else 'hull_mags_expr_samples.tsv'), sep='\t', index_col=0)
 
 
 def hull_mag_da():

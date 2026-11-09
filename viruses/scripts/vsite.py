@@ -39,7 +39,7 @@ key = [('contig_0040828', 'dastool-lorbin_722_sub', 'Cycloclasticus phage (2025-
        ('contig_0049668', None, 'Virophage, control pool (2025-26)'), ('contig_0000564', None, 'Giant virus contig (2025-26)')]
 x = m[(m.group != 'other') & (m.medium == 'SW')]
 J['pairs'] = []
-EGX = hull_mag_expression()                                                      # EE## eukaryotic MAGs (common.py)
+EGX = hull_mag_expression().mul(hull_mag_expression('kb'), axis=0)             # EE## (common.py): robust profile x MAG length = reads per million
 def host_series(h):
     return EGX.loc[h] if is_euk_hull_mag(h) else B.loc[h]
 for v, h, lab in key:
