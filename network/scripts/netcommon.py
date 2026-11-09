@@ -1,7 +1,7 @@
 """Shared definitions for the network scripts: layer tables after the prevalence rule, meta-variables, design matrix, paths.
 
-Prevalence rule, per layer (DNA, RNA): a node enters a layer's network if it is detected (> 0) in at least PREV of that layer's
-libraries and averages at least MIN_PPM per million (RNA: contig-assigned read pairs; DNA: mapped bases). EE MAGs, giant viruses,
+Prevalence rule, per layer (nanopore DNA, Illumina DNA, RNA): a node enters a layer's network if it is detected (> 0) in at least PREV of that layer's
+libraries and averages at least MIN_PPM per million (RNA and Illumina DNA: contig-assigned read pairs; nanopore DNA: mapped bases). EE MAGs, giant viruses,
 virophages and organelle groups are always kept where data exist (detected in at least PREV_FORCED of the libraries).
 Nodes without contigs (plastid bins wholly inside an organelle group, e.g. metabat_7332_sub inside P01) are dropped."""
 import os
@@ -17,8 +17,11 @@ DNA_UNIT = 1000.0                      # DNA pseudo-counts: kb of aligned nanopo
 # values into the pseudo-counts the methods get (value / unit). To add a layer (e.g. Illumina DNA), write its two tables and add
 # an entry here; every script, the R and Julia runs (they read cache/*_X.tsv) and the page follow. 'page' sets the page order.
 LAYER_CFG = {
-    'dna': dict(counts='dna_cov.tsv', lib='dna_lib.tsv', unit=DNA_UNIT, label='DNA', long='DNA (presence)', page=2,
+    'dna': dict(counts='dna_cov.tsv', lib='dna_lib.tsv', unit=DNA_UNIT, label='Nanopore DNA', long='Nanopore DNA (presence)', page=2,
                 what='nanopore metagenomes'),
+    # Illumina metagenomes (nodes.py, 2026-11-09): read pairs on the node's contigs, CMO pool libraries; pseudo-counts = read pairs
+    'mgdna': dict(counts='mgdna_counts.tsv', lib='mgdna_lib.tsv', unit=1.0, label='Illumina DNA', long='Illumina DNA (presence)', page=3,
+                  what='Illumina metagenomes'),
     'rna': dict(counts='rna_counts.tsv', lib='rna_lib.tsv', unit=1.0, label='RNA', long='RNA (activity)', page=1,
                 what='Illumina RNA libraries'),
 }

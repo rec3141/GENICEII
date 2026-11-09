@@ -1,4 +1,5 @@
-"""Heatmap of the hull-curated eukaryotic MAGs (EE##) against DNA and RNA relative abundance (user request 2026-11-08).
+"""Heatmap of the hull-curated eukaryotic MAGs (EE##) against DNA and RNA relative abundance (user request 2026-11-08; Illumina DNA
+block added 2026-11-09).
 Per contig (>= 1 kb, as in contig_hull_mag.tsv):
   RNA = reads per kb per million CDS-library reads (contig counts, 128 analysed libraries);
   DNA = depth x 1e9 / sample's total mapped bp (depth*length summed over all contigs), CMO nanopore libraries.
@@ -6,13 +7,15 @@ RNA: the shared outlier-resistant profile (robustexpr.robust_profiles, also used
 page and the network): contigs detected in >= 25% of libraries, each scaled to mean 1, per-library 10% trimmed mean times the MAG's
 median contig level. MAGs that fall back to the length-weighted mean (< 5 such contigs; the 'little CMO RNA' groups) are not shown.
 DNA: nanopore depth per contig per library is too sparse for any contig median; length-weighted mean depth per Gbp mapped.
-Transform: 4th root. Rows: Ward clustering on both blocks, each block z-scored per row after the transform.
+Illumina DNA: the metagenomes of the CMO pools (common.illumina_dna_samples, pool libraries), length-weighted mean, reads per kb per
+million contig-assigned read pairs (euks/mags/scripts/mgdna.py, out/hull_mags_mgdna_samples.tsv; run mgdna.py first).
+Transform: 4th root. Rows: Ward clustering on all three blocks, each block z-scored per row after the transform.
 Columns: Ward clustering within each block. Colour: viridis, a separate scale per block.
 Thin-profile flag: a MAG whose robust profile rests on < 20 contigs (robustexpr 'thin') is labelled '<id>*' and its RNA row is
 hatched, since a handful of dominant contigs can still be a large share of so few: EE08 (9 contigs, 5 of them conserved
 tubulin/ubiquitin/HSP90), EE10, EE12. Listed in out/hull_mags_rna_flags.tsv with the share of reads on the 5 most-read contigs.
 Retired ids (out/id_registry.tsv) are left out.
-Out: out/hull_mags_relabund_{rna,dna}.tsv, out/hull_mags_rna_flags.tsv, out/hull_mags_heatmap.png"""
+Out: out/hull_mags_relabund_{rna,dna,mgdna}.tsv, out/hull_mags_rna_flags.tsv, out/hull_mags_heatmap.png"""
 import sys, gzip
 import numpy as np, pandas as pd, scipy.io
 from scipy.cluster.hierarchy import linkage, leaves_list
@@ -59,7 +62,11 @@ g = H.mag.values; kb = pd.Series(L, index=H.contig.values)
 DNA = DNA_c.mul(kb, axis=0).groupby(g).sum().div(kb.groupby(g).sum(), axis=0)
 DNA = DNA.reindex(RNA.index)
 print('MAGs shown:', len(RNA), '; dropped (< 5 RNA-detected contigs):', dropped)
-RNA.to_csv(O + 'hull_mags_relabund_rna.tsv', sep='\t'); DNA.to_csv(O + 'hull_mags_relabund_dna.tsv', sep='\t')
+# Illumina DNA (metagenomes), CMO pool libraries
+from common import illumina_dna_samples
+ML = illumina_dna_samples(); ML = ML[ML.pool]
+MG = pd.read_csv(O + 'hull_mags_mgdna_samples.tsv', sep='\t', index_col=0)[ML.index].reindex(RNA.index)
+RNA.to_csv(O + 'hull_mags_relabund_rna.tsv', sep='\t'); DNA.to_csv(O + 'hull_mags_relabund_dna.tsv', sep='\t'); MG.to_csv(O + 'hull_mags_relabund_mgdna.tsv', sep='\t')
 
 # column annotations
 m = meta().reindex(S)
@@ -70,18 +77,19 @@ nm = nsx.sample_name.fillna('')
 grp = np.where(nm.str.contains('_EXP_'), 'EXP', np.where(nm.str.contains('_CTL_'), 'CTL', 'other'))
 med = np.where(nm.str.contains('_SW'), 'SW', np.where(nm.str.contains('_SI'), 'SI', 'other'))
 dna_ann = pd.DataFrame({'season': season.values, 'group': grp, 'medium': med}, index=DNA.columns)
+mg_ann = pd.DataFrame({'season': ML.season.values, 'group': ML.group.values, 'medium': ML.medium.values}, index=ML.index)
 
-R4, D4 = RNA ** 0.25, DNA ** 0.25
+R4, D4, M4 = RNA ** 0.25, DNA ** 0.25, MG ** 0.25
 z = lambda X: X.sub(X.mean(axis=1), axis=0).div(X.std(axis=1).replace(0, 1), axis=0)
-ro = leaves_list(linkage(pd.concat([z(R4), z(D4)], axis=1).values, 'ward'))
-co_r = leaves_list(linkage(R4.T.values, 'ward')); co_d = leaves_list(linkage(D4.T.values, 'ward'))
+ro = leaves_list(linkage(pd.concat([z(R4), z(D4), z(M4)], axis=1).values, 'ward'))
+co_r = leaves_list(linkage(R4.T.values, 'ward')); co_d = leaves_list(linkage(D4.T.values, 'ward')); co_m = leaves_list(linkage(M4.T.values, 'ward'))
 rows_ord = R4.index[ro]
 
 PAL = {'season': {'2024-25': '#9ecae1', '2025-26': '#08519c', 'other': '#d9d9d9'},
        'group': {'EXP': '#d95f02', 'CTL': '#1b9e77', 'other': '#d9d9d9'},
        'medium': {'SW': '#6baed6', 'SI': '#9e9ac8', 'other': '#f0f0f0'}}
-fig = plt.figure(figsize=(22, 11))
-gs = fig.add_gridspec(4, 5, width_ratios=[R4.shape[1], D4.shape[1], 3, 12, 3], height_ratios=[1, 1, 1, 26], wspace=0.06, hspace=0.05)
+fig = plt.figure(figsize=(28, 11))
+gs = fig.add_gridspec(4, 8, width_ratios=[R4.shape[1], D4.shape[1], M4.shape[1], 3, 10, 3, 10, 3], height_ratios=[1, 1, 1, 26], wspace=0.06, hspace=0.05)
 def block(col, X, ann, co, title, cb_col):
     for i, k in enumerate(['season', 'group', 'medium']):
         a = fig.add_subplot(gs[i, col]); c = [PAL[k].get(v, '#f0f0f0') for v in ann[k].values[co]]
@@ -97,14 +105,15 @@ def block(col, X, ann, co, title, cb_col):
     if col == 0: ax.set_yticks(range(len(rows_ord))); ax.set_yticklabels([m + ('*' if FL.flag.get(m, False) else '') for m in rows_ord], fontsize=8)
     else: ax.set_yticks([])
     cax = fig.add_subplot(gs[3, cb_col]); cb = fig.colorbar(im, cax=cax); cb.ax.tick_params(labelsize=7)
-    cb.set_label(title.split(' ')[0] + ' (4th root)', fontsize=8)
-block(0, R4, rna_ann, co_r, 'RNA (Illumina metatranscriptomes): reads per kb per million', 2)
-block(1, D4, dna_ann, co_d, 'DNA (nanopore metagenomes): depth per Gbp mapped', 4)
+    cb.set_label(title.split(' (')[0] + ' (4th root)', fontsize=8)
+block(0, R4, rna_ann, co_r, 'RNA (Illumina metatranscriptomes): reads per kb per million', 3)
+block(1, D4, dna_ann, co_d, 'DNA (nanopore metagenomes): depth per Gbp mapped', 5)
+block(2, M4, mg_ann, co_m, 'Illumina DNA (metagenomes): reads per kb per million', 7)
 hs = [Patch(color=c, label=f'{k}: {v}') for k in PAL for v, c in PAL[k].items() if v != 'other'] + [Patch(color='#d9d9d9', label='other / unassigned')]
 fig.legend(handles=hs, loc='lower center', ncol=7, fontsize=8, frameon=False)
 if FL.flag.any():
     fig.text(0.5, 0.925, f"* RNA profile rests on fewer than {RX.THIN_N} contigs, so a few dominant contigs (rRNA or conserved genes) may still set it", fontsize=9, ha="center")
-fig.suptitle('Eukaryotic MAGs (EE##). RNA: Illumina metatranscriptomes, robust MAG profile (trimmed mean over contig profiles); DNA: nanopore metagenomes, length-weighted mean; 4th root, Ward clustering', fontsize=12)
+fig.suptitle('Eukaryotic MAGs (EE##). RNA: Illumina metatranscriptomes, robust MAG profile (trimmed mean over contig profiles); DNA: nanopore and Illumina metagenomes, length-weighted mean; 4th root, Ward clustering', fontsize=12)
 fig.savefig(O + 'hull_mags_heatmap.png', dpi=130, bbox_inches='tight')
-print('rows', len(rows_ord), 'RNA libs', R4.shape[1], 'DNA libs', D4.shape[1])
-print(pd.DataFrame({'rna_median': RNA.median(axis=1).round(2), 'dna_median': DNA.median(axis=1).round(2)}).loc[rows_ord].to_string())
+print('rows', len(rows_ord), 'RNA libs', R4.shape[1], 'DNA libs', D4.shape[1], 'Illumina DNA libs', M4.shape[1])
+print(pd.DataFrame({'rna_median': RNA.median(axis=1).round(2), 'dna_median': DNA.median(axis=1).round(2), 'mgdna_median': MG.median(axis=1).round(4)}).loc[rows_ord].to_string())

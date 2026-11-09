@@ -325,10 +325,21 @@ def hull_mag_expression(kind='robust'):
     return pd.read_csv(EM + ('hull_mags_expr_samples_summed.tsv' if kind == 'summed' else 'hull_mags_expr_samples.tsv'), sep='\t', index_col=0)
 
 
+def hull_mag_mgdna():
+    """EE##/P## x Illumina metagenome libraries (euks/mags/scripts/mgdna.py): length-weighted mean, read pairs on the MAG's contigs per
+    kb per million contig-assigned read pairs (the unit of the RNA profile; = the MAG's mean depth as a share of the library).
+    Columns = illumina_dna_samples() (QC-flagged and < 1 M pair libraries removed)."""
+    return pd.read_csv(EM + 'hull_mags_mgdna_samples.tsv', sep='\t', index_col=0)
+
+
 def hull_mag_da():
-    """Per-MAG differential abundance (RNA and DNA) of the EE##/VV## hull MAGs (euks/mags hull_mags.py via dacore, the same tests as
-    group_da()). Long table: group, data, contrast, log2_effect, q."""
-    A = pd.read_csv(EM + 'hull_mags_da.tsv', sep='\t').rename(columns={'blob': 'group'})
+    """Per-MAG differential abundance of the EE##/VV## hull MAGs, the same tests as group_da(): data 'RNA' (Illumina RNA, robust
+    profile) and 'DNA' (nanopore) from euks/mags hull_mags.py, and 'Illumina DNA' (metagenomes) from mgdna.py when present.
+    Long table: group, data, contrast, log2_effect, q."""
+    import os
+    A = pd.read_csv(EM + 'hull_mags_da.tsv', sep='\t')
+    if os.path.exists(EM + 'hull_mags_da_mgdna.tsv'): A = pd.concat([A, pd.read_csv(EM + 'hull_mags_da_mgdna.tsv', sep='\t')])
+    A = A.rename(columns={'blob': 'group'})
     A = A[A.group.map(is_hull_mag)]                                      # wired MAGs only (drops the retired VV01)
     return A[['group', 'data', 'contrast', 'log2_effect', 'q']]
 
@@ -411,3 +422,82 @@ def special_label(b):
 def is_plastid(b):
     """Plastid/organelle genome: plastid_label rule (plastid_bins.tsv) or Tiara organelle call (bin_domain)."""
     return isinstance(b, str) and bool(b) and (bool(plastid_label(b)) or bin_domain(b) == 'organelle')
+
+
+# ---------------------------------------------------------------- Illumina DNA (metagenomes)
+# danaSeq illumina_rna run in DNA mode (--rrna_method none; human reads removed; strobealign; alignments covering >= 80% of the read
+# kept) of the CMO Illumina metagenomes against the same marine Flye coassembly as the RNA (Grex ~/scratch/project_rnaseq/marine_mg,
+# copied to data_mg/). Matrix rows are the coassembly contigs in ascending id order, as in data/ (same 1,549,905 rows); columns are
+# lane units '<genohub_id>__<flowcell>_L<n>' (305), summed here to one column per library (genohub_id, 169 libraries).
+# Libraries used: not QC-flagged (excluded('metagenome'): low_yield, pool_mismatch, contamination) AND at least MG_MIN_PAIRS read
+# pairs on contigs. The flags already remove the four failed libraries (< 0.1 M raw reads); the read floor is a guard for reruns.
+# Metric: the share of a library's contig-assigned read pairs. With fixed-length reads (2 x 150) this is the same as the nanopore
+# 'depth x length share' (depth x length = read pairs x 300 bases), so the two DNA platforms use one metric.
+DM = '/data/dev/rnaseq-exploration/data_mg/'
+MG_META = '/data/dev/genice-sample-metadata/outputs/genohub_metagenome_metadata.tsv'
+MG_MIN_PAIRS = 1_000_000
+MG_READ_BP = 300                       # 2 x 150 bp NovaSeq pairs: depth = read pairs x 300 / contig length
+
+
+def _mg_name_design(name, date):
+    """season, group (CTL/EXP/other), medium (SW/SI/other), day, ice layer from a metagenome sample_name and collection date.
+    Pool libraries are CMO_<CTL|EXP>_<PREnn|DAYnn>_<SW|SI>...; blanks, MOS, frost flowers, incubations, sites and unlabelled samples
+    are 'other'."""
+    u = str(name).upper(); d = str(date)
+    season = '2025-26' if d[:7] >= '2025-07' else ('2024-25' if d[:4] in ('2024', '2025') else '')
+    g = re.match(r'CMO_(CTL|EXP)_(PRE|DAY)(\d+)(?:_(SW|SI))?', u)
+    if not g or 'BLANK' in u or not g.group(4):
+        return season, 'other', 'other', (np.nan if not g else (-int(g[3]) if g[2] == 'PRE' else int(g[3]))), ''
+    day = -int(g[3]) if g[2] == 'PRE' else int(g[3])
+    layer = next((k for k in ('TOP', 'BOT', 'MID', 'PANCAKE') if f'_{k}' in u), '')
+    return season, g[1], g[4], day, layer
+
+
+def illumina_dna_samples(used_only=True):
+    """One row per Illumina metagenome library (genohub_id) in the data_mg run: lanes, raw/mapped reads, contig-assigned pairs,
+    pct_mapped, sample_name (corrected, from the metadata archive), label_original, qc_flag, season, group, medium, day, layer,
+    phase (pre / oiled / control / other, as meta()), pool (CTL/EXP x SW/SI with a day), used, and why a library is not used."""
+    s = pd.read_csv(DM + 'marine_coassembly.sample_summary.tsv', sep='\t')
+    s['lib'] = s['sample'].str.split('__').str[0]
+    L = s.groupby('lib', sort=False).agg(lanes=('sample', 'size'), reads_raw=('reads_raw', 'sum'), reads_nohuman=('reads_nohuman', 'sum'),
+                                         reads_mapped=('reads_mapped', 'sum'), pairs_assigned=('pairs_assigned', 'sum'))
+    L['pct_mapped'] = (L.reads_mapped / L.reads_nohuman * 100).round(1)
+    m = pd.read_csv(MG_META, sep='\t', dtype=str).drop_duplicates('genohub_id').set_index('genohub_id').reindex(L.index)
+    L['sample_name'] = m.sample_name.fillna(''); L['label_original'] = m.label_original.fillna(''); L['project'] = m.project.fillna('')
+    L['collection_date'] = m.collection_date.fillna('')
+    c = corrections('metagenome'); L['qc_flag'] = c.qc_flag.reindex(L.index).fillna('')
+    des = [_mg_name_design(n, d) for n, d in zip(L.sample_name, L.collection_date)]
+    L['season'], L['group'], L['medium'], L['day'], L['layer'] = map(list, zip(*des))
+    L['day'] = pd.to_numeric(L.day)
+    oiled = [(g == 'EXP') and (d >= OIL_DAY.get('CMO ' + s_, np.inf)) for g, d, s_ in zip(L.group, L.day, L.season)]
+    L['phase'] = np.select([L.group.eq('other'), L.day < 0, oiled, L.group.eq('CTL')], ['other', 'pre', 'oiled', 'control'], 'pre')
+    L['pool'] = L.group.isin(['CTL', 'EXP']) & L.medium.isin(['SW', 'SI']) & L.day.notna()
+    ex = excluded('metagenome')
+    L['why_not'] = np.where(L.index.isin(ex), 'qc_flag ' + L.qc_flag, np.where(L.pairs_assigned < MG_MIN_PAIRS, f'< {MG_MIN_PAIRS:,} pairs on contigs', ''))
+    L['used'] = L.why_not.eq('')
+    return L[L.used].copy() if used_only else L
+
+
+_MGC = {}
+def illumina_dna_contig_matrix():
+    """(contigs x used libraries CSR matrix of read pairs, library ids in column order). Lanes are summed per library; the summed
+    matrix of all 169 libraries is cached in data_mg/contig_counts_lib.npz (+ .libs.txt) on first use (the .mtx takes ~3 min)."""
+    if 'C' not in _MGC:
+        import os, scipy.sparse as sp
+        f = DM + 'contig_counts_lib.npz'
+        if not os.path.exists(f) or os.path.getmtime(f) < os.path.getmtime(DM + 'marine_coassembly.contig_counts.mtx.gz'):
+            import scipy.io
+            X = scipy.io.mmread(DM + 'marine_coassembly.contig_counts.mtx.gz').tocsc()
+            lanes = pd.read_csv(DM + 'marine_coassembly.samples.tsv', sep='\t')['sample'].tolist()
+            if X.shape[1] != len(lanes): raise ValueError(f'{X.shape[1]} matrix columns, {len(lanes)} lanes')
+            lib = pd.Series(lanes).str.split('__').str[0]; libs = list(dict.fromkeys(lib))
+            G = sp.csr_matrix((np.ones(len(lanes)), (np.arange(len(lanes)), pd.Categorical(lib, categories=libs).codes)), shape=(len(lanes), len(libs)))
+            sp.save_npz(f, (X @ G).astype(np.int64).tocsr()); open(DM + 'contig_counts_lib.libs.txt', 'w').write('\n'.join(libs) + '\n')
+        X = sp.load_npz(f).tocsc(); libs = open(DM + 'contig_counts_lib.libs.txt').read().split()
+        import gzip
+        with gzip.open(D + 'marine_coassembly.contig_counts.mtx.gz', 'rt') as fh:      # RNA matrix header: same contigs, same order
+            rna_rows = int(next(l for l in fh if not l.startswith('%')).split()[0])
+        if X.shape[0] != rna_rows: raise ValueError(f'metagenome matrix has {X.shape[0]} contigs, RNA matrix {rna_rows}')
+        use = illumina_dna_samples().index
+        _MGC['C'] = X[:, [libs.index(x) for x in use]].tocsr(); _MGC['libs'] = list(use)
+    return _MGC['C'], _MGC['libs']

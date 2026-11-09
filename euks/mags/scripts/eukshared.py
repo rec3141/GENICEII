@@ -28,6 +28,22 @@ def _rna():
         assert len(allids) == C.shape[0]
         _RNA.update(C=C, tot=np.asarray(C.sum(0)).ravel(), pos=pd.Series(np.arange(len(allids)), index=allids), S=S)
     return _RNA
+_MG = {}
+def _mgdna():
+    """Illumina DNA (metagenomes; common.illumina_dna_contig_matrix: lanes summed per library, QC-flagged and < 1 M pair libraries
+    left out), in the same layout as _rna(): C contigs x libraries (read pairs), tot = contig-assigned pairs per library, pos, S."""
+    if not _MG:
+        import sys; sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
+        from common import illumina_dna_contig_matrix
+        C, S = illumina_dna_contig_matrix()
+        allids = np.sort(pd.read_pickle(O + 'contigs_full.pkl').id.values)
+        assert len(allids) == C.shape[0]
+        _MG.update(C=C, tot=np.asarray(C.sum(0)).ravel(), pos=pd.Series(np.arange(len(allids)), index=allids), S=S)
+    return _MG
+def mgdna_profile(ids):
+    """Share of each Illumina metagenome's contig-assigned read pairs on a contig set (= depth x length share with fixed-length reads)."""
+    r = _mgdna(); ids = [c for c in ids if c in r['pos'].index]
+    return pd.Series(np.asarray(r['C'][r['pos'][ids].values].sum(0)).ravel() / r['tot'], index=r['S'])
 def rna_profile(ids):
     r = _rna(); return pd.Series(np.asarray(r['C'][r['pos'][list(ids)].values].sum(0)).ravel() / r['tot'] * 1e6, index=r['S'])
 _DNA = {}

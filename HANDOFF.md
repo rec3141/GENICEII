@@ -85,6 +85,12 @@ Read this first when resuming. The repo README has the per-analysis sections; ea
    - IBP host labels in `ice/cold/scripts/ibp.py` still use Kaiju, not the eukaryote groups.
    - Put the metadata archive under git.
 
+## Illumina DNA (metagenomes) (2026-11-09, branch `illumina-dna`)
+- **Run:** danaSeq illumina_rna in DNA mode on the 169 CMO Illumina metagenomes against the marine coassembly (Grex `~/scratch/project_rnaseq/marine_mg`, local `data_mg/`, untracked).
+- **Used:** 162 libraries (7 QC-flagged dropped; ≥ 1 M pairs floor drops nothing more); 85 pool libraries for the network, DA, heatmap and time courses.
+- **Metric:** share of contig-assigned read pairs (= nanopore depth × length share); MAGs as reads per kb per million, length-weighted.
+- **Wired:** `common.illumina_dna_*`, `hull_mag_mgdna`, `hull_mag_da` (adds 'Illumina DNA'); `euks/mags/scripts/mgdna.py` → `heatmap.py` → `euks/scripts/euks_site.py`; network layer `mgdna` in `netcommon.LAYER_CFG` (run `network/scripts/run_all.sh`). Details: README, `euks/mags/NOTES.md`, `network/NOTES.md`.
+
 ## euks/mags pipeline
 - **Order:** survey → compact → final → expr → finalize → kernel → da → register_blobs → plot, then hull_mags once `hulls.tsv` exists.
 - **Candidate bins:** the config `LIST` at the top of `survey.py`.
