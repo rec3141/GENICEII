@@ -1,16 +1,16 @@
 bin	taxon	HA_reads	LA_reads	mean_log2	n_samples
-dastool-comebin_072_sub	comebin_072_sub	44.0	1276.0	-4.598095527050986	25
-dastool-comebin_1095_sub	comebin_1095_sub	534.0	955.0	-0.9289723847405329	26
-dastool-comebin_1103_sub	comebin_1103_sub	3074.0	378.0	3.2885000922413106	27
-dastool-comebin_1140_sub	Sulfurimonas (Kaiju)	385.0	170.0	0.9227183904711204	6
+dastool-comebin_072_sub	UBA5078	44.0	1276.0	-4.598095527050986	25
+dastool-comebin_1095_sub	Luminiphilus sp036803865	534.0	955.0	-0.9289723847405329	26
+dastool-comebin_1103_sub	Shewanella psychromarinicola	3074.0	378.0	3.2885000922413106	27
+dastool-comebin_1140_sub	Sulfurimonas	385.0	170.0	0.9227183904711204	6
 dastool-comebin_1169	UBA4479 sp963974935	503.0	1995.0	-1.9972504394708523	37
 dastool-comebin_1366	Mf105b01	124.0	494.0	-2.417252070579488	10
 dastool-comebin_1575	Hoeflea_A	114.0	561.0	-2.8019369375996037	10
 dastool-comebin_159	UBA1847	32.0	339.0		0
-dastool-comebin_1850_sub	comebin_1850_sub	36.0	375.0	-3.3330946081232873	6
+dastool-comebin_1850_sub	JANQQJ01	36.0	375.0	-3.3330946081232873	6
 dastool-comebin_1940	CAJXUU01	271.0	630.0	-1.0687808027051275	9
 dastool-comebin_1957	Acinetobacter pittii	399.0	1156.0	-1.3537430822304308	19
-dastool-comebin_1975_sub	comebin_1975_sub	95.0	1001.0	-3.5976004771030166	18
+dastool-comebin_1975_sub	JAHRVQ01	95.0	1001.0	-3.5976004771030166	18
 dastool-comebin_2162	GCA-002733185	59.0	783.0	-3.5788550513166255	15
 dastool-comebin_2505	Marimicrobium	72.0	1116.0	-4.117709461946316	15
 dastool-comebin_2576	50-400-T64	3609.0	29969.0	-3.2087943622212083	36
@@ -26,32 +26,32 @@ dastool-comebin_3601	EhC02	93.0	438.0		0
 dastool-comebin_3616	Henriciella sp029238175	42.0	1958.0	-5.442839056251964	25
 dastool-comebin_3684	Yoonia vestfoldensis_A	193.0	472.0	-0.7057195141266842	8
 dastool-comebin_3714	Gilvibacter	33.0	655.0	-4.552692819871213	7
-dastool-comebin_3749_sub	comebin_3749_sub	174.0	376.0	-1.2831734112769047	2
-dastool-comebin_3964_sub	Sneathiella (Kaiju)	203.0	313.0	-0.8416333492521318	4
+dastool-comebin_3749_sub	Tateyamaria	174.0	376.0	-1.2831734112769047	2
+dastool-comebin_3964_sub	Sneathiella sp963973085	203.0	313.0	-0.8416333492521318	4
 dastool-comebin_3979	UBA10348	68.0	305.0	-1.9794396069410518	5
 dastool-comebin_3985	Reinekea forsetii	155.0	544.0	-1.92891505432153	15
-dastool-comebin_4051_sub	comebin_4051_sub	345.0	192.0	0.6754832105183376	8
+dastool-comebin_4051_sub	JAUIAI01	345.0	192.0	0.6754832105183376	8
 dastool-comebin_4074	Rhodobacteraceae	242.0	509.0	-2.108912197621817	5
-dastool-comebin_4099_sub	comebin_4099_sub	1038.0	3956.0	-1.8346598592053285	55
-dastool-comebin_4104_sub	Pararhizobium (Kaiju)	188.0	162.0	1.153571734281738	4
-dastool-comebin_4140_sub	comebin_4140_sub	151.0	1416.0	-2.9730715893647965	22
-dastool-comebin_4156_sub	comebin_4156_sub	111.0	859.0	-3.2461048917185242	11
+dastool-comebin_4099_sub	JABJAG01	1038.0	3956.0	-1.8346598592053285	55
+dastool-comebin_4104_sub	GCA-2746425	188.0	162.0	1.153571734281738	4
+dastool-comebin_4140_sub	WHUA01	151.0	1416.0	-2.9730715893647965	22
+dastool-comebin_4156_sub	Octadecabacter	111.0	859.0	-3.2461048917185242	11
 dastool-comebin_4177	Litorimonas	150.0	915.0	-2.694101344808848	19
-dastool-comebin_4243_sub	Yoonia (Kaiju)	863.0	1598.0	-1.141134795288546	40
-dastool-comebin_4249_sub	Parvibaculum (Kaiju)	94.0	630.0	-3.02672744060508	10
-dastool-comebin_4318_sub	comebin_4318_sub	446.0	1706.0	-1.8845623095856237	31
+dastool-comebin_4243_sub	Yoonia	863.0	1598.0	-1.141134795288546	40
+dastool-comebin_4249_sub	Parvibaculum	94.0	630.0	-3.02672744060508	10
+dastool-comebin_4318_sub	MarineAlpha4-Bin1	446.0	1706.0	-1.8845623095856237	31
 dastool-comebin_4331	Anderseniella	286.0	1285.0	-2.1177463441289337	25
-dastool-comebin_4334_sub	comebin_4334_sub	141.0	6452.0	-5.318433434605254	54
+dastool-comebin_4334_sub	QNFC01	141.0	6452.0	-5.318433434605254	54
 dastool-comebin_4359	CALLCD01	118.0	588.0	-2.264100108296865	5
-dastool-comebin_4403_sub	Maricaulis (Kaiju)	8274.0	6023.0	0.3720212414077731	88
+dastool-comebin_4403_sub	Maricaulis	8274.0	6023.0	0.3720212414077731	88
 dastool-comebin_4422	Pseudoalteromonas rhizosphaerae	321.0	31.0	3.391518709569866	4
-dastool-comebin_4479_sub	comebin_4479_sub	673.0	41.0	4.618711493913059	13
+dastool-comebin_4479_sub	Stutzerimonas	673.0	41.0	4.618711493913059	13
 dastool-comebin_4536	Fuerstiella	894.0	697.0	0.30639914762156134	36
 dastool-comebin_4639	CAJQLB01	32.0	273.0	-1.8303650041695603	2
-dastool-comebin_4646_sub	comebin_4646_sub	231.0	502.0	-1.2039988826651067	12
-dastool-comebin_477_sub	Sulfitobacter (Kaiju)	264.0	1209.0	-2.876678085770723	22
+dastool-comebin_4646_sub	Tateyamaria	231.0	502.0	-1.2039988826651067	12
+dastool-comebin_477_sub	Sulfitobacter	264.0	1209.0	-2.876678085770723	22
 dastool-comebin_504	JAVKBW01	36.0	565.0	-4.389802684346457	11
-dastool-comebin_837_sub	Ilumatobacter (Kaiju)	121.0	555.0	-2.759826332869638	9
+dastool-comebin_837_sub	Ilumatobacter	121.0	555.0	-2.759826332869638	9
 dastool-comebin_896	Colwellia_A sp001767295	720.0	381.0	1.0545714272304225	18
 dastool-comebin_991	JAJOIW01	281.0	711.0	-1.0518170179266173	15
 dastool-lorbin_017	JAALKW01	43.0	351.0	-3.670267440338107	2
@@ -70,7 +70,7 @@ dastool-lorbin_072	Algoriphagus	58.0	598.0	-3.6120178542264187	2
 dastool-lorbin_073	CAJQQK01	559.0	1786.0	-1.6747145158516825	38
 dastool-lorbin_095	Colwellia	8862.0	9375.0	0.4275863036998686	56
 dastool-lorbin_096	Loktanella sp963926415	52.0	505.0	-3.7585246560806183	6
-dastool-lorbin_1010_sub	lorbin_1010_sub	91.0	219.0	1.253756592245783	1
+dastool-lorbin_1010_sub	Marimicrobium	91.0	219.0	1.253756592245783	1
 dastool-lorbin_105	GCA-2401735 sp041612255	124.0	466.0	-2.956250323013629	8
 dastool-lorbin_108	Hyphomonas sp040216775	378.0	1960.0	-2.484286453776114	37
 dastool-lorbin_109	Roseivirga	73.0	831.0	-3.495632860150931	11
@@ -90,28 +90,28 @@ dastool-lorbin_248	Pseudomonas_E gregormendelii	1322.0	246.0	2.4175455325154185	
 dastool-lorbin_264	Pseudomonas_E sivasensis	432.0	223.0	-0.11527379190889808	4
 dastool-lorbin_288	Porticoccus sp963974675	171.0	157.0	-0.38307070617746475	2
 dastool-lorbin_317	MAG-120531	483.0	5951.0	-3.584679243777307	32
-dastool-lorbin_319_sub	lorbin_319_sub	2228.0	1175.0	1.3846341129245154	66
+dastool-lorbin_319_sub	Oceanicoccus	2228.0	1175.0	1.3846341129245154	66
 dastool-lorbin_366	UBA7434	37.0	491.0	-3.6708194221815504	3
 dastool-lorbin_415	Paraglaciecola	304.0	529.0	-1.1691209596432304	12
-dastool-lorbin_433_sub	lorbin_433_sub	51.0	4467.0	-6.236699923421191	47
+dastool-lorbin_433_sub	MarineAlpha4-Bin1	51.0	4467.0	-6.236699923421191	47
 dastool-lorbin_437	Halopseudomonas	1541.0	750.0	0.8292306365136637	17
-dastool-lorbin_516_sub	lorbin_516_sub	420.0	303.0	0.45566150245220116	10
+dastool-lorbin_516_sub	Yoonia	420.0	303.0	0.45566150245220116	10
 dastool-maxbin_003	Patiriisocius	78.0	4209.0	-5.353858675600311	55
-dastool-metabat_1024_sub	metabat_1024_sub	1063.0	3841.0	-2.069245586766952	53
+dastool-metabat_1024_sub	JAHELH01	1063.0	3841.0	-2.069245586766952	53
 dastool-metabat_10326	Patiriisocius sp905182755	36.0	1793.0	-5.176710865089304	29
 dastool-metabat_10571	Litorimonas	47.0	622.0	-3.9492670009040007	12
 dastool-metabat_10621	UBA9145	53.0	1152.0	-4.171872493834292	27
-dastool-metabat_1070_sub	metabat_1070_sub	181.0	1305.0	-2.794420574856341	24
+dastool-metabat_1070_sub	Litorimonas	181.0	1305.0	-2.794420574856341	24
 dastool-metabat_10802	Sulfitobacter sp011050655	4910.0	29269.0	-2.362979779528174	80
 dastool-metabat_1081	Actomonas sp913058185	1119.0	2634.0	-1.228242377123316	66
 dastool-metabat_10934	UBA9145	121.0	3676.0	-5.12708930033414	31
 dastool-metabat_1104	RS62 sp002340675	104.0	11155.0	-6.384836618050948	82
 dastool-metabat_1122	Sulfitobacter sp017854675	2874.0	20716.0	-3.6190270986690907	88
-dastool-metabat_1149_sub	metabat_1149_sub	962.0	4664.0	-2.638863477993153	67
+dastool-metabat_1149_sub	Litorimonas	962.0	4664.0	-2.638863477993153	67
 dastool-metabat_1188	Cognaticolwellia sp003971255	3370.0	49.0	6.351841030966581	2
 dastool-metabat_1191	Porticoccus	112.0	642.0	-2.6672090335466176	12
-dastool-metabat_1202_sub	metabat_1202_sub	286.0	118.0	1.2950908217980088	2
-dastool-metabat_1243_sub	Hyphomonas (Kaiju)	316.0	6759.0	-4.65326612078666	58
+dastool-metabat_1202_sub	Psychromonas sp009828855	286.0	118.0	1.2950908217980088	2
+dastool-metabat_1243_sub	Hyphomonas	316.0	6759.0	-4.65326612078666	58
 dastool-metabat_2763	Flavobacterium	101.0	2706.0	-5.0600089838765	2
 dastool-metabat_4686	Sulfitobacter	910.0	4006.0	-2.1904645579979847	46
 dastool-metabat_4689	Pseudorhodobacter ferrugineus	1634.0	2974.0	-0.5982139412273477	27
@@ -123,10 +123,10 @@ dastool-metabat_6916	CAWVYD01	156.0	419.0	-1.5306627908168515	6
 dastool-metabat_7201	Sulfitobacter	264.0	2937.0	-3.5907577901668146	31
 dastool-metabat_7202	UBA9659 sp018667205	31.0	782.0	-4.429325235723123	15
 dastool-metabat_7327	JABMPE01	37.0	815.0	-4.227946144753768	7
-dastool-metabat_7478_sub	Pararhizobium (Kaiju)	350.0	472.0	-0.452962154841435	16
+dastool-metabat_7478_sub	GCA-2746425	350.0	472.0	-0.452962154841435	16
 dastool-metabat_7665	JAJDEX01	39.0	1032.0	-4.980255336773839	19
 dastool-metabat_7841	Cognaticolwellia sp003354085	318.0	189.0	0.742879082634424	4
-dastool-metabat_7918_sub	Anderseniella (Kaiju)	219.0	603.0	-1.2441897599402583	14
+dastool-metabat_7918_sub	Anderseniella	219.0	603.0	-1.2441897599402583	14
 dastool-metabat_8061	Pseudorhodobacter	2047.0	6421.0	-1.7079887926722674	47
 dastool-metabat_8244	Cognaticolwellia sp024585285	13009.0	3923.0	1.4412967030401573	31
 dastool-metabat_8566	Pelagisphaera	1109.0	1717.0	-0.6684204766848547	51
@@ -141,10 +141,10 @@ dastool-semibin_088	Sulfurimonas	46924.0	109908.0	-1.0779011205384856	88
 dastool-semibin_091	Gymnodinialimonas	553.0	3656.0	-2.93555796815593	38
 dastool-semibin_1314	Hoeflea_A	242.0	3018.0	-3.892800164525511	36
 dastool-vamb_002	Eutrophovita sp913057845	875.0	2509.0	-1.6628820739553085	40
-dastool-vamb_1334_sub	vamb_1334_sub	157.0	370.0		0
+dastool-vamb_1334_sub	SW4	157.0	370.0		0
 dastool-vamb_1685	Halopseudomonas sabulinigri_A	733.0	118.0	2.335238554442194	11
-dastool-vamb_3279_sub	Zhongshania (Kaiju)	284.0	8757.0	-5.092601570572146	34
+dastool-vamb_3279_sub	Zhongshania sp040892595	284.0	8757.0	-5.092601570572146	34
 dastool-vamb_4149	UBA9145 sp001438145	6281.0	216302.0	-5.122459607029026	125
-dastool-vamb_500_sub	Colwellia (Kaiju)	13032.0	8170.0	1.4756019082225877	56
+dastool-vamb_500_sub	Colwellia	13032.0	8170.0	1.4756019082225877	56
 dastool-vamb_549	Sulfitobacter sp013282155	16848.0	216872.0	-3.6515325797671463	105
-dastool-vamb_586_sub	Colwellia (Kaiju)	5835.0	2252.0	0.10525733406868722	23
+dastool-vamb_586_sub	Colwellia sp963974965	5835.0	2252.0	0.10525733406868722	23

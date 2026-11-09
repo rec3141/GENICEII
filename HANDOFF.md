@@ -91,6 +91,11 @@ Read this first when resuming. The repo README has the per-analysis sections; ea
 - **Metric:** share of contig-assigned read pairs (= nanopore depth × length share); MAGs as reads per kb per million, length-weighted.
 - **Wired:** `common.illumina_dna_*`, `hull_mag_mgdna`, `hull_mag_da` (adds 'Illumina DNA'); `euks/mags/scripts/mgdna.py` → `heatmap.py` → `euks/scripts/euks_site.py`; network layer `mgdna` in `netcommon.LAYER_CFG` (run `network/scripts/run_all.sh`). Details: README, `euks/mags/NOTES.md`, `network/NOTES.md`.
 
+## GTDB names, 15% network floor, t-SNE scaling (2026-11-09, branch `gtdb-sub-names-network-floor`)
+- **GTDB for refined bins:** `data/gtdbtk_taxonomy.tsv` (untracked, from Grex) has the 302 DAS Tool-refined `*_sub` bins only as `dastool-*` rows. `scripts/gtdb_names.py` adds plain-name copies (rerunnable); rerun it after any fresh copy of the table, then rebuild the pages. Before, these bins showed Kaiju or "unclassified" labels site-wide.
+- **Network:** prokaryotic MAGs now need CheckM2 completeness ≥ 15% (was 30%) and contamination < 20%; t-SNE rows scaled to sum 1, top 50 PCs. Details in `network/NOTES.md`.
+- **HGT page not rebuilt:** with the GTDB names, `hgt/scripts/s5c_candidates.py` swaps 3 of its 69 candidates (genus/family/class levels change), and `s5d_flanks.py` then needs regions that `hgt/cand_regions.tsv` (made on Grex) lacks. The HGT page keeps its old labels until that Grex step is redone.
+
 ## euks/mags pipeline
 - **Order:** survey → compact → final → expr → finalize → kernel → da → register_blobs → plot, then hull_mags once `hulls.tsv` exists.
 - **Candidate bins:** the config `LIST` at the top of `survey.py`.

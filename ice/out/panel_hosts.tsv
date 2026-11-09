@@ -13,7 +13,7 @@ Ectoine synthesis (ectABC/D)	dastool-lorbin_188	0.3186728162878304	s__RS62 sp000
 Ectoine synthesis (ectABC/D)	dastool-lorbin_059	0.17109579925664886	s__Perlucidibaca sp018066805
 Ectoine synthesis (ectABC/D)	dastool-metabat_9342	0.10703136218529129	s__
 Ectoine synthesis (ectABC/D)		0.10417926447792748	
-Ectoine synthesis (ectABC/D)	dastool-vamb_3279_sub	0.07615047336207245	
+Ectoine synthesis (ectABC/D)	dastool-vamb_3279_sub	0.07615047336207245	s__Zhongshania sp040892595
 Polyamine synthesis		0.23129935354899187	
 Polyamine synthesis	dastool-vamb_549	0.07835172371301077	s__Sulfitobacter sp013282155
 Polyamine synthesis	dastool-metabat_5376	0.057637658042064666	s__Sulfitobacter sp041552635
@@ -23,12 +23,12 @@ Peroxiredoxins and catalase		0.3156124220403566
 Peroxiredoxins and catalase	dastool-semibin_088	0.1755439781892438	s__
 Peroxiredoxins and catalase	dastool-lorbin_184	0.08558696603675701	s__Cycloclasticus sp001566825
 Peroxiredoxins and catalase	dastool-lorbin_059	0.04501777414982232	s__Perlucidibaca sp018066805
-Peroxiredoxins and catalase	dastool-vamb_3279_sub	0.042569470362904385	
+Peroxiredoxins and catalase	dastool-vamb_3279_sub	0.042569470362904385	s__Zhongshania sp040892595
 Dps and osmY stress proteins		0.2646966574510615	
 Dps and osmY stress proteins	dastool-lorbin_029	0.2052615067956614	s__Parasphingorhabdus sp036964675
 Dps and osmY stress proteins	dastool-metabat_8244	0.1413176640180396	s__Cognaticolwellia sp024585285
 Dps and osmY stress proteins	dastool-lorbin_324	0.04568129349946652	s__
-Dps and osmY stress proteins	dastool-vamb_3279_sub	0.04397624139837739	
+Dps and osmY stress proteins	dastool-vamb_3279_sub	0.04397624139837739	s__Zhongshania sp040892595
 Cold-shock proteins (cspA)		0.2393339520097456	
 Cold-shock proteins (cspA)	dastool-semibin_088	0.11993943794080361	s__
 Cold-shock proteins (cspA)	dastool-metabat_9342	0.06294792290657202	s__
@@ -65,7 +65,7 @@ RuBisCO (rbcL/rbcS)	dastool-metabat_8153	0.1411267914016175	Plastid (unidentifie
 RuBisCO (rbcL/rbcS)	dastool-metabat_1560	0.08302228685075969	Plastid (unidentified alga)
 RuBisCO (rbcL/rbcS)	dastool-lorbin_632	0.075206030787578	Plastid (unidentified alga)
 MSHA pili and adhesins		0.6561516911211697	
-MSHA pili and adhesins	dastool-comebin_1140_sub	0.06200222084146528	
+MSHA pili and adhesins	dastool-comebin_1140_sub	0.06200222084146528	s__
 MSHA pili and adhesins	dastool-lorbin_048	0.035346813676597325	s__
 MSHA pili and adhesins	dastool-semibin_088	0.03247076349870227	s__
 MSHA pili and adhesins	dastool-semibin_042	0.020715936793702244	s__
@@ -73,7 +73,7 @@ Gas vesicles (gvpA)		0.9581254673294864
 Gas vesicles (gvpA)	dastool-lorbin_155	0.0348357647458754	s__ASP10-02a sp963925635
 Gas vesicles (gvpA)	dastool-metabat_1066	0.004502074179370661	s__
 Gas vesicles (gvpA)	dastool-comebin_2557	0.0025366937452675556	s__
-Gas vesicles (gvpA)	dastool-comebin_2315_sub	0.0	
+Gas vesicles (gvpA)	dastool-comebin_2315_sub	0.0	s__
 Cyanophycin and PHA storage		0.20607568918432775	
 Cyanophycin and PHA storage	dastool-lorbin_184	0.08034648874131209	s__Cycloclasticus sp001566825
 Cyanophycin and PHA storage	dastool-lorbin_048	0.06203993230140933	s__
@@ -82,9 +82,9 @@ Cyanophycin and PHA storage	dastool-semibin_042	0.05004100004843367	s__
 Flagellar motility (bacterial)	dastool-semibin_088	0.5328130213268699	s__
 Flagellar motility (bacterial)		0.21570672203923222	
 Flagellar motility (bacterial)	dastool-semibin_042	0.025619132827234412	s__
-Flagellar motility (bacterial)	dastool-comebin_1140_sub	0.02173306143924829	
+Flagellar motility (bacterial)	dastool-comebin_1140_sub	0.02173306143924829	s__
 Flagellar motility (bacterial)	dastool-lorbin_095	0.012954375303313956	s__
-Methylotrophy (xoxF, exaA, mxaF)	dastool-vamb_500_sub	0.5209341560332276	
+Methylotrophy (xoxF, exaA, mxaF)	dastool-vamb_500_sub	0.5209341560332276	s__
 Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_051	0.1316002800119825	s__BACL14 sp913058475
 Methylotrophy (xoxF, exaA, mxaF)		0.09142974253359216	
 Methylotrophy (xoxF, exaA, mxaF)	dastool-lorbin_135	0.045567395736237325	s__Cognaticolwellia sp003061515
