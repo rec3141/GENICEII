@@ -7,7 +7,7 @@ All node sets are read from files at run time; no MAG ids are hard-coded (except
 
 | Domain | Rule | Source |
 |---|---|---|
-| Prokaryote | DAS Tool MAG, `is_prokaryote` and not `is_plastid`, CheckM2 completeness ≥ 50% and contamination < 10% | `data/checkm2_dastool.tsv` (Grex `mag_marine/binning/checkm2/quality_report.tsv`, `dastool-*` rows) |
+| Prokaryote | DAS Tool MAG, `is_prokaryote` and not `is_plastid`, CheckM2 completeness ≥ 30% and contamination < 20% (`MIN_COMPL`, `MAX_CONTAM`; since 2026-11-09, before ≥ 50% / < 10%), and expressed in the pools (below) | `data/checkm2_dastool.tsv` (Grex `mag_marine/binning/checkm2/quality_report.tsv`, `dastool-*` rows) |
 | Eukaryote | every EE## in `data/hull_mags.tsv`, any status; doubtful ones flagged | main checkout `data/` |
 | Organelle | P##/M## groups (`data/organelle_groups.tsv`) and DAS Tool bins with `is_plastid`; groups over 1 Mbp are flagged multi-genome (a plastid genome is 0.1–0.4 Mbp; P01 is 5 Mbp) | |
 | Virus | the Viruses page host table (`viruses/out/votu_hosts.tsv`) plus every Megaviricetes (giant virus) and Maveriviricetes (virophage) vOTU with mean viral-CDS CPM ≥ 5 over the 128 RNA libraries | `viruses/out/votu_rna.tsv` |
@@ -17,7 +17,20 @@ The site's own quality table (`data/summary.tsv`) only has DAS Tool SCG complete
 **Contig assignment.** Each contig counts for one node only, in the order virus > organelle group > EE MAG > DAS Tool bin. For example, giant virus contig_0000610 is binned in plastid bin lorbin_567 and counts for the virus only.
 - Five plastid bins have every contig inside P01: metabat_1343, lorbin_613, lorbin_663, lorbin_603 and metabat_7332_sub. They are dropped as nodes. So the known pair metabat_7332_sub → EE05 is tested as P01 → EE05.
 
-Candidates: 528 prokaryotes (224 HQ, 304 MQ), 26 EE (after PR #18), 1 organelle group plus 27 plastid bins (22 with contigs of their own), and 63 vOTUs (26 giant viruses, 1 virophage, 36 phages). EE flags come from `status` and PR #18's `genome_status`. Doubtful: EE01, EE08 and EE16. Multi-genome: EE05, EE30 and P01.
+Candidates (2026-11-09): 703 prokaryotic bins pass 30/20 (94% of the bins' TPM, against 83% with 50/10); the pool expression rule keeps 496 of them (207 dropped, 149 of which passed the old 50/10 rule). 26 EE (after PR #18), 1 organelle group plus 27 plastid bins (22 with contigs of their own), and 63 vOTUs (26 giant viruses, 1 virophage, 36 phages). EE flags come from `status` and PR #18's `genome_status`. Doubtful: EE01, EE08 and EE16. Multi-genome: EE05, EE30 and P01.
+
+**Prokaryote flags.** "fragment" when completeness < 50% (54 kept MAGs; drawn pale) and "contamination 10–20%" when contamination ≥ 10% (67; dotted ring); 5 are both. Shown in the hover and in `out/nodes_all.tsv` (`fragment`, `contam_10_20`). The high-contamination bins are mostly near-complete bins with a second strain, such as the Cycloclasticus bloom genomes lorbin_184 (94.7% / 10.2%) and metabat_5432 (100% / 12.8%).
+
+**Pool expression rule** (`nodes.py`: `POOL_TPM_MEAN`, `POOL_TPM_MAX`, `POOL_DET`; both layers, before the per-layer prevalence rule). Pool libraries: `common.meta()` group CTL or EXP and medium SW or SI, both winters, before and after dosing (106 libraries); site, enrichment, MOS and other libraries do not count.
+- Prokaryotic MAGs: bin TPM (`data/marine_coassembly.bin_tpm.tsv`) ≥ 10 on average over the pool libraries, OR ≥ 100 in at least one (keeps short bloomers).
+- EE MAGs, organelle groups and plastid bins: robust RNA profile detected in ≥ 10% of the pool libraries (chosen over a percentile of the prokaryotes' values: simpler, and on the same profile the RNA layer uses). No EE MAG or plastid with contigs falls out.
+- vOTUs: unchanged.
+- Dropped nodes are in `out/nodes_dropped_pool_expression.tsv`; their contigs are not handed to another node.
+- Kept, as expected: both Cycloclasticus bloom genomes, metabat_9342 and comebin_3787_sub (Cycloclasticus), comebin_4318_sub (MarineAlpha4-Bin1), comebin_1103_sub (Shewanella psychromarinicola), lorbin_206 (Pseudoalteromonas arctica), metabat_1243_sub (Hyphomonas), lorbin_516_sub (Yoonia). lorbin_783 (Moritella, 18% complete), metabat_8071_sub (Sulfitobacter, 18%) and lorbin_722_sub (Cycloclasticus, 23%) are below 30% completeness, so they are not candidates at all.
+
+**GTDB labels fixed (2026-11-09).** `nodes.py` looked GTDB-Tk calls up by the plain binner name only; `*_sub` bins exist in `data/gtdbtk_taxonomy.tsv` only as `dastool-*` rows, so 182 of them were "unclassified" (e.g. comebin_1103_sub is Shewanella psychromarinicola). It now reads the `dastool-` row first. Where both rows exist they are identical.
+
+**Possible same genome** (`network_site.py`: `SAME_RHO`, `SAME_N`). Two prokaryotic MAGs of the same GTDB genus (or, both without a GTDB genus, the same majority Kaiju genus) whose robust RNA profiles have Spearman ρ ≥ 0.95 over the ≥ 10 libraries where both are detected. Their links (either layer) are flagged; the page draws them dashed and can hide them. Pairs: `out/same_genome_pairs.tsv`.
 
 ## Abundance
 - **RNA (since 2026-11-08: outlier-resistant profiles).** Every node's RNA profile is the shared robust profile of `euks/mags/scripts/robustexpr.py` (the Eukaryotes page metric):
@@ -179,3 +192,13 @@ Presence Pearson overlap (Jaccard; sign agreement), DNA / RNA: FlashWeave 0.079 
   - RNA: P01–EE05 from step 1; contig_0000362–EE04 from step 3; contig_0000564–EE07 from step 5; contig_0000610–EE22 and contig_0000623–EE07 from step 7; virophage contig_0049668–EE07 at no step. The same as with four methods: the Presence Pearson r of these pairs (0.42–0.78) is below its 0.85 call, so it supports none of them in RNA.
   - DNA: P01–EE05 from step 2, contig_0000623–EE07 from step 3 (the Presence Pearson supports it, r 0.90 over 20 libraries), the others at no step.
 - **Single-method line style:** with exactly one method switched on, line width and opacity follow its score in five classes (`network_site.SCORE`): FlashWeave |weight| < 0.3 / 0.3 / 0.4 / 0.5 / ≥ 0.7; SPRING and SPIEC-EASI stability < 0.4 / 0.4 / 0.6 / 0.8 / ≥ 0.9; Spearman |ρ| < 0.3 / 0.3 / 0.4 / 0.5 / ≥ 0.6; Presence Pearson |r| < 0.87 / 0.87 / 0.9 / 0.93 / ≥ 0.96 (its edges start at 0.85). A legend under the colour key shows the classes; with several methods it shows the width per number of supporting methods.
+
+## Rebuild of 2026-11-09 (30/20 node rule + pool expression rule)
+- Nodes: DNA 551 (454 prokaryotes, 25 EE, 59 vOTUs, 13 plastid), RNA 602 (496 / 25 / 63 / 18). Prokaryote flags (RNA layer): 54 fragment, 67 contamination 10–20%, 5 both.
+- Run time of `run_all.sh` (16-core machine, 602 RNA nodes): nodes.py 25 s, SPRING both layers 13 min, SPIEC-EASI 30 s, FlashWeave 44 s, the rest under 1 min; 15 min in all.
+- Links: FlashWeave 888 / 1,870; SPRING 7,308 / 10,356; SPIEC-EASI 4,114 / 6,142; residual Spearman 5,477 / 82,897; Presence Pearson 6,842 / 2,668 (4.5% / 1.5% of pairs; SPRING 7,308 / 10,356, so still at or below SPRING); consensus 2,065 / 9,422; sign conflicts 68 / 306 (DNA / RNA).
+- Possible same genome: 85 pairs (Pelagibacter, UBA4592, Sulfurimonas, ...); all 85 are RNA consensus links, 71 are DNA links (45 in the DNA consensus). The four Cycloclasticus MAGs are not among them.
+- Steps (DNA / RNA links): 70 / 463, 236 / 1,076, 929 / 3,535, 1,046 / 3,846, 2,065 / 9,422 (consensus), 3,798 / 9,987, 5,306 / 14,511, 19,109 / 40,216.
+- Known pairs: RNA P01–EE05 from step 1; contig_0000362–EE04 and contig_0000564–EE07 from step 5; contig_0000610–EE22 from step 6; contig_0000623–EE07 from step 7; the virophage at no step. DNA: P01–EE05 and contig_0000623–EE07 from step 3.
+- Page: positive / negative / both link filter (also applied to the counts and the known-pair table, where ○ marks a pair found as a negative link); "find genome" box (id or any part of the name; rings and selects matches, scrolls to the map); Cycloclasticus MAGs always labelled (`network_site.FEATURED`); sample picker (dropdown, ◀ ▶, arrow keys, ▶▶ one sample per second) sizing points by the genome's level in that library from `site/network_{layer}_samples.json` (RNA reads per kb per million of the robust profile, DNA parts per million of aligned bases; 2 significant digits; RNA 472 kB, DNA 87 kB, loaded on first use). Order: winter > control, diesel > seawater, sea ice top, other ice, sea ice bottom > day; non-pool libraries last.
+- Sizes: network.json 92 kB, network_dna.json 446 kB, network_rna.json 807 kB.

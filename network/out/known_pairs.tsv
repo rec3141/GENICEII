@@ -1,13 +1,13 @@
 layer	a	b	pair	in_layer	flashweave	spring	spieceasi	spearman	pearson	support	consensus	consensus_partners	eukaryote_partners
-dna	contig_0000564	EE07	giant virus and choanoflagellate	True	0	0	0	0	0	0	False	10	
-dna	contig_0000623	EE07	giant virus and choanoflagellate	True	1	1	1	0	1	4	True	10	EE07, EE15
-dna	contig_0049668	EE07	virophage and choanoflagellate	True	0	0	0	0	0	0	False	7	
+dna	contig_0000564	EE07	giant virus and choanoflagellate	True	0	0	0	0	0	0	False	9	
+dna	contig_0000623	EE07	giant virus and choanoflagellate	True	1	1	1	0	1	4	True	10	EE07
+dna	contig_0049668	EE07	virophage and choanoflagellate	True	0	0	0	0	0	0	False	4	
 dna	contig_0000362	EE04	giant virus and cercozoan	True	0	0	0	0	0	0	False	3	
-dna	contig_0000610	EE22	giant virus and Micromonas	True	0	0	0	0	0	0	False	5	
-dna	P01	EE05	plastid group (holds metabat_7332_sub) and Minidiscus	True	1	1	1	0	0	3	True	6	EE05
+dna	contig_0000610	EE22	giant virus and Micromonas	True	0	0	0	0	0	0	False	4	EE02
+dna	P01	EE05	plastid group (holds metabat_7332_sub) and Minidiscus	True	1	1	1	0	0	3	True	4	EE05
 rna	contig_0000564	EE07	giant virus and choanoflagellate	True	0	0	1	1	0	2	True	30	EE07, EE12
-rna	contig_0000623	EE07	giant virus and choanoflagellate	True	0	0	0	1	0	1	False	9	
+rna	contig_0000623	EE07	giant virus and choanoflagellate	True	0	0	0	1	0	1	False	11	
 rna	contig_0049668	EE07	virophage and choanoflagellate	True	0	0	0	1	0	1	False	21	
-rna	contig_0000362	EE04	giant virus and cercozoan	True	0	1	1	1	0	3	True	39	EE04, EE10
-rna	contig_0000610	EE22	giant virus and Micromonas	True	1	0	0	0	0	1	False	24	EE34, EE06
-rna	P01	EE05	plastid group (holds metabat_7332_sub) and Minidiscus	True	1	1	1	1	0	4	True	30	EE05, EE35, EE23, EE33, EE01
+rna	contig_0000362	EE04	giant virus and cercozoan	True	0	0	1	1	0	2	True	35	EE04, EE10
+rna	contig_0000610	EE22	giant virus and Micromonas	True	0	1	1	0	0	2	False	23	EE34, EE06
+rna	P01	EE05	plastid group (holds metabat_7332_sub) and Minidiscus	True	1	1	1	1	0	4	True	34	EE05, EE35, EE23, EE33, EE01

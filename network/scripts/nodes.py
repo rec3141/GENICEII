@@ -2,11 +2,18 @@
 
 Nodes (all read from files at run time, no hard-coded MAG ids):
   - prokaryote: DAS Tool MAGs that common.is_prokaryote() and not common.is_plastid(), of high or medium quality by CheckM2
-    (MIMAG-style: completeness >= 50%, contamination < 10%; network/data/checkm2_dastool.tsv, copied from Grex
-    mag_marine/binning/checkm2/quality_report.tsv, the dastool-* rows).
+    (network/data/checkm2_dastool.tsv, copied from Grex mag_marine/binning/checkm2/quality_report.tsv, the dastool-* rows):
+    completeness >= MIN_COMPL (30%) and contamination < MAX_CONTAM (20%) (since 2026-11-09; before: >= 50% and < 10%, MIMAG medium
+    quality). 704 bins pass (94% of the bins' TPM, against 83% before). It brings in fragments and near-complete bins with
+    co-binned strains, among them the Cycloclasticus bloom genomes lorbin_184 (94.7% / 10.2%) and metabat_5432 (100% / 12.8%) and
+    the fragment lorbin_722_sub. Flags: fragment (completeness < 50%) and contam_10_20 (contamination >= 10%).
   - eukaryote: every EE## hull MAG in data/hull_mags.tsv, whatever its status. Flags: doubtful (status 'doubtful' or genome_status
     'doubtful, not a genome') and multi-genome (genome_status 'multi-genome ...').
   - organelle: P##/M## organelle groups (data/organelle_groups.tsv) and DAS Tool bins that common.is_plastid().
+  Pool expression rule (both layers, before the prevalence rule): prokaryotic MAGs need bin TPM (data/marine_coassembly.bin_tpm.tsv)
+    of at least POOL_TPM_MEAN on average over the CMO pool libraries OR at least POOL_TPM_MAX in one of them; EE MAGs, organelle groups
+    and plastid bins need their robust RNA profile detected in at least POOL_DET of the pool libraries. vOTUs keep their own rule.
+    Contigs of a dropped node are not handed to another node.
   - virus: the vOTUs of the Viruses page host table (viruses/out/votu_hosts.tsv: the most abundant and the most diesel-responsive
     vOTUs), plus every vOTU of a eukaryotic-virus class (geNomad Megaviricetes = giant viruses, Maveriviricetes = virophages)
     with a mean of at least EUKV_MIN_CPM viral-CDS CPM over the 128 RNA libraries (viruses/out/votu_rna.tsv).
@@ -38,17 +45,28 @@ CACHE, OUT = os.path.join(NET, 'cache'), os.path.join(NET, 'out')
 os.makedirs(CACHE, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 E0 = '/data/dev/rnaseq-exploration/'
 EUKV_MIN_CPM = 5
+MIN_COMPL, MAX_CONTAM = 30, 20          # prokaryotic bins (CheckM2); flags: fragment < 50% complete, contamination >= 10%
+# pool expression (2026-11-09): which genomes to show at all, before the per-layer prevalence rule (netcommon), in both layers.
+# Pool libraries: common.meta() group CTL or EXP and medium SW or SI (both winters, before and after dosing; site, enrichment,
+# MOS and other libraries do not count).
+POOL_TPM_MEAN, POOL_TPM_MAX = 10, 100     # prokaryotic MAGs: bin TPM mean over pool libraries >= 10, OR >= 100 in one (short bloomers)
+POOL_DET = 0.10                           # EE MAGs, organelle groups and plastid bins: robust RNA profile > 0 in >= 10% of pool libraries
 EUK_VIRUS = {'Megaviricetes': 'giant virus', 'Maveriviricetes': 'virophage'}
 
 # ---------------------------------------------------------------- candidate nodes
 ck = pd.read_csv(os.path.join(NET, 'data', 'checkm2_dastool.tsv'), sep='\t').set_index('Name')
 summ = pd.read_csv(D + 'summary.tsv', sep='\t').set_index('bin')
 gt = pd.read_csv(D + 'gtdbtk_taxonomy.tsv', sep='\t', usecols=[0, 1]).drop_duplicates('user_genome').set_index('user_genome')['classification']
+def gtdb_cls(b):
+    # the DAS Tool bin's own row ('dastool-<bin>') first; the plain binner name only as a fallback (before 2026-11-09 only the
+    # plain name was read, so *_sub bins, which exist only as dastool-* rows, came out 'unclassified')
+    s = 'dastool-' + b.replace('dastool-', '')
+    return str(gt.get(s, gt.get(b.replace('dastool-', ''), '')))
 def gtdb_name(b):
-    t = [x.split('__', 1)[1] for x in str(gt.get(b.replace('dastool-', ''), '')).split(';') if '__' in x and x.split('__', 1)[1]]
+    t = [x.split('__', 1)[1] for x in gtdb_cls(b).split(';') if '__' in x and x.split('__', 1)[1]]
     return t[-1] if t else ''
 def gtdb_rank(b, r):
-    for x in str(gt.get(b.replace('dastool-', ''), '')).split(';'):
+    for x in gtdb_cls(b).split(';'):
         if x.startswith(r + '__') and x[3:]: return x[3:]
     return ''
 
@@ -60,9 +78,10 @@ for b in summ.index:
                       completeness=ck.Completeness.get(b, np.nan), contamination=ck.Contamination.get(b, np.nan), status='', member=b))
     elif is_prokaryote(b):
         c, x = ck.Completeness.get(b, np.nan), ck.Contamination.get(b, np.nan)
-        if not (c >= 50 and x < 10): continue
+        if not (c >= MIN_COMPL and x < MAX_CONTAM): continue
         nm = gtdb_name(b) or kaiju_bin_label(b) or 'unclassified'
         N.append(dict(id=s, domain='prokaryote', kind='HQ' if (c >= 90 and x < 5) else 'MQ', label=nm, bp=int(summ.loc[b, 'size']), completeness=c, contamination=x,
+                      fragment=bool(c < 50), contam_10_20=bool(x >= 10),
                       status='', member=b, phylum=gtdb_rank(b, 'p'), cls=gtdb_rank(b, 'c'), order=gtdb_rank(b, 'o'), family=gtdb_rank(b, 'f'), genus=gtdb_rank(b, 'g')))
 HM = pd.read_csv(D + 'hull_mags.tsv', sep='\t', keep_default_na=False)
 for x in HM[HM.mag.str.startswith('EE')].itertuples():
@@ -122,6 +141,21 @@ R = RP.reindex(N.index).fillna(0).mul(RI.kb.reindex(N.index).fillna(0), axis=0) 
 N['rna_contigs_used'] = RI.n_used.reindex(N.index).fillna(0).astype(int); N['rna_method'] = RI.method.reindex(N.index).fillna('')
 N['rna_thin'] = RI.thin.reindex(N.index).fillna(False).astype(bool) & (N.rna_method == 'robust')
 N['rna_rho_robust_summed'] = [round(spearmanr(R.loc[n], Rsum.loc[n]).correlation, 3) if Rsum.loc[n].sum() > 0 else np.nan for n in N.index]
+# ---------------------------------------------------------------- pool expression rule
+mt = meta(); pool = [x for x in S if x in mt.index and mt.group[x] in ('CTL', 'EXP') and mt.medium[x] in ('SW', 'SI')]
+tpm = pd.read_csv(D + 'marine_coassembly.bin_tpm.tsv', sep='\t', index_col=0)
+tpm.index = tpm.index.str.replace('dastool-', '')
+tp = tpm.reindex(N.index)[pool]
+N['pool_tpm_mean'] = tp.mean(axis=1).round(2); N['pool_tpm_max'] = tp.max(axis=1).round(1)
+N['pool_det'] = (R[pool] > 0).mean(axis=1).round(3)
+prok = N.domain == 'prokaryote'; other = N.domain.isin(['eukaryote', 'organelle'])
+N['pool_expressed'] = np.where(prok, (N.pool_tpm_mean >= POOL_TPM_MEAN) | (N.pool_tpm_max >= POOL_TPM_MAX),
+                               np.where(other, N.pool_det >= POOL_DET, True))
+drop = N.index[~N.pool_expressed.astype(bool)]
+print(f'pool expression rule ({len(pool)} pool libraries): drops {len(drop)} nodes:', N.loc[drop].domain.value_counts().to_dict(), list(drop[N.loc[drop].domain != 'prokaryote']))
+N.loc[drop].to_csv(os.path.join(OUT, 'nodes_dropped_pool_expression.tsv'), sep='\t')
+N = N.drop(index=drop); R = R.drop(index=drop); Rsum = Rsum.drop(index=drop)
+
 print('robust vs summed RNA, Spearman by domain:'); print(N.groupby('domain').rna_rho_robust_summed.describe().round(3).to_string())
 print('EE / organelle-group nodes:'); print(N.loc[N.kind.isin(['EE MAG', 'organelle group']), ['rna_contigs_used', 'rna_thin', 'rna_rho_robust_summed']].to_string())
 Rsum.to_csv(os.path.join(CACHE, 'rna_counts_summed.tsv'), sep='\t')
@@ -148,7 +182,7 @@ runs = [c for c in hdr[3:] if not c.endswith('-var') and c.replace('.sorted.bam'
 ix = [hdr.index(c) for c in runs]; runs = [c.replace('.sorted.bam', '') for c in runs]
 node_of = A.to_dict(); nidx = {n: i for i, n in enumerate(N.index)}
 cov = np.zeros((len(N), len(runs))); tot = np.zeros(len(runs))
-row_of = {c: nidx[n] for c, n in node_of.items()}
+row_of = {c: nidx[n] for c, n in node_of.items() if n in nidx}
 for ch in pd.read_csv(f, sep='\t', usecols=[0, 1] + ix, chunksize=200000):
     v = ch.iloc[:, 2:].to_numpy(float) * ch.iloc[:, 1].to_numpy(float)[:, None]
     tot += v.sum(0)
