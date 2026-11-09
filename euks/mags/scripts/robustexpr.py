@@ -18,7 +18,9 @@ neighbour (EE31). The robust profile follows the bulk of the genome instead (the
 MAGs with < MIN_N (5) kept contigs fall back to the length-weighted mean RPKM (total reads / total kb), and are flagged.
 A profile built from < THIN_N (20) kept contigs is flagged 'thin': with so few contigs the few dominant ones can still be half of
 them (EE08: 9 kept contigs, 5 of them the conserved tubulin/ubiquitin/HSP90 contigs), so it is not clearly the genome's own expression.
-API: robust_profiles(groups) with groups = {name: contig ids} or a Series contig -> group; returns (profiles DataFrame
+data='mgdna' applies the same steps to the Illumina metagenomes (eukshared._mgdna; reads per kb per million contig-assigned read pairs
+of each metagenome), for the Illumina DNA abundance of the EE MAGs and the Illumina DNA network layer.
+API: robust_profiles(groups, data='rna'|'mgdna') with groups = {name: contig ids} or a Series contig -> group; returns (profiles DataFrame
 groups x libraries, info DataFrame: contigs, kb, n_used, method, thin, top5_share). robust_profile(ids) -> one Series.
 summed_profiles(groups): the old metric (reads per million contig-assigned reads, summed over the contigs), for reference."""
 import numpy as np, pandas as pd
@@ -33,8 +35,8 @@ def _len():
 def _groups(groups):
     if isinstance(groups, pd.Series): return {k: list(v.index) for k, v in groups.groupby(groups)}
     return {k: list(v) for k, v in groups.items()}
-def robust_profiles(groups):
-    r = E._rna(); C, tot, pos, S = r['C'], r['tot'], r['pos'], r['S']; L = _len()
+def robust_profiles(groups, data='rna'):
+    r = E._rna() if data == 'rna' else E._mgdna(); C, tot, pos, S = r['C'], r['tot'], r['pos'], r['S']; L = _len()
     P, info = {}, []
     for g, ids in _groups(groups).items():
         ids = [c for c in dict.fromkeys(ids) if c in pos.index]
@@ -50,7 +52,7 @@ def robust_profiles(groups):
             prof = reads.sum(axis=0) / tot * 1e6 / kb.sum(); how = 'length-weighted mean (fallback)'
         P[g] = prof; info.append(dict(group=g, contigs=len(ids), kb=round(kb.sum(), 1), n_used=n, method=how, thin=n < THIN_N, top5_share=round(top, 3)))
     return pd.DataFrame(P, index=S).T, pd.DataFrame(info).set_index('group')
-def robust_profile(ids):
-    P, _ = robust_profiles({'x': list(ids)}); return P.loc['x']
+def robust_profile(ids, data='rna'):
+    P, _ = robust_profiles({'x': list(ids)}, data); return P.loc['x']
 def summed_profiles(groups):
     return pd.DataFrame({g: E.rna_profile([c for c in ids if c in E._rna()['pos'].index]) for g, ids in _groups(groups).items()}).T

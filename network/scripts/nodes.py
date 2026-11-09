@@ -1,4 +1,4 @@
-"""Network nodes and their abundance in the two layers (DNA, RNA). Rule-based; rerun whenever bins, EE MAGs or vOTUs change.
+"""Network nodes and their abundance in the three layers (nanopore DNA, Illumina DNA, RNA). Rule-based; rerun whenever bins, EE MAGs or vOTUs change.
 
 Nodes (all read from files at run time, no hard-coded MAG ids):
   - prokaryote: DAS Tool MAGs that common.is_prokaryote() and not common.is_plastid(), of high or medium quality by CheckM2
@@ -33,7 +33,13 @@ Abundance:
   - DNA: nanopore coverage (depth x length) on the node's contigs (euks/mags/dna/depths.txt.gz, jgi depth table of the
     mag_marine mapping) in CMO pool libraries (CTL/EXP, seawater or sea ice, with a day; blanks, source sites and enrichments are
     left out); resequenced runs of the same sample are summed. Library size = coverage summed over all contigs.
-Out (network/cache, untracked): rna_counts.tsv, dna_cov.tsv (node x library), rna_lib.tsv, dna_lib.tsv (library size + design);
+  - Illumina DNA (layer 'mgdna', added 2026-11-09): read pairs on the node's contigs in the Illumina metagenomes of the CMO pools
+    (common.illumina_dna_samples / illumina_dna_contig_matrix: lanes summed per library; QC-flagged libraries and libraries with
+    < 1 M pairs on contigs left out; CTL/EXP, seawater or sea ice, with a day: 85 libraries). Library size = all contig-assigned read
+    pairs. With fixed-length reads this is the nanopore metric (depth x length share), so both DNA layers use one metric; it is
+    summed over the node's contigs, as in the nanopore layer (DNA is not spiky the way RNA is; see euks/mags/scripts/mgdna.py).
+Out (network/cache, untracked): rna_counts.tsv, dna_cov.tsv, mgdna_counts.tsv (node x library), rna_lib.tsv, dna_lib.tsv,
+mgdna_lib.tsv (library size + design);
 network/out/nodes_all.tsv (every candidate node with labels, flags and per-layer prevalence)."""
 import sys, os, re, gzip
 sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
@@ -133,6 +139,13 @@ pos = pd.Series(np.arange(len(ids)), index=ids)
 codes = pd.Categorical(A.values, categories=N.index).codes
 M = sp.csr_matrix((np.ones(len(A)), (codes, pos[A.index].values)), shape=(len(N), len(ids)))
 Rsum = pd.DataFrame((M @ C).toarray(), index=N.index, columns=S)
+# Illumina DNA (metagenomes): read pairs on the node's contigs in the CMO pool libraries (common.illumina_dna_samples: CTL/EXP,
+# seawater or sea ice, with a day; QC-flagged and < 1 M pair libraries already left out). Each library is its own sample.
+MGS = illumina_dna_samples(); MGS = MGS[MGS.pool]
+Cm, mlibs = illumina_dna_contig_matrix(); Cm = Cm[:, [mlibs.index(x) for x in MGS.index]]
+assert Cm.shape[0] == len(ids)
+Mg = pd.DataFrame((M @ Cm).toarray(), index=N.index, columns=MGS.index)
+mg_size = np.asarray(Cm.sum(0)).ravel()
 sys.path.insert(0, E0 + 'euks/mags/scripts'); import robustexpr as RX
 from scipy.stats import spearmanr
 RP, RI = RX.robust_profiles(A)                                       # node x library, reads per kb per million
@@ -154,7 +167,7 @@ N['pool_expressed'] = np.where(prok, (N.pool_tpm_mean >= POOL_TPM_MEAN) | (N.poo
 drop = N.index[~N.pool_expressed.astype(bool)]
 print(f'pool expression rule ({len(pool)} pool libraries): drops {len(drop)} nodes:', N.loc[drop].domain.value_counts().to_dict(), list(drop[N.loc[drop].domain != 'prokaryote']))
 N.loc[drop].to_csv(os.path.join(OUT, 'nodes_dropped_pool_expression.tsv'), sep='\t')
-N = N.drop(index=drop); R = R.drop(index=drop); Rsum = Rsum.drop(index=drop)
+N = N.drop(index=drop); R = R.drop(index=drop); Rsum = Rsum.drop(index=drop); Mg = Mg.drop(index=drop)
 
 print('robust vs summed RNA, Spearman by domain:'); print(N.groupby('domain').rna_rho_robust_summed.describe().round(3).to_string())
 print('EE / organelle-group nodes:'); print(N.loc[N.kind.isin(['EE MAG', 'organelle group']), ['rna_contigs_used', 'rna_thin', 'rna_rho_robust_summed']].to_string())
@@ -205,9 +218,17 @@ dl = pd.DataFrame({'size': dt, 'season': li.season, 'group': li.group, 'medium':
                    'name': li.sample_name, 'runs': ns.groupby('key').size()}).loc[Dc.columns]
 Dc.to_csv(os.path.join(CACHE, 'dna_cov.tsv'), sep='\t'); dl.to_csv(os.path.join(CACHE, 'dna_lib.tsv'), sep='\t')
 
+# ---------------------------------------------------------------- Illumina DNA library table
+ml = pd.DataFrame({'size': mg_size, 'season': MGS.season, 'group': MGS.group, 'medium': MGS.medium, 'day': MGS.day,
+                   'layer': MGS.layer, 'temp': [tmp.get((a, b, c), np.nan) for a, b, c in zip(MGS.season, MGS.group, MGS.day)],
+                   'par_under': [par.get((a, b, c), np.nan) for a, b, c in zip(MGS.season, MGS.group, MGS.day)],
+                   'name': MGS.sample_name}, index=MGS.index)
+Mg.to_csv(os.path.join(CACHE, 'mgdna_counts.tsv'), sep='\t'); ml.to_csv(os.path.join(CACHE, 'mgdna_lib.tsv'), sep='\t')
+
 # ---------------------------------------------------------------- prevalence per layer
 N['rna_prev'] = (R > 0).mean(1).round(3); N['rna_share_ppm'] = (R.div(rl['size'], axis=1).mean(1) * 1e6).round(2)
 N['dna_prev'] = (Dc > 0).mean(1).round(3); N['dna_share_ppm'] = (Dc.div(dl['size'], axis=1).mean(1) * 1e6).round(2)
+N['mgdna_prev'] = (Mg > 0).mean(1).round(3); N['mgdna_share_ppm'] = (Mg.div(ml['size'], axis=1).mean(1) * 1e6).round(2)
 N.to_csv(os.path.join(OUT, 'nodes_all.tsv'), sep='\t')
-print('RNA libraries', R.shape[1], '; DNA samples', Dc.shape[1], '(runs', len(runs), ')')
-print(N.groupby('domain')[['rna_prev', 'dna_prev', 'rna_share_ppm', 'dna_share_ppm']].describe().T.round(3).to_string())
+print('RNA libraries', R.shape[1], '; DNA samples', Dc.shape[1], '(runs', len(runs), '); Illumina DNA libraries', Mg.shape[1])
+print(N.groupby('domain')[['rna_prev', 'dna_prev', 'mgdna_prev', 'rna_share_ppm', 'dna_share_ppm', 'mgdna_share_ppm']].describe().T.round(3).to_string())

@@ -165,9 +165,9 @@ def sig2(v):
 for layer in LAYERS:
     X, lib, N = load_layer(layer)
     # per-sample node values for the sample picker (lazily loaded file): RNA reads per kb per million (the robust profile),
-    # DNA parts per million of the library's aligned bases; 2 significant digits
+    # nanopore DNA parts per million of the library's aligned bases, Illumina DNA per million mapped read pairs; 2 significant digits
     if layer == 'rna': V = X.div(N.bp / 1e3, axis=1).div(lib['size'] / 1e6, axis=0); unit = 'reads per kb per million'
-    else: V = rel_abund(X, lib, layer) * 1e6; unit = 'per million aligned bases'
+    else: V = rel_abund(X, lib, layer) * 1e6; unit = 'per million mapped read pairs' if layer == 'mgdna' else 'per million aligned bases'
     so = sample_order(lib)
     smp = {'unit': unit, 'libs': [{'id': k, 'label': l, 'name': nm} for k, l, nm in so],
            'v': [[sig2(v) for v in V.loc[k, N.index]] for k, _, _ in so]}

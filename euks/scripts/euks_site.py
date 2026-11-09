@@ -49,13 +49,19 @@ J['plastids'] = sorted(pl, key=lambda d: -d['mean'])
 # per kb per million contig-assigned reads (any read on a contig counts, so intron-containing genes count): contigs detected in
 # >= 25% of libraries, each scaled to mean 1, per-library 10% trimmed mean x the MAG's median contig level; from
 # euks/mags/out/hull_mags_expr_samples.tsv. Values are small (1e-4 to 1), so they are kept to 3 significant figures. DA from
-# hull_mags_da.tsv (dacore; RNA on the summed reads, DNA on nanopore depth).
+# hull_mags_da.tsv (dacore; RNA on the robust profile, DNA on nanopore depth) and hull_mags_da_mgdna.tsv (Illumina DNA, mgdna.py).
 HM = pd.read_csv(D + 'hull_mags.tsv', sep='\t', keep_default_na=False)
 EG = HM[HM.mag.str.startswith('EE')]
 GX = hull_mag_expression()       # EE/P x libraries (common.py; robust profile, reads per kb per million)
 EXM = pd.read_csv(E0 + 'euks/mags/out/hull_mags_expr_method.tsv', sep='\t', index_col=0)     # contigs used, thin / fallback flags
 sg = lambda t: None if t != t else float(f'{t:.3g}')
-DA = hull_mag_da()               # per-MAG RNA/DNA differential abundance
+DA = hull_mag_da()               # per-MAG differential abundance: Illumina RNA, nanopore DNA, Illumina DNA
+# Illumina DNA (metagenomes; euks/mags/scripts/mgdna.py): length-weighted mean, reads per kb per million contig-assigned read pairs,
+# on the CMO pool libraries (CTL/EXP, seawater or sea ice, with a day); agreement with nanopore DNA from mgdna.py's method table
+MGX = hull_mag_mgdna(); MGI = pd.read_csv(E0 + 'euks/mags/out/hull_mags_mgdna_method.tsv', sep='\t', index_col=0)
+ML = illumina_dna_samples(); ML = ML[ML.pool & ML.index.isin(MGX.columns)].sort_values(['season', 'group', 'medium', 'day'])
+J['mg_samples'] = [{'id': k, 'name': x.sample_name, 'season': x.season, 'pool': x.group, 'medium': x.medium, 'day': int(x.day)} for k, x in ML.iterrows()]
+J['mg_n'] = {'used': int(len(MGX.columns)), 'pool': int(len(ML)), 'shared_nanopore': int(MGI.n_shared_nanopore.max())}
 BD = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0)
 dbin = {g: [b.replace('dastool-', '') for b in BD.index[BD.get('hull_mag', pd.Series(dtype=str)).reindex(BD.index) == g]] for g in EG.mag}
 core_all = m[m.group.isin(['CTL', 'EXP']) & m.medium.isin(['SW', 'SI'])]
@@ -80,12 +86,21 @@ for x in EG.itertuples():
         d['median'] = sg(v[core_all.index].median())
         d['expr'] = [sg(t) for t in v]
         d['thin'] = bool(EXM.thin.get(x.mag, False)); d['fallback'] = EXM.method.get(x.mag, '') != 'robust'
+    if x.mag in MGX.index:
+        w = MGX.loc[x.mag, ML.index]
+        d['mg'] = [sg(t) for t in w]; d['mg_median'] = sg(w.median())
+        for s_, k in (('2024-25', '24'), ('2025-26', '25')):
+            for f, ph in (('oil', 'oiled'), ('ctl', 'control')):
+                d[f'mg_{f}{k}'] = sg(w[ML.index[(ML.season == s_) & (ML.phase == ph) & (ML.medium == 'SW')]].median())
+        d['mg_rho_nano'] = r(MGI.rho_vs_nanopore.get(x.mag), 2); d['mg_few'] = bool(MGI.few_contigs.get(x.mag, False))
     eg.append(d)
 order = {'network': 0, '<4 Mbp': 1, 'little CMO RNA': 2, 'doubtful': 3}
 J['euk_groups'] = sorted(eg, key=lambda d: (order.get(d['status'], 3), -(d.get('median') or 0)))
 J['da_contrasts'] = [['RNA', 'diesel_vs_control_2024-25', 'Illumina RNA diesel ÷ control 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'Illumina RNA diesel ÷ control 25-26'],
                      ['RNA', 'baci_2025-26_SW', 'Illumina RNA BACI 25-26'], ['RNA', 'ice_vs_water', 'Illumina RNA ice ÷ water'],
-                     ['DNA', 'diesel_vs_control_2024-25', 'nanopore DNA diesel ÷ control 24-25'], ['DNA', 'ice_vs_water', 'nanopore DNA ice ÷ water']]
+                     ['DNA', 'diesel_vs_control_2024-25', 'nanopore DNA diesel ÷ control 24-25'], ['DNA', 'ice_vs_water', 'nanopore DNA ice ÷ water'],
+                     ['Illumina DNA', 'diesel_vs_control_2024-25', 'Illumina DNA diesel ÷ control 24-25'], ['Illumina DNA', 'diesel_vs_control_2025-26', 'Illumina DNA diesel ÷ control 25-26'],
+                     ['Illumina DNA', 'baci_2025-26_SW', 'Illumina DNA BACI 25-26'], ['Illumina DNA', 'ice_vs_water', 'Illumina DNA ice ÷ water']]
 # published Hudson Bay context (curated: euks/literature_context.tsv; '#ref' lines = citations). MAG ids are mapped through the
 # id registry: an id retired as 'merged into EEnn' shows as EEnn (EE14/EE17 -> EE12, EE29 -> EE03); duplicates and ids that are
 # not current MAGs are dropped.
