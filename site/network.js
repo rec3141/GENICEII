@@ -19,6 +19,7 @@ async function nwLayer(l) {
   NW_ROWS[l] = L; return L;
 }
 
+const SC = 1000;     // exported scores are score x 1000 (network_site.py SCORE_SCALE)
 async function networkSec(sec) {
   const J = D.network;
   if (!J) { sec.innerHTML = '<h2>Network</h2><p class="kicker">network.json is missing.</p>'; return; }
@@ -127,19 +128,22 @@ function nwGraph(sec, J) {
   const lab = el('div', { style: 'font-weight:600;margin-top:2px' }), cnt = el('div', { style: 'color:var(--ink-2);font-size:13px' });
   const permBox = el('div'), cutBox = el('div', { style: 'display:none' });
   permBox.append(el('label', { for: 'nwperm', style: 'display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2)' }, '<span>strict</span><span>Permissivity</span><span>permissive</span>'), sl, dl);
-  // single-method mode: a score cutoff for that method instead of the permissivity steps (about 20 quantile steps of its exported
+  // single-method mode: a score cutoff for that method instead of the permissivity steps (up to 200 quantile steps of its exported
   // scores in the layer, from the lowest to the 99th percentile; the lowest = every link the method reports)
   const ts = el('input', { type: 'range', id: 'nwcut', min: 0, max: 1, step: 1, value: 0, style: 'width:100%', 'aria-label': 'Score cutoff' });
   cutBox.append(el('label', { for: 'nwcut', style: 'display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2)' }, '<span>all links</span><span>Score cutoff</span><span>strongest</span>'), ts);
   left.append(permBox, cutBox, lab, cnt);
   sl.oninput = () => { S.step = +sl.value - 1; S.sel = null; draw(); };
-  const THR = {};
+  const THR = {}, NCUT = 200;      // cutoff positions (distinct scores only, so fewer where scores are coarse)
   const thresholds = (L, m) => { const k = S.layer + '|' + m.key; if (THR[k]) return THR[k];
     const E = L.edges, v = []; for (let i = 0; i < E.a.length; i++) if ((E.m[i] | E.x[i]) & m.bit) v.push(E[m.col][i]);
     v.sort((a, b) => a - b); const t = [];
-    if (v.length) for (let q = 0; q < 20; q++) { const x = v[Math.min(v.length - 1, Math.floor(q / 19 * 0.99 * (v.length - 1)))]; if (!t.length || x > t[t.length - 1]) t.push(x); }
-    return (THR[k] = t.length ? t : [0]); };          // in exported units (score x 100)
-  ts.oninput = () => { const m = single(); if (!m) return; S.cut[m.key] = THRcur[+ts.value]; S.sel = null; draw(); };
+    if (v.length) for (let q = 0; q < NCUT; q++) { const x = v[Math.min(v.length - 1, Math.floor(q / (NCUT - 1) * 0.99 * (v.length - 1)))]; if (!t.length || x > t[t.length - 1]) t.push(x); }
+    return (THR[k] = t.length ? t : [0]); };          // in exported units (score x SC)
+  // redraw at most once per animation frame while dragging, so the slider stays smooth
+  let cutRAF = 0;
+  ts.oninput = () => { const m = single(); if (!m) return; S.cut[m.key] = THRcur[+ts.value]; S.sel = null;
+    if (!cutRAF) cutRAF = requestAnimationFrame(() => { cutRAF = 0; draw(); }); };
   let THRcur = [0];
   const lg = el('div', { class: 'legend' }); sec.append(lg);
   lg.innerHTML = Object.values(NW_DOM).map(([c, l]) => `<span><i style="background:var(${c});height:10px;width:10px;border-radius:50%"></i>${l}</span>`).join('') +
@@ -157,7 +161,7 @@ function nwGraph(sec, J) {
 
   // line style: by the number of supporting methods, or, with exactly one method switched on, by that method's score class
   const single = () => nwPop(S.bits) === 1 ? M.find(m => m.bit === S.bits) : null;
-  const scoreClass = (m, E, i) => { const v = E[m.col][i] / 100; let k = 0; m.bins.forEach(b => { if (v >= b) k++; }); return k; };   // 0..bins.length
+  const scoreClass = (m, E, i) => { const v = E[m.col][i] / SC; let k = 0; m.bins.forEach(b => { if (v >= b) k++; }); return k; };   // 0..bins.length
   function widthLegend(m, op) {
     const sw = (w, o) => `<svg width="26" height="10" aria-hidden="true"><line x1="1" y1="5" x2="25" y2="5" stroke="${css('--ink-2')}" stroke-width="${w}" stroke-opacity="${o}"/></svg>`;
     if (m) { const b = m.bins, lims = [`< ${b[0]}`, ...b.slice(0, -1).map((x, k) => `${x}–${b[k + 1]}`), `≥ ${b[b.length - 1]}`];
@@ -180,7 +184,7 @@ function nwGraph(sec, J) {
     let cut = 0;
     if (m1) { THRcur = thresholds(L, m1); let k = 0; const c = S.cut[m1.key] ?? THRcur[0]; THRcur.forEach((t, j) => { if (t <= c) k = j; });
       ts.max = THRcur.length - 1; ts.value = k; cut = THRcur[k];
-      lab.textContent = `${m1.score} ≥ ${d3.format('.2f')(cut / 100)}${k === 0 ? ' (every link it reports)' : ''}`; }
+      lab.textContent = `${m1.score} ≥ ${d3.format('.3~f')(cut / SC)}${k === 0 ? ' (every link it reports)' : ''}`; }
     else lab.textContent = `Step ${S.step + 1} of ${steps.length}: ${step.label}`;
     box.innerHTML = '';
     const inView = (a, b) => {
@@ -288,7 +292,7 @@ function nwTip(N, i, edges, drv, E) {
   const DL = { winter_2025_26: 'winter 2025-26', diesel_pool: 'diesel pool', control_pool: 'control pool', seawater: 'seawater', sea_ice: 'sea ice', top_ice: 'top ice', bottom_ice: 'bottom ice', day: 'day', under_ice_par: 'under-ice light' };
   return `<b>${n.label}</b>${lin ? `<br><span style="opacity:.8">${lin}</span>` : ''}${st ? `<br>${st}` : ''}<br>median ${n.ab == null ? '–' : fmt1(n.ab)} per million · detected in ${d3.format('.0%')(n.prev)} of libraries` +
     (drv && drv.length ? `<br>FlashWeave drivers: ${drv.map(([d, w]) => `${DL[d] || d} (${w > 0 ? '+' : '−'})`).join(', ')}` : '') +
-    (P.length ? `<br><b>Partners</b> (methods supporting; residual Spearman ρ; Presence Pearson r):<br>${P.map(p => `${p.s > 0 ? '+' : '−'} ${N[p.j].label} (${p.k}${E && E.rho[p.r] ? `; ρ ${(E.rho[p.r] / 100).toFixed(2)}` : ''}${E && E.pr[p.r] ? `; r ${(E.pr[p.r] / 100).toFixed(2)}` : ''})${E && E.same[p.r] ? ' · possible same genome' : ''}`).join('<br>')}${edges.length > P.length ? `<br>… ${edges.length - P.length} more` : ''}` : '<br>No links in this view.');
+    (P.length ? `<br><b>Partners</b> (methods supporting; residual Spearman ρ; Presence Pearson r):<br>${P.map(p => `${p.s > 0 ? '+' : '−'} ${N[p.j].label} (${p.k}${E && E.rho[p.r] ? `; ρ ${(E.rho[p.r] / SC).toFixed(2)}` : ''}${E && E.pr[p.r] ? `; r ${(E.pr[p.r] / SC).toFixed(2)}` : ''})${E && E.same[p.r] ? ' · possible same genome' : ''}`).join('<br>')}${edges.length > P.length ? `<br>… ${edges.length - P.length} more` : ''}` : '<br>No links in this view.');
 }
 
 function nwPartners(sec, J) {
