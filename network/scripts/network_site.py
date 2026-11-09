@@ -8,9 +8,9 @@ bit 0 = positive sign, bits 1..M the mask of methods agreeing with that sign, th
 sign, the next M bits the methods whose score is strong there (netcommon.strong_bits). The score columns are sparse: one value per edge that the
 method reports, in edge order (the page expands them). Edges that only the
 residual Spearman reports are kept at |rho| >= SP_FLOOR (netcommon.edge_table). Also FlashWeave's meta-variable ('driver') edges, method counts and overlaps.
-site/network.json: methods, layouts, layers, permissivity steps (STEPS, filtered client-side), edges per step, the known-pair check,
+site/network.json: methods, layouts, layers, permissivity steps (STEPS, filtered client-side), edges per step,
 top partners per eukaryote and per giant virus / virophage (consensus edges). out/permissivity_steps.tsv: known pairs recovered at
-each step."""
+each step (offline check only; consensus.py writes out/known_pairs.tsv; neither goes to the site)."""
 import os, sys, json, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from netcommon import *
@@ -227,10 +227,6 @@ print('possible same genome:', SAMEC)
 pd.DataFrame([dict(a=a, b=b, genus=g, rho=r, n=n) for (a, b), (g, r, n) in SAME.items()]).to_csv(os.path.join(OUT, 'same_genome_pairs.tsv'), sep='\t', index=False)
 REC = pd.DataFrame(REC); REC.to_csv(os.path.join(OUT, 'permissivity_steps.tsv'), sep='\t', index=False)
 print(REC.pivot_table(index=['layer', 'step', 'edges'], columns='pair', values='found', aggfunc='first').astype(int).to_string())
-# known pairs
-K = pd.read_csv(os.path.join(OUT, 'known_pairs.tsv'), sep='\t', keep_default_na=False)
-J['known'] = [{**{k: (bool(v) if k in ('in_layer', 'consensus') else v) for k, v in x.items() if k in ('layer', 'a', 'b', 'pair', 'in_layer', 'support', 'consensus', 'eukaryote_partners')},
-               'methods': [m for m in METHODS if int(x[m]) != 0], 'signs': {m: int(x[m]) for m in METHODS}} for x in K.to_dict('records')]
 # top partners per eukaryote and per eukaryotic virus: consensus edges, both layers
 C = pd.read_csv(os.path.join(OUT, 'edges_consensus.tsv'), sep='\t')
 lab = {i: nlabel(i, x) for i, x in NA.iterrows()}

@@ -3,10 +3,10 @@
 Nodes (all read from files at run time, no hard-coded MAG ids):
   - prokaryote: DAS Tool MAGs that common.is_prokaryote() and not common.is_plastid(), of high or medium quality by CheckM2
     (network/data/checkm2_dastool.tsv, copied from Grex mag_marine/binning/checkm2/quality_report.tsv, the dastool-* rows):
-    completeness >= MIN_COMPL (30%) and contamination < MAX_CONTAM (20%) (since 2026-11-09; before: >= 50% and < 10%, MIMAG medium
-    quality). 704 bins pass (94% of the bins' TPM, against 83% before). It brings in fragments and near-complete bins with
-    co-binned strains, among them the Cycloclasticus bloom genomes lorbin_184 (94.7% / 10.2%) and metabat_5432 (100% / 12.8%) and
-    the fragment lorbin_722_sub. Flags: fragment (completeness < 50%) and contam_10_20 (contamination >= 10%).
+    completeness >= MIN_COMPL (15%) and contamination < MAX_CONTAM (20%) (since 2026-11-09, second change; before: >= 30% / < 20%,
+    and first >= 50% / < 10%, MIMAG medium quality). It brings in fragments and near-complete bins with co-binned strains, among
+    them the Cycloclasticus bloom genomes lorbin_184 (94.7% / 10.2%) and metabat_5432 (100% / 12.8%), and the fragments
+    lorbin_722_sub (Cycloclasticus, 23%), lorbin_783 (Moritella, 18%) and metabat_8071_sub (Sulfitobacter, 18%). Flags: fragment (completeness < 50%) and contam_10_20 (contamination >= 10%).
   - eukaryote: every EE## hull MAG in data/hull_mags.tsv, whatever its status. Flags: doubtful (status 'doubtful' or genome_status
     'doubtful, not a genome') and multi-genome (genome_status 'multi-genome ...').
   - organelle: P##/M## organelle groups (data/organelle_groups.tsv) and DAS Tool bins that common.is_plastid().
@@ -51,7 +51,7 @@ CACHE, OUT = os.path.join(NET, 'cache'), os.path.join(NET, 'out')
 os.makedirs(CACHE, exist_ok=True); os.makedirs(OUT, exist_ok=True)
 E0 = '/data/dev/rnaseq-exploration/'
 EUKV_MIN_CPM = 5
-MIN_COMPL, MAX_CONTAM = 30, 20          # prokaryotic bins (CheckM2); flags: fragment < 50% complete, contamination >= 10%
+MIN_COMPL, MAX_CONTAM = 15, 20          # prokaryotic bins (CheckM2); flags: fragment < 50% complete, contamination >= 10%
 # pool expression (2026-11-09): which genomes to show at all, before the per-layer prevalence rule (netcommon), in both layers.
 # Pool libraries: common.meta() group CTL or EXP and medium SW or SI (both winters, before and after dosing; site, enrichment,
 # MOS and other libraries do not count).

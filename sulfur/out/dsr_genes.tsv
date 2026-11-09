@@ -5,7 +5,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 76280	JPFHOD_000076289	contig_0000036	CDS	432	dsrE	DsrE family protein	K09004	dastool-vamb_549	Pseudomonadota	Sulfitobacter sp013282155	4.528204258425973	oxidative (host taxonomy)
 124438	JPFHOD_000124449	contig_0000082	CDS	432		DsrE/DsrF-like family protein	K09004	dastool-metabat_10802	Pseudomonadota	Sulfitobacter sp011050655	4.130664911607715	oxidative (host taxonomy)
 3698851	JPFHOD_003699353	contig_0074873	CDS	1743		Fumarate reductase flavoprotein subunit/ Succinate dehydrogenase	K00394			unbinned	3.70149311975398	unbinned
-8507594	JPFHOD_008509303	contig_0482537	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-vamb_2437_sub		Candidatus Pelagibacter (Kaiju)	3.482596454526823	unbinned
+8507594	JPFHOD_008509303	contig_0482537	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-vamb_2437_sub	Pseudomonadota	Pelagibacter	3.482596454526823	oxidative (host taxonomy)
 2606710	JPFHOD_002607111	contig_0033256	CDS	474	dsrE	DsrE family protein	K09004			unbinned	3.2829938663951164	unbinned
 12621860	JPFHOD_012624746	contig_1273416	CDS	912	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	2.5459657211717177	unbinned
 162122	JPFHOD_000162142	contig_0000130	CDS	375	dsrE	DsrE family protein		dastool-metabat_8566	Verrucomicrobiota	Pelagisphaera	2.0142574915208074	oxidative (host taxonomy)
@@ -14,7 +14,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3303314	JPFHOD_003303783	contig_0057585	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	1.6648517709993833	oxidative (host taxonomy)
 10100917	JPFHOD_010103076	contig_0721762	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	1.5288103508752993	unbinned
 10561444	JPFHOD_010563740	contig_0804097	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	1.4716882993501372	unbinned
-8507595	JPFHOD_008509304	contig_0482537	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-vamb_2437_sub		Candidatus Pelagibacter (Kaiju)	1.4534491389289121	unbinned
+8507595	JPFHOD_008509304	contig_0482537	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-vamb_2437_sub	Pseudomonadota	Pelagibacter	1.4534491389289121	oxidative (host taxonomy)
 437882	JPFHOD_000437953	contig_0000768	CDS	546	dsrE	DsrE family protein	K09004	dastool-lorbin_029	Pseudomonadota	Parasphingorhabdus sp036964675	1.3587522463137849	oxidative (host taxonomy)
 383613	JPFHOD_000383677	contig_0000609	CDS	447		DsrE/DsrF-like family protein	K09004	dastool-lorbin_176	Pseudomonadota	HIMB30 sp028339155	1.3303283220640092	oxidative (host taxonomy)
 3201926	JPFHOD_003202390	contig_0053595	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	1.3111422828884698	unbinned
@@ -58,20 +58,20 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 12502934	JPFHOD_012505791	contig_1239884	CDS	1155		hypothetical protein	K00394			unbinned	0.539024604127688	unbinned
 13092794	JPFHOD_013095820	contig_1425916	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.5232754524053547	unbinned
 4160758	JPFHOD_004161309	contig_0097915	CDS	525	dsrE	DsrE family protein	K09004	dastool-comebin_2715	Pseudomonadota	UBA1479	0.5210750790335399	oxidative (host taxonomy)
-1569949	JPFHOD_001570214	contig_0010355	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-vamb_471_sub		Candidatus Thioglobus (Kaiju)	0.5142525595979448	unbinned
+1569949	JPFHOD_001570214	contig_0010355	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-vamb_471_sub	Pseudomonadota	Pseudothioglobus sp913057955	0.5142525595979448	oxidative (host taxonomy)
 463844	JPFHOD_000463915	contig_0000849	CDS	294	dsrH	Sulfur relay protein DsrH	K07237	dastool-semibin_042	Pseudomonadota	Colwellia	0.4810987743495206	oxidative (host taxonomy)
 3303313	JPFHOD_003303782	contig_0057585	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.48072160590489976	oxidative (host taxonomy)
-10681200	JPFHOD_010683525	contig_0826502	CDS	930		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394	dastool-lorbin_347_sub		Candidatus Pelagibacter (Kaiju)	0.45831367052968935	unbinned
+10681200	JPFHOD_010683525	contig_0826502	CDS	930		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394	dastool-lorbin_347_sub	Pseudomonadota	Pelagibacter	0.45831367052968935	oxidative (host taxonomy)
 1489603	JPFHOD_001489854	contig_0009181	CDS	1986	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.4576767406489683	oxidative (host taxonomy)
 10709202	JPFHOD_010711530	contig_0831845	CDS	375		hypothetical protein	K00394			unbinned	0.4571477876574267	unbinned
 10100916	JPFHOD_010103075	contig_0721762	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.4461236035643448	unbinned
 2092285	JPFHOD_002092623	contig_0020095	CDS	447	dsrE	DsrE family protein	K09004	dastool-vamb_4297	Pseudomonadota	Planktomarina temperata	0.4424779438386616	oxidative (host taxonomy)
 159440	JPFHOD_000159459	contig_0000126	CDS	480		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_073	Pseudomonadota	CAJQQK01	0.4419357901060186	oxidative (host taxonomy)
-1985029	JPFHOD_001985357	contig_0017787	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_472_sub		Candidatus Pelagibacter (Kaiju)	0.43822005680641934	unbinned
+1985029	JPFHOD_001985357	contig_0017787	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_472_sub	Pseudomonadota	Pelagibacter	0.43822005680641934	oxidative (host taxonomy)
 7492331	JPFHOD_007493753	contig_0361527	CDS	1893	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.4365234503965898	unbinned
 7030089	JPFHOD_007031351	contig_0313509	CDS	678	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.43517806243466967	unbinned
 10837011	JPFHOD_010839391	contig_0856522	CDS	378	dsrE	Sulfur reduction protein DsrE				unbinned	0.4327507102729173	unbinned
-597042	JPFHOD_000597137	contig_0001354	CDS	540	dsrE	DsrE family protein	K09004	dastool-metabat_1149_sub		metabat_1149_sub	0.429697633176154	unbinned
+597042	JPFHOD_000597137	contig_0001354	CDS	540	dsrE	DsrE family protein	K09004	dastool-metabat_1149_sub	Pseudomonadota	Litorimonas	0.429697633176154	oxidative (host taxonomy)
 2781244	JPFHOD_002781656	contig_0038609	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.42517763512045575	oxidative (host taxonomy)
 13276204	JPFHOD_013279318	contig_1526783	CDS	912		hypothetical protein	K00394			unbinned	0.42510234213516407	unbinned
 437548	JPFHOD_000437619	contig_0000767	CDS	447		DsrE/DsrF-like family protein	K09004	dastool-lorbin_118	Pseudomonadota	Planktomarina forsetii	0.4215472035013482	oxidative (host taxonomy)
@@ -82,21 +82,21 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3271511	JPFHOD_003271979	contig_0056312	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.4085471267328237	unbinned
 2012279	JPFHOD_002012607	contig_0018353	CDS	846	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.403924919754893	unbinned
 4379356	JPFHOD_004379928	contig_0109876	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.39239527638262367	unbinned
-1924407	JPFHOD_001924731	contig_0016545	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-metabat_271_sub		Candidatus Thioglobus (Kaiju)	0.386390810176554	unbinned
+1924407	JPFHOD_001924731	contig_0016545	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-metabat_271_sub	Pseudomonadota	Pseudothioglobus sp905182815	0.386390810176554	oxidative (host taxonomy)
 3001053	JPFHOD_003001486	contig_0046088	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.38496349078988196	unbinned
 2769736	JPFHOD_002770147	contig_0038251	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.3781624466485103	unbinned
 7115165	JPFHOD_007116438	contig_0322007	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.37281908205914016	unbinned
 936904	JPFHOD_000937047	contig_0003306	CDS	1305	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-lorbin_055	Pseudomonadota	Thioglobus_A sp028352435	0.3670957582983462	oxidative (host taxonomy)
 12027072	JPFHOD_012029818	contig_1116695	CDS	474	dsrE	DsrE family protein	K09004			unbinned	0.3547563181105473	unbinned
 3279396	JPFHOD_003279865	contig_0056622	CDS	705	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.35146984896235184	unbinned
-3829976	JPFHOD_003830494	contig_0081110	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_4403_sub		Maricaulis (Kaiju)	0.34587698774679615	unbinned
+3829976	JPFHOD_003830494	contig_0081110	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_4403_sub	Pseudomonadota	Maricaulis	0.34587698774679615	oxidative (host taxonomy)
 339485	JPFHOD_000339545	contig_0000489	CDS	393	dsrE	Putative sulfurtransferase DsrE	K07235	dastool-semibin_072	Pseudomonadota	UBA5078	0.33801256558658166	oxidative (host taxonomy)
-7432726	JPFHOD_007434130	contig_0355127	CDS	1479	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_1029_sub		lorbin_1029_sub	0.3233164127514783	unbinned
+7432726	JPFHOD_007434130	contig_0355127	CDS	1479	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_1029_sub	Desulfobacterota	BM103	0.3233164127514783	reductive (host taxonomy)
 745668	JPFHOD_000745788	contig_0002089	CDS	357	dsrF	DsrF protein	K07236	dastool-lorbin_048	Pseudomonadota	Glaciecola	0.3182351062249363	oxidative (host taxonomy)
-1045686	JPFHOD_001045853	contig_0004164	CDS	441	dsrE	DsrE family protein	K09004	dastool-comebin_663_sub		Hoeflea (Kaiju)	0.3126824050867324	unbinned
+1045686	JPFHOD_001045853	contig_0004164	CDS	441	dsrE	DsrE family protein	K09004	dastool-comebin_663_sub	Pseudomonadota	Hoeflea	0.3126824050867324	oxidative (host taxonomy)
 11275593	JPFHOD_011278106	contig_0945735	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.3023314138687891	unbinned
 936903	JPFHOD_000937046	contig_0003306	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-lorbin_055	Pseudomonadota	Thioglobus_A sp028352435	0.30118438006414966	oxidative (host taxonomy)
-10681199	JPFHOD_010683524	contig_0826502	CDS	507		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394	dastool-lorbin_347_sub		Candidatus Pelagibacter (Kaiju)	0.2998268851091617	unbinned
+10681199	JPFHOD_010683524	contig_0826502	CDS	507		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394	dastool-lorbin_347_sub	Pseudomonadota	Pelagibacter	0.2998268851091617	oxidative (host taxonomy)
 152942	JPFHOD_000152961	contig_0000117	CDS	546	dsrE	DsrE family protein	K09004	dastool-lorbin_135	Pseudomonadota	Cognaticolwellia sp003061515	0.2990026992901207	oxidative (host taxonomy)
 2006903	JPFHOD_002007231	contig_0018238	CDS	534	dsrE	DsrE family protein	K09004			unbinned	0.2974323227607831	unbinned
 5849852	JPFHOD_005850750	contig_0208860	CDS	1266	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.297200163759775	oxidative (host taxonomy)
@@ -112,10 +112,10 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 854959	JPFHOD_000855091	contig_0002751	CDS	1260	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.257466180980468	oxidative (host taxonomy)
 7843724	JPFHOD_007845235	contig_0400932	CDS	474	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.25276276695637145	unbinned
 7277720	JPFHOD_007279070	contig_0338716	CDS	1731		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394			unbinned	0.24847740467498308	unbinned
-1985030	JPFHOD_001985358	contig_0017787	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_472_sub		Candidatus Pelagibacter (Kaiju)	0.24815438034930035	unbinned
+1985030	JPFHOD_001985358	contig_0017787	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_472_sub	Pseudomonadota	Pelagibacter	0.24815438034930035	oxidative (host taxonomy)
 5716430	JPFHOD_005717271	contig_0198479	CDS	669		hypothetical protein	K00394			unbinned	0.24117457353823815	unbinned
 3793851	JPFHOD_003794367	contig_0079390	CDS	357		hypothetical protein	K00394			unbinned	0.23901037119326354	unbinned
-5939434	JPFHOD_005940366	contig_0216000	CDS	828		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-comebin_4318_sub		comebin_4318_sub	0.23468199603316678	unbinned
+5939434	JPFHOD_005940366	contig_0216000	CDS	828		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-comebin_4318_sub	Pseudomonadota	MarineAlpha4-Bin1	0.23468199603316678	oxidative (host taxonomy)
 1670485	JPFHOD_001670766	contig_0011919	CDS	501		DsrE/DsrF-like family protein	K09004	dastool-comebin_2956	Pseudomonadota	BMS3Bbin11 sp033791885	0.23186511951121463	oxidative (host taxonomy)
 3279393	JPFHOD_003279862	contig_0056622	CDS	129		hypothetical protein	K11180			unbinned	0.23010705806146559	unbinned
 2769737	JPFHOD_002770148	contig_0038251	CDS	846	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.22600003050206338	unbinned
@@ -131,28 +131,28 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2012280	JPFHOD_002012608	contig_0018353	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.2042249344253101	unbinned
 22599	JPFHOD_000022600	contig_0000007	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_4177	Pseudomonadota	Litorimonas	0.1990573288673294	oxidative (host taxonomy)
 827778	JPFHOD_000827909	contig_0002578	CDS	546	dsrE	DsrE family protein	K09004	dastool-metabat_8244	Pseudomonadota	Cognaticolwellia sp024585285	0.1984534468136052	oxidative (host taxonomy)
-762284	JPFHOD_000762405	contig_0002184	CDS	540	dsrE	DsrE family protein	K09004	dastool-metabat_1070_sub		metabat_1070_sub	0.19828828701134973	unbinned
+762284	JPFHOD_000762405	contig_0002184	CDS	540	dsrE	DsrE family protein	K09004	dastool-metabat_1070_sub	Pseudomonadota	Litorimonas	0.19828828701134973	oxidative (host taxonomy)
 854960	JPFHOD_000855092	contig_0002751	CDS	1074	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.1966591433581685	oxidative (host taxonomy)
 902970	JPFHOD_000903107	contig_0003069	CDS	1734		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-lorbin_136	Pseudomonadota	HTCC2207	0.19534050846724105	oxidative (host taxonomy)
 3096877	JPFHOD_003097314	contig_0049590	CDS	705	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.19530460505618366	unbinned
 10852081	JPFHOD_010854461	contig_0859489	CDS	912		hypothetical protein	K00394			unbinned	0.19393667533709702	unbinned
 785125	JPFHOD_000785249	contig_0002318	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.1921415902323194	unbinned
 7313421	JPFHOD_007314777	contig_0342440	CDS	348		hypothetical protein	K00394			unbinned	0.19027734284572187	unbinned
-6628175	JPFHOD_006629319	contig_0275157	CDS	342	dsrE	DsrE family protein		dastool-comebin_1140_sub		Sulfurimonas (Kaiju)	0.18832678445116766	unbinned
+6628175	JPFHOD_006629319	contig_0275157	CDS	342	dsrE	DsrE family protein		dastool-comebin_1140_sub	Campylobacterota	Sulfurimonas	0.18832678445116766	oxidative (host taxonomy)
 3219912	JPFHOD_003220377	contig_0054288	CDS	480		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.18616851719300093	unbinned
 6798359	JPFHOD_006799561	contig_0291065	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.18613214638766684	unbinned
 11552065	JPFHOD_011554652	contig_1005749	CDS	1803	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.18334024088837694	unbinned
 8277232	JPFHOD_008278872	contig_0453161	CDS	1428		hypothetical protein	K00394			unbinned	0.1815803696193075	unbinned
-62514	JPFHOD_000062518	contig_0000026	CDS	294	dsrH	Sulfur relay protein DsrH	K07237	dastool-vamb_500_sub		Colwellia (Kaiju)	0.18125120016652385	unbinned
+62514	JPFHOD_000062518	contig_0000026	CDS	294	dsrH	Sulfur relay protein DsrH	K07237	dastool-vamb_500_sub	Pseudomonadota	Colwellia	0.18125120016652385	oxidative (host taxonomy)
 11631930	JPFHOD_011634539	contig_1023573	CDS	1080	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.18060720172668954	unbinned
-7432724	JPFHOD_007434128	contig_0355127	CDS	399	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_1029_sub		lorbin_1029_sub	0.1805600398885002	unbinned
+7432724	JPFHOD_007434128	contig_0355127	CDS	399	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_1029_sub	Desulfobacterota	BM103	0.1805600398885002	reductive (host taxonomy)
 6164856	JPFHOD_006165872	contig_0234510	CDS	507		hypothetical protein	K00394			unbinned	0.17903058451431964	unbinned
 4379355	JPFHOD_004379927	contig_0109876	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.17829289088030598	unbinned
 13320903	JPFHOD_013324042	contig_1572548	CDS	507		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.17773503400673715	unbinned
-3464447	JPFHOD_003464928	contig_0064343	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-metabat_1024_sub		metabat_1024_sub	0.17515460588739146	unbinned
-807249	JPFHOD_000807376	contig_0002452	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3849_sub		comebin_3849_sub	0.1728717041759637	unbinned
+3464447	JPFHOD_003464928	contig_0064343	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-metabat_1024_sub	Pseudomonadota	JAHELH01	0.17515460588739146	oxidative (host taxonomy)
+807249	JPFHOD_000807376	contig_0002452	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3849_sub	Pseudomonadota	GCA-2697345 sp905181985	0.1728717041759637	oxidative (host taxonomy)
 10606702	JPFHOD_010609012	contig_0812539	CDS	507		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.17251633535232833	unbinned
-1569950	JPFHOD_001570215	contig_0010355	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-vamb_471_sub		Candidatus Thioglobus (Kaiju)	0.16841405214596947	unbinned
+1569950	JPFHOD_001570215	contig_0010355	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-vamb_471_sub	Pseudomonadota	Pseudothioglobus sp913057955	0.16841405214596947	oxidative (host taxonomy)
 697422	JPFHOD_000697537	contig_0001830	CDS	1248	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-semibin_075	Pseudomonadota	GCA-2705445	0.16823847308267995	oxidative (host taxonomy)
 1621862	JPFHOD_001622134	contig_0011150	CDS	615	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.16601691778413988	oxidative (host taxonomy)
 2862243	JPFHOD_002862667	contig_0041268	CDS	534	dsrE	DsrE family protein	K09004			unbinned	0.16565757461103592	unbinned
@@ -165,7 +165,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 1166971	JPFHOD_001167162	contig_0005280	CDS	747	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.15707627327875828	oxidative (host taxonomy)
 7309310	JPFHOD_007310666	contig_0342011	CDS	306		hypothetical protein	K00394			unbinned	0.15194151326582644	unbinned
 8277233	JPFHOD_008278873	contig_0453161	CDS	804	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.1518507510943521	unbinned
-4667917	JPFHOD_004668552	contig_0126740	CDS	393	dsrE	Sulfurtransferase DsrE	K07235	dastool-comebin_011_sub		comebin_011_sub	0.15106917051071392	unbinned
+4667917	JPFHOD_004668552	contig_0126740	CDS	393	dsrE	Sulfurtransferase DsrE	K07235	dastool-comebin_011_sub	Pseudomonadota	UBA4582	0.15106917051071392	oxidative (host taxonomy)
 1519906	JPFHOD_001520158	contig_0009612	CDS	537	dsrE	DsrE family protein	K09004	dastool-comebin_3924	Gemmatimonadota	UBA2589	0.14942137033162858	oxidative (host taxonomy)
 2445266	JPFHOD_002445650	contig_0028747	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.14811568129925057	unbinned
 224878	JPFHOD_000224906	contig_0000234	CDS	1734		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-lorbin_061	Pseudomonadota	HTCC2207 sp905182855	0.14566059675703819	oxidative (host taxonomy)
@@ -188,8 +188,8 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 12607648	JPFHOD_012610530	contig_1269309	CDS	393	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.12326122442703658	unbinned
 562570	JPFHOD_000562660	contig_0001209	CDS	1074	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_2956	Pseudomonadota	BMS3Bbin11 sp033791885	0.1230215986283016	oxidative (host taxonomy)
 8297741	JPFHOD_008299391	contig_0455722	CDS	846	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.12256639062681614	unbinned
-199958	JPFHOD_000199983	contig_0000190	CDS	1845		Adenylyl-sulfate reductase subunit alpha	K00394	dastool-metabat_7918_sub		Anderseniella (Kaiju)	0.1216931890536726	unbinned
-2345931	JPFHOD_002346302	contig_0026134	CDS	435		DsrE/DsrF-like family protein		dastool-lorbin_516_sub		lorbin_516_sub	0.11719764369804095	unbinned
+199958	JPFHOD_000199983	contig_0000190	CDS	1845		Adenylyl-sulfate reductase subunit alpha	K00394	dastool-metabat_7918_sub	Pseudomonadota	Anderseniella	0.1216931890536726	oxidative (host taxonomy)
+2345931	JPFHOD_002346302	contig_0026134	CDS	435		DsrE/DsrF-like family protein		dastool-lorbin_516_sub	Pseudomonadota	Yoonia	0.11719764369804095	oxidative (host taxonomy)
 4298462	JPFHOD_004299029	contig_0105343	CDS	453	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_1169	Pseudomonadota	UBA4479 sp963974935	0.11667144397158867	oxidative (host taxonomy)
 865619	JPFHOD_000865751	contig_0002821	CDS	2244		Heterodisulfide reductase subunit A2	K16886	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.11639000197126234	oxidative (host taxonomy)
 1489602	JPFHOD_001489853	contig_0009181	CDS	468	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.11561015407363684	oxidative (host taxonomy)
@@ -204,7 +204,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8498895	JPFHOD_008500600	contig_0481431	CDS	714	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.11038045214401218	unbinned
 7030088	JPFHOD_007031350	contig_0313509	CDS	507		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.10885206315412099	unbinned
 6424586	JPFHOD_006425672	contig_0256863	CDS	1734		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394			unbinned	0.10852359955940584	unbinned
-1924406	JPFHOD_001924730	contig_0016545	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-metabat_271_sub		Candidatus Thioglobus (Kaiju)	0.10676026447040009	unbinned
+1924406	JPFHOD_001924730	contig_0016545	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-metabat_271_sub	Pseudomonadota	Pseudothioglobus sp905182815	0.10676026447040009	oxidative (host taxonomy)
 3949414	JPFHOD_003949950	contig_0087031	CDS	1359	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.10628572190303232	unbinned
 3279395	JPFHOD_003279864	contig_0056622	CDS	147		hypothetical protein	K11181			unbinned	0.102544664034873	unbinned
 1663813	JPFHOD_001664092	contig_0011811	CDS	429		DsrE/DsrF-like family protein	K09004	dastool-metabat_2744	Pseudomonadota	Yoonia sp002378665	0.10191305895610239	oxidative (host taxonomy)
@@ -214,7 +214,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 5943978	JPFHOD_005944910	contig_0216368	CDS	1266	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.09946337135012294	unbinned
 1095708	JPFHOD_001095884	contig_0004604	CDS	354	dsrE	DsrE family protein	K07236			unbinned	0.099028478003138	unbinned
 4685410	JPFHOD_004686045	contig_0127789	CDS	375		hypothetical protein	K00394			unbinned	0.09832237385457353	unbinned
-2378282	JPFHOD_002378660	contig_0026967	CDS	399	dsrE	Sulfurtransferase DsrE	K07235	dastool-vamb_3279_sub		Zhongshania (Kaiju)	0.09757027819868029	unbinned
+2378282	JPFHOD_002378660	contig_0026967	CDS	399	dsrE	Sulfurtransferase DsrE	K07235	dastool-vamb_3279_sub	Pseudomonadota	Zhongshania sp040892595	0.09757027819868029	oxidative (host taxonomy)
 1380298	JPFHOD_001380526	contig_0007700	CDS	441		DsrE/DsrF-like family protein				unbinned	0.0959061006011768	unbinned
 10127365	JPFHOD_010129533	contig_0726319	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_476	Pseudomonadota	Pelagibacter	0.09429334810754128	oxidative (host taxonomy)
 664937	JPFHOD_000665043	contig_0001667	CDS	516		DsrE/DsrF-like family protein	K09004	dastool-lorbin_136	Pseudomonadota	HTCC2207	0.0910037141126023	oxidative (host taxonomy)
@@ -227,7 +227,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 212038	JPFHOD_000212066	contig_0000211	CDS	294	dsrH	Sulfur relay protein DsrH	K07237	dastool-lorbin_095	Pseudomonadota	Colwellia	0.08787062035484287	oxidative (host taxonomy)
 1095707	JPFHOD_001095883	contig_0004604	CDS	270		DsrH/TusB family sulfur metabolism protein	K07237			unbinned	0.087443563365885	unbinned
 7057400	JPFHOD_007058662	contig_0316244	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0872399087655525	unbinned
-2821499	JPFHOD_002821915	contig_0039914	CDS	435		DsrE/DsrF-like family protein		dastool-lorbin_516_sub		lorbin_516_sub	0.08616530749835256	unbinned
+2821499	JPFHOD_002821915	contig_0039914	CDS	435		DsrE/DsrF-like family protein		dastool-lorbin_516_sub	Pseudomonadota	Yoonia	0.08616530749835256	oxidative (host taxonomy)
 6383220	JPFHOD_006384299	contig_0253221	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.08592472418634374	unbinned
 5285887	JPFHOD_005286603	contig_0166950	CDS	1611	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.08504829350957287	unbinned
 4775321	JPFHOD_004775963	contig_0133343	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0845509243200581	unbinned
@@ -236,7 +236,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8277234	JPFHOD_008278874	contig_0453161	CDS	363	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.08394913860355961	unbinned
 4428762	JPFHOD_004429355	contig_0112667	CDS	1602	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.08366684028330362	unbinned
 6514250	JPFHOD_006515366	contig_0264840	CDS	1026		Heterodisulfide reductase subunit A	K03388,K16885			unbinned	0.08360426025578968	unbinned
-1240228	JPFHOD_001240436	contig_0006040	CDS	525	dsrE	DsrE family protein	K09004	dastool-vamb_856_sub		Hyphomonas (Kaiju)	0.08360283337495135	unbinned
+1240228	JPFHOD_001240436	contig_0006040	CDS	525	dsrE	DsrE family protein	K09004	dastool-vamb_856_sub	Pseudomonadota	Hyphomonas sp018830285	0.08360283337495135	oxidative (host taxonomy)
 3885224	JPFHOD_003885755	contig_0083822	CDS	420	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.08318596257474824	unbinned
 2607723	JPFHOD_002608124	contig_0033285	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.08168022159689779	unbinned
 1325090	JPFHOD_001325311	contig_0007012	CDS	546	dsrE	DsrE family protein	K09004	dastool-metabat_1188	Pseudomonadota	Cognaticolwellia sp003971255	0.08053145435904156	oxidative (host taxonomy)
@@ -258,11 +258,11 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 749194	JPFHOD_000749314	contig_0002110	CDS	348		Adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_2956	Pseudomonadota	BMS3Bbin11 sp033791885	0.07363486877832288	oxidative (host taxonomy)
 2583944	JPFHOD_002584344	contig_0032577	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0736167068151152	unbinned
 9310099	JPFHOD_009312044	contig_0594889	CDS	1845		Adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.07340524676708243	unbinned
-5939435	JPFHOD_005940367	contig_0216000	CDS	468		hypothetical protein	K00394	dastool-comebin_4318_sub		comebin_4318_sub	0.07298437781221725	unbinned
+5939435	JPFHOD_005940367	contig_0216000	CDS	468		hypothetical protein	K00394	dastool-comebin_4318_sub	Pseudomonadota	MarineAlpha4-Bin1	0.07298437781221725	oxidative (host taxonomy)
 7781757	JPFHOD_007783256	contig_0393778	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.07130682060705108	unbinned
 6043871	JPFHOD_006044861	contig_0224459	CDS	432	dsrE	DsrE family protein	K09004			unbinned	0.07064038699472905	unbinned
-3651818	JPFHOD_003652310	contig_0072692	CDS	375		hypothetical protein	K00394	dastool-lorbin_553_sub		Candidatus Pelagibacter (Kaiju)	0.0693517740018702	unbinned
-3262777	JPFHOD_003263244	contig_0055960	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_480_sub		Candidatus Pelagibacter (Kaiju)	0.06831741371975689	unbinned
+3651818	JPFHOD_003652310	contig_0072692	CDS	375		hypothetical protein	K00394	dastool-lorbin_553_sub	Bacteroidota	MS024-2A	0.0693517740018702	oxidative (host taxonomy)
+3262777	JPFHOD_003263244	contig_0055960	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_480_sub	Pseudomonadota	Pelagibacter sp905620495	0.06831741371975689	oxidative (host taxonomy)
 4528687	JPFHOD_004529296	contig_0118438	CDS	1413		Adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.06831314496525867	unbinned
 9038149	JPFHOD_009040022	contig_0555209	CDS	483	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.06789015498044336	unbinned
 4738531	JPFHOD_004739170	contig_0131060	CDS	732		Adenylyl-sulphate reductase alfa-subunit	K00394			unbinned	0.0673590362098743	unbinned
@@ -271,7 +271,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4859513	JPFHOD_004860161	contig_0138630	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.06620909062948324	unbinned
 9985105	JPFHOD_009987244	contig_0702150	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.06512526583122011	unbinned
 7182843	JPFHOD_007184143	contig_0328907	CDS	480	dsrE	DsrE family protein	K09004			unbinned	0.06497966937778397	unbinned
-7432725	JPFHOD_007434129	contig_0355127	CDS	528		FAD-binding protein	K00394	dastool-lorbin_1029_sub		lorbin_1029_sub	0.0646610865895366	unbinned
+7432725	JPFHOD_007434129	contig_0355127	CDS	528		FAD-binding protein	K00394	dastool-lorbin_1029_sub	Desulfobacterota	BM103	0.0646610865895366	reductive (host taxonomy)
 151094	JPFHOD_000151113	contig_0000115	CDS	483	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_055	Pseudomonadota	Thioglobus_A sp028352435	0.06319658179903236	oxidative (host taxonomy)
 865618	JPFHOD_000865750	contig_0002821	CDS	1287		Heterodisulfide reductase subunit A	K16885	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.06311064637349362	oxidative (host taxonomy)
 4835564	JPFHOD_004836209	contig_0137108	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.06236609792821575	unbinned
@@ -287,7 +287,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2749051	JPFHOD_002749459	contig_0037603	CDS	558		hypothetical protein	K00394	dastool-comebin_2715	Pseudomonadota	UBA1479	0.060417761827904246	oxidative (host taxonomy)
 350835	JPFHOD_000350895	contig_0000519	CDS	1734		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-vamb_4309	Pseudomonadota	Oceanicoccus sp000169075	0.060378926326576356	oxidative (host taxonomy)
 7866637	JPFHOD_007868151	contig_0403593	CDS	771	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.06020425084456133	unbinned
-6771749	JPFHOD_006772927	contig_0288537	CDS	243		Adenylylsulfate reductase alpha-subunit (EC)	K00394	dastool-lorbin_443_sub		Candidatus Pelagibacter (Kaiju)	0.05998386955989355	unbinned
+6771749	JPFHOD_006772927	contig_0288537	CDS	243		Adenylylsulfate reductase alpha-subunit (EC)	K00394	dastool-lorbin_443_sub	Pseudomonadota	Pelagibacter	0.05998386955989355	oxidative (host taxonomy)
 11459889	JPFHOD_011462449	contig_0985398	CDS	171		hypothetical protein	K11180			unbinned	0.05986908896608671	unbinned
 1220767	JPFHOD_001220972	contig_0005833	CDS	465		DsrE/DsrF-like family protein	K09004			unbinned	0.05876740576269857	unbinned
 636977	JPFHOD_000637078	contig_0001534	CDS	1881	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-metabat_6839	Pseudomonadota	UBA1858	0.05800289915291673	oxidative (host taxonomy)
@@ -310,7 +310,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10443713	JPFHOD_010445979	contig_0782502	CDS	1323		hypothetical protein	K16886			unbinned	0.054899260293285734	unbinned
 8726770	JPFHOD_008728555	contig_0511801	CDS	486		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.05454113531940087	unbinned
 7309312	JPFHOD_007310668	contig_0342011	CDS	564		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.05317525179961355	unbinned
-807250	JPFHOD_000807377	contig_0002452	CDS	462	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3849_sub		comebin_3849_sub	0.05315002826521576	unbinned
+807250	JPFHOD_000807377	contig_0002452	CDS	462	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3849_sub	Pseudomonadota	GCA-2697345 sp905181985	0.05315002826521576	oxidative (host taxonomy)
 1001088	JPFHOD_001001244	contig_0003797	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein				unbinned	0.05260682887309809	unbinned
 1166975	JPFHOD_001167166	contig_0005280	CDS	297		Hexameric sulfur relay protein rDsrEFH, subunit H	K07237	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.05206088289584072	oxidative (host taxonomy)
 12464243	JPFHOD_012467091	contig_1229240	CDS	855		hypothetical protein	K00395			unbinned	0.05185523760281754	unbinned
@@ -318,13 +318,13 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4492645	JPFHOD_004493242	contig_0116338	CDS	447	dsrE	DsrE family protein	K09004	dastool-comebin_4672	Pseudomonadota	Thiomicrorhabdus arctica	0.05162941200624065	oxidative (host taxonomy)
 151449	JPFHOD_000151468	contig_0000115	CDS	486	dsrE	DsrE family protein	K09004	dastool-lorbin_055	Pseudomonadota	Thioglobus_A sp028352435	0.051580273528937175	oxidative (host taxonomy)
 7487484	JPFHOD_007488906	contig_0360996	CDS	1866	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.05102791431943669	unbinned
-2151011	JPFHOD_002151364	contig_0021416	CDS	483	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_011_sub		comebin_011_sub	0.05094469016671909	unbinned
+2151011	JPFHOD_002151364	contig_0021416	CDS	483	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_011_sub	Pseudomonadota	UBA4582	0.05094469016671909	oxidative (host taxonomy)
 1778229	JPFHOD_001778526	contig_0013747	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.050511716322650405	unbinned
 8371087	JPFHOD_008372757	contig_0464971	CDS	1113	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.0501157714193258	unbinned
 1243048	JPFHOD_001243261	contig_0006073	CDS	1074	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.04981995679673325	unbinned
 2220210	JPFHOD_002220567	contig_0023050	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.04939077518176194	unbinned
 12838936	JPFHOD_012841891	contig_1339058	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.04886590391052208	unbinned
-4297085	JPFHOD_004297652	contig_0105267	CDS	927	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_585_sub		lorbin_585_sub	0.048319566559947125	unbinned
+4297085	JPFHOD_004297652	contig_0105267	CDS	927	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_585_sub	Pseudomonadota	CALINF01	0.048319566559947125	oxidative (host taxonomy)
 1654459	JPFHOD_001654737	contig_0011664	CDS	540		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.048171905241669526	unbinned
 312361	JPFHOD_000312414	contig_0000421	CDS	567	dsrE	DsrE family protein	K09004	dastool-lorbin_109	Bacteroidota	Roseivirga	0.04814312707091383	oxidative (host taxonomy)
 950175	JPFHOD_000950322	contig_0003404	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_2881	Pseudomonadota	Pseudothioglobus	0.04788078638057585	oxidative (host taxonomy)
@@ -332,7 +332,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8498897	JPFHOD_008500602	contig_0481431	CDS	660	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.04741162494068437	unbinned
 772955	JPFHOD_000773077	contig_0002246	CDS	483		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.04734948895438817	unbinned
 3707135	JPFHOD_003707639	contig_0075261	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.046287505433584696	unbinned
-4927307	JPFHOD_004927966	contig_0142942	CDS	510	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-lorbin_745_sub		lorbin_745_sub	0.04577721136571535	unbinned
+4927307	JPFHOD_004927966	contig_0142942	CDS	510	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-lorbin_745_sub	Pseudomonadota	JAUXHA01	0.04577721136571535	oxidative (host taxonomy)
 7866638	JPFHOD_007868152	contig_0403593	CDS	132		hypothetical protein	K00394			unbinned	0.04574949289931179	unbinned
 5806760	JPFHOD_005807644	contig_0205469	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.04544217923659901	unbinned
 5943977	JPFHOD_005944909	contig_0216368	CDS	1074	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.045335676235323634	unbinned
@@ -360,24 +360,24 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6532791	JPFHOD_006533910	contig_0266482	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.04115820804788698	unbinned
 188121	JPFHOD_000188142	contig_0000171	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein		dastool-metabat_2861	Bacteroidota	Lutimonas	0.04105744082226681	oxidative (host taxonomy)
 4690156	JPFHOD_004690791	contig_0128076	CDS	393	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.041051864401046696	unbinned
-2913306	JPFHOD_002913734	contig_0043011	CDS	576		hypothetical protein	K00394	dastool-comebin_4140_sub		comebin_4140_sub	0.0404769295166238	unbinned
+2913306	JPFHOD_002913734	contig_0043011	CDS	576		hypothetical protein	K00394	dastool-comebin_4140_sub	Pseudomonadota	WHUA01	0.0404769295166238	oxidative (host taxonomy)
 7578865	JPFHOD_007580304	contig_0370973	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_377	Pseudomonadota	Pelagibacter	0.04006578432450404	oxidative (host taxonomy)
 12464245	JPFHOD_012467093	contig_1229240	CDS	981	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.039958042778491853	unbinned
 294800	JPFHOD_000294837	contig_0000379	CDS	513	dsrE	DsrE family protein	K09004			unbinned	0.039935583108443695	unbinned
 4528856	JPFHOD_004529465	contig_0118448	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein				unbinned	0.03988661345176752	unbinned
-38582	JPFHOD_000038584	contig_0000013	CDS	540	dsrE	DsrE family protein	K09004	dastool-vamb_2764_sub		vamb_2764_sub	0.039759030560519784	unbinned
+38582	JPFHOD_000038584	contig_0000013	CDS	540	dsrE	DsrE family protein	K09004	dastool-vamb_2764_sub	Bacteroidota	Polaribacter_A	0.039759030560519784	oxidative (host taxonomy)
 11073224	JPFHOD_011075674	contig_0903808	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.039607214081833174	unbinned
 7369951	JPFHOD_007371331	contig_0348381	CDS	1080	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.03955608346206184	unbinned
 11459891	JPFHOD_011462451	contig_0985398	CDS	420		Nitrite/sulphite reductase 4Fe-4S domain-containing protein	K11180			unbinned	0.03901784692917546	unbinned
 1556792	JPFHOD_001557048	contig_0010156	CDS	207		putative peroxiredoxin, DsrE/DsrF-like family		dastool-lorbin_320	Pseudomonadota	Psychrobacter sp002863645	0.0389090646944919	oxidative (host taxonomy)
 1190090	JPFHOD_001190288	contig_0005516	CDS	1851	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-semibin_075	Pseudomonadota	GCA-2705445	0.03868892731580716	oxidative (host taxonomy)
-2172321	JPFHOD_002172676	contig_0021913	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_4243_sub		Yoonia (Kaiju)	0.0384422215820941	unbinned
+2172321	JPFHOD_002172676	contig_0021913	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_4243_sub	Pseudomonadota	Yoonia	0.0384422215820941	oxidative (host taxonomy)
 3212229	JPFHOD_003212693	contig_0053991	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.03827441119651037	unbinned
 6067623	JPFHOD_006068615	contig_0226422	CDS	402		hypothetical protein	K00394			unbinned	0.03790033962867423	unbinned
 3043937	JPFHOD_003044373	contig_0047646	CDS	534	dsrE	Sulfur reduction protein DsrE	K09004	dastool-maxbin_595	Planctomycetota	SYAC01	0.03720260858080665	oxidative (host taxonomy)
-2160393	JPFHOD_002160748	contig_0021631	CDS	1860		Fumarate reductase	K00394	dastool-comebin_4140_sub		comebin_4140_sub	0.0371131160859462	unbinned
+2160393	JPFHOD_002160748	contig_0021631	CDS	1860		Fumarate reductase	K00394	dastool-comebin_4140_sub	Pseudomonadota	WHUA01	0.0371131160859462	oxidative (host taxonomy)
 1462351	JPFHOD_001462593	contig_0008800	CDS	393	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.03667309032498517	unbinned
-1171068	JPFHOD_001171261	contig_0005321	CDS	441	dsrE	DsrE family protein	K09004	dastool-metabat_7478_sub		Pararhizobium (Kaiju)	0.036323111881019346	unbinned
+1171068	JPFHOD_001171261	contig_0005321	CDS	441	dsrE	DsrE family protein	K09004	dastool-metabat_7478_sub	Pseudomonadota	GCA-2746425	0.036323111881019346	oxidative (host taxonomy)
 10207023	JPFHOD_010209210	contig_0740144	CDS	306	dsrE	DsrE family protein	K07236			unbinned	0.03623999143383638	unbinned
 4096147	JPFHOD_004096689	contig_0094492	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.036235274624467004	unbinned
 4593934	JPFHOD_004594551	contig_0122286	CDS	543		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.036182967652457175	unbinned
@@ -386,12 +386,12 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 397333	JPFHOD_000397397	contig_0000650	CDS	546		DsrE/DsrF-like family protein	K09004	dastool-semibin_029	Pseudomonadota	Arenicella	0.035781992403287395	oxidative (host taxonomy)
 9708051	JPFHOD_009710120	contig_0656671	CDS	183		hypothetical protein	K00394			unbinned	0.03570355831642437	unbinned
 854945	JPFHOD_000855077	contig_0002751	CDS	480	dsrE2	Sulfur carrier protein DsrE2	K07092	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.035679829293069606	oxidative (host taxonomy)
-4432577	JPFHOD_004433170	contig_0112895	CDS	417	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3581_sub		comebin_3581_sub	0.03559942225387337	unbinned
+4432577	JPFHOD_004433170	contig_0112895	CDS	417	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.03559942225387337	reductive (host taxonomy)
 11039171	JPFHOD_011041602	contig_0896908	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.035400763198582805	unbinned
 4910222	JPFHOD_004910879	contig_0141845	CDS	486		DsrE/DsrF-like family protein	K09004			unbinned	0.03521475665676995	unbinned
 1166966	JPFHOD_001167157	contig_0005280	CDS	444		Sulfite reductase, dissimilatory-type subunit alpha	K11180	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.03508565201334069	oxidative (host taxonomy)
 2744560	JPFHOD_002744968	contig_0037460	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.035028190639369024	unbinned
-1960424	JPFHOD_001960748	contig_0017274	CDS	555		DsrE/DsrF-like family	K09004	dastool-comebin_1095_sub		comebin_1095_sub	0.0344084405327166	unbinned
+1960424	JPFHOD_001960748	contig_0017274	CDS	555		DsrE/DsrF-like family	K09004	dastool-comebin_1095_sub	Pseudomonadota	Luminiphilus sp036803865	0.0344084405327166	oxidative (host taxonomy)
 8371086	JPFHOD_008372756	contig_0464971	CDS	939		Dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.034154641368101236	unbinned
 13258886	JPFHOD_013261996	contig_1512984	CDS	402		hypothetical protein	K00394			unbinned	0.03412198780228236	unbinned
 854961	JPFHOD_000855093	contig_0002751	CDS	378	dsrE	Putative sulfurtransferase DsrE	K07235	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.03316964893311128	oxidative (host taxonomy)
@@ -412,18 +412,18 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 7249957	JPFHOD_007251282	contig_0335810	CDS	363	dsrE	DsrE family protein	K07092	dastool-metabat_7665	Planctomycetota	JAJDEX01	0.03132558690710362	oxidative (host taxonomy)
 9755835	JPFHOD_009757912	contig_0664344	CDS	1668	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.03130056004297815	unbinned
 13318713	JPFHOD_013321851	contig_1569913	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.031280388598834113	unbinned
-1467651	JPFHOD_001467898	contig_0008874	CDS	507		DsrE/DsrF-like family protein	K09004	dastool-comebin_4051_sub		comebin_4051_sub	0.030998145263423912	unbinned
+1467651	JPFHOD_001467898	contig_0008874	CDS	507		DsrE/DsrF-like family protein	K09004	dastool-comebin_4051_sub	Pseudomonadota	JAUIAI01	0.030998145263423912	oxidative (host taxonomy)
 2388841	JPFHOD_002389220	contig_0027244	CDS	393	dsrE	Putative sulfurtransferase DsrE	K07235	dastool-comebin_2942	Pseudomonadota	PZPK01 sp963975615	0.03098881745896841	oxidative (host taxonomy)
 6652610	JPFHOD_006653755	contig_0277396	CDS	339		SaoD/DsrE family protein				unbinned	0.030926307836712713	unbinned
-2913305	JPFHOD_002913733	contig_0043011	CDS	522		hypothetical protein	K00394	dastool-comebin_4140_sub		comebin_4140_sub	0.03070737045134195	unbinned
+2913305	JPFHOD_002913733	contig_0043011	CDS	522		hypothetical protein	K00394	dastool-comebin_4140_sub	Pseudomonadota	WHUA01	0.03070737045134195	oxidative (host taxonomy)
 2492356	JPFHOD_002492743	contig_0030007	CDS	1257	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.03069989958848619	unbinned
 228768	JPFHOD_000228796	contig_0000242	CDS	576	dsrE	Sulfur reduction protein DsrE	K09004	dastool-semibin_021	Bacteroidota	CAJQLB01 sp937916035	0.03069133100851232	oxidative (host taxonomy)
 6675008	JPFHOD_006676159	contig_0279479	CDS	465		DsrE/DsrF-like family protein	K09004			unbinned	0.030555626291104872	unbinned
 5758288	JPFHOD_005759161	contig_0201698	CDS	846	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.030352667239068765	unbinned
 1363577	JPFHOD_001363804	contig_0007488	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.030277612425739286	unbinned
 989041	JPFHOD_000989196	contig_0003702	CDS	465		DsrE/DsrF-like family protein	K09004			unbinned	0.029940862575049135	unbinned
-2913307	JPFHOD_002913735	contig_0043011	CDS	498		hypothetical protein	K00394	dastool-comebin_4140_sub		comebin_4140_sub	0.029865993201902436	unbinned
-4297086	JPFHOD_004297653	contig_0105267	CDS	900	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_585_sub		lorbin_585_sub	0.029826947107625616	unbinned
+2913307	JPFHOD_002913735	contig_0043011	CDS	498		hypothetical protein	K00394	dastool-comebin_4140_sub	Pseudomonadota	WHUA01	0.029865993201902436	oxidative (host taxonomy)
+4297086	JPFHOD_004297653	contig_0105267	CDS	900	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_585_sub	Pseudomonadota	CALINF01	0.029826947107625616	oxidative (host taxonomy)
 11882747	JPFHOD_011885434	contig_1081854	CDS	243		Adenylylsulfate reductase alpha-subunit (EC)	K00394			unbinned	0.02967174016745719	unbinned
 10781826	JPFHOD_010784188	contig_0845791	CDS	462		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.029651157871786914	unbinned
 13076517	JPFHOD_013079540	contig_1419816	CDS	1755	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.02962297865624464	unbinned
@@ -441,7 +441,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3266860	JPFHOD_003267328	contig_0056126	CDS	513	dsrE	DsrE family protein	K09004	dastool-comebin_4672	Pseudomonadota	Thiomicrorhabdus arctica	0.028533144632880095	oxidative (host taxonomy)
 2083608	JPFHOD_002083946	contig_0019904	CDS	528		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.028511501583028828	unbinned
 7626166	JPFHOD_007627608	contig_0376192	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.028222890471582423	unbinned
-4887260	JPFHOD_004887912	contig_0140377	CDS	438		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004	dastool-lorbin_585_sub		lorbin_585_sub	0.027880831444090353	unbinned
+4887260	JPFHOD_004887912	contig_0140377	CDS	438		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004	dastool-lorbin_585_sub	Pseudomonadota	CALINF01	0.027880831444090353	oxidative (host taxonomy)
 5392698	JPFHOD_005393440	contig_0174519	CDS	303	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-maxbin_568	Nitrospinota	LS-NOB	0.027851986730895114	oxidative (host taxonomy)
 2152219	JPFHOD_002152572	contig_0021444	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_649	Pseudomonadota	Pelagibacter	0.02770875324637568	oxidative (host taxonomy)
 3680777	JPFHOD_003681274	contig_0074035	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.02761569628879065	unbinned
@@ -449,7 +449,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 11078902	JPFHOD_011081352	contig_0904951	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.027539557815118822	unbinned
 1333605	JPFHOD_001333826	contig_0007115	CDS	1323	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.027461002707303943	unbinned
 5969812	JPFHOD_005970752	contig_0218434	CDS	399	dsrE	DsrE family protein				unbinned	0.027261427563951668	unbinned
-1849188	JPFHOD_001849501	contig_0015059	CDS	675		DsrE/DsrF-like family protein	K09004	dastool-comebin_3703_sub		Gimesia (Kaiju)	0.027256814769108264	unbinned
+1849188	JPFHOD_001849501	contig_0015059	CDS	675		DsrE/DsrF-like family protein	K09004	dastool-comebin_3703_sub	Planctomycetota	Gimesia	0.027256814769108264	oxidative (host taxonomy)
 2275322	JPFHOD_002275688	contig_0024368	CDS	375		hypothetical protein	K11180			unbinned	0.02722408420954403	unbinned
 9024624	JPFHOD_009026493	contig_0553272	CDS	513	dsrE2	sulfur carrier protein DsrE2	K07092			unbinned	0.02713983416585876	unbinned
 4486695	JPFHOD_004487290	contig_0115995	CDS	540		hypothetical protein	K16886			unbinned	0.027114340836130672	unbinned
@@ -480,7 +480,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 11459892	JPFHOD_011462452	contig_0985398	CDS	270		hypothetical protein	K11181			unbinned	0.024792342422386024	unbinned
 8498896	JPFHOD_008500601	contig_0481431	CDS	483		hypothetical protein	K00394			unbinned	0.02474580597843755	unbinned
 3907766	JPFHOD_003908297	contig_0084932	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.024656859055703067	unbinned
-551439	JPFHOD_000551528	contig_0001164	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-vamb_488_sub		vamb_488_sub	0.02463605095758574	unbinned
+551439	JPFHOD_000551528	contig_0001164	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-vamb_488_sub	Pseudomonadota	Tateyamaria	0.02463605095758574	oxidative (host taxonomy)
 7502538	JPFHOD_007503960	contig_0362634	CDS	369		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.024630704004357466	unbinned
 9974743	JPFHOD_009976875	contig_0700434	CDS	243		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.02454602154230887	unbinned
 9238357	JPFHOD_009240279	contig_0584162	CDS	795	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.024459382803620477	unbinned
@@ -497,7 +497,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9907830	JPFHOD_009909946	contig_0689190	CDS	1113	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.023480989492408757	unbinned
 9575916	JPFHOD_009577947	contig_0635718	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.023315617477762937	unbinned
 10443714	JPFHOD_010445980	contig_0782502	CDS	996		hypothetical protein	K16886			unbinned	0.023311460825156956	unbinned
-233774	JPFHOD_000233802	contig_0000251	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-metabat_5394_sub		metabat_5394_sub	0.02320734158303144	unbinned
+233774	JPFHOD_000233802	contig_0000251	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-metabat_5394_sub	Bacteroidota	Maribacter_C	0.02320734158303144	oxidative (host taxonomy)
 7309313	JPFHOD_007310669	contig_0342011	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.02320196874965308	unbinned
 6121182	JPFHOD_006122187	contig_0230835	CDS	255	dsrE	Sulfur reduction protein DsrE				unbinned	0.02318151857774527	unbinned
 12758469	JPFHOD_012761395	contig_1313996	CDS	576		hypothetical protein	K16886			unbinned	0.023160892947754242	unbinned
@@ -505,7 +505,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2886446	JPFHOD_002886871	contig_0042089	CDS	525	dsrE	DsrE family protein	K09004	dastool-comebin_4422	Pseudomonadota	Pseudoalteromonas rhizosphaerae	0.02309898382767249	oxidative (host taxonomy)
 922083	JPFHOD_000922221	contig_0003200	CDS	462		Adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_159	Pseudomonadota	UBA1847	0.023090301095913684	oxidative (host taxonomy)
 2975990	JPFHOD_002976419	contig_0045203	CDS	363	dsrE	Sulfur reduction protein DsrE	K07092			unbinned	0.023082605643456912	unbinned
-952808	JPFHOD_000952955	contig_0003424	CDS	438	dsrE	Sulfur reduction protein DsrE	K09004	dastool-semibin_435_sub		Sulfitobacter (Kaiju)	0.022957417124606458	unbinned
+952808	JPFHOD_000952955	contig_0003424	CDS	438	dsrE	Sulfur reduction protein DsrE	K09004	dastool-semibin_435_sub	Pseudomonadota	JL08	0.022957417124606458	oxidative (host taxonomy)
 154339	JPFHOD_000154358	contig_0000119	CDS	297	dsrH	Sulfur relay protein DsrH	K07237	dastool-lorbin_233	Pseudomonadota	Colwellia_A	0.022851769097970733	oxidative (host taxonomy)
 854962	JPFHOD_000855094	contig_0002751	CDS	405	dsrF	Intracellular sulfur oxidation protein DsrF	K07236	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.022821247803088515	oxidative (host taxonomy)
 2632557	JPFHOD_002632960	contig_0034030	CDS	492	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.02254451306862207	unbinned
@@ -517,9 +517,9 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 7930783	JPFHOD_007932312	contig_0411106	CDS	327	dsrE	DsrE family protein				unbinned	0.022323669990907378	unbinned
 3474042	JPFHOD_003474523	contig_0064749	CDS	453		DsrE/DsrF-like family protein				unbinned	0.022269777955015658	unbinned
 7094933	JPFHOD_007096198	contig_0320002	CDS	375		hypothetical protein	K00394			unbinned	0.02224686957571302	unbinned
-228182	JPFHOD_000228210	contig_0000241	CDS	540	dsrE	DsrE family protein	K09004	dastool-lorbin_465_sub		lorbin_465_sub	0.022099058453021486	unbinned
+228182	JPFHOD_000228210	contig_0000241	CDS	540	dsrE	DsrE family protein	K09004	dastool-lorbin_465_sub	Pseudomonadota	Parasphingopyxis	0.022099058453021486	oxidative (host taxonomy)
 2275323	JPFHOD_002275689	contig_0024368	CDS	714	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.0220624695581753	unbinned
-199957	JPFHOD_000199982	contig_0000190	CDS	462	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-metabat_7918_sub		Anderseniella (Kaiju)	0.0220547011934599	unbinned
+199957	JPFHOD_000199982	contig_0000190	CDS	462	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-metabat_7918_sub	Pseudomonadota	Anderseniella	0.0220547011934599	oxidative (host taxonomy)
 627327	JPFHOD_000627428	contig_0001489	CDS	540	dsrE	DsrE family protein	K09004			unbinned	0.022029779941499145	unbinned
 13273919	JPFHOD_013277033	contig_1524831	CDS	462		hypothetical protein	K00394			unbinned	0.021909644205394346	unbinned
 1265036	JPFHOD_001265253	contig_0006313	CDS	555	dsrE	DsrE family protein	K09004			unbinned	0.021689025690440823	unbinned
@@ -551,13 +551,13 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6748118	JPFHOD_006749293	contig_0286284	CDS	339		hypothetical protein	K00394			unbinned	0.019789201310345398	unbinned
 3021784	JPFHOD_003022218	contig_0046838	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.01948296011213698	unbinned
 13311565	JPFHOD_013314700	contig_1561730	CDS	201		hypothetical protein	K00394			unbinned	0.01947063290431899	unbinned
-2164092	JPFHOD_002164447	contig_0021715	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_574_sub		Candidatus Pelagibacter (Kaiju)	0.01947060466249974	unbinned
+2164092	JPFHOD_002164447	contig_0021715	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_574_sub	Pseudomonadota	Pelagibacter	0.01947060466249974	oxidative (host taxonomy)
 2640733	JPFHOD_002641136	contig_0034275	CDS	474	dsrE2	sulfur carrier protein DsrE2				unbinned	0.019461900689763677	unbinned
 1166969	JPFHOD_001167160	contig_0005280	CDS	174		hypothetical protein	K11180	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.01945132465393643	oxidative (host taxonomy)
 3792489	JPFHOD_003793005	contig_0079325	CDS	492	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.019381527215019796	unbinned
-1264416	JPFHOD_001264633	contig_0006306	CDS	564		DsrE/DsrF-like family protein	K09004	dastool-vamb_663_sub		vamb_663_sub	0.019368177175510624	unbinned
+1264416	JPFHOD_001264633	contig_0006306	CDS	564		DsrE/DsrF-like family protein	K09004	dastool-vamb_663_sub	Pseudomonadota	GCA-2746425	0.019368177175510624	oxidative (host taxonomy)
 5440396	JPFHOD_005441150	contig_0177943	CDS	435		DsrE/DsrF-like family protein	K09004			unbinned	0.01934874443473362	unbinned
-1047269	JPFHOD_001047437	contig_0004178	CDS	1734		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-metabat_7675_sub		metabat_7675_sub	0.019094129378394033	unbinned
+1047269	JPFHOD_001047437	contig_0004178	CDS	1734		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-metabat_7675_sub	Pseudomonadota	HTCC2207 sp963855085	0.019094129378394033	oxidative (host taxonomy)
 12844968	JPFHOD_012847928	contig_1340999	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.019070068032655867	unbinned
 10628517	JPFHOD_010630833	contig_0816616	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.018947539741965776	unbinned
 738039	JPFHOD_000738159	contig_0002047	CDS	432	dsrE	Sulfur reduction protein DsrE	K09004	dastool-lorbin_096	Pseudomonadota	Loktanella sp963926415	0.018835990601156743	oxidative (host taxonomy)
@@ -567,7 +567,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2220211	JPFHOD_002220568	contig_0023050	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.01866652707247265	unbinned
 4220913	JPFHOD_004221473	contig_0101136	CDS	504		hypothetical protein	K00394			unbinned	0.018604867194878513	unbinned
 3332230	JPFHOD_003332700	contig_0058772	CDS	621		hypothetical protein	K00394			unbinned	0.018583751634679284	unbinned
-4297084	JPFHOD_004297651	contig_0105267	CDS	483		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_585_sub		lorbin_585_sub	0.01855793823497697	unbinned
+4297084	JPFHOD_004297651	contig_0105267	CDS	483		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_585_sub	Pseudomonadota	CALINF01	0.01855793823497697	oxidative (host taxonomy)
 10542174	JPFHOD_010544467	contig_0800561	CDS	462		hypothetical protein	K00394			unbinned	0.018507537639994322	unbinned
 1550318	JPFHOD_001550574	contig_0010062	CDS	447		DsrE/DsrF-like family protein	K09004	dastool-comebin_2956	Pseudomonadota	BMS3Bbin11 sp033791885	0.018472381547549564	oxidative (host taxonomy)
 3680776	JPFHOD_003681273	contig_0074035	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.018462141337836833	unbinned
@@ -602,7 +602,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9238356	JPFHOD_009240278	contig_0584162	CDS	333		Nitrite/sulphite reductase 4Fe-4S domain-containing protein	K11180			unbinned	0.015949701004735684	unbinned
 2462143	JPFHOD_002462528	contig_0029196	CDS	441		DsrE/DsrF-like family protein	K09004			unbinned	0.0157846861737305	unbinned
 1733352	JPFHOD_001733640	contig_0012967	CDS	291	dsrH	Sulfur relay protein DsrH	K07237	dastool-comebin_896	Pseudomonadota	Colwellia_A sp001767295	0.015568288254313955	oxidative (host taxonomy)
-6170922	JPFHOD_006171939	contig_0235010	CDS	462	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3202_sub		comebin_3202_sub	0.015546871450950519	unbinned
+6170922	JPFHOD_006171939	contig_0235010	CDS	462	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.015546871450950519	oxidative (host taxonomy)
 6514247	JPFHOD_006515363	contig_0264840	CDS	246		hypothetical protein	K16886			unbinned	0.015513079189323207	unbinned
 1975766	JPFHOD_001976093	contig_0017593	CDS	450	dsrE	Sulfur reduction protein DsrE	K09004	dastool-lorbin_323	Pseudomonadota	UBA4582 sp013204195	0.01541781880185968	oxidative (host taxonomy)
 3086077	JPFHOD_003086513	contig_0049187	CDS	264	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.015323129254017815	unbinned
@@ -629,12 +629,12 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4465972	JPFHOD_004466566	contig_0114802	CDS	279	dsrE	Sulfur reduction protein DsrE	K06039			unbinned	0.01444991970613422	unbinned
 10727511	JPFHOD_010729846	contig_0835383	CDS	447	dsrE	DsrE family protein	K09004	dastool-comebin_4429	Campylobacterota	Sulfurimonas	0.014401864731026075	oxidative (host taxonomy)
 9974742	JPFHOD_009976874	contig_0700434	CDS	270		hypothetical protein	K00395			unbinned	0.014400105282141222	unbinned
-1551964	JPFHOD_001552220	contig_0010088	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_1815_sub		comebin_1815_sub	0.014336189930089508	unbinned
+1551964	JPFHOD_001552220	contig_0010088	CDS	1836	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_1815_sub	Pseudomonadota	Pseudothioglobus sp905620445	0.014336189930089508	oxidative (host taxonomy)
 3197267	JPFHOD_003197730	contig_0053411	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.014331757489449932	unbinned
 10628518	JPFHOD_010630834	contig_0816616	CDS	1080		hypothetical protein	K00394			unbinned	0.01432657953780577	unbinned
 3081554	JPFHOD_003081990	contig_0049022	CDS	1275		Sulfite reductase, dissimilatory-type subunit alpha	K11180			unbinned	0.014231284814046048	unbinned
 7814362	JPFHOD_007815869	contig_0397537	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.013965098304622666	unbinned
-4432578	JPFHOD_004433171	contig_0112895	CDS	1221		hypothetical protein	K00394	dastool-comebin_3581_sub		comebin_3581_sub	0.01392814525771531	unbinned
+4432578	JPFHOD_004433171	contig_0112895	CDS	1221		hypothetical protein	K00394	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.01392814525771531	reductive (host taxonomy)
 7301291	JPFHOD_007302646	contig_0341186	CDS	552		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004	dastool-metabat_8644	Bacteroidota	Croceibacter	0.013917968374395425	oxidative (host taxonomy)
 11586038	JPFHOD_011588637	contig_1013282	CDS	507		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.013829141546703208	unbinned
 7487483	JPFHOD_007488905	contig_0360996	CDS	483	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.013794234820221518	unbinned
@@ -661,7 +661,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 1861261	JPFHOD_001861575	contig_0015296	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.012784694124870457	unbinned
 5276726	JPFHOD_005277433	contig_0166299	CDS	1533		Adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.012643093049983276	unbinned
 343422	JPFHOD_000343482	contig_0000499	CDS	759	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-metabat_6839	Pseudomonadota	UBA1858	0.012607967438292584	oxidative (host taxonomy)
-2164093	JPFHOD_002164448	contig_0021715	CDS	1314	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_574_sub		Candidatus Pelagibacter (Kaiju)	0.012591610912731423	unbinned
+2164093	JPFHOD_002164448	contig_0021715	CDS	1314	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_574_sub	Pseudomonadota	Pelagibacter	0.012591610912731423	oxidative (host taxonomy)
 1363578	JPFHOD_001363805	contig_0007488	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.012504331909850237	unbinned
 2134802	JPFHOD_002135145	contig_0021045	CDS	1557	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.012473412070444273	unbinned
 5387693	JPFHOD_005388434	contig_0174163	CDS	729	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.012464293431271036	unbinned
@@ -672,7 +672,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8212158	JPFHOD_008213776	contig_0445069	CDS	405		hypothetical protein	K11180			unbinned	0.01230729444781068	unbinned
 5521569	JPFHOD_005522361	contig_0183870	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.012243158436068892	unbinned
 1500513	JPFHOD_001500764	contig_0009333	CDS	285		Sulfur relay protein TusB/DsrH	K07237			unbinned	0.012212689904348994	unbinned
-413247	JPFHOD_000413316	contig_0000697	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein		dastool-lorbin_558_sub		Lutimonas (Kaiju)	0.012191356121726886	unbinned
+413247	JPFHOD_000413316	contig_0000697	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein		dastool-lorbin_558_sub	Bacteroidota	Lutimonas	0.012191356121726886	oxidative (host taxonomy)
 8728068	JPFHOD_008729853	contig_0511978	CDS	438		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.012190345476998005	unbinned
 9265792	JPFHOD_009267722	contig_0588245	CDS	915		hypothetical protein	K00394			unbinned	0.012190266525314544	unbinned
 5675626	JPFHOD_005676460	contig_0195353	CDS	234		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.012093515690403955	unbinned
@@ -708,7 +708,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2742587	JPFHOD_002742995	contig_0037398	CDS	441	dsrE	DsrE family protein	K09004			unbinned	0.011061649314921086	unbinned
 7952405	JPFHOD_007953938	contig_0413658	CDS	369	dsrE	Sulfur reduction protein DsrE like protein				unbinned	0.011061649314921086	unbinned
 151284	JPFHOD_000151303	contig_0000115	CDS	411	dsrE	DsrE family protein	K09004	dastool-lorbin_055	Pseudomonadota	Thioglobus_A sp028352435	0.011061649314921086	oxidative (host taxonomy)
-2341076	JPFHOD_002341447	contig_0026009	CDS	411	dsrE	DsrE family protein	K09004	dastool-metabat_10023_sub		metabat_10023_sub	0.011061649314921086	unbinned
+2341076	JPFHOD_002341447	contig_0026009	CDS	411	dsrE	DsrE family protein	K09004	dastool-metabat_10023_sub	Bacteroidota	Pollutibacter	0.011061649314921086	oxidative (host taxonomy)
 922087	JPFHOD_000922225	contig_0003200	CDS	204		hypothetical protein	K00394	dastool-comebin_159	Pseudomonadota	UBA1847	0.011003732316139433	oxidative (host taxonomy)
 1237626	JPFHOD_001237834	contig_0006012	CDS	549	dsrE	DsrE family protein	K09004			unbinned	0.010995932923806509	unbinned
 1378012	JPFHOD_001378240	contig_0007671	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.010982197721337022	unbinned
@@ -719,17 +719,17 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3592768	JPFHOD_003593254	contig_0070014	CDS	684		DsrE/DsrF-like family protein	K09004			unbinned	0.010816906004380893	unbinned
 13067662	JPFHOD_013070685	contig_1416569	CDS	555		hypothetical protein	K00394			unbinned	0.010803505055241872	unbinned
 5392700	JPFHOD_005393442	contig_0174519	CDS	309		hypothetical protein	K00394	dastool-maxbin_568	Nitrospinota	LS-NOB	0.010774817031260212	oxidative (host taxonomy)
-4133131	JPFHOD_004133679	contig_0096439	CDS	486		hypothetical protein	K11181	dastool-comebin_3581_sub		comebin_3581_sub	0.010771436002197547	unbinned
+4133131	JPFHOD_004133679	contig_0096439	CDS	486		hypothetical protein	K11181	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.010771436002197547	reductive (host taxonomy)
 2783772	JPFHOD_002784184	contig_0038690	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.01076588761785413	unbinned
 2583943	JPFHOD_002584343	contig_0032577	CDS	846	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.010727919006596288	unbinned
 1942603	JPFHOD_001942927	contig_0016908	CDS	543	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.010690871196038648	unbinned
 355477	JPFHOD_000355537	contig_0000532	CDS	441	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.010595933571091185	oxidative (host taxonomy)
 3523782	JPFHOD_003524266	contig_0066931	CDS	444		DsrE/DsrF/DrsH-like family protein	K07092	dastool-comebin_1169	Pseudomonadota	UBA4479 sp963974935	0.010579249170948043	oxidative (host taxonomy)
 9238358	JPFHOD_009240280	contig_0584162	CDS	336		hypothetical protein	K11181			unbinned	0.010536506561605935	unbinned
-1010504	JPFHOD_001010661	contig_0003873	CDS	1833	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_1738_sub		comebin_1738_sub	0.010485229682723307	unbinned
+1010504	JPFHOD_001010661	contig_0003873	CDS	1833	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.010485229682723307	oxidative (host taxonomy)
 4331416	JPFHOD_004331985	contig_0107185	CDS	756	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.010442127618968738	unbinned
 10053694	JPFHOD_010055843	contig_0713703	CDS	1008		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.010422592280064102	unbinned
-7214823	JPFHOD_007216128	contig_0332186	CDS	456		DsrE/DsrF-like family protein	K09004	dastool-comebin_3749_sub		comebin_3749_sub	0.010404744414276404	unbinned
+7214823	JPFHOD_007216128	contig_0332186	CDS	456		DsrE/DsrF-like family protein	K09004	dastool-comebin_3749_sub	Pseudomonadota	Tateyamaria	0.010404744414276404	oxidative (host taxonomy)
 9845640	JPFHOD_009847743	contig_0679022	CDS	531		hypothetical protein	K11181			unbinned	0.01038029040787916	unbinned
 13110995	JPFHOD_013114030	contig_1433126	CDS	105		hypothetical protein	K00394			unbinned	0.010351321054211491	unbinned
 6641600	JPFHOD_006642744	contig_0276388	CDS	501		DsrE/DsrF-like family protein	K09004			unbinned	0.010284774948749239	unbinned
@@ -779,10 +779,10 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 1040257	JPFHOD_001040423	contig_0004119	CDS	234		DsrE/DsrF/DrsH-like family protein		dastool-comebin_4639	Bacteroidota	CAJQLB01	0.00888447647957124	oxidative (host taxonomy)
 1090973	JPFHOD_001091148	contig_0004561	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.008880509740277405	unbinned
 2578425	JPFHOD_002578825	contig_0032424	CDS	543	dsrE	DsrE family protein	K09004	dastool-comebin_1425	Bacteroidota	YIK13	0.00886341779174914	oxidative (host taxonomy)
-5035838	JPFHOD_005036512	contig_0150000	CDS	216		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394	dastool-lorbin_820_sub		Candidatus Pelagibacter (Kaiju)	0.008849060637797753	unbinned
+5035838	JPFHOD_005036512	contig_0150000	CDS	216		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394	dastool-lorbin_820_sub	Pseudomonadota	Pelagibacter_A	0.008849060637797753	oxidative (host taxonomy)
 6505997	JPFHOD_006507113	contig_0264125	CDS	1626		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394			unbinned	0.008820658084252132	unbinned
 6181939	JPFHOD_006182964	contig_0235933	CDS	807	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.008805905638164949	unbinned
-4003632	JPFHOD_004004170	contig_0089783	CDS	360	dsrE	DsrE family protein		dastool-comebin_1209_sub		comebin_1209_sub	0.008785753839809469	unbinned
+4003632	JPFHOD_004004170	contig_0089783	CDS	360	dsrE	DsrE family protein		dastool-comebin_1209_sub	Pseudomonadota	GCA-2401735	0.008785753839809469	oxidative (host taxonomy)
 821424	JPFHOD_000821555	contig_0002539	CDS	519	dsrE	DsrE family protein	K09004	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.008759924672074912	oxidative (host taxonomy)
 8262689	JPFHOD_008264327	contig_0451345	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein				unbinned	0.00873049153538126	unbinned
 10186037	JPFHOD_010188218	contig_0736502	CDS	1251	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.008693604068566825	unbinned
@@ -793,12 +793,12 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6133461	JPFHOD_006134467	contig_0231871	CDS	270		hypothetical protein	K03390,K16887			unbinned	0.008540768983633809	unbinned
 4049681	JPFHOD_004050222	contig_0092093	CDS	1155		hypothetical protein	K00394			unbinned	0.008511778420573051	unbinned
 5577832	JPFHOD_005578633	contig_0188000	CDS	813		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394			unbinned	0.008507834878158966	unbinned
-2673690	JPFHOD_002674094	contig_0035269	CDS	216		DsrE/DsrF-like family protein	K06039	dastool-comebin_3703_sub		Gimesia (Kaiju)	0.008496753080322399	unbinned
+2673690	JPFHOD_002674094	contig_0035269	CDS	216		DsrE/DsrF-like family protein	K06039	dastool-comebin_3703_sub	Planctomycetota	Gimesia	0.008496753080322399	oxidative (host taxonomy)
 3212230	JPFHOD_003212694	contig_0053991	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.008472857375623402	unbinned
 6982022	JPFHOD_006983276	contig_0308765	CDS	528	dsrE	DsrE family protein	K09004			unbinned	0.008382057697017468	unbinned
-1551965	JPFHOD_001552221	contig_0010088	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_1815_sub		comebin_1815_sub	0.00834937404147002	unbinned
+1551965	JPFHOD_001552221	contig_0010088	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_1815_sub	Pseudomonadota	Pseudothioglobus sp905620445	0.00834937404147002	oxidative (host taxonomy)
 11448843	JPFHOD_011451395	contig_0982993	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.008253862707990074	unbinned
-10443259	JPFHOD_010445525	contig_0782410	CDS	1197	qmoC	quinone-interacting membrane-bound oxidoreductase complex subunit QmoC	K16887	dastool-comebin_3581_sub		comebin_3581_sub	0.008199048846257516	unbinned
+10443259	JPFHOD_010445525	contig_0782410	CDS	1197	qmoC	quinone-interacting membrane-bound oxidoreductase complex subunit QmoC	K16887	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.008199048846257516	reductive (host taxonomy)
 4119831	JPFHOD_004120379	contig_0095734	CDS	132		hypothetical protein	K00394			unbinned	0.008191322354377214	unbinned
 12987792	JPFHOD_012990790	contig_1388032	CDS	426	dsrE	DsrE family protein	K09004			unbinned	0.008145197410668405	unbinned
 8212157	JPFHOD_008213775	contig_0445069	CDS	507		hypothetical protein	K11180			unbinned	0.008142311300896325	unbinned
@@ -809,7 +809,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6143387	JPFHOD_006144399	contig_0232694	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.008024112160143192	unbinned
 4528689	JPFHOD_004529298	contig_0118438	CDS	282		Adenylylsulfate reductase alpha-subunit (EC)	K00394			unbinned	0.007980037011865226	unbinned
 8726773	JPFHOD_008728558	contig_0511801	CDS	510		hypothetical protein	K00394			unbinned	0.00797668202709641	unbinned
-8238786	JPFHOD_008240418	contig_0448388	CDS	474		hypothetical protein	K16885	dastool-comebin_3581_sub		comebin_3581_sub	0.007878217197091638	unbinned
+8238786	JPFHOD_008240418	contig_0448388	CDS	474		hypothetical protein	K16885	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.007878217197091638	reductive (host taxonomy)
 10443715	JPFHOD_010445981	contig_0782502	CDS	198		hypothetical protein	K03390,K16887			unbinned	0.00787500698730071	unbinned
 3552541	JPFHOD_003553026	contig_0068213	CDS	303	dsrE	DsrE superfamily protein	K09004	dastool-lorbin_161	Pseudomonadota	Marinomonas primoryensis	0.007865959218735705	oxidative (host taxonomy)
 3771476	JPFHOD_003771990	contig_0078308	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.007860587597866349	unbinned
@@ -820,7 +820,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 1540143	JPFHOD_001540395	contig_0009909	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004			unbinned	0.007682388483470738	unbinned
 7485696	JPFHOD_007487118	contig_0360799	CDS	387	dsrE	Sulfur reduction protein DsrE				unbinned	0.007661946560880624	unbinned
 10372262	JPFHOD_010374502	contig_0769522	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.00765586113922544	unbinned
-3742669	JPFHOD_003743178	contig_0076930	CDS	300	dsrE	DsrE family protein		dastool-comebin_428_sub		comebin_428_sub	0.007529136651245138	unbinned
+3742669	JPFHOD_003743178	contig_0076930	CDS	300	dsrE	DsrE family protein		dastool-comebin_428_sub	Bacteroidota	Maribacter_C	0.007529136651245138	oxidative (host taxonomy)
 5579420	JPFHOD_005580221	contig_0188120	CDS	480	dsrE	DsrE family protein	K09004	dastool-comebin_4672	Pseudomonadota	Thiomicrorhabdus arctica	0.007481394062775094	oxidative (host taxonomy)
 12113323	JPFHOD_012116094	contig_1138108	CDS	339		hypothetical protein	K11180			unbinned	0.0074705562175294135	unbinned
 9727631	JPFHOD_009729703	contig_0659786	CDS	2016		Adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.00746485233399234	unbinned
@@ -849,7 +849,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9571582	JPFHOD_009573612	contig_0635021	CDS	378		SaoD/DsrE family protein	K06039,K07235			unbinned	0.0070478509955005765	unbinned
 3623156	JPFHOD_003623642	contig_0071376	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.007045118342099628	unbinned
 7865585	JPFHOD_007867099	contig_0403475	CDS	321		hypothetical protein	K00395			unbinned	0.007036099573851373	unbinned
-6170923	JPFHOD_006171940	contig_0235010	CDS	1176	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3202_sub		comebin_3202_sub	0.007033328835385786	unbinned
+6170923	JPFHOD_006171940	contig_0235010	CDS	1176	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.007033328835385786	oxidative (host taxonomy)
 8833934	JPFHOD_008835746	contig_0526467	CDS	1080	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.007000232652518338	unbinned
 6242045	JPFHOD_006243085	contig_0241024	CDS	309	dsrE	Sulfur reduction protein DsrE				unbinned	0.0069936253864061075	unbinned
 3836336	JPFHOD_003836854	contig_0081430	CDS	504	dsrE	DsrE family protein	K09004			unbinned	0.006977404973098338	unbinned
@@ -861,7 +861,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 5868074	JPFHOD_005868975	contig_0210293	CDS	678	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.006746265294164704	unbinned
 7978846	JPFHOD_007980382	contig_0416751	CDS	447		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.006719961720919097	unbinned
 5392704	JPFHOD_005393446	contig_0174519	CDS	375		hypothetical protein	K00394	dastool-maxbin_568	Nitrospinota	LS-NOB	0.006671179425616833	oxidative (host taxonomy)
-750564	JPFHOD_000750684	contig_0002118	CDS	516		DsrE/DsrF/DrsH-like family protein		dastool-vamb_1144_sub		vamb_1144_sub	0.006625710286817332	unbinned
+750564	JPFHOD_000750684	contig_0002118	CDS	516		DsrE/DsrF/DrsH-like family protein		dastool-vamb_1144_sub	Bacteroidota	CAJQLB01	0.006625710286817332	oxidative (host taxonomy)
 3554839	JPFHOD_003555324	contig_0068316	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_752	Bacteroidota	Algibacter_E	0.006576653845944309	oxidative (host taxonomy)
 11714138	JPFHOD_011716775	contig_1042297	CDS	132		hypothetical protein	K00394			unbinned	0.006560412451666934	unbinned
 7785199	JPFHOD_007786698	contig_0394170	CDS	426	dsrE	DsrE family protein	K09004			unbinned	0.006558506687441547	unbinned
@@ -871,15 +871,15 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9713281	JPFHOD_009715353	contig_0657515	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.006523810622710458	unbinned
 7760076	JPFHOD_007761569	contig_0391292	CDS	858		Dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.006521398087427948	unbinned
 3622043	JPFHOD_003622529	contig_0071328	CDS	249		DsrE/DsrF-like family protein				unbinned	0.00650795289009546	unbinned
-738891	JPFHOD_000739011	contig_0002052	CDS	543		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-metabat_5394_sub		metabat_5394_sub	0.006501974467208781	unbinned
+738891	JPFHOD_000739011	contig_0002052	CDS	543		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-metabat_5394_sub	Bacteroidota	Maribacter_C	0.006501974467208781	oxidative (host taxonomy)
 11571560	JPFHOD_011574152	contig_1010097	CDS	183		hypothetical protein	K00394			unbinned	0.006496082289060977	unbinned
 13273918	JPFHOD_013277032	contig_1524831	CDS	183		hypothetical protein	K00394			unbinned	0.006487589293952951	unbinned
 4738525	JPFHOD_004739164	contig_0131060	CDS	744		hypothetical protein	K16886			unbinned	0.006464102012696763	unbinned
 6856535	JPFHOD_006857749	contig_0296629	CDS	306	dsrE	DsrE family protein	K09004			unbinned	0.006451819473833208	unbinned
 4080084	JPFHOD_004080625	contig_0093649	CDS	393	dsrE	Putative sulfurtransferase DsrE	K07235	dastool-comebin_2942	Pseudomonadota	PZPK01 sp963975615	0.006435377719232298	oxidative (host taxonomy)
 1616444	JPFHOD_001616716	contig_0011062	CDS	546	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_653	Bacteroidota	JABDMH01	0.006423960040572864	oxidative (host taxonomy)
-4824334	JPFHOD_004824979	contig_0136412	CDS	444		DsrE/DsrF-like family protein	K09004	dastool-lorbin_599_sub		lorbin_599_sub	0.006417308582374842	unbinned
-3262778	JPFHOD_003263245	contig_0055960	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_480_sub		Candidatus Pelagibacter (Kaiju)	0.0064046749839285905	unbinned
+4824334	JPFHOD_004824979	contig_0136412	CDS	444		DsrE/DsrF-like family protein	K09004	dastool-lorbin_599_sub	Pseudomonadota	GCA-2729495	0.006417308582374842	oxidative (host taxonomy)
+3262778	JPFHOD_003263245	contig_0055960	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_480_sub	Pseudomonadota	Pelagibacter sp905620495	0.0064046749839285905	oxidative (host taxonomy)
 11419937	JPFHOD_011422485	contig_0976681	CDS	609		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.006398137689046708	unbinned
 5673831	JPFHOD_005674665	contig_0195217	CDS	936		Sulfite reductase dissimilatory-type alpha subunit	K11180			unbinned	0.006367855694660442	unbinned
 5943432	JPFHOD_005944364	contig_0216326	CDS	348	dsrE	DsrE family protein	K09004			unbinned	0.006330669269260036	unbinned
@@ -894,7 +894,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3970135	JPFHOD_003970671	contig_0088085	CDS	345		DsrE/DsrF/DrsH-like family protein				unbinned	0.006170104078639989	unbinned
 8046583	JPFHOD_008048143	contig_0424855	CDS	336	dsrE	DsrE family protein		dastool-comebin_2956	Pseudomonadota	BMS3Bbin11 sp033791885	0.00613548148634359	oxidative (host taxonomy)
 4721094	JPFHOD_004721732	contig_0129991	CDS	1524	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.006119630093881687	unbinned
-12224966	JPFHOD_012227747	contig_1166174	CDS	888		hypothetical protein	K00394	dastool-comebin_3202_sub		comebin_3202_sub	0.006112863435208552	unbinned
+12224966	JPFHOD_012227747	contig_1166174	CDS	888		hypothetical protein	K00394	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.006112863435208552	oxidative (host taxonomy)
 1500060	JPFHOD_001500311	contig_0009326	CDS	216	yrkE	DsrE/DsrF/DrsH-like family protein				unbinned	0.006086753990942075	unbinned
 253860	JPFHOD_000253892	contig_0000290	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_3997	Bacteroidota	Hanstruepera	0.006044470638959401	oxidative (host taxonomy)
 2275324	JPFHOD_002275690	contig_0024368	CDS	249		hypothetical protein	K11180			unbinned	0.006030579548988137	unbinned
@@ -919,12 +919,12 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8597260	JPFHOD_008599009	contig_0494365	CDS	651		hypothetical protein	K16886			unbinned	0.005615851955684663	unbinned
 4756144	JPFHOD_004756783	contig_0132156	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.005592980602004498	unbinned
 2152220	JPFHOD_002152573	contig_0021444	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_649	Pseudomonadota	Pelagibacter	0.005560605914840752	oxidative (host taxonomy)
-2354505	JPFHOD_002354881	contig_0026359	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3749_sub		comebin_3749_sub	0.005492379958309073	unbinned
+2354505	JPFHOD_002354881	contig_0026359	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3749_sub	Pseudomonadota	Tateyamaria	0.005492379958309073	oxidative (host taxonomy)
 7965571	JPFHOD_007967107	contig_0415200	CDS	792		hypothetical protein	K00394			unbinned	0.005472809928813385	unbinned
 1585485	JPFHOD_001585752	contig_0010589	CDS	504	yrkE	DsrE/DsrF/DrsH-like family protein				unbinned	0.005405176433875707	unbinned
 9883434	JPFHOD_009885547	contig_0685199	CDS	309	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.005369100876921595	unbinned
 10528616	JPFHOD_010530905	contig_0798053	CDS	504	dsrE	DsrE family protein	K09004			unbinned	0.00535893560105666	unbinned
-3860804	JPFHOD_003861330	contig_0082619	CDS	1845	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3202_sub		comebin_3202_sub	0.005341968723841739	unbinned
+3860804	JPFHOD_003861330	contig_0082619	CDS	1845	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.005341968723841739	oxidative (host taxonomy)
 5031522	JPFHOD_005032196	contig_0149713	CDS	849	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0053372254375585225	unbinned
 12712069	JPFHOD_012714983	contig_1299953	CDS	399	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.005325041380050074	unbinned
 8414466	JPFHOD_008416144	contig_0470528	CDS	717		hypothetical protein	K00394			unbinned	0.0053208892343415415	unbinned
@@ -936,7 +936,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9892103	JPFHOD_009894217	contig_0686605	CDS	348	dsrE	DsrE family protein	K09004			unbinned	0.00524907216597711	unbinned
 4244222	JPFHOD_004244788	contig_0102403	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.005240208697847057	unbinned
 11227247	JPFHOD_011229748	contig_0935495	CDS	213		hypothetical protein	K00394			unbinned	0.0052377939518564	unbinned
-3138368	JPFHOD_003138812	contig_0051148	CDS	528	dsrE	DsrE family protein	K09004	dastool-metabat_1070_sub		metabat_1070_sub	0.005216818137438399	unbinned
+3138368	JPFHOD_003138812	contig_0051148	CDS	528	dsrE	DsrE family protein	K09004	dastool-metabat_1070_sub	Pseudomonadota	Litorimonas	0.005216818137438399	oxidative (host taxonomy)
 7430329	JPFHOD_007431733	contig_0354866	CDS	255	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.005205706186944322	unbinned
 4274144	JPFHOD_004274711	contig_0104032	CDS	435	dsrE	DsrE family protein	K09004			unbinned	0.005205706186944322	unbinned
 5780820	JPFHOD_005781693	contig_0203447	CDS	432	dsrE	DsrE family protein	K09004			unbinned	0.005205706186944322	unbinned
@@ -952,13 +952,13 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 5782048	JPFHOD_005782921	contig_0203549	CDS	345	dsrE	Putative sulfurtransferase DsrE	K07235	dastool-comebin_142	Pseudomonadota	JAAEMP01	0.005113821420265254	oxidative (host taxonomy)
 5782046	JPFHOD_005782919	contig_0203549	CDS	717		hypothetical protein	K11180	dastool-comebin_142	Pseudomonadota	JAAEMP01	0.005098339831371179	oxidative (host taxonomy)
 4713957	JPFHOD_004714593	contig_0129558	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.005096366006051853	unbinned
-4028396	JPFHOD_004028937	contig_0091022	CDS	189		DsrE/DsrF/DrsH-like family protein		dastool-comebin_400_sub		comebin_400_sub	0.005073714470167752	unbinned
+4028396	JPFHOD_004028937	contig_0091022	CDS	189		DsrE/DsrF/DrsH-like family protein		dastool-comebin_400_sub	Bacteroidota	Cellulophaga	0.005073714470167752	oxidative (host taxonomy)
 9522180	JPFHOD_009524198	contig_0627272	CDS	498	dsrE	DsrE family protein	K09004			unbinned	0.005000578345347891	unbinned
 8889506	JPFHOD_008891338	contig_0534195	CDS	333		hypothetical protein	K11181			unbinned	0.004936340370116441	unbinned
 5782049	JPFHOD_005782922	contig_0203549	CDS	435	dsrF	Intracellular sulfur oxidation protein DsrF	K07236	dastool-comebin_142	Pseudomonadota	JAAEMP01	0.004912704626421891	oxidative (host taxonomy)
 12054848	JPFHOD_012057597	contig_1123554	CDS	489	dsrE	DsrE family protein	K09004	dastool-comebin_4672	Pseudomonadota	Thiomicrorhabdus arctica	0.004909251027989472	oxidative (host taxonomy)
 12306160	JPFHOD_012308960	contig_1187079	CDS	483		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0048994576955488315	unbinned
-5682894	JPFHOD_005683728	contig_0195913	CDS	390	dsrE	Sulfurtransferase DsrE	K07235	dastool-comebin_1975_sub		comebin_1975_sub	0.0048630640266942885	unbinned
+5682894	JPFHOD_005683728	contig_0195913	CDS	390	dsrE	Sulfurtransferase DsrE	K07235	dastool-comebin_1975_sub	Pseudomonadota	JAHRVQ01	0.0048630640266942885	oxidative (host taxonomy)
 619969	JPFHOD_000620068	contig_0001455	CDS	453	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_159	Pseudomonadota	UBA1847	0.004847017820204128	oxidative (host taxonomy)
 12306161	JPFHOD_012308961	contig_1187079	CDS	222		hypothetical protein	K00394			unbinned	0.0047623307995198535	unbinned
 2275328	JPFHOD_002275694	contig_0024368	CDS	231		hypothetical protein	K11181			unbinned	0.004757121547308835	unbinned
@@ -989,13 +989,13 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 37381	JPFHOD_000037383	contig_0000012	CDS	576	dsrE	Sulfur reduction protein DsrE	K09004	dastool-lorbin_026	Bacteroidota	CAJQLB01	0.004329402433557507	oxidative (host taxonomy)
 8100723	JPFHOD_008102314	contig_0431395	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.004328523164386885	unbinned
 6133462	JPFHOD_006134468	contig_0231871	CDS	159		hydrogenase iron-sulfur subunit	K16886			unbinned	0.00432835796088217	unbinned
-2618419	JPFHOD_002618821	contig_0033607	CDS	423		DsrE/DsrF/DsrH-like protein	K09004	dastool-comebin_3111_sub		Polaribacter (Kaiju)	0.004321919862973841	unbinned
+2618419	JPFHOD_002618821	contig_0033607	CDS	423		DsrE/DsrF/DsrH-like protein	K09004	dastool-comebin_3111_sub	Bacteroidota	Polaribacter	0.004321919862973841	oxidative (host taxonomy)
 5596784	JPFHOD_005597594	contig_0189427	CDS	204		DsrE/DsrF/DrsH-like family		dastool-comebin_2715	Pseudomonadota	UBA1479	0.004309542522305969	oxidative (host taxonomy)
 1754804	JPFHOD_001755094	contig_0013331	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.004304208271847303	unbinned
 354213	JPFHOD_000354273	contig_0000528	CDS	393	dsrE	Sulfurtransferase DsrE	K07235	dastool-metabat_8385	Pseudomonadota	JAHRVQ01 sp905182025	0.0042934552628831136	oxidative (host taxonomy)
 7946680	JPFHOD_007948213	contig_0412988	CDS	339	dsrE	DsrE family protein				unbinned	0.004285357723491708	unbinned
 6695812	JPFHOD_006696978	contig_0281406	CDS	282	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.004275606222319305	unbinned
-3804770	JPFHOD_003805288	contig_0079906	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_4156_sub		comebin_4156_sub	0.004258578619679226	unbinned
+3804770	JPFHOD_003805288	contig_0079906	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_4156_sub	Pseudomonadota	Octadecabacter	0.004258578619679226	oxidative (host taxonomy)
 2916187	JPFHOD_002916615	contig_0043110	CDS	462	dsrE	DsrE family protein	K09004	dastool-vamb_2303	Pseudomonadota	Pseudemcibacter	0.004253668169683492	oxidative (host taxonomy)
 10628843	JPFHOD_010631159	contig_0816679	CDS	285		hypothetical protein	K00394			unbinned	0.004246971315629868	unbinned
 11979233	JPFHOD_011981953	contig_1104956	CDS	1674	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.004243583370399757	unbinned
@@ -1011,7 +1011,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4513398	JPFHOD_004514001	contig_0117546	CDS	231		hypothetical protein	K00394	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.004136385853981841	oxidative (host taxonomy)
 7875884	JPFHOD_007877405	contig_0404655	CDS	426	dsrE	DsrE family protein	K09004			unbinned	0.004118717205054095	unbinned
 3949415	JPFHOD_003949951	contig_0087031	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.004118204786337603	unbinned
-292828	JPFHOD_000292865	contig_0000375	CDS	414	dsrE	DsrE family protein	K09004	dastool-metabat_5394_sub		metabat_5394_sub	0.004111138176648994	unbinned
+292828	JPFHOD_000292865	contig_0000375	CDS	414	dsrE	DsrE family protein	K09004	dastool-metabat_5394_sub	Bacteroidota	Maribacter_C	0.004111138176648994	oxidative (host taxonomy)
 4776900	JPFHOD_004777542	contig_0133440	CDS	453	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.004108535013862642	unbinned
 12247646	JPFHOD_012250434	contig_1171973	CDS	297	dsrH	Sulfur relay protein DsrH	K07237			unbinned	0.004093634031510046	unbinned
 5169673	JPFHOD_005170371	contig_0158939	CDS	513	dsrE	DsrE family protein	K09004			unbinned	0.0040739288370021725	unbinned
@@ -1019,7 +1019,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3973113	JPFHOD_003973650	contig_0088236	CDS	282		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.004057890941938309	unbinned
 10855635	JPFHOD_010858015	contig_0860187	CDS	396	dsrE	Sulfur reduction protein DsrE				unbinned	0.004054306922771823	unbinned
 1433359	JPFHOD_001433597	contig_0008402	CDS	369	dsrE	DsrE family protein	K09004	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.003998138651494835	oxidative (host taxonomy)
-1307210	JPFHOD_001307430	contig_0006800	CDS	354		DsrE/DsrF-like family protein	K06039	dastool-comebin_4140_sub		comebin_4140_sub	0.003981565439019844	unbinned
+1307210	JPFHOD_001307430	contig_0006800	CDS	354		DsrE/DsrF-like family protein	K06039	dastool-comebin_4140_sub	Pseudomonadota	WHUA01	0.003981565439019844	oxidative (host taxonomy)
 4467094	JPFHOD_004467688	contig_0114868	CDS	375		hypothetical protein	K00394			unbinned	0.003975249526365385	unbinned
 1153100	JPFHOD_001153288	contig_0005145	CDS	501		DsrE/DsrF-like family protein	K09004			unbinned	0.003972662993595432	unbinned
 7182116	JPFHOD_007183416	contig_0328830	CDS	390	dsrF	Intracellular sulfur oxidation protein DsrF	K07236			unbinned	0.003972662993595432	unbinned
@@ -1042,7 +1042,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8726771	JPFHOD_008728556	contig_0511801	CDS	210		Adenylylsulfate reductase alpha-subunit (EC)	K00394			unbinned	0.003719649810369096	unbinned
 7767364	JPFHOD_007768860	contig_0392123	CDS	1305	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.003709451035017247	unbinned
 8081448	JPFHOD_008083021	contig_0429049	CDS	132		hypothetical protein	K00394			unbinned	0.003693818814521343	unbinned
-8270424	JPFHOD_008272064	contig_0452324	CDS	366		DsrE/DsrF-like family protein	K07092	dastool-comebin_4259_sub		comebin_4259_sub	0.003672048594709823	unbinned
+8270424	JPFHOD_008272064	contig_0452324	CDS	366		DsrE/DsrF-like family protein	K07092	dastool-comebin_4259_sub	Planctomycetota	JABAAE01	0.003672048594709823	oxidative (host taxonomy)
 6653550	JPFHOD_006654695	contig_0277483	CDS	813	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.003659926000395389	unbinned
 7760077	JPFHOD_007761570	contig_0391292	CDS	900	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.003650684066005049	unbinned
 4683920	JPFHOD_004684555	contig_0127694	CDS	291	dsrH	DsrH family protein	K07237			unbinned	0.003622694048949705	unbinned
@@ -1054,10 +1054,10 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 402958	JPFHOD_000403022	contig_0000666	CDS	546		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-comebin_3884	Bacteroidota	Eudoraea sp905479615	0.0034898638718571127	oxidative (host taxonomy)
 12017308	JPFHOD_012020046	contig_1114280	CDS	183	dsrE	DsrE family protein				unbinned	0.0034898638718571127	unbinned
 5387692	JPFHOD_005388433	contig_0174163	CDS	546		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.0034688472206156093	unbinned
-3413591	JPFHOD_003414066	contig_0062163	CDS	390	dsrE	Sulfurtransferase DsrE	K07235	dastool-comebin_1975_sub		comebin_1975_sub	0.0034688472206156093	unbinned
+3413591	JPFHOD_003414066	contig_0062163	CDS	390	dsrE	Sulfurtransferase DsrE	K07235	dastool-comebin_1975_sub	Pseudomonadota	JAHRVQ01	0.0034688472206156093	oxidative (host taxonomy)
 5921248	JPFHOD_005922172	contig_0214538	CDS	339		SaoD/DsrE family protein				unbinned	0.003451985197313155	unbinned
 5037527	JPFHOD_005038201	contig_0150110	CDS	435		DsrE/DsrF/DrsH-like family protein	K07092	dastool-comebin_2682	Pseudomonadota	UBA4479 sp963926035	0.0034445020648266353	oxidative (host taxonomy)
-4094887	JPFHOD_004095429	contig_0094427	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_3837_sub		comebin_3837_sub	0.003434819881139665	unbinned
+4094887	JPFHOD_004095429	contig_0094427	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_3837_sub	Pseudomonadota	SZUA-36	0.003434819881139665	oxidative (host taxonomy)
 773022	JPFHOD_000773144	contig_0002246	CDS	510	dsrE	DsrE family protein				unbinned	0.0034304726082525425	unbinned
 5406569	JPFHOD_005407317	contig_0175526	CDS	279		hypothetical protein	K00394			unbinned	0.0034304726082525425	unbinned
 343424	JPFHOD_000343484	contig_0000499	CDS	423	dsrF	Intracellular sulfur oxidation protein DsrF	K07236	dastool-metabat_6839	Pseudomonadota	UBA1858	0.0034226410954273636	oxidative (host taxonomy)
@@ -1069,7 +1069,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2275327	JPFHOD_002275693	contig_0024368	CDS	537	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.0033801695910023605	unbinned
 5895239	JPFHOD_005896146	contig_0212434	CDS	315		DsrE/DsrF-like family protein	K09004			unbinned	0.003364169203180848	unbinned
 4733439	JPFHOD_004734078	contig_0130746	CDS	480	dsrE2	Sulfur carrier protein DsrE2	K07092	dastool-comebin_213	Pseudomonadota	GCA-001735895 sp963976575	0.0033522414082747666	oxidative (host taxonomy)
-1836018	JPFHOD_001836327	contig_0014813	CDS	465		DsrE/DsrF-like family protein	K09004	dastool-comebin_4104_sub		Pararhizobium (Kaiju)	0.0033133757335635752	unbinned
+1836018	JPFHOD_001836327	contig_0014813	CDS	465		DsrE/DsrF-like family protein	K09004	dastool-comebin_4104_sub	Pseudomonadota	GCA-2746425	0.0033133757335635752	oxidative (host taxonomy)
 4967887	JPFHOD_004968548	contig_0145558	CDS	465		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.0033049222170656216	unbinned
 7429486	JPFHOD_007430890	contig_0354779	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.003300606047525691	unbinned
 1500544	JPFHOD_001500795	contig_0009333	CDS	534	dsrE	DsrE family protein	K09004			unbinned	0.003296601641449052	unbinned
@@ -1081,7 +1081,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10628842	JPFHOD_010631158	contig_0816679	CDS	192		hypothetical protein	K00394			unbinned	0.0032106254544961394	unbinned
 2282221	JPFHOD_002282587	contig_0024539	CDS	321	dsrE	Sulfur reduction protein DsrE	K06039	dastool-comebin_4105	Bacteroidota	UBA4419	0.003208144768914307	oxidative (host taxonomy)
 11073226	JPFHOD_011075676	contig_0903808	CDS	300		hypothetical protein	K00394			unbinned	0.003199693516456736	unbinned
-1883127	JPFHOD_001883447	contig_0015721	CDS	1746		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-comebin_160_sub		comebin_160_sub	0.003194640609576275	unbinned
+1883127	JPFHOD_001883447	contig_0015721	CDS	1746		fumarate reductase/succinate dehydrogenase flavoprotein subunit	K00394	dastool-comebin_160_sub	Pseudomonadota	Ascidiaceihabitans	0.003194640609576275	oxidative (host taxonomy)
 8351039	JPFHOD_008352707	contig_0462428	CDS	1014		hypothetical protein	K16885			unbinned	0.003194640609576275	unbinned
 6653545	JPFHOD_006654690	contig_0277483	CDS	189	dsrH	Intracellular sulfur oxidation protein DsrH	K07237			unbinned	0.003194640609576275	unbinned
 5824189	JPFHOD_005825076	contig_0206840	CDS	1254	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.003188035105316357	unbinned
@@ -1099,7 +1099,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 7182117	JPFHOD_007183417	contig_0328830	CDS	360	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.002974988014368288	unbinned
 9122103	JPFHOD_009124002	contig_0567266	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.0029560264352608743	unbinned
 8345062	JPFHOD_008346730	contig_0461665	CDS	537	dsrE	DsrE family protein	K09004			unbinned	0.0029466245623137287	unbinned
-1270385	JPFHOD_001270602	contig_0006372	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-lorbin_885_sub		lorbin_885_sub	0.0029280342042124693	unbinned
+1270385	JPFHOD_001270602	contig_0006372	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-lorbin_885_sub	Bacteroidota	Lutimonas	0.0029280342042124693	oxidative (host taxonomy)
 8879816	JPFHOD_008881644	contig_0532842	CDS	390	dsrE	Sulfur reduction protein DsrE	K07092			unbinned	0.0029263073452973822	unbinned
 8889505	JPFHOD_008891337	contig_0534195	CDS	93		hypothetical protein	K11181			unbinned	0.0029217764683250247	unbinned
 6415055	JPFHOD_006416137	contig_0256018	CDS	1305	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.00291835479872784	unbinned
@@ -1166,12 +1166,12 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 7887911	JPFHOD_007889435	contig_0406058	CDS	381	dsrE	DsrE family protein				unbinned	0.0021325089906579046	unbinned
 5240293	JPFHOD_005240998	contig_0163757	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.0021304863944752706	unbinned
 10243723	JPFHOD_010245918	contig_0746612	CDS	273		hypothetical protein	K00394			unbinned	0.0021304863944752706	unbinned
-4607511	JPFHOD_004608130	contig_0123085	CDS	459	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3837_sub		comebin_3837_sub	0.0021304863944752706	unbinned
+4607511	JPFHOD_004608130	contig_0123085	CDS	459	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3837_sub	Pseudomonadota	SZUA-36	0.0021304863944752706	oxidative (host taxonomy)
 206314	JPFHOD_000206342	contig_0000200	CDS	573	dsrE	DsrE family protein	K09004	dastool-lorbin_049	Pseudomonadota	Shewanella vesiculosa	0.002117323432164345	oxidative (host taxonomy)
 12659999	JPFHOD_012662898	contig_1284499	CDS	366	dsrE	Sulfur reduction protein DsrE	K07092			unbinned	0.002117323432164345	unbinned
 1010257	JPFHOD_001010414	contig_0003871	CDS	516		DsrE/DsrF/DrsH-like family protein	K07092	dastool-comebin_1744	Bacteroidota	DATGBV01	0.001966564480410428	oxidative (host taxonomy)
 5272728	JPFHOD_005273435	contig_0166023	CDS	546		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004			unbinned	0.001954025805896518	unbinned
-3742670	JPFHOD_003743179	contig_0076930	CDS	279		Intracellular sulfur oxidation DsrE/DsrF family protein		dastool-comebin_428_sub		comebin_428_sub	0.001954025805896518	unbinned
+3742670	JPFHOD_003743179	contig_0076930	CDS	279		Intracellular sulfur oxidation DsrE/DsrF family protein		dastool-comebin_428_sub	Bacteroidota	Maribacter_C	0.001954025805896518	oxidative (host taxonomy)
 6797706	JPFHOD_006798908	contig_0291005	CDS	564		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.001954025805896518	unbinned
 6992706	JPFHOD_006993963	contig_0309816	CDS	435		Intracellular sulfur oxidation DsrE/DsrF family protein				unbinned	0.001951535961843069	unbinned
 8172766	JPFHOD_008174373	contig_0440209	CDS	351		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.0019499858978791027	unbinned
@@ -1190,7 +1190,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 11653316	JPFHOD_011655932	contig_1028450	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.001834634601685849	unbinned
 12529899	JPFHOD_012532759	contig_1247381	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0018323038033584457	unbinned
 5310430	JPFHOD_005311156	contig_0168690	CDS	306	dsrE	Sulfur reduction protein DsrE	K07092			unbinned	0.0018323038033584457	unbinned
-2849532	JPFHOD_002849952	contig_0040837	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_480_sub		Candidatus Pelagibacter (Kaiju)	0.0018323038033584457	unbinned
+2849532	JPFHOD_002849952	contig_0040837	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_480_sub	Pseudomonadota	Pelagibacter sp905620495	0.0018323038033584457	oxidative (host taxonomy)
 3268697	JPFHOD_003269165	contig_0056200	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_377	Pseudomonadota	Pelagibacter	0.0018323038033584457	oxidative (host taxonomy)
 12574309	JPFHOD_012577181	contig_1259860	CDS	546		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.001831025362484429	unbinned
 9952691	JPFHOD_009954815	contig_0696741	CDS	366		DsrE/DsrF-like family protein	K07092			unbinned	0.001831025362484429	unbinned
@@ -1211,7 +1211,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 11985485	JPFHOD_011988207	contig_1106491	CDS	444	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0017084568889355412	unbinned
 12028636	JPFHOD_012031382	contig_1117069	CDS	798	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.0017084568889355412	unbinned
 5247544	JPFHOD_005248249	contig_0164262	CDS	489	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0017084568889355412	unbinned
-8238788	JPFHOD_008240420	contig_0448388	CDS	120		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0017084568889355412	unbinned
+8238788	JPFHOD_008240420	contig_0448388	CDS	120		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0017084568889355412	reductive (host taxonomy)
 2067991	JPFHOD_002068325	contig_0019558	CDS	198	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0017008046738221287	unbinned
 7246448	JPFHOD_007247768	contig_0335451	CDS	450		hypothetical protein	K00394			unbinned	0.0017008046738221287	unbinned
 11728642	JPFHOD_011731284	contig_1045629	CDS	738		hypothetical protein	K00394			unbinned	0.0017008046738221287	unbinned
@@ -1258,7 +1258,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4378448	JPFHOD_004379020	contig_0109826	CDS	426	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_747	Bacteroidota	Marinirhabdus	0.0014031997804452594	oxidative (host taxonomy)
 11703522	JPFHOD_011706156	contig_1039879	CDS	441	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0013946860720088247	unbinned
 1989547	JPFHOD_001989875	contig_0017881	CDS	1293		Sulfite reductase, dissimilatory-type subunit alpha	K11180	dastool-metabat_2539	Pseudomonadota	JASMHC01	0.0013528005004972245	oxidative (host taxonomy)
-2493975	JPFHOD_002494362	contig_0030050	CDS	540		DsrE/DsrF-like family	K09004	dastool-comebin_3590_sub		comebin_3590_sub	0.0013528005004972245	unbinned
+2493975	JPFHOD_002494362	contig_0030050	CDS	540		DsrE/DsrF-like family	K09004	dastool-comebin_3590_sub	Pseudomonadota	JBALVT01	0.0013528005004972245	oxidative (host taxonomy)
 8351034	JPFHOD_008352702	contig_0462428	CDS	1197	qmoC	Quinone-interacting membrane-bound oxidoreductase complex subunit QmoC	K16887			unbinned	0.0013528005004972245	unbinned
 8525264	JPFHOD_008526974	contig_0484844	CDS	483	dsrE2	Sulfur carrier protein DsrE2	K07092			unbinned	0.0013528005004972245	unbinned
 6587032	JPFHOD_006588165	contig_0271394	CDS	261	dsrE	DsrE family protein	K09004			unbinned	0.0013528005004972245	unbinned
@@ -1272,7 +1272,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10515504	JPFHOD_010517787	contig_0795643	CDS	306		hypothetical protein	K00395			unbinned	0.0013528005004972245	unbinned
 5798341	JPFHOD_005799216	contig_0204804	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.0013528005004972245	unbinned
 1163995	JPFHOD_001164183	contig_0005251	CDS	336		Sulfur relay protein TusB/DsrH	K07237	dastool-lorbin_161	Pseudomonadota	Marinomonas primoryensis	0.0013528005004972245	oxidative (host taxonomy)
-10443257	JPFHOD_010445523	contig_0782410	CDS	252		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0013528005004972245	unbinned
+10443257	JPFHOD_010445523	contig_0782410	CDS	252		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0013528005004972245	reductive (host taxonomy)
 7887909	JPFHOD_007889433	contig_0406058	CDS	327		DsrE/DsrF family oxidoreductase family protein				unbinned	0.0013308743601794897	unbinned
 4302823	JPFHOD_004303391	contig_0105586	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0013109657819892011	unbinned
 5463796	JPFHOD_005464560	contig_0179641	CDS	756	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0013109657819892011	unbinned
@@ -1288,7 +1288,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 1164094	JPFHOD_001164282	contig_0005252	CDS	462		DsrE/DsrF-like family protein		dastool-comebin_4331	Pseudomonadota	Anderseniella	0.0011062783366558265	oxidative (host taxonomy)
 10678100	JPFHOD_010680425	contig_0825926	CDS	339		DsrE/DsrF-like family protein				unbinned	0.0010918161097973602	unbinned
 10848980	JPFHOD_010851360	contig_0858870	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0010918161097973602	unbinned
-2321319	JPFHOD_002321689	contig_0025506	CDS	546		Intracellular sulfur oxidation protein, DsrE/DsrF family		dastool-comebin_291_sub		comebin_291_sub	0.0010918161097973602	unbinned
+2321319	JPFHOD_002321689	contig_0025506	CDS	546		Intracellular sulfur oxidation protein, DsrE/DsrF family		dastool-comebin_291_sub	Bacteroidota	Urechidicola	0.0010918161097973602	oxidative (host taxonomy)
 7369952	JPFHOD_007371332	contig_0348381	CDS	360	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.0010918161097973602	unbinned
 6439337	JPFHOD_006440427	contig_0258183	CDS	543	dsrE	DsrE family protein	K09004			unbinned	0.0010918161097973602	unbinned
 4216622	JPFHOD_004217178	contig_0100901	CDS	486	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0010918161097973602	unbinned
@@ -1299,7 +1299,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9245045	JPFHOD_009246969	contig_0585154	CDS	354		DsrE/DsrF-like family protein	K06039			unbinned	0.0010918161097973602	unbinned
 12154762	JPFHOD_012157539	contig_1148487	CDS	483	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0010918161097973602	unbinned
 10628845	JPFHOD_010631161	contig_0816679	CDS	360		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.0010706803922068445	unbinned
-2286423	JPFHOD_002286789	contig_0024643	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_4148_sub		comebin_4148_sub	0.0010706803922068445	unbinned
+2286423	JPFHOD_002286789	contig_0024643	CDS	540	dsrE	DsrE family protein	K09004	dastool-comebin_4148_sub	Bacteroidota	Dokdonia	0.0010706803922068445	oxidative (host taxonomy)
 6379963	JPFHOD_006381042	contig_0252930	CDS	1542	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0010706803922068445	unbinned
 4795245	JPFHOD_004795889	contig_0134569	CDS	366		DsrE/DsrF-like family protein				unbinned	0.0010706803922068445	unbinned
 9175493	JPFHOD_009177404	contig_0575011	CDS	1743	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0010429132956927848	unbinned
@@ -1313,10 +1313,10 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 917102	JPFHOD_000917239	contig_0003164	CDS	372	dsrE	Sulfur reduction protein DsrE	K07092	dastool-comebin_2956	Pseudomonadota	BMS3Bbin11 sp033791885	0.0008235174446029697	oxidative (host taxonomy)
 11023149	JPFHOD_011025577	contig_0893690	CDS	318		hypothetical protein	K00394			unbinned	0.0008154478439559006	unbinned
 12712068	JPFHOD_012714982	contig_1299953	CDS	201		hypothetical protein	K00394			unbinned	0.0008074508932913207	unbinned
-3626368	JPFHOD_003626854	contig_0071525	CDS	288		Sulfur relay protein TusB/DsrH	K07237	dastool-lorbin_319_sub		lorbin_319_sub	0.0008074508932913207	unbinned
+3626368	JPFHOD_003626854	contig_0071525	CDS	288		Sulfur relay protein TusB/DsrH	K07237	dastool-lorbin_319_sub	Pseudomonadota	Oceanicoccus	0.0008074508932913207	oxidative (host taxonomy)
 1989548	JPFHOD_001989876	contig_0017881	CDS	1086	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-metabat_2539	Pseudomonadota	JASMHC01	0.0008055742334207151	oxidative (host taxonomy)
 3065724	JPFHOD_003066160	contig_0048436	CDS	513	dsrE	DsrE family protein	K09004			unbinned	0.0008055742334207151	unbinned
-1830301	JPFHOD_001830610	contig_0014709	CDS	345	dsrE	Sulfurtransferase DsrE	K07235	dastool-lorbin_621_sub		lorbin_621_sub	0.0008055742334207151	unbinned
+1830301	JPFHOD_001830610	contig_0014709	CDS	345	dsrE	Sulfurtransferase DsrE	K07235	dastool-lorbin_621_sub	Pseudomonadota	SZUA-36	0.0008055742334207151	oxidative (host taxonomy)
 4442529	JPFHOD_004443123	contig_0113466	CDS	1098		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.0007975478097371986	unbinned
 6298620	JPFHOD_006299665	contig_0245859	CDS	240		Adenylylsulfate reductase alpha-subunit (EC)	K00394			unbinned	0.0007509683286016321	unbinned
 2990493	JPFHOD_002990922	contig_0045715	CDS	423		DsrE/DsrF-like family protein	K09004	dastool-comebin_2850	Pseudomonadota	Algicoccus sp937896225	0.0007509683286016321	oxidative (host taxonomy)
@@ -1326,7 +1326,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2104208	JPFHOD_002104547	contig_0020356	CDS	441	dsrE	DsrE family protein	K09004			unbinned	0.0007058468513357784	unbinned
 4160013	JPFHOD_004160564	contig_0097877	CDS	285	dsrE	Sulfur reduction protein DsrE				unbinned	0.0006973430360044124	unbinned
 6345816	JPFHOD_006346879	contig_0249956	CDS	216		hypothetical protein	K11181			unbinned	0.0006057392837645667	unbinned
-2367667	JPFHOD_002368044	contig_0026693	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-metabat_4203_sub		metabat_4203_sub	0.0005971853973818781	unbinned
+2367667	JPFHOD_002368044	contig_0026693	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-metabat_4203_sub	Pseudomonadota	REDSEA-S09-B13 sp002456995	0.0005971853973818781	oxidative (host taxonomy)
 6411115	JPFHOD_006412197	contig_0255680	CDS	336	dsrE	DsrE/DsrF-like family protein	K06039			unbinned	0.0005760180090694173	unbinned
 9533661	JPFHOD_009535679	contig_0629077	CDS	210		hypothetical protein	K00394			unbinned	0.0005691038906527972	unbinned
 7668823	JPFHOD_007670284	contig_0380967	CDS	723		hypothetical protein	K00394			unbinned	0.0	unbinned
@@ -1364,11 +1364,11 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6442123	JPFHOD_006443213	contig_0258413	CDS	504	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 6439949	JPFHOD_006441039	contig_0258235	CDS	447		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004	dastool-comebin_4689	Pseudomonadota	JBALVT01	0.0	oxidative (host taxonomy)
 6374541	JPFHOD_006375619	contig_0252470	CDS	216	dsrE	DsrE family protein				unbinned	0.0	unbinned
-6304541	JPFHOD_006305589	contig_0246360	CDS	378		DsrE/DsrF/DsrH-like protein	K09004	dastool-comebin_4320_sub		Polaribacter (Kaiju)	0.0	unbinned
+6304541	JPFHOD_006305589	contig_0246360	CDS	378		DsrE/DsrF/DsrH-like protein	K09004	dastool-comebin_4320_sub	Bacteroidota	Polaribacter	0.0	oxidative (host taxonomy)
 6272046	JPFHOD_006273089	contig_0243592	CDS	348	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 6236780	JPFHOD_006237819	contig_0240578	CDS	378	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 6170644	JPFHOD_006171661	contig_0234988	CDS	552	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-6170924	JPFHOD_006171941	contig_0235010	CDS	288		hypothetical protein	K00394	dastool-comebin_3202_sub		comebin_3202_sub	0.0	unbinned
+6170924	JPFHOD_006171941	contig_0235010	CDS	288		hypothetical protein	K00394	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.0	oxidative (host taxonomy)
 5673830	JPFHOD_005674664	contig_0195217	CDS	339		Nitrite/sulphite reductase 4Fe-4S domain-containing protein	K11180			unbinned	0.0	unbinned
 7674205	JPFHOD_007675667	contig_0381565	CDS	201		hypothetical protein	K00395			unbinned	0.0	unbinned
 6453666	JPFHOD_006454756	contig_0259448	CDS	303		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004			unbinned	0.0	unbinned
@@ -1387,11 +1387,11 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 7436879	JPFHOD_007438283	contig_0355567	CDS	423		DsrE/DsrF-like family				unbinned	0.0	unbinned
 7413091	JPFHOD_007414490	contig_0353029	CDS	537		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004			unbinned	0.0	unbinned
 7396901	JPFHOD_007398282	contig_0351276	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-4133132	JPFHOD_004133680	contig_0096439	CDS	633	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
+4133132	JPFHOD_004133680	contig_0096439	CDS	633	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
 4112178	JPFHOD_004112726	contig_0095339	CDS	1254	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.0	unbinned
 4112177	JPFHOD_004112725	contig_0095339	CDS	1092	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.0	unbinned
-4041564	JPFHOD_004042105	contig_0091683	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_3202_sub		comebin_3202_sub	0.0	unbinned
-4041563	JPFHOD_004042104	contig_0091683	CDS	1269	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-comebin_3202_sub		comebin_3202_sub	0.0	unbinned
+4041564	JPFHOD_004042105	contig_0091683	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.0	oxidative (host taxonomy)
+4041563	JPFHOD_004042104	contig_0091683	CDS	1269	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.0	oxidative (host taxonomy)
 3803186	JPFHOD_003803704	contig_0079831	CDS	870		hypothetical protein	K11181			unbinned	0.0	unbinned
 3803185	JPFHOD_003803703	contig_0079831	CDS	450		hypothetical protein	K11180			unbinned	0.0	unbinned
 7687134	JPFHOD_007688596	contig_0383024	CDS	408	dsrF	Intracellular sulfur oxidation protein DsrF	K07236			unbinned	0.0	unbinned
@@ -1401,8 +1401,8 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6809803	JPFHOD_006811006	contig_0292156	CDS	216		DsrE/DsrF-like family protein	K09004			unbinned	0.0	unbinned
 6808018	JPFHOD_006809221	contig_0291982	CDS	285	dsrH	DsrH like protein		dastool-comebin_1957	Pseudomonadota	Acinetobacter pittii	0.0	oxidative (host taxonomy)
 6760924	JPFHOD_006762102	contig_0287517	CDS	339	dsrE	DsrE family protein				unbinned	0.0	unbinned
-6678163	JPFHOD_006679319	contig_0279777	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_2095_sub		comebin_2095_sub	0.0	unbinned
-6677878	JPFHOD_006679034	contig_0279751	CDS	546		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004	dastool-comebin_291_sub		comebin_291_sub	0.0	unbinned
+6678163	JPFHOD_006679319	contig_0279777	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_2095_sub	Bacteroidota	CAJQLB01	0.0	oxidative (host taxonomy)
+6677878	JPFHOD_006679034	contig_0279751	CDS	546		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004	dastool-comebin_291_sub	Bacteroidota	Urechidicola	0.0	oxidative (host taxonomy)
 6653547	JPFHOD_006654692	contig_0277483	CDS	186	dsrE	DsrE family protein	K07236			unbinned	0.0	unbinned
 12204999	JPFHOD_012207778	contig_1161090	CDS	129		hypothetical protein	K00394			unbinned	0.0	unbinned
 12574310	JPFHOD_012577182	contig_1259860	CDS	303		hypothetical protein	K00394			unbinned	0.0	unbinned
@@ -1423,7 +1423,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4738523	JPFHOD_004739162	contig_0131060	CDS	363		hypothetical protein	K16886			unbinned	0.0	unbinned
 4738522	JPFHOD_004739161	contig_0131060	CDS	831		Hydrogenase iron-sulfur subunit	K16886			unbinned	0.0	unbinned
 4738521	JPFHOD_004739160	contig_0131060	CDS	162		hydrogenase iron-sulfur subunit	K16886			unbinned	0.0	unbinned
-4417056	JPFHOD_004417634	contig_0112004	CDS	114		hypothetical protein	K03390,K16887	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
+4417056	JPFHOD_004417634	contig_0112004	CDS	114		hypothetical protein	K03390,K16887	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
 2639488	JPFHOD_002639891	contig_0034238	CDS	1158		4Fe-4S ferredoxin-type domain-containing protein	K16887			unbinned	0.0	unbinned
 4754293	JPFHOD_004754932	contig_0132043	CDS	465	dsrE	DsrE family protein				unbinned	0.0	unbinned
 7813341	JPFHOD_007814848	contig_0397413	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
@@ -1453,7 +1453,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4257701	JPFHOD_004258268	contig_0103129	CDS	453	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 4253345	JPFHOD_004253912	contig_0102897	CDS	432		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004			unbinned	0.0	unbinned
 4956229	JPFHOD_004956890	contig_0144809	CDS	204		DsrE/DsrF/DrsH-like family protein				unbinned	0.0	unbinned
-4925028	JPFHOD_004925687	contig_0142795	CDS	450		DsrE/DsrF/DsrH-like protein		dastool-comebin_4241_sub		Marinobacter (Kaiju)	0.0	unbinned
+4925028	JPFHOD_004925687	contig_0142795	CDS	450		DsrE/DsrF/DsrH-like protein		dastool-comebin_4241_sub	Pseudomonadota	Marinobacter	0.0	oxidative (host taxonomy)
 4738524	JPFHOD_004739163	contig_0131060	CDS	171		hypothetical protein	K16886			unbinned	0.0	unbinned
 4884951	JPFHOD_004885602	contig_0140224	CDS	477	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 4855624	JPFHOD_004856272	contig_0138385	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
@@ -1472,7 +1472,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 5753933	JPFHOD_005754803	contig_0201366	CDS	522	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 5735638	JPFHOD_005736490	contig_0199969	CDS	435	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 5724456	JPFHOD_005725307	contig_0199110	CDS	522	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-5697410	JPFHOD_005698249	contig_0197047	CDS	366	dsrE	DsrE family protein	K07235	dastool-comebin_4487_sub		comebin_4487_sub	0.0	unbinned
+5697410	JPFHOD_005698249	contig_0197047	CDS	366	dsrE	DsrE family protein	K07235	dastool-comebin_4487_sub	Pseudomonadota	Marinicella	0.0	oxidative (host taxonomy)
 5639630	JPFHOD_005640449	contig_0192624	CDS	435		DsrE/DsrF-like family protein	K09004	dastool-comebin_2025	Pseudomonadota	ASP10-02a sp905182035	0.0	oxidative (host taxonomy)
 12641530	JPFHOD_012644426	contig_1279123	CDS	453	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 12641529	JPFHOD_012644425	contig_1279123	CDS	1473		Adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
@@ -1488,7 +1488,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10849457	JPFHOD_010851837	contig_0858968	CDS	261	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 5586721	JPFHOD_005587525	contig_0188669	CDS	456	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 11948808	JPFHOD_011951518	contig_1097653	CDS	1002		hypothetical protein	K00394			unbinned	0.0	unbinned
-6103572	JPFHOD_006104569	contig_0229375	CDS	531	dsrE	DsrE family protein	K09004	dastool-comebin_2725_sub		comebin_2725_sub	0.0	unbinned
+6103572	JPFHOD_006104569	contig_0229375	CDS	531	dsrE	DsrE family protein	K09004	dastool-comebin_2725_sub	Bacteroidota	JAJRXG01	0.0	oxidative (host taxonomy)
 12574312	JPFHOD_012577184	contig_1259860	CDS	180		hypothetical protein	K00394			unbinned	0.0	unbinned
 4987067	JPFHOD_004987728	contig_0146799	CDS	441	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 4975721	JPFHOD_004976382	contig_0146058	CDS	480		DsrE/DsrF-like family protein	K09004			unbinned	0.0	unbinned
@@ -1539,8 +1539,8 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10485241	JPFHOD_010487517	contig_0790083	CDS	414	dsrF	Intracellular sulfur oxidation protein DsrF	K07236			unbinned	0.0	unbinned
 7430332	JPFHOD_007431736	contig_0354866	CDS	279		hypothetical protein	K00394			unbinned	0.0	unbinned
 7430331	JPFHOD_007431735	contig_0354866	CDS	144		hypothetical protein	K00394			unbinned	0.0	unbinned
-7161328	JPFHOD_007162626	contig_0326703	CDS	1416	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_692_sub		lorbin_692_sub	0.0	unbinned
-7161327	JPFHOD_007162625	contig_0326703	CDS	267		hypothetical protein	K00394	dastool-lorbin_692_sub		lorbin_692_sub	0.0	unbinned
+7161328	JPFHOD_007162626	contig_0326703	CDS	1416	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_692_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
+7161327	JPFHOD_007162625	contig_0326703	CDS	267		hypothetical protein	K00394	dastool-lorbin_692_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
 11443023	JPFHOD_011445575	contig_0981705	CDS	306		hypothetical protein	K00394			unbinned	0.0	unbinned
 11443022	JPFHOD_011445574	contig_0981705	CDS	789	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 11443021	JPFHOD_011445573	contig_0981705	CDS	432	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
@@ -1548,17 +1548,17 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 11715292	JPFHOD_011717929	contig_1042556	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 11686286	JPFHOD_011688909	contig_1035942	CDS	327		4Fe-4S ferredoxin	K00395,K02572,K03616			unbinned	0.0	unbinned
 11659457	JPFHOD_011662073	contig_1029856	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
-9922006	JPFHOD_009924124	contig_0691575	CDS	189		DsrE/DsrF/DrsH-like family protein		dastool-comebin_3111_sub		Polaribacter (Kaiju)	0.0	unbinned
+9922006	JPFHOD_009924124	contig_0691575	CDS	189		DsrE/DsrF/DrsH-like family protein		dastool-comebin_3111_sub	Bacteroidota	Polaribacter	0.0	oxidative (host taxonomy)
 11558374	JPFHOD_011560964	contig_1007130	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 11527482	JPFHOD_011530061	contig_1000312	CDS	1857	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 11527481	JPFHOD_011530060	contig_1000312	CDS	399		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 11505631	JPFHOD_011508203	contig_0995481	CDS	165		hypothetical protein	K00394			unbinned	0.0	unbinned
 11490502	JPFHOD_011493069	contig_0992104	CDS	927		hypothetical protein	K00394			unbinned	0.0	unbinned
-7161326	JPFHOD_007162624	contig_0326703	CDS	234		Adenylylsulfate reductase alpha-subunit (EC)	K00394	dastool-lorbin_692_sub		lorbin_692_sub	0.0	unbinned
+7161326	JPFHOD_007162624	contig_0326703	CDS	234		Adenylylsulfate reductase alpha-subunit (EC)	K00394	dastool-lorbin_692_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
 7106073	JPFHOD_007107342	contig_0321110	CDS	327		4Fe-4S ferredoxin-type domain-containing protein	K00395,K02572,K03616			unbinned	0.0	unbinned
 2639495	JPFHOD_002639898	contig_0034238	CDS	1263	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180			unbinned	0.0	unbinned
 10067386	JPFHOD_010069535	contig_0716029	CDS	567	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-10021125	JPFHOD_010023269	contig_0708188	CDS	279	dsrE	DsrE family protein		dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+10021125	JPFHOD_010023269	contig_0708188	CDS	279	dsrE	DsrE family protein		dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 9975091	JPFHOD_009977223	contig_0700494	CDS	303	dsrE	DsrE family protein	K06039			unbinned	0.0	unbinned
 11659456	JPFHOD_011662072	contig_1029856	CDS	1602	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 11845783	JPFHOD_011848462	contig_1073040	CDS	540	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
@@ -1595,7 +1595,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10889532	JPFHOD_010891917	contig_0866886	CDS	411	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 10881824	JPFHOD_010884207	contig_0865370	CDS	417	dsrE2	Sulfur carrier protein DsrE2	K07092			unbinned	0.0	unbinned
 10881051	JPFHOD_010883434	contig_0865220	CDS	474		DsrE/DsrF-like family protein	K09004			unbinned	0.0	unbinned
-11949593	JPFHOD_011952303	contig_1097844	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-comebin_400_sub		comebin_400_sub	0.0	unbinned
+11949593	JPFHOD_011952303	contig_1097844	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-comebin_400_sub	Bacteroidota	Cellulophaga	0.0	oxidative (host taxonomy)
 10728685	JPFHOD_010731021	contig_0835615	CDS	432	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 11764622	JPFHOD_011767272	contig_1053988	CDS	513	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 11753645	JPFHOD_011756292	contig_1051430	CDS	162	dsrE	DsrE family protein				unbinned	0.0	unbinned
@@ -1628,7 +1628,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8078347	JPFHOD_008079920	contig_0428675	CDS	504	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 8042201	JPFHOD_008043754	contig_0424333	CDS	264		DsrE/DsrF/DrsH-like family protein				unbinned	0.0	unbinned
 8040941	JPFHOD_008042494	contig_0424183	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-8038041	JPFHOD_008039594	contig_0423834	CDS	540		DsrE/DsrF-like family protein	K09004	dastool-comebin_400_sub		comebin_400_sub	0.0	unbinned
+8038041	JPFHOD_008039594	contig_0423834	CDS	540		DsrE/DsrF-like family protein	K09004	dastool-comebin_400_sub	Bacteroidota	Cellulophaga	0.0	oxidative (host taxonomy)
 7978735	JPFHOD_007980271	contig_0416736	CDS	438	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 7711718	JPFHOD_007713195	contig_0385818	CDS	546		DsrE/DsrF-like family protein	K09004			unbinned	0.0	unbinned
 4409172	JPFHOD_004409749	contig_0111565	CDS	456	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
@@ -1654,7 +1654,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 11774424	JPFHOD_011777078	contig_1056270	CDS	684	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 11774423	JPFHOD_011777077	contig_1056270	CDS	747	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 11736104	JPFHOD_011738748	contig_1047364	CDS	1893	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
-7587453	JPFHOD_007588892	contig_0371931	CDS	345	dsrE	Sulfur reduction protein DsrE	K06039	dastool-comebin_3629_sub		comebin_3629_sub	0.0	unbinned
+7587453	JPFHOD_007588892	contig_0371931	CDS	345	dsrE	Sulfur reduction protein DsrE	K06039	dastool-comebin_3629_sub	Thermoplasmatota	MGIIa-L1	0.0	oxidative (host taxonomy)
 11858974	JPFHOD_011861655	contig_1076189	CDS	186		hypothetical protein	K00394			unbinned	0.0	unbinned
 4497489	JPFHOD_004498086	contig_0116621	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 4497488	JPFHOD_004498085	contig_0116621	CDS	1242	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
@@ -1665,7 +1665,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9022919	JPFHOD_009024788	contig_0553025	CDS	366	dsrE	Sulfur reduction protein DsrE	K07092			unbinned	0.0	unbinned
 8979593	JPFHOD_008981452	contig_0546835	CDS	297	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_1502	Pseudomonadota	SZUA-36	0.0	oxidative (host taxonomy)
 8960041	JPFHOD_008961900	contig_0544083	CDS	432		DsrE/DsrF-like family protein	K09004			unbinned	0.0	unbinned
-2367666	JPFHOD_002368043	contig_0026693	CDS	1278	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-metabat_4203_sub		metabat_4203_sub	0.0	unbinned
+2367666	JPFHOD_002368043	contig_0026693	CDS	1278	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-metabat_4203_sub	Pseudomonadota	REDSEA-S09-B13 sp002456995	0.0	oxidative (host taxonomy)
 8889507	JPFHOD_008891339	contig_0534195	CDS	345	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.0	unbinned
 9714995	JPFHOD_009717067	contig_0657783	CDS	252		DsrE/DsrF/DrsH-like family protein				unbinned	0.0	unbinned
 9707882	JPFHOD_009709951	contig_0656644	CDS	534	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
@@ -1689,7 +1689,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8678579	JPFHOD_008680343	contig_0505249	CDS	420	dsrE	Sulfur reduction protein DsrE	K06039			unbinned	0.0	unbinned
 8592174	JPFHOD_008593919	contig_0493694	CDS	111		DsrE/DsrF/DrsH-like family protein				unbinned	0.0	unbinned
 8574741	JPFHOD_008576483	contig_0491402	CDS	213	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-8556602	JPFHOD_008558329	contig_0489014	CDS	411	dsrE	DsrE family protein	K09004	dastool-metabat_5394_sub		metabat_5394_sub	0.0	unbinned
+8556602	JPFHOD_008558329	contig_0489014	CDS	411	dsrE	DsrE family protein	K09004	dastool-metabat_5394_sub	Bacteroidota	Maribacter_C	0.0	oxidative (host taxonomy)
 11443025	JPFHOD_011445577	contig_0981705	CDS	381		hypothetical protein	K00394			unbinned	0.0	unbinned
 9325218	JPFHOD_009327178	contig_0597172	CDS	321	dsrE	Sulfur reduction protein DsrE	K06039	dastool-comebin_4588	Thermoplasmatota	CG-Epi1 sp029936395	0.0	oxidative (host taxonomy)
 9302951	JPFHOD_009304895	contig_0593786	CDS	570		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.0	unbinned
@@ -1726,7 +1726,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10495101	JPFHOD_010497381	contig_0791916	CDS	435		hypothetical protein	K16887	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 4754413	JPFHOD_004755052	contig_0132050	CDS	384		hypothetical protein	K00394			unbinned	0.0	unbinned
 9336719	JPFHOD_009338681	contig_0598907	CDS	663		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.0	unbinned
-3860803	JPFHOD_003861329	contig_0082619	CDS	465	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3202_sub		comebin_3202_sub	0.0	unbinned
+3860803	JPFHOD_003861329	contig_0082619	CDS	465	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.0	oxidative (host taxonomy)
 3396573	JPFHOD_003397048	contig_0061445	CDS	1752		Fumarate reductase flavoprotein subunit/ Succinate dehydrogenase	K00394	dastool-metabat_2807	Pseudomonadota	CANLBN01	0.0	oxidative (host taxonomy)
 3324035	JPFHOD_003324505	contig_0058435	CDS	1869	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 3324034	JPFHOD_003324504	contig_0058435	CDS	480	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
@@ -1743,11 +1743,11 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 9532003	JPFHOD_009534021	contig_0628823	CDS	480	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 9532002	JPFHOD_009534020	contig_0628823	CDS	1407	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 9491489	JPFHOD_009493502	contig_0622528	CDS	369		4Fe-4S ferredoxin-type domain-containing protein	K00395,K02572,K03616			unbinned	0.0	unbinned
-9460902	JPFHOD_009462896	contig_0617804	CDS	480		hypothetical protein	K00394	dastool-lorbin_654_sub		lorbin_654_sub	0.0	unbinned
+9460902	JPFHOD_009462896	contig_0617804	CDS	480		hypothetical protein	K00394	dastool-lorbin_654_sub	Bacteroidota	Flavobacteriaceae	0.0	oxidative (host taxonomy)
 1192038	JPFHOD_001192238	contig_0005534	CDS	1884	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_138	Pseudomonadota	GCA-001735895 sp963934675	0.0	oxidative (host taxonomy)
-1010505	JPFHOD_001010662	contig_0003873	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+1010505	JPFHOD_001010662	contig_0003873	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 922086	JPFHOD_000922224	contig_0003200	CDS	369		hypothetical protein	K00394	dastool-comebin_159	Pseudomonadota	UBA1847	0.0	oxidative (host taxonomy)
-1422689	JPFHOD_001422926	contig_0008263	CDS	513		DsrE/DsrF-like family protein	K09004	dastool-metabat_7675_sub		metabat_7675_sub	0.0	unbinned
+1422689	JPFHOD_001422926	contig_0008263	CDS	513		DsrE/DsrF-like family protein	K09004	dastool-metabat_7675_sub	Pseudomonadota	HTCC2207 sp963855085	0.0	oxidative (host taxonomy)
 1394956	JPFHOD_001395188	contig_0007888	CDS	525	dsrE	Sulfur reduction protein DsrE	K09004	dastool-vamb_3241	Bacteroidota	JANQUM01	0.0	oxidative (host taxonomy)
 5406567	JPFHOD_005407315	contig_0175526	CDS	207		hypothetical protein	K00394			unbinned	0.0	unbinned
 1800583	JPFHOD_001800886	contig_0014158	CDS	303		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-comebin_025	Pseudomonadota	CANLBN01	0.0	oxidative (host taxonomy)
@@ -1788,18 +1788,18 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 1724333	JPFHOD_001724618	contig_0012815	CDS	537	dsrE	DsrE family protein	K09004	dastool-comebin_3801	Pseudomonadota	Opacimonas sp002292215	0.0	oxidative (host taxonomy)
 1719480	JPFHOD_001719765	contig_0012731	CDS	540	dsrE	DsrE family protein	K09004	dastool-metabat_5310	Bacteroidota	MAG-120531 sp963934855	0.0	oxidative (host taxonomy)
 1591694	JPFHOD_001591961	contig_0010682	CDS	447		DsrE/DsrF-like family protein		dastool-lorbin_206	Pseudomonadota	Pseudoalteromonas arctica	0.0	oxidative (host taxonomy)
-9460901	JPFHOD_009462895	contig_0617804	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_654_sub		lorbin_654_sub	0.0	unbinned
+9460901	JPFHOD_009462895	contig_0617804	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_654_sub	Bacteroidota	Flavobacteriaceae	0.0	oxidative (host taxonomy)
 9425875	JPFHOD_009427862	contig_0612447	CDS	126		hypothetical protein	K00394			unbinned	0.0	unbinned
-1954720	JPFHOD_001955044	contig_0017156	CDS	468	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-lorbin_459_sub		lorbin_459_sub	0.0	unbinned
+1954720	JPFHOD_001955044	contig_0017156	CDS	468	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-lorbin_459_sub	Pseudomonadota	GCA-2401735	0.0	oxidative (host taxonomy)
 1944818	JPFHOD_001945142	contig_0016954	CDS	528		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-comebin_2624	Bacteroidota	Maribacter	0.0	oxidative (host taxonomy)
-1906369	JPFHOD_001906691	contig_0016182	CDS	357	dsrE	tRNA U34 sulfur transfer complex TusBCD TusD component, DsrE family	K06039	dastool-comebin_2075_sub		Photobacterium (Kaiju)	0.0	unbinned
+1906369	JPFHOD_001906691	contig_0016182	CDS	357	dsrE	tRNA U34 sulfur transfer complex TusBCD TusD component, DsrE family	K06039	dastool-comebin_2075_sub	Pseudomonadota	Photobacterium	0.0	oxidative (host taxonomy)
 1867657	JPFHOD_001867974	contig_0015416	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_653	Bacteroidota	JABDMH01	0.0	oxidative (host taxonomy)
-1836218	JPFHOD_001836528	contig_0014817	CDS	357	dsrF	Sulfur oxidation protein DsrF	K07236	dastool-metabat_9595_sub		Glaciecola (Kaiju)	0.0	unbinned
-1830300	JPFHOD_001830609	contig_0014709	CDS	381	dsrF	Intracellular sulfur oxidation protein DsrF	K07236	dastool-lorbin_621_sub		lorbin_621_sub	0.0	unbinned
+1836218	JPFHOD_001836528	contig_0014817	CDS	357	dsrF	Sulfur oxidation protein DsrF	K07236	dastool-metabat_9595_sub	Pseudomonadota	Glaciecola sp002836745	0.0	oxidative (host taxonomy)
+1830300	JPFHOD_001830609	contig_0014709	CDS	381	dsrF	Intracellular sulfur oxidation protein DsrF	K07236	dastool-lorbin_621_sub	Pseudomonadota	SZUA-36	0.0	oxidative (host taxonomy)
 12871228	JPFHOD_012874198	contig_1349382	CDS	1077	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.0	unbinned
 2639485	JPFHOD_002639888	contig_0034238	CDS	1971	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 2639484	JPFHOD_002639887	contig_0034238	CDS	501	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
-2849531	JPFHOD_002849951	contig_0040837	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_480_sub		Candidatus Pelagibacter (Kaiju)	0.0	unbinned
+2849531	JPFHOD_002849951	contig_0040837	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_480_sub	Pseudomonadota	Pelagibacter sp905620495	0.0	oxidative (host taxonomy)
 2792537	JPFHOD_002792950	contig_0038973	CDS	480	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_2025	Pseudomonadota	ASP10-02a sp905182035	0.0	oxidative (host taxonomy)
 409499	JPFHOD_000409568	contig_0000686	CDS	546	dsrE	DsrE family protein	K09004	dastool-vamb_3361	Pseudomonadota	Paraglaciecola polaris	0.0	oxidative (host taxonomy)
 3150093	JPFHOD_003150537	contig_0051594	CDS	1059	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
@@ -1812,27 +1812,27 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 551678	JPFHOD_000551767	contig_0001165	CDS	426	dsrE	Sulfur reduction protein DsrE		dastool-lorbin_138	Pseudomonadota	GCA-001735895 sp963934675	0.0	oxidative (host taxonomy)
 488995	JPFHOD_000489071	contig_0000932	CDS	357	dsrE	tRNA U34 sulfur transfer complex TusBCD TusD component, DsrE family	K06039			unbinned	0.0	unbinned
 2783773	JPFHOD_002784185	contig_0038690	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
-2164094	JPFHOD_002164449	contig_0021715	CDS	375		hypothetical protein	K00394	dastool-lorbin_574_sub		Candidatus Pelagibacter (Kaiju)	0.0	unbinned
+2164094	JPFHOD_002164449	contig_0021715	CDS	375		hypothetical protein	K00394	dastool-lorbin_574_sub	Pseudomonadota	Pelagibacter	0.0	oxidative (host taxonomy)
 2134801	JPFHOD_002135144	contig_0021045	CDS	216		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394			unbinned	0.0	unbinned
-765954	JPFHOD_000766076	contig_0002205	CDS	366	dsrE	DsrE family protein		dastool-lorbin_558_sub		Lutimonas (Kaiju)	0.0	unbinned
+765954	JPFHOD_000766076	contig_0002205	CDS	366	dsrE	DsrE family protein		dastool-lorbin_558_sub	Bacteroidota	Lutimonas	0.0	oxidative (host taxonomy)
 764631	JPFHOD_000764752	contig_0002197	CDS	426		DsrE/DsrF-like family protein		dastool-semibin_125	Bacteroidota	Psychroserpens	0.0	oxidative (host taxonomy)
 763369	JPFHOD_000763490	contig_0002190	CDS	423	dsrE	DsrE family protein	K09004	dastool-lorbin_138	Pseudomonadota	GCA-001735895 sp963934675	0.0	oxidative (host taxonomy)
 759997	JPFHOD_000760118	contig_0002170	CDS	510	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 10337711	JPFHOD_010339945	contig_0763366	CDS	216		hypothetical protein	K00394	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 9915348	JPFHOD_009917464	contig_0690469	CDS	360	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
-1010452	JPFHOD_001010609	contig_0003873	CDS	1074	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+1010452	JPFHOD_001010609	contig_0003873	CDS	1074	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181	dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 12748144	JPFHOD_012751069	contig_1310827	CDS	504		Intracellular sulfur oxidation DsrE/DsrF family protein				unbinned	0.0	unbinned
 11707021	JPFHOD_011709655	contig_1040677	CDS	432	dsrE	Sulfur reduction protein DsrE				unbinned	0.0	unbinned
 3069318	JPFHOD_003069754	contig_0048569	CDS	1734		Fumarate reductase flavoprotein subunit/ Succinate dehydrogenase	K00394			unbinned	0.0	unbinned
 12730474	JPFHOD_012733394	contig_1305508	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-7161329	JPFHOD_007162627	contig_0326703	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_692_sub		lorbin_692_sub	0.0	unbinned
+7161329	JPFHOD_007162627	contig_0326703	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_692_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
 11991915	JPFHOD_011994637	contig_1108042	CDS	552	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 11954776	JPFHOD_011957488	contig_1099091	CDS	369	dsrE	DsrE family protein				unbinned	0.0	unbinned
 7299983	JPFHOD_007301338	contig_0341049	CDS	330	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 12237122	JPFHOD_012239908	contig_1169268	CDS	324	dsrE	DsrE family protein	K06039			unbinned	0.0	unbinned
 12235105	JPFHOD_012237891	contig_1168752	CDS	378	dsrE	Sulfur reduction protein DsrE				unbinned	0.0	unbinned
 2673524	JPFHOD_002673928	contig_0035264	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-comebin_1773	Pseudomonadota	SYDM01	0.0	oxidative (host taxonomy)
-12182515	JPFHOD_012185293	contig_1155462	CDS	438	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3749_sub		comebin_3749_sub	0.0	unbinned
+12182515	JPFHOD_012185293	contig_1155462	CDS	438	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3749_sub	Pseudomonadota	Tateyamaria	0.0	oxidative (host taxonomy)
 12177754	JPFHOD_012180532	contig_1154256	CDS	495		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.0	unbinned
 2275326	JPFHOD_002275692	contig_0024368	CDS	99		hypothetical protein	K11181			unbinned	0.0	unbinned
 13124624	JPFHOD_013127667	contig_1438708	CDS	378	dsrE	Sulfur reduction protein DsrE				unbinned	0.0	unbinned
@@ -1845,7 +1845,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 570913	JPFHOD_000571003	contig_0001243	CDS	399	dsrE	Putative sulfurtransferase DsrE	K07235	dastool-metabat_2807	Pseudomonadota	CANLBN01	0.0	oxidative (host taxonomy)
 12218439	JPFHOD_012221220	contig_1164480	CDS	339	dsrE	DsrE family protein				unbinned	0.0	unbinned
 1051663	JPFHOD_001051832	contig_0004216	CDS	396	dsrE	Sulfur reduction protein DsrE	K09004	dastool-lorbin_121	Pseudomonadota	Planktomarina arctica	0.0	oxidative (host taxonomy)
-1010431	JPFHOD_001010588	contig_0003873	CDS	480	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+1010431	JPFHOD_001010588	contig_0003873	CDS	480	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 944586	JPFHOD_000944732	contig_0003363	CDS	156	dsrE	DsrE family protein		dastool-comebin_2557	Pseudomonadota	Glaciecola	0.0	oxidative (host taxonomy)
 3541160	JPFHOD_003541645	contig_0067702	CDS	129		hypothetical protein	K00395			unbinned	0.0	unbinned
 3888365	JPFHOD_003888896	contig_0083975	CDS	120		hypothetical protein	K00394			unbinned	0.0	unbinned
@@ -1860,28 +1860,28 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 3150094	JPFHOD_003150538	contig_0051594	CDS	531		Fumarate reductase/succinate dehydrogenase flavoprotein-like C-terminal domain-containing protein	K00394			unbinned	0.0	unbinned
 217675	JPFHOD_000217703	contig_0000221	CDS	276	dsrH	Sulfur relay protein DsrH	K07237	dastool-semibin_010	Pseudomonadota	JALJPB01 sp963933115	0.0	oxidative (host taxonomy)
 1235259	JPFHOD_001235467	contig_0005986	CDS	360	dsrE	DsrE family protein	K07092			unbinned	0.0	unbinned
-1227854	JPFHOD_001228060	contig_0005908	CDS	450		DsrE/DsrF-like family protein	K09004	dastool-comebin_160_sub		comebin_160_sub	0.0	unbinned
+1227854	JPFHOD_001228060	contig_0005908	CDS	450		DsrE/DsrF-like family protein	K09004	dastool-comebin_160_sub	Pseudomonadota	Ascidiaceihabitans	0.0	oxidative (host taxonomy)
 1213720	JPFHOD_001213923	contig_0005755	CDS	513	dsrE	Sulfur reduction protein DsrE	K09004	dastool-metabat_7467	Pseudomonadota	ASP10-02a sp937773555	0.0	oxidative (host taxonomy)
 1209991	JPFHOD_001210194	contig_0005716	CDS	549	dsrE	DsrE family protein	K09004	dastool-metabat_5597	Bacteroidota	Maribacter	0.0	oxidative (host taxonomy)
 1181577	JPFHOD_001181772	contig_0005429	CDS	504	dsrE	DsrE family protein	K09004	dastool-comebin_3582	Pseudomonadota	UBA9214 sp905480305	0.0	oxidative (host taxonomy)
-1668602	JPFHOD_001668883	contig_0011889	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_358_sub		lorbin_358_sub	0.0	unbinned
-1668601	JPFHOD_001668882	contig_0011889	CDS	1854	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_358_sub		lorbin_358_sub	0.0	unbinned
+1668602	JPFHOD_001668883	contig_0011889	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395	dastool-lorbin_358_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
+1668601	JPFHOD_001668882	contig_0011889	CDS	1854	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_358_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
 10136292	JPFHOD_010138463	contig_0727868	CDS	441	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
-3005705	JPFHOD_003006138	contig_0046255	CDS	1497	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-vamb_566_sub		vamb_566_sub	0.0	unbinned
-3005704	JPFHOD_003006137	contig_0046255	CDS	351		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394	dastool-vamb_566_sub		vamb_566_sub	0.0	unbinned
-3005703	JPFHOD_003006136	contig_0046255	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-vamb_566_sub		vamb_566_sub	0.0	unbinned
+3005705	JPFHOD_003006138	contig_0046255	CDS	1497	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-vamb_566_sub	Pseudomonadota	Pseudothioglobus sp029936515	0.0	oxidative (host taxonomy)
+3005704	JPFHOD_003006137	contig_0046255	CDS	351		FAD-dependent oxidoreductase 2 FAD binding domain-containing protein	K00394	dastool-vamb_566_sub	Pseudomonadota	Pseudothioglobus sp029936515	0.0	oxidative (host taxonomy)
+3005703	JPFHOD_003006136	contig_0046255	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395	dastool-vamb_566_sub	Pseudomonadota	Pseudothioglobus sp029936515	0.0	oxidative (host taxonomy)
 2929849	JPFHOD_002930277	contig_0043583	CDS	195		hypothetical protein	K00395			unbinned	0.0	unbinned
 2929848	JPFHOD_002930276	contig_0043583	CDS	336		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 418101	JPFHOD_000418171	contig_0000712	CDS	435	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 418098	JPFHOD_000418168	contig_0000712	CDS	465	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-751336	JPFHOD_000751457	contig_0002123	CDS	492	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+751336	JPFHOD_000751457	contig_0002123	CDS	492	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 713334	JPFHOD_000713451	contig_0001911	CDS	402	dsrF	Intracellular sulfur oxidation protein DsrF	K07236	dastool-lorbin_138	Pseudomonadota	GCA-001735895 sp963934675	0.0	oxidative (host taxonomy)
 683986	JPFHOD_000684097	contig_0001762	CDS	456		DsrE/DsrF-like family protein	K09004	dastool-metabat_2807	Pseudomonadota	CANLBN01	0.0	oxidative (host taxonomy)
 9727966	JPFHOD_009730038	contig_0659840	CDS	447	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 1150398	JPFHOD_001150583	contig_0005119	CDS	303		Intracellular sulfur oxidation DsrE/DsrF family protein	K09004	dastool-metabat_2807	Pseudomonadota	CANLBN01	0.0	oxidative (host taxonomy)
 9722696	JPFHOD_009724768	contig_0658998	CDS	270		hypothetical protein	K00394			unbinned	0.0	unbinned
 9533662	JPFHOD_009535680	contig_0629077	CDS	432		hypothetical protein	K00394			unbinned	0.0	unbinned
-803517	JPFHOD_000803644	contig_0002427	CDS	279	dsrE	DsrE family protein		dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+803517	JPFHOD_000803644	contig_0002427	CDS	279	dsrE	DsrE family protein		dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 201933	JPFHOD_000201958	contig_0000193	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 150794	JPFHOD_000150813	contig_0000115	CDS	285	dsrE	Sulfur reduction protein DsrE		dastool-lorbin_055	Pseudomonadota	Thioglobus_A sp028352435	0.0	oxidative (host taxonomy)
 3150092	JPFHOD_003150536	contig_0051594	CDS	471	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
@@ -1914,12 +1914,12 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6945577	JPFHOD_006946820	contig_0305220	CDS	267		hypothetical protein	K16886			unbinned	0.0	unbinned
 6928176	JPFHOD_006929413	contig_0303524	CDS	369		hypothetical protein	K16887			unbinned	0.0	unbinned
 3952889	JPFHOD_003953425	contig_0087208	CDS	264	dsrE	Sulfur reduction protein DsrE				unbinned	0.0	unbinned
-8238795	JPFHOD_008240427	contig_0448388	CDS	630	qmoC	quinone-interacting membrane-bound oxidoreductase complex subunit QmoC	K16887	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
-8238794	JPFHOD_008240426	contig_0448388	CDS	513		hypothetical protein	K16887	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
-8238793	JPFHOD_008240425	contig_0448388	CDS	267		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
-8238792	JPFHOD_008240424	contig_0448388	CDS	417		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
-8238791	JPFHOD_008240423	contig_0448388	CDS	213		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
-8238789	JPFHOD_008240421	contig_0448388	CDS	189		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
+8238795	JPFHOD_008240427	contig_0448388	CDS	630	qmoC	quinone-interacting membrane-bound oxidoreductase complex subunit QmoC	K16887	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
+8238794	JPFHOD_008240426	contig_0448388	CDS	513		hypothetical protein	K16887	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
+8238793	JPFHOD_008240425	contig_0448388	CDS	267		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
+8238792	JPFHOD_008240424	contig_0448388	CDS	417		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
+8238791	JPFHOD_008240423	contig_0448388	CDS	213		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
+8238789	JPFHOD_008240421	contig_0448388	CDS	189		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
 3005786	JPFHOD_003006219	contig_0046259	CDS	477		DsrE/DsrF-like family protein	K09004			unbinned	0.0	unbinned
 3000178	JPFHOD_003000611	contig_0046058	CDS	339	dsrE	Sulfur reduction protein DsrE		dastool-vamb_1189	Verrucomicrobiota	JACNJL01 sp937775205	0.0	oxidative (host taxonomy)
 10185219	JPFHOD_010187400	contig_0736364	CDS	255		hypothetical protein	K11180			unbinned	0.0	unbinned
@@ -1930,7 +1930,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 6079862	JPFHOD_006080857	contig_0227419	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 6079861	JPFHOD_006080856	contig_0227419	CDS	270	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 3604128	JPFHOD_003604614	contig_0070521	CDS	543	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
-3558444	JPFHOD_003558929	contig_0068469	CDS	597	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3202_sub		comebin_3202_sub	0.0	unbinned
+3558444	JPFHOD_003558929	contig_0068469	CDS	597	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_3202_sub	Pseudomonadota	UBA11791	0.0	oxidative (host taxonomy)
 3519363	JPFHOD_003519846	contig_0066746	CDS	354	dsrE	Sulfur reduction protein DsrE	K06039			unbinned	0.0	unbinned
 3492801	JPFHOD_003493284	contig_0065570	CDS	546	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 3490908	JPFHOD_003491391	contig_0065490	CDS	561	dsrE	Sulfur reduction protein DsrE	K09004	dastool-comebin_2025	Pseudomonadota	ASP10-02a sp905182035	0.0	oxidative (host taxonomy)
@@ -1952,14 +1952,14 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 4097204	JPFHOD_004097746	contig_0094550	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 5880671	JPFHOD_005881575	contig_0211288	CDS	321		hypothetical protein	K16885	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 5517150	JPFHOD_005517942	contig_0183544	CDS	1158		4Fe-4S ferredoxin-type domain-containing protein	K16887			unbinned	0.0	unbinned
-4155839	JPFHOD_004156390	contig_0097654	CDS	447		DsrE/DsrF-like family protein	K09004	dastool-comebin_4325_sub		Planktomarina (Kaiju)	0.0	unbinned
+4155839	JPFHOD_004156390	contig_0097654	CDS	447		DsrE/DsrF-like family protein	K09004	dastool-comebin_4325_sub	Pseudomonadota	Planktomarina sp905182195	0.0	oxidative (host taxonomy)
 4141453	JPFHOD_004142001	contig_0096880	CDS	456	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
 6007889	JPFHOD_006008857	contig_0221516	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 4682573	JPFHOD_004683208	contig_0127611	CDS	150		SaoD/DsrE family protein				unbinned	0.0	unbinned
-4667497	JPFHOD_004668132	contig_0126713	CDS	366	dsrE	Sulfur reduction protein DsrE	K07092	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
+4667497	JPFHOD_004668132	contig_0126713	CDS	366	dsrE	Sulfur reduction protein DsrE	K07092	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
 4544986	JPFHOD_004545595	contig_0119392	CDS	414	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 4541926	JPFHOD_004542535	contig_0119212	CDS	549		Intracellular sulfur oxidation protein, DsrE/DsrF family	K09004			unbinned	0.0	unbinned
-1010451	JPFHOD_001010608	contig_0003873	CDS	1269	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-comebin_1738_sub		comebin_1738_sub	0.0	unbinned
+1010451	JPFHOD_001010608	contig_0003873	CDS	1269	dsrA	dissimilatory-type sulfite reductase subunit alpha	K11180	dastool-comebin_1738_sub	Pseudomonadota	UBA868 sp028825345	0.0	oxidative (host taxonomy)
 4097205	JPFHOD_004097747	contig_0094550	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 6928173	JPFHOD_006929410	contig_0303524	CDS	531		hypothetical protein	K16886			unbinned	0.0	unbinned
 6928172	JPFHOD_006929409	contig_0303524	CDS	345		hypothetical protein	K16886			unbinned	0.0	unbinned
@@ -1994,7 +1994,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10495097	JPFHOD_010497377	contig_0791916	CDS	105		hypothetical protein	K16885	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 10495096	JPFHOD_010497376	contig_0791916	CDS	621		Heterodisulfide reductase subunit A	K16885	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 10464509	JPFHOD_010466780	contig_0786285	CDS	294		4Fe-4S dicluster domain-containing protein	K03390,K16887	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
-10443256	JPFHOD_010445522	contig_0782410	CDS	198		hypothetical protein	K16886	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
+10443256	JPFHOD_010445522	contig_0782410	CDS	198		hypothetical protein	K16886	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
 8351036	JPFHOD_008352704	contig_0462428	CDS	441		hypothetical protein	K16886			unbinned	0.0	unbinned
 10337708	JPFHOD_010339942	contig_0763366	CDS	231		hypothetical protein	K16885	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 10337707	JPFHOD_010339941	contig_0763366	CDS	258		hypothetical protein	K16886	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
@@ -2004,9 +2004,9 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 10472015	JPFHOD_010474291	contig_0787670	CDS	1083		assimilatory sulfite reductase (ferredoxin)	K11181			unbinned	0.0	unbinned
 10472014	JPFHOD_010474290	contig_0787670	CDS	423		Nitrite/sulphite reductase 4Fe-4S domain-containing protein	K11180			unbinned	0.0	unbinned
 10186038	JPFHOD_010188219	contig_0736502	CDS	1080	dsrB	dissimilatory-type sulfite reductase subunit beta	K11181			unbinned	0.0	unbinned
-2521310	JPFHOD_002521705	contig_0030809	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_428_sub		comebin_428_sub	0.0	unbinned
+2521310	JPFHOD_002521705	contig_0030809	CDS	414	dsrE	DsrE family protein	K09004	dastool-comebin_428_sub	Bacteroidota	Maribacter_C	0.0	oxidative (host taxonomy)
 2450366	JPFHOD_002450751	contig_0028882	CDS	210		DsrE/DsrF-like family protein				unbinned	0.0	unbinned
-2440681	JPFHOD_002441065	contig_0028626	CDS	480	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-metabat_4203_sub		metabat_4203_sub	0.0	unbinned
+2440681	JPFHOD_002441065	contig_0028626	CDS	480	dsrE2	sulfur carrier protein DsrE2	K07092	dastool-metabat_4203_sub	Pseudomonadota	REDSEA-S09-B13 sp002456995	0.0	oxidative (host taxonomy)
 10337710	JPFHOD_010339944	contig_0763366	CDS	330		hypothetical protein	K16885	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)
 12716305	JPFHOD_012719220	contig_1301215	CDS	108		hypothetical protein	K16886			unbinned	0.0	unbinned
 11896698	JPFHOD_011899389	contig_1085168	CDS	393		4Fe-4S dicluster domain-containing protein	K03390,K16887			unbinned	0.0	unbinned
@@ -2028,7 +2028,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 8782180	JPFHOD_008783985	contig_0519305	CDS	282		hypothetical protein	K00395			unbinned	0.0	unbinned
 8736199	JPFHOD_008737987	contig_0513091	CDS	465	aprB	adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 8727013	JPFHOD_008728798	contig_0511836	CDS	357		hypothetical protein	K00394			unbinned	0.0	unbinned
-8635413	JPFHOD_008637168	contig_0499494	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_692_sub		lorbin_692_sub	0.0	unbinned
+8635413	JPFHOD_008637168	contig_0499494	CDS	1860	aprA	adenylyl-sulfate reductase subunit alpha	K00394	dastool-lorbin_692_sub	Pseudomonadota	Pseudothioglobus	0.0	oxidative (host taxonomy)
 8577207	JPFHOD_008578949	contig_0491729	CDS	804		hypothetical protein	K00394			unbinned	0.0	unbinned
 8543372	JPFHOD_008545088	contig_0487262	CDS	1545	aprA	adenylyl-sulfate reductase subunit alpha	K00394			unbinned	0.0	unbinned
 12028634	JPFHOD_012031380	contig_1117069	CDS	174		hypothetical protein	K11180			unbinned	0.0	unbinned
@@ -2042,7 +2042,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 2779092	JPFHOD_002779503	contig_0038538	CDS	540	dsrE	Sulfur reduction protein DsrE		dastool-metabat_4154	Bacteroidota	Dokdonia donghaensis	0.0	oxidative (host taxonomy)
 8543371	JPFHOD_008545087	contig_0487262	CDS	471		Adenylyl-sulfate reductase subunit beta	K00395			unbinned	0.0	unbinned
 8498892	JPFHOD_008500597	contig_0481431	CDS	114		hypothetical protein	K00395			unbinned	0.0	unbinned
-3349969	JPFHOD_003350442	contig_0059493	CDS	543	dsrE	Sulfur reduction protein DsrE	K09004	dastool-metabat_3676_sub		metabat_3676_sub	0.0	unbinned
+3349969	JPFHOD_003350442	contig_0059493	CDS	543	dsrE	Sulfur reduction protein DsrE	K09004	dastool-metabat_3676_sub	Bacteroidota	Dokdonia sp963974305	0.0	oxidative (host taxonomy)
 2402782	JPFHOD_002403164	contig_0027609	CDS	441	dsrE	DsrE family protein	K09004	dastool-comebin_2951	Pseudomonadota	Zwartia	0.0	oxidative (host taxonomy)
 3255340	JPFHOD_003255807	contig_0055668	CDS	510	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
 3211104	JPFHOD_003211568	contig_0053948	CDS	543	dsrE	DsrE family protein	K09004			unbinned	0.0	unbinned
@@ -2066,7 +2066,7 @@ idx	gene_id	contig	type	length	gene	product	KO	bin	phylum	taxon	mean_cpm	directi
 5652780	JPFHOD_005653601	contig_0193630	CDS	1155		hypothetical protein	K00394			unbinned	0.0	unbinned
 2639500	JPFHOD_002639903	contig_0034238	CDS	360	dsrE	Sulfurtransferase DsrE	K07235			unbinned	0.0	unbinned
 2607674	JPFHOD_002608075	contig_0033284	CDS	453	dsrE	Sulfur reduction protein DsrE	K09004			unbinned	0.0	unbinned
-8238787	JPFHOD_008240419	contig_0448388	CDS	441		hypothetical protein	K16885	dastool-comebin_3581_sub		comebin_3581_sub	0.0	unbinned
+8238787	JPFHOD_008240419	contig_0448388	CDS	441		hypothetical protein	K16885	dastool-comebin_3581_sub	Desulfobacterota	Desulforhopalus	0.0	reductive (host taxonomy)
 8597262	JPFHOD_008599011	contig_0494365	CDS	423		hypothetical protein	K16887			unbinned	0.0	unbinned
 8166695	JPFHOD_008168301	contig_0439464	CDS	2145		Heterodisulfide reductase subunit A	K16886			unbinned	0.0	unbinned
 10253979	JPFHOD_010256178	contig_0748409	CDS	624	qmoC	quinone-interacting membrane-bound oxidoreductase complex subunit QmoC	K16887	dastool-maxbin_568	Nitrospinota	LS-NOB	0.0	oxidative (host taxonomy)

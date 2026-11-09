@@ -16,6 +16,9 @@ Private artifact "Churchill Diesel Mesocosms": https://claude.ai/artifact/VctR8T
 ## Layout
 - `data/`: expression tables pulled from Grex, plus `genemap.tsv.gz` (mtx row → gene, contig, KO, DAS Tool bin),
   GTDB-Tk r226, DAS Tool summary, Kaiju contigs and the KEGG KO list.
+  - `gtdbtk_taxonomy.tsv` lists DAS Tool-refined bins (`*_sub`) only as `dastool-*` rows, while the scripts look bins up by their plain
+    name. `scripts/gtdb_names.py` adds a plain-name copy of every such row (302 bins; rerunnable, adds nothing the second time).
+    Run it whenever the table is copied from Grex again.
 - `scripts/`: `common.py` (loaders, derived design: season/pool/medium/phase), `load_genes.py`, `hc.py` (hydrocarbon
   genes), `who.py` (which contigs/MAGs carry them), `mags.py` (MAG oiled vs control), `baci.py` (pool × period),
   `ordination.py` (Aitchison PCA + PERMANOVA), `kos.py` (KOs consistent across seasons), `figs.py`.

@@ -56,7 +56,7 @@ function nwPass(E, i, step, bits, designBits) {
 function nwGraph(sec, J) {
   sec.append(el('h3', {}, 'The networks'));
   const M = J.methods, allBits = M.reduce((a, m) => a | m.bit, 0), designBits = M.filter(m => m.design_aware).reduce((a, m) => a | m.bit, 0);
-  const S = { layer: J.layer_list[0].key, view: 'all', bits: allBits, step: J.default_step, sel: null, layout: 'tsne', sign: 'both', find: null, sample: null, hideSame: false };
+  const S = { layer: J.layer_list[0].key, view: 'all', bits: allBits, step: J.default_step, sel: null, layout: 'tsne', sign: 'both', find: null, sample: null, hideSame: false, cut: {} };   // cut: score cutoff per method (single-method mode)
   const c1 = el('div', { class: 'controls' }); sec.append(c1);
   const chip = (parent, opts, key) => opts.forEach(([k, l]) => { const b = el('button', { class: 'chip', 'aria-pressed': S[key] === k }, l);
     b.onclick = () => { S[key] = k; S.sel = null; if (key === 'layer') { S.find = null; fi.value = ''; fmsg.textContent = ''; S.sample = null; stopPlay(); fillSamples(); } parent.querySelectorAll(`button[data-g="${key}"]`).forEach(x => x.setAttribute('aria-pressed', x === b)); draw(); };
@@ -64,7 +64,7 @@ function nwGraph(sec, J) {
   chip(c1, J.layer_list.map(l => [l.key, l.long]), 'layer');
   const vs = el('select', { id: 'nwview', 'aria-label': 'View' }); NW_VIEWS.forEach(([k, l]) => vs.append(new Option(l, k)));
   vs.onchange = () => { S.view = vs.value; S.sel = null; draw(); }; c1.append(el('label', { for: 'nwview' }, 'Show'), vs);
-  const ls = el('select', { id: 'nwlayout', 'aria-label': 'Layout' }); J.layouts.forEach(o => ls.append(new Option(o.key === 'tsne' ? 't-SNE (abundance profiles)' : `${o.label} links`, o.key)));
+  const ls = el('select', { id: 'nwlayout', 'aria-label': 'Layout' }); J.layouts.forEach(o => ls.append(new Option(o.key === 'tsne' ? 't-SNE (profile shape)' : `${o.label} links`, o.key)));
   ls.onchange = () => moveTo(ls.value); c1.append(el('label', { for: 'nwlayout' }, 'Layout'), ls);
   const c0 = el('div', { class: 'controls' }); sec.append(c0);
   c0.append(el('span', { style: 'color:var(--ink-2)' }, 'Links'));
@@ -125,8 +125,22 @@ function nwGraph(sec, J) {
   const sl = el('input', { type: 'range', id: 'nwperm', min: 1, max: steps.length, step: 1, value: S.step + 1, style: 'width:100%', 'aria-label': 'Permissivity', list: 'nwperm-ticks' });
   const dl = el('datalist', { id: 'nwperm-ticks' }); steps.forEach((_, k) => dl.append(new Option('', k + 1)));
   const lab = el('div', { style: 'font-weight:600;margin-top:2px' }), cnt = el('div', { style: 'color:var(--ink-2);font-size:13px' });
-  left.append(el('label', { for: 'nwperm', style: 'display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2)' }, '<span>strict</span><span>Permissivity</span><span>permissive</span>'), sl, dl, lab, cnt);
+  const permBox = el('div'), cutBox = el('div', { style: 'display:none' });
+  permBox.append(el('label', { for: 'nwperm', style: 'display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2)' }, '<span>strict</span><span>Permissivity</span><span>permissive</span>'), sl, dl);
+  // single-method mode: a score cutoff for that method instead of the permissivity steps (about 20 quantile steps of its exported
+  // scores in the layer, from the lowest to the 99th percentile; the lowest = every link the method reports)
+  const ts = el('input', { type: 'range', id: 'nwcut', min: 0, max: 1, step: 1, value: 0, style: 'width:100%', 'aria-label': 'Score cutoff' });
+  cutBox.append(el('label', { for: 'nwcut', style: 'display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-2)' }, '<span>all links</span><span>Score cutoff</span><span>strongest</span>'), ts);
+  left.append(permBox, cutBox, lab, cnt);
   sl.oninput = () => { S.step = +sl.value - 1; S.sel = null; draw(); };
+  const THR = {};
+  const thresholds = (L, m) => { const k = S.layer + '|' + m.key; if (THR[k]) return THR[k];
+    const E = L.edges, v = []; for (let i = 0; i < E.a.length; i++) if ((E.m[i] | E.x[i]) & m.bit) v.push(E[m.col][i]);
+    v.sort((a, b) => a - b); const t = [];
+    if (v.length) for (let q = 0; q < 20; q++) { const x = v[Math.min(v.length - 1, Math.floor(q / 19 * 0.99 * (v.length - 1)))]; if (!t.length || x > t[t.length - 1]) t.push(x); }
+    return (THR[k] = t.length ? t : [0]); };          // in exported units (score x 100)
+  ts.oninput = () => { const m = single(); if (!m) return; S.cut[m.key] = THRcur[+ts.value]; S.sel = null; draw(); };
+  let THRcur = [0];
   const lg = el('div', { class: 'legend' }); sec.append(lg);
   lg.innerHTML = Object.values(NW_DOM).map(([c, l]) => `<span><i style="background:var(${c});height:10px;width:10px;border-radius:50%"></i>${l}</span>`).join('') +
     `<span><i style="background:none;border:1.5px dashed var(--ink-2);height:9px;width:9px;border-radius:50%"></i>doubtful MAG</span>` +
@@ -136,7 +150,7 @@ function nwGraph(sec, J) {
     `<span><i style="background:none;border:3px double var(--ink-2);height:11px;width:11px;border-radius:50%"></i>several genomes together</span>` +
     `<span><i style="background:var(--ink-2)"></i>positive link</span><span><i style="background:var(--s7)"></i>negative link</span>`;
   const wl = el('div', { class: 'legend', style: 'margin-top:2px' }); sec.append(wl);     // line-width legend
-  const box = fig(sec, '', `Point size follows median abundance or, with a sample picked, the genome’s level in that sample (RNA: reads per kb per million; nanopore DNA: parts per million of the aligned bases; Illumina DNA: per million mapped read pairs), on one square-root scale for all samples of the layer; genomes not detected in the sample are small hollow dots. ◀ ▶ or the arrow keys step through the samples in time order (winter, then control and diesel pool, seawater before sea ice, then day). Layouts: “t-SNE” places genomes by their abundance across the libraries (fourth root of the share of each library), so genomes with similar profiles sit close together. The other layouts are force-directed: each method’s positive links pull their genomes together, more strongly for higher scores, and all genomes push each other apart. Genomes without a positive link in that method sit on the ring around it. With several methods switched on, line width grows with the number of supporting methods; with exactly one, width and darkness follow that method’s score. Hover a point for its lineage and partners; click it to show only its links, click the background to clear. Strong scores: SPRING and SPIEC-EASI find the link in at least ${P.strong_stab * 100}% of their subsamples; the residual Spearman has |ρ| at least ${P.strong_rho} and q below ${P.strong_q}; the Presence Pearson has |r| at least ${P.strong_pp_r}, q below ${P.strong_q} and both genomes present together in at least ${P.strong_pp_n} libraries; FlashWeave counts whenever it reports a link. Links found only by the residual Spearman are included down to |ρ| ${P.sp_floor} (q below 0.05).`);
+  const box = fig(sec, '', `Point size follows median abundance or, with a sample picked, the genome’s level in that sample (RNA: reads per kb per million; nanopore DNA: parts per million of the aligned bases; Illumina DNA: per million mapped read pairs), on one square-root scale for all samples of the layer; genomes not detected in the sample are small hollow dots. ◀ ▶ or the arrow keys step through the samples in time order (winter, then control and diesel pool, seawater before sea ice, then day). Layouts: “t-SNE” is a t-SNE of each genome’s profile across libraries (fourth root of its share of each library), scaled so every genome’s profile sums to 1. Genomes that rise and fall in the same libraries sit close together, whether they are common or rare. The other layouts are force-directed: each method’s positive links pull their genomes together, more strongly for higher scores, and all genomes push each other apart. Genomes without a positive link in that method sit on the ring around it. With several methods switched on, line width grows with the number of supporting methods; with exactly one, width and darkness follow that method’s score, and the slider sets the lowest score shown instead of the permissivity step. Hover a point for its lineage and partners; click it to show only its links, click the background to clear. Strong scores: SPRING and SPIEC-EASI find the link in at least ${P.strong_stab * 100}% of their subsamples; the residual Spearman has |ρ| at least ${P.strong_rho} and q below ${P.strong_q}; the Presence Pearson has |r| at least ${P.strong_pp_r}, q below ${P.strong_q} and both genomes present together in at least ${P.strong_pp_n} libraries; FlashWeave counts whenever it reports a link. Links found only by the residual Spearman are included down to |ρ| ${P.sp_floor} (q below 0.05).`);
   const info = el('p', { class: 'cap', style: 'margin-top:4px' }); box.parentNode.insertBefore(info, box.nextSibling);
   const short = id => id.startsWith('contig_') ? 'c' + id.slice(7).replace(/^0+/, '') : id;
   const layerLabel = k => J.layer_list.find(l => l.key === k).label;
@@ -162,7 +176,12 @@ function nwGraph(sec, J) {
   async function draw() {
     const L = await nwLayer(S.layer), N = L.nodes, E = L.edges, step = steps[S.step], m1 = single();
     J.layers[S.layer].data = L;
-    lab.textContent = `Step ${S.step + 1} of ${steps.length}: ${step.label}`;
+    permBox.style.display = m1 ? 'none' : ''; cutBox.style.display = m1 ? '' : 'none';
+    let cut = 0;
+    if (m1) { THRcur = thresholds(L, m1); let k = 0; const c = S.cut[m1.key] ?? THRcur[0]; THRcur.forEach((t, j) => { if (t <= c) k = j; });
+      ts.max = THRcur.length - 1; ts.value = k; cut = THRcur[k];
+      lab.textContent = `${m1.score} ≥ ${d3.format('.2f')(cut / 100)}${k === 0 ? ' (every link it reports)' : ''}`; }
+    else lab.textContent = `Step ${S.step + 1} of ${steps.length}: ${step.label}`;
     box.innerHTML = '';
     const inView = (a, b) => {
       if (S.view === 'grazer') { const g = n => n.role === 'grazer', t = n => n.domain === 'prokaryote' || n.role === 'alga' || n.domain === 'organelle'; return (g(a) && t(b)) || (g(b) && t(a)); }
@@ -170,7 +189,9 @@ function nwGraph(sec, J) {
       if (S.view === 'plastid') return (a.domain === 'organelle' && b.domain === 'eukaryote') || (b.domain === 'organelle' && a.domain === 'eukaryote');
       return true; };
     const K = [];      // [a, b, sign, supporting-method mask, row, line class]
-    for (let i = 0; i < E.a.length; i++) { const p = nwPass(E, i, step, S.bits, designBits), sup = Math.abs(p);
+    for (let i = 0; i < E.a.length; i++) {
+      // one method on: its own call and the score cutoff only (no steps); otherwise the permissivity step
+      const p = m1 ? (((E.m[i] | E.x[i]) & m1.bit) && E[m1.col][i] >= cut ? (E.x[i] & m1.bit ? -m1.bit : m1.bit) : 0) : nwPass(E, i, step, S.bits, designBits), sup = Math.abs(p);
       const sgn = p < 0 ? -E.s[i] : E.s[i];
       if (sup && (S.sign === 'both' || (S.sign === 'pos') === (sgn > 0)) && !(S.hideSame && E.same[i]) && inView(N[E.a[i]], N[E.b[i]]))
         K.push([E.a[i], E.b[i], sgn, sup, i, m1 ? scoreClass(m1, E, i) : nwPop(sup) - 1, E.same[i]]); }
@@ -313,7 +334,7 @@ function nwMethods(sec, J) {
 function nwReading(sec, J) {
   sec.append(el('h3', {}, 'How to read it'));
   sec.append(el('ul', { class: 'kicker' }, `
-    <li><b>Genomes.</b> Bacterial and archaeal MAGs with CheckM2 completeness at least 30% and contamination under 20%. Those under 50% complete are drawn pale (“fragment”); those with 10–20% contamination have a dotted ring (most likely a second strain in the same bin, as in the Cycloclasticus bloom genomes lorbin_184 and metabat_5432). Two MAGs of the same genus whose RNA profiles agree almost perfectly (Spearman ρ at least 0.95) may be pieces of one genome; their link is dashed and can be hidden; every eukaryotic MAG (EE##), with doubtful ones drawn hollow; the viruses of the Viruses page plus every giant virus and virophage averaging at least 5 transcripts per million; plastid group P01 and the plastid MAGs. MAGs that hold several genomes (P01, and eukaryotic MAGs with two strains or species) are drawn with a double ring. A genome enters a layer when it is detected in at least a quarter of that layer’s libraries; eukaryotes, giant viruses, the virophage and P01 need only a tenth. Each contig counts for one genome only, viruses first, then plastid groups, eukaryotic MAGs and bacterial MAGs.</li>
+    <li><b>Genomes.</b> Bacterial and archaeal MAGs with CheckM2 completeness at least 15% and contamination under 20%. Those under 50% complete are drawn pale (“fragment”); those with 10–20% contamination have a dotted ring (most likely a second strain in the same bin, as in the Cycloclasticus bloom genomes lorbin_184 and metabat_5432). Two MAGs of the same genus whose RNA profiles agree almost perfectly (Spearman ρ at least 0.95) may be pieces of one genome; their link is dashed and can be hidden; every eukaryotic MAG (EE##), with doubtful ones drawn hollow; the viruses of the Viruses page plus every giant virus and virophage averaging at least 5 transcripts per million; plastid group P01 and the plastid MAGs. MAGs that hold several genomes (P01, and eukaryotic MAGs with two strains or species) are drawn with a double ring. A genome enters a layer when it is detected in at least a quarter of that layer’s libraries; eukaryotes, giant viruses, the virophage and P01 need only a tenth. Each contig counts for one genome only, viruses first, then plastid groups, eukaryotic MAGs and bacterial MAGs.</li>
     <li><b>DNA and RNA.</b> The nanopore DNA network has the fewest samples (${J.layers.dna.n_libs} pool samples, replicate runs summed), so it is the least certain. The Illumina DNA network uses ${J.layers.mgdna ? J.layers.mgdna.n_libs : ''} pool metagenomes (control and diesel pool, seawater and sea ice, both winters); a genome’s level is its share of the mapped reads, the same measure as for nanopore. The RNA network has ${J.layers.rna.n_libs} libraries. DNA shows who is there, RNA who is active, so a link can appear in one and not the other.</li>
     <li><b>Sign.</b> A positive link means the two genomes rise together after the drivers are accounted for; a negative link means one rises when the other falls. Grazing and infection can produce either, depending on timing.</li>
     <li><b>Limits.</b> One pool per treatment, so samples within a pool are not independent. Relative abundance is a share of all reads, so a large bloom pushes everything else down. Links between genomes that share contigs or reads (for example a virus and the genome it is integrated in) can be artefacts.</li>`));
