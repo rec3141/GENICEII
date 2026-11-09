@@ -2,10 +2,13 @@
 GTDB-Tk classification where it exists (empty ranks dropped). Where GTDB has no call (refined *_sub bins, eukaryotes), the
 length-weighted Kaiju majority at each rank from the contig table, tagged '(Kaiju)'. Bins called eukaryote/organelle by the
 Tiara rule (data/bin_domain.tsv, scripts/bin_domains.py) carry that call first, plus the plastid 16S host where known.
-Also: hull-curated eukaryotic/viral MAGs (EE##/VV##), organelle groups (P##), and their provenance groups (E##/V##)."""
+Also: hull-curated eukaryotic/viral MAGs (EE##/VV##), organelle groups (P##), and their provenance groups (E##/V##); and the vOTU nodes of
+the Network page (network/out/nodes_all.tsv; geNomad taxonomy, length and CheckV quality from viruses/out/viral_confident.tsv).
+The output goes to site/lineage.json of the checkout this script is in."""
 import os, json, re
 import pandas as pd, numpy as np
-D = '/data/dev/rnaseq-exploration/data/'; OUT = '/data/dev/rnaseq-exploration/site/lineage.json'
+D = '/data/dev/rnaseq-exploration/data/'
+REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')); OUT = os.path.join(REPO, 'site', 'lineage.json')
 RANKS = ['domain', 'phylum', 'class', 'order', 'family', 'genus']
 T = pd.read_csv('/data/dev/fastsne/data/microscape/contigs_microscape.tsv.gz', sep='\t', low_memory=False,
                 usecols=['bin', 'length'] + [f'kaiju_{r}' for r in RANKS])
@@ -73,6 +76,19 @@ if dom is not None and 'hull_mag' in dom.columns:
     for b, g in dom.hull_mag.dropna().items():
         s_ = b.replace('dastool-', '')
         if s_ in L: L[s_] = L[s_].replace('Eukaryote (Tiara)', f'Eukaryote (Tiara), part of MAG {g}', 1)
+# vOTU nodes of the Network page: geNomad lineage (empty ranks dropped), length, CheckV quality
+NN = os.path.join(REPO, 'network', 'out', 'nodes_all.tsv')
+if os.path.exists(NN):
+    vn = pd.read_csv(NN, sep='\t', index_col=0, keep_default_na=False)
+    vn = vn[vn.domain == 'virus']
+    vc = pd.read_csv('/data/dev/rnaseq-exploration/viruses/out/viral_confident.tsv', sep='\t', usecols=['seq_name', 'taxonomy', 'length', 'checkv_quality'],
+                     keep_default_na=False).drop_duplicates('seq_name').set_index('seq_name')
+    for v, x in vn.iterrows():
+        tx = ' › '.join(t for t in str(vc.taxonomy.get(v, '')).split(';')[1:] if t) if v in vc.index else ''
+        bits = [f'{tx} (geNomad)' if tx else 'Virus (geNomad, unclassified)', f'vOTU representative, {int(x.bp) / 1e3:.0f} kb']
+        if v in vc.index and vc.checkv_quality[v]: bits.append(f'CheckV {vc.checkv_quality[v].lower()}')
+        if x.binned: bits.append(f'binned in {x.binned.replace("dastool-", "")}')
+        L[v] = ' · '.join(bits)
 json.dump(L, open(OUT, 'w'), separators=(',', ':'), ensure_ascii=False)
 print(len(L), 'bins;', os.path.getsize(OUT) // 1000, 'kB')
 for b in ('EE02', 'EE05', 'EE01', 'EE12', 'EE32', 'VV01', 'P01', 'E02', 'V01', 'comebin_4318_sub', 'comebin_2576', 'lorbin_184', 'comebin_4527', 'comebin_3937', 'metabat_8153', 'semibin_088'): print(b, '→', L.get(b))

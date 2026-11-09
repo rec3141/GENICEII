@@ -1,0 +1,13 @@
+layer	m1	m2	shared	jaccard	sign_agreement
+dna	flashweave	spring	343	0.0564	1.0
+dna	flashweave	spieceasi	334	0.0831	1.0
+dna	flashweave	spearman	116	0.0259	1.0
+dna	spring	spieceasi	1520	0.1956	0.997
+dna	spring	spearman	674	0.0761	0.988
+dna	spieceasi	spearman	610	0.089	0.997
+rna	flashweave	spring	1163	0.1101	0.998
+rna	flashweave	spieceasi	1325	0.2013	1.0
+rna	flashweave	spearman	1505	0.0205	0.989
+rna	spring	spieceasi	3438	0.272	0.995
+rna	spring	spearman	5994	0.0777	0.97
+rna	spieceasi	spearman	4464	0.0597	0.991

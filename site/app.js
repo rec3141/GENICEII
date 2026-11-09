@@ -6,10 +6,10 @@ const fmt = d3.format(',.0f'), fmt1 = d3.format(',.1f'), fmt2 = d3.format('.2f')
 const tickf = v => v >= 1000 ? d3.format('~s')(v) : d3.format('~g')(v);
 const SECTIONS = [
   ['overview', 'Overview'], ['community', 'Community response'], ['pathways', 'Degradation pathways'],
-  ['cyclo', 'Cycloclasticus'], ['porticocc', '50-400-T64'], ['states', 'Physiological states'], ['guilds', 'Response guilds'], ['light', 'Light'], ['sulfur', 'Sulfur & hydrogen'], ['metals', 'Metals & toxicity'], ['nitrogen', 'Nitrogen'], ['oxygen', 'Oxygen'], ['euks', 'Eukaryotes'], ['viruses', 'Viruses'], ['hgt', 'Gene transfer'], ['islands', 'Genomic islands'], ['ice', 'Ice vs water'], ['qc', 'Data & caveats']];
+  ['cyclo', 'Cycloclasticus'], ['porticocc', '50-400-T64'], ['states', 'Physiological states'], ['guilds', 'Response guilds'], ['light', 'Light'], ['sulfur', 'Sulfur & hydrogen'], ['metals', 'Metals & toxicity'], ['nitrogen', 'Nitrogen'], ['oxygen', 'Oxygen'], ['euks', 'Eukaryotes'], ['viruses', 'Viruses'], ['network', 'Network'], ['hgt', 'Gene transfer'], ['islands', 'Genomic islands'], ['ice', 'Ice vs water'], ['qc', 'Data & caveats']];
 // nav: top-level links and dropdown groups (ids from SECTIONS)
 const NAV = [['overview'], ['Diesel response', ['community', 'pathways', 'cyclo', 'porticocc', 'states']], ['Biogeochemistry', ['light', 'sulfur', 'nitrogen', 'oxygen', 'metals']],
-  ['Food web', ['euks', 'viruses']], ['Genomes & ice', ['ice', 'hgt', 'islands', 'guilds']], ['qc']];
+  ['Food web', ['euks', 'viruses', 'network']], ['Genomes & ice', ['ice', 'hgt', 'islands', 'guilds']], ['qc']];
 const OIL = { '2024-25': 5.5, '2025-26': 1 };
 let D = {}, tip;
 
@@ -663,7 +663,7 @@ async function boot() {
   tip = $('#tip');
   D = await (await fetch('data.json', { cache: 'no-cache' })).json();
   try { const r = await fetch('lineage.json', { cache: 'no-cache' }); if (r.ok) D.lineage = await r.json(); } catch (e) { /* optional */ }
-  for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'light', 'porticocc', 'oxygen', 'euks', 'states', 'guilds', 'viruses']) { try { const r = await fetch(f + '.json', { cache: 'no-cache' }); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
+  for (const f of ['cyclo', 'hgt', 'ice', 'islands', 'sulfur', 'metals', 'nitrogen', 'light', 'porticocc', 'oxygen', 'euks', 'states', 'guilds', 'viruses', 'network']) { try { const r = await fetch(f + '.json', { cache: 'no-cache' }); if (r.ok) D[f] = await r.json(); } catch (e) { /* optional */ } }
   const nav = $('#nav'), main = $('#main'); main.innerHTML = '';
   const label = id => SECTIONS.find(s => s[0] === id)[1];
   NAV.forEach(([a, ids]) => {

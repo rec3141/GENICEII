@@ -1,0 +1,27 @@
+test	metric	value	note
+bridge grid	max |r_grid - r_true| (60 random points)	0.00109	
+bridge grid	median |r_grid - r_true|	9.3e-05	
+bridge (z = 0, 0)	max |F - (2/pi) asin r|	1e-05	
+simulation n=100 p=40	true edges / estimated edges	43 / 38	StARS index 4 of 20, 3 s
+simulation n=100 p=40	precision	0.684	
+simulation n=100 p=40	recall	0.605	
+simulation n=100 p=40	mean |R_latent - Sigma| (off-diagonal)	0.0929	
+simulation n=100 p=40	sign agreement with true partial corr.	1.0	
+simulation n=100 p=40	precision, top-|Pearson clr| same count	0.447	
+simulation n=200 p=60	true edges / estimated edges	115 / 106	StARS index 5 of 20, 4 s
+simulation n=200 p=60	precision	0.66	
+simulation n=200 p=60	recall	0.609	
+simulation n=200 p=60	mean |R_latent - Sigma| (off-diagonal)	0.0729	
+simulation n=200 p=60	sign agreement with true partial corr.	1.0	
+simulation n=200 p=60	precision, top-|Pearson clr| same count	0.538	
+vs R	max |mclr_py - mclr_R|	6.217248937900877e-15	
+vs R	max |Kendall tau-a py - R| (off-diagonal)	5.134781488891349e-16	
+vs R	max |R pointwise, 'original'| py - R	4e-05	both root-find the exact bridge
+vs R	max |R after nearPD, 'original'| py - R	4e-05	
+vs R	max |R pointwise| py grid - R 'approx'	0.00272	grid vs latentcor multilinear interpolant
+vs R	max |R pointwise| py grid - R 'original'	0.00021	
+vs R	lambda path on the same R: edges py / R / differing	0/0/0; 19/18/1; 107/107/0; 256/255/1; 355/354/1; 410/410/0; 427/423/4	every 3rd lambda
+vs R	lambda path: total differing edge calls	28	over 20 lambdas
+vs R	StARS chosen lambda index py / R	4 / 4	subsamples differ (numpy vs R RNG)
+vs R	refitted graph: edges py / R / shared	19 / 18 / 18	Jaccard 0.95
+vs R	max |StARS instability py - R| over the path	0.0122	

@@ -300,3 +300,14 @@ DAS Tool and Binette lose most eukaryotic genomes: the 10 Mbp Binette cap, DAS T
 - **Eukaryotes page:** the EE table (source group, gained/lost Mbp, cautions, RNA/DNA differential abundance), the hull figure and time courses.
 - **Viruses page:** giant viruses and virophages get the best-correlated EE MAG as host (EE07 for both panels). One line notes the tailed-phage cluster and the former V02 (now P01).
 - **Light page:** plastid transcripts formerly credited to "Virus V02" go to "Plastid P01".
+
+## Genome network (2026-11-08)
+`network/` feeds the site page `#network` (Food web). It holds MAG–MAG association networks in two layers: DNA (44 nanopore pool samples) and RNA (128 libraries).
+- **Nodes:**
+  - CheckM2 high- and medium-quality prokaryotic MAGs;
+  - every EE MAG;
+  - P01 and the plastid bins;
+  - the Viruses-page vOTUs plus the active giant viruses and the virophage.
+- **Methods:** FlashWeave HE-S with meta-variables, SPRING (Python port, `network/scripts/spring.py`, validated against the R package), SPIEC-EASI, and a design-residual Spearman baseline.
+- **Consensus:** ≥ 2 methods with the same sign, at least one of them design-aware (FlashWeave or the baseline).
+- **Rebuild:** `network/scripts/run_all.sh`. See network/NOTES.md.
