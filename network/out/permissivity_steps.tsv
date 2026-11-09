@@ -1,97 +1,97 @@
 layer	step	label	edges	pair	found
-dna	1	Four or five methods, strong scores	82	contig_0000564-EE07	False
-dna	1	Four or five methods, strong scores	82	contig_0000623-EE07	False
-dna	1	Four or five methods, strong scores	82	contig_0049668-EE07	False
-dna	1	Four or five methods, strong scores	82	contig_0000362-EE04	False
-dna	1	Four or five methods, strong scores	82	contig_0000610-EE22	False
-dna	1	Four or five methods, strong scores	82	P01-EE05	False
-dna	2	Three methods with strong scores, one design-aware	213	contig_0000564-EE07	False
-dna	2	Three methods with strong scores, one design-aware	213	contig_0000623-EE07	False
-dna	2	Three methods with strong scores, one design-aware	213	contig_0049668-EE07	False
-dna	2	Three methods with strong scores, one design-aware	213	contig_0000362-EE04	False
-dna	2	Three methods with strong scores, one design-aware	213	contig_0000610-EE22	False
-dna	2	Three methods with strong scores, one design-aware	213	P01-EE05	True
-dna	3	Three methods, one design-aware	1023	contig_0000564-EE07	False
-dna	3	Three methods, one design-aware	1023	contig_0000623-EE07	True
-dna	3	Three methods, one design-aware	1023	contig_0049668-EE07	False
-dna	3	Three methods, one design-aware	1023	contig_0000362-EE04	False
-dna	3	Three methods, one design-aware	1023	contig_0000610-EE22	False
-dna	3	Three methods, one design-aware	1023	P01-EE05	True
-dna	4	Three methods, or two with strong scores (one design-aware)	1112	contig_0000564-EE07	False
-dna	4	Three methods, or two with strong scores (one design-aware)	1112	contig_0000623-EE07	True
-dna	4	Three methods, or two with strong scores (one design-aware)	1112	contig_0049668-EE07	False
-dna	4	Three methods, or two with strong scores (one design-aware)	1112	contig_0000362-EE04	False
-dna	4	Three methods, or two with strong scores (one design-aware)	1112	contig_0000610-EE22	False
-dna	4	Three methods, or two with strong scores (one design-aware)	1112	P01-EE05	True
-dna	5	Two methods, one design-aware (consensus)	2292	contig_0000564-EE07	False
-dna	5	Two methods, one design-aware (consensus)	2292	contig_0000623-EE07	True
-dna	5	Two methods, one design-aware (consensus)	2292	contig_0049668-EE07	False
-dna	5	Two methods, one design-aware (consensus)	2292	contig_0000362-EE04	False
-dna	5	Two methods, one design-aware (consensus)	2292	contig_0000610-EE22	False
-dna	5	Two methods, one design-aware (consensus)	2292	P01-EE05	True
-dna	6	Any two methods	5864	contig_0000564-EE07	False
-dna	6	Any two methods	5864	contig_0000623-EE07	True
-dna	6	Any two methods	5864	contig_0049668-EE07	False
-dna	6	Any two methods	5864	contig_0000362-EE04	False
-dna	6	Any two methods	5864	contig_0000610-EE22	False
-dna	6	Any two methods	5864	P01-EE05	True
-dna	7	Any two methods, or one with a strong score	8306	contig_0000564-EE07	False
-dna	7	Any two methods, or one with a strong score	8306	contig_0000623-EE07	True
-dna	7	Any two methods, or one with a strong score	8306	contig_0049668-EE07	False
-dna	7	Any two methods, or one with a strong score	8306	contig_0000362-EE04	False
-dna	7	Any two methods, or one with a strong score	8306	contig_0000610-EE22	False
-dna	7	Any two methods, or one with a strong score	8306	P01-EE05	True
-dna	8	Any one method	12521	contig_0000564-EE07	False
-dna	8	Any one method	12521	contig_0000623-EE07	True
-dna	8	Any one method	12521	contig_0049668-EE07	False
-dna	8	Any one method	12521	contig_0000362-EE04	False
-dna	8	Any one method	12521	contig_0000610-EE22	False
-dna	8	Any one method	12521	P01-EE05	True
-rna	1	Four or five methods, strong scores	556	contig_0000564-EE07	False
-rna	1	Four or five methods, strong scores	556	contig_0000623-EE07	False
-rna	1	Four or five methods, strong scores	556	contig_0049668-EE07	False
-rna	1	Four or five methods, strong scores	556	contig_0000362-EE04	False
-rna	1	Four or five methods, strong scores	556	contig_0000610-EE22	False
-rna	1	Four or five methods, strong scores	556	P01-EE05	True
-rna	2	Three methods with strong scores, one design-aware	1126	contig_0000564-EE07	False
-rna	2	Three methods with strong scores, one design-aware	1126	contig_0000623-EE07	False
-rna	2	Three methods with strong scores, one design-aware	1126	contig_0049668-EE07	False
-rna	2	Three methods with strong scores, one design-aware	1126	contig_0000362-EE04	False
-rna	2	Three methods with strong scores, one design-aware	1126	contig_0000610-EE22	False
-rna	2	Three methods with strong scores, one design-aware	1126	P01-EE05	True
-rna	3	Three methods, one design-aware	7100	contig_0000564-EE07	True
-rna	3	Three methods, one design-aware	7100	contig_0000623-EE07	False
-rna	3	Three methods, one design-aware	7100	contig_0049668-EE07	False
-rna	3	Three methods, one design-aware	7100	contig_0000362-EE04	True
-rna	3	Three methods, one design-aware	7100	contig_0000610-EE22	False
-rna	3	Three methods, one design-aware	7100	P01-EE05	True
-rna	4	Three methods, or two with strong scores (one design-aware)	7353	contig_0000564-EE07	True
-rna	4	Three methods, or two with strong scores (one design-aware)	7353	contig_0000623-EE07	False
-rna	4	Three methods, or two with strong scores (one design-aware)	7353	contig_0049668-EE07	False
-rna	4	Three methods, or two with strong scores (one design-aware)	7353	contig_0000362-EE04	True
-rna	4	Three methods, or two with strong scores (one design-aware)	7353	contig_0000610-EE22	False
-rna	4	Three methods, or two with strong scores (one design-aware)	7353	P01-EE05	True
-rna	5	Two methods, one design-aware (consensus)	38310	contig_0000564-EE07	True
-rna	5	Two methods, one design-aware (consensus)	38310	contig_0000623-EE07	True
-rna	5	Two methods, one design-aware (consensus)	38310	contig_0049668-EE07	False
-rna	5	Two methods, one design-aware (consensus)	38310	contig_0000362-EE04	True
-rna	5	Two methods, one design-aware (consensus)	38310	contig_0000610-EE22	True
-rna	5	Two methods, one design-aware (consensus)	38310	P01-EE05	True
-rna	6	Any two methods	41472	contig_0000564-EE07	True
-rna	6	Any two methods	41472	contig_0000623-EE07	True
-rna	6	Any two methods	41472	contig_0049668-EE07	False
-rna	6	Any two methods	41472	contig_0000362-EE04	True
-rna	6	Any two methods	41472	contig_0000610-EE22	True
-rna	6	Any two methods	41472	P01-EE05	True
-rna	7	Any two methods, or one with a strong score	43232	contig_0000564-EE07	True
-rna	7	Any two methods, or one with a strong score	43232	contig_0000623-EE07	True
-rna	7	Any two methods, or one with a strong score	43232	contig_0049668-EE07	False
-rna	7	Any two methods, or one with a strong score	43232	contig_0000362-EE04	True
-rna	7	Any two methods, or one with a strong score	43232	contig_0000610-EE22	True
-rna	7	Any two methods, or one with a strong score	43232	P01-EE05	True
-rna	8	Any one method	49793	contig_0000564-EE07	True
-rna	8	Any one method	49793	contig_0000623-EE07	True
-rna	8	Any one method	49793	contig_0049668-EE07	False
-rna	8	Any one method	49793	contig_0000362-EE04	True
-rna	8	Any one method	49793	contig_0000610-EE22	True
-rna	8	Any one method	49793	P01-EE05	True
+dna	1	Four or five methods, strong scores	54	contig_0000564-EE07	False
+dna	1	Four or five methods, strong scores	54	contig_0000623-EE07	False
+dna	1	Four or five methods, strong scores	54	contig_0049668-EE07	False
+dna	1	Four or five methods, strong scores	54	contig_0000362-EE04	False
+dna	1	Four or five methods, strong scores	54	contig_0000610-EE22	False
+dna	1	Four or five methods, strong scores	54	P01-EE05	False
+dna	2	Three methods with strong scores, one design-aware	185	contig_0000564-EE07	False
+dna	2	Three methods with strong scores, one design-aware	185	contig_0000623-EE07	False
+dna	2	Three methods with strong scores, one design-aware	185	contig_0049668-EE07	False
+dna	2	Three methods with strong scores, one design-aware	185	contig_0000362-EE04	False
+dna	2	Three methods with strong scores, one design-aware	185	contig_0000610-EE22	False
+dna	2	Three methods with strong scores, one design-aware	185	P01-EE05	True
+dna	3	Three methods, one design-aware	717	contig_0000564-EE07	False
+dna	3	Three methods, one design-aware	717	contig_0000623-EE07	True
+dna	3	Three methods, one design-aware	717	contig_0049668-EE07	False
+dna	3	Three methods, one design-aware	717	contig_0000362-EE04	False
+dna	3	Three methods, one design-aware	717	contig_0000610-EE22	False
+dna	3	Three methods, one design-aware	717	P01-EE05	True
+dna	4	Three methods, or two with strong scores (one design-aware)	808	contig_0000564-EE07	False
+dna	4	Three methods, or two with strong scores (one design-aware)	808	contig_0000623-EE07	True
+dna	4	Three methods, or two with strong scores (one design-aware)	808	contig_0049668-EE07	False
+dna	4	Three methods, or two with strong scores (one design-aware)	808	contig_0000362-EE04	False
+dna	4	Three methods, or two with strong scores (one design-aware)	808	contig_0000610-EE22	False
+dna	4	Three methods, or two with strong scores (one design-aware)	808	P01-EE05	True
+dna	5	Two methods, one design-aware (consensus)	1490	contig_0000564-EE07	False
+dna	5	Two methods, one design-aware (consensus)	1490	contig_0000623-EE07	True
+dna	5	Two methods, one design-aware (consensus)	1490	contig_0049668-EE07	False
+dna	5	Two methods, one design-aware (consensus)	1490	contig_0000362-EE04	False
+dna	5	Two methods, one design-aware (consensus)	1490	contig_0000610-EE22	False
+dna	5	Two methods, one design-aware (consensus)	1490	P01-EE05	True
+dna	6	Any two methods	2986	contig_0000564-EE07	False
+dna	6	Any two methods	2986	contig_0000623-EE07	True
+dna	6	Any two methods	2986	contig_0049668-EE07	False
+dna	6	Any two methods	2986	contig_0000362-EE04	False
+dna	6	Any two methods	2986	contig_0000610-EE22	False
+dna	6	Any two methods	2986	P01-EE05	True
+dna	7	Any two methods, or one with a strong score	4046	contig_0000564-EE07	False
+dna	7	Any two methods, or one with a strong score	4046	contig_0000623-EE07	True
+dna	7	Any two methods, or one with a strong score	4046	contig_0049668-EE07	False
+dna	7	Any two methods, or one with a strong score	4046	contig_0000362-EE04	False
+dna	7	Any two methods, or one with a strong score	4046	contig_0000610-EE22	False
+dna	7	Any two methods, or one with a strong score	4046	P01-EE05	True
+dna	8	Any one method	14070	contig_0000564-EE07	False
+dna	8	Any one method	14070	contig_0000623-EE07	True
+dna	8	Any one method	14070	contig_0049668-EE07	False
+dna	8	Any one method	14070	contig_0000362-EE04	False
+dna	8	Any one method	14070	contig_0000610-EE22	False
+dna	8	Any one method	14070	P01-EE05	True
+rna	1	Four or five methods, strong scores	377	contig_0000564-EE07	False
+rna	1	Four or five methods, strong scores	377	contig_0000623-EE07	False
+rna	1	Four or five methods, strong scores	377	contig_0049668-EE07	False
+rna	1	Four or five methods, strong scores	377	contig_0000362-EE04	False
+rna	1	Four or five methods, strong scores	377	contig_0000610-EE22	False
+rna	1	Four or five methods, strong scores	377	P01-EE05	True
+rna	2	Three methods with strong scores, one design-aware	939	contig_0000564-EE07	False
+rna	2	Three methods with strong scores, one design-aware	939	contig_0000623-EE07	False
+rna	2	Three methods with strong scores, one design-aware	939	contig_0049668-EE07	False
+rna	2	Three methods with strong scores, one design-aware	939	contig_0000362-EE04	False
+rna	2	Three methods with strong scores, one design-aware	939	contig_0000610-EE22	False
+rna	2	Three methods with strong scores, one design-aware	939	P01-EE05	True
+rna	3	Three methods, one design-aware	3454	contig_0000564-EE07	False
+rna	3	Three methods, one design-aware	3454	contig_0000623-EE07	False
+rna	3	Three methods, one design-aware	3454	contig_0049668-EE07	False
+rna	3	Three methods, one design-aware	3454	contig_0000362-EE04	True
+rna	3	Three methods, one design-aware	3454	contig_0000610-EE22	False
+rna	3	Three methods, one design-aware	3454	P01-EE05	True
+rna	4	Three methods, or two with strong scores (one design-aware)	3670	contig_0000564-EE07	False
+rna	4	Three methods, or two with strong scores (one design-aware)	3670	contig_0000623-EE07	False
+rna	4	Three methods, or two with strong scores (one design-aware)	3670	contig_0049668-EE07	False
+rna	4	Three methods, or two with strong scores (one design-aware)	3670	contig_0000362-EE04	True
+rna	4	Three methods, or two with strong scores (one design-aware)	3670	contig_0000610-EE22	False
+rna	4	Three methods, or two with strong scores (one design-aware)	3670	P01-EE05	True
+rna	5	Two methods, one design-aware (consensus)	8665	contig_0000564-EE07	True
+rna	5	Two methods, one design-aware (consensus)	8665	contig_0000623-EE07	False
+rna	5	Two methods, one design-aware (consensus)	8665	contig_0049668-EE07	False
+rna	5	Two methods, one design-aware (consensus)	8665	contig_0000362-EE04	True
+rna	5	Two methods, one design-aware (consensus)	8665	contig_0000610-EE22	False
+rna	5	Two methods, one design-aware (consensus)	8665	P01-EE05	True
+rna	6	Any two methods	9400	contig_0000564-EE07	True
+rna	6	Any two methods	9400	contig_0000623-EE07	False
+rna	6	Any two methods	9400	contig_0049668-EE07	False
+rna	6	Any two methods	9400	contig_0000362-EE04	True
+rna	6	Any two methods	9400	contig_0000610-EE22	False
+rna	6	Any two methods	9400	P01-EE05	True
+rna	7	Any two methods, or one with a strong score	12163	contig_0000564-EE07	True
+rna	7	Any two methods, or one with a strong score	12163	contig_0000623-EE07	True
+rna	7	Any two methods, or one with a strong score	12163	contig_0049668-EE07	False
+rna	7	Any two methods, or one with a strong score	12163	contig_0000362-EE04	True
+rna	7	Any two methods, or one with a strong score	12163	contig_0000610-EE22	True
+rna	7	Any two methods, or one with a strong score	12163	P01-EE05	True
+rna	8	Any one method	31774	contig_0000564-EE07	True
+rna	8	Any one method	31774	contig_0000623-EE07	True
+rna	8	Any one method	31774	contig_0049668-EE07	False
+rna	8	Any one method	31774	contig_0000362-EE04	True
+rna	8	Any one method	31774	contig_0000610-EE22	True
+rna	8	Any one method	31774	P01-EE05	True

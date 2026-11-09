@@ -128,16 +128,21 @@ def read_methods(layer):
 
 
 # ---------------------------------------------------------------- the edge table the page gets (network_site.py, forcelayout.py)
-# The two pairwise correlations are dense, so edges that ONLY one of them reports are kept only above a floor:
-#   residual Spearman: |rho| >= SP_FLOOR (RNA: 69,711 Spearman edges at q < 0.05);
-#   Presence Pearson: only strong edges (DNA: 48,553 edges at q < 0.05, 40% of all pairs; RNA 104,840, 61%).
+# The residual Spearman is dense, so edges that ONLY it reports are kept only at |rho| >= SP_FLOOR (RNA: 69,711 Spearman edges
+# at q < 0.05). The Presence Pearson needs no floor: its edge call (PP_R, PP_N) is strict.
 # 'Strong' scores, per method (also used by the permissivity steps; the page recomputes them from the exported values):
 #   SPRING, SPIEC-EASI: StARS stability >= STRONG_STAB; residual Spearman: |rho| >= STRONG_RHO and q < STRONG_Q;
-#   Presence Pearson: |r| >= STRONG_PP_R, q < STRONG_Q and co-present in >= STRONG_PP_N libraries; FlashWeave: every edge.
+#   Presence Pearson: |r| >= STRONG_PP_R, q < STRONG_Q and co-present in >= STRONG_PP_N libraries (stricter than its edge call on
+#   all three); FlashWeave: every edge.
 SP_FLOOR = 0.4
-PP_N_MIN, PP_Q = 10, 0.05          # Presence Pearson: pairs co-present in >= PP_N_MIN libraries are tested; edges at BH q < PP_Q
+# Presence Pearson edge call (run_pearson.py): pairs co-present in >= PP_N_MIN libraries are tested (BH over all of them); an edge
+# needs q < PP_Q AND |r| >= PP_R AND co-presence in >= PP_N. q alone is far too loose: with up to 128 libraries, |r| ~ 0.25 passes
+# q < 0.05 and 61% of RNA pairs (40% of DNA) would be edges. The rule is the least strict one (raising |r| before lowering q) that
+# keeps the edge count at or below SPRING's in both layers (DNA 5,694, RNA 10,051): DNA 4,479 edges (3.7% of pairs), RNA 1,994 (1.2%).
+# |r| >= 0.8 would pass RNA (4,019) but not DNA (7,470 at n >= 20; 6,692 even at q < 1e-5). See NOTES.md for the full table.
+PP_N_MIN, PP_Q, PP_R, PP_N = 10, 0.05, 0.85, 20
 STRONG_STAB, STRONG_RHO, STRONG_Q = 0.9, 0.6, 1e-3
-STRONG_PP_R, STRONG_PP_N = 0.8, 30
+STRONG_PP_R, STRONG_PP_N = 0.9, 30
 BIT = {m: 1 << i for i, m in enumerate(METHODS)}
 # exported values, as the page gets them: score x100 (|beta| x1000), q as -log10 q x10
 q10 = lambda q: np.where(np.isfinite(q), np.minimum(np.round(-np.log10(np.maximum(q, 1e-300)) * 10), 3000), 0).astype(int)
@@ -176,6 +181,6 @@ def edge_table(layer):
     T['anti'] = sum(np.where(S[f'{m}_sign'].to_numpy() == -T.sign.to_numpy(), BIT[m], 0) for m in METHODS)
     only = lambda m: T['mask'].eq(BIT[m]) & T.anti.eq(0)
     drop_sp = only('spearman') & (T.spearman_w.abs() < SP_FLOOR)
-    drop_pp = only('pearson') & ((strong_bits(T) & BIT['pearson']) == 0)
+    drop_pp = only('pearson') & False                 # its edge call is already strict (PP_R, PP_N); no extra floor
     T = T[~(drop_sp | drop_pp)]
     return T.reset_index(), {'spearman': int(drop_sp.sum()), 'pearson': int(drop_pp.sum())}

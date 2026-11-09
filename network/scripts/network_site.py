@@ -7,8 +7,7 @@ SPIEC-EASI stability x100; rho residual-Spearman |rho| x100; pr Presence Pearson
 bit 0 = positive sign, bits 1..M the mask of methods agreeing with that sign, the next M bits the mask of methods with the opposite
 sign, the next M bits the methods whose score is strong there (netcommon.strong_bits). The score columns are sparse: one value per edge that the
 method reports, in edge order (the page expands them). Edges that only the
-residual Spearman reports are kept at |rho| >= SP_FLOOR, edges that only the Presence Pearson reports only when strong
-(netcommon.edge_table). Also FlashWeave's meta-variable ('driver') edges, method counts and overlaps.
+residual Spearman reports are kept at |rho| >= SP_FLOOR (netcommon.edge_table). Also FlashWeave's meta-variable ('driver') edges, method counts and overlaps.
 site/network.json: methods, layouts, layers, permissivity steps (STEPS, filtered client-side), edges per step, the known-pair check,
 top partners per eukaryote and per giant virus / virophage (consensus edges). out/permissivity_steps.tsv: known pairs recovered at
 each step."""
@@ -52,7 +51,7 @@ def nlabel(i, x):
 # Every step filters the stored results of the five methods; nothing is recomputed. A method SUPPORTS an edge at a step when it
 # reports the edge with the edge's sign and its score passes the step's level:
 #   'strong': netcommon.strong_bits (SPRING / SPIEC-EASI stability >= 0.9; residual Spearman |rho| >= 0.6 and q < 0.001;
-#             Presence Pearson |r| >= 0.8, q < 0.001, co-present in >= 30 libraries; FlashWeave: every edge, its own conditional
+#             Presence Pearson |r| >= 0.9, q < 0.001, co-present in >= 30 libraries; FlashWeave: every edge, its own conditional
 #             test at alpha 0.01 being the strict part);
 #   'any':    reported (Spearman and Presence Pearson: q < 0.05).
 # A clause {k, lvl, design} passes an edge when at least k of the methods switched on support it, no switched-on method reports
@@ -90,12 +89,12 @@ LAYOUTS = [('tsne', 't-SNE')] + [(m, METHOD_LABEL[m]) for m in METHODS] + [('con
 # single-method line styling on the page: the score column of each method and its class limits (5 classes, same in every layer)
 SCORE = {'flashweave': ('fw', 'FlashWeave |weight|', [0.3, 0.4, 0.5, 0.7]), 'spring': ('sps', 'SPRING stability', [0.4, 0.6, 0.8, 0.9]),
          'spieceasi': ('ses', 'SPIEC-EASI stability', [0.4, 0.6, 0.8, 0.9]), 'spearman': ('rho', 'residual Spearman |ρ|', [0.3, 0.4, 0.5, 0.6]),
-         'pearson': ('pr', 'Presence Pearson |r|', [0.4, 0.6, 0.7, 0.8])}
+         'pearson': ('pr', 'Presence Pearson |r|', [0.87, 0.9, 0.93, 0.96])}   # its edges start at |r| 0.85
 J = {'methods': [{'key': m, 'label': METHOD_LABEL[m], 'bit': BIT[m], 'design_aware': m in DESIGN_AWARE, 'abbr': METHOD_ABBR[m],
                   'col': SCORE[m][0], 'score': SCORE[m][1], 'bins': SCORE[m][2]} for m in METHODS],
      'params': {'prev': PREV, 'min_ppm': MIN_PPM, 'prev_forced': PREV_FORCED, 'strong_stab': STRONG_STAB, 'strong_rho': STRONG_RHO,
                 'strong_q': STRONG_Q, 'strong_pp_r': STRONG_PP_R, 'strong_pp_n': STRONG_PP_N, 'sp_floor': SP_FLOOR,
-                'pp_n_min': PP_N_MIN, 'pp_q': PP_Q},
+                'pp_n_min': PP_N_MIN, 'pp_q': PP_Q, 'pp_r': PP_R, 'pp_n': PP_N},
      'steps': STEPS, 'default_step': DEFAULT_STEP, 'layouts': [{'key': k, 'label': l} for k, l in LAYOUTS],
      'layer_list': [{'key': l, **{k: LAYER_CFG[l][k] for k in ('label', 'long', 'what')}} for l in sorted(LAYERS, key=lambda l: LAYER_CFG[l]['page'])],
      'layers': {}}
