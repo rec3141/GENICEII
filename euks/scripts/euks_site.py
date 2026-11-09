@@ -45,11 +45,16 @@ for b in tpm.index:
 J['plastids'] = sorted(pl, key=lambda d: -d['mean'])
 # eukaryotic MAGs: hull-curated EE## (euks/mags: survey -> compact -> final -> expr -> finalize -> kernel -> da -> register_blobs give
 # the E## source groups; hulls drawn by eye on the contig map, hulls.tsv -> hull_mags.py -> hull_expr.py), copied into data/ by
-# scripts/bin_domains.py. Expression = reads on the MAG's contigs per million contig-assigned reads (any read on the contig, so
-# intron-containing genes count), from euks/mags/out/hull_mags_expr_samples.tsv; DA from hull_mags_da.tsv (dacore).
+# scripts/bin_domains.py. Expression (Illumina RNA) = the outlier-resistant MAG profile of euks/mags/scripts/robustexpr.py, in reads
+# per kb per million contig-assigned reads (any read on a contig counts, so intron-containing genes count): contigs detected in
+# >= 25% of libraries, each scaled to mean 1, per-library 10% trimmed mean x the MAG's median contig level; from
+# euks/mags/out/hull_mags_expr_samples.tsv. Values are small (1e-4 to 1), so they are kept to 3 significant figures. DA from
+# hull_mags_da.tsv (dacore; RNA on the summed reads, DNA on nanopore depth).
 HM = pd.read_csv(D + 'hull_mags.tsv', sep='\t', keep_default_na=False)
 EG = HM[HM.mag.str.startswith('EE')]
-GX = hull_mag_expression()       # EE/P x libraries (common.py)
+GX = hull_mag_expression()       # EE/P x libraries (common.py; robust profile, reads per kb per million)
+EXM = pd.read_csv(E0 + 'euks/mags/out/hull_mags_expr_method.tsv', sep='\t', index_col=0)     # contigs used, thin / fallback flags
+sg = lambda t: None if t != t else float(f'{t:.3g}')
 DA = hull_mag_da()               # per-MAG RNA/DNA differential abundance
 BD = pd.read_csv(D + 'bin_domain.tsv', sep='\t', index_col=0)
 dbin = {g: [b.replace('dastool-', '') for b in BD.index[BD.get('hull_mag', pd.Series(dtype=str)).reindex(BD.index) == g]] for g in EG.mag}
@@ -71,15 +76,16 @@ for x in EG.itertuples():
         v = GX.loc[x.mag].reindex(S)
         for s_, k in (('2024-25', '24'), ('2025-26', '25')):
             for f, sel in (('oil', core.phase == 'oiled'), ('ctl', core.phase == 'control'), ('pre_exp', (core.phase == 'pre') & (core.group == 'EXP')), ('pre_ctl', (core.phase == 'pre') & (core.group == 'CTL'))):
-                d[f'{f}{k}'] = r(v[core.index[(core.season == s_) & sel]].median(), 0)
-        d['median'] = r(v[core_all.index].median(), 0)
-        d['expr'] = [r(t, 1) for t in v]
+                d[f'{f}{k}'] = sg(v[core.index[(core.season == s_) & sel]].median())
+        d['median'] = sg(v[core_all.index].median())
+        d['expr'] = [sg(t) for t in v]
+        d['thin'] = bool(EXM.thin.get(x.mag, False)); d['fallback'] = EXM.method.get(x.mag, '') != 'robust'
     eg.append(d)
 order = {'network': 0, '<4 Mbp': 1, 'little CMO RNA': 2, 'doubtful': 3}
 J['euk_groups'] = sorted(eg, key=lambda d: (order.get(d['status'], 3), -(d.get('median') or 0)))
-J['da_contrasts'] = [['RNA', 'diesel_vs_control_2024-25', 'RNA diesel ÷ control 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'RNA diesel ÷ control 25-26'],
-                     ['RNA', 'baci_2025-26_SW', 'RNA BACI 25-26'], ['RNA', 'ice_vs_water', 'RNA ice ÷ water'],
-                     ['DNA', 'diesel_vs_control_2024-25', 'DNA diesel ÷ control 24-25'], ['DNA', 'ice_vs_water', 'DNA ice ÷ water']]
+J['da_contrasts'] = [['RNA', 'diesel_vs_control_2024-25', 'Illumina RNA diesel ÷ control 24-25'], ['RNA', 'diesel_vs_control_2025-26', 'Illumina RNA diesel ÷ control 25-26'],
+                     ['RNA', 'baci_2025-26_SW', 'Illumina RNA BACI 25-26'], ['RNA', 'ice_vs_water', 'Illumina RNA ice ÷ water'],
+                     ['DNA', 'diesel_vs_control_2024-25', 'nanopore DNA diesel ÷ control 24-25'], ['DNA', 'ice_vs_water', 'nanopore DNA ice ÷ water']]
 # published Hudson Bay context (curated: euks/literature_context.tsv; '#ref' lines = citations). MAG ids are mapped through the
 # id registry: an id retired as 'merged into EEnn' shows as EEnn (EE14/EE17 -> EE12, EE29 -> EE03); duplicates and ids that are
 # not current MAGs are dropped.

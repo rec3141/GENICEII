@@ -1,0 +1,27 @@
+group	contigs	kb	n_used	method	thin	top5_share	rho_robust_vs_summed	median_robust_rpkm	median_summed_ppm
+EE01	7177	40101.8	26	robust	False	0.977	0.013	0.03	103.7
+EE02	4840	38808.7	1731	robust	False	0.229	0.919	0.0	744.0
+EE03	5568	53992.9	2760	robust	False	0.49	0.734	0.01	3011.2
+EE04	6908	34772.2	2510	robust	False	0.949	0.952	0.0	3107.2
+EE05	10785	81758.8	5991	robust	False	0.064	0.978	0.0	979.7
+EE06	5499	29059.6	3262	robust	False	0.111	0.948	0.0	514.4
+EE07	3514	23782.6	2249	robust	False	0.563	0.896	0.0	459.9
+EE08	3101	15554.8	9	robust	True	0.954	0.755	0.2	24.8
+EE10	2372	11243.9	7	robust	True	0.902	0.864	0.02	2.8
+EE12	12602	44966.7	17	robust	True	0.64	0.819	0.09	14.7
+EE15	590	2138.6	2	length-weighted mean (fallback)	True	0.97	1.0	0.0	2.1
+EE16	2020	7282.1	0	length-weighted mean (fallback)	True	0.929	1.0	0.0	0.0
+EE21	4468	21868.8	67	robust	False	0.559	0.867	0.02	40.0
+EE22	1681	18046.5	670	robust	False	0.407	0.833	0.0	385.5
+EE23	1180	13783.2	1050	robust	False	0.181	0.99	0.01	407.8
+EE25	794	7800.6	633	robust	False	0.098	0.98	0.05	562.2
+EE26	1135	8434.3	416	robust	False	0.148	0.959	0.0	45.4
+EE27	2033	12208.6	804	robust	False	0.131	0.966	0.01	211.6
+EE28	913	4959.1	233	robust	False	0.349	0.901	0.0	24.3
+EE30	7855	71770.5	3218	robust	False	0.077	0.978	0.0	684.2
+EE32	4099	19785.6	305	robust	False	0.429	0.773	0.01	89.4
+EE33	3629	17874.1	175	robust	False	0.249	0.947	0.02	91.6
+EE34	1557	7516.5	40	robust	False	0.881	0.717	0.02	68.8
+EE35	972	5552.5	42	robust	False	0.599	0.885	0.01	14.0
+EE36	613	3068.6	15	robust	True	0.65	0.507	0.02	10.8
+P01	335	4950.0	334	robust	False	0.278	0.939	0.1	10637.8

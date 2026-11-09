@@ -1,8 +1,9 @@
 """Merge rule for the hull MAGs (EE##), run after hull_mags.py (user-approved 2026-11-08).
 Two hull MAGs are one genome cut in pieces (e.g. by t-SNE) when they rise and fall together, do not share sequence, and their union
 is a better genome than either part. A candidate pair (A, B) is merged only if ALL of these hold:
-  1. RNA rho >= 0.95: Spearman of the summed per-library RNA profiles (reads per million contig-assigned reads, 128 libraries;
-     eukshared.rna_profile, the hull_expr.py metric);
+  1. RNA rho >= 0.95: Spearman of the outlier-resistant per-library RNA profiles (robustexpr.robust_profile: per-library 10%
+     trimmed mean over the mean-scaled profiles of contigs detected in >= 25% of the 128 libraries, the hull_expr.py metric since 2026-11-08). The summed
+     profile (eukshared.rna_profile) let a few contigs decide: EE03+EE31 had summed rho 0.53 but robust rho 0.996;
   2. DNA rho >= 0.8: Spearman of the summed CMO nanopore depth x length shares (eukshared.dna_profile);
   3. skani aligned fraction < 10% in both directions (skani dist --min-af 0; no output = ANI screen < 80% = AF 0): the parts are
      not two copies (strains/haplotypes) of the same sequence;
@@ -21,7 +22,7 @@ import sys, re, os, itertools, subprocess, datetime
 from concurrent.futures import ThreadPoolExecutor
 import numpy as np, pandas as pd
 sys.path.insert(0, '/data/dev/rnaseq-exploration/euks/mags/scripts')
-import eukshared as E, buscolib as B
+import eukshared as E, buscolib as B, robustexpr as RX
 O = E.O
 RNA_MIN, DNA_MIN, AF_MAX, DUP_MAX = 0.95, 0.8, 10.0, 5.0
 NEAR_RNA = 0.9
@@ -38,7 +39,7 @@ def members(grp): return sorted(set().union(*(MEM[m] for m in grp)))
 _prof = {}
 def prof(grp):
     k = key(grp)
-    if k not in _prof: ids = members(grp); _prof[k] = (E.rna_profile(ids), E.dna_profile(ids))
+    if k not in _prof: ids = members(grp); _prof[k] = (RX.robust_profile(ids), E.dna_profile(ids))
     return _prof[k]
 def rhos(a, b):
     (ra, da), (rb, db) = prof(a), prof(b); return E.spearman(ra, rb), E.spearman(da, db)
