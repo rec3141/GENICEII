@@ -1,10 +1,11 @@
 # SPIEC-EASI (Kurtz et al. 2015) on each layer, as a comparison method: spiec.easi(method = "mb") on the node counts
 # (SpiecEasi applies clr with a pseudocount itself), lambda path of 20 values down to 0.01 x lambda.max, StARS with 20
 # subsamples (SpiecEasi default threshold 0.05). Edge weight and sign = symmetrised MB coefficient (symBeta, mode "ave").
-# Usage: Rscript run_spieceasi.R <network dir>   (reads cache/{dna,rna}_X.tsv, writes out/edges_spieceasi_{layer}.tsv)
+# Usage: Rscript run_spieceasi.R <network dir>   (reads every cache/{layer}_X.tsv, writes out/edges_spieceasi_{layer}.tsv)
 args <- commandArgs(trailingOnly = TRUE); net <- if (length(args)) args[1] else "."
 suppressPackageStartupMessages({ library(SpiecEasi); library(Matrix) })
-for (layer in c("dna", "rna")) {
+layers <- sub("_X\\.tsv$", "", list.files(file.path(net, "cache"), pattern = "_X\\.tsv$"))   # every layer export.py wrote
+for (layer in layers) {
   X <- as.matrix(read.delim(file.path(net, "cache", paste0(layer, "_X.tsv")), row.names = 1, check.names = FALSE))
   set.seed(10010)
   se <- spiec.easi(X, method = "mb", lambda.min.ratio = 1e-2, nlambda = 20,

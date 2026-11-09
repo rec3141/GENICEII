@@ -10,11 +10,24 @@ import numpy as np, pandas as pd
 NET = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 CACHE, OUT = os.path.join(NET, 'cache'), os.path.join(NET, 'out')
 REPO = os.path.abspath(os.path.join(NET, '..'))
-LAYERS = ('dna', 'rna')
 PREV, MIN_PPM, PREV_FORCED = 0.25, 1.0, 0.10
 DNA_UNIT = 1000.0                      # DNA pseudo-counts: kb of aligned nanopore read bases (coverage depth x length / 1000)
-METHODS = ('flashweave', 'spring', 'spieceasi', 'spearman')
-METHOD_LABEL = {'flashweave': 'FlashWeave', 'spring': 'SPRING', 'spieceasi': 'SPIEC-EASI', 'spearman': 'Residual Spearman'}
+# Layers. Each is one abundance table in cache/ (nodes x libraries, written by nodes.py) plus a library table with 'size' (the
+# library total in the same unit) and the design columns season, group, medium, day, layer, par_under. 'unit' turns the stored
+# values into the pseudo-counts the methods get (value / unit). To add a layer (e.g. Illumina DNA), write its two tables and add
+# an entry here; every script, the R and Julia runs (they read cache/*_X.tsv) and the page follow. 'page' sets the page order.
+LAYER_CFG = {
+    'dna': dict(counts='dna_cov.tsv', lib='dna_lib.tsv', unit=DNA_UNIT, label='DNA', long='DNA (presence)', page=2,
+                what='nanopore metagenomes'),
+    'rna': dict(counts='rna_counts.tsv', lib='rna_lib.tsv', unit=1.0, label='RNA', long='RNA (activity)', page=1,
+                what='Illumina RNA libraries'),
+}
+LAYERS = tuple(LAYER_CFG)
+METHODS = ('flashweave', 'spring', 'spieceasi', 'spearman', 'pearson')
+METHOD_LABEL = {'flashweave': 'FlashWeave', 'spring': 'SPRING', 'spieceasi': 'SPIEC-EASI', 'spearman': 'Residual Spearman',
+                'pearson': 'Presence Pearson'}
+METHOD_ABBR = {'flashweave': 'F', 'spring': 'S', 'spieceasi': 'E', 'spearman': 'R', 'pearson': 'P'}
+DESIGN_AWARE = ('flashweave', 'spearman')     # methods that account for winter, pool, medium and time
 
 
 def nodes_all():
@@ -25,9 +38,19 @@ def forced(N):
     return (N.domain == 'eukaryote') | N.kind.isin(['giant virus', 'virophage', 'organelle group'])
 
 
+def raw_table(layer):
+    """Stored abundance (nodes x libraries) and library table of a layer."""
+    c = LAYER_CFG[layer]
+    return (pd.read_csv(os.path.join(CACHE, c['counts']), sep='\t', index_col=0),
+            pd.read_csv(os.path.join(CACHE, c['lib']), sep='\t', index_col=0))
+
+
 def layer_nodes(layer, N=None):
     N = nodes_all() if N is None else N
-    N = N[N.contigs > 0]
+    N = N[N.contigs > 0].copy()
+    if f'{layer}_prev' not in N:                      # a layer added after nodes.py: prevalence from its table
+        R, lib = raw_table(layer); R = R.reindex(N.index).fillna(0)[lib.index]
+        N[f'{layer}_prev'] = (R > 0).mean(1).round(3); N[f'{layer}_share_ppm'] = (R.div(lib['size'], axis=1).mean(1) * 1e6).round(2)
     keep = (forced(N) & (N[f'{layer}_prev'] >= PREV_FORCED)) | ((N[f'{layer}_prev'] >= PREV) & (N[f'{layer}_share_ppm'] >= MIN_PPM))
     return N[keep]
 
@@ -35,14 +58,14 @@ def layer_nodes(layer, N=None):
 def load_layer(layer):
     """X: libraries x nodes (counts; DNA in kb of aligned bases, rounded), lib: library table, N: node table of the layer."""
     N = layer_nodes(layer)
-    if layer == 'rna':
-        X = pd.read_csv(os.path.join(CACHE, 'rna_counts.tsv'), sep='\t', index_col=0)
-        lib = pd.read_csv(os.path.join(CACHE, 'rna_lib.tsv'), sep='\t', index_col=0)
-    else:
-        X = pd.read_csv(os.path.join(CACHE, 'dna_cov.tsv'), sep='\t', index_col=0) / DNA_UNIT
-        lib = pd.read_csv(os.path.join(CACHE, 'dna_lib.tsv'), sep='\t', index_col=0)
-    X = X.loc[N.index, lib.index].T.round()
+    R, lib = raw_table(layer)
+    X = (R / LAYER_CFG[layer]['unit']).loc[N.index, lib.index].T.round()
     return X, lib, N
+
+
+def rel_abund(X, lib, layer):
+    """Share of the library (libraries x nodes) from load_layer's pseudo-counts."""
+    return X.mul(LAYER_CFG[layer]['unit']).div(lib['size'], axis=0)
 
 
 def meta_vars(lib):
@@ -74,3 +97,85 @@ def design(lib):
 
 def edge_key(a, b):
     return (a, b) if a < b else (b, a)
+
+
+def meta_columns(layer):
+    return list(pd.read_csv(os.path.join(CACHE, f'{layer}_meta.tsv'), sep='\t', index_col=0).columns)
+
+
+def read_flashweave(layer):
+    """FlashWeave edges of a layer: (genome-genome edges with sign, meta-variable 'driver' edges)."""
+    meta = meta_columns(layer)
+    E = pd.read_csv(os.path.join(OUT, f'flashweave_{layer}.edgelist'), sep='\t', comment='#', header=None, names=['a', 'b', 'weight'])
+    ism = E.a.isin(meta) | E.b.isin(meta)
+    Dr = E[ism & ~(E.a.isin(meta) & E.b.isin(meta))].copy()
+    Dr['driver'] = np.where(Dr.a.isin(meta), Dr.a, Dr.b); Dr['node'] = np.where(Dr.a.isin(meta), Dr.b, Dr.a)
+    E = E[~ism].copy(); E['sign'] = np.sign(E.weight).astype(int)
+    E[['a', 'b']] = [edge_key(a, b) for a, b in zip(E.a, E.b)]
+    return E, Dr[['node', 'driver', 'weight']]
+
+
+def read_methods(layer):
+    """Every method's edges of a layer, keyed the same way: {method: DataFrame(a, b, sign, weight[, stability, q, n])}, drivers.
+    One key order for every method: R (SPIEC-EASI) sorts ids case-insensitively, Python by code point, so 'contig_..' vs 'EE04'
+    came out in opposite orders and the same pair was two different edges (fixed 2026-11-08)."""
+    M = {}
+    M['flashweave'], dr = read_flashweave(layer)
+    for m in METHODS[1:]:
+        M[m] = pd.read_csv(os.path.join(OUT, f'edges_{m}_{layer}.tsv'), sep='\t')
+        M[m][['a', 'b']] = [edge_key(a, b) for a, b in zip(M[m].a, M[m].b)]
+    return M, dr
+
+
+# ---------------------------------------------------------------- the edge table the page gets (network_site.py, forcelayout.py)
+# The two pairwise correlations are dense, so edges that ONLY one of them reports are kept only above a floor:
+#   residual Spearman: |rho| >= SP_FLOOR (RNA: 69,711 Spearman edges at q < 0.05);
+#   Presence Pearson: only strong edges (DNA: 48,553 edges at q < 0.05, 40% of all pairs; RNA 104,840, 61%).
+# 'Strong' scores, per method (also used by the permissivity steps; the page recomputes them from the exported values):
+#   SPRING, SPIEC-EASI: StARS stability >= STRONG_STAB; residual Spearman: |rho| >= STRONG_RHO and q < STRONG_Q;
+#   Presence Pearson: |r| >= STRONG_PP_R, q < STRONG_Q and co-present in >= STRONG_PP_N libraries; FlashWeave: every edge.
+SP_FLOOR = 0.4
+PP_N_MIN, PP_Q = 10, 0.05          # Presence Pearson: pairs co-present in >= PP_N_MIN libraries are tested; edges at BH q < PP_Q
+STRONG_STAB, STRONG_RHO, STRONG_Q = 0.9, 0.6, 1e-3
+STRONG_PP_R, STRONG_PP_N = 0.8, 30
+BIT = {m: 1 << i for i, m in enumerate(METHODS)}
+# exported values, as the page gets them: score x100 (|beta| x1000), q as -log10 q x10
+q10 = lambda q: np.where(np.isfinite(q), np.minimum(np.round(-np.log10(np.maximum(q, 1e-300)) * 10), 3000), 0).astype(int)
+i100 = lambda v: np.round(np.abs(np.nan_to_num(np.asarray(v, float))) * 100).astype(int)
+
+
+def strong_bits(T):
+    """Bit mask of the methods with a strong score on each edge, on the exported (rounded) values, exactly as the page does it."""
+    qt = -np.log10(STRONG_Q) * 10
+    st = BIT['flashweave'] * (T.flashweave_sign.to_numpy() != 0)
+    st = st + BIT['spring'] * (i100(T.spring_stab) >= STRONG_STAB * 100) + BIT['spieceasi'] * (i100(T.spieceasi_stab) >= STRONG_STAB * 100)
+    st = st + BIT['spearman'] * ((i100(T.spearman_w) >= STRONG_RHO * 100) & (q10(T.spearman_q.to_numpy(float)) > qt))
+    st = st + BIT['pearson'] * ((i100(T.pearson_w) >= STRONG_PP_R * 100) & (q10(T.pearson_q.to_numpy(float)) > qt) &
+                                (np.nan_to_num(T.pearson_n.to_numpy(float)) >= STRONG_PP_N))
+    return st.astype(int)
+
+
+def edge_table(layer):
+    """All methods' edges of a layer joined on the pair: <m>_sign, <m>_w (signed score), <m>_stab (SPRING, SPIEC-EASI), spearman_q,
+    pearson_q, pearson_n; sign = majority sign (ties positive); mask / anti = bit masks of the methods with / against that sign.
+    Single-method Spearman and Presence Pearson edges below their floors are dropped. Returns (table, {method: dropped})."""
+    M, _ = read_methods(layer)
+    T = None
+    for m, E in M.items():
+        cols = {'sign': f'{m}_sign', 'weight': f'{m}_w'}
+        if 'stability' in E: cols['stability'] = f'{m}_stab'
+        for c in ('q', 'n'):
+            if c in E: cols[c] = f'{m}_{c}'
+        e = E.set_index(['a', 'b'])[list(cols)].rename(columns=cols)
+        T = e if T is None else T.join(e, how='outer')
+    for m in METHODS: T[f'{m}_sign'] = T[f'{m}_sign'].fillna(0).astype(int)
+    S = T[[f'{m}_sign' for m in METHODS]]
+    pos, neg = (S > 0).sum(axis=1), (S < 0).sum(axis=1)
+    T['sign'] = np.where(pos >= neg, 1, -1)
+    T['mask'] = sum(np.where(S[f'{m}_sign'].to_numpy() == T.sign.to_numpy(), BIT[m], 0) for m in METHODS)
+    T['anti'] = sum(np.where(S[f'{m}_sign'].to_numpy() == -T.sign.to_numpy(), BIT[m], 0) for m in METHODS)
+    only = lambda m: T['mask'].eq(BIT[m]) & T.anti.eq(0)
+    drop_sp = only('spearman') & (T.spearman_w.abs() < SP_FLOOR)
+    drop_pp = only('pearson') & ((strong_bits(T) & BIT['pearson']) == 0)
+    T = T[~(drop_sp | drop_pp)]
+    return T.reset_index(), {'spearman': int(drop_sp.sum()), 'pearson': int(drop_pp.sum())}

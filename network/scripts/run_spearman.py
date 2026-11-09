@@ -13,7 +13,7 @@ Q = 0.05
 
 for layer in LAYERS:
     X, lib, N = load_layer(layer)
-    Y = np.log(X.div(lib['size'] / (1e6 if layer == 'rna' else 1e6 * DNA_UNIT), axis=0) + 1)   # per million (reads or bases)
+    Y = np.log(rel_abund(X, lib, layer) * 1e6 + 1)                                            # per million (reads or bases)
     Y = Y.sub(Y.mean(axis=1), axis=0)                                                         # centred log-ratio per library
     Z = design(lib).to_numpy()
     beta, *_ = np.linalg.lstsq(Z, Y.to_numpy(), rcond=None)
