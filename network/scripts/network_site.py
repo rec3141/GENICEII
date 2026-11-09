@@ -1,19 +1,22 @@
-"""Site data for the Network page (Food web). Run after nodes.py, export.py, the four methods, consensus.py and layout.py.
-site/network_{dna,rna}.json, one per layer: nodes (t-SNE position, domain, kind, status, role, label) and the FULL edge sets of all
-four methods as column arrays (a, b node indices; s sign; m / x bit masks of the methods agreeing with / opposing that sign;
-fw FlashWeave |weight| x100; sps / ses SPRING / SPIEC-EASI stability x100; spb / seb their |beta|
-x1000; rho residual-Spearman |rho| x100; q -log10 Spearman q x10). The score columns are sparse: one value per edge that
-the method reports, in edge order (the page expands them); 'strong' is recomputed on the page from these scores. Spearman edges that no other method reports are kept only at
-|rho| >= SP_FLOOR. Also FlashWeave's meta-variable ('driver') edges, method counts and overlaps.
-site/network.json: methods, permissivity steps (STEPS, filtered client-side), edges per step, the known-pair check, top partners per
-eukaryote and per giant virus / virophage (consensus edges). out/permissivity_steps.tsv: known pairs recovered at each step."""
+"""Site data for the Network page (Food web). Run after nodes.py, export.py, the five methods, consensus.py, layout.py and
+forcelayout.py.
+site/network_{layer}.json, one per layer: nodes (domain, kind, status, role, label), positions of every layout (t-SNE and one force
+layout per method plus the consensus; -100..100, 1 decimal) and the edge sets of all five methods as column arrays (a, b node
+indices; f flags, see below; fw FlashWeave |weight| x100; sps / ses SPRING /
+SPIEC-EASI stability x100; rho residual-Spearman |rho| x100; pr Presence Pearson |r| x100; f packs, with M = number of methods,
+bit 0 = positive sign, bits 1..M the mask of methods agreeing with that sign, the next M bits the mask of methods with the opposite
+sign, the next M bits the methods whose score is strong there (netcommon.strong_bits). The score columns are sparse: one value per edge that the
+method reports, in edge order (the page expands them). Edges that only the
+residual Spearman reports are kept at |rho| >= SP_FLOOR (netcommon.edge_table). Also FlashWeave's meta-variable ('driver') edges, method counts and overlaps.
+site/network.json: methods, layouts, layers, permissivity steps (STEPS, filtered client-side), edges per step, the known-pair check,
+top partners per eukaryote and per giant virus / virophage (consensus edges). out/permissivity_steps.tsv: known pairs recovered at
+each step."""
 import os, sys, json, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from netcommon import *
-sys.path.insert(0, '/data/dev/rnaseq-exploration/scripts')
+sys.path.insert(0, os.path.join(REPO, 'scripts'))
 import common
 
-BIT = {m: 1 << i for i, m in enumerate(METHODS)}
 SITE = os.path.join(REPO, 'site', 'network.json')
 def r(x, n=3):
     try: x = float(x)
@@ -45,21 +48,22 @@ def nlabel(i, x):
     return x.label
 
 # ---------------------------------------------------------------- permissivity steps (one ordinal slider on the page)
-# Every step filters the stored results of the four methods; nothing is recomputed. A method SUPPORTS an edge at a step when it
+# Every step filters the stored results of the five methods; nothing is recomputed. A method SUPPORTS an edge at a step when it
 # reports the edge with the edge's sign and its score passes the step's level:
-#   'strong': SPRING and SPIEC-EASI stability (share of StARS subsamples with the edge) >= STRONG_STAB; residual Spearman
-#             |rho| >= STRONG_RHO and q < STRONG_Q; FlashWeave: reported (its own conditional test at alpha 0.01 is the strict part);
-#   'any':    reported (Spearman: q < 0.05).
+#   'strong': netcommon.strong_bits (SPRING / SPIEC-EASI stability >= 0.9; residual Spearman |rho| >= 0.6 and q < 0.001;
+#             Presence Pearson |r| >= 0.9, q < 0.001, co-present in >= 30 libraries; FlashWeave: every edge, its own conditional
+#             test at alpha 0.01 being the strict part);
+#   'any':    reported (Spearman and Presence Pearson: q < 0.05).
 # A clause {k, lvl, design} passes an edge when at least k of the methods switched on support it, no switched-on method reports
 # the opposite sign, and (design clauses) one supporting method accounts for the design (FlashWeave with meta-variables, or the
 # residual Spearman). With fewer than k methods switched on, k becomes the number switched on. Each step is the union of its own
 # clause and every stricter step's, so the steps are nested: every link of a step is also in all more permissive steps.
+# With five methods, three or even four supporters can all be design-blind (SPRING, SPIEC-EASI, Presence Pearson), so every
+# clause down to the consensus carries the design condition; otherwise the union would put design-blind links into the consensus.
 # Step 'cons' equals the consensus of consensus.py.
-STRONG_STAB, STRONG_RHO, STRONG_Q = 0.9, 0.6, 1e-3
-SP_FLOOR = 0.4          # Spearman-only edges with |rho| below this are not exported (RNA has 69,711 Spearman edges at q < 0.05)
-_C = [(dict(k=4, lvl='strong', design=False), 'All four methods, strong scores'),
-      (dict(k=3, lvl='strong', design=False), 'Three methods with strong scores'),
-      (dict(k=3, lvl='any', design=False), 'Three methods'),
+_C = [(dict(k=4, lvl='strong', design=True), 'Four or five methods, strong scores'),
+      (dict(k=3, lvl='strong', design=True), 'Three methods with strong scores, one design-aware'),
+      (dict(k=3, lvl='any', design=True), 'Three methods, one design-aware'),
       (dict(k=2, lvl='strong', design=True), 'Three methods, or two with strong scores (one design-aware)'),
       (dict(k=2, lvl='any', design=True), 'Two methods, one design-aware (consensus)'),
       (dict(k=2, lvl='any', design=False), 'Any two methods'),
@@ -68,63 +72,49 @@ _C = [(dict(k=4, lvl='strong', design=False), 'All four methods, strong scores')
 STEPS = [dict(label=l, clauses=[c for c, _ in _C[:i + 1]], **({'cons': True} if 'consensus' in l else {})) for i, (_, l) in enumerate(_C)]
 DEFAULT_STEP = 4
 
-def read_methods(layer, N):
-    meta_cols = list(pd.read_csv(os.path.join(CACHE, f'{layer}_meta.tsv'), sep='\t', index_col=0).columns)
-    F = pd.read_csv(os.path.join(OUT, f'flashweave_{layer}.edgelist'), sep='\t', comment='#', header=None, names=['a', 'b', 'weight'])
-    F = F[~(F.a.isin(meta_cols) | F.b.isin(meta_cols))].copy(); F['sign'] = np.sign(F.weight).astype(int)
-    F[['a', 'b']] = [edge_key(a, b) for a, b in zip(F.a, F.b)]
-    M = {'flashweave': F}
-    for m in ('spring', 'spieceasi', 'spearman'):
-        M[m] = pd.read_csv(os.path.join(OUT, f'edges_{m}_{layer}.tsv'), sep='\t')
-        M[m][['a', 'b']] = [edge_key(a, b) for a, b in zip(M[m].a, M[m].b)]     # same key order for R and Python output
-    T = None
-    for m, E in M.items():
-        cols = {'sign': f'{m}_sign', 'weight': f'{m}_w'}
-        if 'stability' in E: cols['stability'] = f'{m}_stab'
-        if m == 'spearman': cols['q'] = 'spearman_q'
-        e = E.set_index(['a', 'b'])[list(cols)].rename(columns=cols)
-        T = e if T is None else T.join(e, how='outer')
-    for m in METHODS: T[f'{m}_sign'] = T[f'{m}_sign'].fillna(0).astype(int)
-    S = T[[f'{m}_sign' for m in METHODS]]
-    pos, neg = (S > 0).sum(1), (S < 0).sum(1)
-    T['sign'] = np.where(pos >= neg, 1, -1)
-    T['mask'] = sum(np.where(S[f'{m}_sign'].to_numpy() == T.sign.to_numpy(), BIT[m], 0) for m in METHODS)
-    T['anti'] = sum(np.where(S[f'{m}_sign'].to_numpy() == -T.sign.to_numpy(), BIT[m], 0) for m in METHODS)
-    only_sp = T['mask'].eq(BIT['spearman']) & T.anti.eq(0)
-    n_drop = int((only_sp & (T.spearman_w.abs() < SP_FLOOR)).sum())
-    T = T[~(only_sp & (T.spearman_w.abs() < SP_FLOOR))]
-    return T.reset_index(), n_drop
-
-def strong_mask(T):
-    # on the exported (rounded) values, exactly as the page recomputes it
-    st = np.full(len(T), BIT['flashweave']) * (T.flashweave_sign != 0)
-    st = st + BIT['spring'] * (np.round(T.spring_stab.fillna(0) * 100) >= STRONG_STAB * 100) + BIT['spieceasi'] * (np.round(T.spieceasi_stab.fillna(0) * 100) >= STRONG_STAB * 100)
-    st = st + BIT['spearman'] * ((np.round(T.spearman_w.abs().fillna(0) * 100) >= STRONG_RHO * 100) & (q10(T.spearman_q.to_numpy(float)) > -np.log10(STRONG_Q) * 10))
-    return st.astype(int).to_numpy()
-
 def popcount(v): return np.array([bin(int(x)).count('1') for x in v])
-DESIGN_BITS = BIT['flashweave'] | BIT['spearman']
+DESIGN_BITS = sum(BIT[m] for m in DESIGN_AWARE)
 def passes(T, strong, step, bits=sum(BIT.values())):
-    n_on = bin(bits).count('1'); m = T['mask'].to_numpy() & bits; clean = (T.anti.to_numpy() & bits) == 0; out = np.zeros(len(T), bool)
+    # the sign is the one the switched-on methods give; any disagreement among them drops the edge (as nwPass on the page)
+    n_on = bin(bits).count('1'); ag = T['mask'].to_numpy() & bits; op = T.anti.to_numpy() & bits
+    on = np.where(op == 0, ag, np.where(ag == 0, op, 0)); out = np.zeros(len(T), bool)
     for c in step['clauses']:
-        sup = m & strong if c['lvl'] == 'strong' else m
-        ok = (popcount(sup) >= min(c['k'], n_on)) & clean
+        sup = on & strong if c['lvl'] == 'strong' else on
+        ok = popcount(sup) >= max(1, min(c['k'], n_on))
         if c['design']: ok &= (sup & DESIGN_BITS) > 0
         out |= ok
     return out
 
-J = {'methods': [{'key': m, 'label': METHOD_LABEL[m], 'bit': BIT[m], 'design_aware': m in ('flashweave', 'spearman')} for m in METHODS],
+LAYOUTS = [('tsne', 't-SNE')] + [(m, METHOD_LABEL[m]) for m in METHODS] + [('consensus', 'Consensus')]   # forcelayout.py
+# single-method line styling on the page: the score column of each method and its class limits (5 classes, same in every layer)
+SCORE = {'flashweave': ('fw', 'FlashWeave |weight|', [0.3, 0.4, 0.5, 0.7]), 'spring': ('sps', 'SPRING stability', [0.4, 0.6, 0.8, 0.9]),
+         'spieceasi': ('ses', 'SPIEC-EASI stability', [0.4, 0.6, 0.8, 0.9]), 'spearman': ('rho', 'residual Spearman |ρ|', [0.3, 0.4, 0.5, 0.6]),
+         'pearson': ('pr', 'Presence Pearson |r|', [0.87, 0.9, 0.93, 0.96])}   # its edges start at |r| 0.85
+J = {'methods': [{'key': m, 'label': METHOD_LABEL[m], 'bit': BIT[m], 'design_aware': m in DESIGN_AWARE, 'abbr': METHOD_ABBR[m],
+                  'col': SCORE[m][0], 'score': SCORE[m][1], 'bins': SCORE[m][2]} for m in METHODS],
      'params': {'prev': PREV, 'min_ppm': MIN_PPM, 'prev_forced': PREV_FORCED, 'strong_stab': STRONG_STAB, 'strong_rho': STRONG_RHO,
-                'strong_q': STRONG_Q, 'sp_floor': SP_FLOOR}, 'steps': STEPS, 'default_step': DEFAULT_STEP, 'layers': {}}
+                'strong_q': STRONG_Q, 'strong_pp_r': STRONG_PP_R, 'strong_pp_n': STRONG_PP_N, 'sp_floor': SP_FLOOR,
+                'pp_n_min': PP_N_MIN, 'pp_q': PP_Q, 'pp_r': PP_R, 'pp_n': PP_N},
+     'steps': STEPS, 'default_step': DEFAULT_STEP, 'layouts': [{'key': k, 'label': l} for k, l in LAYOUTS],
+     'layer_list': [{'key': l, **{k: LAYER_CFG[l][k] for k in ('label', 'long', 'what')}} for l in sorted(LAYERS, key=lambda l: LAYER_CFG[l]['page'])],
+     'layers': {}}
 DRV = pd.read_csv(os.path.join(OUT, 'drivers.tsv'), sep='\t')
 SUM = pd.read_csv(os.path.join(OUT, 'method_summary.tsv'), sep='\t'); OVL = pd.read_csv(os.path.join(OUT, 'method_overlap.tsv'), sep='\t')
 KNOWN = [('contig_0000564', 'EE07'), ('contig_0000623', 'EE07'), ('contig_0049668', 'EE07'), ('contig_0000362', 'EE04'), ('contig_0000610', 'EE22'), ('P01', 'EE05')]
 REC = []
-q10 = lambda q: np.where(np.isfinite(q), np.minimum(np.round(-np.log10(np.maximum(q, 1e-300)) * 10), 3000), 0).astype(int)
+
+def scaled(x, y):
+    """One layout to -100..100 on its larger axis (aspect kept), 1 decimal, as [x..., y...] lists."""
+    x, y = np.asarray(x, float), np.asarray(y, float); x, y = x - (x.max() + x.min()) / 2, y - (y.max() + y.min()) / 2
+    f = 100 / max(np.abs(x).max(), np.abs(y).max(), 1e-9)
+    return {'x': np.round(x * f, 1).tolist(), 'y': np.round(y * f, 1).tolist()}
+
 for layer in LAYERS:
     X, lib, N = load_layer(layer)
-    pos = pd.read_csv(os.path.join(OUT, f'layout_{layer}.tsv'), sep='\t', index_col=0)
-    share = X.mul(1.0 if layer == 'rna' else DNA_UNIT).div(lib['size'], axis=0) * 1e6
+    pos = pd.read_csv(os.path.join(OUT, f'layout_{layer}.tsv'), sep='\t', index_col=0).loc[N.index]
+    fl = pd.read_csv(os.path.join(OUT, f'forcelayout_{layer}.tsv'), sep='\t', index_col=0).loc[N.index]
+    layouts = {'tsne': scaled(pos.x, pos.y)} | {k: scaled(fl[f'{k}_x'], fl[f'{k}_y']) for k, _ in LAYOUTS[1:]}
+    share = rel_abund(X, lib, layer) * 1e6
     ids = list(N.index); ix = {k: i for i, k in enumerate(ids)}
     nodes = []
     for i, x in N.iterrows():
@@ -135,33 +125,36 @@ for layer in LAYERS:
         if layer == 'rna' and x.domain in ('eukaryote', 'organelle') and str(x.get('rna_thin', '')) == 'True': st.append('thin RNA profile')
         nodes.append({'id': i, 'label': nlabel(i, x), 'domain': x.domain, 'kind': x.kind, 'status': st, 'ee_status': (x.genome_status if isinstance(x.get('genome_status'), str) and x.genome_status else x.status) if x.domain == 'eukaryote' else '',
                       'caution': x.get('caution', '') if isinstance(x.get('caution', ''), str) else '', 'role': ro, 'group': grp,
-                      'x': r(pos.x[i], 4), 'y': r(pos.y[i], 4), 'ab': r(share[i].median(), 2), 'mean': r(share[i].mean(), 2), 'prev': r((X[i] > 0).mean(), 2)})
-    T, n_drop = read_methods(layer, N)
-    strong = strong_mask(T)
-    i100 = lambda v, f: np.round(v.fillna(0).abs() * f).astype(int).tolist()
-    def sp(m, v, f):           # sparse: one value per edge that method reports (either sign), in edge order
+                      'ab': r(share[i].median(), 2), 'mean': r(share[i].mean(), 2), 'prev': r((X[i] > 0).mean(), 2)})
+    T, n_drop = edge_table(layer)
+    strong = strong_bits(T)
+    def sp(m, v, f=100):       # sparse: one value per edge that method reports (either sign), in edge order
         has = T[f'{m}_sign'].to_numpy() != 0
-        return np.round(v[has].fillna(0).abs() * f).astype(int).tolist()
-    edges = {'a': [ix[a] for a in T.a], 'b': [ix[b] for b in T.b], 's': T.sign.astype(int).tolist(), 'm': T['mask'].astype(int).tolist(),
-             'x': T.anti.astype(int).tolist(),
-             'fw': sp('flashweave', T.flashweave_w, 100), 'sps': sp('spring', T.spring_stab, 100), 'spb': sp('spring', T.spring_w, 1000),
-             'ses': sp('spieceasi', T.spieceasi_stab, 100), 'seb': sp('spieceasi', T.spieceasi_w, 1000), 'rho': sp('spearman', T.spearman_w, 100),
-             'q': q10(T.spearman_q.to_numpy(float))[T.spearman_sign.to_numpy() != 0].tolist()}
+        return np.round(np.abs(np.nan_to_num(np.asarray(v, float)[has])) * f).astype(int).tolist()
+    nb = len(METHODS)
+    flags = (T.sign.to_numpy() > 0).astype(int) | (T['mask'].to_numpy() << 1) | (T.anti.to_numpy() << (1 + nb)) | (strong << (1 + 2 * nb))
+    edges = {'a': [ix[a] for a in T.a], 'b': [ix[b] for b in T.b], 'f': flags.astype(int).tolist(),
+             'fw': sp('flashweave', T.flashweave_w), 'sps': sp('spring', T.spring_stab), 'ses': sp('spieceasi', T.spieceasi_stab),
+             'rho': sp('spearman', T.spearman_w), 'pr': sp('pearson', T.pearson_w)}
     counts = [int(passes(T, strong, s).sum()) for s in STEPS]
     key = {edge_key(a, b): k for k, (a, b) in enumerate(zip(T.a, T.b))}
+    cons = set(map(tuple, pd.read_csv(os.path.join(OUT, 'edges_consensus.tsv'), sep='\t').query('layer == @layer')[['a', 'b']].to_numpy()))
     for si, s in enumerate(STEPS):
         ok = passes(T, strong, s)
+        if s.get('cons'):     # the consensus step must reproduce consensus.py exactly
+            got = {(a, b) for a, b, o in zip(T.a, T.b, ok) if o}
+            assert got == cons, (layer, len(got), len(cons), len(got - cons), len(cons - got))
         for v, h in KNOWN:
             k = key.get(edge_key(v, h)); REC.append(dict(layer=layer, step=si + 1, label=s['label'], edges=counts[si], pair=f'{v}-{h}', found=bool(k is not None and ok[k])))
     dr = DRV[(DRV.layer == layer) & DRV.node.isin(ids)]
-    L = {'n_libs': int(len(lib)), 'nodes': nodes, 'edges': edges, 'step_edges': counts, 'sp_dropped': n_drop,
+    L = {'n_libs': int(len(lib)), 'nodes': nodes, 'layouts': layouts, 'edges': edges, 'step_edges': counts, 'dropped': n_drop,
          'drivers': [[ix[d.node], d.driver, r(d.weight, 3)] for d in dr.itertuples()],
          'summary': SUM[SUM.layer == layer].drop(columns='layer').replace({np.nan: None}).to_dict('records'),
          'overlap': OVL[OVL.layer == layer].drop(columns='layer').replace({np.nan: None}).to_dict('records'),
          'by_domain': N.domain.value_counts().to_dict()}
     json.dump(L, open(os.path.join(REPO, 'site', f'network_{layer}.json'), 'w'), separators=(',', ':'), allow_nan=False)
-    J['layers'][layer] = {k: L[k] for k in ('n_libs', 'step_edges', 'sp_dropped', 'summary', 'overlap', 'by_domain')} | {'n_nodes': len(nodes)}
-    print(layer, len(nodes), 'nodes;', len(T), 'edges exported (', n_drop, 'Spearman-only edges below |rho|', SP_FLOOR, 'dropped); per step:', counts)
+    J['layers'][layer] = {k: L[k] for k in ('n_libs', 'step_edges', 'dropped', 'summary', 'overlap', 'by_domain')} | {'n_nodes': len(nodes)}
+    print(layer, len(nodes), 'nodes;', len(T), 'edges exported (single-method edges dropped below the floors:', n_drop, '); per step:', counts)
 REC = pd.DataFrame(REC); REC.to_csv(os.path.join(OUT, 'permissivity_steps.tsv'), sep='\t', index=False)
 print(REC.pivot_table(index=['layer', 'step', 'edges'], columns='pair', values='found', aggfunc='first').astype(int).to_string())
 # known pairs
@@ -186,4 +179,4 @@ for f in focus:
     P.append({'id': f, 'label': lab[f], 'domain': NA.domain[f], 'kind': NA.kind[f], 'role': role(f)[1] if NA.domain[f] == 'eukaryote' else '', 'n': len(rows), 'partners': rows[:8]})
 J['partners'] = P
 json.dump(J, open(SITE, 'w'), separators=(',', ':'), allow_nan=False)
-print(len(P), 'focus nodes with partners;', {f: os.path.getsize(os.path.join(REPO, 'site', f)) // 1000 for f in ('network.json', 'network_dna.json', 'network_rna.json')}, 'kB')
+print(len(P), 'focus nodes with partners;', {f: os.path.getsize(os.path.join(REPO, 'site', f)) // 1000 for f in ['network.json'] + [f'network_{l}.json' for l in LAYERS]}, 'kB')

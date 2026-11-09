@@ -50,13 +50,45 @@ Candidates: 528 prokaryotes (224 HQ, 304 MQ), 26 EE (after PR #18), 1 organelle 
 3. **SPIEC-EASI** (R SpiecEasi, `scripts/run_spieceasi.R`): mb, 20 lambdas down to 0.01 × lambda.max, StARS with 20 subsamples (threshold 0.05), symBeta "ave".
 4. **Residual Spearman** (`scripts/run_spearman.py`): centred log-ratio of (per million + 1); OLS on winter × pool × medium cells plus a linear day trend per winter; Spearman of the residuals; BH over all pairs; q < 0.05.
    - It is dense (see the table below). Spline time terms (cubic per winter or per winter × pool) only reduce RNA edges from 74k to 58k, so the residual structure is real covariation, not a missing time term.
+5. **Presence Pearson** (`scripts/run_pearson.py`, added 2026-11-08):
+   - for each pair, only the libraries where both nodes are > 0; Pearson r of log(share of the library), the same input as the other methods (`netcommon.load_layer`, `rel_abund`);
+   - tested when co-present in ≥ 10 libraries (`PP_N_MIN`); t test with n − 2 df; BH over all tested pairs of the layer. Computed with matrix products (n = PᵀP, sums of log and log² masked by the partner's presence), checked against scipy `pearsonr` on sampled pairs.
+   - **Edge call** (`netcommon.PP_R, PP_N, PP_Q`): **|r| ≥ 0.85, co-present in ≥ 20 libraries, q < 0.05.** Each edge keeps r, n and q (`out/edges_pearson_{layer}.tsv`). DNA 4,479 edges (3.7% of pairs), RNA 1,994 (1.2%).
+   - Why not q alone: q is already BH-corrected, but with up to 128 libraries |r| ≈ 0.25 passes q < 0.05, so q < 0.05 alone gave 48,553 DNA (40% of pairs) and 104,840 RNA edges (61%). Rule chosen (2026-11-08, by the user's instruction "raise r or lower the p-value until it's sensible"): the least strict combination, raising |r| before lowering q, at which the count is at most SPRING's in both layers (DNA 5,694, RNA 10,051). |r| ≥ 0.8 passes RNA (4,019) but not DNA (7,470 at n ≥ 20, 6,692 even at q < 1e-5); |r| ≥ 0.85 with n ≥ 20 passes both. Lowering q hardly changes RNA (every |r| ≥ 0.7 pair already has q < 1e-5). An alternative with lower |r| would be |r| ≥ 0.75 with n ≥ 30 (DNA 4,445, RNA 6,962), which mainly removes rarer DNA genomes; not used.
+   - Edges at every threshold (`out/pearson_thresholds.tsv`, all with q tested at n ≥ 10):
 
-**Consensus.** An edge needs:
-- support from ≥ 2 methods with the same sign;
+| n | \|r\| | DNA q<0.05 | DNA q<1e-3 | DNA q<1e-5 | RNA q<0.05 | RNA q<1e-3 | RNA q<1e-5 |
+|---|---|---|---|---|---|---|---|
+| ≥ 10 | ≥ 0.5 | 42,637 | 23,761 | 10,603 | 38,473 | 37,983 | 35,787 |
+| ≥ 10 | ≥ 0.6 | 33,804 | 23,155 | 10,603 | 22,543 | 22,379 | 21,967 |
+| ≥ 10 | ≥ 0.7 | 22,810 | 18,596 | 10,535 | 11,070 | 11,006 | 10,953 |
+| ≥ 10 | ≥ 0.75 | 17,349 | 15,173 | 9,744 | 7,041 | 7,014 | 6,981 |
+| ≥ 10 | ≥ 0.8 | 12,220 | 11,338 | 8,041 | 4,045 | 4,037 | 4,020 |
+| ≥ 10 | ≥ 0.85 | 7,669 | 7,433 | 5,779 | 2,006 | 2,003 | 1,997 |
+| ≥ 10 | ≥ 0.9 | 3,795 | 3,772 | 3,293 | 677 | 677 | 677 |
+| ≥ 20 | ≥ 0.5 | 30,062 | 19,462 | 9,254 | 38,288 | 37,960 | 35,784 |
+| ≥ 20 | ≥ 0.6 | 22,398 | 18,856 | 9,254 | 22,387 | 22,356 | 21,964 |
+| ≥ 20 | ≥ 0.7 | 14,562 | 14,297 | 9,186 | 10,984 | 10,983 | 10,950 |
+| ≥ 20 | ≥ 0.75 | 10,874 | 10,874 | 8,395 | 6,991 | 6,991 | 6,978 |
+| ≥ 20 | ≥ 0.8 | 7,470 | 7,470 | 6,692 | 4,019 | 4,019 | 4,017 |
+| ≥ 20 | ≥ 0.85 | 4,479 | 4,479 | 4,430 | 1,994 | 1,994 | 1,994 |
+| ≥ 20 | ≥ 0.9 | 2,072 | 2,072 | 2,072 | 675 | 675 | 675 |
+| ≥ 30 | ≥ 0.5 | 13,997 | 10,428 | 5,225 | 38,111 | 37,893 | 35,768 |
+| ≥ 30 | ≥ 0.6 | 10,053 | 9,822 | 5,225 | 22,289 | 22,289 | 21,948 |
+| ≥ 30 | ≥ 0.7 | 6,207 | 6,207 | 5,157 | 10,941 | 10,941 | 10,934 |
+| ≥ 30 | ≥ 0.75 | 4,445 | 4,445 | 4,366 | 6,962 | 6,962 | 6,962 |
+| ≥ 30 | ≥ 0.8 | 2,888 | 2,888 | 2,888 | 4,005 | 4,005 | 4,005 |
+| ≥ 30 | ≥ 0.85 | 1,602 | 1,602 | 1,602 | 1,991 | 1,991 | 1,991 |
+| ≥ 30 | ≥ 0.9 | 622 | 622 | 622 | 674 | 674 | 674 |
+   - Not design-aware.
+**Consensus.** An edge needs (five methods since 2026-11-08):
+- support from ≥ 2 of the 5 methods with the same sign;
 - no method with the opposite sign;
 - at least one supporting method that accounts for the design (FlashWeave with meta-variables, or residual Spearman).
 
-SPRING and SPIEC-EASI, like most compositional network methods, do not condition on winter, pool or medium, so their agreement alone can be a shared response to those drivers.
+SPRING, SPIEC-EASI and the Presence Pearson do not condition on winter, pool or medium, so their agreement alone can be a shared response to those drivers.
+
+**Effect of adding the Presence Pearson (same rule, strict edge call).** RNA consensus 8,067 → 8,665 (+598), DNA 1,253 → 1,490 (+237); no link of the four-method consensus is lost. Links supported only by residual Spearman + Presence Pearson: 584 of the RNA consensus (6.7%) and 97 of DNA. Sign conflicts: RNA 214 → 227, DNA 8 → 45. (With the first, q-only call, q < 0.05: RNA consensus 38,310, 79% of it Spearman + Presence Pearson only, 9,342 conflicts.)
 
 ## SPRING port (`scripts/spring.py`)
 Sources:
@@ -95,42 +127,55 @@ Validation (`scripts/validate_spring.py` → `out/spring_validation.tsv`; R refe
 
 - **Run time:** about 15 minutes per layer on a loaded 16-core machine, mostly the latent correlations of the 20 subsamples.
 
-## Layout
-t-SNE per layer (`scripts/layout.py`):
-- nodes are points and libraries are features;
-- values are the fourth root of the node's share of the library, with no other scaling;
-- sklearn, PCA init, seed 20261108, perplexity = round(√nodes) (DNA 22, RNA 24).
+## Layouts
+- **t-SNE** per layer (`scripts/layout.py`): nodes are points and libraries are features; values are the fourth root of the node's share of the library, with no other scaling; sklearn, PCA init, seed 20261108, perplexity = round(√nodes) (DNA 22, RNA 24).
+- **Force-directed**, one per method and one for the consensus, per layer (`scripts/forcelayout.py` → `forcelayout.R`):
+  - edges: the method's own edges as the page exports them (after the floors), positive links only (a negative link is no reason to draw two genomes together);
+  - weight (attraction) = the method's score, divided by its median: FlashWeave |weight|, SPRING and SPIEC-EASI StARS stability (floored at 0.02; SPRING keeps a few refit edges with stability 0), residual Spearman |ρ|, Presence Pearson |r|; consensus edges: number of supporting methods + mean percentile of their scores;
+  - backbone: each genome keeps its 10 strongest positive links (a link stays when it is in the top 10 of either end). Without it the dense sets (residual Spearman: 28k positive RNA links) were one round ball;
+  - igraph 2.1.4 `layout_with_fr` (R), started from the t-SNE map, 2000 iterations, no grid, seed 20261108: the same on every run;
+  - genomes with no positive link in that layout go on rings outside it (radius 1.1 × the 99th percentile of the laid-out radius), ordered by domain then abundance (DNA FlashWeave: 116 genomes; DNA Spearman 33; Presence Pearson DNA 210, RNA 224; DNA consensus 22; RNA FlashWeave 5).
+- Positions are stored per layer in `network_{layer}.json` (`layouts`), each scaled to −100…100, 1 decimal (RNA: 44 kB for 7 layouts). The page animates between layouts (750 ms; links are hidden during the move when more than 12,000 are drawn).
+- What the force layouts show (Louvain on the layout backbones, for description only): consensus modularity 0.68 (DNA) and 0.57 (RNA). In RNA one module of 82 genomes holds 15 of the 25 EE MAGs and 11 of the 18 plastid nodes (with 50 prokaryotes and 6 vOTUs); in DNA one of 37 holds 12 EE MAGs. The other modules are almost all prokaryotes. Top positive consensus hubs: RNA comebin_4104_sub (Pararhizobium, 49 links), lorbin_111 (43), comebin_3924 (41); DNA lorbin_029 (Parasphingorhabdus, 19).
+
+## Adding a layer (e.g. Illumina DNA)
+`netcommon.LAYER_CFG` lists the layers: abundance table (nodes × libraries, in `cache/`), library table (`size` plus the design columns season, group, medium, day, layer, par_under), pseudo-count unit, page label and order. Every Python script loops over it, `run_spieceasi.R` and `run_flashweave.jl` run every `cache/*_X.tsv` that `export.py` writes, and the page builds its layer buttons and tables from `network.json`'s `layer_list`. A new layer needs: its two tables written by `nodes.py` (or by hand) and an entry in `LAYER_CFG`; prevalence is computed from the table when `nodes_all.tsv` lacks `{layer}_prev`. Not built yet (the Grex Illumina mapping is running).
 
 ## Re-running after EE changes
 EE ids, statuses and taxonomy are read at run time from `data/hull_mags.tsv`, `data/contig_hull_mag.tsv.gz` and `data/ee_taxonomy.tsv`, so `run_all.sh` follows merges and relabels. This branch is rebased on `euk-robust-expr` (PR #20: robust RNA profiles, EE31 merged into EE03) and was rebuilt on its tables. Only the known-pair list in `consensus.py` names EE ids.
 
 ## Results (2026-11-08, robust RNA profiles; 25 EE MAGs after EE31 merged into EE03)
-| Layer | Nodes (prok / euk / virus / organelle) | FlashWeave | SPRING | SPIEC-EASI | Residual Spearman (q < 0.05) | Consensus | Sign conflicts |
-|---|---|---|---|---|---|---|---|
-| DNA (44 samples) | 493 (396 / 25 / 59 / 13) | 740 | 5,694 (λ 0.053) | 3,611 (λ 0.143) | 3,834 | 1,253 | 8 |
-| RNA (128 libraries) | 588 (482 / 25 / 63 / 18) | 1,855 | 10,051 (λ 0.042) | 6,424 (λ 0.088) | 69,711 | 8,067 | 214 |
+| Layer | Nodes (prok / euk / virus / organelle) | FlashWeave | SPRING | SPIEC-EASI | Residual Spearman (q < 0.05) | Presence Pearson (\|r\| ≥ 0.85, n ≥ 20, q < 0.05) | Consensus (4 methods) | Consensus (5 methods) | Sign conflicts (5) |
+|---|---|---|---|---|---|---|---|---|---|
+| DNA (44 samples) | 493 (396 / 25 / 59 / 13) | 740 | 5,694 (λ 0.053) | 3,611 (λ 0.143) | 3,834 | 4,479 | 1,253 | 1,490 | 45 |
+| RNA (128 libraries) | 588 (482 / 25 / 63 / 18) | 1,855 | 10,051 (λ 0.042) | 6,424 (λ 0.088) | 69,711 | 1,994 | 8,067 | 8,665 | 227 |
+
+Presence Pearson overlap (Jaccard; sign agreement), DNA / RNA: FlashWeave 0.079 / 0.150 (99.5% / 100%; 383 of FlashWeave's 740 DNA and 501 of its 1,855 RNA edges), SPRING 0.074 / 0.056 (99.6% / 99.8%), SPIEC-EASI 0.092 / 0.093 (99.7%), residual Spearman 0.040 / 0.021 (89% / 99%).
 
 - **Key-order bug fixed (affects the earlier results).** R (SPIEC-EASI) wrote each pair with the ids sorted case-insensitively, Python by code point, so a pair such as `contig_0000362`–`EE04` was `contig…, EE04` in SPIEC-EASI and `EE04, contig…` in the other three. Such pairs (every EE##/P## with a lower-case id) were counted as two different edges, so SPIEC-EASI never agreed with the other methods on them. `consensus.py` and `network_site.py` now put every method's pairs through `edge_key`. Consensus grew from 7,992 to 8,067 (RNA) and 1,240 to 1,253 (DNA). The earlier PR #19 tables had the same bug.
 - **Robust RNA profiles:** Spearman of each node's robust vs summed RNA: prokaryotes median 0.976 (min 0.46), vOTUs 1.0 (single contigs fall back to the sum), EE MAGs median 0.93 (EE01 −0.13, EE03 0.68). Thin profiles (< 20 contigs): EE08, EE10, EE12, EE36 (flagged "thin RNA profile" on the page).
 - **Residual Spearman** is still dense (69,711 RNA pairs at q < 0.05, 40% of pairs). Its edges keep ρ and q; the page uses them through the permissivity slider. Spearman-only edges are exported at |ρ| ≥ 0.4 (43,758 RNA edges below that are left out of `site/network_rna.json`; all are in `out/edges_spearman_rna.tsv`).
 
 ## Full networks and the permissivity slider (`network_site.py`, `site/network.js`)
-- **Export:** `site/network_{dna,rna}.json` hold the nodes and the full edge sets of all four methods as column arrays: sign, masks of agreeing / opposing methods, FlashWeave |weight|, SPRING and SPIEC-EASI stability and |β|, Spearman |ρ| and −log₁₀ q. Score columns are sparse (one value per edge the method reports). `site/network.json` keeps the methods, the steps, summaries, known pairs and the partner tables.
-  - Sizes: network.json 89 kB, network_dna.json 344 kB, network_rna.json 843 kB.
-- **Steps** (`STEPS`; nested, each step is the union of its own clause and all stricter ones). "Strong" means SPRING/SPIEC-EASI stability ≥ 0.9, Spearman |ρ| ≥ 0.6 and q < 0.001; FlashWeave always counts. A step needs k of the switched-on methods, none with the opposite sign; design clauses also need FlashWeave or Spearman among the supporters. The method checkboxes still work (k is capped at the number switched on), as do the grazer, virus–host and plastid–host views.
+- **Export:** `site/network_{layer}.json` holds the nodes, the layouts and the edge sets of all five methods as column arrays: a, b; `f` packs the sign and the bit masks of agreeing, opposing and strong-scoring methods; sparse score columns (one value per edge the method reports): FlashWeave |weight|, SPRING and SPIEC-EASI stability, Spearman |ρ|, Presence Pearson |r| (×100). `site/network.json` keeps the methods (with their line-style score classes), layouts, layers, steps, summaries, known pairs and the partner tables.
+  - Floor for single-method links: residual Spearman |ρ| ≥ 0.4 (43,488 RNA Spearman-only edges below it left out). The Presence Pearson needs no floor, its edge call is strict. All edges stay in `out/edges_*_{layer}.tsv`.
+  - The page recomputes nothing about "strong"; it reads the bits, which `netcommon.strong_bits` sets on the exported (rounded) values.
+  - Sizes: network.json 92 kB, network_dna.json 343 kB, network_rna.json 663 kB (was 843 kB with four methods; the edge flags are now packed into one column).
+- **Strong** scores: SPRING/SPIEC-EASI stability ≥ 0.9; Spearman |ρ| ≥ 0.6 and q < 0.001; Presence Pearson |r| ≥ 0.9, q < 0.001 and co-present in ≥ 30 libraries (stricter than its edge call on all three; DNA 622, RNA 674 edges); FlashWeave always counts.
+- **Steps** (`STEPS`, five methods; nested, each step is the union of its own clause and all stricter ones). A step needs k of the switched-on methods, none with the opposite sign. With five methods, three or four supporters can all be design-blind (SPRING, SPIEC-EASI, Presence Pearson), so every clause down to the consensus now also needs FlashWeave or the residual Spearman among its supporters; without that, the union would put design-blind links into step 5. `network_site.py` asserts that step 5 equals `consensus.py`'s consensus. The method checkboxes still work (k is capped at the number switched on). With some methods switched off, the sign is the one the switched-on methods give, so a method outvoted overall still shows its own links when it is the only one on (before, the 8 RNA FlashWeave links outvoted by other methods disappeared with FlashWeave alone).
 
-| Step | Rule | DNA links | RNA links |
-|---|---|---|---|
-| 1 | all four, strong | 15 | 283 |
-| 2 | three, strong | 151 | 870 |
-| 3 | three | 564 | 3,114 |
-| 4 | three, or two strong (one design-aware) | 646 | 3,344 |
-| 5 | two, one design-aware (consensus, default) | 1,253 | 8,067 |
-| 6 | any two | 2,296 | 8,759 |
-| 7 | any two, or one strong | 3,203 | 11,548 |
-| 8 | any one | 10,901 | 31,082 |
+| Step | Rule | DNA links | DNA known pairs | RNA links | RNA known pairs |
+|---|---|---|---|---|---|
+| 1 | four or five, strong | 54 | 0 | 377 | 1 |
+| 2 | three strong, one design-aware | 185 | 1 | 939 | 1 |
+| 3 | three, one design-aware | 717 | 2 | 3,454 | 2 |
+| 4 | three, or two strong (one design-aware) | 808 | 2 | 3,670 | 2 |
+| 5 | two, one design-aware (consensus, default) | 1,490 | 2 | 8,665 | 3 |
+| 6 | any two | 2,986 | 2 | 9,400 | 3 |
+| 7 | any two, or one strong | 4,046 | 2 | 12,163 | 5 |
+| 8 | any one | 14,070 | 2 | 31,774 | 5 |
 
-- **Known pairs recovered** (`out/permissivity_steps.tsv`; not used for tuning):
-  - RNA: P01–EE05 from step 1; contig_0000362–EE04 from step 3; contig_0000564–EE07 from step 5; contig_0000610–EE22 and contig_0000623–EE07 from step 7; virophage contig_0049668–EE07 at no step. Its only support is a Spearman edge below the |ρ| 0.4 export floor.
-  - DNA: P01–EE05 from step 2, contig_0000623–EE07 from step 3, the others at no step.
-  - So recall in RNA rises from 1/6 at steps 1–2 to 2/6 at step 3, 3/6 at the consensus and 5/6 at steps 7–8. Step 7 costs 43% more links than the consensus.
+- **Known pairs** (`out/permissivity_steps.tsv`; not used for tuning; out of 6):
+  - RNA: P01–EE05 from step 1; contig_0000362–EE04 from step 3; contig_0000564–EE07 from step 5; contig_0000610–EE22 and contig_0000623–EE07 from step 7; virophage contig_0049668–EE07 at no step. The same as with four methods: the Presence Pearson r of these pairs (0.42–0.78) is below its 0.85 call, so it supports none of them in RNA.
+  - DNA: P01–EE05 from step 2, contig_0000623–EE07 from step 3 (the Presence Pearson supports it, r 0.90 over 20 libraries), the others at no step.
+- **Single-method line style:** with exactly one method switched on, line width and opacity follow its score in five classes (`network_site.SCORE`): FlashWeave |weight| < 0.3 / 0.3 / 0.4 / 0.5 / ≥ 0.7; SPRING and SPIEC-EASI stability < 0.4 / 0.4 / 0.6 / 0.8 / ≥ 0.9; Spearman |ρ| < 0.3 / 0.3 / 0.4 / 0.5 / ≥ 0.6; Presence Pearson |r| < 0.87 / 0.87 / 0.9 / 0.93 / ≥ 0.96 (its edges start at 0.85). A legend under the colour key shows the classes; with several methods it shows the width per number of supporting methods.

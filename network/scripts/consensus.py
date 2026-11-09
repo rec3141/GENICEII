@@ -1,49 +1,31 @@
-"""Consensus of the four methods per layer, method comparison and the known-pair check.
+"""Consensus of the five methods per layer, method comparison and the known-pair check.
 Methods: FlashWeave (HE-S with meta-variables; meta-variable edges are kept apart as 'drivers'), SPRING (Python port), SPIEC-EASI
-(mb), residual Spearman (q < 0.05). An edge is a consensus edge when at least MIN_SUPPORT methods report it with the same sign,
+(mb), residual Spearman (q < 0.05), Presence Pearson (run_pearson.py: log shares over co-present libraries, n >= 10, q < 0.05).
+An edge is a consensus edge when at least MIN_SUPPORT methods report it with the same sign,
 no method reports it with the opposite sign (those are counted as sign conflicts and left out), and at least one of the supporting
 methods accounts for the design (DESIGN_AWARE: FlashWeave with the meta-variables as nodes, or the residual Spearman). SPRING and
 SPIEC-EASI do not condition on winter, pool or medium, so two of them agreeing can still be a shared response to those.
 Known pairs (validation only; the methods are not tuned to them): the giant viruses contig_0000564 and contig_0000623 and the
 virophage contig_0049668 with EE07 (choanoflagellate); contig_0000362 with EE04; contig_0000610 with EE22; the plastid
 metabat_7332_sub, whose contigs all sit in plastid group P01, with EE05.
-Out: out/edges_all.tsv (every edge any method reports except Spearman-only edges), out/edges_consensus.tsv, out/drivers.tsv,
+Out: out/edges_all.tsv (every edge any method reports except edges that only the residual Spearman or only the Presence Pearson reports), out/edges_consensus.tsv, out/drivers.tsv,
 out/method_summary.tsv, out/method_overlap.tsv, out/known_pairs.tsv"""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from netcommon import *
 
 MIN_SUPPORT = 2
-DESIGN_AWARE = ('flashweave', 'spearman')
+DENSE = ('spearman', 'pearson')       # pairwise correlations: their single-method edges are too many to carry in edges_all.tsv
 KNOWN = [('contig_0000564', 'EE07', 'giant virus and choanoflagellate'), ('contig_0000623', 'EE07', 'giant virus and choanoflagellate'),
          ('contig_0049668', 'EE07', 'virophage and choanoflagellate'), ('contig_0000362', 'EE04', 'giant virus and cercozoan'),
          ('contig_0000610', 'EE22', 'giant virus and Micromonas'), ('P01', 'EE05', 'plastid group (holds metabat_7332_sub) and Minidiscus')]
 
 
-def read_flashweave(layer, meta_cols):
-    f = os.path.join(OUT, f'flashweave_{layer}.edgelist')
-    E = pd.read_csv(f, sep='\t', comment='#', header=None, names=['a', 'b', 'weight'])
-    meta = E.a.isin(meta_cols) | E.b.isin(meta_cols)
-    Dr = E[meta].copy()
-    Dr['driver'] = np.where(Dr.a.isin(meta_cols), Dr.a, Dr.b); Dr['node'] = np.where(Dr.a.isin(meta_cols), Dr.b, Dr.a)
-    Dr = Dr[~(Dr.a.isin(meta_cols) & Dr.b.isin(meta_cols))]
-    E = E[~meta].copy(); E['sign'] = np.sign(E.weight).astype(int)
-    E[['a', 'b']] = [edge_key(a, b) for a, b in zip(E.a, E.b)]
-    return E, Dr[['node', 'driver', 'weight']]
-
-
 ALL, CONS, DRV, SUMM, OVL, KP = [], [], [], [], [], []
 for layer in LAYERS:
     N = layer_nodes(layer)
-    meta_cols = list(pd.read_csv(os.path.join(CACHE, f'{layer}_meta.tsv'), sep='\t', index_col=0).columns)
-    M = {}
-    M['flashweave'], dr = read_flashweave(layer, meta_cols)
+    M, dr = read_methods(layer)
     DRV.append(dr.assign(layer=layer))
-    for m in ('spring', 'spieceasi', 'spearman'):
-        M[m] = pd.read_csv(os.path.join(OUT, f'edges_{m}_{layer}.tsv'), sep='\t')
-        # one key order for every method: R (SPIEC-EASI) sorts ids case-insensitively, Python by code point, so 'contig_..' vs
-        # 'EE04' came out in opposite orders and the same pair was two different edges (fixed 2026-11-08)
-        M[m][['a', 'b']] = [edge_key(a, b) for a, b in zip(M[m].a, M[m].b)]
     for m, E in M.items():
         bad = set(E.a) | set(E.b)
         assert bad <= set(N.index), (m, layer, sorted(bad - set(N.index))[:5])
@@ -64,7 +46,8 @@ for layer in LAYERS:
     T['consensus'] = (T.support >= MIN_SUPPORT) & ~T.conflict & T.design_aware
     T['layer'] = layer
     T = T.reset_index()
-    ALL.append(T[(T.support >= 2) | (T.spearman_sign == 0)])          # Spearman-only edges are too many to carry
+    single_dense = (S != 0).sum(1).eq(1) & (S[[f'{m}_sign' for m in DENSE]] != 0).any(axis=1)
+    ALL.append(T[~single_dense.to_numpy()])                            # Spearman-only and Presence-Pearson-only edges are too many to carry
     CONS.append(T[T.consensus])
     # per-method counts and pairwise overlap (unsigned Jaccard; sign agreement on shared edges)
     for m, E in M.items():
