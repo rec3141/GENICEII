@@ -65,8 +65,13 @@ Read this first when resuming. The repo README has the per-analysis sections; ea
    - VV01 was retired: it is a Caudoviricetes cluster, not a genome. Viral genome-group rule: ≥ 50% of bp in giant/eukaryotic-virus classes. There are no VV## now.
    - The Viruses page lost its "Large viral genome groups" section; one line covers the phage cluster and the former V02 (now P01).
    - Details: `euks/mags/NOTES.md`, "Site wiring of the hull MAGs".
+2b. **PR #17 is merged** (into main at 94341a0). **PR #18** (branch `euk-merge-relabel`, not merged or deployed) adds the split guard, merge rule and relabel rules (2026-11-08; details in `euks/mags/NOTES.md`, "Split guard, merge rule and relabel rules"):
+   - E03 is whole again (its lobes co-vary in RNA, ρ 0.996); `retired:E31`. The E31 hull keeps id EE31.
+   - `merge_mags.py` merged EE29 → EE03 and EE13 → EE06 (`retired:EE29`, `retired:EE13`). EE31 does not merge with EE03 (RNA ρ 0.53: two contigs carry most of EE31's reads; without its 5 top contigs ρ is 0.97). The E21 pieces do not merge.
+   - `genome_status`: EE01 and EE16 "doubtful, not a genome"; EE30 "≥ 2 species", EE05 "≥ 2 strains". Hulls with `RECHECKED` in their note (E30, E12) skip the size caution.
+   - BUSCO cache: `euks/mags/scripts/buscolib.py`, `busco_table.py`; runs in `euks/mags/out/busco/runs/`.
 3. **Food-web network (next, requested):** MAG–MAG network analyses on the Food web page.
-   - Nodes: prokaryotic MAGs plus network-ready eukaryotic MAGs (`data/hull_mags.tsv` `network_ok`, 21 EE; mind the `caution` column, e.g. EE01). There are no viral genome groups (VV01 retired), so viruses enter as vOTUs.
+   - Nodes: prokaryotic MAGs plus network-ready eukaryotic MAGs (`data/hull_mags.tsv` `network_ok`, 20 EE after PR #18; mind the `caution` and `genome_status` columns, and `euks/mags/out/hull_mags_rna_flags.tsv`: EE01/EE04/EE08/EE10 RNA sits on ≤ 5 contigs). There are no viral genome groups (VV01 retired), so viruses enter as vOTUs.
    - Ideas already discussed: co-response guilds (`guilds/` page) and the genome pairs flagged there.
 3b. **Organelle groups (user request 2026-11-08):** groups ≥50% Tiara organelle become P## (plastid) or M## (mito) and are excluded from the E/V series. The old V02 was a plastid that geNomad mis-called viral. They are saved for later; there are no hulls and no site wiring yet.
    - Pending: 486 plastid genes means several plastid genomes merged together. Next steps:

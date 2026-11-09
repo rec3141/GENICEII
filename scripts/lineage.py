@@ -58,10 +58,11 @@ for x in HMT.itertuples():
     if x.mag.startswith('VV'):
         L[x.mag] = f'Virus MAG {x.mag} · {x.bp / 1e6:.1f} Mbp of contigs, GC {x.gc:.1f}%, {float(x.virus_bp):.0%} viral by geNomad · hull drawn on the contig map around group {x.source_group}'
         continue
-    tx = (f'{x.taxonomy} ({x.taxonomy_rank}), {x.taxonomy_confidence} confidence' if x.taxonomy_confidence in ('high', 'medium')
+    tx = ((f'{x.taxonomy_display}, {x.taxonomy_confidence} confidence' if '-like' in str(getattr(x, 'taxonomy_display', '')) else f'{x.taxonomy} ({x.taxonomy_rank}), {x.taxonomy_confidence} confidence') if x.taxonomy_confidence in ('high', 'medium')
           else f'taxonomy uncertain (best guess {x.taxonomy})' if x.taxonomy else 'taxonomy unknown')
-    bits = [f'Eukaryote (Tiara, {float(x.tiara_euk):.0%} of length)', f'MAG {x.mag}, {x.bp / 1e6:.1f} Mbp, GC {x.gc:.1f}%, from group {x.source_group}',
-            tx, STL.get(x.status, x.status)]
+    bits = [f'Eukaryote (Tiara, {float(x.tiara_euk):.0%} of length)', f'MAG {x.mag}, {x.bp / 1e6:.1f} Mbp, GC {x.gc:.1f}%, from group{"s" if "+" in x.source_group else ""} {x.source_group.replace("+", ", ")}',
+            tx, 'doubtful (probably not a genome)' if str(getattr(x, 'genome_status', '')).startswith('doubtful') else STL.get(x.status, x.status)]
+    if getattr(x, 'busco', ''): bits.append(f'BUSCO {x.busco}')
     if x.caution: bits.append(x.caution)
     L[x.mag] = ' · '.join(bits)
 OGT = pd.read_csv(D + 'organelle_groups.tsv', sep='\t', keep_default_na=False)

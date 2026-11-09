@@ -46,3 +46,8 @@ retired:V02 (plastid, 2026-11-08)	V02
 retired:VV02 (V02 was a plastid)	VV02
 blob:-48,-28	P01
 retired:VV01 (Caudoviricetes phage cluster, not a genome; 2026-11-08)	VV01
+retired:EE14 (merged into EE12 copepod hull, 2026-11-08)	EE14
+retired:EE17 (merged into EE12 copepod hull, 2026-11-08)	EE17
+retired:E31 (split of E03 undone by the RNA split guard, 2026-11-08)	E31
+retired:EE13 (merged into EE06, 2026-11-08)	EE13
+retired:EE29 (merged into EE03, 2026-11-08)	EE29

@@ -1,6 +1,7 @@
 # Curated hull polygons (t-SNE coordinates of the marine-coassembly-flye contig map). Vertices were picked visually on 2026-11-08
 # from out/hulls/panels/<source_group>.png (and E21_context.png for the E21 cores), like hand-drawn gates in flow cytometry.
-# Scripts read this file and never redraw it. Skipped (< 2 Mbp eukaryote): E18, E24.
+# Scripts read this file and never redraw it. A note containing "RECHECKED <date>" marks a hull re-checked against the core
+# (expression profile or lineage panel); such hulls are exempt from the automatic "hull added X Mbp" caution (scripts/bin_domains.py). Skipped (< 2 Mbp eukaryote): E18, E24.
 id	source_group	vertex_order	x	y	note
 E01	E01	1	5	-72	dense cloud; satellite islands at (-2,-70),(4,-68),(6.5,-68.5) excluded
 E01	E01	2	8	-69.5	
@@ -77,27 +78,12 @@ E10	E10	4	-18	-65.5
 E10	E10	5	-18	-67.5	
 E10	E10	6	-20	-69	
 E10	E10	7	-23.5	-69	
-E12	E12	1	-19	-76	UNSURE: sparse diffuse group, densest part only
-E12	E12	2	-17.5	-74	
-E12	E12	3	-15	-74.5	
-E12	E12	4	-13.5	-76.5	
-E12	E12	5	-14	-79.5	
-E12	E12	6	-16	-80	
-E12	E12	7	-18.5	-78.5	
 E13	E13	1	31.3	-83.5	UNSURE: small dense core; streak (36.5,-84) and halo excluded
 E13	E13	2	32	-82.5	
 E13	E13	3	33.3	-82.5	
 E13	E13	4	33.6	-84	
 E13	E13	5	33	-85.5	
 E13	E13	6	31.8	-85.5	
-E14	E14	1	-14	-79	core
-E14	E14	2	-12.5	-76	
-E14	E14	3	-10	-75	
-E14	E14	4	-8	-76.5	
-E14	E14	5	-7.5	-78.5	
-E14	E14	6	-9.5	-80	
-E14	E14	7	-12	-82.5	
-E14	E14	8	-14.5	-81.5	
 E15	E15	1	5.5	-83.5	compact blob
 E15	E15	2	6.5	-82.5	
 E15	E15	3	7.8	-83	
@@ -111,12 +97,6 @@ E16	E16	4	-26	-81.5
 E16	E16	5	-25.5	-83.5	
 E16	E16	6	-27	-85	
 E16	E16	7	-29.5	-85	
-E17	E17	1	-4.5	-73.5	core; streak at (-1,-80) excluded
-E17	E17	2	-3.5	-72	
-E17	E17	3	-1.5	-72	
-E17	E17	4	-1.5	-75.5	
-E17	E17	5	-2.5	-75.5	
-E17	E17	6	-4	-74.8	
 E21A	E21	1	23.5	-31	E21 core A (26.5,-31); user seed (27,-30)
 E21A	E21	2	24.5	-28.5	
 E21A	E21	3	27	-27.3	
@@ -219,7 +199,7 @@ E29	E29	5	-0.6	-51
 E29	E29	6	-1	-53.5	
 E29	E29	7	-3	-54.3	
 E29	E29	8	-4	-56	
-E30	E30	1	-7	-38.5	disc expanded 2026-11-08 to radius ~5 after the RNA re-check (out/hulls/check/E30.png); halo profile r equals the core at matched length; old disc in NOTES.md
+E30	E30	1	-7	-38.5	disc expanded 2026-11-08 to radius ~5 after the RNA re-check (out/hulls/check/E30.png); halo profile r equals the core at matched length; old disc in NOTES.md; RECHECKED 2026-11-08 against the core RNA/DNA profile
 E30	E30	2	-6.3	-35.5	
 E30	E30	3	-4.5	-34	
 E30	E30	4	-2	-33.5	
@@ -254,3 +234,15 @@ V02	V02	5	-46	-28.2
 V02	V02	6	-47	-28.8	
 V02	V02	7	-48.5	-28.8	
 V02	V02	8	-49.5	-28.2	
+E12	E12	1	-19.5	-75	copepod (Calanus) cluster: one hull over former E12/E14/E17 hulls, drawn on the Arthropoda-protein panel out/hulls/check/copepod_lineage.png (user, 2026-11-08: the three are parts of one larger cluster x -20..0, y -65..-85); E10 (non-arthropod) excluded; RECHECKED 2026-11-08 on the protein-lineage panel
+E12	E12	2	-17	-71.5	
+E12	E12	3	-12	-70	
+E12	E12	4	-6	-69.5	
+E12	E12	5	-2	-70.5	
+E12	E12	6	-0.5	-73	
+E12	E12	7	-1	-76.5	
+E12	E12	8	-5	-79	
+E12	E12	9	-9	-82	
+E12	E12	10	-12	-84	
+E12	E12	11	-16	-82.5	
+E12	E12	12	-19.5	-79.5	

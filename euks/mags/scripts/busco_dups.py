@@ -1,5 +1,5 @@
-"""Identity between duplicated BUSCO copies per MAG (2026-11-08): for each Duplicated BUSCO in
-out/busco/run_euk_miniprot/<MAG>.fa/run_*/full_table.tsv, blastn (-task blastn) copy 1 against the other copies; best HSP identity.
+"""Identity between duplicated BUSCO copies per MAG (2026-11-08; run after busco_table.py): for each Duplicated BUSCO in the
+full_table.tsv of the run busco_table.py chose for the MAG (out/busco/busco_eukaryota_odb12.tsv: summary, fasta), blastn (-task blastn) copy 1 against the other copies; best HSP identity.
 Haplotypes of one diploid genome match at >= 98%; strains ~90-97%; different species < 90%.
 Out: out/busco/dup_identity.tsv (mag, n_dup, median_nt_id, n_ge98). Needs samtools (BUSCO env) and blastn."""
 import glob, re, subprocess
@@ -7,8 +7,9 @@ import numpy as np, pandas as pd
 O = '/data/dev/rnaseq-exploration/euks/mags/out/busco/'
 ST = '/data/scratch/grid-envs/conda/busco/bin/samtools'
 rows = []
-for f in sorted(glob.glob(O + 'run_euk_miniprot/*.fa/run_*/full_table.tsv')):
-    mag = re.search(r'(EE\d+)\.fa', f).group(1); fa = f'{O}mags/{mag}.fa'
+import os
+for x in pd.read_csv(O + 'busco_eukaryota_odb12.tsv', sep='\t').itertuples():
+    f = glob.glob(os.path.dirname(O + x.summary) + '/run_*/full_table.tsv')[0]; mag = x.mag; fa = O + x.fasta
     D = pd.DataFrame([r for r in (l.rstrip('\n').split('\t')[:6] for l in open(f) if not l.startswith('#'))
                       if len(r) >= 6 and r[1] == 'Duplicated'], columns=['busco', 'status', 'seq', 'start', 'end', 'strand'])
     ids = []
